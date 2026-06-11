@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI家AI户模型库 — 收录AI大模型和Agent平台，按品类筛选，价格功能一目了然。ChatGPT / Claude / DeepSeek / Qwen / GLM / Kimi / Llama / Coze / WorkBuddy / WindClaw / Dify / Manus / n8n">
+    <title>模型库 — AI家AI户</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="nav">
+    <div class="nav-inner">
+        <a href="index.html" class="nav-logo">🏠 AI家AI户</a>
+        <ul class="nav-links">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="models.html" class="active">模型库</a></li>
+            <li><a href="compare.html">横向对比</a></li>
+            <li><a href="about.html">关于</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container">
+    <h1 style="font-size:28px; margin: 28px 0 8px;">📦 模型库</h1>
+    <p style="color:var(--text-secondary); margin-bottom:20px;">
+        共收录 <strong id="totalCount">15</strong> 个产品，涵盖 AI 大模型与 Agent 平台。点击卡片跳转官网。信息最后更新：2026年6月11日
+    </p>
+
+    <div class="search-box" style="max-width:100%; margin-bottom:16px;">
+        <input type="text" placeholder="搜模型（名称/功能/公司/标签）……" id="modelSearch">
+        <span class="search-icon">🔍</span>
+    </div>
+
+    <div class="filters">
+        <button class="filter-btn active" data-cat="all">全部</button>
+        <button class="filter-btn" data-cat="语言模型">🗣 语言模型</button>
+        <button class="filter-btn" data-cat="Agent平台">🤖 Agent平台</button>
+    </div>
+
+    <div class="model-grid" id="modelGrid"></div>
+</div>
+
+<footer class="footer">
+    <p>AI家AI户 · 数据最后更新于 2026年6月11日 · 信息来源于各模型官方网站及公开资料</p>
+    <p style="margin-top:6px;">所有模型信息均标注来源。点击卡片直接跳转对应官网。</p>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
