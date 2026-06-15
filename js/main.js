@@ -2,6 +2,9 @@
 const models = [
     {
         id: "chatgpt",
+        nameEn: "ChatGPT",
+        priceLabelEn: "Free / Plus $20/mo",
+        tagsEn: ["Writing", "Coding", "Image Gen", "Voice", "Multimodal"],
         name: "ChatGPT",
         company: "OpenAI（美国）",
         category: "语言模型",
@@ -22,6 +25,9 @@ const models = [
     },
     {
         id: "claude",
+        nameEn: "Claude",
+        priceLabelEn: "Free / Pro $20/mo",
+        tagsEn: ["Writing", "Coding", "Long Docs", "Reasoning", "Deep Analysis"],
         name: "Claude",
         company: "Anthropic（美国）",
         category: "语言模型",
@@ -42,6 +48,9 @@ const models = [
     },
     {
         id: "gemini",
+        nameEn: "Gemini",
+        priceLabelEn: "Free / AI Pro $19.99/mo",
+        tagsEn: ["Multimodal", "Search", "Video Gen", "Long Context", "Google"],
         name: "Gemini",
         company: "Google（美国）",
         category: "语言模型",
@@ -62,6 +71,9 @@ const models = [
     },
     {
         id: "deepseek",
+        nameEn: "DeepSeek",
+        priceLabelEn: "Completely Free",
+        tagsEn: ["Free", "Reasoning", "Coding", "Math", "Chinese Native"],
         name: "DeepSeek",
         company: "深度求索（中国）",
         category: "语言模型",
@@ -82,6 +94,9 @@ const models = [
     },
     {
         id: "qwen",
+        nameEn: "Qwen (Tongyi)",
+        priceLabelEn: "Free / API",
+        tagsEn: ["Chinese", "Alibaba", "Enterprise", "Multimodal", "Open Source"],
         name: "通义千问 (Qwen)",
         company: "阿里巴巴（中国）",
         category: "语言模型",
@@ -102,6 +117,9 @@ const models = [
     },
     {
         id: "glm",
+        nameEn: "GLM (ChatGLM)",
+        priceLabelEn: "Free / Plan ~$1.4+",
+        tagsEn: ["Coding", "Chinese", "Open Source", "Agent", "Zhipu AI"],
         name: "智谱清言 (GLM)",
         company: "智谱AI（中国）",
         category: "语言模型",
@@ -122,6 +140,9 @@ const models = [
     },
     {
         id: "kimi",
+        nameEn: "Kimi",
+        priceLabelEn: "Free / ~$7/mo",
+        tagsEn: ["Long Text", "Chinese Writing", "Deep Research", "PPT Gen", "Agent"],
         name: "Kimi",
         company: "月之暗面（中国）",
         category: "语言模型",
@@ -142,6 +163,9 @@ const models = [
     },
     {
         id: "llama",
+        nameEn: "Llama",
+        priceLabelEn: "Free (Open Source)",
+        tagsEn: ["Open Source", "Local Deploy", "Customizable", "Privacy", "Research"],
         name: "Llama",
         company: "Meta（美国）",
         category: "语言模型",
@@ -162,6 +186,9 @@ const models = [
     },
     {
         id: "minimax-m3",
+        nameEn: "MiniMax M3",
+        priceLabelEn: "Free / API",
+        tagsEn: ["Multimodal", "Coding", "1M Context", "Open Source", "Chinese"],
         name: "MiniMax M3",
         company: "稀宇科技/MiniMax（中国）",
         category: "语言模型",
@@ -182,6 +209,9 @@ const models = [
     },
     {
         id: "doubao",
+        nameEn: "Doubao",
+        priceLabelEn: "Free / ~$4/mo",
+        tagsEn: ["Chinese", "Free", "Multimodal", "ByteDance", "Mobile"],
         name: "豆包 (Doubao)",
         company: "字节跳动（中国）",
         category: "语言模型",
@@ -202,6 +232,9 @@ const models = [
     },
     {
         id: "ernie",
+        nameEn: "ERNIE Bot",
+        priceLabelEn: "Free / ~$7/mo",
+        tagsEn: ["Chinese", "Baidu", "Search", "Multimodal", "Enterprise"],
         name: "文心一言 (ERNIE)",
         company: "百度（中国）",
         category: "语言模型",
@@ -222,6 +255,9 @@ const models = [
     },
     {
         id: "coze",
+        nameEn: "Coze",
+        priceLabelEn: "Free (Basic)",
+        tagsEn: ["Agent","No-Code","Bot Builder","Multi-Model","Workflow"],
         name: "扣子 (Coze)",
         company: "字节跳动（中国）",
         category: "Agent平台",
@@ -242,6 +278,9 @@ const models = [
     },
     {
         id: "workbuddy",
+        nameEn: "WorkBuddy",
+        priceLabelEn: "Free/~$8/mo",
+        tagsEn: ["Agent","Productivity","Skills","MCP","Office"],
         name: "WorkBuddy",
         company: "腾讯（中国）",
         category: "Agent平台",
@@ -262,6 +301,9 @@ const models = [
     },
     {
         id: "windclaw",
+        nameEn: "WindClaw",
+        priceLabelEn: "Free (Beta)",
+        tagsEn: ["Agent","Finance","Data","Multi-Agent","24/7"],
         name: "WindClaw",
         company: "万得信息（中国）",
         category: "Agent平台",
@@ -282,6 +324,9 @@ const models = [
     },
     {
         id: "dify",
+        nameEn: "Dify",
+        priceLabelEn: "Free (OS)/Enterprise",
+        tagsEn: ["Agent","Open Source","Workflow","RAG","Self-hosted"],
         name: "Dify",
         company: "Dify.ai（中国/开源）",
         category: "Agent平台",
@@ -302,6 +347,9 @@ const models = [
     },
     {
         id: "manus",
+        nameEn: "Manus",
+        priceLabelEn: "$39/mo+",
+        tagsEn: ["Agent","Autonomous","Deliverables","Multi-Step"],
         name: "Manus",
         company: "Manus（中国/美国）",
         category: "Agent平台",
@@ -322,6 +370,9 @@ const models = [
     },
     {
         id: "n8n",
+        nameEn: "n8n",
+        priceLabelEn: "Free/Cloud €20+",
+        tagsEn: ["Agent","Open Source","Automation","400+ Integrations"],
         name: "n8n",
         company: "n8n GmbH（德国/开源）",
         category: "Agent平台",
@@ -343,6 +394,9 @@ const models = [
     // ========== 图像模型 (5) ==========
     {
         id: "midjourney",
+        nameEn: "Midjourney",
+        priceLabelEn: "Basic $10/mo+",
+        tagsEn: ["Image Gen","V7","Artistic","Discord","Niji"],
         name: "Midjourney",
         company: "Midjourney Inc.（美国）",
         category: "图像模型",
@@ -362,6 +416,9 @@ const models = [
     },
     {
         id: "dalle",
+        nameEn: "DALL-E",
+        priceLabelEn: "Free+/Plus $20/mo",
+        tagsEn: ["Image Gen","Multimodal","Natural Language","Editing"],
         name: "DALL-E",
         company: "OpenAI（美国）",
         category: "图像模型",
@@ -381,6 +438,9 @@ const models = [
     },
     {
         id: "stable-diffusion",
+        nameEn: "Stable Diffusion",
+        priceLabelEn: "Free (OS)/Cloud",
+        tagsEn: ["Open Source","Local","Customizable","ControlNet","LoRA"],
         name: "Stable Diffusion",
         company: "Stability AI（英国）",
         category: "图像模型",
@@ -400,6 +460,9 @@ const models = [
     },
     {
         id: "flux",
+        nameEn: "FLUX",
+        priceLabelEn: "Free (OS)/Pro",
+        tagsEn: ["Open Source","High Quality","Text Rendering","Realistic","Fast"],
         name: "FLUX",
         company: "Black Forest Labs（德国）",
         category: "图像模型",
@@ -419,6 +482,9 @@ const models = [
     },
     {
         id: "jimeng",
+        nameEn: "Jimeng",
+        priceLabelEn: "Free",
+        tagsEn: ["Chinese Native","Free","Image Gen","Video Gen","Jianying"],
         name: "即梦 (Jimeng)",
         company: "字节跳动（中国）",
         category: "图像模型",
@@ -439,6 +505,9 @@ const models = [
     // ========== 视频模型 (5) ==========
     {
         id: "sora",
+        nameEn: "Sora",
+        priceLabelEn: "Plus $20/mo",
+        tagsEn: ["Video Gen","Cinematic","Physics","Long Shots","High Quality"],
         name: "Sora",
         company: "OpenAI（美国）",
         category: "视频模型",
@@ -458,6 +527,9 @@ const models = [
     },
     {
         id: "runway",
+        nameEn: "Runway Gen-4",
+        priceLabelEn: "Free/Standard $15/mo",
+        tagsEn: ["Video Gen","Pro Tools","Motion Brush","Audio Gen"],
         name: "Runway Gen-4",
         company: "Runway（美国）",
         category: "视频模型",
@@ -477,6 +549,9 @@ const models = [
     },
     {
         id: "kling",
+        nameEn: "Kling",
+        priceLabelEn: "Free/~$5/mo",
+        tagsEn: ["Video Gen","Chinese Native","Free","Long Video"],
         name: "可灵 (Kling)",
         company: "快手（中国）",
         category: "视频模型",
@@ -496,6 +571,9 @@ const models = [
     },
     {
         id: "pika",
+        nameEn: "Pika",
+        priceLabelEn: "Free/Pro $10/mo",
+        tagsEn: ["Video Gen","Effects","Fun","Easy"],
         name: "Pika",
         company: "Pika Labs（美国）",
         category: "视频模型",
@@ -515,6 +593,9 @@ const models = [
     },
     {
         id: "veo",
+        nameEn: "Veo",
+        priceLabelEn: "Ultra $249.99/mo",
+        tagsEn: ["Video Gen","Google","Cinematic","Gemini"],
         name: "Veo",
         company: "Google DeepMind（美国）",
         category: "视频模型",
@@ -534,6 +615,9 @@ const models = [
     },
     {
         id: "hailuo-video",
+        nameEn: "HailuoAI Video",
+        priceLabelEn: "Free/~$5/mo",
+        tagsEn: ["AI Video","Chinese Native","Text2Video","MiniMax"],
         name: "海螺视频 (HailuoAI)",
         company: "稀宇科技/MiniMax（中国）",
         category: "视频模型",
@@ -554,6 +638,9 @@ const models = [
     // ========== 代码模型 (7) ==========
     {
         id: "codex",
+        nameEn: "Codex CLI",
+        priceLabelEn: "Plus $20/mo",
+        tagsEn: ["Terminal Agent","Open Source","Git-aware","Plan Mode","Skills"],
         name: "Codex CLI",
         company: "OpenAI（美国）",
         category: "代码模型",
@@ -573,6 +660,9 @@ const models = [
     },
     {
         id: "claude-code",
+        nameEn: "Claude Code",
+        priceLabelEn: "Pro $20/mo+",
+        tagsEn: ["Terminal Agent","Plan Mode","MCP","Fable 5"],
         name: "Claude Code",
         company: "Anthropic（美国）",
         category: "代码模型",
@@ -592,6 +682,9 @@ const models = [
     },
     {
         id: "github-copilot",
+        nameEn: "GitHub Copilot",
+        priceLabelEn: "$10/mo",
+        tagsEn: ["Code Completion","IDE","GitHub","Multi-Model","Student Free"],
         name: "GitHub Copilot",
         company: "GitHub/微软（美国）",
         category: "代码模型",
@@ -611,6 +704,9 @@ const models = [
     },
     {
         id: "cursor",
+        nameEn: "Cursor",
+        priceLabelEn: "Free/Pro $20/mo",
+        tagsEn: ["AI IDE","Code Gen","Multi-file","Agent Mode"],
         name: "Cursor",
         company: "Anysphere（美国）",
         category: "代码模型",
@@ -630,6 +726,9 @@ const models = [
     },
     {
         id: "windsurf",
+        nameEn: "Windsurf",
+        priceLabelEn: "Free/Pro $15/mo",
+        tagsEn: ["AI IDE","Code Completion","Cascade","Free-friendly"],
         name: "Windsurf",
         company: "Codeium（美国）",
         category: "代码模型",
@@ -649,6 +748,9 @@ const models = [
     },
     {
         id: "tongyi-lingma",
+        nameEn: "Tongyi Lingma",
+        priceLabelEn: "Free",
+        tagsEn: ["Free","Chinese Native","Alibaba","IDE Plugin"],
         name: "通义灵码",
         company: "阿里巴巴（中国）",
         category: "代码模型",
@@ -668,6 +770,9 @@ const models = [
     },
     {
         id: "comate",
+        nameEn: "Baidu Comate",
+        priceLabelEn: "Free",
+        tagsEn: ["Free","Chinese Native","Baidu","IDE Plugin","Code Review"],
         name: "文心快码 (Comate)",
         company: "百度（中国）",
         category: "代码模型",
@@ -729,6 +834,8 @@ document.addEventListener('DOMContentLoaded', function() {
 function renderModelCards(category, query) {
     const grid = document.getElementById('modelGrid');
     if (!grid) return;
+    const lang = currentLang ? currentLang() : 'zh';
+    const isEn = lang === 'en';
 
     let filtered = models;
     if (category && category !== 'all') {
@@ -744,21 +851,26 @@ function renderModelCards(category, query) {
     }
 
     if (filtered.length === 0) {
-        grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:48px;color:var(--text-secondary)">没有找到匹配的模型，试试其他关键词？</div>';
+        grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:48px;color:var(--text-secondary)">' + t('models.empty') + '</div>';
         return;
     }
 
-    grid.innerHTML = filtered.map(m => `
+    grid.innerHTML = filtered.map(m => {
+        let displayName = isEn && m.nameEn ? m.nameEn : m.name;
+        let displayPrice = isEn && m.priceLabelEn ? m.priceLabelEn : m.priceLabel;
+        let displayTags = isEn && m.tagsEn ? m.tagsEn : m.tags;
+        let pricingBadge = m.pricing === 'free' ? t('card.free') : m.pricing === 'freemium' ? t('card.freemium') : t('card.paid');
+        return `
         <div class="model-card" onclick="location.href='${m.website}'" title="点击访问官网">
             <div class="model-card-header">
                 <div>
-                    <div class="model-name">${m.name}</div>
+                    <div class="model-name">${displayName}</div>
                     <div class="model-company">${m.company}</div>
                 </div>
-                <span class="model-badge badge-${m.pricing}">${m.pricing === 'free' ? '免费' : m.pricing === 'freemium' ? '免费+付费' : '付费'}</span>
+                <span class="model-badge badge-${m.pricing}">${pricingBadge}</span>
             </div>
             <div class="model-tags">
-                ${m.tags.map(t => `<span class="model-tag">${t}</span>`).join('')}
+                ${displayTags.map(t => `<span class="model-tag">${t}</span>`).join('')}
             </div>
             <div class="model-desc">${m.strengths}</div>
             <div style="font-size:13px;color:var(--text-secondary);margin-top:6px;">

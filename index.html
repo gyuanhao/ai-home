@@ -26,6 +26,7 @@
       gtag('config', 'G-TBTFSXQ6NF');
     </script>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/i18n.js"></script>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -47,48 +48,49 @@
     <div class="nav-inner">
         <a href="index.html" class="nav-logo">🏠 AI家AI户</a>
         <ul class="nav-links">
-            <li><a href="index.html" class="active">首页</a></li>
-            <li><a href="models.html">模型库</a></li>
-            <li><a href="compare.html">横向对比</a></li>
-            <li><a href="news.html">新闻</a></li>
-            <li><a href="about.html">关于</a></li>
+            <li><a href="index.html" class="active" data-i18n="nav.home">首页</a></li>
+            <li><a href="models.html" data-i18n="nav.models">模型库</a></li>
+            <li><a href="compare.html" data-i18n="nav.compare">横向对比</a></li>
+            <li><a href="news.html" data-i18n="nav.news">新闻</a></li>
+            <li><a href="about.html" data-i18n="nav.about">关于</a></li>
+            <li style="margin-left:auto;"><button id="langSwitch" onclick="switchLang()" style="background:var(--primary-light);color:var(--primary-dark);border:none;padding:4px 12px;border-radius:50px;cursor:pointer;font-size:13px;font-weight:600;font-family:inherit;">EN</button></li>
         </ul>
     </div>
 </nav>
 
 <section class="hero">
-    <h1>AI工具不会挑？<span>三秒给你答案</span></h1>
-    <p>35款产品横向对比，价格功能一目了然。<br>点场景 → 看推荐 → 直接跳转去用。</p>
+    <h1 data-i18n="hero.title">AI工具不会挑？<span>三秒给你答案</span></h1>
+    <p data-i18n="hero.subtitle">35款产品横向对比，价格功能一目了然。<br>点场景 → 看推荐 → 直接跳转去用。</p>
 
     <!-- 场景化快速选型 -->
     <div class="scenario-picker">
-        <div class="scenario-label">👇 你想用AI做什么？</div>
+        <div class="scenario-label" data-i18n="hero.scenario.label">👇 你想用AI做什么？</div>
         <div class="scenario-row">
             <button class="scenario-btn" onclick="showRec('writing')">
                 <span class="scenario-icon">✍️</span>
-                <span class="scenario-name">写文章</span>
-                <span class="scenario-hint">文案、报告、论文</span>
+                <span class="scenario-name" data-i18n="hero.scenario.writing">写文章</span>
+                <span class="scenario-hint" data-i18n="hero.scenario.writingHint">文案、报告、论文</span>
             </button>
             <button class="scenario-btn" onclick="showRec('coding')">
                 <span class="scenario-icon">💻</span>
-                <span class="scenario-name">写代码</span>
-                <span class="scenario-hint">编程、Bug修复</span>
+                <span class="scenario-name" data-i18n="hero.scenario.coding">写代码</span>
+                <span class="scenario-hint" data-i18n="hero.scenario.codingHint">编程、Bug修复</span>
                 <span class="scenario-badge">热门</span>
             </button>
             <button class="scenario-btn" onclick="showRec('image')">
                 <span class="scenario-icon">🎨</span>
-                <span class="scenario-name">画图</span>
-                <span class="scenario-hint">插画、海报、LOGO</span>
+                <span class="scenario-name" data-i18n="hero.scenario.image">画图</span>
+                <span class="scenario-hint" data-i18n="hero.scenario.imageHint">插画、海报、LOGO</span>
             </button>
             <button class="scenario-btn" onclick="showRec('video')">
                 <span class="scenario-icon">🎬</span>
-                <span class="scenario-name">做视频</span>
-                <span class="scenario-hint">短视频、特效</span>
+                <span class="scenario-name" data-i18n="hero.scenario.video">做视频</span>
+                <span class="scenario-hint" data-i18n="hero.scenario.videoHint">短视频、特效</span>
             </button>
             <button class="scenario-btn" onclick="showRec('general')">
                 <span class="scenario-icon">🤖</span>
-                <span class="scenario-name">啥都问</span>
-                <span class="scenario-hint">问答、学习、闲聊</span>
+                <span class="scenario-name" data-i18n="hero.scenario.general">啥都问</span>
+                <span class="scenario-hint" data-i18n="hero.scenario.generalHint">问答、学习、闲聊</span>
             </button>
         </div>
     </div>
@@ -99,53 +101,53 @@
     <div class="hero-stats">
         <div class="hero-stat">
             <div class="number" id="modelCount">35</div>
-            <div class="label">收录产品</div>
+            <div class="label" data-i18n="hero.stat.models">收录产品</div>
         </div>
         <div class="hero-stat">
             <div class="number">5</div>
-            <div class="label">产品品类</div>
+            <div class="label" data-i18n="hero.stat.cats">产品品类</div>
         </div>
         <div class="hero-stat">
             <div class="number">2026-06-15</div>
-            <div class="label">最后更新</div>
+            <div class="label" data-i18n="hero.stat.updated">最后更新</div>
         </div>
     </div>
 </section>
 
 <!-- 品类入口 -->
 <div class="category-section">
-    <h2>🔍 按品类找工具</h2>
-    <p class="subtitle">35个模型覆盖5大品类，点击直接筛选</p>
+    <h2 data-i18n="cat.title">🔍 按品类找工具</h2>
+    <p class="subtitle" data-i18n="cat.subtitle">35个模型覆盖5大品类，点击直接筛选</p>
     <div class="category-grid">
         <a href="models.html?cat=语言模型" class="category-card">
             <span class="cat-icon">💬</span>
-            <span class="cat-name">语言模型</span>
-            <span class="cat-count">12款 · ChatGPT、DeepSeek、Claude</span>
-            <span class="cat-hint">找聊天、写作、推理工具 →</span>
+            <span class="cat-name" data-i18n="cat.llm.name">语言模型</span>
+            <span class="cat-count" data-i18n="cat.llm.desc">12款 · ChatGPT、DeepSeek、Claude</span>
+            <span class="cat-hint" data-i18n="cat.llm.hint">找聊天、写作、推理工具 →</span>
         </a>
         <a href="models.html?cat=Agent平台" class="category-card">
             <span class="cat-icon">🤖</span>
-            <span class="cat-name">Agent 平台</span>
-            <span class="cat-count">6款 · Coze、Dify、Manus</span>
-            <span class="cat-hint">找AI助手、自动化工具 →</span>
+            <span class="cat-name" data-i18n="cat.agent.name">Agent 平台</span>
+            <span class="cat-count" data-i18n="cat.agent.desc">6款 · Coze、Dify、Manus</span>
+            <span class="cat-hint" data-i18n="cat.agent.hint">找AI助手、自动化工具 →</span>
         </a>
         <a href="models.html?cat=图像模型" class="category-card">
             <span class="cat-icon">🎨</span>
-            <span class="cat-name">图像模型</span>
-            <span class="cat-count">5款 · Midjourney、DALL-E、即梦</span>
-            <span class="cat-hint">找画图、设计工具 →</span>
+            <span class="cat-name" data-i18n="cat.image.name">图像模型</span>
+            <span class="cat-count" data-i18n="cat.image.desc">5款 · Midjourney、DALL-E、即梦</span>
+            <span class="cat-hint" data-i18n="cat.image.hint">找画图、设计工具 →</span>
         </a>
         <a href="models.html?cat=视频模型" class="category-card">
             <span class="cat-icon">🎬</span>
-            <span class="cat-name">视频模型</span>
-            <span class="cat-count">6款 · Sora、可灵、海螺</span>
-            <span class="cat-hint">找视频生成、特效工具 →</span>
+            <span class="cat-name" data-i18n="cat.video.name">视频模型</span>
+            <span class="cat-count" data-i18n="cat.video.desc">6款 · Sora、可灵、海螺</span>
+            <span class="cat-hint" data-i18n="cat.video.hint">找视频生成、特效工具 →</span>
         </a>
         <a href="models.html?cat=代码模型" class="category-card">
             <span class="cat-icon">💻</span>
-            <span class="cat-name">代码模型</span>
-            <span class="cat-count">7款 · Codex、Cursor、Claude Code</span>
-            <span class="cat-hint">找编程助手（IDE+终端） →</span>
+            <span class="cat-name" data-i18n="cat.code.name">代码模型</span>
+            <span class="cat-count" data-i18n="cat.code.desc">7款 · Codex、Cursor、Claude Code</span>
+            <span class="cat-hint" data-i18n="cat.code.hint">找编程助手（IDE+终端） →</span>
         </a>
     </div>
 </div>
@@ -205,11 +207,13 @@ function showRec(scene) {
     event.target.closest('.scenario-btn').classList.add('active');
     const data = recommendations[scene];
     const panel = document.getElementById('recPanel');
-    let html = '<div style="font-size:13px;color:var(--text-secondary);margin-bottom:8px;font-weight:500;">' + data.title + '</div>';
+    let html = '<div style="font-size:13px;color:var(--text-secondary);margin-bottom:8px;font-weight:500;">' + t('rec.' + scene) + '</div>';
     data.items.forEach(item => {
-        html += '<div class="rec-card" onclick="window.open(\'' + item.url + '\',\'_blank\')"><span class="rec-icon">' + item.icon + '</span><div class="rec-info"><div class="rec-name">' + item.name + '</div><div class="rec-reason">' + item.reason + '</div></div><span class="rec-price ' + item.priceClass + '">' + item.price + '</span><span class="rec-arrow">→</span></div>';
+        const reason = currentLang() === 'en' && item.reasonEn ? item.reasonEn : item.reason;
+        const name = currentLang() === 'en' && item.nameEn ? item.nameEn : item.name;
+        html += '<div class="rec-card" onclick="window.open(\'' + item.url + '\',\'_blank\')"><span class="rec-icon">' + item.icon + '</span><div class="rec-info"><div class="rec-name">' + name + '</div><div class="rec-reason">' + reason + '</div></div><span class="rec-price ' + item.priceClass + '">' + item.price + '</span><span class="rec-arrow">→</span></div>';
     });
-    html += '<div style="text-align:center;margin-top:12px;"><a href="compare.html" style="font-size:13px;">查看完整对比表 →</a></div>';
+    html += '<div style="text-align:center;margin-top:12px;"><a href="compare.html" style="font-size:13px;">' + t('rec.compare') + '</a></div>';
     panel.innerHTML = html;
     panel.classList.add('show');
 }

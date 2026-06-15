@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Demo — AI家AI户</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* === 场景选择器 === */
+        .scenario-picker {
+            max-width: 640px;
+            margin: 0 auto 8px;
+            text-align: center;
+        }
+        .scenario-label {
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+        .scenario-row {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .scenario-btn {
+            flex: 1;
+            min-width: 100px;
+            max-width: 130px;
+            padding: 12px 8px;
+            border: 2px solid var(--border);
+            border-radius: 12px;
+            background: var(--card-bg);
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: inherit;
+            text-align: center;
+            position: relative;
+        }
+        .scenario-btn:hover {
+            border-color: var(--primary);
+            box-shadow: 0 2px 12px rgba(14,165,233,0.15);
+            transform: translateY(-1px);
+        }
+        .scenario-btn.active {
+            border-color: var(--primary);
+            background: var(--primary-light);
+            box-shadow: 0 2px 12px rgba(14,165,233,0.2);
+        }
+        .scenario-icon {
+            font-size: 24px;
+            display: block;
+            margin-bottom: 4px;
+        }
+        .scenario-name {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text);
+        }
+        .scenario-hint {
+            font-size: 11px;
+            color: var(--text-secondary);
+            margin-top: 2px;
+        }
+        .scenario-badge {
+            position: absolute;
+            top: -6px;
+            right: -6px;
+            background: var(--accent-orange);
+            color: white;
+            font-size: 10px;
+            font-weight: 700;
+            padding: 2px 7px;
+            border-radius: 50px;
+        }
+
+        /* === 推荐面板 === */
+        .recommend-panel {
+            max-width: 640px;
+            margin: 14px auto 0;
+            display: none;
+            animation: fadeSlideIn 0.25s ease;
+        }
+        .recommend-panel.show { display: block; }
+        @keyframes fadeSlideIn {
+            from { opacity: 0; transform: translateY(-6px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .rec-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 16px 20px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            transition: box-shadow 0.2s, transform 0.2s;
+            cursor: pointer;
+        }
+        .rec-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateX(4px);
+            border-color: var(--primary);
+        }
+        .rec-icon {
+            font-size: 28px;
+            flex-shrink: 0;
+            width: 44px;
+            text-align: center;
+        }
+        .rec-info { flex: 1; min-width: 0; }
+        .rec-name {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 2px;
+        }
+        .rec-reason {
+            font-size: 12px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+        .rec-price {
+            font-size: 12px;
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: 50px;
+            flex-shrink: 0;
+        }
+        .rec-free { background: #d1fae5; color: #065f46; }
+        .rec-freemium { background: #fef3c7; color: #92400e; }
+        .rec-arrow {
+            font-size: 16px;
+            color: var(--text-secondary);
+            flex-shrink: 0;
+        }
+
+        /* === 品类模块 === */
+        .category-section {
+            max-width: var(--max-width);
+            margin: 56px auto 0;
+            padding: 0 24px;
+        }
+        .category-section h2 {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 4px;
+        }
+        .category-section .subtitle {
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+        }
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 14px;
+        }
+        .category-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 24px 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-decoration: none;
+            color: var(--text);
+            display: block;
+        }
+        .category-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+            border-color: var(--primary);
+        }
+        .category-card .cat-icon {
+            font-size: 32px;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .category-card .cat-name {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 4px;
+            color: var(--text);
+        }
+        .category-card .cat-count {
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+        .category-card .cat-hint {
+            font-size: 11px;
+            color: var(--primary);
+            margin-top: 6px;
+            font-weight: 500;
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+        .category-card:hover .cat-hint { opacity: 1; }
+
+        /* === Hero微调 === */
+        .hero { padding-bottom: 40px; }
+        .hero p { margin-bottom: 20px; }
+
+        @media (max-width: 768px) {
+            .scenario-btn { min-width: 70px; max-width: none; }
+            .category-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="nav">
+    <div class="nav-inner">
+        <a href="hero-demo.html" class="nav-logo">🏠 AI家AI户</a>
+        <ul class="nav-links">
+            <li><a href="hero-demo.html" class="active">首页</a></li>
+            <li><a href="models.html">模型库</a></li>
+            <li><a href="compare.html">横向对比</a></li>
+            <li><a href="news.html">新闻</a></li>
+            <li><a href="about.html">关于</a></li>
+        </ul>
+    </div>
+</nav>
+
+<section class="hero">
+    <h1>AI工具不会挑？<span>三秒给你答案</span></h1>
+    <p>32款产品横向对比，价格功能一目了然。<br>点场景 → 看推荐 → 直接跳转去用。</p>
+
+    <!-- 方案B：场景化快速选型 -->
+    <div class="scenario-picker">
+        <div class="scenario-label">👇 你想用AI做什么？</div>
+        <div class="scenario-row">
+            <button class="scenario-btn" onclick="showRec('writing')">
+                <span class="scenario-icon">✍️</span>
+                <span class="scenario-name">写文章</span>
+                <span class="scenario-hint">文案、报告、论文</span>
+            </button>
+            <button class="scenario-btn" onclick="showRec('coding')">
+                <span class="scenario-icon">💻</span>
+                <span class="scenario-name">写代码</span>
+                <span class="scenario-hint">编程、Bug修复</span>
+                <span class="scenario-badge">热门</span>
+            </button>
+            <button class="scenario-btn" onclick="showRec('image')">
+                <span class="scenario-icon">🎨</span>
+                <span class="scenario-name">画图</span>
+                <span class="scenario-hint">插画、海报、LOGO</span>
+            </button>
+            <button class="scenario-btn" onclick="showRec('video')">
+                <span class="scenario-icon">🎬</span>
+                <span class="scenario-name">做视频</span>
+                <span class="scenario-hint">短视频、特效</span>
+            </button>
+            <button class="scenario-btn" onclick="showRec('general')">
+                <span class="scenario-icon">🤖</span>
+                <span class="scenario-name">啥都问</span>
+                <span class="scenario-hint">问答、学习、闲聊</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- 推荐结果面板 -->
+    <div class="recommend-panel" id="recPanel"></div>
+</section>
+
+<!-- 优化后的5个品类入口 -->
+<div class="category-section">
+    <h2>🔍 按品类找工具</h2>
+    <p class="subtitle">或者直接按类别浏览，32个模型覆盖5大品类</p>
+    <div class="category-grid">
+        <a href="models.html?cat=语言模型" class="category-card">
+            <span class="cat-icon">💬</span>
+            <span class="cat-name">语言模型</span>
+            <span class="cat-count">12款 · ChatGPT、DeepSeek、Claude</span>
+            <span class="cat-hint">找聊天、写作、推理工具 →</span>
+        </a>
+        <a href="models.html?cat=Agent平台" class="category-card">
+            <span class="cat-icon">🤖</span>
+            <span class="cat-name">Agent 平台</span>
+            <span class="cat-count">6款 · Coze、Dify、Manus</span>
+            <span class="cat-hint">找AI助手、自动化工具 →</span>
+        </a>
+        <a href="models.html?cat=图像模型" class="category-card">
+            <span class="cat-icon">🎨</span>
+            <span class="cat-name">图像模型</span>
+            <span class="cat-count">5款 · Midjourney、DALL-E、即梦</span>
+            <span class="cat-hint">找画图、设计工具 →</span>
+        </a>
+        <a href="models.html?cat=视频模型" class="category-card">
+            <span class="cat-icon">🎬</span>
+            <span class="cat-name">视频模型</span>
+            <span class="cat-count">5款 · Sora、可灵、Runway</span>
+            <span class="cat-hint">找视频生成、特效工具 →</span>
+        </a>
+        <a href="models.html?cat=代码模型" class="category-card">
+            <span class="cat-icon">💻</span>
+            <span class="cat-name">代码模型</span>
+            <span class="cat-count">5款 · Cursor、Copilot、通义灵码</span>
+            <span class="cat-hint">找编程助手 →</span>
+        </a>
+    </div>
+</div>
+
+<script>
+// 场景推荐数据
+const recommendations = {
+    writing: {
+        title: '✍️ 写作推荐',
+        items: [
+            { name: 'Kimi', icon: '📝', reason: '中文写作最细腻，长文案可以一次生成几千字不跑题', price: '免费+¥49/月', priceClass: 'rec-freemium', url: 'https://kimi.moonshot.cn' },
+            { name: 'Claude', icon: '🧠', reason: '长文档分析 + 写作能力强，学术论文和报告首选', price: '免费+$20/月', priceClass: 'rec-freemium', url: 'https://claude.ai' },
+            { name: 'ChatGPT', icon: '🤖', reason: '综合写作能力优秀，中文流畅，创意脑暴好用', price: '免费+$20/月', priceClass: 'rec-freemium', url: 'https://chat.openai.com' },
+        ]
+    },
+    coding: {
+        title: '💻 编程推荐',
+        items: [
+            { name: 'Cursor', icon: '⌨️', reason: '最强AI编辑器，Agent模式可跨文件改代码，写项目首选', price: '免费+$20/月', priceClass: 'rec-freemium', url: 'https://cursor.com' },
+            { name: 'Claude', icon: '🧠', reason: 'Opus 4.8 编程排行榜第一，复杂算法和架构设计极强', price: '免费+$20/月', priceClass: 'rec-freemium', url: 'https://claude.ai' },
+            { name: 'DeepSeek', icon: '🐋', reason: '完全免费，推理和数学能力强，预算敏感的首选', price: '免费', priceClass: 'rec-free', url: 'https://chat.deepseek.com' },
+        ]
+    },
+    image: {
+        title: '🎨 画图推荐',
+        items: [
+            { name: 'Midjourney', icon: '🖼️', reason: '画质天花板，V7艺术风格极强，Niji7动漫引擎专业', price: '$10/月起', priceClass: 'rec-freemium', url: 'https://www.midjourney.com' },
+            { name: '即梦 Jimeng', icon: '🎨', reason: '中文Prompt直接说人话，免费额度大方，零门槛上手', price: '免费', priceClass: 'rec-free', url: 'https://jimeng.jianying.com' },
+            { name: 'DALL-E', icon: '🤖', reason: 'ChatGPT内置，自然语言理解最好，口语化描述就出图', price: '免费+$20/月', priceClass: 'rec-freemium', url: 'https://chat.openai.com' },
+        ]
+    },
+    video: {
+        title: '🎬 视频推荐',
+        items: [
+            { name: '可灵 Kling', icon: '🎬', reason: '中文Prompt直接生成，免费额度大方，新手最友好', price: '免费+¥39/月', priceClass: 'rec-freemium', url: 'https://kling.kuaishou.com' },
+            { name: 'Runway Gen-4', icon: '🎥', reason: '功能最全面：视频生成+运动笔刷+音频+局部修改', price: '免费+$15/月', priceClass: 'rec-freemium', url: 'https://runwayml.com' },
+            { name: 'Sora', icon: '🌟', reason: '画质天花板，影视级质感，追求极致效果不差钱的上', price: '$20/月起', priceClass: 'rec-freemium', url: 'https://sora.com' },
+        ]
+    },
+    general: {
+        title: '🤖 通用推荐',
+        items: [
+            { name: 'DeepSeek', icon: '🐋', reason: '完全免费，中文原生，推理极强。日常问答零成本首选', price: '免费', priceClass: 'rec-free', url: 'https://chat.deepseek.com' },
+            { name: '通义千问', icon: '☁️', reason: '阿里出品，中文能力一流，阿里云生态深度集成', price: '免费+API', priceClass: 'rec-freemium', url: 'https://tongyi.aliyun.com' },
+            { name: '豆包', icon: '🫘', reason: '字节出品，APP端体验流畅，日常聊天和中文问答好用', price: '免费+¥29/月', priceClass: 'rec-freemium', url: 'https://www.doubao.com' },
+        ]
+    },
+};
+
+function showRec(scene) {
+    // 更新按钮 active 状态
+    document.querySelectorAll('.scenario-btn').forEach(b => b.classList.remove('active'));
+    event.target.closest('.scenario-btn').classList.add('active');
+
+    const data = recommendations[scene];
+    const panel = document.getElementById('recPanel');
+
+    let html = '<div style="font-size:13px;color:var(--text-secondary);margin-bottom:8px;font-weight:500;">' + data.title + '</div>';
+    data.items.forEach(item => {
+        html += `
+            <div class="rec-card" onclick="window.open('${item.url}', '_blank')">
+                <span class="rec-icon">${item.icon}</span>
+                <div class="rec-info">
+                    <div class="rec-name">${item.name}</div>
+                    <div class="rec-reason">${item.reason}</div>
+                </div>
+                <span class="rec-price ${item.priceClass}">${item.price}</span>
+                <span class="rec-arrow">→</span>
+            </div>
+        `;
+    });
+    html += '<div style="text-align:center;margin-top:12px;"><a href="compare.html" style="font-size:13px;">查看完整对比表 →</a></div>';
+
+    panel.innerHTML = html;
+    panel.classList.add('show');
+}
+</script>
+
+</body>
+</html>
