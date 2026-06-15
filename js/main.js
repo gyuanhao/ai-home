@@ -4,7 +4,7 @@ const models = [
         id: "chatgpt",
         nameEn: "ChatGPT",
         priceLabelEn: "Free / Plus $20/mo",
-        tagsEn: ["Writing", "Coding", "Image Gen", "Voice", "Multimodal"],
+        tagsEn: ["Writing","Coding","Image Gen","Voice","Multimodal"],
         name: "ChatGPT",
         company: "OpenAI（美国）",
         category: "语言模型",
@@ -27,7 +27,7 @@ const models = [
         id: "claude",
         nameEn: "Claude",
         priceLabelEn: "Free / Pro $20/mo",
-        tagsEn: ["Writing", "Coding", "Long Docs", "Reasoning", "Deep Analysis"],
+        tagsEn: ["Writing","Coding","Long Docs","Reasoning","Deep Analysis"],
         name: "Claude",
         company: "Anthropic（美国）",
         category: "语言模型",
@@ -50,7 +50,7 @@ const models = [
         id: "gemini",
         nameEn: "Gemini",
         priceLabelEn: "Free / AI Pro $19.99/mo",
-        tagsEn: ["Multimodal", "Search", "Video Gen", "Long Context", "Google"],
+        tagsEn: ["Multimodal","Search","Video Gen","Long Context","Google"],
         name: "Gemini",
         company: "Google（美国）",
         category: "语言模型",
@@ -73,7 +73,7 @@ const models = [
         id: "deepseek",
         nameEn: "DeepSeek",
         priceLabelEn: "Completely Free",
-        tagsEn: ["Free", "Reasoning", "Coding", "Math", "Chinese Native"],
+        tagsEn: ["Free","Reasoning","Coding","Math","Chinese Native"],
         name: "DeepSeek",
         company: "深度求索（中国）",
         category: "语言模型",
@@ -96,7 +96,7 @@ const models = [
         id: "qwen",
         nameEn: "Qwen (Tongyi)",
         priceLabelEn: "Free / API",
-        tagsEn: ["Chinese", "Alibaba", "Enterprise", "Multimodal", "Open Source"],
+        tagsEn: ["Chinese","Alibaba","Enterprise","Multimodal","Open Source"],
         name: "通义千问 (Qwen)",
         company: "阿里巴巴（中国）",
         category: "语言模型",
@@ -119,7 +119,7 @@ const models = [
         id: "glm",
         nameEn: "GLM (ChatGLM)",
         priceLabelEn: "Free / Plan ~$1.4+",
-        tagsEn: ["Coding", "Chinese", "Open Source", "Agent", "Zhipu AI"],
+        tagsEn: ["Coding","Chinese","Open Source","Agent","Zhipu"],
         name: "智谱清言 (GLM)",
         company: "智谱AI（中国）",
         category: "语言模型",
@@ -142,7 +142,7 @@ const models = [
         id: "kimi",
         nameEn: "Kimi",
         priceLabelEn: "Free / ~$7/mo",
-        tagsEn: ["Long Text", "Chinese Writing", "Deep Research", "PPT Gen", "Agent"],
+        tagsEn: ["Long Text","Chinese Writing","Deep Research","PPT Gen","Agent"],
         name: "Kimi",
         company: "月之暗面（中国）",
         category: "语言模型",
@@ -165,7 +165,7 @@ const models = [
         id: "llama",
         nameEn: "Llama",
         priceLabelEn: "Free (Open Source)",
-        tagsEn: ["Open Source", "Local Deploy", "Customizable", "Privacy", "Research"],
+        tagsEn: ["Open Source","Local Deploy","Customizable","Privacy","Research"],
         name: "Llama",
         company: "Meta（美国）",
         category: "语言模型",
@@ -188,7 +188,7 @@ const models = [
         id: "minimax-m3",
         nameEn: "MiniMax M3",
         priceLabelEn: "Free / API",
-        tagsEn: ["Multimodal", "Coding", "1M Context", "Open Source", "Chinese"],
+        tagsEn: ["Multimodal","Coding","1M Context","Open Source","Chinese"],
         name: "MiniMax M3",
         company: "稀宇科技/MiniMax（中国）",
         category: "语言模型",
@@ -211,7 +211,7 @@ const models = [
         id: "doubao",
         nameEn: "Doubao",
         priceLabelEn: "Free / ~$4/mo",
-        tagsEn: ["Chinese", "Free", "Multimodal", "ByteDance", "Mobile"],
+        tagsEn: ["Chinese","Free","Multimodal","ByteDance","Mobile"],
         name: "豆包 (Doubao)",
         company: "字节跳动（中国）",
         category: "语言模型",
@@ -234,7 +234,7 @@ const models = [
         id: "ernie",
         nameEn: "ERNIE Bot",
         priceLabelEn: "Free / ~$7/mo",
-        tagsEn: ["Chinese", "Baidu", "Search", "Multimodal", "Enterprise"],
+        tagsEn: ["Chinese","Baidu","Search","Multimodal","Enterprise"],
         name: "文心一言 (ERNIE)",
         company: "百度（中国）",
         category: "语言模型",
@@ -303,7 +303,7 @@ const models = [
         id: "windclaw",
         nameEn: "WindClaw",
         priceLabelEn: "Free (Beta)",
-        tagsEn: ["Agent","Finance","Data","Multi-Agent","24/7"],
+        tagsEn: ["Agent","Finance","Data","Multi-Agent","24x7"],
         name: "WindClaw",
         company: "万得信息（中国）",
         category: "Agent平台",
@@ -507,7 +507,7 @@ const models = [
         id: "sora",
         nameEn: "Sora",
         priceLabelEn: "Plus $20/mo",
-        tagsEn: ["Video Gen","Cinematic","Physics","Long Shots","High Quality"],
+        tagsEn: ["Video Gen","Cinematic","Physics","Long Shots","HiQuality"],
         name: "Sora",
         company: "OpenAI（美国）",
         category: "视频模型",
@@ -834,8 +834,7 @@ document.addEventListener('DOMContentLoaded', function() {
 function renderModelCards(category, query) {
     const grid = document.getElementById('modelGrid');
     if (!grid) return;
-    const lang = currentLang ? currentLang() : 'zh';
-    const isEn = lang === 'en';
+    const isEn = (typeof currentLang === 'function' ? currentLang() : 'zh') === 'en';
 
     let filtered = models;
     if (category && category !== 'all') {
@@ -851,33 +850,28 @@ function renderModelCards(category, query) {
     }
 
     if (filtered.length === 0) {
-        grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:48px;color:var(--text-secondary)">' + t('models.empty') + '</div>';
+        grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:48px;color:var(--text-secondary)">' + (typeof t === 'function' ? t('models.empty') : '没有找到匹配的模型，试试其他关键词？') + '</div>';
         return;
     }
 
-    grid.innerHTML = filtered.map(m => {
-        let displayName = isEn && m.nameEn ? m.nameEn : m.name;
-        let displayPrice = isEn && m.priceLabelEn ? m.priceLabelEn : m.priceLabel;
-        let displayTags = isEn && m.tagsEn ? m.tagsEn : m.tags;
-        let pricingBadge = m.pricing === 'free' ? t('card.free') : m.pricing === 'freemium' ? t('card.freemium') : t('card.paid');
-        return `
+    grid.innerHTML = filtered.map(m => `
         <div class="model-card" onclick="location.href='${m.website}'" title="点击访问官网">
             <div class="model-card-header">
                 <div>
-                    <div class="model-name">${displayName}</div>
+                    <div class="model-name">${isEn && m.nameEn ? m.nameEn : m.name}</div>
                     <div class="model-company">${m.company}</div>
                 </div>
-                <span class="model-badge badge-${m.pricing}">${pricingBadge}</span>
+                <span class="model-badge badge-${m.pricing}">${m.pricing === 'free' ? (typeof t === 'function' ? t('card.free') : '免费') : m.pricing === 'freemium' ? (typeof t === 'function' ? t('card.freemium') : '免费+付费') : (typeof t === 'function' ? t('card.paid') : '付费')}</span>
             </div>
             <div class="model-tags">
-                ${displayTags.map(t => `<span class="model-tag">${t}</span>`).join('')}
+                ${(isEn && m.tagsEn ? m.tagsEn : m.tags).map(tag => '<span class="model-tag">' + tag + '</span>').join('')}
             </div>
             <div class="model-desc">${m.strengths}</div>
             <div style="font-size:13px;color:var(--text-secondary);margin-top:6px;">
-                <strong>最适合：</strong>${m.bestFor}
+                <strong>${typeof t === 'function' ? t('card.bestFor') : '最适合'}：</strong>${m.bestFor}
             </div>
             <div class="model-footer">
-                <div class="model-price"><strong>${m.priceLabel.split(' / ')[0]}</strong>${m.priceLabel.includes('/') ? ' / ' + m.priceLabel.split(' / ').slice(1).join(' / ') : ''}</div>
+                <div class="model-price"><strong>${(isEn && m.priceLabelEn ? m.priceLabelEn : m.priceLabel).split(' / ')[0]}</strong>${(isEn && m.priceLabelEn ? m.priceLabelEn : m.priceLabel).includes('/') ? ' / ' + (isEn && m.priceLabelEn ? m.priceLabelEn : m.priceLabel).split(' / ').slice(1).join(' / ') : ''}</div>
             </div>
         </div>
     `).join('');
