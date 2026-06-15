@@ -57,13 +57,45 @@
 </nav>
 
 <section class="hero">
-    <h1>选AI工具，<span>一站看清</span></h1>
-    <p>AI大模型与Agent平台横向对比，价格功能一目了然。<br>帮你发现你还没听过的好工具，对比完直接跳转去用。</p>
-    <div class="search-box">
-        <input type="text" placeholder="搜模型名称、功能、价格……" id="heroSearch"
-               onkeydown="if(event.key==='Enter'){location.href='models.html?q='+encodeURIComponent(this.value)}">
-        <span class="search-icon">🔍</span>
+    <h1>AI工具不会挑？<span>三秒给你答案</span></h1>
+    <p>33款产品横向对比，价格功能一目了然。<br>点场景 → 看推荐 → 直接跳转去用。</p>
+
+    <!-- 场景化快速选型 -->
+    <div class="scenario-picker">
+        <div class="scenario-label">👇 你想用AI做什么？</div>
+        <div class="scenario-row">
+            <button class="scenario-btn" onclick="showRec('writing')">
+                <span class="scenario-icon">✍️</span>
+                <span class="scenario-name">写文章</span>
+                <span class="scenario-hint">文案、报告、论文</span>
+            </button>
+            <button class="scenario-btn" onclick="showRec('coding')">
+                <span class="scenario-icon">💻</span>
+                <span class="scenario-name">写代码</span>
+                <span class="scenario-hint">编程、Bug修复</span>
+                <span class="scenario-badge">热门</span>
+            </button>
+            <button class="scenario-btn" onclick="showRec('image')">
+                <span class="scenario-icon">🎨</span>
+                <span class="scenario-name">画图</span>
+                <span class="scenario-hint">插画、海报、LOGO</span>
+            </button>
+            <button class="scenario-btn" onclick="showRec('video')">
+                <span class="scenario-icon">🎬</span>
+                <span class="scenario-name">做视频</span>
+                <span class="scenario-hint">短视频、特效</span>
+            </button>
+            <button class="scenario-btn" onclick="showRec('general')">
+                <span class="scenario-icon">🤖</span>
+                <span class="scenario-name">啥都问</span>
+                <span class="scenario-hint">问答、学习、闲聊</span>
+            </button>
+        </div>
     </div>
+
+    <!-- 推荐结果面板 -->
+    <div class="recommend-panel" id="recPanel"></div>
+
     <div class="hero-stats">
         <div class="hero-stat">
             <div class="number" id="modelCount">33</div>
@@ -80,43 +112,41 @@
     </div>
 </section>
 
-<div class="container">
-    <h2 style="font-size:22px; margin-bottom:20px;">🔥 热门语言模型</h2>
-    <div class="model-grid" id="featuredGrid"></div>
-    <div style="text-align:center; margin-top:24px;">
-        <a href="models.html" style="display:inline-block; padding:12px 32px; background:var(--primary); color:white; border-radius:50px; font-weight:600; font-size:15px;">查看全部产品 →</a>
-    </div>
-</div>
-
-<div class="container" style="padding-top:8px;">
-    <h2 style="font-size:22px; margin-bottom:20px;">🤖 Agent 平台</h2>
-    <div class="model-grid" id="agentGrid"></div>
-    <div style="text-align:center; margin-top:24px;">
-        <a href="models.html" style="display:inline-block; padding:12px 32px; background:var(--primary); color:white; border-radius:50px; font-weight:600; font-size:15px;">查看全部产品 →</a>
-    </div>
-</div>
-
-<div class="container" style="padding-top:8px;">
-    <h2 style="font-size:22px; margin-bottom:20px;">🎨 图像模型</h2>
-    <div class="model-grid" id="imageGrid"></div>
-    <div style="text-align:center; margin-top:24px;">
-        <a href="models.html" style="display:inline-block; padding:12px 32px; background:var(--primary); color:white; border-radius:50px; font-weight:600; font-size:15px;">查看全部产品 →</a>
-    </div>
-</div>
-
-<div class="container" style="padding-top:8px;">
-    <h2 style="font-size:22px; margin-bottom:20px;">🎬 视频模型</h2>
-    <div class="model-grid" id="videoGrid"></div>
-    <div style="text-align:center; margin-top:24px;">
-        <a href="models.html" style="display:inline-block; padding:12px 32px; background:var(--primary); color:white; border-radius:50px; font-weight:600; font-size:15px;">查看全部产品 →</a>
-    </div>
-</div>
-
-<div class="container" style="padding-top:8px;">
-    <h2 style="font-size:22px; margin-bottom:20px;">💻 代码模型</h2>
-    <div class="model-grid" id="codeGrid"></div>
-    <div style="text-align:center; margin-top:24px;">
-        <a href="models.html" style="display:inline-block; padding:12px 32px; background:var(--primary); color:white; border-radius:50px; font-weight:600; font-size:15px;">查看全部产品 →</a>
+<!-- 品类入口 -->
+<div class="category-section">
+    <h2>🔍 按品类找工具</h2>
+    <p class="subtitle">33个模型覆盖5大品类，点击直接筛选</p>
+    <div class="category-grid">
+        <a href="models.html?cat=语言模型" class="category-card">
+            <span class="cat-icon">💬</span>
+            <span class="cat-name">语言模型</span>
+            <span class="cat-count">12款 · ChatGPT、DeepSeek、Claude</span>
+            <span class="cat-hint">找聊天、写作、推理工具 →</span>
+        </a>
+        <a href="models.html?cat=Agent平台" class="category-card">
+            <span class="cat-icon">🤖</span>
+            <span class="cat-name">Agent 平台</span>
+            <span class="cat-count">6款 · Coze、Dify、Manus</span>
+            <span class="cat-hint">找AI助手、自动化工具 →</span>
+        </a>
+        <a href="models.html?cat=图像模型" class="category-card">
+            <span class="cat-icon">🎨</span>
+            <span class="cat-name">图像模型</span>
+            <span class="cat-count">5款 · Midjourney、DALL-E、即梦</span>
+            <span class="cat-hint">找画图、设计工具 →</span>
+        </a>
+        <a href="models.html?cat=视频模型" class="category-card">
+            <span class="cat-icon">🎬</span>
+            <span class="cat-name">视频模型</span>
+            <span class="cat-count">6款 · Sora、可灵、海螺</span>
+            <span class="cat-hint">找视频生成、特效工具 →</span>
+        </a>
+        <a href="models.html?cat=代码模型" class="category-card">
+            <span class="cat-icon">💻</span>
+            <span class="cat-name">代码模型</span>
+            <span class="cat-count">5款 · Cursor、Copilot、通义灵码</span>
+            <span class="cat-hint">找编程助手 →</span>
+        </a>
     </div>
 </div>
 
@@ -126,115 +156,63 @@
 </footer>
 
 <script>
-// 首页热门语言模型（前6个）
-const featuredModels = models.filter(m => m.category === '语言模型').slice(0, 6);
-const modelGrid = document.getElementById('featuredGrid');
-modelGrid.innerHTML = featuredModels.map(m => `
-    <div class="model-card" onclick="location.href='${m.website}'" title="点击访问官网">
-        <div class="model-card-header">
-            <div>
-                <div class="model-name">${m.name}</div>
-                <div class="model-company">${m.company}</div>
-            </div>
-            <span class="model-badge badge-${m.pricing}">${m.pricing === 'free' ? '免费' : m.pricing === 'freemium' ? '免费+付费' : '付费'}</span>
-        </div>
-        <div class="model-tags">
-            ${m.tags.map(t => `<span class="model-tag">${t}</span>`).join('')}
-        </div>
-        <div class="model-desc">${m.strengths}</div>
-        <div class="model-footer">
-            <div class="model-price"><strong>${m.priceLabel.split(' / ')[0]}</strong></div>
-        </div>
-    </div>
-`).join('');
+// 场景推荐数据
+const recommendations = {
+    writing: {
+        title: '✍️ 写作推荐',
+        items: [
+            { name: 'Kimi', icon: '📝', reason: '中文写作最细腻，长文案一次生成几千字不跑题', price: '免费+¥49/月', priceClass: 'rec-freemium', url: 'https://kimi.moonshot.cn' },
+            { name: 'Claude', icon: '🧠', reason: '长文档分析+写作能力强，学术论文和报告首选', price: '免费+$20/月', priceClass: 'rec-freemium', url: 'https://claude.ai' },
+            { name: 'ChatGPT', icon: '🤖', reason: '综合写作能力优秀，中文流畅，创意脑暴好用', price: '免费+$20/月', priceClass: 'rec-freemium', url: 'https://chat.openai.com' },
+        ]
+    },
+    coding: {
+        title: '💻 编程推荐',
+        items: [
+            { name: 'Cursor', icon: '⌨️', reason: '最强AI编辑器，Agent模式可跨文件改代码', price: '免费+$20/月', priceClass: 'rec-freemium', url: 'https://cursor.com' },
+            { name: 'Claude', icon: '🧠', reason: 'Opus 4.8编程榜第一，复杂算法和架构设计极强', price: '免费+$20/月', priceClass: 'rec-freemium', url: 'https://claude.ai' },
+            { name: 'DeepSeek', icon: '🐋', reason: '完全免费，推理和数学能力强，预算敏感首选', price: '免费', priceClass: 'rec-free', url: 'https://chat.deepseek.com' },
+        ]
+    },
+    image: {
+        title: '🎨 画图推荐',
+        items: [
+            { name: 'Midjourney', icon: '🖼️', reason: '画质天花板，V7艺术风格极强，Niji7动漫专业', price: '$10/月起', priceClass: 'rec-freemium', url: 'https://www.midjourney.com' },
+            { name: '即梦 Jimeng', icon: '🎨', reason: '中文Prompt直接说人话，免费额度大方，零门槛', price: '免费', priceClass: 'rec-free', url: 'https://jimeng.jianying.com' },
+            { name: 'DALL-E', icon: '🤖', reason: 'ChatGPT内置，自然语言理解最好，口语描述出图', price: '免费+$20/月', priceClass: 'rec-freemium', url: 'https://chat.openai.com' },
+        ]
+    },
+    video: {
+        title: '🎬 视频推荐',
+        items: [
+            { name: '可灵 Kling', icon: '🎬', reason: '中文Prompt直接生成，免费额度大方，新手友好', price: '免费+¥39/月', priceClass: 'rec-freemium', url: 'https://kling.kuaishou.com' },
+            { name: 'Runway Gen-4', icon: '🎥', reason: '功能最全：视频生成+运动笔刷+音频+局部修改', price: '免费+$15/月', priceClass: 'rec-freemium', url: 'https://runwayml.com' },
+            { name: '海螺视频', icon: '🐚', reason: '国产黑马，中文原生，与MiniMax M3同厂商', price: '免费+¥39/月', priceClass: 'rec-freemium', url: 'https://hailuoai.com' },
+        ]
+    },
+    general: {
+        title: '🤖 通用推荐',
+        items: [
+            { name: 'DeepSeek', icon: '🐋', reason: '完全免费，中文原生，推理极强。日常问答零成本', price: '免费', priceClass: 'rec-free', url: 'https://chat.deepseek.com' },
+            { name: '通义千问', icon: '☁️', reason: '阿里出品，中文一流，阿里云生态深度集成', price: '免费+API', priceClass: 'rec-freemium', url: 'https://tongyi.aliyun.com' },
+            { name: '豆包', icon: '🫘', reason: '字节出品，APP端流畅，日常聊天和问答好用', price: '免费+¥29/月', priceClass: 'rec-freemium', url: 'https://www.doubao.com' },
+        ]
+    },
+};
 
-// 首页 Agent 平台
-const agentModels = models.filter(m => m.category === 'Agent平台');
-const agentGrid = document.getElementById('agentGrid');
-agentGrid.innerHTML = agentModels.map(m => `
-    <div class="model-card" onclick="location.href='${m.website}'" title="点击访问官网">
-        <div class="model-card-header">
-            <div>
-                <div class="model-name">${m.name}</div>
-                <div class="model-company">${m.company}</div>
-            </div>
-            <span class="model-badge badge-${m.pricing}">${m.pricing === 'free' ? '免费' : m.pricing === 'freemium' ? '免费+付费' : '付费'}</span>
-        </div>
-        <div class="model-tags">
-            ${m.tags.map(t => `<span class="model-tag">${t}</span>`).join('')}
-        </div>
-        <div class="model-desc">${m.strengths}</div>
-        <div class="model-footer">
-            <div class="model-price"><strong>${m.priceLabel.split(' / ')[0]}</strong></div>
-        </div>
-    </div>
-`).join('');
-
-// 首页 图像模型
-const imageModels = models.filter(m => m.category === '图像模型');
-const imageGrid = document.getElementById('imageGrid');
-imageGrid.innerHTML = imageModels.map(m => `
-    <div class="model-card" onclick="location.href='${m.website}'" title="点击访问官网">
-        <div class="model-card-header">
-            <div>
-                <div class="model-name">${m.name}</div>
-                <div class="model-company">${m.company}</div>
-            </div>
-            <span class="model-badge badge-${m.pricing}">${m.pricing === 'free' ? '免费' : m.pricing === 'freemium' ? '免费+付费' : '付费'}</span>
-        </div>
-        <div class="model-tags">
-            ${m.tags.map(t => `<span class="model-tag">${t}</span>`).join('')}
-        </div>
-        <div class="model-desc">${m.strengths}</div>
-        <div class="model-footer">
-            <div class="model-price"><strong>${m.priceLabel.split(' / ')[0]}</strong></div>
-        </div>
-    </div>
-`).join('');
-
-// 首页 视频模型
-const videoModels = models.filter(m => m.category === '视频模型');
-const videoGrid = document.getElementById('videoGrid');
-videoGrid.innerHTML = videoModels.map(m => `
-    <div class="model-card" onclick="location.href='${m.website}'" title="点击访问官网">
-        <div class="model-card-header">
-            <div>
-                <div class="model-name">${m.name}</div>
-                <div class="model-company">${m.company}</div>
-            </div>
-            <span class="model-badge badge-${m.pricing}">${m.pricing === 'free' ? '免费' : m.pricing === 'freemium' ? '免费+付费' : '付费'}</span>
-        </div>
-        <div class="model-tags">
-            ${m.tags.map(t => `<span class="model-tag">${t}</span>`).join('')}
-        </div>
-        <div class="model-desc">${m.strengths}</div>
-        <div class="model-footer">
-            <div class="model-price"><strong>${m.priceLabel.split(' / ')[0]}</strong></div>
-        </div>
-    </div>
-`).join('');
-
-// 首页 代码模型
-const codeModels = models.filter(m => m.category === '代码模型');
-const codeGrid = document.getElementById('codeGrid');
-codeGrid.innerHTML = codeModels.map(m => `
-    <div class="model-card" onclick="location.href='${m.website}'" title="点击访问官网">
-        <div class="model-card-header">
-            <div>
-                <div class="model-name">${m.name}</div>
-                <div class="model-company">${m.company}</div>
-            </div>
-            <span class="model-badge badge-${m.pricing}">${m.pricing === 'free' ? '免费' : m.pricing === 'freemium' ? '免费+付费' : '付费'}</span>
-        </div>
-        <div class="model-tags">
-            ${m.tags.map(t => `<span class="model-tag">${t}</span>`).join('')}
-        </div>
-        <div class="model-desc">${m.strengths}</div>
-        <div class="model-footer">
-            <div class="model-price"><strong>${m.priceLabel.split(' / ')[0]}</strong></div>
-        </div>
-    </div>
-`).join('');
+function showRec(scene) {
+    document.querySelectorAll('.scenario-btn').forEach(b => b.classList.remove('active'));
+    event.target.closest('.scenario-btn').classList.add('active');
+    const data = recommendations[scene];
+    const panel = document.getElementById('recPanel');
+    let html = '<div style="font-size:13px;color:var(--text-secondary);margin-bottom:8px;font-weight:500;">' + data.title + '</div>';
+    data.items.forEach(item => {
+        html += '<div class="rec-card" onclick="window.open(\'' + item.url + '\',\'_blank\')"><span class="rec-icon">' + item.icon + '</span><div class="rec-info"><div class="rec-name">' + item.name + '</div><div class="rec-reason">' + item.reason + '</div></div><span class="rec-price ' + item.priceClass + '">' + item.price + '</span><span class="rec-arrow">→</span></div>';
+    });
+    html += '<div style="text-align:center;margin-top:12px;"><a href="compare.html" style="font-size:13px;">查看完整对比表 →</a></div>';
+    panel.innerHTML = html;
+    panel.classList.add('show');
+}
 </script>
 
 <script src="js/main.js"></script>
