@@ -551,7 +551,45 @@ const models = [
         lastUpdated: "2026-06-15",
         source: "hailuoai.com / php.cn"
     },
-    // ========== 代码模型 (5) ==========
+    // ========== 代码模型 (7) ==========
+    {
+        id: "codex",
+        name: "Codex CLI",
+        company: "OpenAI（美国）",
+        category: "代码模型",
+        pricing: "freemium",
+        priceLabel: "ChatGPT Plus $20/月可用",
+        priceDetail: "ChatGPT Plus $20/月（月约200条消息）; Pro $200/月（约1000+条）。开源CLI工具，npm安装，GPT-5.5驱动",
+        website: "https://github.com/openai/codex",
+        tags: ["终端Agent", "开源", "Git感知", "Plan模式", "Skills系统"],
+        strengths: "2026年最火的终端AI编程Agent；开源可审查代码；Plan模式先预览再执行；Skills插件系统可扩展；与ChatGPT订阅共享额度",
+        weaknesses: "Plus用户额度有限（集中工作1-2小时可能耗尽）；API超额使用额外计费；无图形界面纯终端操作",
+        bestFor: "终端党、全栈项目开发、需要AI自主读代码库+写代码+跑测试的工程师",
+        chineseSupport: "★★★☆☆ 支持中文指令，界面英文为主",
+        apiAvailable: true,
+        released: "2025年底开源，2026年爆发增长",
+        lastUpdated: "2026-06-15",
+        source: "openai.com / getaiperks.com"
+    },
+    {
+        id: "claude-code",
+        name: "Claude Code",
+        company: "Anthropic（美国）",
+        category: "代码模型",
+        pricing: "freemium",
+        priceLabel: "Claude Pro $20/月起",
+        priceDetail: "Claude Pro $20/月有限额度; Max $100-200/月（更多额度，Fable 5驱动）。终端CLI工具，支持CLAUDE.md项目记忆",
+        website: "https://code.claude.com",
+        tags: ["终端Agent", "Plan模式", "MCP集成", "项目记忆", "Fable 5"],
+        strengths: "Claude Fable 5驱动编程能力登顶；CLAUDE.md支持项目级记忆上下文；MCP协议可集成第三方工具；Plan模式安全可控；处理超大型代码库能力极强",
+        weaknesses: "Pro版额度有限不适合重度使用；无图形界面纯终端；Fable 5最新，生态工具在追赶",
+        bestFor: "终端党、超大型项目重构、需要深度理解项目架构的复杂开发",
+        chineseSupport: "★★★☆☆ 支持中文指令，界面英文为主",
+        apiAvailable: true,
+        released: "2025年推出，Fable 5 2026年6月9日发布",
+        lastUpdated: "2026-06-15",
+        source: "anthropic.com / code.claude.com"
+    },
     {
         id: "github-copilot",
         name: "GitHub Copilot",
