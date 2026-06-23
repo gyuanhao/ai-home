@@ -1,18 +1,18 @@
 // AI家AI户 - 自定义对比工具
 (function() {
 
-// 对比维度定义
+// 对比维度定义（label在render时通过t()动态获取）
 const DIMENSIONS = [
-    { label: '开发商', key: 'company' },
-    { label: '价格', key: 'priceLabel' },
-    { label: '详细定价', key: 'priceDetail' },
-    { label: '中文支持', key: 'chineseSupport' },
-    { label: '上下文窗口', key: 'contextWindow' },
-    { label: 'API可用', key: 'apiAvailable', format: v => v ? '✅ 可用' : '❌ 不可用' },
-    { label: '发布日期', key: 'released' },
-    { label: '擅长领域', key: 'bestFor' },
-    { label: '核心优势', key: 'strengths' },
-    { label: '主要短板', key: 'weaknesses' },
+    { i18nKey: 'compareCustom.dim.company', key: 'company' },
+    { i18nKey: 'compareCustom.dim.priceLabel', key: 'priceLabel' },
+    { i18nKey: 'compareCustom.dim.priceDetail', key: 'priceDetail' },
+    { i18nKey: 'compareCustom.dim.chineseSupport', key: 'chineseSupport' },
+    { i18nKey: 'compareCustom.dim.contextWindow', key: 'contextWindow' },
+    { i18nKey: 'compareCustom.dim.apiAvailable', key: 'apiAvailable', format: v => v ? '✅ ' + (typeof t === 'function' ? t('compareCustom.dim.apiAvailableYes') : '可用') : '❌ ' + (typeof t === 'function' ? t('compareCustom.dim.apiAvailableNo') : '不可用') },
+    { i18nKey: 'compareCustom.dim.released', key: 'released' },
+    { i18nKey: 'compareCustom.dim.bestFor', key: 'bestFor' },
+    { i18nKey: 'compareCustom.dim.strengths', key: 'strengths' },
+    { i18nKey: 'compareCustom.dim.weaknesses', key: 'weaknesses' },
 ];
 
 // 类别图标映射
@@ -54,7 +54,7 @@ function renderCheckboxes() {
         if (catModels.length === 0) return;
 
         html += '<div class="select-cat">';
-        html += '<div class="select-cat-header">' + (CAT_ICONS[cat] || '') + ' ' + cat + ' <span class="select-cat-count">' + catModels.length + '个</span></div>';
+        html += '<div class="select-cat-header">' + (CAT_ICONS[cat] || '') + ' ' + cat + ' <span class="select-cat-count">' + catModels.length + (typeof t === 'function' ? t('compareCustom.catCount').replace('{0}', catModels.length) : '个') + '</span></div>';
         html += '<div class="select-grid">';
 
         catModels.forEach(m => {
@@ -90,17 +90,17 @@ function onCheckboxChange() {
     const btn = document.getElementById('compareBtn');
     if (count >= 2 && count <= 6) {
         btn.disabled = false;
-        btn.textContent = '开始对比（已选' + count + '个）';
+        btn.textContent = typeof t === 'function' ? t('compareCustom.btnReady').replace('{0}', count) : ('开始对比（已选' + count + '个）');
         btn.classList.remove('compare-btn-disabled');
         btn.classList.add('compare-btn-ready');
     } else if (count > 6) {
         btn.disabled = true;
-        btn.textContent = '最多选6个（当前' + count + '个）';
+        btn.textContent = typeof t === 'function' ? t('compareCustom.btnMax').replace('{0}', count) : ('最多选6个（当前' + count + '个）');
         btn.classList.add('compare-btn-disabled');
         btn.classList.remove('compare-btn-ready');
     } else {
         btn.disabled = true;
-        btn.textContent = '开始对比（至少选2个）';
+        btn.textContent = typeof t === 'function' ? t('compareCustom.btnMin') : '开始对比（至少选2个）';
         btn.classList.add('compare-btn-disabled');
         btn.classList.remove('compare-btn-ready');
     }
@@ -137,7 +137,8 @@ function renderTable(selectedModels) {
     if (!table) return;
 
     // 表头
-    let html = '<thead><tr><th>维度</th>';
+    const dimColLabel = typeof t === 'function' ? t('compareCustom.dimCol') : '维度';
+    let html = '<thead><tr><th>' + dimColLabel + '</th>';
     selectedModels.forEach(m => {
         html += '<th><a href="' + m.website + '" target="_blank" rel="noopener" title="点击访问官网">' + m.name + '</a><br><span style="font-size:11px;color:var(--text-secondary);font-weight:400;">' + m.company.split('（')[0] + '</span></th>';
     });
@@ -146,7 +147,7 @@ function renderTable(selectedModels) {
     // 数据行
     DIMENSIONS.forEach(dim => {
         html += '<tr>';
-        html += '<td>' + dim.label + '</td>';
+        html += '<td>' + (typeof t === 'function' ? t(dim.i18nKey) : dim.label || dim.i18nKey) + '</td>';
         selectedModels.forEach(m => {
             let val = m[dim.key];
             if (dim.format) val = dim.format(val);
@@ -195,7 +196,7 @@ function loadFromURL() {
     document.getElementById('selectedCount').textContent = selectedIds.size;
     const btn = document.getElementById('compareBtn');
     btn.disabled = false;
-    btn.textContent = '开始对比（已选' + selectedIds.size + '个）';
+    btn.textContent = typeof t === 'function' ? t('compareCustom.btnReady').replace('{0}', selectedIds.size) : ('开始对比（已选' + selectedIds.size + '个）');
     btn.classList.remove('compare-btn-disabled');
     btn.classList.add('compare-btn-ready');
 
@@ -208,10 +209,12 @@ function copyComparisonLink() {
     const url = window.location.origin + window.location.pathname + window.location.search;
     navigator.clipboard.writeText(url).then(() => {
         const fb = document.getElementById('copyFeedback');
-        fb.style.opacity = '1';
-        setTimeout(() => { fb.style.opacity = '0'; }, 2000);
+        if (fb) {
+            fb.style.opacity = '1';
+            setTimeout(() => { fb.style.opacity = '0'; }, 2000);
+        }
     }).catch(() => {
-        prompt('复制以下链接分享对比结果：', url);
+        prompt(typeof t === 'function' ? t('compareCustom.copyPrompt') : '复制以下链接分享对比结果：', url);
     });
 }
 

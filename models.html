@@ -57,14 +57,14 @@
     </div>
 
     <div class="filters">
-        <button class="filter-btn active" data-cat="all">全部</button>
-        <button class="filter-btn" data-cat="语言模型">🗣 语言模型</button>
-        <button class="filter-btn" data-cat="Agent平台">🤖 Agent平台</button>
-        <button class="filter-btn" data-cat="图像模型">🎨 图像模型</button>
-        <button class="filter-btn" data-cat="视频模型">🎬 视频模型</button>
-        <button class="filter-btn" data-cat="代码模型">💻 代码模型</button>
+        <button class="filter-btn active" data-cat="all" data-i18n="models.filter.all">全部</button>
+        <button class="filter-btn" data-cat="语言模型" data-i18n="models.filter.llm">🗣 语言模型</button>
+        <button class="filter-btn" data-cat="Agent平台" data-i18n="models.filter.agent">🤖 Agent平台</button>
+        <button class="filter-btn" data-cat="图像模型" data-i18n="models.filter.image">🎨 图像模型</button>
+        <button class="filter-btn" data-cat="视频模型" data-i18n="models.filter.video">🎬 视频模型</button>
+        <button class="filter-btn" data-cat="代码模型" data-i18n="models.filter.code">💻 代码模型</button>
     </div>
-    <p style="font-size:12px;color:var(--text-secondary);margin-bottom:8px;">
+    <p style="font-size:12px;color:var(--text-secondary);margin-bottom:8px;" data-i18n="models.codeNote">
         💡 代码模型包含 IDE 插件（Cursor/Copilot）和终端 Agent（Codex/Claude Code），后者在命令行运行，可自主读项目、写代码、跑测试。
     </p>
 
@@ -72,8 +72,8 @@
 </div>
 
 <footer class="footer">
-    <p>AI家AI户 · 数据最后更新于 2026年6月15日 · 信息来源于各模型官方网站及公开资料</p>
-    <p style="margin-top:6px;">所有模型信息均标注来源。点击卡片直接跳转对应官网。</p>
+    <p data-i18n="models.footer1">AI家AI户 · 数据最后更新于 2026年6月15日 · 信息来源于各模型官方网站及公开资料</p>
+    <p style="margin-top:6px;" data-i18n="models.footer2">所有模型信息均标注来源。点击卡片直接跳转对应官网。</p>
 </footer>
 
 <script src="js/main.js"></script>

@@ -26,6 +26,7 @@
       gtag('config', 'G-TBTFSXQ6NF');
     </script>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/i18n.js"></script>
 </head>
 <body>
 
@@ -33,21 +34,22 @@
     <div class="nav-inner">
         <a href="index.html" class="nav-logo">🏠 AI家AI户</a>
         <ul class="nav-links">
-            <li><a href="index.html">首页</a></li>
-            <li><a href="models.html">模型库</a></li>
-            <li><a href="compare.html">横向对比</a></li>
-            <li><a href="compare-custom.html" class="active">自定义对比</a></li>
-            <li><a href="vs/">热门对比</a></li>
-            <li><a href="picker.html">AI选型器</a></li>
-            <li><a href="news.html">新闻</a></li>
-            <li><a href="about.html">关于</a></li>
+            <li><a href="index.html" data-i18n="nav.home">首页</a></li>
+            <li><a href="models.html" data-i18n="nav.models">模型库</a></li>
+            <li><a href="compare.html" data-i18n="nav.compare">横向对比</a></li>
+            <li><a href="compare-custom.html" class="active" data-i18n="nav.compareCustom">自定义对比</a></li>
+            <li><a href="vs/" data-i18n="nav.vs">热门对比</a></li>
+            <li><a href="picker.html" data-i18n="nav.picker">AI选型器</a></li>
+            <li><a href="news.html" data-i18n="nav.news">新闻</a></li>
+            <li><a href="about.html" data-i18n="nav.about">关于</a></li>
+            <li style="margin-left:auto;"><button id="langSwitch" onclick="switchLang()" style="background:var(--primary-light);color:var(--primary-dark);border:none;padding:4px 12px;border-radius:50px;cursor:pointer;font-size:13px;font-weight:600;font-family:inherit;">EN</button></li>
         </ul>
     </div>
 </nav>
 
 <div class="container">
-    <h1 style="font-size:28px; margin: 28px 0 8px;">🔧 自定义对比</h1>
-    <p style="color:var(--text-secondary); margin-bottom:8px;">
+    <h1 style="font-size:28px; margin: 28px 0 8px;" data-i18n="compareCustom.title">🔧 自定义对比</h1>
+    <p style="color:var(--text-secondary); margin-bottom:8px;" data-i18n="compareCustom.desc">
         勾选你想对比的模型（最少2个，最多6个），点击"开始对比"生成并排表格。
     </p>
 
@@ -55,7 +57,7 @@
     <div id="selectorArea">
         <div id="categoryCheckboxes"></div>
         <div style="text-align:center; margin: 24px 0;">
-            <span id="selectionHint" style="font-size:13px; color:var(--text-secondary);">已选 <strong id="selectedCount">0</strong> / 6 个</span>
+            <span id="selectionHint" style="font-size:13px; color:var(--text-secondary);" data-i18n="compareCustom.selectedHint">已选 <strong id="selectedCount">0</strong> / 6 个</span>
         </div>
         <div style="text-align:center;">
             <button id="compareBtn" class="compare-btn compare-btn-disabled" disabled onclick="runCompare()">
@@ -80,13 +82,13 @@
         <p id="copyFeedback" style="color:var(--accent-green); font-size:13px; text-align:center; margin-top:8px; opacity:0; transition:opacity 0.3s;">✅ 链接已复制，可直接分享</p>
     </div>
 
-    <p style="color:var(--text-secondary); font-size:13px; text-align:center; margin-top:32px; padding:16px; background:var(--primary-light); border-radius:var(--radius);">
+    <p style="color:var(--text-secondary); font-size:13px; text-align:center; margin-top:32px; padding:16px; background:var(--primary-light); border-radius:var(--radius);" data-i18n="compareCustom.sourceNote">
         💡 数据来源于各模型官方网站及公开资料，最后更新：2026年6月15日。建议做最终决策前点击模型名进入官网核实。
     </p>
 </div>
 
 <footer class="footer">
-    <p>AI家AI户 · 自定义对比工具 · 数据最后更新于 2026年6月15日</p>
+    <p data-i18n="compareCustom.footer">AI家AI户 · 自定义对比工具 · 数据最后更新于 2026年6月15日</p>
 </footer>
 
 <script src="js/main.js"></script>

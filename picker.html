@@ -47,23 +47,23 @@
 <main class="container" style="max-width:820px;margin:0 auto;padding:40px 20px 60px;">
 
     <div style="text-align:center;margin-bottom:36px;">
-        <h1 style="font-size:28px;font-weight:800;margin-bottom:8px;">🤔 我该用哪个AI工具？</h1>
-        <p style="color:var(--text-secondary);font-size:15px;">回答4个问题，从35个模型中精准匹配最适合你的AI</p>
+        <h1 style="font-size:28px;font-weight:800;margin-bottom:8px;" data-i18n="picker.title">🤔 我该用哪个AI工具？</h1>
+        <p style="color:var(--text-secondary);font-size:15px;" data-i18n="picker.desc">回答4个问题，从35个模型中精准匹配最适合你的AI</p>
     </div>
 
     <div id="pickerSteps">
         <!-- 由 picker.js 动态渲染 -->
         <div style="text-align:center;padding:60px 20px;color:var(--text-secondary);">
             <div style="font-size:40px;margin-bottom:16px;">⏳</div>
-            加载中...
+            <span data-i18n="picker.loading">加载中...</span>
         </div>
     </div>
 
     <div style="text-align:center;margin-top:32px;padding-top:24px;border-top:1px solid var(--border);">
-        <p style="font-size:13px;color:var(--text-secondary);margin-bottom:8px;">已有明确想对比的目标？</p>
-        <a href="compare-custom.html" style="color:var(--primary);font-weight:600;font-size:14px;">→ 去自定义对比，自由勾选模型</a>
+        <p style="font-size:13px;color:var(--text-secondary);margin-bottom:8px;" data-i18n="picker.footerHint">已有明确想对比的目标？</p>
+        <a href="compare-custom.html" style="color:var(--primary);font-weight:600;font-size:14px;" data-i18n="picker.goCustom">→ 去自定义对比，自由勾选模型</a>
         &nbsp;&nbsp;
-        <a href="vs/" style="color:var(--primary);font-weight:600;font-size:14px;">→ 看热门模型一对一对比</a>
+        <a href="vs/" style="color:var(--primary);font-weight:600;font-size:14px;" data-i18n="picker.goVs">→ 看热门模型一对一对比</a>
     </div>
 
 </main>
@@ -71,11 +71,11 @@
 <footer class="site-footer">
     <div class="footer-inner">
         <div>
-            <p><strong>AI家AI户</strong></p>
-            <p>便利店模式AI选型 — 不是权威，是省事</p>
+            <p><strong data-i18n="picker.footerBrand">AI家AI户</strong></p>
+            <p data-i18n="picker.footerTagline">便利店模式AI选型 — 不是权威，是省事</p>
         </div>
         <div>
-            <p><a href="about.html">关于我们</a> · <a href="news.html">行业新闻</a></p>
+            <p><a href="about.html" data-i18n="nav.about">关于我们</a> · <a href="news.html" data-i18n="nav.news">行业新闻</a></p>
             <p style="font-size:12px;color:var(--text-secondary);margin-top:4px;">© 2026 AI家AI户 · myaishome.com</p>
         </div>
     </div>

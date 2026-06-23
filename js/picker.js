@@ -14,38 +14,41 @@ const state = {
 };
 
 const steps = [
-    { question: '你主要用AI来干什么？', key: 'scene' },
-    { question: '你是AI新手还是老手？', key: 'experience' },
-    { question: '你的预算是多少？', key: 'budget' },
-    { question: '你的「AI人格」是？', key: 'personality' }
+    { i18nKey: 'picker.step1', key: 'scene' },
+    { i18nKey: 'picker.step2', key: 'experience' },
+    { i18nKey: 'picker.step3', key: 'budget' },
+    { i18nKey: 'picker.step4', key: 'personality' }
 ];
 
 const stepOptions = {
     scene: [
-        { value: 'code',    emoji: '💻', label: '写代码', desc: '编程辅助、Debug、项目开发' },
-        { value: 'writing', emoji: '✍️', label: '写作', desc: '写文章、论文、文案、邮件' },
-        { value: 'image',   emoji: '🎨', label: '生成图片', desc: 'AI绘画、设计、插画、海报' },
-        { value: 'search',  emoji: '🔍', label: '搜索研究', desc: '信息检索、深度分析、调研' },
-        { value: 'video',   emoji: '🎬', label: '生成视频', desc: 'AI视频、短视频、动画' },
-        { value: 'chat',    emoji: '🤖', label: '日常聊天', desc: '问答、陪伴、效率助手' }
+        { value: 'code',    emoji: '💻', i18nLabel: 'picker.scene.code', i18nDesc: 'picker.scene.codingDesc' },
+        { value: 'writing', emoji: '✍️', i18nLabel: 'picker.scene.writing', i18nDesc: 'picker.scene.writingDesc' },
+        { value: 'image',   emoji: '🎨', i18nLabel: 'picker.scene.image', i18nDesc: 'picker.scene.imageDesc' },
+        { value: 'search',  emoji: '🔍', i18nLabel: 'picker.scene.search', i18nDesc: 'picker.scene.searchDesc' },
+        { value: 'video',   emoji: '🎬', i18nLabel: 'picker.scene.video', i18nDesc: 'picker.scene.videoDesc' },
+        { value: 'chat',    emoji: '🤖', i18nLabel: 'picker.scene.chat', i18nDesc: 'picker.scene.chatDesc' }
     ],
     experience: [
-        { value: 'newbie',  emoji: '🌱', label: '新手', desc: '刚接触AI，最好打开就能用' },
-        { value: 'some',    emoji: '🌿', label: '用过几个', desc: '试过几款，愿意探索新工具' },
-        { value: 'expert',  emoji: '🌳', label: '老手', desc: '明确偏好，追求性能天花板' }
+        { value: 'newbie',  emoji: '🌱', i18nLabel: 'picker.exp.newbie', i18nDesc: 'picker.exp.newbieDesc' },
+        { value: 'some',    emoji: '🌿', i18nLabel: 'picker.exp.some', i18nDesc: 'picker.exp.someDesc' },
+        { value: 'expert',  emoji: '🌳', i18nLabel: 'picker.exp.expert', i18nDesc: 'picker.exp.expertDesc' }
     ],
     budget: [
-        { value: 'free',     emoji: '🆓', label: '零预算', desc: '只用免费就够了' },
-        { value: 'moderate', emoji: '💰', label: '轻度付费', desc: '月费50块以内可以接受' },
-        { value: 'unlimited',emoji: '💎', label: '愿意付费', desc: '好用就买，预算不是问题' }
+        { value: 'free',     emoji: '🆓', i18nLabel: 'picker.budget.free', i18nDesc: 'picker.budget.freeDesc' },
+        { value: 'moderate', emoji: '💰', i18nLabel: 'picker.budget.moderate', i18nDesc: 'picker.budget.moderateDesc' },
+        { value: 'unlimited',emoji: '💎', i18nLabel: 'picker.budget.unlimited', i18nDesc: 'picker.budget.unlimitedDesc' }
     ],
     personality: [
-        { value: 'pragmatist', emoji: '🔧', label: '务实派', desc: '稳定可靠最重要，不想折腾' },
-        { value: 'creator',    emoji: '🎨', label: '创作者', desc: '输出质量是唯一标准' },
-        { value: 'efficiency', emoji: '🚀', label: '效率控', desc: '时间比钱贵，越快越好' },
-        { value: 'privacy',    emoji: '🔒', label: '独行侠', desc: '不想翻墙，数据要安全' }
+        { value: 'pragmatist', emoji: '🔧', i18nLabel: 'picker.person.pragmatist', i18nDesc: 'picker.person.pragmatistDesc' },
+        { value: 'creator',    emoji: '🎨', i18nLabel: 'picker.person.creator', i18nDesc: 'picker.person.creatorDesc' },
+        { value: 'efficiency', emoji: '🚀', i18nLabel: 'picker.person.efficiency', i18nDesc: 'picker.person.efficiencyDesc' },
+        { value: 'privacy',    emoji: '🔒', i18nLabel: 'picker.person.privacy', i18nDesc: 'picker.person.privacyDesc' }
     ]
 };
+
+function getOptionLabel(opt) { return typeof t === 'function' ? t(opt.i18nLabel) : (opt.label || opt.i18nLabel); }
+function getOptionDesc(opt) { return typeof t === 'function' ? t(opt.i18nDesc) : (opt.desc || opt.i18nDesc); }
 
 // ========== 推荐矩阵 ==========
 // 规则格式: { scene, experience, budget, personality } → { main, alt1, alt2, reason }
@@ -161,10 +164,10 @@ function getTag() {
     const eLabel = stepOptions.experience.find(o => o.value === state.experience);
     const bLabel = stepOptions.budget.find(o => o.value === state.budget);
     const sLabel = stepOptions.scene.find(o => o.value === state.scene);
-    return (pLabel ? pLabel.emoji + ' ' + pLabel.label + '型' : '') +
-           (eLabel ? eLabel.label : '') + ' · ' +
-           (bLabel ? bLabel.label : '') + ' · ' +
-           (sLabel ? sLabel.label + '场景' : '');
+    return (pLabel ? pLabel.emoji + ' ' + getOptionLabel(pLabel) + t('picker.tag.typeSuffix') : '') +
+           (eLabel ? getOptionLabel(eLabel) : '') + ' · ' +
+           (bLabel ? getOptionLabel(bLabel) : '') + ' · ' +
+           (sLabel ? getOptionLabel(sLabel) + t('picker.tag.sceneSuffix') : '');
 }
 
 // ========== URL 分享 ==========
@@ -212,15 +215,15 @@ function renderStep() {
         if (i < steps.length - 1) html += '<span class="step-line ' + (i < state.step ? 'done' : '') + '"></span>';
     }
     html += '</div>';
-    html += '<h2 class="picker-question">' + s.question + '</h2>';
+    html += '<h2 class="picker-question">' + t(s.i18nKey) + '</h2>';
     html += '<div class="picker-options">';
 
     opts.forEach((opt, idx) => {
         const selected = state[s.key] === opt.value;
         html += '<button class="picker-option' + (selected ? ' selected' : '') + '" onclick="PickerSelect(\'' + s.key + '\', \'' + opt.value + '\')">';
         html += '<span class="opt-emoji">' + opt.emoji + '</span>';
-        html += '<div class="opt-text"><span class="opt-label">' + opt.label + '</span>';
-        html += '<span class="opt-desc">' + opt.desc + '</span></div>';
+        html += '<div class="opt-text"><span class="opt-label">' + getOptionLabel(opt) + '</span>';
+        html += '<span class="opt-desc">' + getOptionDesc(opt) + '</span></div>';
         html += '</button>';
     });
 
@@ -228,7 +231,7 @@ function renderStep() {
 
     // 返回按钮（非第一步）
     if (state.step > 0) {
-        html += '<div class="picker-nav"><button class="picker-back" onclick="PickerBack()">← 上一步</button></div>';
+        html += '<div class="picker-nav"><button class="picker-back" onclick="PickerBack()">' + t('picker.back') + '</button></div>';
     }
 
     html += '</div>';
@@ -253,27 +256,27 @@ function renderResult() {
 
     // 主推卡片
     html += '<div class="result-main-card">';
-    html += '<div class="result-crown">🏆 最适合你的是</div>';
+    html += '<div class="result-crown">' + t('picker.resultCrown') + '</div>';
     html += '<div class="result-main-name">★ ' + mainM.name + '</div>';
     html += '<div class="result-main-price">' + mainM.price + '</div>';
     html += '<div class="result-main-reason">' + (r.reason ? r.reason.split('。')[0] + '。' : mainM.strengths) + '</div>';
     if (mainM.website) {
-        html += '<a href="' + mainM.website + '" target="_blank" rel="noopener" class="result-main-link">直达 ' + mainM.name + ' →</a>';
+        html += '<a href="' + mainM.website + '" target="_blank" rel="noopener" class="result-main-link">' + t('picker.resultGo') + mainM.name + t('picker.resultLink') + '</a>';
     }
     html += '</div>';
 
     // 备选方案
     html += '<div class="result-alt">';
-    html += '<div class="result-alt-title">📋 备选方案</div>';
+    html += '<div class="result-alt-title">' + t('picker.resultAlt') + '</div>';
     html += '<div class="result-alt-item"><strong>' + alt1.name + '</strong>' + (alt1.price ? ' — ' + alt1.price.split(' / ')[0] : '') + '<br><span class="result-alt-desc">' + (alt1.strengths ? alt1.strengths.split('。')[0] + '。' : '') + '</span></div>';
     html += '<div class="result-alt-item"><strong>' + alt2.name + '</strong>' + (alt2.price ? ' — ' + alt2.price.split(' / ')[0] : '') + '<br><span class="result-alt-desc">' + (alt2.strengths ? alt2.strengths.split('。')[0] + '。' : '') + '</span></div>';
     html += '</div>';
 
     // 操作按钮
     html += '<div class="result-actions">';
-    html += '<button class="result-btn btn-reset" onclick="PickerReset()">🔄 重新测试</button>';
-    html += '<a href="compare-custom.html" class="result-btn btn-compare">📋 去自定义对比</a>';
-    html += '<button class="result-btn btn-share" onclick="PickerShare()">📤 分享你的AI人格</button>';
+    html += '<button class="result-btn btn-reset" onclick="PickerReset()">' + t('picker.btnReset') + '</button>';
+    html += '<a href="compare-custom.html" class="result-btn btn-compare">' + t('picker.btnCompare') + '</a>';
+    html += '<button class="result-btn btn-share" onclick="PickerShare()">' + t('picker.btnShare') + '</button>';
     html += '</div>';
 
     html += '</div>';
@@ -318,12 +321,12 @@ window.PickerShare = function() {
     const url = buildShareUrl();
     if (navigator.clipboard) {
         navigator.clipboard.writeText(url).then(() => {
-            alert('✅ 链接已复制！分享给你的朋友看看他们适合哪个AI工具');
+            alert(t('picker.shareOk'));
         }).catch(() => {
-            prompt('复制这个链接分享：', url);
+            prompt(t('picker.sharePrompt'), url);
         });
     } else {
-        prompt('复制这个链接分享：', url);
+        prompt(t('picker.sharePrompt'), url);
     }
 };
 
