@@ -60,8 +60,7 @@ function renderCheckboxes() {
         catModels.forEach(m => {
             html += '<label class="select-card" data-id="' + m.id + '" data-cat="' + cat + '">';
             html += '<input type="checkbox" name="cmp" value="' + m.id + '">';
-            html += '<span class="select-name">' + m.name + '</span>';
-            html += '<span class="select-price">' + m.priceLabel + '</span>';
+            html += '<div class="select-row"><span class="select-name">' + m.name + '</span><span class="select-price">' + m.priceLabel + '</span></div>';
             html += '</label>';
         });
 
