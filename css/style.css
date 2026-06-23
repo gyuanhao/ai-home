@@ -523,21 +523,10 @@ a:hover { color: var(--primary-dark); }
     width: 16px;
     height: 16px;
 }
-.select-row {
-    display: flex;
-    align-items: baseline;
-    gap: 8px;
-    margin-right: 28px;
-}
 .select-name {
     font-size: 14px;
     font-weight: 600;
     color: var(--text);
-    white-space: nowrap;
-}
-.select-price {
-    font-size: 11px;
-    color: var(--text-secondary);
     white-space: nowrap;
 }
 
