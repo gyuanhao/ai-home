@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://gyuanhao.github.io/ai-home/sitemap.xml
+Sitemap: https://myaishome.com/sitemap.xml
