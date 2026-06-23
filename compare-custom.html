@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI家AI户自定义对比 — 勾选你想比的AI模型，一键生成并排对比表。语言模型、图像模型、代码模型、Agent平台均可自由组合。">
+    <meta name="keywords" content="AI模型对比,AI工具对比,自定义对比,ChatGPT,DeepSeek,Claude,Kimi,通义千问">
+    <title>自定义对比 — AI家AI户</title>
+    <link rel="canonical" href="https://myaishome.com/compare-custom.html">
+    <meta property="og:title" content="自定义对比 — AI家AI户">
+    <meta property="og:description" content="勾选你要对比的AI模型，一键生成并排对比表。">
+    <meta property="og:url" content="https://myaishome.com/compare-custom.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="zh_CN">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="自定义对比 — AI家AI户">
+    <meta name="twitter:description" content="勾选你要对比的AI模型，一键生成并排对比表。">
+    <meta name="google-site-verification" content="xt9f05QoKT1xpnVg94WeUsSOYPO88A3CT1j57ePzKZ8" />
+    <meta name="baidu-site-verification" content="codeva-W17b4kp7dN" />
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TBTFSXQ6NF"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-TBTFSXQ6NF');
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="nav">
+    <div class="nav-inner">
+        <a href="index.html" class="nav-logo">🏠 AI家AI户</a>
+        <ul class="nav-links">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="models.html">模型库</a></li>
+            <li><a href="compare.html">横向对比</a></li>
+            <li><a href="compare-custom.html" class="active">自定义对比</a></li>
+            <li><a href="news.html">新闻</a></li>
+            <li><a href="about.html">关于</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container">
+    <h1 style="font-size:28px; margin: 28px 0 8px;">🔧 自定义对比</h1>
+    <p style="color:var(--text-secondary); margin-bottom:8px;">
+        勾选你想对比的模型（最少2个，最多6个），点击"开始对比"生成并排表格。
+    </p>
+
+    <!-- 选择器区域 -->
+    <div id="selectorArea">
+        <div id="categoryCheckboxes"></div>
+        <div style="text-align:center; margin: 24px 0;">
+            <span id="selectionHint" style="font-size:13px; color:var(--text-secondary);">已选 <strong id="selectedCount">0</strong> / 6 个</span>
+        </div>
+        <div style="text-align:center;">
+            <button id="compareBtn" class="compare-btn compare-btn-disabled" disabled onclick="runCompare()">
+                开始对比（至少选2个）
+            </button>
+        </div>
+    </div>
+
+    <!-- 结果区域 -->
+    <div id="resultArea" style="display:none;">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px; flex-wrap:wrap; gap:12px;">
+            <button onclick="resetCompare()" style="padding:8px 18px; border:1px solid var(--border); border-radius:50px; background:var(--card-bg); cursor:pointer; font-family:inherit; font-size:14px; color:var(--text-secondary);">
+                ← 重新选择
+            </button>
+            <button onclick="copyComparisonLink()" style="padding:8px 18px; border:1px solid var(--border); border-radius:50px; background:var(--primary-light); color:var(--primary-dark); cursor:pointer; font-family:inherit; font-size:14px; font-weight:600;">
+                🔗 复制对比链接
+            </button>
+        </div>
+        <div style="overflow-x:auto;">
+            <table class="compare-table" id="customTable"></table>
+        </div>
+        <p id="copyFeedback" style="color:var(--accent-green); font-size:13px; text-align:center; margin-top:8px; opacity:0; transition:opacity 0.3s;">✅ 链接已复制，可直接分享</p>
+    </div>
+
+    <p style="color:var(--text-secondary); font-size:13px; text-align:center; margin-top:32px; padding:16px; background:var(--primary-light); border-radius:var(--radius);">
+        💡 数据来源于各模型官方网站及公开资料，最后更新：2026年6月15日。建议做最终决策前点击模型名进入官网核实。
+    </p>
+</div>
+
+<footer class="footer">
+    <p>AI家AI户 · 自定义对比工具 · 数据最后更新于 2026年6月15日</p>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/compare-custom.js"></script>
+</body>
+</html>
