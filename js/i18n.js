@@ -34,7 +34,7 @@ const i18n = {
 
     // ==================== 首页品类卡片 ====================
     "cat.title": { zh: "🔍 按品类找工具", en: "🔍 Browse by category" },
-    "cat.subtitle": { zh: "35个模型覆盖5大品类，点击直接筛选", en: "35 models across 5 categories. Click to filter." },
+    "cat.subtitle": { zh: "43个模型覆盖6大品类，点击直接筛选", en: "43 models across 6 categories. Click to filter." },
     "cat.llm.name": { zh: "语言模型", en: "Chat & LLMs" },
     "cat.llm.desc": { zh: "12款 · ChatGPT、DeepSeek、Claude", en: "12 tools · ChatGPT, DeepSeek, Claude" },
     "cat.agent.name": { zh: "Agent 平台", en: "Agent Platforms" },
@@ -45,11 +45,14 @@ const i18n = {
     "cat.video.desc": { zh: "6款 · Sora、可灵、海螺", en: "6 tools · Sora, Kling, Hailuo" },
     "cat.code.name": { zh: "代码模型", en: "Coding Tools" },
     "cat.code.desc": { zh: "7款 · Codex、Cursor、Claude Code", en: "7 tools · Codex, Cursor, Claude Code" },
+    "cat.tools.name": { zh: "AI辅助工具", en: "AI Tools" },
+    "cat.tools.desc": { zh: "8款 · 写作、设计、语音、SEO", en: "8 tools · Writing, Design, Voice, SEO" },
     "cat.llm.hint": { zh: "找聊天、写作、推理工具 →", en: "Chat, writing, reasoning →" },
     "cat.agent.hint": { zh: "找AI助手、自动化工具 →", en: "AI assistants, automation →" },
     "cat.image.hint": { zh: "找画图、设计工具 →", en: "Image generation, design →" },
     "cat.video.hint": { zh: "找视频生成、特效工具 →", en: "Video generation, VFX →" },
     "cat.code.hint": { zh: "找编程助手（IDE+终端） →", en: "Coding agents (IDE + CLI) →" },
+    "cat.tools.hint": { zh: "找办公助手，含联盟折扣 →", en: "Productivity tools + discount links →" },
 
     // ==================== 推荐面板 ====================
     "rec.writing": { zh: "✍️ 写作推荐", en: "✍️ Top Writing Picks" },
@@ -69,14 +72,16 @@ const i18n = {
     "models.filter.image": { zh: "🎨 图像模型", en: "🎨 Image Models" },
     "models.filter.video": { zh: "🎬 视频模型", en: "🎬 Video Models" },
     "models.filter.code": { zh: "💻 代码模型", en: "💻 Coding Tools" },
+    "models.filter.tools": { zh: "🛠 AI辅助工具", en: "🛠 AI Tools" },
     "models.codeNote": { zh: "💡 代码模型包含 IDE 插件（Cursor/Copilot）和终端 Agent（Codex/Claude Code），后者在命令行运行，可自主读项目、写代码、跑测试。", en: "💡 Coding tools include IDE plugins (Cursor, Copilot) and CLI agents (Codex, Claude Code) that run in terminal — they read your codebase, write code, and run tests autonomously." },
+    "models.toolsNote": { zh: "🛠 AI辅助工具包含设计/写作/语音/SEO等周边工具，部分有联盟返佣。点击卡片通过本站专享链接可享折扣。", en: "🛠 AI Tools cover design, writing, voice, SEO & more. Some have affiliate discounts — click through for exclusive deals." },
     "models.empty": { zh: "没有找到匹配的模型，试试其他关键词？", en: "No models found. Try different keywords?" },
     "models.footer1": { zh: "AI家AI户 · 数据最后更新于 2026年6月15日 · 信息来源于各模型官方网站及公开资料", en: "AI Home · Last updated June 15, 2026 · Data sourced from official websites & public docs" },
     "models.footer2": { zh: "所有模型信息均标注来源。点击卡片直接跳转对应官网。", en: "All model info cites sources. Click any card to visit the official site." },
 
     // ==================== 对比页 ====================
     "compare.title": { zh: "⚖️ 横向对比", en: "⚖️ Side-by-side Comparison" },
-    "compare.subtitle": { zh: "35个AI产品按5大品类并排对比，价格功能一目了然。数据最后更新：2026年6月15日。所有信息标注来源，用前请核实官方最新信息。", en: "35 AI tools compared across 5 categories. Pricing and features at a glance. Last updated: June 15, 2026. All info cites sources — verify before using." },
+    "compare.subtitle": { zh: "43个AI产品按6大品类并排对比，价格功能一目了然。数据最后更新：2026年6月23日。所有信息标注来源，用前请核实官网最新信息。", en: "43 AI tools compared across 6 categories. Pricing and features at a glance. Last updated: June 23, 2026. All info cites sources — verify before using." },
     "compare.infoTitle": { zh: "📊 基础信息对比", en: "📊 Basic Info" },
     "compare.pricingTitle": { zh: "💰 付费方案速览", en: "💰 Pricing at a Glance" },
     "compare.sceneTitle": { zh: "🎯 按使用场景选", en: "🎯 By Use Case" },
@@ -94,6 +99,9 @@ const i18n = {
     "compare.image": { zh: "图像模型对比", en: "Image Model Comparison" },
     "compare.video": { zh: "视频模型对比", en: "Video Model Comparison" },
     "compare.code": { zh: "代码模型对比", en: "Coding Tool Comparison" },
+    "compare.toolsTitle": { zh: "🛠 AI辅助工具横向对比", en: "🛠 AI Tools Comparison" },
+    "compare.toolsDesc": { zh: "8款AI办公辅助工具横向对比——覆盖写作、设计、语音、视频、SEO。部分工具支持联盟返佣，通过本站链接可享优惠。", en: "8 AI productivity tools compared — writing, design, voice, video & SEO. Some offer affiliate discounts via our links." },
+    "compare.tools": { zh: "AI辅助工具对比", en: "AI Tools Comparison" },
     "compare.footer1": { zh: "AI家AI户 · 数据最后更新于 2026年6月15日 · 信息来源于各模型官方网站及公开资料", en: "AI Home · Last updated June 15, 2026 · Data sourced from official websites & public docs" },
 
     // ==================== 新闻页 ====================
@@ -108,7 +116,7 @@ const i18n = {
     // ==================== 关于页 ====================
     "about.title": { zh: "🙋 关于 AI家AI户", en: "🙋 About AI Home" },
     "about.what": { zh: "这个站是干嘛的？", en: "What is this site?" },
-    "about.whatDesc": { zh: "AI家AI户是一个AI工具对比导航站——覆盖 <strong>AI大模型、图像模型、视频模型、代码模型、Agent平台</strong> 五大品类。我们的目标是：<strong>让你三秒看清哪个工具适合你</strong>——不用翻十篇评测、不用看20分钟视频、不用一个个官网去翻价格。", en: "AI Home is a comparison navigator for AI tools — covering <strong>LLMs, image models, video models, coding tools, and Agent platforms</strong>. Our goal: <strong>help you pick the right tool in seconds</strong> — no scrolling through 10 reviews, no watching 20-minute videos, no digging through pricing pages one by one." },
+    "about.whatDesc": { zh: "AI家AI户是一个AI工具对比导航站——覆盖 <strong>AI大模型、图像模型、视频模型、代码模型、Agent平台、AI辅助工具</strong> 六大品类。我们的目标是：<strong>让你三秒看清哪个工具适合你</strong>——不用翻十篇评测、不用看20分钟视频、不用一个个官网去翻价格。", en: "AI Home is a comparison navigator for AI tools — covering <strong>LLMs, image models, video models, coding tools, Agent platforms, and AI productivity tools</strong>. Our goal: <strong>help you pick the right tool in seconds</strong> — no scrolling through 10 reviews, no watching 20-minute videos, no digging through pricing pages one by one." },
     "about.whatDesc2": { zh: "你只需要打开对比表，选维度、看差异、点链接——剩下的你自己判断。", en: "Open the comparison table, check differences, click a link — the rest is up to you." },
     "about.not": { zh: "我们不是什么", en: "What we're not" },
     "about.not1": { zh: "不是权威评测机构——我们不做深度跑分，不编造「最佳」结论", en: "Not an authority — we don't run benchmarks or make up 'best' verdicts" },
@@ -126,8 +134,8 @@ const i18n = {
     "about.name": { zh: "为什么叫「AI家AI户」？", en: "Why the name?" },
     "about.nameDesc": { zh: "谐音「家家户户」。希望未来的AI能像家用电器一样，走入每个家庭——而我们的站，就是你挑选「AI家电」时的选购指南。", en: "The name plays on the Chinese phrase for 'every household'. We hope AI becomes as common as home appliances — and this site is your shopping guide for picking the right ones." },
     "about.count": { zh: "目前收录", en: "Currently Listed" },
-    "about.countNum": { zh: "35个产品", en: "35 tools" },
-    "about.countDetail": { zh: "12个语言模型 + 6个Agent平台 + 5个图像模型 + 6个视频模型 + 7个代码模型", en: "12 LLMs + 6 Agent platforms + 5 image models + 6 video models + 7 coding tools" },
+    "about.countNum": { zh: "43个产品", en: "43 tools" },
+    "about.countDetail": { zh: "12个语言模型 + 6个Agent平台 + 5个图像模型 + 6个视频模型 + 7个代码模型 + 8个AI辅助工具", en: "12 LLMs + 6 Agent platforms + 5 image models + 6 video models + 7 coding tools + 8 AI productivity tools" },
     "about.lastUpdated": { zh: "最后更新：<strong>2026年6月15日</strong>", en: "Last updated: <strong>June 15, 2026</strong>" },
     "about.footer1": { zh: "AI家AI户 · 数据最后更新于 2026年6月15日 · 信息来源于各模型官方网站及公开资料", en: "AI Home · Last updated June 15, 2026 · Data sourced from official websites & public docs" },
     "about.footer2": { zh: "这不是权威解读，只是帮你省掉搜索时间。用前请核实官方最新信息。", en: "Not an authority — just saving you search time. Verify with official sources before using." },
