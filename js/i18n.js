@@ -8,6 +8,8 @@ const i18n = {
     "nav.models": { zh: "模型库", en: "Models" },
     "nav.compare": { zh: "横向对比", en: "Compare" },
     "nav.news": { zh: "新闻", en: "News" },
+    "nav.compareCustom": { zh: "自定义对比", en: "Custom Compare" },
+    "nav.vs": { zh: "热门对比", en: "Top Comparisons" },
     "nav.about": { zh: "关于", en: "About" },
     "nav.switch": { zh: "EN", en: "中文" },
 
