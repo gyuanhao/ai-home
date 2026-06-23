@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI选型器 — 3步找到最适合你的AI工具 | AI家AI户</title>
+    <meta name="description" content="不知道用哪个AI？回答4个问题，AI家AI户帮你从35个模型中选出最适合你的。写作、编程、绘图、视频——一键匹配。">
+    <meta name="keywords" content="AI工具推荐,AI选型,哪个AI好用,AI对比,AI助手推荐,AI家AI户">
+    <link rel="canonical" href="https://myaishome.com/picker.html">
+    <meta property="og:title" content="AI选型器 — 找到最适合你的AI工具 | AI家AI户">
+    <meta property="og:description" content="回答4个问题，从35个模型中精准匹配最适合你的AI">
+    <meta property="og:url" content="https://myaishome.com/picker.html">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="AI选型器 — AI家AI户">
+    <meta name="twitter:description" content="回答4个问题，精准匹配最适合你的AI工具">
+    <meta name="google-site-verification" content="xt9f05QoKT1xpnVg94WeUsSOYPO88A3CT1j57ePzKZ8" />
+    <meta name="msvalidate.01" content="A55262935A86077ED63F5B2F0D32F3A3" />
+    <meta name="baidu-site-verification" content="codeva-W17b4kp7dN" />
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js"></script>
+    <script src="js/picker.js"></script>
+    <script src="js/i18n.js"></script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TBTFSXQ6NF"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-TBTFSXQ6NF');</script>
+</head>
+<body>
+
+<nav class="nav">
+    <div class="nav-inner">
+        <a href="index.html" class="nav-logo">🏠 AI家AI户</a>
+        <ul class="nav-links">
+            <li><a href="index.html" data-i18n="nav.home">首页</a></li>
+            <li><a href="models.html" data-i18n="nav.models">模型库</a></li>
+            <li><a href="compare.html" data-i18n="nav.compare">横向对比</a></li>
+            <li><a href="compare-custom.html" data-i18n="nav.compareCustom">自定义对比</a></li>
+            <li><a href="vs/" data-i18n="nav.vs">热门对比</a></li>
+            <li><a href="picker.html" class="active">AI选型器</a></li>
+            <li><a href="news.html" data-i18n="nav.news">新闻</a></li>
+            <li><a href="about.html" data-i18n="nav.about">关于</a></li>
+            <li style="margin-left:auto;"><button id="langSwitch" onclick="switchLang()" style="background:var(--primary-light);color:var(--primary-dark);border:none;padding:4px 12px;border-radius:50px;cursor:pointer;font-size:13px;font-weight:600;font-family:inherit;">EN</button></li>
+        </ul>
+    </div>
+</nav>
+
+<main class="container" style="max-width:820px;margin:0 auto;padding:40px 20px 60px;">
+
+    <div style="text-align:center;margin-bottom:36px;">
+        <h1 style="font-size:28px;font-weight:800;margin-bottom:8px;">🤔 我该用哪个AI工具？</h1>
+        <p style="color:var(--text-secondary);font-size:15px;">回答4个问题，从35个模型中精准匹配最适合你的AI</p>
+    </div>
+
+    <div id="pickerSteps">
+        <!-- 由 picker.js 动态渲染 -->
+        <div style="text-align:center;padding:60px 20px;color:var(--text-secondary);">
+            <div style="font-size:40px;margin-bottom:16px;">⏳</div>
+            加载中...
+        </div>
+    </div>
+
+    <div style="text-align:center;margin-top:32px;padding-top:24px;border-top:1px solid var(--border);">
+        <p style="font-size:13px;color:var(--text-secondary);margin-bottom:8px;">已有明确想对比的目标？</p>
+        <a href="compare-custom.html" style="color:var(--primary);font-weight:600;font-size:14px;">→ 去自定义对比，自由勾选模型</a>
+        &nbsp;&nbsp;
+        <a href="vs/" style="color:var(--primary);font-weight:600;font-size:14px;">→ 看热门模型一对一对比</a>
+    </div>
+
+</main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <div>
+            <p><strong>AI家AI户</strong></p>
+            <p>便利店模式AI选型 — 不是权威，是省事</p>
+        </div>
+        <div>
+            <p><a href="about.html">关于我们</a> · <a href="news.html">行业新闻</a></p>
+            <p style="font-size:12px;color:var(--text-secondary);margin-top:4px;">© 2026 AI家AI户 · myaishome.com</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
