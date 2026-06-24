@@ -123,7 +123,7 @@ const i18n = {
     "compare.dim.productForm": { zh: "产品形态", en: "Product Form" },
     "compare.dim.coreAbility": { zh: "核心能力", en: "Core Ability" },
     "compare.dim.category": { zh: "类别", en: "Category" },
-    "compare.dim.affiliate": { zh: "联盟返佣", en: "Affiliate" },
+
 
     "compare.llm": { zh: "语言模型对比", en: "LLM Comparison" },
     "compare.agent": { zh: "Agent 平台对比", en: "Agent Platform Comparison" },
