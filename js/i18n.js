@@ -251,6 +251,7 @@ const i18n = {
     "picker.person.efficiency": { zh: "效率控", en: "Speed seeker" },
     "picker.person.efficiencyDesc": { zh: "时间比钱贵，越快越好", en: "Time is money — faster = better" },
     "picker.person.privacy": { zh: "独行侠", en: "Lone wolf" },
+    "picker.person.privacyDesc": { zh: "数据不上云端，本地优先", en: "Keep data local, avoid cloud" },
     "picker.tag.typeSuffix": { zh: "型", en: " Type" },
     "picker.tag.sceneSuffix": { zh: "场景", en: "" },
 
