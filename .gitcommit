@@ -1,8 +1,0 @@
-fix(i18n): add data-i18n to all compare table dimension labels
-
-- Added data-i18n attributes to all 8 compare tables' dimension row labels
-- 59 dimension label cells now use data-i18n for EN/CN switching
-- i18n.js: 28 compare.dim.* keys with zh/en translations
-- main.js: bestForEn/strengthsEn/priceLabelEn for all 43 models
-- Model cards + picker use getLocalized() for English mode
-- Fixed models.html og:description (35→43 products, 5→6 categories)

@@ -52,7 +52,7 @@ const i18n = {
     "cat.image.hint": { zh: "找画图、设计工具 →", en: "Image generation, design →" },
     "cat.video.hint": { zh: "找视频生成、特效工具 →", en: "Video generation, VFX →" },
     "cat.code.hint": { zh: "找编程助手（IDE+终端） →", en: "Coding agents (IDE + CLI) →" },
-    "cat.tools.hint": { zh: "找办公助手，含联盟折扣 →", en: "Productivity tools + discount links →" },
+    "cat.tools.hint": { zh: "找办公助手、创作工具 →", en: "Productivity & creation →" },
 
     // ==================== 推荐面板 ====================
     "rec.writing": { zh: "✍️ 写作推荐", en: "✍️ Top Writing Picks" },
@@ -74,7 +74,7 @@ const i18n = {
     "models.filter.code": { zh: "💻 代码模型", en: "💻 Coding Tools" },
     "models.filter.tools": { zh: "🛠 AI辅助工具", en: "🛠 AI Tools" },
     "models.codeNote": { zh: "💡 代码模型包含 IDE 插件（Cursor/Copilot）和终端 Agent（Codex/Claude Code），后者在命令行运行，可自主读项目、写代码、跑测试。", en: "💡 Coding tools include IDE plugins (Cursor, Copilot) and CLI agents (Codex, Claude Code) that run in terminal — they read your codebase, write code, and run tests autonomously." },
-    "models.toolsNote": { zh: "🛠 AI辅助工具包含设计/写作/语音/SEO等周边工具，部分有联盟返佣。点击卡片通过本站专享链接可享折扣。", en: "🛠 AI Tools cover design, writing, voice, SEO & more. Some have affiliate discounts — click through for exclusive deals." },
+    "models.toolsNote": { zh: "🛠 AI辅助工具包含设计/写作/语音/SEO等周边办公工具，覆盖创作与运营全流程。", en: "🛠 AI Tools covering design, writing, voice, SEO & more — supporting your creative and operational workflows." },
     "models.empty": { zh: "没有找到匹配的模型，试试其他关键词？", en: "No models found. Try different keywords?" },
     "models.footer1": { zh: "AI家AI户 · 数据最后更新于 2026年6月15日 · 信息来源于各模型官方网站及公开资料", en: "AI Home · Last updated June 15, 2026 · Data sourced from official websites & public docs" },
     "models.footer2": { zh: "所有模型信息均标注来源。点击卡片直接跳转对应官网。", en: "All model info cites sources. Click any card to visit the official site." },
@@ -131,7 +131,7 @@ const i18n = {
     "compare.video": { zh: "视频模型对比", en: "Video Model Comparison" },
     "compare.code": { zh: "代码模型对比", en: "Coding Tool Comparison" },
     "compare.toolsTitle": { zh: "🛠 AI辅助工具横向对比", en: "🛠 AI Tools Comparison" },
-    "compare.toolsDesc": { zh: "8款AI办公辅助工具横向对比——覆盖写作、设计、语音、视频、SEO。部分工具支持联盟返佣，通过本站链接可享优惠。", en: "8 AI productivity tools compared — writing, design, voice, video & SEO. Some offer affiliate discounts via our links." },
+    "compare.toolsDesc": { zh: "8款AI办公辅助工具横向对比——覆盖写作、设计、语音、视频、SEO，一站式对比选型。", en: "8 AI productivity tools compared — writing, design, voice, video & SEO, all in one place." },
     "compare.tools": { zh: "AI辅助工具对比", en: "AI Tools Comparison" },
     "compare.footer1": { zh: "AI家AI户 · 数据最后更新于 2026年6月15日 · 信息来源于各模型官方网站及公开资料", en: "AI Home · Last updated June 15, 2026 · Data sourced from official websites & public docs" },
 
