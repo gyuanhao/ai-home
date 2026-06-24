@@ -1067,7 +1067,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 渲染模型卡片（如果在列表页）
     const grid = document.getElementById('modelGrid');
-    if (grid) renderModelCards('all');
+    if (grid) {
+        // 读取URL参数中的品类筛选（从首页跳转过来时携带）
+        const params = new URLSearchParams(window.location.search);
+        const catParam = params.get('cat');
+        let activeCat = 'all';
+        if (catParam) {
+            // 激活对应筛选按钮
+            const targetBtn = document.querySelector(`.filter-btn[data-cat="${catParam}"]`);
+            if (targetBtn) {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                targetBtn.classList.add('active');
+                activeCat = catParam;
+            }
+        }
+        renderModelCards(activeCat);
+    }
 
     // 搜索功能
     const searchInput = document.getElementById('modelSearch');
