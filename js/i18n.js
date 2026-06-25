@@ -13,6 +13,7 @@ const i18n = {
     "nav.picker": { zh: "AI选型器", en: "AI Picker" },
     "nav.skills": { zh: "技能包", en: "Skills" },
     "nav.about": { zh: "关于", en: "About" },
+    "nav.privacy": { zh: "隐私政策", en: "Privacy" },
     "nav.switch": { zh: "EN", en: "中文" },
 
     // ==================== 首页 Hero ====================
@@ -299,6 +300,44 @@ const i18n = {
     "skills.noResults": { zh: "没有找到匹配的技能，试试其他关键词", en: "No matching skills found. Try different keywords." },
     "skills.footer1": { zh: "数据来源：<a href=\"https://github.com/VoltAgent/awesome-agent-skills\" target=\"_blank\" rel=\"noopener\">VoltAgent/awesome-agent-skills</a> 和 <a href=\"https://github.com/anbeime/skill\" target=\"_blank\" rel=\"noopener\">anbeime/skill</a>，按 Apache 2.0 / MIT 许可证开源。本站仅做聚合索引，具体使用规则请查阅各技能仓库。", en: "Data from <a href=\"https://github.com/VoltAgent/awesome-agent-skills\" target=\"_blank\" rel=\"noopener\">VoltAgent/awesome-agent-skills</a> and <a href=\"https://github.com/anbeime/skill\" target=\"_blank\" rel=\"noopener\">anbeime/skill</a>, under Apache 2.0 / MIT license. This site is an index only — check individual repos for usage terms." },
     "skills.footer2": { zh: "💡 技能(Skills)是AI Agent的\"插件\"，安装后可以赋予AI阅读PDF、生成PPT、调用API等专项能力。点击卡片跳转GitHub查看安装方法。", en: "💡 Skills are AI Agent \"plugins\" — install them to give AI abilities like reading PDFs, creating PPT, calling APIs, etc. Click a card to see install instructions on GitHub." },
+
+    // ==================== 隐私政策页 ====================
+    "privacy.title": { zh: "隐私政策", en: "Privacy Policy" },
+    "privacy.lastUpdated": { zh: "最后更新：2026年6月25日", en: "Last updated: June 25, 2026" },
+    "privacy.intro": { zh: "AI家AI户（myaishome.com）重视你的隐私。本隐私政策说明了我们如何收集、使用和保护你的信息。", en: "AI Home (myaishome.com) values your privacy. This Privacy Policy explains how we collect, use, and protect your information." },
+    "privacy.h1_data": { zh: "📊 我们收集什么数据", en: "📊 What Data We Collect" },
+    "privacy.data1": { zh: "<strong>自动收集的技术信息：</strong>当你访问本网站时，我们会通过 Google Analytics（Google分析）自动收集：IP地址（匿名化处理）、浏览器类型和设备信息、访问的页面和停留时间、来源渠道（如搜索引擎、社交媒体）", en: "<strong>Automatically collected technical data:</strong> When you visit this site, we automatically collect via Google Analytics: anonymized IP address, browser type and device info, pages visited and time spent, referral sources (e.g. search engines, social media)." },
+    "privacy.data2": { zh: "<strong>我们<u>不会</u>收集：</strong>姓名、邮箱、电话号码等个人身份信息（除非你主动通过联系邮箱发送给我们）", en: "<strong>We <u>do not</u> collect:</strong> Names, emails, phone numbers, or other personally identifiable information (unless you voluntarily send them to us via our contact email)." },
+    "privacy.h1_how": { zh: "🔧 我们如何使用数据", en: "🔧 How We Use Data" },
+    "privacy.how1": { zh: "了解网站访问情况（哪些页面受欢迎、用户从哪里来）", en: "Understanding site traffic (popular pages, traffic sources)." },
+    "privacy.how2": { zh: "改进网站内容和用户体验", en: "Improving content and user experience." },
+    "privacy.how3": { zh: "展示个性化广告（详见下方广告说明）", en: "Displaying personalized ads (see Advertising section below)." },
+    "privacy.h1_cookies": { zh: "🍪 关于 Cookie", en: "🍪 About Cookies" },
+    "privacy.cookies1": { zh: "Cookie 是网站存储在浏览器中的小文件，用于记住你的偏好和统计访问数据。本网站使用以下类型的 Cookie：", en: "Cookies are small files stored in your browser that remember preferences and track usage. This site uses the following types of cookies:" },
+    "privacy.cookies2": { zh: "<strong>必要性 Cookie：</strong>用于记住你的语言偏好（中文/英文）和 Cookie 同意状态，无法关闭。", en: "<strong>Essential Cookies:</strong> Remember your language preference (Chinese/English) and cookie consent status. Cannot be disabled." },
+    "privacy.cookies3": { zh: "<strong>分析 Cookie（Google Analytics）：</strong>用于统计网站访问数据，帮助我们了解哪些内容对你有用。", en: "<strong>Analytics Cookies (Google Analytics):</strong> Track site usage to help us understand which content is useful to you." },
+    "privacy.cookies4": { zh: "<strong>广告 Cookie（Google AdSense）：</strong>用于展示你可能感兴趣的个性化广告。", en: "<strong>Advertising Cookies (Google AdSense):</strong> Used to show personalized ads that may interest you." },
+    "privacy.cookies5": { zh: "你可以在浏览器设置中管理或禁用 Cookie（具体方法因浏览器而异）。禁用 Cookie 不影响网站正常使用，但可能导致语言偏好不会被记住。", en: "You can manage or disable cookies in your browser settings (methods vary by browser). Disabling cookies won't affect site functionality, but your language preference may not be saved." },
+    "privacy.h1_ads": { zh: "📢 广告说明", en: "📢 Advertising" },
+    "privacy.ads1": { zh: "本网站使用 <strong>Google AdSense</strong> 展示广告。Google 使用 Cookie 根据你的浏览历史展示个性化广告。", en: "This site uses <strong>Google AdSense</strong> to display ads. Google uses cookies to show personalized ads based on your browsing history." },
+    "privacy.ads2": { zh: "你可以通过 <a href=\"https://adssettings.google.com\" target=\"_blank\" rel=\"noopener\">Google 广告设置</a> 管理广告偏好，或访问 <a href=\"https://www.aboutads.info/\" target=\"_blank\" rel=\"noopener\">www.aboutads.info</a> 关闭个性化广告。", en: "You can manage ad preferences at <a href=\"https://adssettings.google.com\" target=\"_blank\" rel=\"noopener\">Google Ad Settings</a>, or opt out of personalized ads at <a href=\"https://www.aboutads.info/\" target=\"_blank\" rel=\"noopener\">www.aboutads.info</a>." },
+    "privacy.ads3": { zh: "本网站使用的广告服务商：Google AdSense。", en: "Advertising providers used on this site: Google AdSense." },
+    "privacy.h1_third": { zh: "🔗 第三方服务", en: "🔗 Third-Party Services" },
+    "privacy.third1": { zh: "本网站链接了大量AI模型和服务商的官方网站。点击这些链接后，你将离开本网站，对方网站的隐私政策适用。我们不对第三方网站的隐私做法负责。", en: "This site links to many AI model and service provider websites. Clicking these links takes you away from our site, and their privacy policies will apply. We are not responsible for third-party privacy practices." },
+    "privacy.h1_rights": { zh: "👤 你的权利", en: "👤 Your Rights" },
+    "privacy.rights1": { zh: "根据适用的数据保护法律（如 GDPR），你有权：访问我们持有的关于你的数据、要求更正或删除你的数据、限制或反对数据处理、数据可携带权。", en: "Under applicable data protection laws (e.g. GDPR), you have the right to: access data we hold about you, request correction or deletion, restrict or object to processing, data portability." },
+    "privacy.rights2": { zh: "由于我们不收集个人身份信息，大多数请求我们将无法处理（因为我们无法识别你的身份）。但如果你有任何隐私问题，欢迎联系我们。", en: "Since we do not collect personally identifiable information, most requests cannot be fulfilled (we can't identify you). But if you have privacy concerns, please reach out." },
+    "privacy.h1_contact": { zh: "📧 联系我们", en: "📧 Contact Us" },
+    "privacy.contact1": { zh: "如果你对本隐私政策有任何疑问，请发送邮件至：<strong>195486937@qq.com</strong>", en: "For questions about this Privacy Policy, email: <strong>195486937@qq.com</strong>" },
+    "privacy.contact2": { zh: "我们会在7个工作日内回复。", en: "We will respond within 7 business days." },
+    "privacy.footer": { zh: "AI家AI户 · 隐私政策 · myaishome.com", en: "AI Home · Privacy Policy · myaishome.com" },
+
+    // ==================== Cookie 同意弹窗 ====================
+    "cookie.title": { zh: "🍪 Cookie 使用说明", en: "🍪 Cookie Notice" },
+    "cookie.text": { zh: "本网站使用 Cookie 来记住你的语言偏好、统计访问数据（Google Analytics），以及展示个性化广告（Google AdSense）。点击「接受」即表示同意。", en: "This site uses cookies to remember your language preference, track usage (Google Analytics), and show personalized ads (Google AdSense). Click \"Accept\" to agree." },
+    "cookie.accept": { zh: "接受", en: "Accept" },
+    "cookie.decline": { zh: "拒绝", en: "Decline" },
+    "cookie.more": { zh: "了解更多", en: "Learn more" },
 };
 
 // ==================== 获取翻译 ====================
