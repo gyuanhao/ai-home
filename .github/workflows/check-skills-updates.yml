@@ -1,0 +1,86 @@
+name: Check Skills Updates
+
+on:
+  schedule:
+    # 每周一北京时间 08:00
+    - cron: '0 0 * * 1'
+  workflow_dispatch:  # 允许手动触发
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch VoltAgent README
+        run: |
+          curl -sL https://raw.githubusercontent.com/VoltAgent/awesome-agent-skills/main/README.md -o voltagent-readme.md
+
+      - name: Fetch anbeime skill index
+        run: |
+          curl -sL https://raw.githubusercontent.com/anbeime/skill/main/README.md -o anbeime-readme.md
+
+      - name: Extract skill counts
+        id: counts
+        run: |
+          VOLT=$(grep -c '^\- \[' voltagent-readme.md || echo 0)
+          ANB=$(grep -c '|' anbeime-readme.md || echo 0)
+          echo "voltagent_count=$VOLT" >> $GITHUB_OUTPUT
+          echo "anbeime_count=$ANB" >> $GITHUB_OUTPUT
+
+      - name: Read cached snapshot
+        id: cache
+        run: |
+          if [ -f .github/skills-snapshot.txt ]; then
+            echo "cached=$(cat .github/skills-snapshot.txt)" >> $GITHUB_OUTPUT
+          else
+            echo "cached=none" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Check for changes
+        id: diff
+        run: |
+          CURRENT="VoltAgent:$(wc -l < voltagent-readme.md)lines | anbeime:$(wc -l < anbeime-readme.md)lines"
+          echo "current=$CURRENT" >> $GITHUB_OUTPUT
+          echo "current=$CURRENT" > .github/skills-snapshot.txt
+
+          # Extract newly listed skills (top 10)
+          grep '^\*' voltagent-readme.md | head -20 > .github/new-skills.txt 2>/dev/null || true
+
+      - name: Create Issue if changed
+        if: steps.cache.outputs.cached != steps.diff.outputs.current && steps.cache.outputs.cached != 'none'
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const fs = require('fs');
+            const prev = `${{ steps.cache.outputs.cached }}`;
+            const curr = `${{ steps.diff.outputs.current }}`;
+            const body = `## ⚡ 技能库变化检测
+
+            **VoltAgent/awesome-agent-skills** 或 **anbeime/skill** 已更新。
+
+            | 指标 | 旧值 | 新值 |
+            |------|------|------|
+            | 快照 | ${prev} | ${curr} |
+
+            ### 🔧 下一步
+            在 WorkBuddy 中说 **"更新技能包"**，AI 会自动拉取最新数据、翻译中文描述、更新页面。
+
+            > 🤖 本 Issue 由自动化监测脚本创建 · 每周一自动检查`;
+
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `📦 技能库有更新 — ${new Date().toISOString().slice(0, 10)}`,
+              body: body,
+              labels: ['skills-update', 'automated']
+            });
+
+      - name: Create initial snapshot (first run)
+        if: steps.cache.outputs.cached == 'none'
+        run: |
+          echo "Initial snapshot saved. Will detect changes from next run."
