@@ -66,7 +66,7 @@ const i18n = {
 
     // ==================== 模型库页面 ====================
     "models.title": { zh: "📦 模型库", en: "📦 Model Library" },
-    "models.total": { zh: "共收录 <strong id=\"totalCount\">35</strong> 个产品，涵盖 AI 大模型、Agent 平台、图像/视频/代码模型。点击卡片跳转官网。信息最后更新：2026年6月25日", en: "<strong id=\"totalCount\">35</strong> tools listed — LLMs, Agent platforms, image/video/coding models. Click cards to visit official sites. Last updated: June 25, 2026" },
+    "models.total": { zh: "共收录 <strong id=\"totalCount\">36</strong> 个产品，涵盖 AI 大模型、Agent 平台、图像/视频/代码模型。点击卡片跳转官网。信息最后更新：2026年6月26日", en: "<strong id=\"totalCount\">36</strong> tools listed — LLMs, Agent platforms, image/video/coding models. Click cards to visit official sites. Last updated: June 26, 2026" },
     "models.search": { zh: "搜模型（名称/功能/公司/标签）……", en: "Search models (name, feature, company, tag)..." },
     "models.filter.all": { zh: "全部", en: "All" },
     "models.filter.llm": { zh: "🗣 语言模型", en: "🗣 Chat & LLMs" },
@@ -78,17 +78,17 @@ const i18n = {
     "models.codeNote": { zh: "💡 代码模型包含 IDE 插件（Cursor/Copilot）和终端 Agent（Codex/Claude Code），后者在命令行运行，可自主读项目、写代码、跑测试。", en: "💡 Coding tools include IDE plugins (Cursor, Copilot) and CLI agents (Codex, Claude Code) that run in terminal — they read your codebase, write code, and run tests autonomously." },
     "models.toolsNote": { zh: "🛠 AI辅助工具包含设计/写作/语音/SEO等周边办公工具，覆盖创作与运营全流程。", en: "🛠 AI Tools covering design, writing, voice, SEO & more — supporting your creative and operational workflows." },
     "models.empty": { zh: "没有找到匹配的模型，试试其他关键词？", en: "No models found. Try different keywords?" },
-    "models.footer1": { zh: "AI家AI户 · 数据最后更新于 2026年6月25日 · 信息来源于各模型官方网站及公开资料", en: "AI Home · Last updated June 25, 2026 · Data sourced from official websites & public docs" },
+    "models.footer1": { zh: "AI家AI户 · 数据最后更新于 2026年6月26日 · 信息来源于各模型官方网站及公开资料", en: "AI Home · Last updated June 26, 2026 · Data sourced from official websites & public docs" },
     "models.footer2": { zh: "所有模型信息均标注来源。点击卡片直接跳转对应官网。", en: "All model info cites sources. Click any card to visit the official site." },
 
     // ==================== 对比页 ====================
     "compare.title": { zh: "⚖️ 横向对比", en: "⚖️ Side-by-side Comparison" },
-    "compare.subtitle": { zh: "43个AI产品按6大品类并排对比，价格功能一目了然。数据最后更新：2026年6月25日。所有信息标注来源，用前请核实官网最新信息。", en: "43 AI tools compared across 6 categories. Pricing and features at a glance. Last updated: June 25, 2026. All info cites sources — verify before using." },
+    "compare.subtitle": { zh: "44个AI产品按6大品类并排对比，价格功能一目了然。数据最后更新：2026年6月26日。所有信息标注来源，用前请核实官网最新信息。", en: "44 AI tools compared across 6 categories. Pricing and features at a glance. Last updated: June 26, 2026. All info cites sources — verify before using." },
     "compare.infoTitle": { zh: "📊 基础信息对比", en: "📊 Basic Info" },
     "compare.pricingTitle": { zh: "💰 付费方案速览", en: "💰 Pricing at a Glance" },
     "compare.sceneTitle": { zh: "🎯 按使用场景选", en: "🎯 By Use Case" },
     "compare.agentTitle": { zh: "🤖 Agent平台横向对比", en: "🤖 Agent Platform Comparison" },
-    "compare.agentDesc": { zh: "语言模型是「引擎」，Agent平台是「整车」——帮你把AI能力串成自动化流程。以下6大Agent平台按关键维度并排对比。", en: "LLMs are the engine; Agent platforms are the whole car — turning AI power into automated workflows. 6 major platforms compared." },
+    "compare.agentDesc": { zh: "语言模型是「引擎」，Agent平台是「整车」——帮你把AI能力串成自动化流程。以下7大Agent平台按关键维度并排对比。", en: "LLMs are the engine; Agent platforms are the whole car — turning AI power into automated workflows. 7 major platforms compared." },
     "compare.imageTitle": { zh: "🎨 图像模型横向对比", en: "🎨 Image Model Comparison" },
     "compare.imageDesc": { zh: "5大主流AI图像生成工具按关键维度并排对比——从免费开源到专业付费，覆盖所有预算。", en: "5 major AI image tools compared — from free open-source to pro paid, all budgets covered." },
     "compare.videoTitle": { zh: "🎬 视频模型横向对比", en: "🎬 Video Model Comparison" },
@@ -135,15 +135,15 @@ const i18n = {
     "compare.toolsTitle": { zh: "🛠 AI辅助工具横向对比", en: "🛠 AI Tools Comparison" },
     "compare.toolsDesc": { zh: "8款AI办公辅助工具横向对比——覆盖写作、设计、语音、视频、SEO，一站式对比选型。", en: "8 AI productivity tools compared — writing, design, voice, video & SEO, all in one place." },
     "compare.tools": { zh: "AI辅助工具对比", en: "AI Tools Comparison" },
-    "compare.footer1": { zh: "AI家AI户 · 数据最后更新于 2026年6月25日 · 信息来源于各模型官方网站及公开资料", en: "AI Home · Last updated June 25, 2026 · Data sourced from official websites & public docs" },
+    "compare.footer1": { zh: "AI家AI户 · 数据最后更新于 2026年6月26日 · 信息来源于各模型官方网站及公开资料", en: "AI Home · Last updated June 26, 2026 · Data sourced from official websites & public docs" },
 
     // ==================== 新闻页 ====================
     "news.title": { zh: "📰 AI行业动态", en: "📰 AI Industry News" },
     "news.desc": { zh: "标题链接直达信息出处，点击查看原文。本站不做二次解读，仅做信息导航。", en: "Headlines link directly to sources. No commentary — just a news index." },
     "news.about": { zh: "关于这个模块", en: "About This Section" },
     "news.aboutDesc": { zh: "这里<strong>不做新闻解读或二次加工</strong>——只做标题索引。每条标题对应一个链接，直接跳转到信息来源网站。信息筛选偏向中文用户关心的AI动态：国产大模型、国际旗舰更新、价格变动、行业趋势。", en: "<strong>No commentary or spin</strong> — just a headline index. Each title links to the source. Curated for Chinese-speaking users: domestic LLMs, global flagship updates, pricing changes, industry trends." },
-    "news.updated": { zh: "更新频率：不定期。有大新闻时手动添加。最后整理：<strong>2026年6月25日</strong>", en: "Updated irregularly — when big news breaks. Last curated: <strong>June 25, 2026</strong>" },
-    "news.footer1": { zh: "AI家AI户 · 数据最后更新于 2026年6月25日 · 信息来源于各模型官方网站及公开资料", en: "AI Home · Last updated June 25, 2026 · Data sourced from official websites & public docs" },
+    "news.updated": { zh: "更新频率：不定期。有大新闻时手动添加。最后整理：<strong>2026年6月26日</strong>", en: "Updated irregularly — when big news breaks. Last curated: <strong>June 26, 2026</strong>" },
+    "news.footer1": { zh: "AI家AI户 · 数据最后更新于 2026年6月26日 · 信息来源于各模型官方网站及公开资料", en: "AI Home · Last updated June 26, 2026 · Data sourced from official websites & public docs" },
     "news.footer2": { zh: "标题链接直达出处，不做二次解读。用前请核实官方最新信息。", en: "Headlines link to sources. No commentary. Verify with official sites before using." },
 
     // ==================== 关于页 ====================
@@ -167,10 +167,10 @@ const i18n = {
     "about.name": { zh: "为什么叫「AI家AI户」？", en: "Why the name?" },
     "about.nameDesc": { zh: "谐音「家家户户」。希望未来的AI能像家用电器一样，走入每个家庭——而我们的站，就是你挑选「AI家电」时的选购指南。", en: "The name plays on the Chinese phrase for 'every household'. We hope AI becomes as common as home appliances — and this site is your shopping guide for picking the right ones." },
     "about.count": { zh: "目前收录", en: "Currently Listed" },
-    "about.countNum": { zh: "43个产品", en: "43 tools" },
-    "about.countDetail": { zh: "12个语言模型 + 6个Agent平台 + 5个图像模型 + 6个视频模型 + 7个代码模型 + 8个AI辅助工具", en: "12 LLMs + 6 Agent platforms + 5 image models + 6 video models + 7 coding tools + 8 AI productivity tools" },
-    "about.lastUpdated": { zh: "最后更新：<strong>2026年6月25日</strong>", en: "Last updated: <strong>June 25, 2026</strong>" },
-    "about.footer1": { zh: "AI家AI户 · 数据最后更新于 2026年6月25日 · 信息来源于各模型官方网站及公开资料", en: "AI Home · Last updated June 25, 2026 · Data sourced from official websites & public docs" },
+    "about.countNum": { zh: "44个产品", en: "44 tools" },
+    "about.countDetail": { zh: "12个语言模型 + 7个Agent平台 + 5个图像模型 + 6个视频模型 + 7个代码模型 + 8个AI辅助工具", en: "12 LLMs + 7 Agent platforms + 5 image models + 6 video models + 7 coding tools + 8 AI productivity tools" },
+    "about.lastUpdated": { zh: "最后更新：<strong>2026年6月26日</strong>", en: "Last updated: <strong>June 26, 2026</strong>" },
+    "about.footer1": { zh: "AI家AI户 · 数据最后更新于 2026年6月26日 · 信息来源于各模型官方网站及公开资料", en: "AI Home · Last updated June 26, 2026 · Data sourced from official websites & public docs" },
     "about.footer2": { zh: "这不是权威解读，只是帮你省掉搜索时间。用前请核实官方最新信息。", en: "Not an authority — just saving you search time. Verify with official sources before using." },
 
     // ==================== 404 页 ====================
@@ -188,8 +188,8 @@ const i18n = {
     "compareCustom.copyLink": { zh: "🔗 复制对比链接", en: "🔗 Copy Compare Link" },
     "compareCustom.copied": { zh: "✅ 链接已复制，可直接分享", en: "✅ Link copied, ready to share" },
     "compareCustom.dimCol": { zh: "维度", en: "Dimension" },
-    "compareCustom.footer": { zh: "AI家AI户 · 自定义对比工具 · 数据最后更新于 2026年6月25日", en: "AI Home · Custom Compare Tool · Last updated June 25, 2026" },
-    "compareCustom.sourceNote": { zh: "💡 数据来源于各模型官方网站及公开资料，最后更新：2026年6月25日。建议做最终决策前点击模型名进入官网核实。", en: "💡 Data sourced from official websites & public docs. Last updated: June 25, 2026. We recommend visiting the official site via the model name link before making a final decision." },
+    "compareCustom.footer": { zh: "AI家AI户 · 自定义对比工具 · 数据最后更新于 2026年6月26日", en: "AI Home · Custom Compare Tool · Last updated June 26, 2026" },
+    "compareCustom.sourceNote": { zh: "💡 数据来源于各模型官方网站及公开资料，最后更新：2026年6月26日。建议做最终决策前点击模型名进入官网核实。", en: "💡 Data sourced from official websites & public docs. Last updated: June 26, 2026. We recommend visiting the official site via the model name link before making a final decision." },
     "compareCustom.catCount": { zh: "{0}个", en: "{0} tools" },
     "compareCustom.copyPrompt": { zh: "复制以下链接分享对比结果：", en: "Copy this link to share the comparison:" },
     "compareCustom.dim.apiAvailableYes": { zh: "可用", en: "Available" },
@@ -259,10 +259,10 @@ const i18n = {
 
     // ==================== VS 对比首页 ====================
     "vs.title": { zh: "🔥 热门模型一对一对比", en: "🔥 Top Model 1v1 Comparisons" },
-    "vs.desc": { zh: "挑你最纠结的两个模型，看深度拆解。数据全部来自各模型官方网站及公开资料，最后更新于2026年6月25日。", en: "Pick the two models you're torn between. All data sourced from official sites & public docs, last updated June 25, 2026." },
+    "vs.desc": { zh: "挑你最纠结的两个模型，看深度拆解。数据全部来自各模型官方网站及公开资料，最后更新于2026年6月26日。", en: "Pick the two models you're torn between. All data sourced from official sites & public docs, last updated June 26, 2026." },
     "vs.hint": { zh: "💡 如果这里没有你想比的组合，试试 <a href=\"../compare-custom.html\">自定义对比工具</a>，勾选任意模型一键生成对比表。", en: "💡 Don't see your matchup? Try the <a href=\"../compare-custom.html\">Custom Compare tool</a> — pick any models and generate a table." },
     "vs.seoHint": { zh: "💡 这些对比页的标题都经过SEO优化，搜\"DeepSeek ChatGPT 对比\"\"Claude ChatGPT 对比\"等关键词会直接跳转到对应页面。<br>同时也支持 <a href=\"../compare-custom.html\">勾选任意模型自定义对比</a>，一键生成并排表，复制链接分享。", en: "💡 These pages are SEO-optimized — searching \"DeepSeek vs ChatGPT\" etc. leads directly here.<br>Also try <a href=\"../compare-custom.html\">Custom Compare</a> to mix any models." },
-    "vs.footer": { zh: "AI家AI户 · 热门模型对比 · 数据最后更新于 2026年6月25日 · <a href=\"../index.html\">返回首页</a>", en: "AI Home · Top Comparisons · Last updated June 25, 2026 · <a href=\"../index.html\">Home</a>" },
+    "vs.footer": { zh: "AI家AI户 · 热门模型对比 · 数据最后更新于 2026年6月26日 · <a href=\"../index.html\">返回首页</a>", en: "AI Home · Top Comparisons · Last updated June 26, 2026 · <a href=\"../index.html\">Home</a>" },
     "vs.cardCta": { zh: "查看详细对比", en: "See full comparison" },
     "vs.card1.desc": { zh: "免费天花板和综合全能王的正面交锋。完全免费无限制使用的DeepSeek，对上每月$20但功能最全的ChatGPT——看完就知道哪个更适合你的预算和使用场景。", en: "The free champion vs the all-rounder. Completely free & unlimited DeepSeek faces the $20/month ChatGPT with the widest feature set — see which fits your budget and needs." },
     "vs.card1.tag": { zh: "免费 vs 付费", en: "Free vs Paid" },
@@ -303,7 +303,7 @@ const i18n = {
 
     // ==================== 隐私政策页 ====================
     "privacy.title": { zh: "隐私政策", en: "Privacy Policy" },
-    "privacy.lastUpdated": { zh: "最后更新：2026年6月25日", en: "Last updated: June 25, 2026" },
+    "privacy.lastUpdated": { zh: "最后更新：2026年6月26日", en: "Last updated: June 26, 2026" },
     "privacy.intro": { zh: "AI家AI户（myaishome.com）重视你的隐私。本隐私政策说明了我们如何收集、使用和保护你的信息。", en: "AI Home (myaishome.com) values your privacy. This Privacy Policy explains how we collect, use, and protect your information." },
     "privacy.h1_data": { zh: "📊 我们收集什么数据", en: "📊 What Data We Collect" },
     "privacy.data1": { zh: "<strong>自动收集的技术信息：</strong>当你访问本网站时，我们会通过 Google Analytics（Google分析）自动收集：IP地址（匿名化处理）、浏览器类型和设备信息、访问的页面和停留时间、来源渠道（如搜索引擎、社交媒体）", en: "<strong>Automatically collected technical data:</strong> When you visit this site, we automatically collect via Google Analytics: anonymized IP address, browser type and device info, pages visited and time spent, referral sources (e.g. search engines, social media)." },
