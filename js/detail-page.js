@@ -69,7 +69,7 @@
 
         // Chinese support
         const cnEl = document.getElementById('param-cn');
-        if (cnEl) cnEl.textContent = f(model.chineseSupport, model.chineseSupport || '');
+        if (cnEl) cnEl.textContent = f(model.chineseSupport, model.chineseSupportEn || model.chineseSupport);
 
         // Context window
         const ctxEl = document.getElementById('param-context');
@@ -89,7 +89,7 @@
 
         // Released
         const relEl = document.getElementById('param-released');
-        if (relEl) relEl.textContent = model.released || '';
+        if (relEl) relEl.textContent = f(model.released, model.releasedEn || model.released);
 
         // Best for
         const bestEl = document.getElementById('param-bestFor');
@@ -121,8 +121,7 @@
         const grid = document.getElementById('mini-card-grid');
         if (!grid) return;
 
-        // The mini cards are already in the HTML with data-i18n badges
-        // Just update badge text
+        // Update badge text
         grid.querySelectorAll('.mini-badge').forEach(function(b) {
             if (b.classList.contains('badge-free')) {
                 b.textContent = isEn() ? 'Free' : '免费';
@@ -132,8 +131,13 @@
                 b.textContent = isEn() ? 'Paid' : '付费';
             }
         });
+        // Update link text
         grid.querySelectorAll('.mini-link').forEach(function(l) {
             l.textContent = isEn() ? 'View details →' : '查看详情 →';
+        });
+        // Update name, price and bestFor based on language
+        grid.querySelectorAll('[data-zh][data-en]').forEach(function(el) {
+            el.textContent = isEn() ? el.getAttribute('data-en') : el.getAttribute('data-zh');
         });
     }
 

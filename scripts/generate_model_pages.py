@@ -26,13 +26,19 @@ def tag_class(pricing):
     return 'badge-paid'
 
 def mini_card(m):
+    name_en = m.get('nameEn', m['name'])
+    price_en = m.get('priceLabelEn', m['priceLabel'])
+    best = m.get('bestFor','')
+    best_en = m.get('bestForEn', best)
+    best_trunc = best[:60] + ('...' if len(best) > 60 else '')
+    best_en_trunc = best_en[:60] + ('...' if len(best_en) > 60 else '')
     return f'''<a href="{m['id']}.html" class="mini-card">
     <div class="mini-card-header">
-        <span class="mini-name">{m['name']}</span>
+        <span class="mini-name" data-zh="{m['name']}" data-en="{name_en}">{m['name']}</span>
         <span class="mini-badge {tag_class(m['pricing'])}"></span>
     </div>
-    <div class="mini-price">{m['priceLabel']}</div>
-    <div class="mini-best">{m.get('bestFor','')[:60]}{'...' if len(m.get('bestFor','')) > 60 else ''}</div>
+    <div class="mini-price" data-zh="{m['priceLabel']}" data-en="{price_en}">{m['priceLabel']}</div>
+    <div class="mini-best" data-zh="{best_trunc}" data-en="{best_en_trunc}">{best_trunc}</div>
     <div class="mini-link">查看详情 →</div>
 </a>'''
 

@@ -41,7 +41,7 @@
 <body>
 
 <!-- Model data for JS rendering -->
-<script id="model-data" type="application/json">{"id":"chatgpt","nameEn":"ChatGPT","priceLabelEn":"Free / Plus $20/mo","tagsEn":["Writing","Coding","Image Gen","Voice","Multimodal"],"name":"ChatGPT","company":"OpenAI（美国）","category":"语言模型","pricing":"freemium","priceLabel":"免费 / Plus $20/月","priceDetail":"免费版（GPT-5.6 mini）; Plus $20/月（GPT-5.6）; Pro $200/月（GPT-5.6 Pro）","website":"https://chat.openai.com","tags":["写作","编程","图像生成","语音","多模态"],"strengths":"综合能力最强，GPT-5.6编程大幅提升（AGI Ranker 77.48分）；图像生成（DALL-E 3.5）、语音对话、文件分析一应俱全。Plus $20/月即可解锁主力模型","strengthsEn":"Best all-rounder — GPT-5.6 scored 77.48 on AGI Ranker coding; DALL-E 3.5 image gen, voice chat, & file analysis included. Plus at $20/mo unlocks the full model.","weaknesses":"免费版配额受限；需科学上网；国内直接访问不支持","bestFor":"日常写作、创意脑暴、通用问答、图像生成","bestForEn":"Daily writing, creative brainstorming, general Q&A, image generation","chineseSupport":"★★★★☆ 中文流畅，偶有翻译腔","contextWindow":"128K tokens","apiAvailable":true,"released":"2022年11月首发","lastUpdated":"2026-06-15","source":"openai.com / aipricecompare.org"}</script>
+<script id="model-data" type="application/json">{"id":"chatgpt","nameEn":"ChatGPT","priceLabelEn":"Free / Plus $20/mo","tagsEn":["Writing","Coding","Image Gen","Voice","Multimodal"],"name":"ChatGPT","company":"OpenAI（美国）","category":"语言模型","pricing":"freemium","priceLabel":"免费 / Plus $20/月","priceDetail":"免费版（GPT-5.6 mini）; Plus $20/月（GPT-5.6）; Pro $200/月（GPT-5.6 Pro）","website":"https://chat.openai.com","tags":["写作","编程","图像生成","语音","多模态"],"strengths":"综合能力最强，GPT-5.6编程大幅提升（AGI Ranker 77.48分）；图像生成（DALL-E 3.5）、语音对话、文件分析一应俱全。Plus $20/月即可解锁主力模型","strengthsEn":"Best all-rounder — GPT-5.6 scored 77.48 on AGI Ranker coding; DALL-E 3.5 image gen, voice chat, & file analysis included. Plus at $20/mo unlocks the full model.","weaknesses":"免费版配额受限；需科学上网；国内直接访问不支持","bestFor":"日常写作、创意脑暴、通用问答、图像生成","bestForEn":"Daily writing, creative brainstorming, general Q&A, image generation","chineseSupport":"★★★★☆ 中文流畅，偶有翻译腔","contextWindow":"128K tokens","apiAvailable":true,"released":"2022年11月首发","lastUpdated":"2026-06-15","source":"openai.com / aipricecompare.org","priceDetailEn":"Free (GPT-5). ChatGPT Plus $20/mo (GPT-5.6, 5.6-Slow-Think). Pro $200/mo (unlimited, Deep Research). Team $25-30/user/mo.","chineseSupportEn":"★★★★☆ Strong Chinese support, slight English bias","weaknessesEn":"Free users face rate limits; China requires VPN; no WeChat/Pay integration","releasedEn":"First launched November 2022, GPT-5.6 June 2026"}</script>
 
 <nav class="nav">
     <div class="nav-inner">
@@ -152,31 +152,31 @@
     <section class="detail-section">
         <h2 data-i18n="detail.compare">对比其他模型</h2>
         <div class="mini-card-grid" id="mini-card-grid">
-            <a href="claude.html" class="mini-card">
+            <a href="deepseek.html" class="mini-card">
     <div class="mini-card-header">
-        <span class="mini-name">Claude</span>
+        <span class="mini-name" data-zh="DeepSeek" data-en="DeepSeek">DeepSeek</span>
+        <span class="mini-badge badge-free"></span>
+    </div>
+    <div class="mini-price" data-zh="完全免费" data-en="Completely Free">完全免费</div>
+    <div class="mini-best" data-zh="预算敏感的开发者、学生、需要高频深度推理的场景" data-en="Budget-sensitive developers, students, scenarios needing fre...">预算敏感的开发者、学生、需要高频深度推理的场景</div>
+    <div class="mini-link">查看详情 →</div>
+</a>
+<a href="claude.html" class="mini-card">
+    <div class="mini-card-header">
+        <span class="mini-name" data-zh="Claude" data-en="Claude">Claude</span>
         <span class="mini-badge badge-freemium"></span>
     </div>
-    <div class="mini-price">免费 / Pro $20/月</div>
-    <div class="mini-best">长文档分析、学术写作、复杂代码项目、报告撰写、编程竞赛</div>
+    <div class="mini-price" data-zh="免费 / Pro $20/月" data-en="Free / Pro $20/mo">免费 / Pro $20/月</div>
+    <div class="mini-best" data-zh="长文档分析、学术写作、复杂代码项目、报告撰写、编程竞赛" data-en="Long document analysis, academic writing, complex coding pro...">长文档分析、学术写作、复杂代码项目、报告撰写、编程竞赛</div>
     <div class="mini-link">查看详情 →</div>
 </a>
 <a href="gemini.html" class="mini-card">
     <div class="mini-card-header">
-        <span class="mini-name">Gemini</span>
+        <span class="mini-name" data-zh="Gemini" data-en="Gemini">Gemini</span>
         <span class="mini-badge badge-freemium"></span>
     </div>
-    <div class="mini-price">免费 / AI Pro $19.99/月</div>
-    <div class="mini-best">Google Workspace用户、视频生成、多模态任务、超长文本处理</div>
-    <div class="mini-link">查看详情 →</div>
-</a>
-<a href="deepseek.html" class="mini-card">
-    <div class="mini-card-header">
-        <span class="mini-name">DeepSeek</span>
-        <span class="mini-badge badge-free"></span>
-    </div>
-    <div class="mini-price">完全免费</div>
-    <div class="mini-best">预算敏感的开发者、学生、需要高频深度推理的场景</div>
+    <div class="mini-price" data-zh="免费 / AI Pro $19.99/月" data-en="Free / AI Pro $19.99/mo">免费 / AI Pro $19.99/月</div>
+    <div class="mini-best" data-zh="Google Workspace用户、视频生成、多模态任务、超长文本处理" data-en="Google Workspace users, video generation, multimodal tasks, ...">Google Workspace用户、视频生成、多模态任务、超长文本处理</div>
     <div class="mini-link">查看详情 →</div>
 </a>
         </div>

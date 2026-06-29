@@ -35,7 +35,11 @@
     "apiAvailable": true,
     "released": "2023年推出，V4 2026年4月发布",
     "lastUpdated": "2026-06-15",
-    "source": "deepseek.com / aipricecompare.org"
+    "source": "deepseek.com / aipricecompare.org",
+    "priceDetailEn": "All features free, no paywall, no ads. API usage-based billing, V4 series permanent price cut (V4-Pro 75% off). V4.1 coming June 2026, first multimodal + enterprise tools.",
+    "chineseSupportEn": "★★★★★ Native Chinese model, excellent performance",
+    "weaknessesEn": "May queue during peak hours; current image/multimodal limited; no web search support",
+    "releasedEn": "Launched 2023, V4 released April 2026"
   },
   {
     "id": "kimi",
@@ -72,7 +76,11 @@
     "apiAvailable": true,
     "released": "2023年10月首发",
     "lastUpdated": "2026-06-11",
-    "source": "kimi.moonshot.cn / apis.you"
+    "source": "kimi.moonshot.cn / apis.you",
+    "priceDetailEn": "Free tier (Adagio, limited uses); Andante ¥49/mo; Moderato ¥99/mo. K2.5 API: ¥4/million tokens input.",
+    "chineseSupportEn": "★★★★★ Best-in-class for long-form Chinese writing",
+    "weaknessesEn": "Strict free tier limits; queue/tipping priority during peak hours",
+    "releasedEn": "First launched October 2023"
   },
   {
     "id": "qwen",
@@ -109,7 +117,11 @@
     "apiAvailable": true,
     "released": "2023年首发，Qwen3.7-Max 2026年5月更新",
     "lastUpdated": "2026-06-11",
-    "source": "aliyun.com / yangmao.ai"
+    "source": "aliyun.com / yangmao.ai",
+    "priceDetailEn": "Free web version (Qwen3.5-Thinking with search). Bailian platform: 70M free tokens for new users. API: Qwen3.5 ¥2/M tokens input. Qwen3.5-VL free during beta.",
+    "chineseSupportEn": "★★★★★ Native Chinese, Alibaba ecosystem integration",
+    "weaknessesEn": "Free tier features limited; complex reasoning lags behind DeepSeek & ChatGPT",
+    "releasedEn": "First launched April 2023, Qwen3.5 June 2026"
   },
   {
     "id": "ernie",
@@ -146,7 +158,11 @@
     "apiAvailable": true,
     "released": "2023年3月首发，ERNIE 4.5 2025年底更新",
     "lastUpdated": "2026-06-15",
-    "source": "yiyan.baidu.com / baidu.com"
+    "source": "yiyan.baidu.com / baidu.com",
+    "priceDetailEn": "Free web version (ERNIE 5.0 Lite). ERNIE 5.0 Pro ¥59.9/mo; ERNIE 5.0 Ultra ¥99.9/mo. API: ERNIE-Lite ¥0.8/M tokens input.",
+    "chineseSupportEn": "★★★★★ Baidu ecosystem, native Chinese",
+    "weaknessesEn": "Free tier limited; English reasoning weaker than top models; some features hidden behind paywall",
+    "releasedEn": "First launched March 2023, ERNIE 5.0 November 2025"
   },
   {
     "id": "doubao",
@@ -183,7 +199,11 @@
     "apiAvailable": true,
     "released": "2023年8月首发",
     "lastUpdated": "2026-06-15",
-    "source": "doubao.com / news.qq.com"
+    "source": "doubao.com / news.qq.com",
+    "priceDetailEn": "Free web version (Doubao 2.0, daily limits). Pro ¥19.9/mo. API: Doubao-Lite ¥0.3/M tokens input; Doubao-Pro ¥3/M tokens input.",
+    "chineseSupportEn": "★★★★★ ByteDance ecosystem, native Chinese",
+    "weaknessesEn": "Free tier daily cap; English benchmarks lower; less ecosystem integration than competitors",
+    "releasedEn": "First launched August 2023, Doubao 2.0 May 2026"
   },
   {
     "id": "glm",
@@ -220,7 +240,11 @@
     "apiAvailable": true,
     "released": "2023年首发，GLM-5.2系列 2026年更新",
     "lastUpdated": "2026-06-15",
-    "source": "bigmodel.cn / vibecoding.app"
+    "source": "bigmodel.cn / vibecoding.app",
+    "priceDetailEn": "GLM-5.2-Flash 免费使用。Coding Plan：Lite 免费 / Pro ¥49/月 / Max ¥99/月",
+    "chineseSupportEn": "★★★★★ 清华系团队出品，中文理解精确",
+    "weaknessesEn": "通用任务不如GPT/Claude前端；部分高级功能需付费",
+    "releasedEn": "2023年首发，GLM-5.2系列 2026年更新"
   },
   {
     "id": "minimax-m3",
@@ -257,7 +281,11 @@
     "apiAvailable": true,
     "released": "2026年6月1日发布",
     "lastUpdated": "2026-06-15",
-    "source": "minimaxi.com / segmentfault.com"
+    "source": "minimaxi.com / segmentfault.com",
+    "priceDetailEn": "聊天免费。API按量计费，输入约 ¥1/百万Token，输出约 ¥4/百万Token。开源权重可下载",
+    "chineseSupportEn": "★★★★☆ 中文支持良好，国产模型天然适配",
+    "weaknessesEn": "生态较新（模型刚发布，工具链/社区在建设中）；对话产品不如主流成熟；品牌认知度待提升",
+    "releasedEn": "2026年6月1日发布"
   },
   {
     "id": "chatgpt",
@@ -294,7 +322,11 @@
     "apiAvailable": true,
     "released": "2022年11月首发",
     "lastUpdated": "2026-06-15",
-    "source": "openai.com / aipricecompare.org"
+    "source": "openai.com / aipricecompare.org",
+    "priceDetailEn": "Free (GPT-5). ChatGPT Plus $20/mo (GPT-5.6, 5.6-Slow-Think). Pro $200/mo (unlimited, Deep Research). Team $25-30/user/mo.",
+    "chineseSupportEn": "★★★★☆ Strong Chinese support, slight English bias",
+    "weaknessesEn": "Free users face rate limits; China requires VPN; no WeChat/Pay integration",
+    "releasedEn": "First launched November 2022, GPT-5.6 June 2026"
   },
   {
     "id": "claude",
@@ -331,7 +363,11 @@
     "apiAvailable": true,
     "released": "2023年3月首发",
     "lastUpdated": "2026-06-15",
-    "source": "anthropic.com / agiranker.com"
+    "source": "anthropic.com / agiranker.com",
+    "priceDetailEn": "Free (Claude Sonnet 4.5). Pro $20/mo (Claude Opus 4.8). Max $100-200/mo (extended limits). Team $25/user/mo.",
+    "chineseSupportEn": "★★★☆☆ Good Chinese but English-oriented; HK requires VPN",
+    "weaknessesEn": "HK requires VPN; no free tier for Opus; Chinese sometimes unnatural; no image gen natively",
+    "releasedEn": "First launched March 2023, Opus 4.8 June 2026"
   },
   {
     "id": "gemini",
@@ -368,7 +404,11 @@
     "apiAvailable": true,
     "released": "2023年12月首发",
     "lastUpdated": "2026-06-11",
-    "source": "gemini.google.com / aipricecompare.org"
+    "source": "gemini.google.com / aipricecompare.org",
+    "priceDetailEn": "Free (Gemini 2.5 Pro, limited). Gemini Advanced $19.99/mo (1M context). API: Gemini 2.5 Flash $0.15/M tokens input.",
+    "chineseSupportEn": "★★★☆☆ Acceptable Chinese, Google ecosystem bias",
+    "weaknessesEn": "China requires VPN; Chinese quality behind domestic models; UI updates confusing",
+    "releasedEn": "First launched December 2023, Gemini 2.5 2025"
   },
   {
     "id": "llama",
@@ -405,7 +445,11 @@
     "apiAvailable": false,
     "released": "2023年2月首发，Llama 4 2025年发布",
     "lastUpdated": "2026-06-11",
-    "source": "meta.com / huggingface.co"
+    "source": "meta.com / huggingface.co",
+    "priceDetailEn": "完全开源免费，可在HuggingFace/GitHub下载模型权重。自行部署成本取决于硬件",
+    "chineseSupportEn": "★★★☆☆ 中文可用但非专项优化，微调后可提升",
+    "weaknessesEn": "需要自行部署（技术门槛）或使用第三方托管；本地运行需要GPU；中文未经专门优化",
+    "releasedEn": "2023年2月首发，Llama 4 2025年发布"
   },
   {
     "id": "bailian",
@@ -445,7 +489,11 @@
     "apiAvailable": true,
     "released": "2023年首发，持续迭代",
     "lastUpdated": "2026-06-26",
-    "source": "aliyun.com/product/bailian"
+    "source": "aliyun.com/product/bailian",
+    "priceDetailEn": "Free (basic). API pay-as-you-go. New users: 70M free tokens. Qwen3.5-Thinking free during beta.",
+    "chineseSupportEn": "★★★★★ Alibaba Cloud native Chinese",
+    "weaknessesEn": "Tightly coupled to Alibaba Cloud; documentation sometimes in Chinese only; limited third-party model support",
+    "releasedEn": "First launched 2024"
   },
   {
     "id": "coze",
@@ -482,7 +530,11 @@
     "apiAvailable": false,
     "released": "2024年首发，Coze 3.0 2026年6月1日发布",
     "lastUpdated": "2026-06-11",
-    "source": "coze.cn / finance.sina.com.cn"
+    "source": "coze.cn / finance.sina.com.cn",
+    "priceDetailEn": "Free (basic). Pro ¥99/mo. API: BytePlus pricing. Coze Points system — cannot accumulate.",
+    "chineseSupportEn": "★★★★★ ByteDance native Chinese",
+    "weaknessesEn": "Tightly ByteDance ecosystem; Points cannot accumulate; advanced features behind paywall",
+    "releasedEn": "First launched 2024"
   },
   {
     "id": "workbuddy",
@@ -520,7 +572,11 @@
     "apiAvailable": false,
     "released": "2026年3月9日上线，企业版2026年6月发布",
     "lastUpdated": "2026-06-11",
-    "source": "workbuddy.tencent.com / new.qq.com"
+    "source": "workbuddy.tencent.com / new.qq.com",
+    "priceDetailEn": "新用户注册送500 Credits，连续30日每日登录送100 Credits。个人版2000 Credits/¥58/月；企业版2000 Credits/¥78/月；企业专享定制化服务",
+    "chineseSupportEn": "★★★★★ 腾讯出品，中文原生支持",
+    "weaknessesEn": "主要面向国内用户；部分高级功能需付费；Mac/Windows桌面应用为主，无纯网页版",
+    "releasedEn": "2026年3月9日上线，企业版2026年6月发布"
   },
   {
     "id": "windclaw",
@@ -557,7 +613,11 @@
     "apiAvailable": false,
     "released": "2026年3月11日公测",
     "lastUpdated": "2026-06-11",
-    "source": "windclaw.bot / aihub.cn"
+    "source": "windclaw.bot / aihub.cn",
+    "priceDetailEn": "2026年3月公测期间免费使用。正式定价方案待公布，预计按Wind账号体系分级收费",
+    "chineseSupportEn": "★★★★★ 万得出品，中文金融数据最全",
+    "weaknessesEn": "需要Wind账号体系（金融从业者门槛）；非金融领域用户不适用；公测期功能仍在迭代",
+    "releasedEn": "2026年3月11日公测"
   },
   {
     "id": "dify",
@@ -595,7 +655,11 @@
     "apiAvailable": true,
     "released": "2023年开源，持续迭代中",
     "lastUpdated": "2026-06-11",
-    "source": "dify.ai / news.sohu.com"
+    "source": "dify.ai / news.sohu.com",
+    "priceDetailEn": "Free self-hosted (open source). Cloud: Free (basic), Team $59/mo, Business $159/mo, Enterprise custom.",
+    "chineseSupportEn": "★★★★★ Native Chinese UI, excellent docs",
+    "weaknessesEn": "Complex setup for self-hosted; free tier limited; community plugins variable quality",
+    "releasedEn": "First launched 2023"
   },
   {
     "id": "manus",
@@ -631,7 +695,11 @@
     "apiAvailable": false,
     "released": "2025年首发，持续迭代",
     "lastUpdated": "2026-06-11",
-    "source": "manus.im / sohu.com"
+    "source": "manus.im / sohu.com",
+    "priceDetailEn": "Free (limited). Pro $199/mo. API not available yet.",
+    "chineseSupportEn": "★★★★★ Chinese company, native Chinese support",
+    "weaknessesEn": "Very expensive Pro plan; still early stage; API not yet public; limited integrations",
+    "releasedEn": "Launched March 2025"
   },
   {
     "id": "n8n",
@@ -668,7 +736,11 @@
     "apiAvailable": true,
     "released": "2019年开源，2024年加入AI Agent功能",
     "lastUpdated": "2026-06-11",
-    "source": "n8n.io / cet.com.cn"
+    "source": "n8n.io / cet.com.cn",
+    "priceDetailEn": "社区版完全开源免费，可自行部署。Cloud版 Starter €20/月；Pro €120/月；Enterprise 按需定价",
+    "chineseSupportEn": "★★☆☆☆ 全英文界面和文档，中文社区资源有限",
+    "weaknessesEn": "自托管需技术能力；Cloud版海外服务器（国内访问可能慢）；界面全英文；中文社区较小",
+    "releasedEn": "2019年开源，2024年加入AI Agent功能"
   },
   {
     "id": "jimeng",
@@ -704,7 +776,11 @@
     "apiAvailable": false,
     "released": "2024年首发，持续更新",
     "lastUpdated": "2026-06-11",
-    "source": "jimeng.jianying.com"
+    "source": "jimeng.jianying.com",
+    "priceDetailEn": "Free (daily quota). API: ¥0.02-0.2/image depending on resolution.",
+    "chineseSupportEn": "★★★★★ ByteDance native Chinese, Douyin integration",
+    "weaknessesEn": "Quality behind Midjourney; Douyin ecosystem lock-in; limited API documentation in English",
+    "releasedEn": "Launched 2024"
   },
   {
     "id": "midjourney",
@@ -740,7 +816,11 @@
     "apiAvailable": false,
     "released": "2022年7月首发，V7 2025年4月发布",
     "lastUpdated": "2026-06-11",
-    "source": "midjourney.com / similarlabs.com"
+    "source": "midjourney.com / similarlabs.com",
+    "priceDetailEn": "Basic $10/mo (~200 images). Standard $30/mo (unlimited relax). Pro $60/mo (stealth, 12 concurrent). Mega $120/mo.",
+    "chineseSupportEn": "★★☆☆☆ No Chinese UI, community tools needed",
+    "weaknessesEn": "Discord-only workflow can be clunky; no API; expensive for casual users; Chinese prompt support limited",
+    "releasedEn": "First launched July 2022, V7 Alpha 2025"
   },
   {
     "id": "dalle",
@@ -775,7 +855,11 @@
     "apiAvailable": true,
     "released": "2021年1月首发，DALL-E 3.5 2026年更新",
     "lastUpdated": "2026-06-11",
-    "source": "openai.com / aibotgo.net"
+    "source": "openai.com / aibotgo.net",
+    "priceDetailEn": "Free (basic, with ChatGPT). ChatGPT Plus $20/mo (full access). API: DALL-E 3 $0.04-0.12/image (HD).",
+    "chineseSupportEn": "★★★★☆ Good Chinese via ChatGPT prompts",
+    "weaknessesEn": "Less artistic control than Midjourney; behind on latest features; no standalone product",
+    "releasedEn": "First launched January 2021, DALL-E 3 October 2023"
   },
   {
     "id": "stable-diffusion",
@@ -811,7 +895,11 @@
     "apiAvailable": true,
     "released": "2022年8月首发，SD4 2025年发布",
     "lastUpdated": "2026-06-11",
-    "source": "stability.ai / huggingface.co"
+    "source": "stability.ai / huggingface.co",
+    "priceDetailEn": "Free (open source, self-hosted). DreamStudio web: $10/1000 credits. API: Stability AI $0.01-0.15/image.",
+    "chineseSupportEn": "★★☆☆☆ English prompts needed; community Chinese support",
+    "weaknessesEn": "Complex self-hosting; outdated vs competitors; company financial instability; Chinese support minimal",
+    "releasedEn": "First launched August 2022, SD3 2024"
   },
   {
     "id": "flux",
@@ -847,7 +935,11 @@
     "apiAvailable": true,
     "released": "2024年8月首发，Pro版持续迭代",
     "lastUpdated": "2026-06-11",
-    "source": "blackforestlabs.ai / apatero.com"
+    "source": "blackforestlabs.ai / apatero.com",
+    "priceDetailEn": "Free (open source, FLUX.1-schnell). FLUX.1-pro API: $0.05/image. FLUX.1-ultra: $0.06/image.",
+    "chineseSupportEn": "★★★☆☆ Acceptable, prompt in English works best",
+    "weaknessesEn": "English-first prompting; requires decent GPU for self-hosted; Chinese text generation weak",
+    "releasedEn": "Launched August 2024 by Black Forest Labs"
   },
   {
     "id": "kling",
@@ -882,7 +974,11 @@
     "apiAvailable": false,
     "released": "2024年6月首发，可灵3 2026年更新",
     "lastUpdated": "2026-06-11",
-    "source": "kling.kuaishou.com / nav-ai.cn"
+    "source": "kling.kuaishou.com / nav-ai.cn",
+    "priceDetailEn": "Free (daily quota). Membership ¥58/mo (more credits). API: ¥0.3-1.5/video.",
+    "chineseSupportEn": "★★★★★ Kuaishou native Chinese, excellent quality",
+    "weaknessesEn": "Quality varies; Kuaishou ecosystem less dev-friendly; limited English docs",
+    "releasedEn": "Launched June 2024 (Kling 1.0), Kling 2.0 2025"
   },
   {
     "id": "hailuo-video",
@@ -917,7 +1013,11 @@
     "apiAvailable": true,
     "released": "2024年9月推出",
     "lastUpdated": "2026-06-15",
-    "source": "hailuoai.com / php.cn"
+    "source": "hailuoai.com / php.cn",
+    "priceDetailEn": "免费版每日赠送额度。会员¥39/月起（更多额度+更高画质+去除水印）。API按量计费",
+    "chineseSupportEn": "★★★★★ 中文原生，理解精准",
+    "weaknessesEn": "视频质量和控制力不如可灵/Sora；复杂场景一致性偶有翻车；功能丰富度不如Runway",
+    "releasedEn": "2024年9月推出"
   },
   {
     "id": "sora",
@@ -953,7 +1053,11 @@
     "apiAvailable": false,
     "released": "2024年12月公测",
     "lastUpdated": "2026-06-11",
-    "source": "sora.com / nav-ai.cn"
+    "source": "sora.com / nav-ai.cn",
+    "priceDetailEn": "ChatGPT Plus $20/mo (limited). Pro $200/mo (more generations, higher resolution).",
+    "chineseSupportEn": "★★★☆☆ Works with Chinese prompts via ChatGPT",
+    "weaknessesEn": "China requires VPN; expensive Pro tier; generation limits on Plus; open to competition from Chinese models",
+    "releasedEn": "Launched December 2024 (public)"
   },
   {
     "id": "runway",
@@ -988,7 +1092,11 @@
     "apiAvailable": true,
     "released": "2023年首发，Gen-4 2026年更新",
     "lastUpdated": "2026-06-11",
-    "source": "runwayml.com / aibotgo.net"
+    "source": "runwayml.com / aibotgo.net",
+    "priceDetailEn": "Free (basic, 125 credits). Standard $15/mo (625 credits). Pro $35/mo (2250 credits). Unlimited $95/mo.",
+    "chineseSupportEn": "★★☆☆☆ No Chinese UI; English prompts only",
+    "weaknessesEn": "Expensive for heavy use; no Chinese support; falling behind on some features; credits easy to burn",
+    "releasedEn": "First launched 2023, Gen-4 2025"
   },
   {
     "id": "pika",
@@ -1023,7 +1131,11 @@
     "apiAvailable": false,
     "released": "2023年首发，Pika 2.0 2025年发布",
     "lastUpdated": "2026-06-11",
-    "source": "pika.art / aibotgo.net"
+    "source": "pika.art / aibotgo.net",
+    "priceDetailEn": "Free (basic, 250 credits). Standard $10/mo (700 credits). Unlimited $35/mo. Pro $70/mo.",
+    "chineseSupportEn": "★★☆☆☆ English prompts needed",
+    "weaknessesEn": "Brand awareness lower than Runway; Chinese support minimal; features behind competitors",
+    "releasedEn": "Launched 2024, Pika 2.0 2025"
   },
   {
     "id": "veo",
@@ -1058,7 +1170,11 @@
     "apiAvailable": false,
     "released": "2025年5月公测",
     "lastUpdated": "2026-06-15",
-    "source": "deepmind.google / imagetoprompt.dev"
+    "source": "deepmind.google / imagetoprompt.dev",
+    "priceDetailEn": "Via Google AI Studio (free during preview). Vertex AI API pricing TBD.",
+    "chineseSupportEn": "★★★☆☆ Basic Chinese via Google ecosystem",
+    "weaknessesEn": "Still in preview; China access requires VPN; limited availability; unclear pricing",
+    "releasedEn": "Announced May 2025, preview 2025"
   },
   {
     "id": "tongyi-lingma",
@@ -1093,7 +1209,11 @@
     "apiAvailable": true,
     "released": "2024年首发，持续迭代",
     "lastUpdated": "2026-06-11",
-    "source": "tongyi.aliyun.com / juejin.cn"
+    "source": "tongyi.aliyun.com / juejin.cn",
+    "priceDetailEn": "个人版和基础企业版完全免费。高级企业版按需定价（含安全审计/合规检查等）",
+    "chineseSupportEn": "★★★★★ 中文原生，代码注释和对话全中文",
+    "weaknessesEn": "代码补全质量略逊Copilot/Cursor（特别是英文项目）；高级功能（安全审计等）需付费企业版；更新频率不如海外工具",
+    "releasedEn": "2024年首发，持续迭代"
   },
   {
     "id": "comate",
@@ -1129,7 +1249,11 @@
     "apiAvailable": false,
     "released": "2023年首发，持续迭代",
     "lastUpdated": "2026-06-11",
-    "source": "comate.baidu.com"
+    "source": "comate.baidu.com",
+    "priceDetailEn": "个人版完全免费。企业版按需定价（含代码审查/安全扫描等高级功能）",
+    "chineseSupportEn": "★★★★★ 中文原生",
+    "weaknessesEn": "知名度不如通义灵码/Copilot；代码补全质量中等偏上；开源社区相对冷清；对非百度技术栈支持一般",
+    "releasedEn": "2023年首发，持续迭代"
   },
   {
     "id": "codex",
@@ -1165,7 +1289,11 @@
     "apiAvailable": true,
     "released": "2025年底开源，2026年爆发增长",
     "lastUpdated": "2026-06-15",
-    "source": "openai.com / getaiperks.com"
+    "source": "openai.com / getaiperks.com",
+    "priceDetailEn": "Open source (free self-hosted). OpenAI API: $15/month or pay-per-use. Terminal agent: free.",
+    "chineseSupportEn": "★★★★☆ English-first, Chinese support improving",
+    "weaknessesEn": "Requires terminal comfort; SWE-bench lags behind Claude Code; new product, ecosystem immature",
+    "releasedEn": "Launched June 2025"
   },
   {
     "id": "claude-code",
@@ -1200,7 +1328,11 @@
     "apiAvailable": true,
     "released": "2025年推出，Fable 5 2026年6月9日发布",
     "lastUpdated": "2026-06-15",
-    "source": "anthropic.com / code.claude.com"
+    "source": "anthropic.com / code.claude.com",
+    "priceDetailEn": "Free (limited via Claude Pro $20/mo). Max $200/mo (extended). Terminal agent: free, API costs extra.",
+    "chineseSupportEn": "★★★☆☆ English-oriented, Chinese acceptable",
+    "weaknessesEn": "Expensive for heavy use; China requires VPN; terminal-only workflow for agent mode; Chinese documentation thin",
+    "releasedEn": "Launched February 2025"
   },
   {
     "id": "github-copilot",
@@ -1236,7 +1368,11 @@
     "apiAvailable": true,
     "released": "2021年首发，持续迭代",
     "lastUpdated": "2026-06-11",
-    "source": "github.com / juejin.cn"
+    "source": "github.com / juejin.cn",
+    "priceDetailEn": "Individual $10/月 (Claude 3.5+GPT-4o双模型); Business $19/月; Enterprise $39/月。学生和开源项目免费",
+    "chineseSupportEn": "★★★☆☆ 代码注释支持中文，界面英文为主",
+    "weaknessesEn": "纯付费（个人$10/月）；代码对话不如Cursor灵活深入；国内访问GitHub可能不稳定；不支持多文件Agent式编辑",
+    "releasedEn": "2021年首发，持续迭代"
   },
   {
     "id": "cursor",
@@ -1271,7 +1407,11 @@
     "apiAvailable": false,
     "released": "2023年首发，持续快速迭代",
     "lastUpdated": "2026-06-11",
-    "source": "cursor.com / xtechtools.com"
+    "source": "cursor.com / xtechtools.com",
+    "priceDetailEn": "Free (Hobby, 2000 completions). Pro $20/mo (unlimited). Business $40/user/mo.",
+    "chineseSupportEn": "★★★★☆ Good Chinese support in editor, English UI",
+    "weaknessesEn": "Expensive Pro tier; VS Code fork, not standalone; large project performance issues",
+    "releasedEn": "Launched 2023, Agent mode 2025"
   },
   {
     "id": "windsurf",
@@ -1306,7 +1446,11 @@
     "apiAvailable": false,
     "released": "2024年首发",
     "lastUpdated": "2026-06-11",
-    "source": "codeium.com / aitoolcn.com"
+    "source": "codeium.com / aitoolcn.com",
+    "priceDetailEn": "Free (basic). Pro $15/mo. Teams $30/user/mo.",
+    "chineseSupportEn": "★★★★☆ Good Chinese, Cascade AI flow",
+    "weaknessesEn": "Smaller ecosystem than Cursor/GitHub; fewer integrations; brand awareness lower",
+    "releasedEn": "Launched 2024 (as Codeium Windsurf)"
   },
   {
     "id": "notion",
@@ -1342,7 +1486,11 @@
     "apiAvailable": false,
     "released": "2023年推出AI功能",
     "lastUpdated": "2026-06-23",
-    "source": "notion.so / partnerstack.com"
+    "source": "notion.so / partnerstack.com",
+    "priceDetailEn": "免费版基础笔记 + 有限AI次数。Plus $10/月（无限AI + 日历/Database等全部功能）。Business $15/月/人",
+    "chineseSupportEn": "★★★★☆ 中文UI + 中文AI，偶有翻译感",
+    "weaknessesEn": "免费版AI次数有限；中文写作质量不及Kimi/通义；高级功能需付费",
+    "releasedEn": "2023年推出AI功能"
   },
   {
     "id": "canva",
@@ -1378,7 +1526,11 @@
     "apiAvailable": false,
     "released": "2013年创立，AI功能2023年开始集成",
     "lastUpdated": "2026-06-23",
-    "source": "canva.com / partnerstack.com"
+    "source": "canva.com / partnerstack.com",
+    "priceDetailEn": "免费版基础设计功能。Pro $12.99/月（AI生成/背景移除/图片编辑/品牌套件）",
+    "chineseSupportEn": "★★★★★ 中文UI + 大量中文模板 + 中国团队运营",
+    "weaknessesEn": "AI图像生成质量不提Midjourney/DALL-E；高级AI功能需Pro订阅",
+    "releasedEn": "2013年创立，AI功能2023年开始集成"
   },
   {
     "id": "grammarly",
@@ -1414,7 +1566,11 @@
     "apiAvailable": false,
     "released": "2009年创立",
     "lastUpdated": "2026-06-23",
-    "source": "grammarly.com / partnerstack.com"
+    "source": "grammarly.com / partnerstack.com",
+    "priceDetailEn": "免费版基础语法检查。Premium $12/月（AI改写/语气调整/查重/润色）。Business $15/月/人",
+    "chineseSupportEn": "★★☆☆☆ 英文为主，中文语法不支持",
+    "weaknessesEn": "主要面向英文写作；中文语法检查支持有限；免费版功能较基础",
+    "releasedEn": "2009年创立"
   },
   {
     "id": "jasper",
@@ -1450,7 +1606,11 @@
     "apiAvailable": false,
     "released": "2021年（原Jarvis）",
     "lastUpdated": "2026-06-23",
-    "source": "jasper.ai / partnerstack.com"
+    "source": "jasper.ai / partnerstack.com",
+    "priceDetailEn": "Creator $49/月（单人，AI写作+SEO+Copyscape查重）。Pro $69/月（多人协作+品牌声音+Campaigns）",
+    "chineseSupportEn": "★★☆☆☆ 英文为主，品牌声音不支持中文",
+    "weaknessesEn": "价格高（$49/月起）；中文写作能力不如国产工具；面向专业用户，学习曲线陡",
+    "releasedEn": "2021年（原Jarvis）"
   },
   {
     "id": "elevenlabs",
@@ -1486,7 +1646,11 @@
     "apiAvailable": false,
     "released": "2022年1月创立",
     "lastUpdated": "2026-06-23",
-    "source": "elevenlabs.io / partnerstack.com"
+    "source": "elevenlabs.io / partnerstack.com",
+    "priceDetailEn": "Free (10K chars/mo). Starter $5/mo (30K). Creator $22/mo (100K). Pro $99/mo (500K).",
+    "chineseSupportEn": "★★★☆☆ Chinese voice quality mixed; English best",
+    "weaknessesEn": "Chinese TTS quality behind English; expensive for heavy use; character limits per month",
+    "releasedEn": "Launched 2022, Turbo 2.5 2024"
   },
   {
     "id": "synthesia",
@@ -1522,7 +1686,11 @@
     "apiAvailable": false,
     "released": "2017年创立",
     "lastUpdated": "2026-06-23",
-    "source": "synthesia.io / partnerstack.com"
+    "source": "synthesia.io / partnerstack.com",
+    "priceDetailEn": "Starter $29/月（1位AI主播，10min视频/月）。Creator $67/月（3位主播，30min）。Enterprise按需定价",
+    "chineseSupportEn": "★★★☆☆ 有中文AI主播，但数量少于英文，普通话配音自然",
+    "weaknessesEn": "无免费版（仅Demo试用）；中文主播数量有限；内容定制度不如真人拍摄",
+    "releasedEn": "2017年创立"
   },
   {
     "id": "rytr",
@@ -1558,7 +1726,11 @@
     "apiAvailable": false,
     "released": "2021年4月创立",
     "lastUpdated": "2026-06-23",
-    "source": "rytr.me / partnerstack.com"
+    "source": "rytr.me / partnerstack.com",
+    "priceDetailEn": "免费版每月10k字符。Unlimited $9/月（无限生成+丰富模板+查重）。Premium $29/月（团队协作+专属账号管理）",
+    "chineseSupportEn": "★★☆☆☆ 英文为主，中文输出质量一般",
+    "weaknessesEn": "写作质量不如ChatGPT/Claude；无中文优化；免费版字数太少（10k）",
+    "releasedEn": "2021年4月创立"
   },
   {
     "id": "surferseo",
@@ -1594,6 +1766,10 @@
     "apiAvailable": false,
     "released": "2017年创立",
     "lastUpdated": "2026-06-23",
-    "source": "surferseo.com / partnerstack.com"
+    "source": "surferseo.com / partnerstack.com",
+    "priceDetailEn": "Essential $89/月（15篇文章/月，SERP分析+AI写作+内容评分）。Scale $129/月（30篇）。Enterprise按需",
+    "chineseSupportEn": "★★☆☆☆ 英文为主，中文关键词分析支持有限",
+    "weaknessesEn": "价格较高（$89/月起）；中文SEO支持有限；学习曲线陡峭",
+    "releasedEn": "2017年创立"
   }
 ]
