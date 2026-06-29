@@ -17,8 +17,8 @@ const i18n = {
     "nav.switch": { zh: "EN", en: "中文" },
 
     // ==================== 首页 Hero ====================
-    "hero.title": { zh: "AI工具不会挑？<span>三秒给你答案</span>", en: "Too many AI tools? <span>Pick in seconds</span>" },
-    "hero.subtitle": { zh: "35款产品横向对比，价格功能一目了然。<br>点场景 → 看推荐 → 直接跳转去用。", en: "35 tools compared side-by-side — pricing, features, all clear.<br>Pick a task → See top picks → Go use it." },
+    "hero.title": { zh: "帮你省掉搜评测的时间<span>44个AI工具已对比好</span>", en: "Save time searching reviews<span>44 AI tools compared</span>" },
+    "hero.subtitle": { zh: "价格、功能、中文体验一目了然，来源标注+更新日期。<br>不评测，不软文，就是个帮你省事的便利店。", en: "Pricing, features, Chinese support — all transparent with sources & dates.<br>No reviews, no ads — just a convenient store for your AI needs." },
     "hero.scenario.label": { zh: "👇 你想用AI做什么？", en: "👇 What do you want AI to do?" },
     "hero.scenario.writing": { zh: "写文章", en: "Writing" },
     "hero.scenario.writingHint": { zh: "文案、报告、论文", en: "Copy, reports, essays" },
@@ -36,7 +36,7 @@ const i18n = {
 
     // ==================== 首页品类卡片 ====================
     "cat.title": { zh: "🔍 按品类找工具", en: "🔍 Browse by category" },
-    "cat.subtitle": { zh: "43个模型覆盖6大品类，点击直接筛选", en: "43 models across 6 categories. Click to filter." },
+    "cat.subtitle": { zh: "44个模型覆盖6大品类，点击直接筛选", en: "44 models across 6 categories. Click to filter." },
     "cat.llm.name": { zh: "语言模型", en: "Chat & LLMs" },
     "cat.llm.desc": { zh: "12款 · ChatGPT、DeepSeek、Claude", en: "12 tools · ChatGPT, DeepSeek, Claude" },
     "cat.agent.name": { zh: "Agent 平台", en: "Agent Platforms" },
@@ -66,7 +66,7 @@ const i18n = {
 
     // ==================== 模型库页面 ====================
     "models.title": { zh: "📦 模型库", en: "📦 Model Library" },
-    "models.total": { zh: "共收录 <strong id=\"totalCount\">36</strong> 个产品，涵盖 AI 大模型、Agent 平台、图像/视频/代码模型。点击卡片跳转官网。信息最后更新：2026年6月26日", en: "<strong id=\"totalCount\">36</strong> tools listed — LLMs, Agent platforms, image/video/coding models. Click cards to visit official sites. Last updated: June 26, 2026" },
+    "models.total": { zh: "共收录 <strong id=\"totalCount\">44</strong> 个产品，涵盖 AI 大模型、Agent 平台、图像/视频/代码模型、AI辅助工具。点击卡片跳转官网。信息最后更新：2026年6月29日", en: "<strong id=\"totalCount\">44</strong> tools listed — LLMs, Agent platforms, image/video/coding models & AI tools. Click cards to visit official sites. Last updated: June 29, 2026" },
     "models.search": { zh: "搜模型（名称/功能/公司/标签）……", en: "Search models (name, feature, company, tag)..." },
     "models.filter.all": { zh: "全部", en: "All" },
     "models.filter.llm": { zh: "🗣 语言模型", en: "🗣 Chat & LLMs" },

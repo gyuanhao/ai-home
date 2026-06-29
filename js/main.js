@@ -1138,6 +1138,7 @@ function renderModelCards(category, query) {
     const grid = document.getElementById('modelGrid');
     if (!grid) return;
     const isEn = (typeof currentLang === 'function' ? currentLang() : 'zh') === 'en';
+    const detailIds = new Set(['deepseek','kimi','qwen','ernie','chatgpt','claude','gemini','bailian']);
 
     let filtered = models;
     if (category && category !== 'all') {
@@ -1157,7 +1158,9 @@ function renderModelCards(category, query) {
         return;
     }
 
-    grid.innerHTML = filtered.map(m => `
+    grid.innerHTML = filtered.map(m => {
+        const hasDetail = detailIds.has(m.id);
+        return `
         <div class="model-card" onclick="location.href='${m.website}'" title="点击访问官网">
             <div class="model-card-header">
                 <div>
@@ -1175,9 +1178,11 @@ function renderModelCards(category, query) {
             </div>
             <div class="model-footer">
                 <div class="model-price"><strong>${(isEn && m.priceLabelEn ? m.priceLabelEn : m.priceLabel).split(' / ')[0]}</strong>${(isEn && m.priceLabelEn ? m.priceLabelEn : m.priceLabel).includes('/') ? ' / ' + (isEn && m.priceLabelEn ? m.priceLabelEn : m.priceLabel).split(' / ').slice(1).join(' / ') : ''}</div>
+                ${hasDetail ? '<a href="models/' + m.id + '.html" class="model-detail-link" onclick="event.stopPropagation()" title="查看详细评测">' + (isEn ? 'Details →' : '查看详情 →') + '</a>' : ''}
             </div>
         </div>
-    `).join('');
+        `;
+    }).join('');
 }
 
 function renderCompareTable() {

@@ -366,6 +366,114 @@ a:hover { color: var(--primary-dark); }
 .rec-freemium { background: #fef3c7; color: #92400e; }
 .rec-arrow { font-size: 16px; color: var(--text-secondary); flex-shrink: 0; }
 
+/* === 热门模型卡片（首页） === */
+.hot-models {
+    max-width: var(--max-width);
+    margin: 40px auto 0;
+    padding: 0 24px;
+}
+.hot-models h2 {
+    font-size: 22px;
+    margin-bottom: 6px;
+    color: var(--text);
+}
+.hot-models .subtitle {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+}
+.hot-models-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px;
+}
+.hot-card {
+    display: block;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px 24px;
+    text-decoration: none;
+    color: var(--text);
+    transition: border-color 0.2s, box-shadow 0.2s;
+    box-shadow: var(--shadow);
+}
+.hot-card:hover {
+    border-color: var(--primary);
+    box-shadow: 0 8px 24px rgba(14,165,233,0.12);
+    color: var(--text);
+}
+.hot-card-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.hot-card-icon { font-size: 28px; flex-shrink: 0; }
+.hot-card-header div {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.hot-card-name {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--text);
+}
+.hot-card-company {
+    font-size: 12px;
+    color: var(--text-secondary);
+}
+.hot-card-badge {
+    font-size: 11px;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+.hot-card-desc {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 14px;
+}
+.hot-card-bottom {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+.hot-card-tag {
+    font-size: 11px;
+    background: var(--primary-light);
+    color: var(--primary-dark);
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-weight: 500;
+}
+.hot-card-link {
+    margin-left: auto;
+    font-size: 13px;
+    color: var(--primary);
+    font-weight: 600;
+    flex-shrink: 0;
+}
+.hot-view-all {
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--primary);
+    text-decoration: none;
+    padding: 8px 24px;
+    border: 1px solid var(--primary);
+    border-radius: var(--radius-sm);
+    transition: background 0.2s, color 0.2s;
+}
+.hot-view-all:hover {
+    background: var(--primary);
+    color: #fff;
+}
+
 /* === 品类入口卡 === */
 .category-section {
     max-width: var(--max-width);
@@ -539,6 +647,16 @@ a:hover { color: var(--primary-dark); }
     transition: background 0.2s;
 }
 .model-link:hover { background: var(--primary-dark); color: white; }
+.model-detail-link {
+    font-size: 12px;
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 4px 0;
+    flex-shrink: 0;
+    transition: color 0.2s;
+}
+.model-detail-link:hover { color: var(--primary-dark); text-decoration: underline; }
 
 /* === 对比表 === */
 .compare-section { margin-bottom: 40px; }
