@@ -16,135 +16,146 @@
     <meta name="twitter:title" content="Kimi怎么样？2026年最新价格、功能与评测 | AI家AI户">
     <meta name="twitter:description" content="Kimi — 月之暗面（中国）。超长上下文处理；中文写作语气细腻；深度研究功能；OK Computer Agent模式。价格为免费 / 会员 ¥49/月。查看Kimi与其他AI模型的横向对比，直达官网。">
     <meta name="google-site-verification" content="xt9f05QoKT1xpnVg94WeUsSOYPO88A3CT1j57ePzKZ8" />
-    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-TBTFSXQ6NF"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
+      window.dataLayer=window.dataLayer||[];
       function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-TBTFSXQ6NF');
+      gtag('js',new Date());
+      gtag('config','G-TBTFSXQ6NF');
     </script>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/detail.css">
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Kimi",
-      "applicationCategory": "AIApplication",
-      "operatingSystem": "Web",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "CNY"
-      },
-      "description": "超长上下文处理；中文写作语气细腻；深度研究功能；OK Computer Agent模式",
-      "url": "https://myaishome.com/models/kimi.html"
+      "@context":"https://schema.org",
+      "@type":"SoftwareApplication",
+      "name":"Kimi",
+      "applicationCategory":"AIApplication",
+      "operatingSystem":"Web",
+      "offers":{"@type":"Offer","price":"0","priceCurrency":"CNY"},
+      "description":"超长上下文处理；中文写作语气细腻；深度研究功能；OK Computer Agent模式",
+      "url":"https://myaishome.com/models/kimi.html"
     }
     </script>
 </head>
 <body>
 
+<!-- Model data for JS rendering -->
+<script id="model-data" type="application/json">{"id":"kimi","nameEn":"Kimi","priceLabelEn":"Free / ~$7/mo","tagsEn":["Long Text","Chinese Writing","Deep Research","PPT Gen","Agent"],"name":"Kimi","company":"月之暗面（中国）","category":"语言模型","pricing":"freemium","priceLabel":"免费 / 会员 ¥49/月","priceDetail":"免费版（Adagio，有限次数）; Andante ¥49/月; Moderato ¥99/月。K2.5 API 输入 ¥4/百万Token","website":"https://kimi.moonshot.cn","tags":["长文本","中文写作","深度研究","PPT生成","Agent"],"strengths":"超长上下文处理；中文写作语气细腻；深度研究功能；OK Computer Agent模式","strengthsEn":"Ultra-long context handling; nuanced Chinese writing tone; deep research capabilities; OK Computer Agent mode.","weaknesses":"免费版次数限制较严；高峰期需排队/打赏优先","bestFor":"长文写作、论文辅助、深度研究、PPT生成","bestForEn":"Long-form writing, thesis assistance, deep research, PPT generation","chineseSupport":"★★★★★ 中文长文写作最强者之一","contextWindow":"128K tokens","apiAvailable":true,"released":"2023年10月首发","lastUpdated":"2026-06-11","source":"kimi.moonshot.cn / apis.you"}</script>
+
 <nav class="nav">
     <div class="nav-inner">
         <a href="../index.html" class="nav-logo">🏠 AI家AI户</a>
+        <button class="nav-toggle" onclick="toggleMobileNav()" aria-label="打开菜单">☰</button>
+        <div class="nav-lang">
+            <a href="https://myaishome.com/models/kimi.html" onclick="switchLang();return false;" class="lang-btn" id="langSwitch">EN</a>
+        </div>
     </div>
 </nav>
 
+<!-- Mobile nav overlay + drawer -->
+<div class="nav-overlay" id="navOverlay" onclick="closeMobileNav()"></div>
+<div class="nav-drawer" id="navDrawer">
+    <div class="drawer-header">
+        <a href="../index.html" class="nav-logo" style="font-size:20px;">🏠 AI家AI户</a>
+        <button onclick="closeMobileNav()" style="background:none;border:none;font-size:24px;cursor:pointer;" aria-label="关闭菜单">✕</button>
+    </div>
+    <div class="drawer-links" id="drawerLinks"></div>
+</div>
+
+<!-- Mobile bottom tabs -->
+<nav class="mobile-tabs">
+    <a href="../index.html" class="mobile-tab">🏠<span>首页</span></a>
+    <a href="../models.html" class="mobile-tab">📦<span>模型库</span></a>
+    <a href="../compare.html" class="mobile-tab">⚖️<span>对比</span></a>
+    <a href="../skills.html" class="mobile-tab">🛠<span>技能包</span></a>
+</nav>
+
 <main class="detail-page">
-    <!-- Breadcrumb -->
     <div class="breadcrumb">
-        <a href="../index.html">首页</a> &rsaquo; 
-        <a href="../models.html">模型库</a> &rsaquo; 
-        <span>Kimi</span>
+        <a href="../index.html" data-i18n="detail.breadcrumb.home">首页</a> &rsaquo;
+        <a href="../models.html" data-i18n="detail.breadcrumb.models">模型库</a> &rsaquo;
+        <span id="breadcrumb-model">Kimi</span>
     </div>
 
-    <!-- Hero -->
     <section class="detail-hero">
         <div class="detail-hero-top">
-            <h1>Kimi 怎么样？</h1>
-            <span class="detail-badge badge-freemium">免费+付费</span>
+            <h1><span id="detail-name">Kimi</span><span data-i18n="detail.h1"> 怎么样？</span></h1>
+            <span id="detail-badge" class="detail-badge badge-freemium"></span>
         </div>
-        <p class="detail-subtitle">月之暗面（中国） · 语言模型 · 更新于 2026-06-11</p>
-        <p class="detail-summary">超长上下文处理；中文写作语气细腻；深度研究功能；OK Computer Agent模式</p>
+        <p class="detail-subtitle" id="detail-subtitle">月之暗面（中国） · 语言模型 · 更新于 2026-06-11</p>
+        <p class="detail-summary" id="detail-summary">超长上下文处理；中文写作语气细腻；深度研究功能；OK Computer Agent模式</p>
         <div class="detail-actions">
-            <a href="https://kimi.moonshot.cn" class="detail-cta" target="_blank" rel="nofollow noopener" onclick="gtag('event','click',{'event_category':'model_detail','event_label':'kimi_visit'})">
-                访问官网 →
-            </a>
-            <a href="../compare.html" class="detail-secondary">查看横评对比表</a>
+            <a href="https://kimi.moonshot.cn" id="detail-cta" class="detail-cta" target="_blank" rel="nofollow noopener" onclick="gtag('event','click',{'event_category':'model_detail','event_label':'kimi_visit'})">访问官网 →</a>
+            <a href="../compare.html" class="detail-secondary" data-i18n="rec.compare">查看完整对比表 →</a>
         </div>
     </section>
 
-    <!-- Core Params -->
     <section class="detail-section">
-        <h2>核心参数</h2>
+        <h2 data-i18n="detail.coreParams">核心参数</h2>
         <div class="param-grid">
             <div class="param-item">
-                <span class="param-label">价格</span>
-                <span class="param-value">免费 / 会员 ¥49/月</span>
+                <span class="param-label" data-i18n="detail.param.price">价格</span>
+                <span class="param-value" id="param-price">免费 / 会员 ¥49/月</span>
             </div>
             <div class="param-item">
-                <span class="param-label">定价详情</span>
-                <span class="param-value detail-price-detail">免费版（Adagio，有限次数）; Andante ¥49/月; Moderato ¥99/月。K2.5 API 输入 ¥4/百万Token</span>
+                <span class="param-label" data-i18n="detail.param.priceDetail">定价详情</span>
+                <span class="param-value detail-price-detail" id="param-priceDetail">免费版（Adagio，有限次数）; Andante ¥49/月; Moderato ¥99/月。K2.5 API 输入 ¥4/百万Token</span>
             </div>
             <div class="param-item">
-                <span class="param-label">中文支持</span>
-                <span class="param-value">★★★★★ 中文长文写作最强者之一</span>
+                <span class="param-label" data-i18n="detail.param.cnSupport">中文支持</span>
+                <span class="param-value" id="param-cn">★★★★★ 中文长文写作最强者之一</span>
             </div>
             <div class="param-item">
-                <span class="param-label">上下文窗口</span>
-                <span class="param-value">128K tokens</span>
+                <span class="param-label" data-i18n="detail.param.context">上下文窗口</span>
+                <span class="param-value" id="param-context">128K tokens</span>
             </div>
             <div class="param-item">
-                <span class="param-label">API</span>
-                <span class="param-value"><span class="detail-badge detail-badge-yes">✅ API可用</span></span>
+                <span class="param-label" data-i18n="detail.param.api">API</span>
+                <span class="param-value" id="param-api"></span>
             </div>
             <div class="param-item">
-                <span class="param-label">发布日期</span>
-                <span class="param-value">2023年10月首发</span>
+                <span class="param-label" data-i18n="detail.param.released">发布日期</span>
+                <span class="param-value" id="param-released">2023年10月首发</span>
             </div>
             <div class="param-item param-full">
-                <span class="param-label">擅长场景</span>
-                <span class="param-value">长文写作、论文辅助、深度研究、PPT生成</span>
+                <span class="param-label" data-i18n="detail.param.bestFor">擅长场景</span>
+                <span class="param-value" id="param-bestFor">长文写作、论文辅助、深度研究、PPT生成</span>
             </div>
         </div>
     </section>
 
-    <!-- Pros & Cons -->
     <section class="detail-section">
-        <h2>优势与不足</h2>
+        <h2 data-i18n="detail.prosCons">优势与不足</h2>
         <div class="pros-cons">
             <div class="pros">
-                <h3>✅ 优势</h3>
-                <p>超长上下文处理；中文写作语气细腻；深度研究功能；OK Computer Agent模式</p>
+                <h3 data-i18n="detail.pros">✅ 优势</h3>
+                <p id="pros-text">超长上下文处理；中文写作语气细腻；深度研究功能；OK Computer Agent模式</p>
             </div>
             <div class="cons">
-                <h3>⚠️ 不足</h3>
-                <p>免费版次数限制较严；高峰期需排队/打赏优先</p>
+                <h3 data-i18n="detail.cons">⚠️ 不足</h3>
+                <p id="cons-text">免费版次数限制较严；高峰期需排队/打赏优先</p>
             </div>
         </div>
     </section>
 
-    <!-- Tags -->
     <section class="detail-section">
-        <h2>功能标签</h2>
-        <div class="detail-tags"><span class="model-tag">长文本</span><span class="model-tag">中文写作</span><span class="model-tag">深度研究</span><span class="model-tag">PPT生成</span><span class="model-tag">Agent</span></div>
+        <h2 data-i18n="detail.tags">功能标签</h2>
+        <div class="detail-tags" id="detail-tags"></div>
     </section>
 
-    <!-- Data Source -->
     <section class="detail-section detail-source">
-        <p>📋 数据来源：kimi.moonshot.cn / apis.you</p>
-        <p>🕐 最后更新：2026-06-11</p>
+        <p id="detail-source">📋 数据来源：kimi.moonshot.cn / apis.you</p>
+        <p id="detail-date">🕐 最后更新：2026-06-11</p>
     </section>
 
-    <!-- Comparison -->
     <section class="detail-section">
-        <h2>对比其他模型</h2>
-        <div class="mini-card-grid">
+        <h2 data-i18n="detail.compare">对比其他模型</h2>
+        <div class="mini-card-grid" id="mini-card-grid">
             <a href="deepseek.html" class="mini-card">
     <div class="mini-card-header">
         <span class="mini-name">DeepSeek</span>
-        <span class="mini-badge badge-free">免费</span>
+        <span class="mini-badge badge-free"></span>
     </div>
     <div class="mini-price">完全免费</div>
     <div class="mini-best">预算敏感的开发者、学生、需要高频深度推理的场景</div>
@@ -153,7 +164,7 @@
 <a href="qwen.html" class="mini-card">
     <div class="mini-card-header">
         <span class="mini-name">通义千问 (Qwen)</span>
-        <span class="mini-badge badge-freemium">免费+付费</span>
+        <span class="mini-badge badge-freemium"></span>
     </div>
     <div class="mini-price">免费 / API按量付费</div>
     <div class="mini-best">阿里云用户、企业级应用、中文场景、对开源有需求的开发者</div>
@@ -162,7 +173,7 @@
 <a href="ernie.html" class="mini-card">
     <div class="mini-card-header">
         <span class="mini-name">文心一言 (ERNIE)</span>
-        <span class="mini-badge badge-freemium">免费+付费</span>
+        <span class="mini-badge badge-freemium"></span>
     </div>
     <div class="mini-price">免费 / 专业版 ¥49.9/月</div>
     <div class="mini-best">百度重度用户、中文知识问答、企业级应用、需要联网搜索的场景</div>
@@ -170,20 +181,22 @@
 </a>
         </div>
         <div style="text-align:center;margin-top:16px;">
-            <a href="../compare.html" class="detail-cta" style="display:inline-block;">查看全部36个模型横评 →</a>
+            <a href="../compare.html" class="detail-cta" style="display:inline-block;" data-i18n="detail.compareAll">查看全部横评 →</a>
         </div>
     </section>
 
-    <!-- Back to models -->
     <div class="detail-back">
-        <a href="../models.html">← 返回模型库</a>
+        <a href="../models.html" data-i18n="detail.back">← 返回模型库</a>
     </div>
 </main>
 
 <footer class="footer">
-    <p>AI家AI户 · 数据最后更新于 2026年6月26日 · 信息来源于各模型官方网站及公开资料 | <a href="../privacy.html">隐私政策</a></p>
-    <p style="margin-top:6px;">这不是权威解读，只是帮你省掉搜索时间。用前请核实官方最新信息。</p>
+    <p data-i18n="detail.footer">AI家AI户 · 数据最后更新于 2026年6月29日 · 信息来源于各模型官方网站及公开资料</p>
+    <p style="margin-top:6px;" data-i18n="detail.footer2">这不是权威解读，只是帮你省掉搜索时间。用前请核实官方最新信息。</p>
 </footer>
 
+<script src="../js/i18n.js"></script>
+<script src="../js/mobile-nav.js"></script>
+<script src="../js/detail-page.js"></script>
 </body>
 </html>

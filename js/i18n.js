@@ -64,6 +64,24 @@ const i18n = {
     "rec.general": { zh: "🤖 通用推荐", en: "🤖 Top All-Rounders" },
     "rec.compare": { zh: "查看完整对比表 →", en: "See full comparison →" },
 
+    // ==================== 首页热门模型 ====================
+    "hot.title": { zh: "🔥 大家都在看", en: "🔥 Most Popular" },
+    "hot.subtitle": { zh: "最热门的3个模型，点卡片直达详情", en: "Top 3 models — tap any card for details" },
+    "hot.detail": { zh: "查看详情 →", en: "View details →" },
+    "hot.viewAll": { zh: "查看全部44个模型 →", en: "View all 44 models →" },
+    "hot.ds.name": { zh: "DeepSeek", en: "DeepSeek" },
+    "hot.ds.company": { zh: "深度求索", en: "DeepSeek AI" },
+    "hot.ds.desc": { zh: "完全免费无限制，推理能力极强。中文原生支持，V4.1即将支持多模态", en: "Completely free, no limits. Top reasoning, native Chinese support. V4.1 multimodal coming soon" },
+    "hot.ds.tags": { zh: "编程 · 推理 · 中文原生", en: "Coding · Reasoning · Native Chinese" },
+    "hot.kimi.name": { zh: "Kimi", en: "Kimi" },
+    "hot.kimi.company": { zh: "月之暗面", en: "Moonshot AI" },
+    "hot.kimi.desc": { zh: "中文写作最细腻，长文案生成不跑题。深度研究+PPT生成，打工人神器", en: "Best Chinese writing quality, stays on-topic for long copy. Deep research + PPT generation — office worker's secret weapon" },
+    "hot.kimi.tags": { zh: "写作 · PPT · 深度研究", en: "Writing · PPT · Deep Research" },
+    "hot.qwen.name": { zh: "通义千问", en: "Tongyi Qianwen" },
+    "hot.qwen.company": { zh: "阿里巴巴", en: "Alibaba Cloud" },
+    "hot.qwen.desc": { zh: "阿里云生态深度集成，企业级首选。百炼平台新用户送7000万免费Tokens", en: "Deep Alibaba ecosystem integration, enterprise-grade. Bailian platform offers 70M free tokens for new users" },
+    "hot.qwen.tags": { zh: "企业级 · 开源 · 阿里云", en: "Enterprise · Open Source · Alibaba Cloud" },
+
     // ==================== 模型库页面 ====================
     "models.title": { zh: "📦 模型库", en: "📦 Model Library" },
     "models.total": { zh: "共收录 <strong id=\"totalCount\">44</strong> 个产品，涵盖 AI 大模型、Agent 平台、图像/视频/代码模型、AI辅助工具。点击卡片跳转官网。信息最后更新：2026年6月29日", en: "<strong id=\"totalCount\">44</strong> tools listed — LLMs, Agent platforms, image/video/coding models & AI tools. Click cards to visit official sites. Last updated: June 29, 2026" },
@@ -292,6 +310,30 @@ const i18n = {
     "card.free": { zh: "免费", en: "Free" },
     "card.freemium": { zh: "免费+付费", en: "Free+Paid" },
     "card.paid": { zh: "付费", en: "Paid" },
+
+    // ==================== 模型详情页 ====================
+    "detail.h1": { zh: " 怎么样？", en: " Review" },
+    "detail.breadcrumb.home": { zh: "首页", en: "Home" },
+    "detail.breadcrumb.models": { zh: "模型库", en: "Models" },
+    "detail.coreParams": { zh: "核心参数", en: "Specs" },
+    "detail.param.price": { zh: "价格", en: "Price" },
+    "detail.param.priceDetail": { zh: "定价详情", en: "Pricing Details" },
+    "detail.param.cnSupport": { zh: "中文支持", en: "Chinese Support" },
+    "detail.param.context": { zh: "上下文窗口", en: "Context Window" },
+    "detail.param.api": { zh: "API", en: "API" },
+    "detail.param.released": { zh: "发布日期", en: "Released" },
+    "detail.param.bestFor": { zh: "擅长场景", en: "Best For" },
+    "detail.prosCons": { zh: "优势与不足", en: "Pros & Cons" },
+    "detail.pros": { zh: "✅ 优势", en: "✅ Pros" },
+    "detail.cons": { zh: "⚠️ 不足", en: "⚠️ Cons" },
+    "detail.tags": { zh: "功能标签", en: "Tags" },
+    "detail.compare": { zh: "对比其他模型", en: "Compare with Others" },
+    "detail.compareAll": { zh: "查看全部横评 →", en: "See all comparisons →" },
+    "detail.back": { zh: "← 返回模型库", en: "← Back to Models" },
+    "detail.footer": { zh: "AI家AI户 · 数据最后更新于 2026年6月29日 · 信息来源于各模型官方网站及公开资料", en: "AI Home · Last updated June 29, 2026 · Data sourced from official websites & public docs" },
+    "detail.footer2": { zh: "这不是权威解读，只是帮你省掉搜索时间。用前请核实官方最新信息。", en: "Not an authority — just saving you search time. Verify with official sources before using." },
+
+    // ==================== 尾部 ====================
 
     // ==================== 技能包页 ====================
     "skills.title": { zh: "🧩 AI 技能包", en: "🧩 AI Skills Hub" },

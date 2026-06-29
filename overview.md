@@ -1,35 +1,47 @@
-# 百炼平台集成 + 通义链接替换 — 变更总结
+# AI之家 增长方案执行报告
 
-## 完成时间
-2026年6月26日
+**日期**：2026-06-29 | **推送**：commit 7b43147 | **变更**：24文件 +4340/-11行
 
-## 变更概览
+## 当前流量状态（GA数据）
 
-### A: 通义链接替换为百炼平台
-- `js/main.js` 通义千问 `website` — 从 `t.aliyun.com/U/DAKCTy` → `aliyun.com/product/bailian?userCode=zpk45rgx`
-- `js/main.js` 通义灵码 `website` — → `tongyi.aliyun.com/lingma?userCode=zpk45rgx`
-- `js/main.js` 通义千问 `priceDetail` — 更新为百炼平台定价信息（7000万Tokens + 限时5折）
-- `index.html` 首页推荐卡片 — 更新链接和推荐理由
-- `hero-demo.html` Demo页推荐卡片 — 同步更新
+| 指标 | 数值 | 解读 |
+|------|------|------|
+| 总新用户(30天) | 452 | 新站起步阶段 |
+| 活跃用户 | 457 | 几乎全是新访客，回访极少 |
+| 流量来源 | Organic Social 62% | 1篇小红书已生效 |
+| Organic Search | 0.16%（仅1人） | Google/Bing收录尚未生效 |
+| 日均UV | ~50（回落中） | 6.24小高峰~200后自然回落 |
+| 模型库停留 | 34秒 | 对比页面有粘性 |
+| 首页停留 | 19秒 | 太短——已优化 |
 
-### B: Agent平台新增百炼卡片
-- `js/main.js` — 在 Agent平台分类新增"百炼平台"卡片（阿里云出品）
-  - 关键卖点：100+模型接入、MCP托管、Agent搭建、可视化工作流、新用户7000万免费Tokens
-- `compare.html` — Agent平台横向对比表新增百炼列（开发商/定位/免费版/入门价/自托管/中文/垂直/适合谁）
-- `js/i18n.js` — 全局数量更新：Agent 6→7，总数 35→36（models页）、43→44（about/compare页）
-- `about.html` — 计数器 fallback 文本同步更新
-- 全站日期统一从 2026-06-25 更新为 2026-06-26
+## 今日执行成果
 
-## 修改文件清单
-| 文件 | 变更 |
-|------|------|
-| `js/main.js` | +31/-3（百炼卡片 + 2处链接替换 + 价格文案） |
-| `js/i18n.js` | +32/-20（16处日期更新 + 3处数量更新） |
-| `compare.html` | +13/-2（百炼对比列 + meta + 文案） |
-| `about.html` | +4/-4（计数器 + 日期） |
-| `index.html` | +4/-2（推荐卡 + footer日期） |
-| `hero-demo.html` | +1/-1（推荐卡链接） |
+### P0 — 社交内容（4个文件）
+- `prompts/xhs-weekly-report.md` — AI写周报场景
+- `prompts/xhs-ppt.md` — AI做PPT场景  
+- `prompts/jike-prd.md` — 即刻平台PRD测评
+- `prompts/zhihu-answers.md` — 3篇知乎长尾回答
 
-## 待办
-- 考虑后续添加 Wan2.7-Image / Wan2.7-Video 到图像/视频模型分类
-- 下次批量更新时统一检查全站日期
+### P1 — SEO模型详情页（8页）
+- `/models/deepseek.html` `/kimi.html` `/qwen.html` `/ernie.html`
+- `/models/chatgpt.html` `/claude.html` `/gemini.html` `/bailian.html`
+- 含 Schema.org `SoftwareApplication` 结构化数据
+- 生成工具：`scripts/extract_models.js` + `scripts/generate_model_pages.py`
+- 样式：`css/detail.css`
+
+### P2 — 首页优化
+- Hero文案改为价值主张："省掉搜评测的时间"
+- 首屏「大家都在看」3个热门模型卡片
+- i18n全站同步更新
+
+### 配套改动
+- sitemap.xml 新增 models/ 子目录URL
+- models.html 卡片底部加「查看详情」链接（热门8个）
+- 统计数字全部更新：36→44模型，日期→6/29
+
+## 下一步
+
+1. **立即**：发布小红书/即刻/知乎文案（用户手动）
+2. **本周**：检查 Google Search Console 收录状态
+3. **监测**：等新页面被收录后看长尾关键词流量
+4. **后续**：如果 Social 渠道继续稳定贡献，可建小红书/知乎自动发布 pipeline
