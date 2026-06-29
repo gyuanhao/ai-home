@@ -215,6 +215,7 @@
 
 <nav class="nav">
     <div class="nav-inner">
+        <button class="nav-toggle" onclick="toggleMobileNav()" aria-label="打开菜单">☰</button>
         <a href="hero-demo.html" class="nav-logo">🏠 AI家AI户</a>
         <ul class="nav-links">
             <li><a href="hero-demo.html" class="active">首页</a></li>
@@ -225,6 +226,15 @@
         </ul>
     </div>
 </nav>
+<!-- 移动端汉堡菜单遮罩+抽屉 -->
+<div class="nav-overlay" id="navOverlay" onclick="closeMobileNav()"></div>
+<div class="nav-drawer" id="navDrawer">
+    <div class="drawer-header">
+        <span class="drawer-logo">🏠 AI家AI户</span>
+        <button class="drawer-close" onclick="closeMobileNav()" aria-label="关闭菜单">✕</button>
+    </div>
+    <ul class="drawer-links"></ul>
+</div>
 
 <section class="hero">
     <h1>AI工具不会挑？<span>三秒给你答案</span></h1>
@@ -378,6 +388,24 @@ function showRec(scene) {
     panel.classList.add('show');
 }
 </script>
+
+<script src="js/mobile-nav.js"></script>
+
+<!-- 移动端底部固定Tab栏 -->
+<nav class="mobile-tabs" id="mobileTabs">
+    <a href="index.html" class="mobile-tab active">
+        <span class="tab-icon">🏠</span>首页
+    </a>
+    <a href="models.html" class="mobile-tab">
+        <span class="tab-icon">📦</span>模型库
+    </a>
+    <a href="compare.html" class="mobile-tab">
+        <span class="tab-icon">⚖️</span>对比
+    </a>
+    <a href="skills.html" class="mobile-tab">
+        <span class="tab-icon">🧰</span>技能包
+    </a>
+</nav>
 
 </body>
 </html>

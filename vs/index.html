@@ -109,6 +109,7 @@
 
 <nav class="nav">
     <div class="nav-inner">
+        <button class="nav-toggle" onclick="toggleMobileNav()" aria-label="打开菜单">☰</button>
         <a href="../index.html" class="nav-logo">🏠 AI家AI户</a>
         <ul class="nav-links">
             <li><a href="../index.html" data-i18n="nav.home">首页</a></li>
@@ -121,10 +122,19 @@
             <li><a href="../skills.html" data-i18n="nav.skills">技能包</a></li>
             <li><a href="../about.html" data-i18n="nav.about">关于</a></li>
             <li><a href="../privacy.html" data-i18n="nav.privacy">隐私政策</a></li>
-            <li style="margin-left:auto;"><button id="langSwitch" onclick="switchLang()" style="background:var(--primary-light);color:var(--primary-dark);border:none;padding:4px 12px;border-radius:50px;cursor:pointer;font-size:13px;font-weight:600;font-family:inherit;">EN</button></li>
+            <li style="margin-left:auto;"><button id="langSwitch" onclick="switchLang()" class="nav-lang">EN</button></li>
         </ul>
     </div>
 </nav>
+<!-- 移动端汉堡菜单遮罩+抽屉 -->
+<div class="nav-overlay" id="navOverlay" onclick="closeMobileNav()"></div>
+<div class="nav-drawer" id="navDrawer">
+    <div class="drawer-header">
+        <span class="drawer-logo">🏠 AI家AI户</span>
+        <button class="drawer-close" onclick="closeMobileNav()" aria-label="关闭菜单">✕</button>
+    </div>
+    <ul class="drawer-links"></ul>
+</div>
 
 <div class="container">
     <h1 style="font-size:28px; margin: 28px 0 4px;" data-i18n="vs.title">🔥 热门模型一对一对比</h1>
@@ -210,5 +220,23 @@
 
 <script src="../js/i18n.js"></script>
 <script src="../js/cookie-consent.js"></script>
+<script src="../js/mobile-nav.js"></script>
+
+<!-- 移动端底部固定Tab栏 -->
+<nav class="mobile-tabs" id="mobileTabs">
+    <a href="../index.html" class="mobile-tab active">
+        <span class="tab-icon">🏠</span>首页
+    </a>
+    <a href="../models.html" class="mobile-tab">
+        <span class="tab-icon">📦</span>模型库
+    </a>
+    <a href="../compare.html" class="mobile-tab">
+        <span class="tab-icon">⚖️</span>对比
+    </a>
+    <a href="../skills.html" class="mobile-tab">
+        <span class="tab-icon">🧰</span>技能包
+    </a>
+</nav>
+
 </body>
 </html>
