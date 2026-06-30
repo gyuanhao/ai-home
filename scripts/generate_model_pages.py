@@ -7,18 +7,10 @@ PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MODELS_DIR = os.path.join(PROJECT_DIR, 'models')
 JSON_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'models.json')
 
-TARGET_IDS = ['deepseek', 'kimi', 'qwen', 'ernie', 'chatgpt', 'claude', 'gemini', 'bailian']
-
-COMPARISON_MAP = {
-    'deepseek': ['chatgpt', 'claude', 'kimi'],
-    'kimi': ['deepseek', 'qwen', 'ernie'],
-    'qwen': ['deepseek', 'kimi', 'chatgpt'],
-    'ernie': ['kimi', 'qwen', 'chatgpt'],
-    'chatgpt': ['claude', 'deepseek', 'gemini'],
-    'claude': ['chatgpt', 'deepseek', 'kimi'],
-    'gemini': ['chatgpt', 'deepseek', 'claude'],
-    'bailian': ['qwen', 'coze', 'dify'],
-}
+# Auto-build comparison: pick up to 3 other models from same category
+def get_comparisons(model, all_models):
+    same_cat = [m for m in all_models if m['category'] == model['category'] and m['id'] != model['id']]
+    return [m['id'] for m in same_cat[:3]]
 
 def tag_class(pricing):
     if pricing == 'free': return 'badge-free'
@@ -42,7 +34,7 @@ def mini_card(m):
     <div class="mini-link">查看详情 →</div>
 </a>'''
 
-def generate_page(m, all_models):
+def generate_page(m, all_models, model_map):
     model_id = m['id']
     model_name = m['name']
     category = m.get('category', '')
@@ -52,8 +44,8 @@ def generate_page(m, all_models):
     seo_desc = f"{model_name} — {company}。{m.get('strengths','')[:120]}。价格为{m.get('priceLabel','')}。查看{model_name}与其他AI模型的横向对比，直达官网。"
     seo_kw = f"{model_name},{model_name}价格,{model_name}评测,AI模型对比,AI工具推荐"
 
-    cmp_ids = COMPARISON_MAP.get(model_id, [])
-    cmp_models = [m2 for m2 in all_models if m2['id'] in cmp_ids]
+    cmp_ids = get_comparisons(m, all_models)
+    cmp_models = [model_map[cid] for cid in cmp_ids if cid in model_map]
     cmp_html = '\n'.join(mini_card(cm) for cm in cmp_models) if cmp_models else ''
 
     # Model data as compact JSON
@@ -248,11 +240,12 @@ def main():
     os.makedirs(MODELS_DIR, exist_ok=True)
 
     generated = []
-    for mid in TARGET_IDS:
+    for m in all_models:
+        mid = m['id']
         if mid not in model_map:
             print(f'WARN: Model {mid} not found, skipping')
             continue
-        html = generate_page(model_map[mid], all_models)
+        html = generate_page(model_map[mid], all_models, model_map)
         with open(os.path.join(MODELS_DIR, f'{mid}.html'), 'w', encoding='utf-8') as f:
             f.write(html)
         generated.append(mid)
