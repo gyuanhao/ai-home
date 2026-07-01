@@ -337,8 +337,8 @@ const i18n = {
 
     // ==================== 技能包页 ====================
     "skills.title": { zh: "🧩 AI 技能包", en: "🧩 AI Skills Hub" },
-    "skills.subtitle": { zh: "收录 <strong id=\"totalCount\">0</strong> 个精选 Agent 技能，来自两大技能仓库。", en: "<strong id=\"totalCount\">0</strong> curated agent skills from two major repositories." },
-    "skills.updated": { zh: "数据更新: 2026-06-25", en: "Updated: 2026-06-25" },
+    "skills.subtitle": { zh: "收录 <strong id=\"totalCount\">0</strong> 个精选 Agent 技能，来自 50+ 官方团队和社区。", en: "<strong id=\"totalCount\">0</strong> curated agent skills from 50+ official teams and the community." },
+    "skills.updated": { zh: "数据更新: 2026-07-01", en: "Updated: 2026-07-01" },
     "skills.noResults": { zh: "没有找到匹配的技能，试试其他关键词", en: "No matching skills found. Try different keywords." },
     "skills.footer1": { zh: "数据来源：<a href=\"https://github.com/VoltAgent/awesome-agent-skills\" target=\"_blank\" rel=\"noopener\">VoltAgent/awesome-agent-skills</a> 和 <a href=\"https://github.com/anbeime/skill\" target=\"_blank\" rel=\"noopener\">anbeime/skill</a>，按 Apache 2.0 / MIT 许可证开源。本站仅做聚合索引，具体使用规则请查阅各技能仓库。", en: "Data from <a href=\"https://github.com/VoltAgent/awesome-agent-skills\" target=\"_blank\" rel=\"noopener\">VoltAgent/awesome-agent-skills</a> and <a href=\"https://github.com/anbeime/skill\" target=\"_blank\" rel=\"noopener\">anbeime/skill</a>, under Apache 2.0 / MIT license. This site is an index only — check individual repos for usage terms." },
     "skills.footer2": { zh: "💡 技能(Skills)是AI Agent的\"插件\"，安装后可以赋予AI阅读PDF、生成PPT、调用API等专项能力。点击卡片跳转GitHub查看安装方法。", en: "💡 Skills are AI Agent \"plugins\" — install them to give AI abilities like reading PDFs, creating PPT, calling APIs, etc. Click a card to see install instructions on GitHub." },
