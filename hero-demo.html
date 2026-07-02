@@ -210,13 +210,18 @@
             .category-grid { grid-template-columns: repeat(2, 1fr); }
         }
     </style>
+
+    <link rel="stylesheet" href="css/icons.css">
 </head>
 <body>
+<!-- SVG Icon Sprite -->
+<object data="img/icons.svg" type="image/svg+xml" style="display:none" aria-hidden="true"></object>
+
 
 <nav class="nav">
     <div class="nav-inner">
-        <button class="nav-toggle" onclick="toggleMobileNav()" aria-label="打开菜单">☰</button>
-        <a href="hero-demo.html" class="nav-logo">🏠 AI家AI户</a>
+        <button class="nav-toggle" onclick="toggleMobileNav()" aria-label="打开菜单"><span class="icon icon-lg "><svg width="24" height="24" class="icon-menu "><use href="img/icons.svg#icon-menu"/></svg></span></button>
+        <a href="hero-demo.html" class="nav-logo"><svg width="24" height="24" class="icon-logo"><use href="img/icons.svg#icon-logo"/></svg> AI家AI户</a>
         <ul class="nav-links">
             <li><a href="hero-demo.html" class="active">首页</a></li>
             <li><a href="models.html">模型库</a></li>
@@ -230,8 +235,8 @@
 <div class="nav-overlay" id="navOverlay" onclick="closeMobileNav()"></div>
 <div class="nav-drawer" id="navDrawer">
     <div class="drawer-header">
-        <span class="drawer-logo">🏠 AI家AI户</span>
-        <button class="drawer-close" onclick="closeMobileNav()" aria-label="关闭菜单">✕</button>
+        <span class="drawer-logo"><span class="icon icon-lg icon-primary"><svg width="24" height="24" class="icon-logo "><use href="img/icons.svg#icon-logo"/></svg></span> AI家AI户</span>
+        <button class="drawer-close" onclick="closeMobileNav()" aria-label="关闭菜单"><span class="icon icon-lg "><svg width="24" height="24" class="icon-close "><use href="img/icons.svg#icon-close"/></svg></span></button>
     </div>
     <ul class="drawer-links"></ul>
 </div>
@@ -242,31 +247,31 @@
 
     <!-- 方案B：场景化快速选型 -->
     <div class="scenario-picker">
-        <div class="scenario-label">👇 你想用AI做什么？</div>
+        <div class="scenario-label"><svg width="18" height="18" class="icon-arrow-down icon-primary"><use href="img/icons.svg#icon-arrow-down"/></svg> 你想用AI做什么？</div>
         <div class="scenario-row">
             <button class="scenario-btn" onclick="showRec('writing')">
-                <span class="scenario-icon">✍️</span>
+                <span class="scenario-icon"><span class="icon icon-lg "><svg width="24" height="24" class="icon-write "><use href="img/icons.svg#icon-write"/></svg></span></span>
                 <span class="scenario-name">写文章</span>
                 <span class="scenario-hint">文案、报告、论文</span>
             </button>
             <button class="scenario-btn" onclick="showRec('coding')">
-                <span class="scenario-icon">💻</span>
+                <span class="scenario-icon"><span class="icon icon-lg "><svg width="24" height="24" class="icon-code "><use href="img/icons.svg#icon-code"/></svg></span></span>
                 <span class="scenario-name">写代码</span>
                 <span class="scenario-hint">编程、Bug修复</span>
                 <span class="scenario-badge">热门</span>
             </button>
             <button class="scenario-btn" onclick="showRec('image')">
-                <span class="scenario-icon">🎨</span>
+                <span class="scenario-icon"><span class="icon icon-lg "><svg width="24" height="24" class="icon-image "><use href="img/icons.svg#icon-image"/></svg></span></span>
                 <span class="scenario-name">画图</span>
                 <span class="scenario-hint">插画、海报、LOGO</span>
             </button>
             <button class="scenario-btn" onclick="showRec('video')">
-                <span class="scenario-icon">🎬</span>
+                <span class="scenario-icon"><span class="icon icon-lg "><svg width="24" height="24" class="icon-video "><use href="img/icons.svg#icon-video"/></svg></span></span>
                 <span class="scenario-name">做视频</span>
                 <span class="scenario-hint">短视频、特效</span>
             </button>
             <button class="scenario-btn" onclick="showRec('general')">
-                <span class="scenario-icon">🤖</span>
+                <span class="scenario-icon"><span class="icon icon-lg "><svg width="24" height="24" class="icon-chat "><use href="img/icons.svg#icon-chat"/></svg></span></span>
                 <span class="scenario-name">啥都问</span>
                 <span class="scenario-hint">问答、学习、闲聊</span>
             </button>
@@ -279,35 +284,35 @@
 
 <!-- 优化后的5个品类入口 -->
 <div class="category-section">
-    <h2>🔍 按品类找工具</h2>
+    <h2 style="display:flex;align-items:center;gap:8px;"><svg width="24" height="24" class="icon-search icon-primary"><use href="img/icons.svg#icon-search"/></svg>按品类找工具</h2>
     <p class="subtitle">或者直接按类别浏览，32个模型覆盖5大品类</p>
     <div class="category-grid">
         <a href="models.html?cat=语言模型" class="category-card">
-            <span class="cat-icon">💬</span>
+            <span class="cat-icon"><span class="icon icon-xl icon-primary"><svg width="32" height="32" class="icon-language "><use href="img/icons.svg#icon-language"/></svg></span></span>
             <span class="cat-name">语言模型</span>
             <span class="cat-count">12款 · ChatGPT、DeepSeek、Claude</span>
             <span class="cat-hint">找聊天、写作、推理工具 →</span>
         </a>
         <a href="models.html?cat=Agent平台" class="category-card">
-            <span class="cat-icon">🤖</span>
+            <span class="cat-icon"><span class="icon icon-xl icon-primary"><svg width="32" height="32" class="icon-agent "><use href="img/icons.svg#icon-agent"/></svg></span></span>
             <span class="cat-name">Agent 平台</span>
             <span class="cat-count">6款 · Coze、Dify、Manus</span>
             <span class="cat-hint">找AI助手、自动化工具 →</span>
         </a>
         <a href="models.html?cat=图像模型" class="category-card">
-            <span class="cat-icon">🎨</span>
+            <span class="cat-icon"><span class="icon icon-xl icon-primary"><svg width="32" height="32" class="icon-image "><use href="img/icons.svg#icon-image"/></svg></span></span>
             <span class="cat-name">图像模型</span>
             <span class="cat-count">5款 · Midjourney、DALL-E、即梦</span>
             <span class="cat-hint">找画图、设计工具 →</span>
         </a>
         <a href="models.html?cat=视频模型" class="category-card">
-            <span class="cat-icon">🎬</span>
+            <span class="cat-icon"><span class="icon icon-xl icon-primary"><svg width="32" height="32" class="icon-video "><use href="img/icons.svg#icon-video"/></svg></span></span>
             <span class="cat-name">视频模型</span>
             <span class="cat-count">5款 · Sora、可灵、Runway</span>
             <span class="cat-hint">找视频生成、特效工具 →</span>
         </a>
         <a href="models.html?cat=代码模型" class="category-card">
-            <span class="cat-icon">💻</span>
+            <span class="cat-icon"><span class="icon icon-xl icon-primary"><svg width="32" height="32" class="icon-code "><use href="img/icons.svg#icon-code"/></svg></span></span>
             <span class="cat-name">代码模型</span>
             <span class="cat-count">5款 · Cursor、Copilot、通义灵码</span>
             <span class="cat-hint">找编程助手 →</span>
@@ -319,43 +324,43 @@
 // 场景推荐数据
 const recommendations = {
     writing: {
-        title: '✍️ 写作推荐',
+        title: '<svg width="18" height="18" class="icon-write"><use href="img/icons.svg#icon-write"/></svg> 写作推荐',
         items: [
-            { name: 'Kimi', icon: '📝', reason: '中文写作最细腻，长文案可以一次生成几千字不跑题', price: '免费+¥49/月', priceClass: 'rec-freemium', url: 'https://kimi.moonshot.cn' },
-            { name: 'Claude', icon: '🧠', reason: '长文档分析 + 写作能力强，学术论文和报告首选', price: '免费+$20/月', priceClass: 'rec-freemium', url: 'https://claude.ai' },
-            { name: 'ChatGPT', icon: '🤖', reason: '综合写作能力优秀，中文流畅，创意脑暴好用', price: '免费+$20/月', priceClass: 'rec-freemium', url: 'https://chat.openai.com' },
+            { name: 'Kimi', icon: '<svg width="18" height="18" class="icon-kimi"><use href="img/icons.svg#icon-kimi"/></svg>', reason: '中文写作最细腻，长文案可以一次生成几千字不跑题', price: '免费+¥49/月', priceClass: 'rec-freemium', url: 'https://kimi.moonshot.cn' },
+            { name: 'Claude', icon: '<svg width="18" height="18" class="icon-claude"><use href="img/icons.svg#icon-claude"/></svg>', reason: '长文档分析 + 写作能力强，学术论文和报告首选', price: '免费+$20/月', priceClass: 'rec-freemium', url: 'https://claude.ai' },
+            { name: 'ChatGPT', icon: '<svg width="18" height="18" class="icon-agent"><use href="img/icons.svg#icon-agent"/></svg>', reason: '综合写作能力优秀，中文流畅，创意脑暴好用', price: '免费+$20/月', priceClass: 'rec-freemium', url: 'https://chat.openai.com' },
         ]
     },
     coding: {
-        title: '💻 编程推荐',
+        title: '<svg width="18" height="18" class="icon-code"><use href="img/icons.svg#icon-code"/></svg> 编程推荐',
         items: [
-            { name: 'Cursor', icon: '⌨️', reason: '最强AI编辑器，Agent模式可跨文件改代码，写项目首选', price: '免费+$20/月', priceClass: 'rec-freemium', url: 'https://cursor.com' },
-            { name: 'Claude', icon: '🧠', reason: 'Opus 4.8 编程排行榜第一，复杂算法和架构设计极强', price: '免费+$20/月', priceClass: 'rec-freemium', url: 'https://claude.ai' },
-            { name: 'DeepSeek', icon: '🐋', reason: '完全免费，推理和数学能力强，预算敏感的首选', price: '免费', priceClass: 'rec-free', url: 'https://chat.deepseek.com' },
+            { name: 'Cursor', icon: '<svg width="18" height="18" class="icon-cursor"><use href="img/icons.svg#icon-cursor"/></svg>', reason: '最强AI编辑器，Agent模式可跨文件改代码，写项目首选', price: '免费+$20/月', priceClass: 'rec-freemium', url: 'https://cursor.com' },
+            { name: 'Claude', icon: '<svg width="18" height="18" class="icon-claude"><use href="img/icons.svg#icon-claude"/></svg>', reason: 'Opus 4.8 编程排行榜第一，复杂算法和架构设计极强', price: '免费+$20/月', priceClass: 'rec-freemium', url: 'https://claude.ai' },
+            { name: 'DeepSeek', icon: '<svg width="18" height="18" class="icon-deepseek"><use href="img/icons.svg#icon-deepseek"/></svg>', reason: '完全免费，推理和数学能力强，预算敏感的首选', price: '免费', priceClass: 'rec-free', url: 'https://chat.deepseek.com' },
         ]
     },
     image: {
-        title: '🎨 画图推荐',
+        title: '<svg width="18" height="18" class="icon-draw"><use href="img/icons.svg#icon-draw"/></svg> 画图推荐',
         items: [
-            { name: 'Midjourney', icon: '🖼️', reason: '画质天花板，V7艺术风格极强，Niji7动漫引擎专业', price: '$10/月起', priceClass: 'rec-freemium', url: 'https://www.midjourney.com' },
-            { name: '即梦 Jimeng', icon: '🎨', reason: '中文Prompt直接说人话，免费额度大方，零门槛上手', price: '免费', priceClass: 'rec-free', url: 'https://jimeng.jianying.com' },
-            { name: 'DALL-E', icon: '🤖', reason: 'ChatGPT内置，自然语言理解最好，口语化描述就出图', price: '免费+$20/月', priceClass: 'rec-freemium', url: 'https://chat.openai.com' },
+            { name: 'Midjourney', icon: '<svg width="18" height="18" class="icon-image"><use href="img/icons.svg#icon-image"/></svg>', reason: '画质天花板，V7艺术风格极强，Niji7动漫引擎专业', price: '$10/月起', priceClass: 'rec-freemium', url: 'https://www.midjourney.com' },
+            { name: '即梦 Jimeng', icon: '<svg width="18" height="18" class="icon-draw"><use href="img/icons.svg#icon-draw"/></svg>', reason: '中文Prompt直接说人话，免费额度大方，零门槛上手', price: '免费', priceClass: 'rec-free', url: 'https://jimeng.jianying.com' },
+            { name: 'DALL-E', icon: '<svg width="18" height="18" class="icon-agent"><use href="img/icons.svg#icon-agent"/></svg>', reason: 'ChatGPT内置，自然语言理解最好，口语化描述就出图', price: '免费+$20/月', priceClass: 'rec-freemium', url: 'https://chat.openai.com' },
         ]
     },
     video: {
-        title: '🎬 视频推荐',
+        title: '<svg width="18" height="18" class="icon-video"><use href="img/icons.svg#icon-video"/></svg> 视频推荐',
         items: [
-            { name: '可灵 Kling', icon: '🎬', reason: '中文Prompt直接生成，免费额度大方，新手最友好', price: '免费+¥39/月', priceClass: 'rec-freemium', url: 'https://kling.kuaishou.com' },
-            { name: 'Runway Gen-4', icon: '🎥', reason: '功能最全面：视频生成+运动笔刷+音频+局部修改', price: '免费+$15/月', priceClass: 'rec-freemium', url: 'https://runwayml.com' },
-            { name: 'Sora', icon: '🌟', reason: '画质天花板，影视级质感，追求极致效果不差钱的上', price: '$20/月起', priceClass: 'rec-freemium', url: 'https://sora.com' },
+            { name: '可灵 Kling', icon: '<svg width="18" height="18" class="icon-video"><use href="img/icons.svg#icon-video"/></svg>', reason: '中文Prompt直接生成，免费额度大方，新手最友好', price: '免费+¥39/月', priceClass: 'rec-freemium', url: 'https://kling.kuaishou.com' },
+            { name: 'Runway Gen-4', icon: '<svg width="18" height="18" class="icon-video"><use href="img/icons.svg#icon-video"/></svg>', reason: '功能最全面：视频生成+运动笔刷+音频+局部修改', price: '免费+$15/月', priceClass: 'rec-freemium', url: 'https://runwayml.com' },
+            { name: 'Sora', icon: '<svg width="18" height="18" class="icon-video"><use href="img/icons.svg#icon-video"/></svg>', reason: '画质天花板，影视级质感，追求极致效果不差钱的上', price: '$20/月起', priceClass: 'rec-freemium', url: 'https://sora.com' },
         ]
     },
     general: {
-        title: '🤖 通用推荐',
+        title: '<svg width="18" height="18" class="icon-agent"><use href="img/icons.svg#icon-agent"/></svg> 通用推荐',
         items: [
-            { name: 'DeepSeek', icon: '🐋', reason: '完全免费，中文原生，推理极强。日常问答零成本首选', price: '免费', priceClass: 'rec-free', url: 'https://chat.deepseek.com' },
-            { name: '通义千问', icon: '☁️', reason: '阿里出品，中文一流，百炼平台新用户送7000万Tokens', price: '免费+API', priceClass: 'rec-freemium', url: 'https://www.aliyun.com/product/bailian?userCode=zpk45rgx' },
-            { name: '豆包', icon: '🫘', reason: '字节出品，APP端体验流畅，日常聊天和中文问答好用', price: '免费+¥29/月', priceClass: 'rec-freemium', url: 'https://www.doubao.com' },
+            { name: 'DeepSeek', icon: '<svg width="18" height="18" class="icon-deepseek"><use href="img/icons.svg#icon-deepseek"/></svg>', reason: '完全免费，中文原生，推理极强。日常问答零成本首选', price: '免费', priceClass: 'rec-free', url: 'https://chat.deepseek.com' },
+            { name: '通义千问', icon: '<svg width="18" height="18" class="icon-tongyi"><use href="img/icons.svg#icon-tongyi"/></svg>', reason: '阿里出品，中文一流，百炼平台新用户送7000万Tokens', price: '免费+API', priceClass: 'rec-freemium', url: 'https://www.aliyun.com/product/bailian?userCode=zpk45rgx' },
+            { name: '豆包', icon: '<svg width="18" height="18" class="icon-doubao"><use href="img/icons.svg#icon-doubao"/></svg>', reason: '字节出品，APP端体验流畅，日常聊天和中文问答好用', price: '免费+¥29/月', priceClass: 'rec-freemium', url: 'https://www.doubao.com' },
         ]
     },
 };
@@ -394,16 +399,16 @@ function showRec(scene) {
 <!-- 移动端底部固定Tab栏 -->
 <nav class="mobile-tabs" id="mobileTabs">
     <a href="index.html" class="mobile-tab active">
-        <span class="tab-icon">🏠</span>首页
+        <span class="tab-icon"><span class="icon icon-lg "><svg width="24" height="24" class="icon-home "><use href="img/icons.svg#icon-home"/></svg></span></span>首页
     </a>
     <a href="models.html" class="mobile-tab">
-        <span class="tab-icon">📦</span>模型库
+        <span class="tab-icon"><span class="icon icon-lg "><svg width="24" height="24" class="icon-models "><use href="img/icons.svg#icon-models"/></svg></span></span>模型库
     </a>
     <a href="compare.html" class="mobile-tab">
-        <span class="tab-icon">⚖️</span>对比
+        <span class="tab-icon"><span class="icon icon-lg "><svg width="24" height="24" class="icon-compare "><use href="img/icons.svg#icon-compare"/></svg></span></span>对比
     </a>
     <a href="skills.html" class="mobile-tab">
-        <span class="tab-icon">🧰</span>技能包
+        <span class="tab-icon"><span class="icon icon-lg "><svg width="24" height="24" class="icon-skills "><use href="img/icons.svg#icon-skills"/></svg></span></span>技能包
     </a>
 </nav>
 

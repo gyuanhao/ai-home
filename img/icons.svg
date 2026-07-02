@@ -1,0 +1,353 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  <defs>
+    <!-- ====== 导航图标 ====== -->
+    
+    <!-- Logo: AI家AI户 — 科技小屋 -->
+    <symbol id="icon-logo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 3L2 11h2v8a1 1 0 001 1h4v-6h6v6h4a1 1 0 001-1v-8h2L12 3z"/>
+      <circle cx="12" cy="11" r="3" fill="currentColor" stroke="none" opacity="0.15"/>
+      <circle cx="12" cy="11" r="1.2" fill="currentColor" stroke="none"/>
+    </symbol>
+
+    <!-- 首页 -->
+    <symbol id="icon-home" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M3 12l9-9 9 9"/>
+      <path d="M5 10v9a1 1 0 001 1h12a1 1 0 001-1v-9"/>
+    </symbol>
+
+    <!-- 模型库 — 图层堆叠 -->
+    <symbol id="icon-models" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="3" width="18" height="14" rx="2"/>
+      <rect x="6" y="6" width="18" height="14" rx="2" opacity="0.35"/>
+      <rect x="9" y="9" width="18" height="14" rx="2" opacity="0.15"/>
+    </symbol>
+
+    <!-- 对比 — 双列切换 -->
+    <symbol id="icon-compare" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="2" y="4" width="9" height="16" rx="1.5"/>
+      <rect x="13" y="4" width="9" height="16" rx="1.5"/>
+      <path d="M6.5 9v6M17.5 9v6"/>
+    </symbol>
+
+    <!-- 技能包 — 拼图+齿轮 -->
+    <symbol id="icon-skills" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 2a3 3 0 00-3 3v1H6a2 2 0 00-2 2v3H3a2 2 0 000 4h1v3a2 2 0 002 2h3v1a3 3 0 006 0v-1h3a2 2 0 002-2v-3h1a2 2 0 000-4h-1V8a2 2 0 00-2-2h-3V5a3 3 0 00-3-3z"/>
+    </symbol>
+
+    <!-- 汉堡菜单 -->
+    <symbol id="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+      <path d="M4 6h16M4 12h16M4 18h16"/>
+    </symbol>
+
+    <!-- 关闭 -->
+    <symbol id="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+      <path d="M18 6L6 18M6 6l12 12"/>
+    </symbol>
+
+    <!-- 搜索 -->
+    <symbol id="icon-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="10.5" cy="10.5" r="6.5"/>
+      <path d="M15.5 15.5L21 21"/>
+    </symbol>
+
+    <!-- ====== 6大品类图标 ====== -->
+
+    <!-- 语言模型 — 对话气泡 -->
+    <symbol id="icon-language" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 21a9 9 0 100-18 9 9 0 000 18z"/>
+      <path d="M8 9h8M8 12h6M8 15h4"/>
+    </symbol>
+
+    <!-- Agent平台 — 智能体方块 -->
+    <symbol id="icon-agent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="2" y="4" width="20" height="16" rx="3"/>
+      <circle cx="8" cy="10" r="1.5"/>
+      <circle cx="16" cy="10" r="1.5"/>
+      <circle cx="8" cy="15" r="1.5"/>
+      <circle cx="16" cy="15" r="1.5"/>
+    </symbol>
+
+    <!-- 图像模型 — 画框+山景 -->
+    <symbol id="icon-image" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="2" y="4" width="20" height="16" rx="2"/>
+      <circle cx="8.5" cy="9" r="2"/>
+      <path d="M2 16l5-5 4 4 3-3 8 8"/>
+    </symbol>
+
+    <!-- 视频模型 — 播放框 -->
+    <symbol id="icon-video" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="2" y="4" width="16" height="16" rx="2"/>
+      <path d="M18 16l4-4-4-4v8z"/>
+      <path d="M9 9l4 3-4 3V9z" fill="currentColor" stroke="none" opacity="0.2"/>
+    </symbol>
+
+    <!-- 代码模型 — 终端窗口 -->
+    <symbol id="icon-code" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="2" y="3" width="20" height="18" rx="2"/>
+      <path d="M7 8l-2 2 2 2M12 11l-2 5M15 8l2 2-2 2"/>
+    </symbol>
+
+    <!-- AI工具 — 组合工具箱 -->
+    <symbol id="icon-tools" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="2.5"/>
+      <path d="M8 4.5l2 2-3 3-2-2a3.5 3.5 0 013-3zM16 19.5l-2-2 3-3 2 2a3.5 3.5 0 01-3 3z"/>
+      <path d="M14.5 9.5l-5 5"/>
+    </symbol>
+
+    <!-- ====== 场景图标 ====== -->
+
+    <!-- 写作 — 羽毛笔 -->
+    <symbol id="icon-write" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M15 4l5 5-11 11H5v-4L15 4z"/>
+      <path d="M12.5 6.5l5 5"/>
+    </symbol>
+
+    <!-- 编程 — 尖括号 -->
+    <symbol id="icon-coding" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M8 7l-5 5 5 5M16 7l5 5-5 5"/>
+    </symbol>
+
+    <!-- 画图 — 调色板 -->
+    <symbol id="icon-draw" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="9"/>
+      <path d="M12 3a3 3 0 013 3v2a2 2 0 01-2 2h-2a3 3 0 010 6"/>
+      <circle cx="9" cy="9" r="1" fill="currentColor" stroke="none"/>
+      <circle cx="16" cy="8" r="1" fill="currentColor" stroke="none"/>
+      <circle cx="17" cy="14" r="1" fill="currentColor" stroke="none"/>
+    </symbol>
+
+    <!-- 做视频 — 摄像机 -->
+    <symbol id="icon-video-create" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M22 8l-6 4 6 4V8z"/>
+      <rect x="2" y="5" width="14" height="14" rx="2"/>
+    </symbol>
+
+    <!-- 通用问答 — 对话 -->
+    <symbol id="icon-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 21a9 9 0 10-8.48-5.96L2 21l5.96-1.52A8.97 8.97 0 0012 21z"/>
+    </symbol>
+
+    <!-- ====== 功能图标 ====== -->
+
+    <!-- 新闻 -->
+    <symbol id="icon-news" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="4" width="18" height="16" rx="2"/>
+      <path d="M8 8h8M8 12h6M8 16h4"/>
+      <rect x="17" y="4" width="4" height="7" rx="1" opacity="0.5"/>
+    </symbol>
+
+    <!-- 关于 -->
+    <symbol id="icon-about" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="9"/>
+      <path d="M12 16v-4M12 8h.01"/>
+    </symbol>
+
+    <!-- AI选型器 — 指南针 -->
+    <symbol id="icon-picker" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="9"/>
+      <path d="M13.5 7.5l-3 9-6-6 9-3z"/>
+      <path d="M10.5 16.5l3-9 6 6-9 3z"/>
+    </symbol>
+
+    <!-- 自定义对比 — 滑块 -->
+    <symbol id="icon-custom-compare" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4 21V14M4 10V3M12 21V12M12 8V3M20 21V16M20 12V3"/>
+      <circle cx="4" cy="12" r="2"/>
+      <circle cx="12" cy="10" r="2"/>
+      <circle cx="20" cy="14" r="2"/>
+    </symbol>
+
+    <!-- ====== 表格/对比图标 ====== -->
+
+    <!-- 勾选 -->
+    <symbol id="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M5 13l4 4L19 7"/>
+    </symbol>
+
+    <!-- 叉号 -->
+    <symbol id="icon-cross" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+      <path d="M7 7l10 10M17 7L7 17"/>
+    </symbol>
+
+    <!-- 实心星 -->
+    <symbol id="icon-star" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+    </symbol>
+
+    <!-- 空心星 -->
+    <symbol id="icon-star-empty" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+    </symbol>
+
+    <!-- ====== 辅助小图标 (16x16 viewBox) ====== -->
+
+    <!-- 提示信息 -->
+    <symbol id="icon-info" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="9"/>
+      <path d="M12 16v-4M12 8h.005"/>
+    </symbol>
+
+    <!-- 警告 -->
+    <symbol id="icon-warning" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 3L2 21h20L12 3z"/>
+      <path d="M12 10v4M12 17h.01"/>
+    </symbol>
+
+    <!-- 链接 -->
+    <symbol id="icon-link" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M9 15l6-6"/>
+      <path d="M11 6l.46-.46a5 5 0 017.07 7.07L18 13.1M13 18l-.46.46a5 5 0 01-7.07-7.07L6 10.9"/>
+    </symbol>
+
+    <!-- 邮件 -->
+    <symbol id="icon-email" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="2" y="5" width="20" height="14" rx="2"/>
+      <path d="M2 7l10 7 10-7"/>
+    </symbol>
+
+    <!-- 用户 -->
+    <symbol id="icon-user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="8" r="4"/>
+      <path d="M4 20a8 8 0 0116 0"/>
+    </symbol>
+
+    <!-- 热门 — 火焰 -->
+    <symbol id="icon-fire" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 2C8 6 4 10 4 14a8 8 0 0016 0c0-4-4-8-8-12z"/>
+      <path d="M12 10a4 4 0 00-4 4c0 2.5 4 6 4 6s4-3.5 4-6a4 4 0 00-4-4z" fill="currentColor" stroke="none" opacity="0.15"/>
+    </symbol>
+
+    <!-- 火箭/新上线 -->
+    <symbol id="icon-rocket" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 15l-3 6h6l-3-6z"/>
+      <circle cx="12" cy="8" r="2"/>
+      <path d="M12 2v4M18 6c-2 2-4 4-6 6M6 6c2 2 4 4 6 6"/>
+    </symbol>
+
+    <!-- 下箭头 -->
+    <symbol id="icon-arrow-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M6 9l6 6 6-6"/>
+    </symbol>
+
+    <!-- 目标/场景 -->
+    <symbol id="icon-target" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="9"/>
+      <circle cx="12" cy="12" r="5"/>
+      <circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/>
+    </symbol>
+
+    <!-- 价格 -->
+    <symbol id="icon-price" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="9"/>
+      <path d="M12 7v2M12 15v2M9.5 10.5c0-1 1-1.5 2.5-1.5s2.5.5 2.5 1.5-1 1.5-2.5 1.5-2.5.5-2.5 1.5 1 1.5 2.5 1.5 2.5-.5 2.5-1.5"/>
+    </symbol>
+
+    <!-- 数据/报表 -->
+    <symbol id="icon-data" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="3" width="18" height="18" rx="2"/>
+      <path d="M7 16V8M12 16v-4M17 16v-6"/>
+    </symbol>
+
+    <!-- Cookie -->
+    <symbol id="icon-cookie" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="9"/>
+      <circle cx="9" cy="9" r="1.2" fill="currentColor" stroke="none"/>
+      <circle cx="15" cy="8" r="1.2" fill="currentColor" stroke="none"/>
+      <circle cx="16" cy="14" r="1.2" fill="currentColor" stroke="none"/>
+      <circle cx="9" cy="15" r="1.2" fill="currentColor" stroke="none"/>
+    </symbol>
+
+    <!-- 公告/喇叭 -->
+    <symbol id="icon-announce" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M5 9v5h3l5 4V6L8 9H5z"/>
+      <path d="M15 8a4 4 0 010 8M18 5a8 8 0 010 14"/>
+    </symbol>
+
+    <!-- ====== 品牌产品图标 ====== -->
+
+    <!-- DeepSeek — 鲸鱼 -->
+    <symbol id="icon-deepseek" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M6 6c2 4 2 8 0 12M12 4c3 3 3 7 0 12M18 6c-2 4-2 8 0 12"/>
+      <circle cx="6" cy="5" r="1.2" fill="currentColor" stroke="none"/>
+      <circle cx="12" cy="4" r="1.2" fill="currentColor" stroke="none"/>
+      <circle cx="18" cy="5" r="1.2" fill="currentColor" stroke="none"/>
+    </symbol>
+
+    <!-- Kimi — 笔记本文档 -->
+    <symbol id="icon-kimi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="4" y="2" width="16" height="20" rx="2"/>
+      <path d="M8 8h8M8 12h8M8 16h5"/>
+    </symbol>
+
+    <!-- Claude — 大脑 -->
+    <symbol id="icon-claude" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 3a5 5 0 00-5 5c0 3 2 4 2 4s-2 1-2 4a5 5 0 0010 0c0-3-2-4-2-4s2-1 2-4a5 5 0 00-5-5z"/>
+      <path d="M12 9v7M5 11c2 2 4 2 7 2M19 11c-2 2-4 2-7 2"/>
+    </symbol>
+
+    <!-- 通义千问 — 云 -->
+    <symbol id="icon-tongyi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M6 18a4 4 0 01-.5-7.97A5.5 5.5 0 0116 10a4.5 4.5 0 011.5 8.73"/>
+      <circle cx="12" cy="12" r="2" fill="currentColor" stroke="none" opacity="0.2"/>
+    </symbol>
+
+    <!-- 豆包 — 豆子 -->
+    <symbol id="icon-doubao" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <ellipse cx="9" cy="16" rx="5" ry="4"/>
+      <ellipse cx="15" cy="8" rx="5" ry="4" transform="rotate(30 15 8)"/>
+    </symbol>
+
+    <!-- Midjourney — 画廊 -->
+    <symbol id="icon-midjourney" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="2" y="6" width="9" height="12" rx="1"/>
+      <rect x="13" y="3" width="9" height="18" rx="1"/>
+      <circle cx="6.5" cy="11" r="1.5" fill="currentColor" stroke="none"/>
+    </symbol>
+
+    <!-- Runway -->
+    <symbol id="icon-runway" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="4" y="8" width="16" height="8" rx="2"/>
+      <path d="M8 8V6a4 4 0 018 0v2M12 12v4"/>
+      <circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none" opacity="0.3"/>
+    </symbol>
+
+    <!-- Cursor — 指针 -->
+    <symbol id="icon-cursor" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 3l7 18-5-3-2 4-2-4-5 3L12 3z"/>
+    </symbol>
+
+    <!-- ====== 收藏/书签 ====== -->
+    
+    <!-- 收藏(空心) -->
+    <symbol id="icon-bookmark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M5 21V5a2 2 0 012-2h10a2 2 0 012 2v16l-7-5-7 5z"/>
+    </symbol>
+
+    <!-- 收藏(实心) -->
+    <symbol id="icon-bookmark-filled" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+      <path d="M5 21V5a2 2 0 012-2h10a2 2 0 012 2v16l-7-5-7 5z"/>
+    </symbol>
+
+    <!-- 分享 -->
+    <symbol id="icon-share" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="18" cy="5" r="3"/>
+      <circle cx="6" cy="12" r="3"/>
+      <circle cx="18" cy="19" r="3"/>
+      <path d="M8.7 10.7L15.3 6.3M8.7 13.3l6.6 3.4"/>
+    </symbol>
+
+    <!-- ====== 邮件订阅 ====== -->
+
+    <!-- 订阅/铃铛 -->
+    <symbol id="icon-bell" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+      <path d="M13.73 21a2 2 0 01-3.46 0"/>
+    </symbol>
+
+    <!-- 外部链接箭头 -->
+    <symbol id="icon-external" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/>
+      <path d="M15 3h6v6M10 14L21 3"/>
+    </symbol>
+  </defs>
+</svg>

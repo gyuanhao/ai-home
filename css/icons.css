@@ -1,0 +1,138 @@
+/* ====== AI家AI户 — 图标系统 ====== */
+
+/* 基础图标 */
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  vertical-align: middle;
+}
+.icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* 尺寸 */
+.icon-sm  { width: 14px; height: 14px; }
+.icon-md  { width: 18px; height: 18px; }
+.icon-lg  { width: 24px; height: 24px; }
+.icon-xl  { width: 32px; height: 32px; }
+.icon-2xl { width: 40px; height: 40px; }
+
+/* 颜色变体 */
+.icon-default  { color: #6b7280; }
+.icon-primary  { color: #3b82f6; }
+.icon-success  { color: #10b981; }
+.icon-warning  { color: #f59e0b; }
+.icon-danger   { color: #ef4444; }
+.icon-muted    { color: #9ca3af; }
+.icon-white    { color: #fff; }
+.icon-inherit  { color: inherit; }
+
+/* 导航Logo */
+.nav-logo .icon,
+.drawer-logo .icon {
+  margin-right: 6px;
+}
+
+/* 移动端底部Tab图标 */
+.mobile-tab .icon,
+.tab-icon {
+  display: block;
+  margin: 0 auto 2px;
+}
+
+/* 品类卡片图标 */
+.cat-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: #eff6ff;
+  color: #3b82f6;
+  margin-bottom: 12px;
+}
+
+/* 场景选择器图标 */
+.scenario-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  margin-right: 8px;
+}
+
+/* 热门卡片图标 */
+.hot-card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+}
+
+/* 搜索框图标 */
+.search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9ca3af;
+  pointer-events: none;
+}
+
+/* 收藏按钮 */
+.fav-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  background: transparent;
+  color: #6b7280;
+  cursor: pointer;
+  transition: all .15s;
+  font-size: 13px;
+  line-height: 1;
+}
+.fav-btn:hover { 
+  border-color: #f59e0b; 
+  color: #f59e0b;
+  background: #fffbeb;
+}
+.fav-btn.faved { 
+  border-color: #f59e0b; 
+  color: #f59e0b;
+  background: #fffbeb;
+}
+.fav-btn.faved:hover {
+  border-color: #d97706;
+  color: #d97706;
+}
+
+/* 订阅按钮 */
+.sub-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 18px;
+  border-radius: 8px;
+  background: #3b82f6;
+  color: #fff;
+  font-weight: 500;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  transition: all .15s;
+}
+.sub-btn:hover { background: #2563eb; }
+.sub-btn .icon { color: #fff; }
+
+/* 对比表格勾叉 */
+.compare-check { color: #10b981; }
+.compare-cross { color: #ef4444; }

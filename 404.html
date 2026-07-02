@@ -12,12 +12,17 @@
         .container-404 p { color:var(--text-secondary); margin-bottom:32px; font-size:18px; }
         .container-404 a { display:inline-block; padding:12px 32px; background:var(--primary); color:white; border-radius:50px; font-weight:600; font-size:15px; text-decoration:none; }
     </style>
+
+    <link rel="stylesheet" href="css/icons.css">
 </head>
 <body>
+<!-- SVG Icon Sprite -->
+<object data="img/icons.svg" type="image/svg+xml" style="display:none" aria-hidden="true"></object>
+
 <nav class="nav">
     <div class="nav-inner">
-        <button class="nav-toggle" onclick="toggleMobileNav()" aria-label="打开菜单">☰</button>
-        <a href="index.html" class="nav-logo">🏠 AI家AI户</a>
+        <button class="nav-toggle" onclick="toggleMobileNav()" aria-label="打开菜单"><span class="icon icon-lg "><svg width="24" height="24" class="icon-menu "><use href="img/icons.svg#icon-menu"/></svg></span></button>
+        <a href="index.html" class="nav-logo"><span class="icon icon-lg icon-primary"><svg width="24" height="24" class="icon-logo "><use href="img/icons.svg#icon-logo"/></svg></span> AI家AI户</a>
         <ul class="nav-links">
             <li><a href="index.html">首页</a></li>
             <li><a href="models.html">模型库</a></li>
@@ -31,8 +36,8 @@
 <div class="nav-overlay" id="navOverlay" onclick="closeMobileNav()"></div>
 <div class="nav-drawer" id="navDrawer">
     <div class="drawer-header">
-        <span class="drawer-logo">🏠 AI家AI户</span>
-        <button class="drawer-close" onclick="closeMobileNav()" aria-label="关闭菜单">✕</button>
+        <span class="drawer-logo"><span class="icon icon-lg icon-primary"><svg width="24" height="24" class="icon-logo "><use href="img/icons.svg#icon-logo"/></svg></span> AI家AI户</span>
+        <button class="drawer-close" onclick="closeMobileNav()" aria-label="关闭菜单"><span class="icon icon-lg "><svg width="24" height="24" class="icon-close "><use href="img/icons.svg#icon-close"/></svg></span></button>
     </div>
     <ul class="drawer-links"></ul>
 </div>
@@ -46,16 +51,16 @@
 <!-- 移动端底部固定Tab栏 -->
 <nav class="mobile-tabs" id="mobileTabs">
     <a href="index.html" class="mobile-tab active">
-        <span class="tab-icon">🏠</span>首页
+        <span class="tab-icon"><span class="icon icon-lg "><svg width="24" height="24" class="icon-home "><use href="img/icons.svg#icon-home"/></svg></span></span>首页
     </a>
     <a href="models.html" class="mobile-tab">
-        <span class="tab-icon">📦</span>模型库
+        <span class="tab-icon"><span class="icon icon-lg "><svg width="24" height="24" class="icon-models "><use href="img/icons.svg#icon-models"/></svg></span></span>模型库
     </a>
     <a href="compare.html" class="mobile-tab">
-        <span class="tab-icon">⚖️</span>对比
+        <span class="tab-icon"><span class="icon icon-lg "><svg width="24" height="24" class="icon-compare "><use href="img/icons.svg#icon-compare"/></svg></span></span>对比
     </a>
     <a href="skills.html" class="mobile-tab">
-        <span class="tab-icon">🧰</span>技能包
+        <span class="tab-icon"><span class="icon icon-lg "><svg width="24" height="24" class="icon-skills "><use href="img/icons.svg#icon-skills"/></svg></span></span>技能包
     </a>
 </nav>
 

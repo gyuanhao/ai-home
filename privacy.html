@@ -25,13 +25,18 @@
     </script>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/i18n.js"></script>
+
+    <link rel="stylesheet" href="css/icons.css">
 </head>
 <body>
+<!-- SVG Icon Sprite -->
+<object data="img/icons.svg" type="image/svg+xml" style="display:none" aria-hidden="true"></object>
+
 
 <nav class="nav">
     <div class="nav-inner">
-        <button class="nav-toggle" onclick="toggleMobileNav()" aria-label="打开菜单">☰</button>
-        <a href="index.html" class="nav-logo">🏠 AI家AI户</a>
+        <button class="nav-toggle" onclick="toggleMobileNav()" aria-label="打开菜单"><span class="icon icon-lg "><svg width="24" height="24" class="icon-menu "><use href="img/icons.svg#icon-menu"/></svg></span></button>
+        <a href="index.html" class="nav-logo"><span class="icon icon-lg icon-primary"><svg width="24" height="24" class="icon-logo "><use href="img/icons.svg#icon-logo"/></svg></span> AI家AI户</a>
         <ul class="nav-links">
             <li><a href="index.html" data-i18n="nav.home">首页</a></li>
             <li><a href="models.html" data-i18n="nav.models">模型库</a></li>
@@ -50,8 +55,8 @@
 <div class="nav-overlay" id="navOverlay" onclick="closeMobileNav()"></div>
 <div class="nav-drawer" id="navDrawer">
     <div class="drawer-header">
-        <span class="drawer-logo">🏠 AI家AI户</span>
-        <button class="drawer-close" onclick="closeMobileNav()" aria-label="关闭菜单">✕</button>
+        <span class="drawer-logo"><span class="icon icon-lg icon-primary"><svg width="24" height="24" class="icon-logo "><use href="img/icons.svg#icon-logo"/></svg></span> AI家AI户</span>
+        <button class="drawer-close" onclick="closeMobileNav()" aria-label="关闭菜单"><span class="icon icon-lg "><svg width="24" height="24" class="icon-close "><use href="img/icons.svg#icon-close"/></svg></span></button>
     </div>
     <ul class="drawer-links"></ul>
 </div>
@@ -63,12 +68,12 @@
     <p style="margin-bottom:24px; line-height:1.8;" data-i18n="privacy.intro">AI家AI户（myaishome.com）重视你的隐私。本隐私政策说明了我们如何收集、使用和保护你的信息。</p>
 
     <!-- 数据收集 -->
-    <h2 style="font-size:20px; margin-top:32px; margin-bottom:12px; color:var(--text);" data-i18n="privacy.h1_data">📊 我们收集什么数据</h2>
+    <h2 style="display:flex;align-items:center;gap:6px;"><span class="icon icon-lg icon-primary"><svg width="24" height="24" class="icon-data "><use href="img/icons.svg#icon-data"/></svg></span>我们收集什么数据</h2>
     <p style="margin-bottom:8px; line-height:1.8;" data-i18n="privacy.data1"><strong>自动收集的技术信息：</strong>当你访问本网站时，我们会通过 Google Analytics（Google分析）自动收集：IP地址（匿名化处理）、浏览器类型和设备信息、访问的页面和停留时间、来源渠道（如搜索引擎、社交媒体）</p>
     <p style="margin-bottom:8px; line-height:1.8;" data-i18n="privacy.data2"><strong>我们<u>不会</u>收集：</strong>姓名、邮箱、电话号码等个人身份信息（除非你主动通过联系邮箱发送给我们）</p>
 
     <!-- 使用方式 -->
-    <h2 style="font-size:20px; margin-top:32px; margin-bottom:12px; color:var(--text);" data-i18n="privacy.h1_how">🔧 我们如何使用数据</h2>
+    <h2 style="display:flex;align-items:center;gap:6px;"><span class="icon icon-lg icon-primary"><svg width="24" height="24" class="icon-tools "><use href="img/icons.svg#icon-tools"/></svg></span>我们如何使用数据</h2>
     <ul style="padding-left:20px; line-height:2; margin-bottom:16px;">
         <li data-i18n="privacy.how1">了解网站访问情况（哪些页面受欢迎、用户从哪里来）</li>
         <li data-i18n="privacy.how2">改进网站内容和用户体验</li>
@@ -76,7 +81,7 @@
     </ul>
 
     <!-- Cookie -->
-    <h2 style="font-size:20px; margin-top:32px; margin-bottom:12px; color:var(--text);" data-i18n="privacy.h1_cookies">🍪 关于 Cookie</h2>
+    <h2 style="display:flex;align-items:center;gap:6px;"><span class="icon icon-lg icon-primary"><svg width="24" height="24" class="icon-cookie "><use href="img/icons.svg#icon-cookie"/></svg></span>关于 Cookie</h2>
     <p style="margin-bottom:12px; line-height:1.8;" data-i18n="privacy.cookies1">Cookie 是网站存储在浏览器中的小文件，用于记住你的偏好和统计访问数据。本网站使用以下类型的 Cookie：</p>
     <ul style="padding-left:20px; line-height:2; margin-bottom:16px;">
         <li data-i18n="privacy.cookies2"><strong>必要性 Cookie：</strong>用于记住你的语言偏好（中文/英文）和 Cookie 同意状态，无法关闭。</li>
@@ -86,22 +91,22 @@
     <p style="line-height:1.8;" data-i18n="privacy.cookies5">你可以在浏览器设置中管理或禁用 Cookie（具体方法因浏览器而异）。禁用 Cookie 不影响网站正常使用，但可能导致语言偏好不会被记住。</p>
 
     <!-- 广告 -->
-    <h2 style="font-size:20px; margin-top:32px; margin-bottom:12px; color:var(--text);" data-i18n="privacy.h1_ads">📢 广告说明</h2>
+    <h2 style="display:flex;align-items:center;gap:6px;"><span class="icon icon-lg icon-primary"><svg width="24" height="24" class="icon-announce "><use href="img/icons.svg#icon-announce"/></svg></span>广告说明</h2>
     <p style="margin-bottom:8px; line-height:1.8;" data-i18n="privacy.ads1">本网站使用 <strong>Google AdSense</strong> 展示广告。Google 使用 Cookie 根据你的浏览历史展示个性化广告。</p>
     <p style="margin-bottom:8px; line-height:1.8;" data-i18n="privacy.ads2">你可以通过 <a href="https://adssettings.google.com" target="_blank" rel="noopener">Google 广告设置</a> 管理广告偏好，或访问 <a href="https://www.aboutads.info/" target="_blank" rel="noopener">www.aboutads.info</a> 关闭个性化广告。</p>
     <p style="line-height:1.8;" data-i18n="privacy.ads3">本网站使用的广告服务商：Google AdSense。</p>
 
     <!-- 第三方 -->
-    <h2 style="font-size:20px; margin-top:32px; margin-bottom:12px; color:var(--text);" data-i18n="privacy.h1_third">🔗 第三方服务</h2>
+    <h2 style="display:flex;align-items:center;gap:6px;"><span class="icon icon-lg icon-primary"><svg width="24" height="24" class="icon-link "><use href="img/icons.svg#icon-link"/></svg></span>第三方服务</h2>
     <p style="line-height:1.8;" data-i18n="privacy.third1">本网站链接了大量AI模型和服务商的官方网站。点击这些链接后，你将离开本网站，对方网站的隐私政策适用。我们不对第三方网站的隐私做法负责。</p>
 
     <!-- 用户权利 -->
-    <h2 style="font-size:20px; margin-top:32px; margin-bottom:12px; color:var(--text);" data-i18n="privacy.h1_rights">👤 你的权利</h2>
+    <h2 style="display:flex;align-items:center;gap:6px;"><span class="icon icon-lg icon-primary"><svg width="24" height="24" class="icon-user "><use href="img/icons.svg#icon-user"/></svg></span>你的权利</h2>
     <p style="margin-bottom:8px; line-height:1.8;" data-i18n="privacy.rights1">根据适用的数据保护法律（如 GDPR），你有权：访问我们持有的关于你的数据、要求更正或删除你的数据、限制或反对数据处理、数据可携带权。</p>
     <p style="line-height:1.8;" data-i18n="privacy.rights2">由于我们不收集个人身份信息，大多数请求我们将无法处理（因为我们无法识别你的身份）。但如果你有任何隐私问题，欢迎联系我们。</p>
 
     <!-- 联系 -->
-    <h2 style="font-size:20px; margin-top:32px; margin-bottom:12px; color:var(--text);" data-i18n="privacy.h1_contact">📧 联系我们</h2>
+    <h2 style="display:flex;align-items:center;gap:6px;"><span class="icon icon-lg icon-primary"><svg width="24" height="24" class="icon-email "><use href="img/icons.svg#icon-email"/></svg></span>联系我们</h2>
     <p style="margin-bottom:8px; line-height:1.8;" data-i18n="privacy.contact1">如果你对本隐私政策有任何疑问，请发送邮件至：<strong>195486937@qq.com</strong></p>
     <p style="line-height:1.8;" data-i18n="privacy.contact2">我们会在7个工作日内回复。</p>
 </div>
@@ -117,16 +122,16 @@
 <!-- 移动端底部固定Tab栏 -->
 <nav class="mobile-tabs" id="mobileTabs">
     <a href="index.html" class="mobile-tab active">
-        <span class="tab-icon">🏠</span>首页
+        <span class="tab-icon"><span class="icon icon-lg "><svg width="24" height="24" class="icon-home "><use href="img/icons.svg#icon-home"/></svg></span></span>首页
     </a>
     <a href="models.html" class="mobile-tab">
-        <span class="tab-icon">📦</span>模型库
+        <span class="tab-icon"><span class="icon icon-lg "><svg width="24" height="24" class="icon-models "><use href="img/icons.svg#icon-models"/></svg></span></span>模型库
     </a>
     <a href="compare.html" class="mobile-tab">
-        <span class="tab-icon">⚖️</span>对比
+        <span class="tab-icon"><span class="icon icon-lg "><svg width="24" height="24" class="icon-compare "><use href="img/icons.svg#icon-compare"/></svg></span></span>对比
     </a>
     <a href="skills.html" class="mobile-tab">
-        <span class="tab-icon">🧰</span>技能包
+        <span class="tab-icon"><span class="icon icon-lg "><svg width="24" height="24" class="icon-skills "><use href="img/icons.svg#icon-skills"/></svg></span></span>技能包
     </a>
 </nav>
 

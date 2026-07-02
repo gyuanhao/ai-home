@@ -26,13 +26,18 @@
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-TBTFSXQ6NF"></script>
     <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-TBTFSXQ6NF');</script>
+
+    <link rel="stylesheet" href="css/icons.css">
 </head>
 <body>
+<!-- SVG Icon Sprite -->
+<object data="img/icons.svg" type="image/svg+xml" style="display:none" aria-hidden="true"></object>
+
 
 <nav class="nav">
     <div class="nav-inner">
-        <button class="nav-toggle" onclick="toggleMobileNav()" aria-label="打开菜单">☰</button>
-        <a href="index.html" class="nav-logo">🏠 AI家AI户</a>
+        <button class="nav-toggle" onclick="toggleMobileNav()" aria-label="打开菜单"><span class="icon icon-lg "><svg width="24" height="24" class="icon-menu "><use href="img/icons.svg#icon-menu"/></svg></span></button>
+        <a href="index.html" class="nav-logo"><span class="icon icon-lg icon-primary"><svg width="24" height="24" class="icon-logo "><use href="img/icons.svg#icon-logo"/></svg></span> AI家AI户</a>
         <ul class="nav-links">
             <li><a href="index.html" data-i18n="nav.home">首页</a></li>
             <li><a href="models.html" data-i18n="nav.models">模型库</a></li>
@@ -52,8 +57,8 @@
 <div class="nav-overlay" id="navOverlay" onclick="closeMobileNav()"></div>
 <div class="nav-drawer" id="navDrawer">
     <div class="drawer-header">
-        <span class="drawer-logo">🏠 AI家AI户</span>
-        <button class="drawer-close" onclick="closeMobileNav()" aria-label="关闭菜单">✕</button>
+        <span class="drawer-logo"><span class="icon icon-lg icon-primary"><svg width="24" height="24" class="icon-logo "><use href="img/icons.svg#icon-logo"/></svg></span> AI家AI户</span>
+        <button class="drawer-close" onclick="closeMobileNav()" aria-label="关闭菜单"><span class="icon icon-lg "><svg width="24" height="24" class="icon-close "><use href="img/icons.svg#icon-close"/></svg></span></button>
     </div>
     <ul class="drawer-links"></ul>
 </div>
@@ -63,14 +68,14 @@
 
 
     <div style="text-align:center;margin-bottom:36px;">
-        <h1 style="font-size:28px;font-weight:800;margin-bottom:8px;" data-i18n="picker.title">🤔 我该用哪个AI工具？</h1>
+        <h1 style="display:flex;align-items:center;gap:6px;"><span class="icon icon-xl icon-primary"><svg width="32" height="32" class="icon-picker "><use href="img/icons.svg#icon-picker"/></svg></span>我该用哪个AI工具？</h1>
         <p style="color:var(--text-secondary);font-size:15px;" data-i18n="picker.desc">回答4个问题，从35个模型中精准匹配最适合你的AI</p>
     </div>
 
     <div id="pickerSteps">
         <!-- 由 picker.js 动态渲染 -->
         <div style="text-align:center;padding:60px 20px;color:var(--text-secondary);">
-            <div style="font-size:40px;margin-bottom:16px;">⏳</div>
+            <div style="font-size:40px;margin-bottom:16px;"><svg width="40" height="40" class="icon-target"><use href="img/icons.svg#icon-target"/></svg></div>
             <span data-i18n="picker.loading">加载中...</span>
         </div>
     </div>
@@ -103,16 +108,16 @@
 <!-- 移动端底部固定Tab栏 -->
 <nav class="mobile-tabs" id="mobileTabs">
     <a href="index.html" class="mobile-tab active">
-        <span class="tab-icon">🏠</span>首页
+        <span class="tab-icon"><span class="icon icon-lg "><svg width="24" height="24" class="icon-home "><use href="img/icons.svg#icon-home"/></svg></span></span>首页
     </a>
     <a href="models.html" class="mobile-tab">
-        <span class="tab-icon">📦</span>模型库
+        <span class="tab-icon"><span class="icon icon-lg "><svg width="24" height="24" class="icon-models "><use href="img/icons.svg#icon-models"/></svg></span></span>模型库
     </a>
     <a href="compare.html" class="mobile-tab">
-        <span class="tab-icon">⚖️</span>对比
+        <span class="tab-icon"><span class="icon icon-lg "><svg width="24" height="24" class="icon-compare "><use href="img/icons.svg#icon-compare"/></svg></span></span>对比
     </a>
     <a href="skills.html" class="mobile-tab">
-        <span class="tab-icon">🧰</span>技能包
+        <span class="tab-icon"><span class="icon icon-lg "><svg width="24" height="24" class="icon-skills "><use href="img/icons.svg#icon-skills"/></svg></span></span>技能包
     </a>
 </nav>
 
