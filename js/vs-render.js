@@ -65,7 +65,7 @@
         ['cardAPrice', 'cardBPrice'].forEach(function(id) {
             const el = document.getElementById(id);
             if (!el) return;
-            const model = id === 'cardACompany' ? a : b;
+            const model = id === 'cardAPrice' ? a : b;
             el.textContent = model.priceLabel;
         });
 
@@ -115,10 +115,10 @@
         let html = '<div class="vs-conclusion"><h3>总结：怎么选？</h3>';
 
         if (aFree && !bFree) {
-            html += '<p>如果预算为零，<strong>' + a.name + '</strong> 完全免费，功能强大，毫无疑问的首选。</p>';
+            html += '<p>如果预算为零或想降低成本，<strong>' + a.name + '</strong> 有免费版本可用，日常对话体验良好。</p>';
             html += '<p>如果愿意付费且需要更强性能、更多功能（如图像/视频），<strong>' + b.name + '</strong> 值得投入。</p>';
         } else if (bFree && !aFree) {
-            html += '<p>如果预算为零，<strong>' + b.name + '</strong> 完全免费，功能强大，毫无疑问的首选。</p>';
+            html += '<p>如果预算为零或想降低成本，<strong>' + b.name + '</strong> 有免费版本可用，日常对话体验良好。</p>';
             html += '<p>如果愿意付费且需要更强性能，<strong>' + a.name + '</strong> 值得投入。</p>';
         } else if (aFree && bFree) {
             html += '<p>两个都免费，可以同时用！<strong>' + a.name + '</strong> 和 <strong>' + b.name + '</strong> 各有所长，建议根据具体场景切换。</p>';
