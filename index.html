@@ -150,7 +150,7 @@
                     <span class="hot-card-name" data-i18n="hot.ds.name">DeepSeek</span>
                     <span class="hot-card-company" data-i18n="hot.ds.company">深度求索</span>
                 </div>
-                <span class="hot-card-badge badge-free" data-i18n="card.free">免费</span>
+                <span class="hot-card-badge badge-freemium" data-i18n="card.freemium">免费+付费</span>
             </div>
             <p class="hot-card-desc" data-i18n="hot.ds.desc">网页/APP对话免费，推理能力突出。中文原生支持，V4.1即将支持多模态</p>
             <div class="hot-card-bottom">
@@ -259,7 +259,7 @@ const recommendations = {
         items: [
             { name: 'Cursor', icon: '<svg width="20" height="20" class="icon-cursor"><use href="img/icons.svg#icon-cursor"/></svg>', reason: 'AI编辑器，Agent模式可跨文件改代码', price: '免费+$20/月', priceClass: 'rec-freemium', url: 'https://cursor.com' },
             { name: 'Claude', icon: '<svg width="20" height="20" class="icon-claude"><use href="img/icons.svg#icon-claude"/></svg>', reason: 'Opus 4.8编程榜高分，复杂算法和架构设计能力突出', price: '免费+$20/月', priceClass: 'rec-freemium', url: 'https://claude.ai' },
-            { name: 'DeepSeek', icon: '<svg width="20" height="20" class="icon-deepseek"><use href="img/icons.svg#icon-deepseek"/></svg>', reason: '对话免费，推理和数学能力强，预算敏感首选', price: '免费', priceClass: 'rec-free', url: 'https://chat.deepseek.com' },
+            { name: 'DeepSeek', icon: '<svg width="20" height="20" class="icon-deepseek"><use href="img/icons.svg#icon-deepseek"/></svg>', reason: '对话免费，推理和数学能力强，预算敏感首选', price: '免费+付费', priceClass: 'rec-freemium', url: 'https://chat.deepseek.com' },
         ]
     },
     image: {
@@ -281,7 +281,7 @@ const recommendations = {
     general: {
         title: '<svg width="20" height="20" class="icon-agent"><use href="img/icons.svg#icon-agent"/></svg> 通用推荐',
         items: [
-            { name: 'DeepSeek', icon: '<svg width="20" height="20" class="icon-deepseek"><use href="img/icons.svg#icon-deepseek"/></svg>', reason: '网页/APP对话免费，中文原生，推理能力突出。日常问答零成本', price: '免费', priceClass: 'rec-free', url: 'https://chat.deepseek.com' },
+            { name: 'DeepSeek', icon: '<svg width="20" height="20" class="icon-deepseek"><use href="img/icons.svg#icon-deepseek"/></svg>', reason: '网页/APP对话免费，中文原生，推理能力突出。日常问答零成本', price: '免费+付费', priceClass: 'rec-freemium', url: 'https://chat.deepseek.com' },
             { name: '通义千问', icon: '<svg width="20" height="20" class="icon-tongyi"><use href="img/icons.svg#icon-tongyi"/></svg>', reason: '阿里出品，中文优化充分，百炼平台新用户送7000万Tokens', price: '免费+API', priceClass: 'rec-freemium', url: 'https://www.aliyun.com/product/bailian?userCode=zpk45rgx' },
             { name: '豆包', icon: '<svg width="20" height="20" class="icon-doubao"><use href="img/icons.svg#icon-doubao"/></svg>', reason: '字节出品，APP端流畅，日常聊天和问答好用', price: '免费+¥29/月', priceClass: 'rec-freemium', url: 'https://www.doubao.com' },
         ]

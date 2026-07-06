@@ -3,7 +3,7 @@ const models = [
         {
                 "id": "deepseek",
                 "nameEn": "DeepSeek",
-                "priceLabelEn": "Free (Web/App Chat)",
+                "priceLabelEn": "Free (Web/App) / API Paid",
                 "tagsEn": [
                         "Free",
                         "Reasoning",
@@ -14,7 +14,7 @@ const models = [
                 "name": "DeepSeek",
                 "company": "深度求索（中国）",
                 "category": "语言模型",
-                "pricing": "free",
+                "pricing": "freemium",
                 "priceLabel": "网页/APP对话免费",
                 "priceDetail": "网页和APP对话功能免费，无付费墙，无广告。API 按量计费，V4系列永久降价（V4-Pro降至原价25%）。V4.1定档2026年6月发布，首次多模态+企业工具",
                 "website": "https://chat.deepseek.com",
