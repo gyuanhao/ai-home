@@ -152,7 +152,7 @@
                 </div>
                 <span class="hot-card-badge badge-free" data-i18n="card.free">免费</span>
             </div>
-            <p class="hot-card-desc" data-i18n="hot.ds.desc">完全免费无限制，推理能力极强。中文原生支持，V4.1即将支持多模态</p>
+            <p class="hot-card-desc" data-i18n="hot.ds.desc">网页/APP对话免费，推理能力突出。中文原生支持，V4.1即将支持多模态</p>
             <div class="hot-card-bottom">
                 <span class="hot-card-tags-label" data-i18n="hot.ds.tags">编程 · 推理 · 中文原生</span>
                 <span class="hot-card-link" data-i18n="hot.detail">查看详情 →</span>
@@ -257,15 +257,15 @@ const recommendations = {
     coding: {
         title: '<svg width="20" height="20" class="icon-code"><use href="img/icons.svg#icon-code"/></svg> 编程推荐',
         items: [
-            { name: 'Cursor', icon: '<svg width="20" height="20" class="icon-cursor"><use href="img/icons.svg#icon-cursor"/></svg>', reason: '最强AI编辑器，Agent模式可跨文件改代码', price: '免费+$20/月', priceClass: 'rec-freemium', url: 'https://cursor.com' },
-            { name: 'Claude', icon: '<svg width="20" height="20" class="icon-claude"><use href="img/icons.svg#icon-claude"/></svg>', reason: 'Opus 4.8编程榜第一，复杂算法和架构设计极强', price: '免费+$20/月', priceClass: 'rec-freemium', url: 'https://claude.ai' },
-            { name: 'DeepSeek', icon: '<svg width="20" height="20" class="icon-deepseek"><use href="img/icons.svg#icon-deepseek"/></svg>', reason: '完全免费，推理和数学能力强，预算敏感首选', price: '免费', priceClass: 'rec-free', url: 'https://chat.deepseek.com' },
+            { name: 'Cursor', icon: '<svg width="20" height="20" class="icon-cursor"><use href="img/icons.svg#icon-cursor"/></svg>', reason: 'AI编辑器，Agent模式可跨文件改代码', price: '免费+$20/月', priceClass: 'rec-freemium', url: 'https://cursor.com' },
+            { name: 'Claude', icon: '<svg width="20" height="20" class="icon-claude"><use href="img/icons.svg#icon-claude"/></svg>', reason: 'Opus 4.8编程榜高分，复杂算法和架构设计能力突出', price: '免费+$20/月', priceClass: 'rec-freemium', url: 'https://claude.ai' },
+            { name: 'DeepSeek', icon: '<svg width="20" height="20" class="icon-deepseek"><use href="img/icons.svg#icon-deepseek"/></svg>', reason: '对话免费，推理和数学能力强，预算敏感首选', price: '免费', priceClass: 'rec-free', url: 'https://chat.deepseek.com' },
         ]
     },
     image: {
         title: '<svg width="20" height="20" class="icon-draw"><use href="img/icons.svg#icon-draw"/></svg> 画图推荐',
         items: [
-            { name: 'Midjourney', icon: '<svg width="20" height="20" class="icon-image"><use href="img/icons.svg#icon-image"/></svg>', reason: '画质天花板，V7艺术风格极强，Niji7动漫专业', price: '$10/月起', priceClass: 'rec-freemium', url: 'https://www.midjourney.com' },
+            { name: 'Midjourney', icon: '<svg width="20" height="20" class="icon-image"><use href="img/icons.svg#icon-image"/></svg>', reason: '高画质，V7艺术风格突出，Niji7动漫引擎专业', price: '$10/月起', priceClass: 'rec-freemium', url: 'https://www.midjourney.com' },
             { name: '即梦 Jimeng', icon: '<svg width="20" height="20" class="icon-draw"><use href="img/icons.svg#icon-draw"/></svg>', reason: '中文Prompt直接说人话，免费额度大方，零门槛', price: '免费', priceClass: 'rec-free', url: 'https://jimeng.jianying.com' },
             { name: 'DALL-E', icon: '<svg width="20" height="20" class="icon-agent"><use href="img/icons.svg#icon-agent"/></svg>', reason: 'ChatGPT内置，自然语言理解最好，口语描述出图', price: '免费+$20/月', priceClass: 'rec-freemium', url: 'https://chat.openai.com' },
         ]
@@ -274,15 +274,15 @@ const recommendations = {
         title: '<svg width="20" height="20" class="icon-video"><use href="img/icons.svg#icon-video"/></svg> 视频推荐',
         items: [
             { name: '可灵 Kling', icon: '<svg width="20" height="20" class="icon-video"><use href="img/icons.svg#icon-video"/></svg>', reason: '中文Prompt直接生成，免费额度大方，新手友好', price: '免费+¥39/月', priceClass: 'rec-freemium', url: 'https://kling.kuaishou.com' },
-            { name: 'Runway Gen-4', icon: '<svg width="20" height="20" class="icon-video"><use href="img/icons.svg#icon-video"/></svg>', reason: '功能最全：视频生成+运动笔刷+音频+局部修改', price: '免费+$15/月', priceClass: 'rec-freemium', url: 'https://runwayml.com' },
+            { name: 'Runway Gen-4', icon: '<svg width="20" height="20" class="icon-video"><use href="img/icons.svg#icon-video"/></svg>', reason: '功能丰富：视频生成+运动笔刷+音频+局部修改', price: '免费+$15/月', priceClass: 'rec-freemium', url: 'https://runwayml.com' },
             { name: '海螺视频', icon: '<svg width="20" height="20" class="icon-video"><use href="img/icons.svg#icon-video"/></svg>', reason: '国产黑马，中文原生，与MiniMax M3同厂商', price: '免费+¥39/月', priceClass: 'rec-freemium', url: 'https://hailuoai.com' },
         ]
     },
     general: {
         title: '<svg width="20" height="20" class="icon-agent"><use href="img/icons.svg#icon-agent"/></svg> 通用推荐',
         items: [
-            { name: 'DeepSeek', icon: '<svg width="20" height="20" class="icon-deepseek"><use href="img/icons.svg#icon-deepseek"/></svg>', reason: '完全免费，中文原生，推理极强。日常问答零成本', price: '免费', priceClass: 'rec-free', url: 'https://chat.deepseek.com' },
-            { name: '通义千问', icon: '<svg width="20" height="20" class="icon-tongyi"><use href="img/icons.svg#icon-tongyi"/></svg>', reason: '阿里出品，中文一流，百炼平台新用户送7000万Tokens', price: '免费+API', priceClass: 'rec-freemium', url: 'https://www.aliyun.com/product/bailian?userCode=zpk45rgx' },
+            { name: 'DeepSeek', icon: '<svg width="20" height="20" class="icon-deepseek"><use href="img/icons.svg#icon-deepseek"/></svg>', reason: '网页/APP对话免费，中文原生，推理能力突出。日常问答零成本', price: '免费', priceClass: 'rec-free', url: 'https://chat.deepseek.com' },
+            { name: '通义千问', icon: '<svg width="20" height="20" class="icon-tongyi"><use href="img/icons.svg#icon-tongyi"/></svg>', reason: '阿里出品，中文优化充分，百炼平台新用户送7000万Tokens', price: '免费+API', priceClass: 'rec-freemium', url: 'https://www.aliyun.com/product/bailian?userCode=zpk45rgx' },
             { name: '豆包', icon: '<svg width="20" height="20" class="icon-doubao"><use href="img/icons.svg#icon-doubao"/></svg>', reason: '字节出品，APP端流畅，日常聊天和问答好用', price: '免费+¥29/月', priceClass: 'rec-freemium', url: 'https://www.doubao.com' },
         ]
     },
