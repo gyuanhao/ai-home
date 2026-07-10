@@ -56,14 +56,28 @@
         }
     }
 
+    /* ---- 滚动时导航栏变毛玻璃 ---- */
+    function initNavGlass() {
+        var nav = document.querySelector('.nav');
+        if (!nav) return;
+        var onScroll = function() {
+            if (window.scrollY > 8) nav.classList.add('scrolled');
+            else nav.classList.remove('scrolled');
+        };
+        onScroll();
+        window.addEventListener('scroll', onScroll, { passive: true });
+    }
+
     /* ---- 启动 ---- */
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', function() {
             initDrawer();
             setActiveTab();
+            initNavGlass();
         });
     } else {
         initDrawer();
         setActiveTab();
+        initNavGlass();
     }
 })();
