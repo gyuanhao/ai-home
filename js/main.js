@@ -1804,12 +1804,34 @@ document.addEventListener('DOMContentLoaded', function() {
         renderModelCards(activeCat);
     }
 
-    // 搜索功能
+    // 搜索功能（增强版）
     const searchInput = document.getElementById('modelSearch');
-    if (searchInput) {
+    const searchClear = document.getElementById('searchClear');
+    if (searchInput && searchClear) {
+        // 清除按钮显隐
+        function toggleClear() {
+            searchClear.style.display = searchInput.value.length > 0 ? 'flex' : 'none';
+        }
+        // 搜索过滤
         searchInput.addEventListener('input', function() {
+            toggleClear();
             const query = this.value.toLowerCase();
             renderModelCards(document.querySelector('.filter-btn.active')?.dataset.cat || 'all', query);
+        });
+        // 清除按钮点击
+        searchClear.addEventListener('click', function() {
+            searchInput.value = '';
+            toggleClear();
+            searchInput.focus();
+            renderModelCards(document.querySelector('.filter-btn.active')?.dataset.cat || 'all', '');
+        });
+        // 键盘快捷键 Cmd/Ctrl + K 聚焦搜索
+        document.addEventListener('keydown', function(e) {
+            if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+                e.preventDefault();
+                searchInput.focus();
+                searchInput.select();
+            }
         });
     }
 
