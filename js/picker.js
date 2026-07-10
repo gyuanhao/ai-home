@@ -358,6 +358,14 @@ window.PickerShare = function() {
 
 // 初始化
 document.addEventListener('DOMContentLoaded', function() {
+    // 动态填充模型数量
+    var totalEl = document.getElementById('pickerTotalModels');
+    if (totalEl && typeof models !== 'undefined' && Array.isArray(models)) {
+        totalEl.textContent = models.length;
+    } else if (totalEl) {
+        totalEl.textContent = '44';
+    }
+
     const shared = loadFromURL();
     if (shared && shared.result) {
         // 有分享链接，直接展示结果
