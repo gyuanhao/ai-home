@@ -1,43 +1,28 @@
 (function() {
     'use strict';
 
-    /* ---- 从桌面端导航克隆链接到抽屉 ---- */
-    function initDrawer() {
-        var navLinks  = document.querySelector('.nav-links');
-        var drawerUl  = document.querySelector('.drawer-links');
-        if (!navLinks || !drawerUl) return;
-
-        var items = navLinks.querySelectorAll('li');
-        items.forEach(function(li) {
-            var clone = li.cloneNode(true);
-            // 语言切换按钮单独处理
-            var btn = clone.querySelector('button');
-            if (btn) {
-                btn.style.marginLeft = '';
-                clone.classList.add('drawer-lang-row');
-            }
-            drawerUl.appendChild(clone);
-        });
-    }
-
-    /* ---- 打开 / 关闭 ---- */
-    window.toggleMobileNav = function() {
-        var overlay = document.getElementById('navOverlay');
-        var drawer  = document.getElementById('navDrawer');
-        if (!overlay || !drawer) return;
-        var opening = !drawer.classList.contains('open');
-        overlay.classList.toggle('open', opening);
-        drawer.classList.toggle('open', opening);
+    /* ---- 侧边栏打开 / 关闭（桌面+移动共用） ---- */
+    window.toggleSidebar = function() {
+        var sidebar  = document.getElementById('sidebar');
+        var overlay = document.getElementById('sidebarOverlay');
+        if (!sidebar) return;
+        var opening = !sidebar.classList.contains('open');
+        sidebar.classList.toggle('open', opening);
+        if (overlay) overlay.classList.toggle('open', opening);
         document.body.style.overflow = opening ? 'hidden' : '';
     };
 
-    window.closeMobileNav = function() {
-        var overlay = document.getElementById('navOverlay');
-        var drawer  = document.getElementById('navDrawer');
+    window.closeSidebar = function() {
+        var sidebar  = document.getElementById('sidebar');
+        var overlay = document.getElementById('sidebarOverlay');
+        if (sidebar)  sidebar.classList.remove('open');
         if (overlay) overlay.classList.remove('open');
-        if (drawer)  drawer.classList.remove('open');
         document.body.style.overflow = '';
     };
+
+    /* ---- 兼容旧函数名（部分页面可能仍引用） ---- */
+    window.toggleMobileNav = window.toggleSidebar;
+    window.closeMobileNav  = window.closeSidebar;
 
     /* ---- 底部 Tab 高亮当前页 ---- */
     function setActiveTab() {
@@ -46,38 +31,34 @@
         tabs.forEach(function(t) { t.classList.remove('active'); });
 
         if (path.endsWith('/') || path.endsWith('index.html')) {
-            tabs[0] && tabs[0].classList.add('active');          // 首页
+            tabs[0] && tabs[0].classList.add('active');
         } else if (path.includes('models.html')) {
-            tabs[1] && tabs[1].classList.add('active');          // 模型库
+            tabs[1] && tabs[1].classList.add('active');
         } else if (path.includes('compare')) {
-            tabs[2] && tabs[2].classList.add('active');          // 对比
+            tabs[2] && tabs[2].classList.add('active');
         } else if (path.includes('skills.html')) {
-            tabs[3] && tabs[3].classList.add('active');          // 技能包
+            tabs[3] && tabs[3].classList.add('active');
         }
     }
 
-    /* ---- 滚动时导航栏变毛玻璃 ---- */
-    function initNavGlass() {
-        var nav = document.querySelector('.nav');
-        if (!nav) return;
-        var onScroll = function() {
-            if (window.scrollY > 8) nav.classList.add('scrolled');
-            else nav.classList.remove('scrolled');
-        };
-        onScroll();
-        window.addEventListener('scroll', onScroll, { passive: true });
+    /* ---- 点击侧边栏链接后关闭移动端抽屉 ---- */
+    function bindDrawerLinks() {
+        var sb = document.querySelector('.sidebar-drawer');
+        if (!sb) return;
+        sb.querySelectorAll('a').forEach(function(a) {
+            a.addEventListener('click', function() { closeSidebar(); });
+        });
     }
 
     /* ---- 启动 ---- */
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', function() {
-            initDrawer();
-            setActiveTab();
-            initNavGlass();
-        });
-    } else {
-        initDrawer();
+    function init() {
         setActiveTab();
-        initNavGlass();
+        bindDrawerLinks();
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+    } else {
+        init();
     }
 })();

@@ -40,27 +40,57 @@
 </head>
 <body>
 
+
+<aside class="sidebar" id="sidebar">
+    <a href="../index.html" class="sidebar-logo">
+        <svg width="26" height="26" class="logo-icon" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        AI家AI户
+    </a>
+    <nav class="sidebar-nav">
+        <ul class="sidebar-links">
+            <li><a href="../index.html" class="sidebar-link">首页</a></li>
+            <li><a href="../models.html" class="sidebar-link active">模型库</a></li>
+            <li><a href="../compare.html" class="sidebar-link">横向对比</a></li>
+            <li><a href="../compare-custom.html" class="sidebar-link">自定义对比</a></li>
+            <li><a href="../vs/" class="sidebar-link">热门对比</a></li>
+            <li><a href="../picker.html" class="sidebar-link">AI选型器</a></li>
+            <li><a href="../news.html" class="sidebar-link">新闻</a></li>
+            <li><a href="../skills.html" class="sidebar-link">技能包</a></li>
+            <li><a href="../about.html" class="sidebar-link">关于</a></li>
+        </ul>
+    </nav>
+    <div class="sidebar-footer">
+        <button id="langSwitch" onclick="switchLang()" class="sidebar-lang-btn">EN</button>
+    </div>
+</aside>
+<button class="sidebar-toggle" onclick="toggleSidebar()" aria-label="menu">&#9776;</button>
+
+<div class="sidebar-overlay" id="sidebarOverlay" onclick="closeSidebar()"></div>
+<div class="sidebar-drawer" id="sidebarDrawer">
+    <div class="drawer-head">
+        <span class="d-logo">🏠 AI家AI户</span>
+        <button class="drawer-close-btn" onclick="closeSidebar()" aria-label="close">&#10005;</button>
+    </div>
+    <nav class="sidebar-nav">
+        <ul class="sidebar-links">
+            <li><a href="../index.html" class="sidebar-link">首页</a></li>
+            <li><a href="../models.html" class="sidebar-link">模型库</a></li>
+            <li><a href="../compare.html" class="sidebar-link">横向对比</a></li>
+            <li><a href="../compare-custom.html" class="sidebar-link">自定义对比</a></li>
+            <li><a href="../vs/" class="sidebar-link">热门对比</a></li>
+            <li><a href="../picker.html" class="sidebar-link">AI选型器</a></li>
+            <li><a href="../news.html" class="sidebar-link">新闻</a></li>
+            <li><a href="../skills.html" class="sidebar-link">技能包</a></li>
+            <li><a href="../about.html" class="sidebar-link">关于</a></li>
+        </ul>
+    </nav>
+    <div class="sidebar-footer"><button onclick="switchLang();closeSidebar();" class="sidebar-lang-btn">EN</button></div>
+</div>
+
+<main class="main-content">
 <!-- Model data for JS rendering -->
 <script id="model-data" type="application/json">{"id":"comate","nameEn":"Baidu Comate","priceLabelEn":"Free","tagsEn":["Free","Chinese Native","Baidu","IDE Plugin","Code Review"],"name":"文心快码 (Comate)","company":"百度（中国）","category":"代码模型","pricing":"free","priceLabel":"完全免费","priceDetail":"个人版完全免费。企业版按需定价（含代码审查/安全扫描等高级功能）","website":"https://comate.baidu.com","tags":["免费","中文原生","百度生态","IDE插件","代码审查"],"strengths":"个人版完全免费；中文代码注释和文档生成质量好；VS Code/IntelliJ插件支持完善；百度智能云生态集成","strengthsEn":"Personal edition completely free; good Chinese code comments & docs generation; solid VS Code/IntelliJ plugin support; Baidu AI Cloud ecosystem integration.","weaknesses":"知名度相对低；代码补全质量中等偏上；开源社区相对冷清；对非百度技术栈支持一般","bestFor":"中文开发者、百度云用户、需要免费代码助手且对百度生态有依赖的个人开发者","bestForEn":"Chinese developers, Baidu Cloud users, individual developers needing a free coding assistant within the Baidu ecosystem","chineseSupport":"★★★★★ 中文原生","apiAvailable":false,"released":"2023年首发，持续迭代","lastUpdated":"2026-06-11","source":"comate.baidu.com","priceDetailEn":"个人版完全免费。企业版按需定价（含代码审查/安全扫描等高级功能）","chineseSupportEn":"★★★★★ 中文原生","weaknessesEn":"Relatively low visibility; code completion quality in upper-mid range; open-source community relatively quiet; limited support for non-Baidu tech stacks.","releasedEn":"2023年首发，持续迭代"}</script>
 
-<nav class="nav">
-    <div class="nav-inner">
-        <a href="../index.html" class="nav-logo">🏠 AI家AI户</a>
-        <button class="nav-toggle" onclick="toggleMobileNav()" aria-label="打开菜单">☰</button>
-        <div class="nav-lang">
-            <a href="https://myaishome.com/models/comate.html" onclick="switchLang();return false;" class="lang-btn" id="langSwitch">EN</a>
-        </div>
-    </div>
-</nav>
-
-<!-- Mobile nav overlay + drawer -->
-<div class="nav-overlay" id="navOverlay" onclick="closeMobileNav()"></div>
-<div class="nav-drawer" id="navDrawer">
-    <div class="drawer-header">
-        <a href="../index.html" class="nav-logo" style="font-size:20px;">🏠 AI家AI户</a>
-        <button onclick="closeMobileNav()" style="background:none;border:none;font-size:24px;cursor:pointer;" aria-label="关闭菜单">✕</button>
-    </div>
-    <div class="drawer-links" id="drawerLinks"></div>
 </div>
 
 <!-- Mobile bottom tabs -->
@@ -71,14 +101,34 @@
     <a href="../skills.html" class="mobile-tab">🛠<span>技能包</span></a>
 </nav>
 
-<main class="detail-page">
+class="detail-page">
     <div class="breadcrumb">
         <a href="../index.html" data-i18n="detail.breadcrumb.home">首页</a> &rsaquo;
         <a href="../models.html" data-i18n="detail.breadcrumb.models">模型库</a> &rsaquo;
         <span id="breadcrumb-model">文心快码 (Comate)</span>
     </div>
 
-    <section class="detail-hero">
+    
+
+<nav class="sidebar-nav">
+        <ul class="sidebar-links">
+            <li><a href="../index.html" class="sidebar-link">首页</a></li>
+            <li><a href="../models.html" class="sidebar-link active">模型库</a></li>
+            <li><a href="../compare.html" class="sidebar-link">横向对比</a></li>
+            <li><a href="../compare-custom.html" class="sidebar-link">自定义对比</a></li>
+            <li><a href="../vs/" class="sidebar-link">热门对比</a></li>
+            <li><a href="../picker.html" class="sidebar-link">AI选型器</a></li>
+            <li><a href="../news.html" class="sidebar-link">新闻</a></li>
+            <li><a href="../skills.html" class="sidebar-link">技能包</a></li>
+            <li><a href="../about.html" class="sidebar-link">关于</a></li>
+        </ul>
+    </nav>
+    <div class="sidebar-footer"><button onclick="switchLang();closeSidebar();" class="sidebar-lang-btn">EN</button></div>
+</div>
+
+
+
+<section class="detail-hero">
         <div class="detail-hero-top">
             <h1><span id="detail-name">文心快码 (Comate)</span><span data-i18n="detail.h1"> 怎么样？</span></h1>
             <span id="detail-badge" class="detail-badge badge-free"></span>
@@ -188,7 +238,7 @@
     <div class="detail-back">
         <a href="../models.html" data-i18n="detail.back">← 返回模型库</a>
     </div>
-</main>
+
 
 <footer class="footer">
     <p data-i18n="detail.footer">AI家AI户 · 数据最后更新于 2026年6月29日 · 信息来源于各模型官方网站及公开资料</p>
@@ -198,5 +248,7 @@
 <script src="../js/i18n.js"></script>
 <script src="../js/mobile-nav.js"></script>
 <script src="../js/detail-page.js"></script>
+
+</main>
 </body>
 </html>

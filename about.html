@@ -31,38 +31,77 @@
     <link rel="stylesheet" href="css/icons.css">
 </head>
 <body>
+
+<aside class="sidebar" id="sidebar">
+    <a href="index.html" class="sidebar-logo">
+        <svg width="26" height="26" class="logo-icon" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        AI家AI户
+    </a>
+    <nav class="sidebar-nav">
+        <ul class="sidebar-links">
+            <li><a href="index.html" class="sidebar-link">首页</a></li>
+            <li><a href="models.html" class="sidebar-link">模型库</a></li>
+            <li><a href="compare.html" class="sidebar-link">横向对比</a></li>
+            <li><a href="compare-custom.html" class="sidebar-link">自定义对比</a></li>
+            <li><a href="vs/" class="sidebar-link">热门对比</a></li>
+            <li><a href="picker.html" class="sidebar-link">AI选型器</a></li>
+            <li><a href="news.html" class="sidebar-link">新闻</a></li>
+            <li><a href="skills.html" class="sidebar-link">技能包</a></li>
+            <li><a href="about.html" class="sidebar-link active">关于</a></li>
+        </ul>
+    </nav>
+    <div class="sidebar-footer">
+        <button id="langSwitch" onclick="switchLang()" class="sidebar-lang-btn">EN</button>
+    </div>
+</aside>
+<button class="sidebar-toggle" onclick="toggleSidebar()" aria-label="menu">&#9776;</button>
+
+<div class="sidebar-overlay" id="sidebarOverlay" onclick="closeSidebar()"></div>
+<div class="sidebar-drawer" id="sidebarDrawer">
+    <div class="drawer-head">
+        <span class="d-logo">🏠 AI家AI户</span>
+        <button class="drawer-close-btn" onclick="closeSidebar()" aria-label="close">&#10005;</button>
+    </div>
+    <nav class="sidebar-nav">
+        <ul class="sidebar-links">
+            <li><a href="index.html" class="sidebar-link">首页</a></li>
+            <li><a href="models.html" class="sidebar-link">模型库</a></li>
+            <li><a href="compare.html" class="sidebar-link">横向对比</a></li>
+            <li><a href="compare-custom.html" class="sidebar-link">自定义对比</a></li>
+            <li><a href="vs/" class="sidebar-link">热门对比</a></li>
+            <li><a href="picker.html" class="sidebar-link">AI选型器</a></li>
+            <li><a href="news.html" class="sidebar-link">新闻</a></li>
+            <li><a href="skills.html" class="sidebar-link">技能包</a></li>
+            <li><a href="about.html" class="sidebar-link">关于</a></li>
+        </ul>
+    </nav>
+    <div class="sidebar-footer"><button onclick="switchLang();closeSidebar();" class="sidebar-lang-btn">EN</button></div>
+</div>
+
+<main class="main-content">
 <!-- SVG Icon Sprite -->
 <object data="img/icons.svg" type="image/svg+xml" style="display:none" aria-hidden="true"></object>
 
 
-<nav class="nav">
-    <div class="nav-inner">
-        <button class="nav-toggle" onclick="toggleMobileNav()" aria-label="打开菜单"><span class="icon icon-lg "><svg width="24" height="24" class="icon-menu "><use href="img/icons.svg#icon-menu"/></svg></span></button>
-        <a href="index.html" class="nav-logo"><span class="icon icon-lg icon-primary"><svg width="24" height="24" class="icon-logo "><use href="img/icons.svg#icon-logo"/></svg></span> AI家AI户</a>
-        <ul class="nav-links">
-            <li><a href="index.html" data-i18n="nav.home">首页</a></li>
-            <li><a href="models.html" data-i18n="nav.models">模型库</a></li>
-            <li><a href="compare.html" data-i18n="nav.compare">横向对比</a></li>
-            <li><a href="compare-custom.html" data-i18n="nav.compareCustom">自定义对比</a></li>
-            <li><a href="vs/" data-i18n="nav.vs">热门对比</a></li>
-            <li><a href="picker.html" data-i18n="nav.picker">AI选型器</a></li>
-            <li><a href="news.html" data-i18n="nav.news">新闻</a></li>
-            <li><a href="skills.html" data-i18n="nav.skills">技能包</a></li>
-            <li><a href="about.html" data-i18n="nav.about">关于</a></li>
-            <li><a href="privacy.html" data-i18n="nav.privacy">隐私政策</a></li>
-            <li style="margin-left:auto;"><button id="langSwitch" onclick="switchLang()" class="nav-lang">EN</button></li>
+
+
+<nav class="sidebar-nav">
+        <ul class="sidebar-links">
+            <li><a href="index.html" class="sidebar-link">首页</a></li>
+            <li><a href="models.html" class="sidebar-link">模型库</a></li>
+            <li><a href="compare.html" class="sidebar-link">横向对比</a></li>
+            <li><a href="compare-custom.html" class="sidebar-link">自定义对比</a></li>
+            <li><a href="vs/" class="sidebar-link">热门对比</a></li>
+            <li><a href="picker.html" class="sidebar-link">AI选型器</a></li>
+            <li><a href="news.html" class="sidebar-link">新闻</a></li>
+            <li><a href="skills.html" class="sidebar-link">技能包</a></li>
+            <li><a href="about.html" class="sidebar-link">关于</a></li>
         </ul>
-    </div>
-</nav>
-<!-- 移动端汉堡菜单遮罩+抽屉 -->
-<div class="nav-overlay" id="navOverlay" onclick="closeMobileNav()"></div>
-<div class="nav-drawer" id="navDrawer">
-    <div class="drawer-header">
-        <span class="drawer-logo"><span class="icon icon-lg icon-primary"><svg width="24" height="24" class="icon-logo "><use href="img/icons.svg#icon-logo"/></svg></span> AI家AI户</span>
-        <button class="drawer-close" onclick="closeMobileNav()" aria-label="关闭菜单"><span class="icon icon-lg "><svg width="24" height="24" class="icon-close "><use href="img/icons.svg#icon-close"/></svg></span></button>
-    </div>
-    <ul class="drawer-links"></ul>
+    </nav>
+    <div class="sidebar-footer"><button onclick="switchLang();closeSidebar();" class="sidebar-lang-btn">EN</button></div>
 </div>
+
+
 
 <div class="container">
     <div class="breadcrumb"><a href="index.html" data-i18n="nav.home">首页</a> › <span data-i18n="nav.about">关于</span></div>
@@ -154,6 +193,6 @@
         <span class="tab-icon"><span class="icon icon-lg "><svg width="24" height="24" class="icon-skills "><use href="img/icons.svg#icon-skills"/></svg></span></span>技能包
     </a>
 </nav>
-
+</main>
 </body>
 </html>
