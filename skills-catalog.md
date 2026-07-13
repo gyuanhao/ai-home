@@ -1,13 +1,13 @@
 # AI家AI户 · 技能包(Skills)完整清单
 
-> 数据来源：VoltAgent/awesome-agent-skills + anbeime/skill
-> 最后更新：2026-07-01
+> 数据来源：VoltAgent/awesome-agent-skills + anbeime/skill + 社区精选
+> 最后更新：2026-07-13
 
 ## 总览
 
-- **技能总数**：271 个
-- **来源**：voltagent 193 个 / anbeime 78 个
-- **覆盖团队**：84 个
+- **技能总数**：296 个
+- **来源**：VoltAgent 193 个 / anbeime 78 个 / 社区精选 25 个
+- **覆盖团队**：107 个
 - **覆盖分类**：28 个
 
 ## 按分类浏览
@@ -120,7 +120,7 @@
 - **Entra身份认证** (entra-agent-id) — Microsoft
 - **Semgrep规则** (semgrep-rule-creator) — Trail of Bits
 
-### 文档处理 （17）
+### 文档处理 （18）
 
 - **法律技能** (awesome-legal-skills) — lawvable
 - **法律文档转换** (law-to-markdown) — anbeime
@@ -131,6 +131,7 @@
 - **Excel处理** (xlsx) — Anthropic
 - **Excel处理** (minimax-xlsx) — MiniMax
 - **JSON转PPTX** (pptx-generator) — anbeime
+- **MarkItDown文档转MD** (markitdown) — Microsoft
 - **PDF处理** (pdf) — Anthropic
 - **PDF生成** (minimax-pdf) — MiniMax
 - **PPT处理** (pptx) — Anthropic
@@ -160,7 +161,7 @@
 - **X/Twitter发布** (baoyu-post-to-x) — anbeime
 - **X文章发布** (x-article-publisher-skill) — wshuyi
 
-### 开发工具 （16）
+### 开发工具 （22）
 
 - **代码清关** (clarity-gate) — frmoretto
 - **递归分解** (recursive-decomposition-skill) — massimodeluisa
@@ -172,24 +173,32 @@
 - **设计文档** (design-md) — Google Labs
 - **网页转App** (web-to-app) — anbeime
 - **引导配置** (claude-bootstrap) — alinaqi
+- **Agent-Reach联网能力层** (agent-reach) — Panniantong
 - **AI代码审查** (coderabbit) — CodeRabbit
+- **Aider终端结对编程** (aider) — Aider-AI
+- **browser-use浏览器自动化** (browser-use) — browser-use
 - **ChatGPT应用** (chatgpt-apps) — OpenAI
 - **Codex CLI** (codex-cli) — OpenAI
 - **Copilot SDK** (copilot-sdk) — Microsoft
+- **CrewAI多Agent协作** (crewai) — CrewAI Inc.
 - **GitHub工作流** (callstack-github) — CallStack
+- **Hermes自进化Agent** (hermes-agent) — Nous Research
 - **MCP构建器** (mcp-builder) — Anthropic
+- **OpenHands自主编程** (openhands) — OpenHands (All-Hands-AI)
 
-### 创意设计 （15）
+### 创意设计 （17）
 
 - **创意指导** (creative-director-skill) — smixs
 - **古诗词配乐** (poetry-music-visual) — anbeime
 - **画布设计** (canvas-design) — Anthropic
 - **立体书插画** (pop-up-book-illustration) — anbeime
 - **品牌规范** (brand-guidelines) — Anthropic
+- **赛博风PPT生成** (cyberppt) — crazyykhllc-bit
 - **设计审查** (gstack-designer) — Garry Tan
 - **审美判断** (taste-skill) — Leonxlnx
 - **手绘图表** (hand-drawn-diagrams) — muthuishere
 - **算法艺术** (algorithmic-art) — Anthropic
+- **小黑怪诞正文配图** (ian-xiaohei-illustrations) — helloianneo (Ian)
 - **AI歌单生成** (minimax-music-playlist) — MiniMax
 - **AI流程图** (ai-drawio) — anbeime
 - **AI音乐** (claude-ai-music-skills) — bitwize-music-studio
@@ -197,7 +206,7 @@
 - **Shader着色器** (minimax-shader-dev) — MiniMax
 - **Slack GIF** (slack-gif-creator) — Anthropic
 
-### 视频 （13）
+### 视频 （14）
 
 - **爆款视频文案** (viral-video-copywriting) — anbeime
 - **多智能体视频** (video-creation-collaborator) — anbeime
@@ -209,6 +218,7 @@
 - **视频二创** (video-recreation) — anbeime
 - **视频反推** (video-frame-extractor) — anbeime
 - **视频转场** (remotion-video-enhancer) — anbeime
+- **MoneyPrinterTurbo视频生成** (money-printer-turbo) — harry0703
 - **Remotion视频** (remotion) — Remotion
 - **Sora视频** (sora) — OpenAI
 - **Venice视频生成** (venice-video) — Venice.ai
@@ -243,7 +253,7 @@
 - **Vitest测试** (testmu-vitest) — TestMu AI
 - **Web测试** (webapp-testing) — Anthropic
 
-### 移动开发 （11）
+### 移动开发 （12）
 
 - **原生UI构建** (building-native-ui) — Expo
 - **Android原生开发** (minimax-android-dev) — MiniMax
@@ -256,6 +266,7 @@
 - **React Native开发** (minimax-react-native-dev) — MiniMax
 - **RN版本升级** (callstack-rn-upgrade) — CallStack
 - **RN性能优化** (callstack-rn-perf) — CallStack
+- **scrcpy安卓投屏** (scrcpy) — Genymobile
 
 ### 数据库 （8）
 
@@ -329,20 +340,30 @@
 - **Sentry代码审查** (sentry-code-review) — Sentry
 - **Sentry问题修复** (sentry-fix-issues) — Sentry
 
-### 数据分析 （3）
+### 数据分析 （9）
 
 - **论文分析** (paper-analysis-assistant) — anbeime
 - **网页抓取** (firecrawl) — Firecrawl
+- **AutoScraper智能爬虫** (autoscraper) — alirezamika
+- **crawl4ai网页抓取** (crawl4ai) — unclecode
+- **crawlee爬虫库** (crawlee) — Apify
+- **curl-impersonate指纹伪装** (curl-impersonate) — lwthiker
+- **Scrapling反爬爬虫** (scrapling) — D4Vinci
+- **Scrapy爬虫框架** (scrapy) — Scrapy
 - **Tinybird管道** (tinybird-pipes) — Tinybird
 
-### 金融 （3）
+### 金融 （6）
 
 - **财务建模** (creating-financial-models) — anbeime
 - **股票分析** (stock-analysis) — anbeime
+- **股票数据接口** (stock-api) — zhangxiangliang
 - **市场研究** (market-research-reports) — anbeime
+- **游资股票深度分析** (uzi-skill) — wbh604
+- **Vibe-Trading交易代理** (vibe-trading) — HKUDS (香港大学数据科学研究院)
 
-### 设计 （2）
+### 设计 （3）
 
+- **品牌设计Skill** (brand-design-skill) — ziguishian
 - **Figma代码连接** (figma-code-connect) — Figma
 - **Figma生成设计** (figma-generate-design) — Figma
 
@@ -351,57 +372,22 @@
 - **云架构设计** (cloud-solution-architect) — Microsoft
 - **Terraform部署** (terraform) — HashiCorp
 
-### 搜索 （1）
+### 搜索 （2）
 
+- **近30天中文舆情检索** (last30days-skill-cn) — Jesseovo
 - **Brave网页搜索** (web-search) — Brave
 
 ### 3D （1）
 
 - **fal 3D模型** (fal-3d) — fal.ai
 
-### 内容管理 （1）
+### 内容管理 （2）
 
+- **微信公众号文章导出** (wechat-article-exporter) — wechat-article
 - **Sanity CMS** (sanity-cms) — Sanity
 
-### 资源合集 （1）
+### 资源合集 （3）
 
+- **极简创业Claude技能合集** (minimalist-entrepreneur-skills) — slavingia
 - **技能索引** (awesome-agent-skills) — VoltAgent
-
-## 按团队索引
-
-- **anbeime** (53)：内容创作全流程、智能内容系统、文章配图、网页转Markdown、Markdown格式化、公众号发布、X/Twitter发布、小红书图文、微信热点、视频创作套件、多智能体视频、商品视频、视频二创、视频反推、爆款视频文案、历史科普视频、历史访谈文案、三体视频、萌宠带货、电商文案、电商视频营销、产品营销文案、商品视频、小红书美妆、AI PPT生成、智能PPT、JSON转PPTX、PPT视觉增强、PPT路演、视频转场、语音合成、本地TTS、语音转文字、音频驱动配音、带货数字人、数字人口播、即梦提示词、多媒体带货、论文分析、合同审核、法律文档转换、股票分析、智能体团队、多智能体会议、同行顾问团、产品工具包、销售AI助手、AI流程图、立体书插画、网页转App、财务建模、市场研究、古诗词配乐
-- **Anthropic** (17)：Word文档处理、文档协作、PPT处理、Excel处理、PDF处理、算法艺术、画布设计、前端设计、Slack GIF、主题工厂、Web组件构建、MCP构建器、Web测试、品牌规范、内部通讯、技能创建器、模板
-- **MiniMax** (16)：前端全栈开发、全栈架构、Android原生开发、iOS应用开发、Flutter跨平台、React Native开发、Shader着色器、GIF贴纸生成、PDF生成、PPT生成编辑、Excel处理、Word文档、视觉分析、多模态生成、AI音乐生成、AI歌单生成
-- **OpenAI** (12)：Codex CLI、OpenAI文档、图像生成、Sora视频、语音合成、语音转文字、浏览器自动化、Cloudflare部署、Vercel部署、Netlify部署、ChatGPT应用、Figma转代码
-- **Corey Haines** (9)：AI SEO优化、营销文案、竞品对比页、定价策略、程序化SEO、发布策略、SEO审计、冷邮件、推荐计划
-- **Microsoft** (8)：云架构设计、Copilot SDK、Entra身份认证、Azure OpenAI .NET、Azure AI项目、Agent框架、Azure身份认证TS、Azure搜索
-- **TestMu AI** (7)：Playwright测试、Cypress测试、Jest测试、Vitest测试、pytest测试、Selenium测试、CI/CD流水线
-- **Cloudflare** (6)：Agents SDK、Workers最佳实践、Wrangler部署、Durable Objects、Web性能审计、沙箱SDK
-- **Hugging Face** (6)：模型训练、浏览器ML、Gradio应用、数据集管理、模型评估、视觉模型训练
-- **Trail of Bits** (5)：安全合约构建、Semgrep规则、静态分析、变体分析、属性测试
-- **Google Workspace** (5)：Google Drive管理、Google Sheets读写、Gmail管理、Google日历、Google Docs读写
-- **Better Auth** (5)：Better Auth最佳实践、认证系统搭建、认证提供商、双因素认证、组织管理
-- **Garry Tan** (5)：CEO审查、设计审查、QA测试、发布管理、工程管理
-- **Venice.ai** (5)：Venice聊天API、Venice图像生成、Venice语音合成、Venice视频生成、Venice模型目录
-- **Sentry** (4)：Sentry SDK安装、Sentry问题修复、Sentry代码审查、AI监控
-- **Firebase** (4)：Firebase认证、Firestore指南、Genkit JS、安全规则审计
-- **Coinbase** (4)：链上数据查询、USDC转账、代币交易、API变现
-- **Binance** (4)：加密市场排行、代币安全审计、现货交易、交易信号
-- **Addy Osmani** (4)：Web质量审计、Core Web Vitals优化、Lighthouse优化、性能预算
-- **Vercel** (3)：Next.js最佳实践、Next.js缓存、Next.js升级
-- **Expo** (3)：原生UI构建、Expo部署、Expo+Tailwind
-- **Netlify** (3)：Netlify函数、边缘函数、AI网关
-- **Figma** (3)：Figma代码连接、Figma生成设计、Figma实现设计
-- **WordPress** (3)：WP区块开发、WP插件开发、WP REST API
-- **Apollo GraphQL** (3)：Apollo客户端、Apollo联邦、GraphQL MCP
-- **Auth0** (3)：Auth0 React、Auth0 Next.js、多因素认证
-- **fal.ai** (3)：fal图像视频、fal 3D模型、fal模型训练
-- **Kim Barrett** (3)：吸睛广告创意、标题矩阵、全漏斗营销
-- **CallStack** (3)：RN性能优化、GitHub工作流、RN版本升级
-- **Google Gemini** (2)：Gemini API开发、Gemini实时API
-- **Google Labs** (2)：设计文档、shadcn/ui组件
-- **Stripe** (2)：Stripe最佳实践、Stripe升级
-- **Brave** (2)：Brave网页搜索、LLM上下文
-- **ClickHouse** (2)：ClickHouse最佳实践、chDB数据存储
-- **VoltAgent** (2)：VoltAgent平台、技能索引
-- **Zero** (2)：Zero工具发现、Zero Gemini扩展
+- **设计类Markdown技能合集** (awesome-design-md) — VoltAgent
