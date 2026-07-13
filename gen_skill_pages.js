@@ -300,7 +300,8 @@ function slugFor(s) {
 // ---------------- 页面模板 ----------------
 function buildPage(s, idx, slug) {
   const isAnb = s.source === 'anbeime';
-  const srcLabel = isAnb ? 'anbeime' : 'VoltAgent';
+  const SOURCE_LABELS = { anbeime: 'anbeime', voltagent: 'VoltAgent', community: '社区精选' };
+  const srcLabel = SOURCE_LABELS[s.source] || '社区精选';
   const srcCls = isAnb ? 'sd-tag--source-a' : 'sd-tag--source-v';
   const b = bankFor(s.cat);
   const overview = s.descZh || s.desc;

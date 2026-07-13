@@ -4,7 +4,7 @@
  *   - VoltAgent/awesome-agent-skills (1497+ 官方+社区技能)
  *   - anbeime/skill (208 本地+社区技能)
  * 包含团队: Anthropic / OpenAI / MiniMax / Vercel / Cloudflare / Google / Google Workspace / Microsoft / Meta / Stripe / HuggingFace / Sentry / Expo / Netlify / Figma / Trail of Bits / Firebase / WordPress / Apollo / Coinbase / Binance / Auth0 / Brave / fal.ai / ClickHouse / DuckDB / Remotion / Replicate / GSAP / Redis / NVIDIA / MongoDB / Flutter / Angular / Notion / Browserbase / CodeRabbit / Datadog / Tinybird / Firecrawl / Sanity / Neon / Composio / Typefully / Resend / Terraform / VoltAgent / CallStack / BetterAuth / Courier / Zero / Venice.ai / Addy Osmani / Garry Tan / TestMu AI / Corey Haines / Kim Barrett / anbeime 等
- * 最后更新: 2026-07-01
+ * 最后更新: 2026-07-13（新增 25 个社区精选技能）
  */
 
 const skillsData = [
@@ -371,5 +371,44 @@ const skillsData = [
   { name:"venice-image", nameZh:"Venice图像生成", desc:"Image generation endpoints and styles via Venice API", descZh:"Venice API图像生成：端点和风格", team:"Venice.ai", source:"voltagent", cat:"图像", url:"https://github.com/veniceai/skills/tree/main/skills/venice-image-generate" },
   { name:"venice-audio", nameZh:"Venice语音合成", desc:"Text-to-speech with multiple models, voices, formats, and streaming", descZh:"Venice文字转语音：多模型、多音色、流式", team:"Venice.ai", source:"voltagent", cat:"语音", url:"https://github.com/veniceai/skills/tree/main/skills/venice-audio-speech" },
   { name:"venice-video", nameZh:"Venice视频生成", desc:"Video generation and transcription workflows via Venice", descZh:"Venice视频生成和转录工作流", team:"Venice.ai", source:"voltagent", cat:"视频", url:"https://github.com/veniceai/skills/tree/main/skills/venice-video" },
-  { name:"venice-models", nameZh:"Venice模型目录", desc:"Venice AI model catalog with traits and compatibility mappings", descZh:"Venice AI模型目录：特性、兼容性映射", team:"Venice.ai", source:"voltagent", cat:"AI/ML", url:"https://github.com/veniceai/skills/tree/main/skills/venice-models" }
+  { name:"venice-models", nameZh:"Venice模型目录", desc:"Venice AI model catalog with traits and compatibility mappings", descZh:"Venice AI模型目录：特性、兼容性映射", team:"Venice.ai", source:"voltagent", cat:"AI/ML", url:"https://github.com/veniceai/skills/tree/main/skills/venice-models" },
+
+  // ===================== 社区精选（2026-07-13 新增） =====================
+
+  // --- 开发工具 / AI Agent ---
+  { name:"openhands", nameZh:"OpenHands自主编程", desc:"Autonomous AI software engineer that writes, runs, and fixes code", descZh:"自主 AI 软件工程师，能自动写代码、执行调试、修复 Bug，像自律的编程搭档", team:"OpenHands (All-Hands-AI)", source:"community", cat:"开发工具", url:"https://github.com/OpenHands/openhands" },
+  { name:"hermes-agent", nameZh:"Hermes自进化Agent", desc:"Self-improving AI agent with built-in learning loop and multi-channel access", descZh:"Nous Research 出品的自我进化 AI Agent，内置学习循环，越用越懂你的习惯，支持多渠道交互", team:"Nous Research", source:"community", cat:"开发工具", url:"https://github.com/NousResearch/hermes-agent" },
+  { name:"crewai", nameZh:"CrewAI多Agent协作", desc:"Multi-agent orchestration framework for role-playing AI teams", descZh:"多 Agent 团队协作框架，让不同角色 AI 分工明确，从调研、分析到输出一条龙搞定", team:"CrewAI Inc.", source:"community", cat:"开发工具", url:"https://github.com/crewAIInc/crewAI" },
+  { name:"aider", nameZh:"Aider终端结对编程", desc:"In-terminal AI pair programming that edits code and auto-commits", descZh:"终端里的 AI 结对编程神器，边聊边改代码，改完自动 commit 提交历史", team:"Aider-AI", source:"community", cat:"开发工具", url:"https://github.com/Aider-AI/aider" },
+  { name:"browser-use", nameZh:"browser-use浏览器自动化", desc:"AI agents that control and automate web browsers", descZh:"让 AI Agent 自主操控浏览器，完成点击、填表、导航等自动化任务", team:"browser-use", source:"community", cat:"开发工具", url:"https://github.com/browser-use/browser-use" },
+  { name:"agent-reach", nameZh:"Agent-Reach联网能力层", desc:"CLI capability layer giving AI agents free internet access to social platforms", descZh:"为任意命令行 AI Agent 一键接入互联网，免费读取搜索 Twitter、Reddit、YouTube、B站、小红书等内容", team:"Panniantong", source:"community", cat:"开发工具", url:"https://github.com/Panniantong/Agent-Reach" },
+
+  // --- 金融 / 量化 ---
+  { name:"uzi-skill", nameZh:"游资股票深度分析", desc:"AI stock deep-analysis engine with 66-investor jury scoring", descZh:"AI 股票深度分析引擎，66 位投资风格评审团按量化规则打分，生成 Bloomberg 风格报告", team:"wbh604", source:"community", cat:"金融", url:"https://github.com/wbh604/UZI-Skill" },
+  { name:"stock-api", nameZh:"股票数据接口", desc:"A-share/HK/US stock market data API for AI agents", descZh:"为 AI Agent 提供 A股/港股/美股行情与基本面数据接口", team:"zhangxiangliang", source:"community", cat:"金融", url:"https://github.com/zhangxiangliang/stock-api" },
+  { name:"vibe-trading", nameZh:"Vibe-Trading交易代理", desc:"AI personal trading agent with multi-market data, backtest, and factor research", descZh:"HKUDS 开源的 AI 个人交易代理，覆盖多市场数据、因子研究、回测与模拟交易，内置 75+ 技能", team:"HKUDS (香港大学数据科学研究院)", source:"community", cat:"金融", url:"https://github.com/HKUDS/Vibe-Trading" },
+
+  // --- 数据分析 / 爬虫 ---
+  { name:"crawl4ai", nameZh:"crawl4ai网页抓取", desc:"Open-source LLM-friendly web crawler for structured data", descZh:"开源的 LLM 友好网页爬虫，异步抓取并输出结构化、AI 就绪的数据", team:"unclecode", source:"community", cat:"数据分析", url:"https://github.com/unclecode/crawl4ai" },
+  { name:"crawlee", nameZh:"crawlee爬虫库", desc:"Web scraping and browser automation library by Apify", descZh:"Apify 出品的网页抓取与浏览器自动化库，支持 JS/Python，内置反爬与存储", team:"Apify", source:"community", cat:"数据分析", url:"https://github.com/apify/crawlee" },
+  { name:"scrapy", nameZh:"Scrapy爬虫框架", desc:"Fast and open-source web crawling framework for Python", descZh:"Python 高性能开源爬虫框架，适合大规模结构化数据抓取", team:"Scrapy", source:"community", cat:"数据分析", url:"https://github.com/scrapy/scrapy" },
+  { name:"scrapling", nameZh:"Scrapling反爬爬虫", desc:"Advanced web scraping library with anti-bot bypass", descZh:"进阶网页抓取库，自带反爬绕过与指纹伪装，适配动态页面", team:"D4Vinci", source:"community", cat:"数据分析", url:"https://github.com/D4Vinci/Scrapling" },
+  { name:"autoscraper", nameZh:"AutoScraper智能爬虫", desc:"Smart minimalist web scraper that learns from examples", descZh:"极简智能爬虫，给定示例即可自动学习抓取规则，无需写选择器", team:"alirezamika", source:"community", cat:"数据分析", url:"https://github.com/alirezamika/autoscraper" },
+  { name:"curl-impersonate", nameZh:"curl-impersonate指纹伪装", desc:"curl with real browser TLS/JA3 fingerprint impersonation", descZh:"带真实浏览器指纹伪装（TLS/JA3）的 curl，用于绕过反爬检测", team:"lwthiker", source:"community", cat:"数据分析", url:"https://github.com/lwthiker/curl-impersonate" },
+
+  // --- 视频 / 设计 / 创意 ---
+  { name:"money-printer-turbo", nameZh:"MoneyPrinterTurbo视频生成", desc:"Auto-generate short videos from a topic with AI scripts and voiceover", descZh:"输入主题自动生成短视频：AI 写脚本、配音、字幕、素材，一键产出", team:"harry0703", source:"community", cat:"视频", url:"https://github.com/harry0703/MoneyPrinterTurbo" },
+  { name:"brand-design-skill", nameZh:"品牌设计Skill", desc:"Image-first Codex skill for brand identity and HTML brand manuals", descZh:"以图像为先的 Codex 品牌设计 Skill，对话式澄清需求、探索 Logo、输出 VI 规范与 HTML 品牌手册", team:"ziguishian", source:"community", cat:"设计", url:"https://github.com/ziguishian/brand-design-skill" },
+  { name:"cyberppt", nameZh:"赛博风PPT生成", desc:"Generate cyberpunk-style PowerPoint presentations with AI", descZh:"用 AI 生成赛博朋克风格的 PPT 演示文稿", team:"crazyykhllc-bit", source:"community", cat:"创意设计", url:"https://github.com/crazyykhllc-bit/CyberPPT" },
+  { name:"ian-xiaohei-illustrations", nameZh:"小黑怪诞正文配图", desc:"Generate 16:9 hand-drawn Xiaohei illustrations for Chinese articles", descZh:"为中文文章生成 16:9 白底手绘「小黑」怪诞正文配图，少量红橙蓝中文批注", team:"helloianneo (Ian)", source:"community", cat:"创意设计", url:"https://github.com/helloianneo/ian-xiaohei-illustrations" },
+
+  // --- 文档 / 移动 / 内容 / 搜索 ---
+  { name:"markitdown", nameZh:"MarkItDown文档转MD", desc:"Convert files (PDF, docx, xlsx, images) to Markdown by Microsoft", descZh:"微软出品的文件转 Markdown 工具，支持 PDF、Word、Excel、图片等批量转换", team:"Microsoft", source:"community", cat:"文档处理", url:"https://github.com/microsoft/markitdown" },
+  { name:"scrcpy", nameZh:"scrcpy安卓投屏", desc:"Display and control Android devices over USB/network", descZh:"在电脑上显示并操控安卓设备，支持投屏、录屏、键鼠控制", team:"Genymobile", source:"community", cat:"移动开发", url:"https://github.com/Genymobile/scrcpy" },
+  { name:"wechat-article-exporter", nameZh:"微信公众号文章导出", desc:"Export WeChat official account articles to Markdown/HTML", descZh:"一键导出微信公众号文章为 Markdown/HTML，保留排版与图片", team:"wechat-article", source:"community", cat:"内容管理", url:"https://github.com/wechat-article/wechat-article-exporter" },
+  { name:"last30days-skill-cn", nameZh:"近30天中文舆情检索", desc:"Search and analyze last-30-days Chinese internet content across 8 platforms", descZh:"自动检索微博、小红书、B站、知乎等 8 大中文平台近 30 天内容，生成有据可查的研究报告", team:"Jesseovo", source:"community", cat:"搜索", url:"https://github.com/Jesseovo/last30days-skill-cn" },
+
+  // --- 资源合集 ---
+  { name:"awesome-design-md", nameZh:"设计类Markdown技能合集", desc:"Curated collection of design-related markdown skills", descZh:"精选设计类 Markdown 技能合集，覆盖 UI、品牌、设计系统等多种场景", team:"VoltAgent", source:"community", cat:"资源合集", url:"https://github.com/VoltAgent/awesome-design-md" },
+  { name:"minimalist-entrepreneur-skills", nameZh:"极简创业Claude技能合集", desc:"Collection of Claude Code skills from The Minimalist Entrepreneur", descZh:"《极简创业家》作者 Sahil Lavingia 开源的 Claude Code 技能合集，覆盖独立开发全流程", team:"slavingia", source:"community", cat:"资源合集", url:"https://github.com/slavingia/skills" }
 ];

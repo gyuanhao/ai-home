@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Scrapy爬虫框架（scrapy）— Python 高性能开源爬虫框架，适合大规模结构化数据抓取 由 Scrapy 提供，来源 社区精选。查看功能介绍、使用方式与官方来源链接。">
+    <meta name="keywords" content="Scrapy爬虫框架,scrapy,AI技能,数据分析,Agent技能">
+    <title>Scrapy爬虫框架 是什么？功能介绍与使用方式 | AI家AI户</title>
+    <link rel="canonical" href="https://myaishome.com/skills/scrapy.html">
+    <meta property="og:title" content="Scrapy爬虫框架 是什么？功能介绍与使用方式 | AI家AI户">
+    <meta property="og:description" content="Scrapy爬虫框架（scrapy）— Python 高性能开源爬虫框架，适合大规模结构化数据抓取 由 Scrapy 提供，来源 社区精选。查看功能介绍、使用方式与官方来源链接。">
+    <meta property="og:url" content="https://myaishome.com/skills/scrapy.html">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="zh_CN">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Scrapy爬虫框架 是什么？功能介绍与使用方式 | AI家AI户">
+    <meta name="twitter:description" content="Scrapy爬虫框架（scrapy）— Python 高性能开源爬虫框架，适合大规模结构化数据抓取 由 Scrapy 提供，来源 社区精选。查看功能介绍、使用方式与官方来源链接。">
+    <meta name="google-site-verification" content="xt9f05QoKT1xpnVg94WeUsSOYPO88A3CT1j57ePzKZ8" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TBTFSXQ6NF"></script>
+    <script>
+      window.dataLayer=window.dataLayer||[];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js',new Date());
+      gtag('config','G-TBTFSXQ6NF');
+    </script>
+    <link rel="stylesheet" href="../css/style.css">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Scrapy爬虫框架","alternateName":"scrapy","description":"Python 高性能开源爬虫框架，适合大规模结构化数据抓取","applicationCategory":"AIApplication","operatingSystem":"Web","url":"https://myaishome.com/skills/scrapy.html","offers":{"@type":"Offer","price":"0","priceCurrency":"CNY"}}</script>
+</head>
+<body>
+
+<aside class="sidebar" id="sidebar">
+    <a href="../index.html" class="sidebar-logo">
+        <svg width="26" height="26" class="logo-icon" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        AI家AI户
+    </a>
+    <nav class="sidebar-nav">
+        <ul class="sidebar-links">
+            <li><a href="../index.html" class="sidebar-link">首页</a></li>
+            <li><a href="../models.html" class="sidebar-link">模型库</a></li>
+            <li><a href="../compare.html" class="sidebar-link">横向对比</a></li>
+            <li><a href="../compare-custom.html" class="sidebar-link">自定义对比</a></li>
+            <li><a href="../vs/" class="sidebar-link">热门对比</a></li>
+            <li><a href="../picker.html" class="sidebar-link">AI选型器</a></li>
+            <li><a href="../news.html" class="sidebar-link">新闻</a></li>
+            <li><a href="../skills.html" class="sidebar-link active">技能包</a></li>
+            <li><a href="../about.html" class="sidebar-link">关于</a></li>
+        </ul>
+    </nav>
+    <div class="sidebar-footer">
+        <button id="langSwitch" onclick="switchLang()" class="sidebar-lang-btn">EN</button>
+    </div>
+</aside>
+<button class="sidebar-toggle" onclick="toggleSidebar()" aria-label="menu">&#9776;</button>
+
+<div class="sidebar-overlay" id="sidebarOverlay" onclick="closeSidebar()"></div>
+<div class="sidebar-drawer" id="sidebarDrawer">
+    <div class="drawer-head">
+        <span class="d-logo">🏠 AI家AI户</span>
+        <button class="drawer-close-btn" onclick="closeSidebar()" aria-label="close">&#10005;</button>
+    </div>
+    <nav class="sidebar-nav">
+        <ul class="sidebar-links">
+            <li><a href="../index.html" class="sidebar-link">首页</a></li>
+            <li><a href="../models.html" class="sidebar-link">模型库</a></li>
+            <li><a href="../compare.html" class="sidebar-link">横向对比</a></li>
+            <li><a href="../compare-custom.html" class="sidebar-link">自定义对比</a></li>
+            <li><a href="../vs/" class="sidebar-link">热门对比</a></li>
+            <li><a href="../picker.html" class="sidebar-link">AI选型器</a></li>
+            <li><a href="../news.html" class="sidebar-link">新闻</a></li>
+            <li><a href="../skills.html" class="sidebar-link">技能包</a></li>
+            <li><a href="../about.html" class="sidebar-link">关于</a></li>
+        </ul>
+    </nav>
+    <div class="sidebar-footer"><button onclick="switchLang();closeSidebar();" class="sidebar-lang-btn">EN</button></div>
+</div>
+
+<main class="main-content">
+<div class="container">
+    <div class="breadcrumb"><a href="../index.html">首页</a> › <a href="../skills.html">技能包</a> › <span>Scrapy爬虫框架</span></div>
+    <h1 style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">Scrapy爬虫框架 <span style="font-size:18px;color:var(--text-secondary);font-family:monospace;font-weight:400;">scrapy</span></h1>
+    <div class="sd-tags">
+        <span class="sd-tag sd-tag--source-v">来源 · 社区精选</span>
+        <span class="sd-tag sd-tag--cat">分类 · 数据分析</span>
+        <span class="sd-tag sd-tag--team">团队 · Scrapy</span>
+    </div>
+
+    <h2 class="sd-section">一、功能概述</h2>
+    <p class="sd-overview">Python 高性能开源爬虫框架，适合大规模结构化数据抓取。该技能让 AI 在「数据分析」领域具备专项能力，适合希望通过自然语言快速完成相关任务的用户。</p>
+
+    <h2 class="sd-section">二、功能介绍</h2>
+    <ul class="sd-list"><li>数据清洗与预处理</li><li>统计分析与可视化</li><li>洞察提取与报告生成</li><li>对接常见数据源与仓库</li></ul>
+
+    <h2 class="sd-section">三、使用方式</h2>
+    <ol class="sd-list sd-steps"><li><b>第 1 步：</b>在支持 Skill 的 AI 客户端（如 Claude、CodeBuddy）中安装「Scrapy爬虫框架」技能</li><li><b>第 2 步：</b>用自然语言描述你的需求，例如：分析这份销售数据，找出增长最快的品类</li><li><b>第 3 步：</b>AI 会自动调用该技能完成任务，并在对话中交付结果</li><li><b>第 4 步：</b>需要修改时，直接告诉 AI 调整点，无需从头再来</li></ol>
+
+    <h2 class="sd-section">四、来源信息</h2>
+    <table class="sd-meta">
+        <tr><td>来源仓库</td><td><a class="sd-source-link" href="https://github.com/scrapy/scrapy" target="_blank" rel="noopener">https://github.com/scrapy/scrapy</a></td></tr>
+        <tr><td>提供方</td><td>Scrapy（官方技能）</td></tr>
+        <tr><td>开源许可</td><td>详见来源仓库，多为 Apache 2.0 / MIT 等开源许可</td></tr>
+    </table>
+
+    <p style="margin-top:28px;"><a class="sd-back" href="../skills.html">← 返回技能包列表</a></p>
+</div>
+
+<footer class="footer">
+    <p>本站仅做聚合索引，具体安装与使用规则请查阅各技能的来源仓库。技能（Skills）是 AI Agent 的"插件"，安装后赋予 AI 专项能力。</p>
+    <p style="margin-top:6px;font-size:13px;"><a href="../privacy.html">隐私政策</a></p>
+</footer>
+
+<script src="../js/cookie-consent.js"></script>
+<script src="../js/mobile-nav.js"></script>
+</main>
+</body>
+</html>
