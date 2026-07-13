@@ -271,7 +271,7 @@
         for (var i = 0; i < skillsData.length; i++) {
             var s = skillsData[i];
             if (activeCat !== 'all' && s.cat !== activeCat) continue;
-            if (query && (s.name + ' ' + s.nameZh + ' ' + s.desc + ' ' + s.team + ' ' + s.cat).toLowerCase().indexOf(query) === -1) continue;
+            if (query && (s.name + ' ' + s.nameZh + ' ' + s.desc + ' ' + s.descZh + ' ' + s.team + ' ' + s.cat).toLowerCase().indexOf(query) === -1) continue;
             result.push(s);
         }
         return result;
