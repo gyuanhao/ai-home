@@ -685,9 +685,9 @@ a:hover { color: var(--primary-dark); }
     opacity: 1;
     color: var(--primary);
 }
-#modelSearch {
+.search-bar-inner input {
     flex: 1;
-    border: none;
+    border: none !important;
     outline: none;
     background: transparent;
     font-size: 15px;
@@ -695,8 +695,10 @@ a:hover { color: var(--primary-dark); }
     font-family: inherit;
     min-width: 0;
     line-height: 1.4;
+    padding: 0;
+    margin: 0;
 }
-#modelSearch::placeholder {
+.search-bar-inner input::placeholder {
     color: var(--text-muted, #9ca3af);
 }
 .search-bar-clear {
@@ -1032,7 +1034,7 @@ a:hover { color: var(--primary-dark); }
     .search-bar { margin-bottom: 16px; }
     .search-bar-inner { height: 42px; padding: 0 12px; }
     .search-bar-hint { display: none; }
-    #modelSearch { font-size: 14px; }
+    .search-bar-inner input { font-size: 14px; }
     .select-grid { grid-template-columns: 1fr; }
     .select-card { padding: 10px 12px; min-height: 52px; }
 }
