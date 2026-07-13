@@ -1245,3 +1245,29 @@ a:hover { color: var(--primary-dark); }
     .mobile-tabs { display: flex; }
     body { padding-bottom: 64px; }
 }
+
+/* === 技能详情页 (skills/<slug>.html) === */
+.sd-tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 4px; }
+.sd-tag { font-size: 12px; font-weight: 600; padding: 4px 12px; border-radius: 50px; line-height: 1.6; }
+.sd-tag--source-v { background: #DBEAFE; color: #2563EB; }
+.sd-tag--source-a { background: #FEF3C7; color: #D97706; }
+.sd-tag--cat { background: #F3F4F6; color: #374151; }
+.sd-tag--team { background: #ECFDF5; color: #16A34A; }
+.sd-section {
+    margin-top: 30px; padding-bottom: 6px;
+    border-bottom: 2px solid #2563EB;
+    font-size: 20px; font-weight: 700; color: #2563EB;
+}
+.sd-overview { margin-top: 12px; line-height: 1.8; color: #374151; font-size: 15px; }
+.sd-list { margin: 14px 0; padding-left: 22px; }
+.sd-list li { margin: 9px 0; line-height: 1.7; color: #374151; font-size: 15px; }
+.sd-list.sd-steps { list-style: decimal; }
+.sd-list.sd-steps li { padding-left: 4px; }
+.sd-meta { width: 100%; border-collapse: collapse; margin-top: 14px; }
+.sd-meta td {
+    border: 1px solid #E5E7EB; padding: 11px 14px; font-size: 14px; vertical-align: top; color: #374151;
+}
+.sd-meta td:first-child { background: #F9FAFB; font-weight: 600; color: #374151; width: 110px; white-space: nowrap; }
+.sd-source-link { color: #2563EB; text-decoration: underline; word-break: break-all; }
+.sd-back { display: inline-block; margin-top: 4px; color: #2563EB; font-weight: 600; text-decoration: none; }
+.sd-back:hover { text-decoration: underline; }
