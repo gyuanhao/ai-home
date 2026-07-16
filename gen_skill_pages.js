@@ -305,14 +305,23 @@ function buildPage(s, idx, slug) {
   const srcCls = isAnb ? 'sd-tag--source-a' : 'sd-tag--source-v';
   const b = bankFor(s.cat);
   const overview = s.descZh || s.desc;
-  const bullets = b.bullets.map(x => '<li>' + esc(x) + '</li>').join('');
+  // 功能介绍：前两条为该技能专属（名称/英文代码/团队/简介），后两条为本类通用能力（带主语改写，避免同类完全雷同）
+  function trimBullet(x) { return String(x).split(/[:：]/)[0]; }
+  const specific = [
+    esc(s.nameZh) + '（' + esc(s.name) + '）的核心能力：' + esc(s.descZh || s.desc) + '。',
+    '由 ' + esc(s.team) + ' 提供，来源 ' + srcLabel + '，归类于「' + esc(s.cat) + '」分类。'
+  ];
+  const generic = (b.bullets || []).slice(0, 2).map(function(x) {
+    return '「' + esc(s.nameZh) + '」可' + esc(trimBullet(x)) + '。';
+  });
+  const bullets = specific.concat(generic).map(function(x) { return '<li>' + x + '</li>'; }).join('');
   const example = (b.example || GENERIC.example).replace('{name}', s.nameZh);
   const steps = [
     '在支持 Skill 的 AI 客户端（如 Claude、CodeBuddy）中安装「' + esc(s.nameZh) + '」技能',
-    '用自然语言描述你的需求，例如：' + esc(example),
+    '用自然语言描述你的需求，例如：' + esc(example) + '（由「' + esc(s.nameZh) + '」负责执行）',
     'AI 会自动调用该技能完成任务，并在对话中交付结果',
     '需要修改时，直接告诉 AI 调整点，无需从头再来'
-  ].map((t, i) => '<li><b>第 ' + (i + 1) + ' 步：</b>' + t + '</li>').join('');
+  ].map(function(t, i) { return '<li><b>第 ' + (i + 1) + ' 步：</b>' + t + '</li>'; }).join('');
 
   const title = esc(s.nameZh) + ' 是什么？功能介绍与使用方式 | AI家AI户';
   const desc = esc(s.nameZh) + '（' + esc(s.name) + '）— ' + esc(overview) + ' 由 ' + esc(s.team) + ' 提供，来源 ' + srcLabel + '。查看功能介绍、使用方式与官方来源链接。';

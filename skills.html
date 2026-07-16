@@ -240,7 +240,21 @@
         });
     }
 
-    searchInput.addEventListener('input', function() { currentPage = 1; render(); toggleSkillClear(); });
+    searchInput.addEventListener('input', function() {
+        // 搜索时取消分类胶囊筛选（视觉+逻辑），改为在全部技能中检索
+        if (searchInput.value.trim()) {
+            var buttons = catFilters.querySelectorAll('.filter-btn');
+            for (var k = 0; k < buttons.length; k++) buttons[k].classList.remove('active');
+            var all = catFilters.querySelector('[data-cat="all"]');
+            if (all) all.classList.add('active');
+            activeCat = 'all';
+        }
+        currentPage = 1; render(); toggleSkillClear();
+    });
+    // 回车同样触发搜索（忽略分类），并避免表单默认行为
+    searchInput.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') { e.preventDefault(); currentPage = 1; render(); }
+    });
 
     // 搜索清除按钮
     var skillClearBtn = document.getElementById('skillSearchClear');
@@ -270,8 +284,14 @@
         var result = [];
         for (var i = 0; i < skillsData.length; i++) {
             var s = skillsData[i];
-            if (activeCat !== 'all' && s.cat !== activeCat) continue;
-            if (query && (s.name + ' ' + s.nameZh + ' ' + s.desc + ' ' + s.descZh + ' ' + s.team + ' ' + s.cat).toLowerCase().indexOf(query) === -1) continue;
+            if (query) {
+                // 搜索模式：忽略分类筛选，在全部技能中检索；命中字段含名称/英文名/作者/简介/分类/仓库链接(英文代码)
+                var hay = (s.name + ' ' + s.nameZh + ' ' + s.desc + ' ' + s.descZh + ' ' + s.team + ' ' + s.cat + ' ' + s.url).toLowerCase();
+                if (hay.indexOf(query) === -1) continue;
+            } else {
+                // 无搜索：按分类胶囊筛选
+                if (activeCat !== 'all' && s.cat !== activeCat) continue;
+            }
             result.push(s);
         }
         return result;
