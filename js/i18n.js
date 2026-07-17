@@ -408,6 +408,18 @@ function applyI18n() {
         const key = el.getAttribute('data-i18n');
         if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
             el.placeholder = t(key);
+        } else if (el.querySelector('.sb-icon')) {
+            // 保留 SVG 图标子节点，只更新文字（最后一个文本节点）
+            const svg = el.querySelector('.sb-icon');
+            // 移除 SVG 之后的所有兄弟节点（旧文字）
+            let sibling = svg.nextSibling;
+            while (sibling) {
+                const next = sibling.nextSibling;
+                el.removeChild(sibling);
+                sibling = next;
+            }
+            // 在 SVG 后面插入新文字
+            el.appendChild(document.createTextNode(t(key)));
         } else {
             el.innerHTML = t(key);
         }
