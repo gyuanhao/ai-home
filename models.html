@@ -47,6 +47,7 @@
             <li><a href="picker.html" class="sidebar-link">AI选型器</a></li>
             <li><a href="news.html" class="sidebar-link">新闻</a></li>
             <li><a href="skills.html" class="sidebar-link">技能包</a></li>
+            <li><a href="blog/" class="sidebar-link"><svg class="sb-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>博客</a></li>
             <li><a href="about.html" class="sidebar-link">关于</a></li>
         </ul>
     </nav>
@@ -72,6 +73,7 @@
             <li><a href="picker.html" class="sidebar-link">AI选型器</a></li>
             <li><a href="news.html" class="sidebar-link">新闻</a></li>
             <li><a href="skills.html" class="sidebar-link">技能包</a></li>
+            <li><a href="blog/" class="sidebar-link"><svg class="sb-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>博客</a></li>
             <li><a href="about.html" class="sidebar-link">关于</a></li>
         </ul>
     </nav>
@@ -92,8 +94,35 @@
     <div class="breadcrumb"><a href="index.html" data-i18n="nav.home">首页</a> › <span data-i18n="nav.models">模型库</span></div>
     <h1 style="display:flex;align-items:center;gap:6px;"><span class="icon icon-xl icon-primary"><svg width="32" height="32" class="icon-models "><use href="img/icons.svg#icon-models"/></svg></span>模型库</h1>
     <p style="color:var(--text-secondary); margin-bottom:20px;" data-i18n="models.total">
-        共收录 <strong id="totalCount">43</strong> 个产品，涵盖 AI 大模型、Agent 平台、图像/视频/代码模型 + AI辅助工具。点击卡片跳转官网。信息最后更新：2026年7月13日（AI辅助工具2026年7月13日）
+        共收录 <strong id="totalCount">44</strong> 个产品，涵盖 AI 大模型、Agent 平台、图像/视频/代码模型 + AI辅助工具。点击卡片跳转官网。信息最后更新：2026年7月13日（AI辅助工具2026年7月13日）
     </p>
+
+    <div class="category-guide" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px;margin:4px 0 24px;">
+        <div style="border:1px solid var(--border-color,#e5e7eb);border-radius:12px;padding:14px 16px;background:var(--card-bg,#fff);">
+            <div style="font-weight:600;margin-bottom:4px;">🗣️ 语言模型</div>
+            <div style="font-size:13px;color:var(--text-secondary);line-height:1.5;">聊天、写作、推理、长文档分析的主力。代表：DeepSeek（免费推理强）、Kimi（中文长文本）、ChatGPT、Claude、通义千问、文心一言。</div>
+        </div>
+        <div style="border:1px solid var(--border-color,#e5e7eb);border-radius:12px;padding:14px 16px;background:var(--card-bg,#fff);">
+            <div style="font-weight:600;margin-bottom:4px;">🤖 Agent平台</div>
+            <div style="font-size:13px;color:var(--text-secondary);line-height:1.5;">能自己调用工具、拆任务、跑流程的"数字员工"。代表：Coze（零代码搭建）、Dify、Manus、n8n（工作流自动化）。</div>
+        </div>
+        <div style="border:1px solid var(--border-color,#e5e7eb);border-radius:12px;padding:14px 16px;background:var(--card-bg,#fff);">
+            <div style="font-weight:600;margin-bottom:4px;">🎨 图像模型</div>
+            <div style="font-size:13px;color:var(--text-secondary);line-height:1.5;">文生图、图生图、Logo/插画设计。代表：Midjourney（画质天花板）、DALL·E、通义万相、即梦、Stable Diffusion（可本地部署）。</div>
+        </div>
+        <div style="border:1px solid var(--border-color,#e5e7eb);border-radius:12px;padding:14px 16px;background:var(--card-bg,#fff);">
+            <div style="font-weight:600;margin-bottom:4px;">🎬 视频模型</div>
+            <div style="font-size:13px;color:var(--text-secondary);line-height:1.5;">文字/图片生成短视频、换脸、配音。代表：可灵 Kling、Runway、Sora、海螺视频、Vidu、Pika。</div>
+        </div>
+        <div style="border:1px solid var(--border-color,#e5e7eb);border-radius:12px;padding:14px 16px;background:var(--card-bg,#fff);">
+            <div style="font-weight:600;margin-bottom:4px;">💻 代码模型</div>
+            <div style="font-size:13px;color:var(--text-secondary);line-height:1.5;">IDE 插件（Cursor/Copilot）帮你补全；终端 Agent（Codex/Claude Code）能自主读项目、写代码、跑测试。</div>
+        </div>
+        <div style="border:1px solid var(--border-color,#e5e7eb);border-radius:12px;padding:14px 16px;background:var(--card-bg,#fff);">
+            <div style="font-weight:600;margin-bottom:4px;">🛠️ AI辅助工具</div>
+            <div style="font-size:13px;color:var(--text-secondary);line-height:1.5;">设计/写作/语音/SEO 等办公周边，覆盖创作与运营全流程。代表：Canva、Notion、Grammarly、ElevenLabs、Synthesia。</div>
+        </div>
+    </div>
 
     <div class="search-bar" id="searchBar">
         <div class="search-bar-inner">
@@ -125,10 +154,10 @@
 </div>
 
 <footer class="footer">
-    <p data-i18n="models.footer1">AI家AI户 · 数据最后更新于 2026年7月13日 · 信息来源于各模型官方网站及公开资料</p>
-    <p style="margin-top:6px;" data-i18n="models.footer2">所有模型信息均标注来源。点击卡片直接跳转对应官网。</p>
-    <p style="margin-top:6px;font-size:13px;"><a href="privacy.html" data-i18n="nav.privacy">隐私政策</a></p>
-</footer>
+    
+    
+    <p style="margin-top:8px;font-size:13px;color:var(--text-secondary);"><a href="privacy.html">隐私政策</a> · <a href="terms.html">服务条款</a> · <a href="disclaimer.html">免责声明</a> · <a href="contact.html">联系我们</a> · <a href="blog/">博客</a></p>
+    </footer>
 
 <script src="js/main.js"></script>
 <script src="js/cookie-consent.js"></script>
