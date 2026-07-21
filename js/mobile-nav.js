@@ -1,21 +1,21 @@
 (function() {
     'use strict';
 
-    /* ---- 侧边栏打开 / 关闭（桌面+移动共用） ---- */
+    /* ---- 移动端抽屉打开 / 关闭（操作 #sidebarDrawer，其 z-index 高于遮罩，可正常点击）---- */
     window.toggleSidebar = function() {
-        var sidebar  = document.getElementById('sidebar');
+        var drawer  = document.getElementById('sidebarDrawer');
         var overlay = document.getElementById('sidebarOverlay');
-        if (!sidebar) return;
-        var opening = !sidebar.classList.contains('open');
-        sidebar.classList.toggle('open', opening);
+        if (!drawer) return;
+        var opening = !drawer.classList.contains('open');
+        drawer.classList.toggle('open', opening);
         if (overlay) overlay.classList.toggle('open', opening);
         document.body.style.overflow = opening ? 'hidden' : '';
     };
 
     window.closeSidebar = function() {
-        var sidebar  = document.getElementById('sidebar');
+        var drawer  = document.getElementById('sidebarDrawer');
         var overlay = document.getElementById('sidebarOverlay');
-        if (sidebar)  sidebar.classList.remove('open');
+        if (drawer)  drawer.classList.remove('open');
         if (overlay) overlay.classList.remove('open');
         document.body.style.overflow = '';
     };

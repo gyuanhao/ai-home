@@ -235,12 +235,16 @@ a:hover { color: var(--primary-dark); }
     line-height: 1;
 }
 
-/* === 响应式：≤900px 隐藏侧边栏 → 显示汉堡按钮 === */
+/* === 响应式：≤900px 用独立抽屉替代桌面侧边栏 === */
 @media (max-width: 900px) {
-    .sidebar { transform: translateX(-100%); position: fixed; box-shadow: none; }
-    .sidebar.open { transform: translateX(0); box-shadow: 4px 0 24px rgba(0,0,0,0.14); }
+    /* 移动端彻底隐藏桌面侧边栏，改用 #sidebarDrawer 抽屉（z-index 199 > 遮罩 198，可正常点击） */
+    .sidebar { display: none; }
     .sidebar-toggle { display: flex; }
     .main-content { margin-left: 0; }
+}
+/* 桌面端（>900px）隐藏移动抽屉三件套，避免任何误显示 */
+@media (min-width: 901px) {
+    .sidebar-drawer, .sidebar-overlay, .sidebar-toggle { display: none !important; }
 }
 
 /* === 面包屑导航 === */
