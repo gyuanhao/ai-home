@@ -1277,3 +1277,193 @@ a:hover { color: var(--primary-dark); }
 .sd-source-link { color: #2563EB; text-decoration: underline; word-break: break-all; }
 .sd-back { display: inline-block; margin-top: 4px; color: #2563EB; font-weight: 600; text-decoration: none; }
 .sd-back:hover { text-decoration: underline; }
+
+/* === 模型库品类 3D 旋转轮播 === */
+.cat-carousel {
+    position: relative;
+    margin: 4px 0 28px;
+    user-select: none;
+    touch-action: pan-y;
+    isolation: isolate;
+}
+.cat-carousel-stage {
+    position: relative;
+    height: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+    perspective: 1400px;
+}
+.cat-carousel-track {
+    position: relative;
+    width: 230px;
+    height: 150px;
+    transform-style: preserve-3d;
+    transform: rotateY(var(--rotate, 0deg));
+    transition: transform 0.65s var(--ease-out);
+    --radius: 280px;
+}
+.cat-card {
+    position: absolute;
+    inset: 0;
+    border-radius: 18px;
+    padding: 18px;
+    border: 1px solid rgba(255,255,255,0.25);
+    background: linear-gradient(135deg, var(--c1), var(--c2));
+    box-shadow: 0 18px 40px rgba(15,23,42,0.18);
+    color: #fff;
+    cursor: pointer;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    transform:
+        rotateY(calc(var(--i) * var(--angle, 60deg)))
+        translateZ(var(--radius, 280px))
+        scale(var(--scale, 0.88));
+    opacity: var(--opacity, 0.55);
+    filter: brightness(var(--brightness, 0.92));
+    transition: transform 0.65s var(--ease-out), opacity 0.65s var(--ease-out), filter 0.65s var(--ease-out);
+}
+.cat-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: linear-gradient(135deg, rgba(255,255,255,0.22), rgba(255,255,255,0));
+    pointer-events: none;
+}
+.cat-card.is-active {
+    --scale: 1.05;
+    --opacity: 1;
+    --brightness: 1;
+}
+.cat-card-icon {
+    font-size: 32px;
+    line-height: 1;
+    margin-bottom: 8px;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
+}
+.cat-card-title {
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 5px;
+    line-height: 1.2;
+}
+.cat-card-desc {
+    font-size: 12px;
+    line-height: 1.5;
+    opacity: 0.94;
+}
+.cat-card-hint {
+    margin-top: auto;
+    font-size: 11px;
+    opacity: 0.75;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.cat-card:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+.cat-carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    background: var(--card-bg);
+    color: var(--text-secondary);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: var(--shadow-md);
+    z-index: 20;
+    pointer-events: auto;
+    touch-action: manipulation;
+    transition: all var(--dur) var(--ease-out);
+}
+.cat-carousel-btn:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+    transform: translateY(-50%) scale(1.05);
+}
+.cat-carousel-btn:active { transform: translateY(-50%) scale(0.96); }
+.cat-carousel-btn.prev { left: 12px; }
+.cat-carousel-btn.next { right: 12px; }
+.cat-carousel-btn svg { width: 18px; height: 18px; }
+.cat-carousel-dots {
+    position: absolute;
+    bottom: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 20;
+}
+.cat-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: none;
+    background: var(--border-strong);
+    cursor: pointer;
+    transition: all var(--dur) var(--ease-out);
+}
+.cat-dot.active { background: var(--primary); transform: scale(1.3); }
+.cat-dot:hover { background: var(--primary-dark); }
+@media (max-width: 768px) {
+    .cat-carousel-stage { height: 240px; }
+    .cat-carousel-track { --radius: 240px; width: 200px; height: 130px; }
+    .cat-card { padding: 14px; border-radius: 16px; }
+    .cat-card-icon { font-size: 26px; }
+    .cat-card-title { font-size: 15px; }
+    .cat-card-desc { font-size: 11px; }
+    .cat-carousel-btn { width: 34px; height: 34px; }
+    .cat-carousel-btn.prev { left: 8px; }
+    .cat-carousel-btn.next { right: 8px; }
+}
+@media (max-width: 480px) {
+    .cat-carousel-track { --radius: 190px; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .cat-carousel-track, .cat-card { transition: none !important; }
+}
+
+/* === 仙侠彩蛋入口 banner（区别于便利店主色，用水墨紫调） === */
+.xianxia-banner { max-width: var(--max-width); margin: 28px auto 0; padding: 0 24px; }
+.xb-inner {
+  display: flex; align-items: center; gap: 24px;
+  background: linear-gradient(120deg, #1f1147 0%, #3b1f6b 55%, #5b2a86 100%);
+  border-radius: var(--radius); padding: 24px 28px; color: #fff;
+  box-shadow: 0 12px 30px -12px rgba(91,42,134,0.5);
+  position: relative; overflow: hidden;
+}
+.xb-inner::after {
+  content: "⚔"; position: absolute; right: -10px; bottom: -34px;
+  font-size: 150px; opacity: 0.08; line-height: 1;
+}
+.xb-text { flex: 1; position: relative; z-index: 1; }
+.xb-tag {
+  display: inline-block; font-size: 12px; background: rgba(255,255,255,0.18);
+  padding: 3px 10px; border-radius: 12px; margin-bottom: 10px;
+}
+.xb-text h2 { font-size: 20px; margin-bottom: 8px; }
+.xb-text p {
+  font-size: 14px; line-height: 1.7; color: rgba(255,255,255,0.82); max-width: 640px;
+}
+.xb-btn {
+  display: inline-block; margin-top: 14px; background: #ffd479; color: #3b1f6b;
+  font-weight: 700; text-decoration: none; padding: 10px 22px; border-radius: 8px;
+  font-size: 15px; transition: transform .15s ease;
+}
+.xb-btn:hover { transform: translateY(-2px); }
+.xb-art { font-size: 54px; flex-shrink: 0; }
+@media (max-width: 768px) {
+  .xb-inner { flex-direction: column; text-align: center; }
+  .xb-art { display: none; }
+  .xb-text p { margin-left: auto; margin-right: auto; }
+}

@@ -32,9 +32,9 @@
 
     var t = texts[lang];
 
-    // 遮罩层
+    // 遮罩层（仅做视觉暗化，pointer-events:none 保证不拦截页面交互，用户可继续浏览/操作）
     var overlay = document.createElement('div');
-    overlay.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.25);z-index:9998;';
+    overlay.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.25);z-index:9998;pointer-events:none;';
 
     // 弹窗
     var banner = document.createElement('div');

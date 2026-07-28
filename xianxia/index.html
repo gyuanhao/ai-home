@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>AI 仙侠世界</title>
+  <!-- 书法 web 字体：马善政楷书（Ma Shan Zheng），用于菜单标题与界面，仙侠感更强 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap">
+  <link rel="stylesheet" href="styles/game.css">
+</head>
+<body>
+  <!-- 游戏画布容器：Phaser 会在这里创建 canvas -->
+  <div id="game-container"></div>
+
+  <!-- 侧边内容面板：进入地点后从右侧滑出，展示原网页内容 -->
+  <aside id="side-panel">
+    <div class="side-panel-header">
+      <span id="side-panel-title">标题</span>
+      <button id="side-panel-fullscreen" title="长内容可全屏阅读">全屏</button>
+      <button id="side-panel-close" title="关闭返回地图">关闭</button>
+    </div>
+    <div id="side-panel-content"></div>
+  </aside>
+
+  <!-- AI 论剑指南：可展开/收起的窗口，解释各地点对应主站板块 -->
+  <button id="guide-toggle" title="AI 论剑指南">📖 AI 论剑指南</button>
+  <div id="guide-panel">
+    <div class="guide-header">
+      <span class="guide-title">📖 AI 论剑指南</span>
+      <button id="guide-close" title="收起">✕</button>
+    </div>
+    <div id="guide-list"></div>
+  </div>
+
+  <!-- 进入地点确认弹窗：走近建筑时先询问是否进入，并展示地点简介 -->
+  <div id="enter-prompt">
+    <div class="ep-card">
+      <div class="ep-banner">
+        <img id="ep-icon" class="ep-icon" alt="" src="">
+        <div class="ep-titles">
+          <div id="ep-name" class="ep-name"></div>
+          <div id="ep-sub" class="ep-sub"></div>
+        </div>
+      </div>
+      <div id="ep-title" class="ep-prompt-title"></div>
+      <p id="ep-desc" class="ep-desc"></p>
+      <div id="ep-maps" class="ep-maps"></div>
+      <div class="ep-actions">
+        <button id="ep-cancel" class="ep-btn ep-btn-cancel">再逛逛</button>
+        <button id="ep-enter" class="ep-btn ep-btn-enter">进入</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 返回主站：固定在右下角，只在世界地图显示 -->
+  <a id="back-to-main" href="../index.html" target="_blank" rel="noopener" title="返回 AI 仙侠世界主站（新标签页打开）">🏠 返回主站</a>
+
+  <!-- 第三方引擎：Phaser 3（本地存放，不依赖 CDN） -->
+  <script src="vendor/phaser.min.js"></script>
+
+  <!-- 配置 -->
+  <script src="src/config.js"></script>
+
+  <!-- 数据层 -->
+  <script src="src/data/mapConfig.js"></script>
+  <script src="src/data/models.js"></script>
+  <script src="src/data/skills.js"></script>
+  <script src="src/data/articles.js"></script>
+  <script src="src/data/news.js"></script>
+  <script src="src/data/picker.js"></script>
+
+  <!-- 系统服务 -->
+  <script src="src/systems/SaveSystem.js"></script>
+  <script src="src/systems/ContentPanel.js"></script>
+  <script src="src/systems/PathFinder.js"></script>
+  <script src="src/systems/GuideSystem.js"></script>
+  <script src="src/systems/EnterPrompt.js"></script>
+
+  <!-- 实体 -->
+  <script src="src/entities/Player.js"></script>
+
+  <!-- 场景（按启动顺序） -->
+  <script src="src/scenes/BootScene.js"></script>
+  <script src="src/scenes/PreloadScene.js"></script>
+  <script src="src/scenes/MenuScene.js"></script>
+  <script src="src/scenes/WorldMapScene.js"></script>
+  <script src="src/scenes/locations/ModelPavilionScene.js"></script>
+  <script src="src/scenes/locations/GenericLocationScene.js"></script>
+
+  <!-- 入口：创建游戏实例（必须放最后，要用到上面的类） -->
+  <script src="src/main.js"></script>
+</body>
+</html>

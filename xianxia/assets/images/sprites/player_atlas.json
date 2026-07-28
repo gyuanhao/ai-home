@@ -1,0 +1,19 @@
+{
+  "frameWidth": 164,
+  "frameHeight": 308,
+  "walkRows": 5,
+  "walkCols": 8,
+  "idleRows": 5,
+  "idleCols": 1,
+  "directions": [
+    "down",
+    "down-left",
+    "left",
+    "up-left",
+    "up"
+  ],
+  "sourceFiles": {
+    "walk": "角色行走-无背景.png",
+    "idle": "角色待机-无背景.png"
+  }
+}

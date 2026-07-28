@@ -1,0 +1,15 @@
+# === 依赖 / 构建产物 ===
+node_modules/
+dist/
+__pycache__/
+*.pyc
+
+# === 编辑器 / 系统 ===
+.DS_Store
+Thumbs.db
+*.log
+.idea/
+.vscode/
+
+# === 仙侠：AI 图像生成的中间/调试产物（非线上资源） ===
+xianxia/assets/images/generated/
