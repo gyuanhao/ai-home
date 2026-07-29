@@ -9,9 +9,9 @@ const fs = require('fs');
 const path = require('path');
 
 const ROOT = __dirname;
-const TODAY_ZH = '2026年7月28日';
-const TODAY_ISO = '2026-07-28';
-const TODAY_EN = 'July 28, 2026';
+const TODAY_ZH = '2026年7月29日';
+const TODAY_ISO = '2026-07-29';
+const TODAY_EN = 'July 29, 2026';
 
 // 收集的待处理文件
 const files = [];

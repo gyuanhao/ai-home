@@ -27,14 +27,17 @@
     </script>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/i18n.js"></script>
-    <style>
-        .news-list { list-style: none; padding: 0; }
+        <style>
+        .news-day { margin-top: 26px; }
+        .news-day:first-child { margin-top: 0; }
+        .news-day-head { display: flex; align-items: baseline; gap: 10px; padding-bottom: 6px; margin-bottom: 6px; border-bottom: 2px solid var(--primary); }
+        .news-day-date { font-size: 18px; font-weight: 700; color: var(--text); }
+        .news-day-weekday { font-size: 13px; color: var(--text-secondary); }
         .news-item { padding: 16px 0; border-bottom: 1px solid var(--border); }
-        .news-item:last-child { border-bottom: none; }
-        .news-title { font-size: 16px; font-weight: 600; color: var(--text); text-decoration: none; line-height: 1.5; }
+        .news-title { display: block; font-size: 16px; font-weight: 600; color: var(--text); text-decoration: none; line-height: 1.5; }
         .news-title:hover { color: var(--primary); }
-        .news-meta { font-size: 13px; color: var(--text-secondary); margin-top: 4px; }
-        .news-date { display: inline-block; background: var(--primary-light); color: var(--primary-dark); padding: 2px 8px; border-radius: var(--radius-sm); font-size: 12px; margin-right: 8px; }
+        .news-summary { font-size: 14px; color: var(--text-secondary); line-height: 1.75; margin: 6px 0 4px; }
+        .news-meta { font-size: 13px; color: var(--text-secondary); }
     </style>
 
     <link rel="stylesheet" href="css/icons.css">
@@ -105,88 +108,7 @@
     <p style="color:var(--text-secondary); margin-bottom:24px;" data-i18n="news.desc">标题链接直达信息出处，点击查看原文。本站不做二次解读，仅做信息导航。</p>
 
     <div class="about-section">
-        <ul class="news-list">
-            <li class="news-item">
-                <a href="https://tech.ifeng.com/c/8uLFonKLQHL" class="news-title" target="_blank" rel="noopener">外媒：智谱GLM-5.2漏洞挖掘能力达Mythos水平，国产AI安全领域逼近美国顶尖</a>
-                <div class="news-meta"><span class="news-date">06-29</span> 凤凰网科技 / The Verge</div>
-            </li>
-            <li class="news-item">
-                <a href="https://tech.ifeng.com/c/8uJrZ3OLFK1" class="news-title" target="_blank" rel="noopener">美国政府拟解除Anthropic Fable 5出口管制，最快下周恢复使用</a>
-                <div class="news-meta"><span class="news-date">06-28</span> 凤凰网科技 / Axios</div>
-            </li>
-            <li class="news-item">
-                <a href="https://finance.sina.com.cn/stock/usstock/summary/2026-06-26/doc-inietspn0492731.shtml" class="news-title" target="_blank" rel="noopener">OpenAI GPT-5.6遭美国政府监管限制，仅向可信伙伴开放</a>
-                <div class="news-meta"><span class="news-date">06-26</span> 新浪财经</div>
-            </li>
-            <li class="news-item">
-                <a href="https://news.qq.com/rain/a/20260625A02CHX00" class="news-title" target="_blank" rel="noopener">Anthropic指控阿里通过2.5万虚假账户"蒸馏"Claude，涉2880万次交互</a>
-                <div class="news-meta"><span class="news-date">06-25</span> 腾讯新闻 / TechWeb</div>
-            </li>
-            <li class="news-item">
-                <a href="https://finance.sina.com.cn/roll/2026-06-22/doc-iniehwmr9246150.shtml" class="news-title" target="_blank" rel="noopener">智谱市值首破万亿港元！GLM-5.2跻身全球AI编程第一梯队</a>
-                <div class="news-meta"><span class="news-date">06-22</span> 新浪财经 / 财联社</div>
-            </li>
-            <li class="news-item">
-                <a href="https://news.qq.com/rain/a/20260621A0581J00" class="news-title" target="_blank" rel="noopener">GPT-5.6或下周问世：从"模型"迈向"可执行Agent"，定价仅为竞品1/3</a>
-                <div class="news-meta"><span class="news-date">06-21</span> 腾讯新闻 / testingcatalog</div>
-            </li>
-            <li class="news-item">
-                <a href="https://tech.ifeng.com/c/8u0Oxa838CK" class="news-title" target="_blank" rel="noopener">杨植麟AIEC演讲：Kimi K2.7 Code发布，预测AI编程两三年内范式突破</a>
-                <div class="news-meta"><span class="news-date">06-16</span> 凤凰网科技 / 智东西</div>
-            </li>
-            <li class="news-item">
-                <a href="https://news.qq.com/rain/a/20260616A04LHW00" class="news-title" target="_blank" rel="noopener">智谱发布GLM-5.2旗舰模型：1M上下文+744B参数，MIT协议下周开源</a>
-                <div class="news-meta"><span class="news-date">06-15</span> 腾讯新闻</div>
-            </li>
-            <li class="news-item">
-                <a href="https://www.cnblogs.com/jaryn/p/20306587" class="news-title" target="_blank" rel="noopener">MiniMax发布M3旗舰大模型：1M上下文+原生多模态，编程能力超越GPT-5.5</a>
-                <div class="news-meta"><span class="news-date">06-01</span> 博客园 / MiniMax官方</div>
-            </li>
-            <li class="news-item">
-                <a href="https://www.sohu.com/a/1035397029_122893087" class="news-title" target="_blank" rel="noopener">2026年6月AI巨头混战：微软七连发MAI自研模型，苹果Siri终于补课AI</a>
-                <div class="news-meta"><span class="news-date">06-13</span> 搜狐科技</div>
-            </li>
-            <li class="news-item">
-                <a href="https://finance.sina.com.cn/wm/2026-06-02/doc-inhzzcpu1649906.shtml" class="news-title" target="_blank" rel="noopener">OpenAI GPT-5.6发布，奥特曼亲自上阵反杀Claude编程优势</a>
-                <div class="news-meta"><span class="news-date">06-02</span> 新浪财经</div>
-            </li>
-            <li class="news-item">
-                <a href="https://www.sohu.com/a/1035472711_122558976" class="news-title" target="_blank" rel="noopener">2026年6月AI全景：智能体时代全面开启，国产力量加速崛起</a>
-                <div class="news-meta"><span class="news-date">06-14</span> 搜狐科技</div>
-            </li>
-            <li class="news-item">
-                <a href="https://www.itbear.com.cn/html/2026-06/1391656.html" class="news-title" target="_blank" rel="noopener">2026北京智源大会发布"悟界"大模型与FlagOS 2.1，引领AI新突破</a>
-                <div class="news-meta"><span class="news-date">06-12</span> ITBear科技</div>
-            </li>
-            <li class="news-item">
-                <a href="https://aiproducthub.cn/newsflash/deepseek-v4-1-multimodal-enterprise-tools-june-release/" class="news-title" target="_blank" rel="noopener">DeepSeek V4.1定档6月发布，首次集成图像音频多模态与企业工具</a>
-                <div class="news-meta"><span class="news-date">05-28</span> AI产品Hub</div>
-            </li>
-            <li class="news-item">
-                <a href="https://news.qq.com/rain/a/20260602A086VM00" class="news-title" target="_blank" rel="noopener">腾讯云下调DeepSeek-V4系列模型价格，最高降幅97.5%</a>
-                <div class="news-meta"><span class="news-date">06-02</span> 腾讯新闻</div>
-            </li>
-            <li class="news-item">
-                <a href="https://news.qq.com/rain/a/20260601A09UZS00" class="news-title" target="_blank" rel="noopener">DeepSeek降价成永久优惠，豆包开始试探向个人用户收费</a>
-                <div class="news-meta"><span class="news-date">06-01</span> 腾讯新闻</div>
-            </li>
-            <li class="news-item">
-                <a href="https://finance.ifeng.com/c/8tbYEDGHX7e" class="news-title" target="_blank" rel="noopener">英伟达GTC 2026：Agentic AI全面爆发，全栈战略正式落地</a>
-                <div class="news-meta"><span class="news-date">05-30</span> 凤凰网财经</div>
-            </li>
-            <li class="news-item">
-                <a href="https://segmentfault.com/a/1190000047812097" class="news-title" target="_blank" rel="noopener">MiniMax M3 vs GPT-5.6 vs Claude Opus 4.8：2026年旗舰模型三角格局</a>
-                <div class="news-meta"><span class="news-date">06-10</span> SegmentFault</div>
-            </li>
-            <li class="news-item">
-                <a href="https://www.chinanews.com.cn/gj/2026/06-12/10638909.shtml" class="news-title" target="_blank" rel="noopener">聚焦AI时代保障发展权，多国专家共议AI治理机遇与挑战</a>
-                <div class="news-meta"><span class="news-date">06-12</span> 中国新闻网</div>
-            </li>
-            <li class="news-item">
-                <a href="https://finance.sina.com.cn/roll/2026-06-02/doc-inhzzcpu1633935.shtml" class="news-title" target="_blank" rel="noopener">腾讯云DeepSeek-V4降价最高97.5%，AI模型价格战持续升温</a>
-                <div class="news-meta"><span class="news-date">06-02</span> 新浪财经</div>
-            </li>
-        </ul>
+        <div id="newsContainer"></div>
     </div>
 
     <div class="about-section" style="margin-top:24px;">
@@ -195,8 +117,8 @@
             这里<strong>不做新闻解读或二次加工</strong>——只做标题索引。每条标题对应一个链接，直接跳转到信息来源网站。
             信息筛选偏向中文用户关心的AI动态：国产大模型、国际旗舰更新、价格变动、行业趋势。
         </p>
-        <p style="margin-top:8px; color:var(--text-secondary);" data-i18n="news.updated">
-            更新频率：不定期。有大新闻时手动添加。最后整理：<strong>2026年6月30日</strong>
+        <p style="margin-top:8px; color:var(--text-secondary);">
+            更新频率：每个工作日更新，每天数条。最后整理：<strong>2026年7月29日</strong>
         </p>
     </div>
 </div>
@@ -207,6 +129,8 @@
     <p style="margin-top:8px;font-size:13px;color:var(--text-secondary);"><a href="privacy.html">隐私政策</a> · <a href="terms.html">服务条款</a> · <a href="disclaimer.html">免责声明</a> · <a href="contact.html">联系我们</a> · <a href="blog/">博客</a></p>
     </footer>
 
+<script src="js/news-data.js"></script>
+<script src="js/news.js"></script>
 <script src="js/main.js"></script>
 <script src="js/cookie-consent.js"></script>
 <script src="js/mobile-nav.js"></script>
