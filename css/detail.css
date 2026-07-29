@@ -115,6 +115,11 @@
     margin-bottom: 16px;
     color: var(--text);
 }
+.detail-guide h3 { font-size: 17px; margin: 22px 0 8px; color: var(--text); }
+.detail-guide h3:first-child { margin-top: 0; }
+.detail-guide p { font-size: 15px; line-height: 1.85; color: var(--text-secondary); margin-bottom: 12px; }
+.detail-guide ul { margin: 0 0 12px 20px; font-size: 15px; line-height: 1.85; color: var(--text-secondary); }
+.detail-guide li { margin-bottom: 6px; }
 
 /* Param Grid */
 .param-grid {

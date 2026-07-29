@@ -54,6 +54,16 @@ def generate_page(m, all_models, model_map):
     # Pricing
     pc = tag_class(m.get('pricing', 'paid'))
 
+    guide = m.get('guide', '')
+    guide_html = ''
+    if guide:
+        guide_html = (
+            '    <section class="detail-section detail-guide">\n'
+            '        <h2>深度解读</h2>\n'
+            f'        {guide}\n'
+            '    </section>\n'
+        )
+
     return f'''<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -195,6 +205,7 @@ def generate_page(m, all_models, model_map):
         </div>
     </section>
 
+{guide_html}
     <section class="detail-section">
         <h2 data-i18n="detail.tags">功能标签</h2>
         <div class="detail-tags" id="detail-tags"></div>

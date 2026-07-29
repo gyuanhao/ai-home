@@ -39,7 +39,8 @@
     "priceDetailEn": "All features free, no paywall, no ads. API usage-based billing, V4 series permanent price cut (V4-Pro 75% off). V4.1 coming June 2026, first multimodal + enterprise tools.",
     "chineseSupportEn": "★★★★★ Native Chinese model, excellent performance",
     "weaknessesEn": "May queue during peak hours; current image/multimodal limited; no web search support",
-    "releasedEn": "Launched 2023, V4 released April 2026"
+    "releasedEn": "Launched 2023, V4 released April 2026",
+    "guide": "<h3>免费这件事，它真的做到了</h3>\n<p>先把话放这：如果你只想找个能聊、能写、能帮你跑点代码的大模型，DeepSeek 的网页和 APP 对话目前全免费，没有付费墙，也没有广告。我自己的日常对话量大概八成都在它上面，原因就一个字——免。对于不想每个月掏会员费、又怕被套路的普通人，这是最省心的起点。</p>\n<h3>它强在哪：推理是真能打</h3>\n<p>DeepSeek 的杀手锏是推理。你给它一道数学题、一段要调试的代码、或者一个需要多步推理的逻辑问题，它会把思路摊开给你看（思维链），而不是直接甩答案。在中文语境下，它的推理和编程表现放在免费阵营里基本没有对手。V4 系列把 API 价格永久打下来了，V4-Pro 直接降到原价的四分之一，做批量任务的成本低到可以忽略。</p>\n<h3>什么时候别硬撑</h3>\n<p>但它不是万能。高峰期偶尔排队，这是免费模式的代价。当前版本的图片、多模态还比较弱，你要的是\"看图说话\"\"文生图\"，它现在给不了。也不支持联网搜索，问它今天发生了什么，它只能靠训练记忆。所以我的用法是：深度的、需要推理的、纯文本的活儿交给它；要联网、要出图，换别的。</p>\n<h3>接下来看 V4.1</h3>\n<p>V4.1 定在 2026 年 6 月，是它第一次上多模态，能看图、能听语音。如果这次补齐了，DeepSeek 就从\"免费推理王\"变成\"免费全能选手\"。我会持续盯着，更新了再回来改这段。</p>\n<h3>适合谁 / 不适合谁</h3>\n<p>适合：预算敏感的学生、开发者、需要高频深度推理的人。不适合：指望它联网查最新消息、或者要稳定出图的设计场景。把它当主力推理引擎，比当全能助理更划算。</p>"
   },
   {
     "id": "kimi",
@@ -80,7 +81,8 @@
     "priceDetailEn": "Free tier (Adagio, limited uses); Andante ¥49/mo; Moderato ¥99/mo. K2.5 API: ¥4/million tokens input.",
     "chineseSupportEn": "★★★★★ Best-in-class for long-form Chinese writing",
     "weaknessesEn": "Strict free tier limits; queue/tipping priority during peak hours",
-    "releasedEn": "First launched October 2023"
+    "releasedEn": "First launched October 2023",
+    "guide": "<h3>中文写作，它最懂\"人话\"</h3>\n<p>Kimi 最让我服气的是中文写作的语气。不是那种\"首先、其次、综上所述\"的机器腔，而是能写出有起伏、有分寸感的句子。写周报、写小红书、写一封得体的邮件，它比大多数模型更像一个\"会写的中国同事\"。长文案一次生成几千字也不容易跑题，这是很多模型做不到的。</p>\n<h3>长文档是真的长</h3>\n<p>它吃长文本的能力一直在线。丢一份几十页的 PDF、一整本报告进去，它能稳住结构做摘要、做问答。我见过有人靠它把一份乱糟糟的简历改得条理清楚，面试机会直接多了一倍——这种\"帮普通人把材料说清楚\"的能力，比炫技更有用。</p>\n<h3>深度研究和 PPT，打工人友好</h3>\n<p>Kimi 的深度研究功能，适合\"我得交一份像样的调研\"的场景；PPT 生成则省掉了排版那道工序。会员 ¥49/月，对经常要产出文档的人来说，回本很快。免费版次数有限，重度使用建议开会员。</p>\n<h3>短板也直说</h3>\n<p>它的推理和硬核编程不是最顶。纯数学、复杂算法，还是 DeepSeek 或 Claude 更稳。把它定位成\"中文写作 + 长文档 + 办公产出\"的三件套，你就不会失望。</p>\n<h3>适合谁 / 不适合谁</h3>\n<p>适合：要写中文材料、要处理长文档、要做调研汇报的打工人。不适合：要写复杂代码、要做硬核数学推理的人。它是一支好用的\"笔\"，不是一把万能的\"扳手\"。</p>"
   },
   {
     "id": "qwen",
@@ -121,7 +123,8 @@
     "priceDetailEn": "Free web version (Qwen3.5-Thinking with search). Bailian platform: 70M free tokens for new users. API: Qwen3.5 ¥2/M tokens input. Qwen3.5-VL free during beta.",
     "chineseSupportEn": "★★★★★ Native Chinese, Alibaba ecosystem integration",
     "weaknessesEn": "Free tier features limited; complex reasoning lags behind DeepSeek & ChatGPT",
-    "releasedEn": "First launched April 2023, Qwen3.5 June 2026"
+    "releasedEn": "First launched April 2023, Qwen3.5 June 2026",
+    "guide": "<h3>阿里系的原生中文模型</h3>\n<p>通义千问是阿里巴巴出的，中文优化做得充分，说话不绕弯子。它背后是开源的 Qwen 系列，全球开发者用得很多，所以你网上能找到的教程、微调例子、部署经验，比很多闭源模型丰富。</p>\n<h3>企业级和百炼平台</h3>\n<p>它真正的杀手锏在 B 端。百炼平台把模型、微调、部署、Agent 串成一条线，新用户还送 7000 万免费 Tokens。如果你公司用阿里云，通义几乎是顺理成章的选择——数据不出云、权限好管、和现有系统好接。</p>\n<h3>免费额度大方</h3>\n<p>对个人来说，网页端对话免费，API 价格也友好。写代码、写文案、做点小自动化，不花钱就能跑起来。对预算敏感又想要国产模型的，它是 DeepSeek 之外最稳的备胎。</p>\n<h3>短板</h3>\n<p>极客圈里有人嫌它的\"个性\"不如 DeepSeek 鲜明，创意写作的灵气稍弱。但对企业场景，稳定和可控往往比灵气重要。</p>\n<h3>适合谁 / 不适合谁</h3>\n<p>适合：用阿里云的企业、想低成本试水 AI 的团队、要开源模型做二次开发的人。不适合：追求最强创意写作、或者要最鲜明\"人格\"的玩家。</p>"
   },
   {
     "id": "ernie",
@@ -203,7 +206,8 @@
     "priceDetailEn": "Free web version (Doubao 2.0, daily limits). Pro ¥19.9/mo. API: Doubao-Lite ¥0.3/M tokens input; Doubao-Pro ¥3/M tokens input.",
     "chineseSupportEn": "★★★★★ ByteDance ecosystem, native Chinese",
     "weaknessesEn": "Free tier daily cap; English benchmarks lower; less ecosystem integration than competitors",
-    "releasedEn": "First launched August 2023, Doubao 2.0 May 2026"
+    "releasedEn": "First launched August 2023, Doubao 2.0 May 2026",
+    "guide": "<h3>字节出品的\"日常款\"</h3>\n<p>豆包是字节跳动的，定位很明确：让普通人 everyday 用得上。APP 端体验顺滑，语音对话自然，问天气、问菜谱、帮孩子写作文，它都能接。免费版就够日常聊，¥29/月会员解锁更多。</p>\n<h3>多模态是它的舒适区</h3>\n<p>背靠字节，豆包在图像、语音这些\"非纯文本\"的场景里很舒服。你对着它说话、发张图让它看，交互比纯打字的大模型更贴近\"助手\"的感觉。和 Coze（也是字节的 Agent 平台）打通后，能做不少轻量的自动化。</p>\n<h3>小白最友好</h3>\n<p>它不要求你会写 prompt。你随便说句人话，它就能给个像样的回答。对不想研究\"怎么问才对\"的人，这是最低门槛的入口。我常把它推荐给刚接触 AI 的家人。</p>\n<h3>什么时候换别的</h3>\n<p>你要写代码、做深度推理、处理长文档，豆包不是首选。它的强项在\"轻、快、日常\"。把这些重活交给 DeepSeek 或 Kimi，日常闲聊交给豆包，分工清楚。</p>\n<h3>适合谁 / 不适合谁</h3>\n<p>适合：第一次用 AI 的小白、要语音和多模态日常助手的人、给孩子或家人装的工具。不适合：开发者、重推理或长文档处理的专业需求。</p>"
   },
   {
     "id": "glm",
@@ -326,7 +330,8 @@
     "priceDetailEn": "Free (GPT-5). ChatGPT Plus $20/mo (GPT-5.6, 5.6-Slow-Think). Pro $200/mo (unlimited, Deep Research). Team $25-30/user/mo.",
     "chineseSupportEn": "★★★★☆ Strong Chinese support, slight English bias",
     "weaknessesEn": "Free users face rate limits; China requires VPN; no WeChat/Pay integration",
-    "releasedEn": "First launched November 2022, GPT-5.6 June 2026"
+    "releasedEn": "First launched November 2022, GPT-5.6 June 2026",
+    "guide": "<h3>综合能力的\"全能选手\"</h3>\n<p>ChatGPT 最大的优势不是某一项拉满，而是没有短板。GPT-5.6 在中文、英文、编程、写作、多模态上都很均衡，你要它干啥它都能接。对于\"我只想用一个工具搞定一切\"的人，它是最省心的默认选项。</p>\n<h3>生态是别人比不了的</h3>\n<p>它的插件、GPTs、和 Office 的联动，构成了一个别的模型短期追不上的生态。你要自动化点什么、接个外部服务，ChatGPT 的可选项最多。免费版就能聊，Plus 20 美元解锁更强模型和更高额度。</p>\n<h3>中文够用，英文更强</h3>\n<p>说实话，纯中文写作的\"灵气\"，我觉得 Kimi、DeepSeek 有时候更对味；但英文能力和全球信息检索，ChatGPT 还是稳。它适合那种中英文都要、还经常要联网查东西的人。</p>\n<h3>怎么选最划算</h3>\n<p>预算为零先看免费版。如果每天高负荷使用、又依赖生态，再上 Plus。别一上来就充钱，先用免费的把场景摸清。</p>\n<h3>适合谁 / 不适合谁</h3>\n<p>适合：想要一个工具覆盖所有场景、依赖生态和联网的人。不适合：纯中文写作党、或者一分钱都不想花的用户——后两者在国产免费模型上能找到更对味的体验。</p>"
   },
   {
     "id": "claude",
@@ -367,7 +372,8 @@
     "priceDetailEn": "Free (Claude Sonnet 4.5). Pro $20/mo (Claude Opus 4.8). Max $100-200/mo (extended limits). Team $25/user/mo.",
     "chineseSupportEn": "★★★☆☆ Good Chinese but English-oriented; HK requires VPN",
     "weaknessesEn": "HK requires VPN; no free tier for Opus; Chinese sometimes unnatural; no image gen natively",
-    "releasedEn": "First launched March 2023, Opus 4.8 June 2026"
+    "releasedEn": "First launched March 2023, Opus 4.8 June 2026",
+    "guide": "<h3>长文档和写作，它有两个绝活</h3>\n<p>Claude 处理长文档的能力是第一梯队的。四十页的英文合同、一摞技术文档丢进去，它摘要抓得准，追问也接得住。写作上它的\"分寸感\"很好，写出来的东西不像 AI 凑的，适合论文、报告、需要语气克制的内容。</p>\n<h3>编程靠 Opus，强到有点离谱</h3>\n<p>Opus 4.8 在各种编程榜单上分数很高，复杂架构和算法它真能扛。配合 Claude Code 这个终端 Agent，你描述需求，它读项目、改代码、定位编译报错，小程序的 demo 两三下就出来了。这就是\"AI 编程\"目前最实在的形态。</p>\n<h3>代价：贵，而且得翻墙</h3>\n<p>在内地和香港，Claude 都不能直接访问，得想办法。Pro 要 20 美元一个月，比免费阵营贵出一截。所以我自己的策略是：日常和推理用 DeepSeek，真碰到要写长文档、要写复杂代码，才把 Claude 请出来。它的 API 也能接中转，用国产模型顶上，成本能压下来一大块。</p>\n<h3>看 Fable 5</h3>\n<p>新一代 Fable 5 加上 Opus 4.8，是它的主力组合。如果你做的是对质量要求高的活，它值得那 20 美元。</p>\n<h3>适合谁 / 不适合谁</h3>\n<p>适合：写长文档、做高质量写作、写复杂代码的专业用户。不适合：只想免费聊聊天、或者网络环境搞不定翻墙的人。它是\"付费但值\"的那一类。</p>"
   },
   {
     "id": "gemini",
