@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-"""Generate AI tool directory pages from tools.json.
+"""Generate AI tool directory listing page from tools.json.
 
 Outputs:
-  - tools/<id>.html   detail page (reuses css/detail.css)
   - tools.html        category-filter listing page (reuses css/style.css .model-grid/.model-card)
+
+Tool cards now link directly to official websites; no detail pages are generated.
 
 Run: python scripts/generate_tool_pages.py
 """
@@ -11,24 +12,12 @@ import json
 import os
 
 PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-TOOLS_DIR = os.path.join(PROJECT_DIR, 'tools')
 JSON_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'tools.json')
 SITE = 'https://myaishome.com'
 LOGO = f'{SITE}/img/logo.png'
 
-def tag_class(pricing):
-    if pricing == 'free':
-        return 'badge-free'
-    if pricing == 'freemium':
-        return 'badge-freemium'
-    return 'badge-paid'
-
-def price_text(pricing):
-    return {'free': '免费', 'freemium': '免费+付费', 'paid': '付费'}.get(pricing, '付费')
-
 # ---------- sidebar / nav snippet (shared) ----------
-SIDEBAR = '''
-<aside class="sidebar" id="sidebar">
+SIDEBAR = '''<aside class="sidebar" id="sidebar">
     <a href="index.html" class="sidebar-logo">
         <img src="__LOGO__" alt="AI家AI户" class="logo-icon">
         AI家AI户
@@ -77,141 +66,6 @@ SIDEBAR = '''
     <div class="sidebar-footer"><button onclick="switchLang();closeSidebar();" class="sidebar-lang-btn">EN</button></div>
 </div>
 '''
-
-# ---------- detail page template ----------
-DETAIL_TPL = '''<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="__SEO_DESC__">
-    <meta name="keywords" content="__SEO_KW__">
-    <title>__SEO_TITLE__</title>
-    <link rel="canonical" href="__CANON__">
-    <meta property="og:title" content="__SEO_TITLE__">
-    <meta property="og:description" content="__SEO_DESC__">
-    <meta property="og:url" content="__CANON__">
-    <meta property="og:type" content="article">
-    <meta property="og:locale" content="zh_CN">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="__SEO_TITLE__">
-    <meta name="twitter:description" content="__SEO_DESC__">
-    <meta name="google-site-verification" content="xt9f05QoKT1xpnVg94WeUsSOYPO88A3CT1j57ePzKZ8" />
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TBTFSXQ6NF"></script>
-    <script>
-      window.dataLayer=window.dataLayer||[];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js',new Date());
-      gtag('config','G-TBTFSXQ6NF');
-    </script>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/detail.css">
-    <script type="application/ld+json">
-    {
-      "@context":"https://schema.org",
-      "@type":"SoftwareApplication",
-      "name":"__NAME__",
-      "applicationCategory":"AIApplication",
-      "operatingSystem":"Web",
-      "offers":{"@type":"Offer","price":"0","priceCurrency":"CNY"},
-      "description":"__LD_DESC__",
-      "url":"__CANON__"
-    }
-    </script>
-</head>
-<body>
-<nav class="nav">
-    <div class="nav-inner">
-        <a href="../index.html" class="nav-logo"><img src="__LOGO__" alt="AI家AI户" class="logo-icon">AI家AI户</a>
-        <button class="nav-toggle" onclick="toggleMobileNav()" aria-label="打开菜单">☰</button>
-        <div class="nav-lang">
-            <a href="../tools/__ID__.html" onclick="switchLang();return false;" class="lang-btn" id="langSwitch">EN</a>
-        </div>
-    </div>
-</nav>
-<div class="nav-overlay" id="navOverlay" onclick="closeMobileNav()"></div>
-<div class="nav-drawer" id="navDrawer">
-    <div class="drawer-header">
-        <a href="../index.html" class="nav-logo" style="font-size:20px;"><img src="__LOGO__" alt="AI家AI户" class="logo-icon">AI家AI户</a>
-        <button onclick="closeMobileNav()" style="background:none;border:none;font-size:24px;cursor:pointer;" aria-label="关闭菜单">✕</button>
-    </div>
-    <div class="drawer-links" id="drawerLinks"></div>
-</div>
-<nav class="mobile-tabs">
-    <a href="../index.html" class="mobile-tab">🏠<span>首页</span></a>
-    <a href="../models.html" class="mobile-tab">📦<span>模型库</span></a>
-    <a href="../tools.html" class="mobile-tab">🧰<span>工具库</span></a>
-    <a href="../skills.html" class="mobile-tab">🛠<span>技能包</span></a>
-</nav>
-
-<main class="detail-page">
-    <div class="breadcrumb">
-        <a href="../index.html">首页</a> &rsaquo;
-        <a href="../tools.html">工具库</a> &rsaquo;
-        <span>__NAME__</span>
-    </div>
-
-    <section class="detail-hero">
-        <div class="detail-hero-top">
-            <h1>__NAME__</h1>
-            <span class="detail-badge __PC__"></span>
-        </div>
-        <p class="detail-subtitle">__COMPANY__ · __CATEGORY__ · 更新于 __UPDATED__</p>
-        <p class="detail-summary">__SUMMARY__</p>
-        <div class="detail-actions">
-            <a href="__CTA_URL__" class="detail-cta" target="_blank" rel="nofollow __SPONSORED__" onclick="gtag('event','click',{'event_category':'tool_detail','event_label':'__ID___visit'})">访问官网 →</a>
-            <a href="../tools.html" class="detail-secondary">返回工具库 →</a>
-        </div>
-    </section>
-
-    <section class="detail-section">
-        <h2>核心信息</h2>
-        <div class="param-grid">
-            <div class="param-item"><span class="param-label">价格</span><span class="param-value">__PRICE__</span></div>
-            <div class="param-item"><span class="param-label">地区</span><span class="param-value">__REGION__</span></div>
-            <div class="param-item"><span class="param-label">类目</span><span class="param-value">__CATEGORY__</span></div>
-            <div class="param-item"><span class="param-label">开发商</span><span class="param-value">__COMPANY__</span></div>
-            <div class="param-item param-full"><span class="param-label">定价详情</span><span class="param-value detail-price-detail">__PRICE_DETAIL__</span></div>
-        </div>
-    </section>
-
-    <section class="detail-section">
-        <h2>优势与不足</h2>
-        <div class="pros-cons">
-            <div class="pros"><h3>✅ 优势</h3><p>__STRENGTHS__</p></div>
-            <div class="cons"><h3>⚠️ 不足</h3><p>__WEAKNESSES__</p></div>
-        </div>
-    </section>
-
-    <section class="detail-section">
-        <h2>最适合谁</h2>
-        <p>__BESTFOR__</p>
-    </section>
-
-    <section class="detail-section">
-        <h2>功能标签</h2>
-        <div class="detail-tags">__TAGS__</div>
-    </section>
-
-    <section class="detail-section detail-source">
-        <p>📋 数据来源：__SOURCE__</p>
-        <p>🕐 最后更新：__UPDATED__</p>
-    </section>
-
-    <div class="detail-back">
-        <a href="../tools.html">← 返回工具库</a>
-    </div>
-</main>
-
-<footer class="footer">
-    <p>AI家AI户 · 数据最后更新于 __UPDATED__ · 信息来源于各工具官方网站及公开资料</p>
-    <p style="margin-top:6px;">这不是权威解读，只是帮你省掉搜索时间。用前请核实官方最新信息。__AFF_DISC__</p>
-</footer>
-
-<script src="../js/i18n.js"></script>
-<script src="../js/mobile-nav.js"></script>
-</body>
-</html>'''
 
 # ---------- listing page template ----------
 LISTING_TPL = '''<!DOCTYPE html>
@@ -321,7 +175,6 @@ const tools = __TOOLS_JSON__;
             const pc = t.pricing === 'free' ? 'badge-free' : t.pricing === 'freemium' ? 'badge-freemium' : 'badge-paid';
             const pctext = t.pricing === 'free' ? '免费' : t.pricing === 'freemium' ? '免费+付费' : '付费';
             const cta = (t.affiliate && t.affiliateUrl) ? t.affiliateUrl : t.website;
-            const rel = 'nofollow' + (t.affiliate ? ' sponsored' : '');
             const tags = (t.tags || []).slice(0, 5).map(tag => '<span class="model-tag">' + esc(tag) + '</span>').join('');
             const region = t.region ? esc(t.region) : '';
             return '<div class="model-card" data-href="' + esc(cta) + '" title="点击访问官网">'
@@ -333,7 +186,6 @@ const tools = __TOOLS_JSON__;
                 + '<div class="model-desc">' + esc(t.summary || '') + '</div>'
                 + '<div class="model-footer">'
                 + '<div class="model-price"><strong>' + esc((t.priceLabel || '').split(' / ')[0]) + '</strong>' + ((t.priceLabel || '').includes('/') ? ' / ' + esc((t.priceLabel || '').split(' / ').slice(1).join(' / ')) : '') + '</div>'
-                + '<a href="tools/' + esc(t.id) + '.html" class="model-detail-link" onclick="event.stopPropagation()" title="查看详情">查看详情 →</a>'
                 + '</div></div>';
         }).join('');
     }
@@ -360,51 +212,12 @@ const tools = __TOOLS_JSON__;
 </html>'''
 
 
-def gen_detail(t):
-    name = t['name']
-    seo_title = f"{name} — AI工具推荐与官网直达 | AI家AI户"
-    seo_desc = f"{name}（{t.get('company','')}）：{t.get('summary','')[:80]}。价格{t.get('priceLabel','')}，{t.get('category','')}类。查看{name}详情与同类工具对比，直达官网。"
-    seo_kw = f"{name},{name}官网,{name}价格,AI工具推荐,{t.get('category','')}"
-    canonical = f"{SITE}/tools/{t['id']}.html"
-    cta = (t.get('affiliate') and t.get('affiliateUrl')) or t.get('website', '#')
-    sponsored = 'sponsored' if t.get('affiliate') else ''
-    aff_disc = '部分链接为推广（联盟）链接，不影响推荐。' if t.get('affiliate') else ''
-    tags_html = ''.join(f'<span class="detail-tag">{tag}</span>' for tag in t.get('tags', []))
-    html = (DETAIL_TPL
-            .replace('__SEO_TITLE__', seo_title)
-            .replace('__SEO_DESC__', seo_desc)
-            .replace('__SEO_KW__', seo_kw)
-            .replace('__CANON__', canonical)
-            .replace('__LOGO__', LOGO)
-            .replace('__NAME__', name)
-            .replace('__LD_DESC__', (t.get('summary', '') or '')[:200])
-            .replace('__PC__', tag_class(t.get('pricing', 'paid')))
-            .replace('__COMPANY__', t.get('company', ''))
-            .replace('__CATEGORY__', t.get('category', ''))
-            .replace('__UPDATED__', t.get('lastUpdated', ''))
-            .replace('__SUMMARY__', t.get('summary', ''))
-            .replace('__CTA_URL__', cta)
-            .replace('__SPONSORED__', sponsored)
-            .replace('__ID__', t['id'])
-            .replace('__PRICE__', t.get('priceLabel', ''))
-            .replace('__REGION__', t.get('region', ''))
-            .replace('__PRICE_DETAIL__', t.get('priceDetail', ''))
-            .replace('__STRENGTHS__', t.get('strengths', ''))
-            .replace('__WEAKNESSES__', t.get('weaknesses', ''))
-            .replace('__BESTFOR__', t.get('bestFor', ''))
-            .replace('__TAGS__', tags_html)
-            .replace('__SOURCE__', t.get('source', ''))
-            .replace('__AFF_DISC__', aff_disc))
-    return html
-
-
 def gen_listing(tools):
     tools_json = json.dumps(tools, ensure_ascii=False)
     updated = max((t.get('lastUpdated', '') for t in tools), default='')
     html = (LISTING_TPL
-            .replace('__SIDEBAR__', SIDEBAR)
+            .replace('__SIDEBAR__', SIDEBAR.replace('__LOGO__', LOGO))
             .replace('__CANON__', f'{SITE}/tools.html')
-            .replace('__LOGO__', LOGO)
             .replace('__COUNT__', str(len(tools)))
             .replace('__UPDATED__', updated)
             .replace('__TOOLS_JSON__', tools_json))
@@ -414,23 +227,11 @@ def gen_listing(tools):
 def main():
     with open(JSON_PATH, 'r', encoding='utf-8') as f:
         tools = json.load(f)
-    os.makedirs(TOOLS_DIR, exist_ok=True)
-
-    ok = []
-    for t in tools:
-        if 'id' not in t or 'name' not in t:
-            print('WARN: skip tool missing id/name:', t)
-            continue
-        html = gen_detail(t)
-        with open(os.path.join(TOOLS_DIR, f"{t['id']}.html"), 'w', encoding='utf-8') as f:
-            f.write(html)
-        ok.append(t['id'])
 
     with open(os.path.join(PROJECT_DIR, 'tools.html'), 'w', encoding='utf-8') as f:
         f.write(gen_listing(tools))
 
-    print(f'Done! {len(ok)} tool detail pages + tools.html generated.')
-    print('Tools:', ', '.join(ok))
+    print(f'Done! tools.html generated with {len(tools)} tools.')
 
 
 if __name__ == '__main__':

@@ -126,7 +126,7 @@
                     title: t.name,
                     desc: [t.company, t.category, t.priceLabel].filter(Boolean).join(' · '),
                     tags: (t.tags || []).join(','),
-                    url: 'tools/' + t.id + '.html',
+                    url: (t.affiliate && t.affiliateUrl) ? t.affiliateUrl : (t.website || '#'),
                     searchText: [t.name, t.nameEn, t.company, t.category, (t.tags || []).join(' '), t.summary, t.strengths, t.bestFor].join(' ').toLowerCase()
                 });
             });
@@ -214,6 +214,10 @@
                 el.className = 'hero-search-result';
                 el.href = item.url;
                 el.setAttribute('data-type', item.type);
+                if (item.type === 'tool') {
+                    el.target = '_blank';
+                    el.rel = 'noopener';
+                }
                 el.innerHTML = '<div class="r-title">' + highlight(item.title, q) + '</div>' +
                     (item.desc ? '<div class="r-desc">' + escapeHtml(item.desc) + '</div>' : '');
                 frag.appendChild(el);
@@ -295,7 +299,11 @@
         const a = e.target.closest('.hero-search-result');
         if (!a) return;
         e.preventDefault();
-        window.location.href = a.href;
+        if (a.target === '_blank') {
+            window.open(a.href, '_blank', 'noopener');
+        } else {
+            window.location.href = a.href;
+        }
     });
 
     searchBtn.addEventListener('click', () => doSearch(input.value));

@@ -28,7 +28,6 @@
     <link rel="stylesheet" href="css/icons.css">
 </head>
 <body>
-
 <aside class="sidebar" id="sidebar">
     <a href="index.html" class="sidebar-logo">
         <img src="https://myaishome.com/img/logo.png" alt="AI家AI户" class="logo-icon">
@@ -154,7 +153,6 @@ const tools = [{"id": "cozel", "name": "Coze（海外）", "nameEn": "Coze Globa
             const pc = t.pricing === 'free' ? 'badge-free' : t.pricing === 'freemium' ? 'badge-freemium' : 'badge-paid';
             const pctext = t.pricing === 'free' ? '免费' : t.pricing === 'freemium' ? '免费+付费' : '付费';
             const cta = (t.affiliate && t.affiliateUrl) ? t.affiliateUrl : t.website;
-            const rel = 'nofollow' + (t.affiliate ? ' sponsored' : '');
             const tags = (t.tags || []).slice(0, 5).map(tag => '<span class="model-tag">' + esc(tag) + '</span>').join('');
             const region = t.region ? esc(t.region) : '';
             return '<div class="model-card" data-href="' + esc(cta) + '" title="点击访问官网">'
@@ -166,7 +164,6 @@ const tools = [{"id": "cozel", "name": "Coze（海外）", "nameEn": "Coze Globa
                 + '<div class="model-desc">' + esc(t.summary || '') + '</div>'
                 + '<div class="model-footer">'
                 + '<div class="model-price"><strong>' + esc((t.priceLabel || '').split(' / ')[0]) + '</strong>' + ((t.priceLabel || '').includes('/') ? ' / ' + esc((t.priceLabel || '').split(' / ').slice(1).join(' / ')) : '') + '</div>'
-                + '<a href="tools/' + esc(t.id) + '.html" class="model-detail-link" onclick="event.stopPropagation()" title="查看详情">查看详情 →</a>'
                 + '</div></div>';
         }).join('');
     }
