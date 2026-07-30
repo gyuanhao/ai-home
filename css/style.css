@@ -91,6 +91,18 @@ a:hover { color: var(--primary-dark); }
     width: 26px; height: 26px;
     flex-shrink: 0;
 }
+/* 用新 logo 图片替换原 SVG 图标 */
+.sidebar-logo img.logo-icon,
+.drawer-head .d-logo img,
+.nav-logo img {
+    width: 26px; height: 26px;
+    object-fit: contain;
+    display: inline-block;
+    vertical-align: middle;
+    flex-shrink: 0;
+}
+.drawer-head .d-logo img,
+.nav-logo img { width: 24px; height: 24px; margin-right: 6px; }
 .sidebar-nav {
     flex: 1;
     overflow-y: auto;
