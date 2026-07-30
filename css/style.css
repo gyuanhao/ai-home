@@ -751,6 +751,152 @@ a:hover { color: var(--primary-dark); }
     box-shadow: 0 1px 0 rgba(0,0,0,0.05);
 }
 
+/* === 首页 hero 大搜索栏 === */
+.hero-search {
+    max-width: 720px;
+    margin: 24px auto 0;
+    position: relative;
+    text-align: left;
+}
+.hero-search-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--card-bg, #fff);
+    border: 2px solid var(--border, #e5e7eb);
+    border-radius: 16px;
+    padding: 6px 6px 6px 18px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08), 0 1px 3px rgba(0,0,0,0.05);
+    transition: all 0.2s ease;
+}
+.hero-search-box:focus-within {
+    border-color: var(--primary, #2563eb);
+    box-shadow: 0 8px 30px rgba(37,99,235,0.12), 0 0 0 4px rgba(37,99,235,0.08);
+}
+.hero-search-icon {
+    color: var(--text-secondary, #6b7280);
+    flex-shrink: 0;
+}
+.hero-search-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 16px;
+    color: var(--text, #111827);
+    font-family: inherit;
+    min-width: 0;
+    line-height: 1.5;
+    padding: 10px 0;
+}
+.hero-search-input::placeholder {
+    color: var(--text-muted, #9ca3af);
+}
+.hero-search-btn {
+    flex-shrink: 0;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 12px;
+    background: var(--primary, #2563eb);
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+}
+.hero-search-btn:hover {
+    background: var(--primary-dark, #1d4ed8);
+}
+.hero-search-btn:active {
+    transform: scale(0.98);
+}
+.hero-search-dropdown {
+    display: none;
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    right: 0;
+    background: var(--card-bg, #fff);
+    border: 1px solid var(--border, #e5e7eb);
+    border-radius: 14px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+    max-height: 420px;
+    overflow-y: auto;
+    z-index: 100;
+    padding: 8px 0;
+}
+.hero-search-group {
+    padding: 8px 16px 4px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text-secondary, #6b7280);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+.hero-search-result {
+    display: block;
+    padding: 10px 16px;
+    text-decoration: none;
+    color: var(--text, #111827);
+    transition: background 0.15s;
+    border-left: 3px solid transparent;
+}
+.hero-search-result:hover,
+.hero-search-result.active {
+    background: var(--primary-light, rgba(37,99,235,0.08));
+    border-left-color: var(--primary, #2563eb);
+}
+.hero-search-result .r-title {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+.hero-search-result .r-title mark {
+    background: rgba(37,99,235,0.18);
+    color: inherit;
+    border-radius: 2px;
+    padding: 0 1px;
+}
+.hero-search-result .r-desc {
+    font-size: 12px;
+    color: var(--text-secondary, #6b7280);
+    margin-top: 2px;
+    line-height: 1.45;
+}
+.hero-search-empty {
+    padding: 24px 16px;
+    text-align: center;
+    color: var(--text-secondary, #6b7280);
+    font-size: 14px;
+}
+.hero-search-tags {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 14px;
+    font-size: 13px;
+}
+.hero-search-tags-label {
+    color: var(--text-secondary, #6b7280);
+}
+.hero-search-tag {
+    padding: 5px 12px;
+    border-radius: 999px;
+    border: 1px solid var(--border, #e5e7eb);
+    background: var(--card-bg, #fff);
+    color: var(--text-secondary, #6b7280);
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+.hero-search-tag:hover {
+    border-color: var(--primary, #2563eb);
+    color: var(--primary, #2563eb);
+    background: var(--primary-light, rgba(37,99,235,0.06));
+}
+
 /* === 分类筛选 === */
 .filters {
     display: flex;
@@ -1237,6 +1383,12 @@ a:hover { color: var(--primary-dark); }
     .hero-stats { gap: 16px 24px; flex-wrap: wrap; }
     .hero-stat { padding: 0 16px; }
     .hero-stat:not(:last-child)::after { display: none; }
+    .hero-search-box { padding: 4px 4px 4px 14px; border-radius: 14px; }
+    .hero-search-input { font-size: 15px; padding: 8px 0; }
+    .hero-search-btn { padding: 10px 16px; font-size: 14px; border-radius: 10px; }
+    .hero-search-dropdown { max-height: 340px; border-radius: 12px; }
+    .hero-search-tags { gap: 6px; }
+    .hero-search-tag { font-size: 12px; padding: 4px 10px; }
     .model-grid { grid-template-columns: 1fr; }
     .compare-table { font-size: 12px; display: block; overflow-x: auto; }
     .container { padding: 20px 16px; }
