@@ -113,6 +113,27 @@
 
     const index = buildIndex();
 
+    // 工具库接入站内搜索：运行时拉取 scripts/tools.json（数据驱动，单一数据源、自动同步）
+    // 追加到同一个 index 数组，下拉结果按「工具库」分组展示
+    fetch('scripts/tools.json')
+        .then(r => (r.ok ? r.json() : []))
+        .then(tools => {
+            if (!Array.isArray(tools)) return;
+            tools.forEach(t => {
+                index.push({
+                    type: 'tool',
+                    group: '工具库',
+                    title: t.name,
+                    desc: [t.company, t.category, t.priceLabel].filter(Boolean).join(' · '),
+                    tags: (t.tags || []).join(','),
+                    url: 'tools/' + t.id + '.html',
+                    searchText: [t.name, t.nameEn, t.company, t.category, (t.tags || []).join(' '), t.summary, t.strengths, t.bestFor].join(' ').toLowerCase()
+                });
+            });
+            if (input && input.value.trim()) renderResults(input.value);
+        })
+        .catch(function () { /* 拉取失败不阻塞站内搜索 */ });
+
     function renderEngines() {
         const list = tabEngines[currentTab] || ['site'];
         if (!enginesRow) return;
