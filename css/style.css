@@ -897,6 +897,80 @@ a:hover { color: var(--primary-dark); }
     background: var(--primary-light, rgba(37,99,235,0.06));
 }
 
+/* 搜索分类 Tab */
+.hero-search-tabs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 14px;
+    font-size: 14px;
+}
+.hero-search-tab {
+    padding: 6px 16px;
+    border-radius: 999px;
+    border: 1px solid transparent;
+    background: transparent;
+    color: var(--text-secondary, #6b7280);
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.15s;
+    font-family: inherit;
+}
+.hero-search-tab:hover {
+    color: var(--primary, #2563eb);
+    background: var(--primary-light, rgba(37,99,235,0.06));
+}
+.hero-search-tab.active {
+    color: var(--primary, #2563eb);
+    background: #fff;
+    border-color: var(--border, #e5e7eb);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    font-weight: 600;
+}
+
+/* 引擎/社区切换 */
+.hero-search-engines {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 6px 14px;
+    margin-top: 12px;
+    font-size: 13px;
+}
+.hero-search-engine {
+    padding: 4px 10px;
+    border-radius: 6px;
+    border: none;
+    background: transparent;
+    color: var(--text-secondary, #6b7280);
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.15s;
+    font-family: inherit;
+    position: relative;
+}
+.hero-search-engine:hover {
+    color: var(--primary, #2563eb);
+}
+.hero-search-engine.active {
+    color: var(--primary, #2563eb);
+    font-weight: 600;
+}
+.hero-search-engine.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 4px;
+    right: 4px;
+    height: 2px;
+    background: var(--primary, #2563eb);
+    border-radius: 2px;
+}
+
 /* === 分类筛选 === */
 .filters {
     display: flex;
@@ -1389,6 +1463,10 @@ a:hover { color: var(--primary-dark); }
     .hero-search-dropdown { max-height: 340px; border-radius: 12px; }
     .hero-search-tags { gap: 6px; }
     .hero-search-tag { font-size: 12px; padding: 4px 10px; }
+    .hero-search-tabs { gap: 4px; font-size: 13px; margin-bottom: 10px; }
+    .hero-search-tab { padding: 5px 12px; font-size: 13px; }
+    .hero-search-engines { gap: 4px 10px; margin-top: 10px; }
+    .hero-search-engine { font-size: 12px; padding: 3px 8px; }
     .model-grid { grid-template-columns: 1fr; }
     .compare-table { font-size: 12px; display: block; overflow-x: auto; }
     .container { padding: 20px 16px; }

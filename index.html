@@ -115,12 +115,28 @@
 
     <!-- 全局搜索栏 -->
     <div class="hero-search" id="heroSearch">
+        <!-- 搜索分类 Tab -->
+        <div class="hero-search-tabs" role="tablist" aria-label="搜索分类">
+            <button class="hero-search-tab active" data-tab="common" role="tab" aria-selected="true">常用</button>
+            <button class="hero-search-tab" data-tab="search" role="tab" aria-selected="false">搜索</button>
+            <button class="hero-search-tab" data-tab="community" role="tab" aria-selected="false">社区</button>
+            <button class="hero-search-tab" data-tab="image" role="tab" aria-selected="false">图片</button>
+            <button class="hero-search-tab" data-tab="life" role="tab" aria-selected="false">生活</button>
+        </div>
+
         <div class="hero-search-box">
             <svg class="hero-search-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-            <input type="search" class="hero-search-input" placeholder="搜模型、技能包或博客，例如 Kimi、Cursor、vibe coding…" autocomplete="off" aria-label="全站搜索">
+            <input type="search" class="hero-search-input" placeholder="站内AI工具搜索" autocomplete="off" aria-label="全站搜索">
             <button type="button" class="hero-search-btn">搜索</button>
         </div>
+
+        <!-- 引擎/社区切换 -->
+        <div class="hero-search-engines" id="heroSearchEngines">
+            <button class="hero-search-engine active" data-engine="site" data-tab="common">站内</button>
+        </div>
+
         <div class="hero-search-dropdown"></div>
+
         <div class="hero-search-tags">
             <span class="hero-search-tags-label">热门：</span>
             <button class="hero-search-tag" data-q="Kimi">Kimi</button>

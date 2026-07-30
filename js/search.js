@@ -1,4 +1,4 @@
-// 首页全局搜索：模型 + 技能包 + 博客
+// 首页全局搜索：站内 + 外部搜索引擎/社区/图片/生活
 (function () {
     const blogData = [
         { title: "AI编程工具真实体验：从免费到付费，我用过的6个", url: "blog/ai-coding-tools-experience-2026.html", tags: "编程,Cursor,Copilot,Claude Code,WorkBuddy,通义灵码" },
@@ -23,10 +23,53 @@
 
     const input = searchWrap.querySelector('.hero-search-input');
     const dropdown = searchWrap.querySelector('.hero-search-dropdown');
+    const enginesRow = document.getElementById('heroSearchEngines');
+    const tabs = searchWrap.querySelectorAll('.hero-search-tab');
     const quickTags = searchWrap.querySelectorAll('.hero-search-tag');
+    const searchBtn = searchWrap.querySelector('.hero-search-btn');
     const modelsArr = (typeof models !== 'undefined' ? models : []);
     const skillsArr = (typeof skillsData !== 'undefined' ? skillsData : []);
 
+    const engineMap = {
+        site:    { label: '站内', url: null },
+        bing:    { label: 'Bing', url: 'https://www.bing.com/search?q={q}' },
+        baidu:   { label: '百度', url: 'https://www.baidu.com/s?wd={q}' },
+        google:  { label: 'Google', url: 'https://www.google.com/search?q={q}' },
+        perplexity: { label: 'Perplexity', url: 'https://www.perplexity.ai/search?q={q}' },
+        duckduckgo: { label: 'DuckDuckGo', url: 'https://duckduckgo.com/?q={q}' },
+        zhihu:   { label: '知乎', url: 'https://www.zhihu.com/search?type=content&q={q}' },
+        github:  { label: 'GitHub', url: 'https://github.com/search?q={q}' },
+        juejin:  { label: '掘金', url: 'https://juejin.cn/search?query={q}' },
+        jike:    { label: '即刻', url: 'https://m.okjike.com/search?q={q}' },
+        reddit:  { label: 'Reddit', url: 'https://www.reddit.com/search/?q={q}' },
+        twitter: { label: 'X/Twitter', url: 'https://x.com/search?q={q}' },
+        'baidu-image': { label: '百度图片', url: 'https://image.baidu.com/search/index?tn=baiduimage&word={q}' },
+        'google-image': { label: 'Google图片', url: 'https://www.google.com/search?tbm=isch&q={q}' },
+        'bing-image': { label: 'Bing图片', url: 'https://www.bing.com/images/search?q={q}' },
+        taobao:  { label: '淘宝', url: 'https://s.taobao.com/search?q={q}' },
+        jd:      { label: '京东', url: 'https://search.jd.com/Search?keyword={q}' },
+        meituan: { label: '美团', url: 'https://www.meituan.com/s/{q}' },
+        dianping:{ label: '大众点评', url: 'https://www.dianping.com/search/keyword/1/0_{q}' }
+    };
+
+    const tabEngines = {
+        common:    ['site'],
+        search:    ['bing', 'baidu', 'google', 'perplexity', 'duckduckgo'],
+        community: ['zhihu', 'github', 'juejin', 'jike', 'reddit', 'twitter'],
+        image:     ['baidu-image', 'google-image', 'bing-image'],
+        life:      ['taobao', 'jd', 'meituan', 'dianping']
+    };
+
+    const placeholders = {
+        common:    '站内AI工具搜索',
+        search:    '搜全网：Google、Bing、百度、Perplexity…',
+        community: '搜社区：知乎、GitHub、掘金、即刻、Reddit…',
+        image:     '搜图片：百度图片、Google图片、Bing图片…',
+        life:      '搜生活：淘宝、京东、美团、大众点评…'
+    };
+
+    let currentTab = 'common';
+    let currentEngine = 'site';
     let activeIndex = -1;
     let flatResults = [];
 
@@ -70,7 +113,51 @@
 
     const index = buildIndex();
 
+    function renderEngines() {
+        const list = tabEngines[currentTab] || ['site'];
+        if (!enginesRow) return;
+        enginesRow.innerHTML = list.map(key => {
+            const cfg = engineMap[key];
+            const active = key === currentEngine ? ' active' : '';
+            return '<button class="hero-search-engine' + active + '" data-engine="' + key + '" data-tab="' + currentTab + '">' + cfg.label + '</button>';
+        }).join('');
+    }
+
+    function switchTab(tab) {
+        currentTab = tab;
+        currentEngine = (tabEngines[tab] || ['site'])[0];
+        tabs.forEach(t => {
+            const isActive = t.dataset.tab === tab;
+            t.classList.toggle('active', isActive);
+            t.setAttribute('aria-selected', isActive ? 'true' : 'false');
+        });
+        input.placeholder = placeholders[tab] || '搜索';
+        dropdown.style.display = 'none';
+        renderEngines();
+    }
+
+    function doSearch(query) {
+        const q = query.trim();
+        if (!q) {
+            input.focus();
+            return;
+        }
+        if (currentTab === 'common' && currentEngine === 'site') {
+            window.location.href = 'models.html?q=' + encodeURIComponent(q);
+            return;
+        }
+        const cfg = engineMap[currentEngine];
+        if (cfg && cfg.url) {
+            const url = cfg.url.replace('{q}', encodeURIComponent(q));
+            window.open(url, '_blank', 'noopener,noreferrer');
+        }
+    }
+
     function renderResults(query) {
+        if (currentTab !== 'common' || currentEngine !== 'site') {
+            dropdown.style.display = 'none';
+            return;
+        }
         const q = query.trim().toLowerCase();
         dropdown.innerHTML = '';
         activeIndex = -1;
@@ -83,12 +170,11 @@
 
         const matched = index.filter(item => item.searchText.includes(q));
         if (matched.length === 0) {
-            dropdown.innerHTML = '<div class="hero-search-empty">没找到相关内容，换个关键词试试</div>';
+            dropdown.innerHTML = '<div class="hero-search-empty">站内没找到相关内容，按回车跳转到模型列表，或切换到 Bing/Google 搜全网</div>';
             dropdown.style.display = 'block';
             return;
         }
 
-        // 按分组聚合，每组最多 5 条
         const groups = {};
         matched.forEach(item => {
             if (!groups[item.group]) groups[item.group] = [];
@@ -126,7 +212,8 @@
     }
 
     function escapeHtml(str) {
-        return String(str).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+        const map = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' };
+        return String(str).replace(/[&<>"']/g, c => map[c]);
     }
 
     function escapeRegExp(str) {
@@ -140,6 +227,21 @@
             flatResults[i].classList.add('active');
             flatResults[i].scrollIntoView({ block: 'nearest' });
         }
+    }
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => switchTab(tab.dataset.tab));
+    });
+
+    if (enginesRow) {
+        enginesRow.addEventListener('click', e => {
+            const btn = e.target.closest('.hero-search-engine');
+            if (!btn) return;
+            currentEngine = btn.dataset.engine;
+            renderEngines();
+            input.focus();
+            if (input.value.trim()) renderResults(input.value);
+        });
     }
 
     input.addEventListener('input', function () {
@@ -159,8 +261,8 @@
             e.preventDefault();
             if (activeIndex >= 0 && flatResults[activeIndex]) {
                 flatResults[activeIndex].click();
-            } else if (this.value.trim()) {
-                window.location.href = 'models.html?q=' + encodeURIComponent(this.value.trim());
+            } else {
+                doSearch(this.value);
             }
         } else if (e.key === 'Escape') {
             dropdown.style.display = 'none';
@@ -175,24 +277,25 @@
         window.location.href = a.href;
     });
 
-    // 快捷标签点击
+    searchBtn.addEventListener('click', () => doSearch(input.value));
+
     quickTags.forEach(tag => {
         tag.addEventListener('click', function () {
             input.value = this.dataset.q || this.textContent.trim();
             input.focus();
-            renderResults(input.value);
+            doSearch(input.value);
         });
     });
 
-    // 点击外部关闭
     document.addEventListener('click', function (e) {
         if (!searchWrap.contains(e.target)) {
             dropdown.style.display = 'none';
         }
     });
 
-    // 聚焦时如果有内容就显示下拉
     input.addEventListener('focus', function () {
         if (this.value.trim()) renderResults(this.value);
     });
+
+    renderEngines();
 })();
