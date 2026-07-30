@@ -325,6 +325,18 @@ a:hover { color: var(--primary-dark); }
     max-width: 600px;
     margin: 0 auto 28px;
 }
+.hero-logo {
+    margin: 0 auto 8px;
+    display: inline-block;
+    line-height: 0;
+}
+.hero-logo a { display: inline-block; }
+.hero-logo img {
+    width: 220px;
+    height: auto;
+    max-width: 72vw;
+    display: block;
+}
 /* 数据概览条：克制的信息呈现，用竖分隔线区分，避免"大数字炫耀"套路 */
 .hero-stats {
     display: flex;
