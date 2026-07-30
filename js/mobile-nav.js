@@ -38,6 +38,8 @@
             tabs[2] && tabs[2].classList.add('active');
         } else if (path.includes('skills.html')) {
             tabs[3] && tabs[3].classList.add('active');
+        } else if (path.includes('tools.html') || path.includes('/tools/')) {
+            tabs[2] && tabs[2].classList.add('active');
         }
     }
 
