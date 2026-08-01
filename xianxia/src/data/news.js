@@ -7,6 +7,54 @@ window.AIHome = window.AIHome || {};
 
 AIHome.NEWS = [
   {
+    "title": "DeepSeek-V4-Flash 正式版 API 上线，Agent 能力暴涨 6 倍",
+    "url": "https://tech.ifeng.com/c/8vEDXuxscG5",
+    "date": "08-01",
+    "source": "IT之家（凤凰网）"
+  },
+  {
+    "title": "OpenAI 大幅下调 GPT-5.6 定价，Luna 降幅达 80%",
+    "url": "https://view.inews.qq.com/a/20260731A05V3D00",
+    "date": "08-01",
+    "source": "腾讯新闻"
+  },
+  {
+    "title": "谷歌 DeepMind 发布 Gemini Robotics 2 机器人模型",
+    "url": "https://view.inews.qq.com/a/20260731A0CGOO00",
+    "date": "08-01",
+    "source": "腾讯新闻"
+  },
+  {
+    "title": "字节跳动 Seedance 2.5 视频模型上线，单次直出 30 秒",
+    "url": "https://economy.gmw.cn/2026-07/31/content_38920425.htm",
+    "date": "08-01",
+    "source": "光明网"
+  },
+  {
+    "title": "MiniMax 发布首款开源多模态模型 H3，视频编辑榜全球第一",
+    "url": "https://new.qq.com/rain/a/20260731A04F2000?refer=cp_1009",
+    "date": "08-01",
+    "source": "央广网（腾讯新闻）"
+  },
+  {
+    "title": "特斯拉中国车机正式接入豆包大模型，千问同步内测",
+    "url": "https://view.inews.qq.com/a/20260731A073Y300",
+    "date": "08-01",
+    "source": "北京日报客户端（腾讯新闻）"
+  },
+  {
+    "title": "多部门密集部署人工智能法与算力布局",
+    "url": "https://new.qq.com/rain/a/20260801A03OD300",
+    "date": "08-01",
+    "source": "央视新闻（腾讯新闻）"
+  },
+  {
+    "title": "微信公众平台上线 AI 智能一键排版功能",
+    "url": "https://dy.163.com/article/L375KKAR0511CMF5.html",
+    "date": "08-01",
+    "source": "科技狐（网易）"
+  },
+  {
     "title": "开源生态持续完善，人工智能下沉实体经济",
     "url": "https://news.cctv.com/2026/07/29/ARTIaepkWeDrEVUe64xpEuPq260729.shtml",
     "date": "07-29",

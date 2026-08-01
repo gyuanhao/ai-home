@@ -7,6 +7,61 @@
  */
 window.AIHomeNews = [
   {
+    "date": "2026-08-01",
+    "display": "8月1日",
+    "weekday": "周六",
+    "items": [
+      {
+        "title": "DeepSeek-V4-Flash 正式版 API 上线，Agent 能力暴涨 6 倍",
+        "url": "https://tech.ifeng.com/c/8vEDXuxscG5",
+        "summary": "2840亿MoE参数、激活130亿，DeepSWE暴涨至54.4，缓存命中价低至0.2元/百万tokens。",
+        "source": "IT之家（凤凰网）"
+      },
+      {
+        "title": "OpenAI 大幅下调 GPT-5.6 定价，Luna 降幅达 80%",
+        "url": "https://view.inews.qq.com/a/20260731A05V3D00",
+        "summary": "Luna降价80%、Terra降20%，Sol新增Fast模式，行业API价格战持续升温。",
+        "source": "腾讯新闻"
+      },
+      {
+        "title": "谷歌 DeepMind 发布 Gemini Robotics 2 机器人模型",
+        "url": "https://view.inews.qq.com/a/20260731A0CGOO00",
+        "summary": "突破前代仅控上半身局限，实现人形机器人全身协同与多机协作。",
+        "source": "腾讯新闻"
+      },
+      {
+        "title": "字节跳动 Seedance 2.5 视频模型上线，单次直出 30 秒",
+        "url": "https://economy.gmw.cn/2026-07/31/content_38920425.htm",
+        "summary": "支持50个多模态参考与局部编辑，从创意工具升级为产业级生产力工具。",
+        "source": "光明网"
+      },
+      {
+        "title": "MiniMax 发布首款开源多模态模型 H3，视频编辑榜全球第一",
+        "url": "https://new.qq.com/rain/a/20260731A04F2000?refer=cp_1009",
+        "summary": "2K直出、最长15秒音画，视频生成0.8元/秒，仅为同类旗舰三分之一。",
+        "source": "央广网（腾讯新闻）"
+      },
+      {
+        "title": "特斯拉中国车机正式接入豆包大模型，千问同步内测",
+        "url": "https://view.inews.qq.com/a/20260731A073Y300",
+        "summary": "全系车型引入豆包语音助手，支持实时信息与多角色对话，需开通高级娱乐服务。",
+        "source": "北京日报客户端（腾讯新闻）"
+      },
+      {
+        "title": "多部门密集部署人工智能法与算力布局",
+        "url": "https://new.qq.com/rain/a/20260801A03OD300",
+        "summary": "加快AI立法、推进智算集群与算电协同，专家称AI已成“十五五”核心抓手。",
+        "source": "央视新闻（腾讯新闻）"
+      },
+      {
+        "title": "微信公众平台上线 AI 智能一键排版功能",
+        "url": "https://dy.163.com/article/L375KKAR0511CMF5.html",
+        "summary": "创作者可自动优化段落间距、配色与图片，大幅降低图文编辑排版成本。",
+        "source": "科技狐（网易）"
+      }
+    ]
+  },
+  {
     "date": "2026-07-29",
     "display": "7月29日",
     "weekday": "周三",
