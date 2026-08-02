@@ -12,3 +12,9 @@
 - 选题：DeepSeek-V4-Flash正式版API上线(IT之家/凤凰)、OpenAI GPT-5.6降价80%(腾讯新闻)、谷歌Gemini Robotics 2(腾讯新闻)、字节Seedance 2.5(光明网)、MiniMax H3开源多模态(央广网/腾讯新闻)、特斯拉车机接入豆包(北京日报/腾讯新闻)、多部门部署AI法/算力(央视/腾讯新闻)、微信公众平台AI一键排版(科技狐/网易)。
 - 去重：标题无重复；避开 7/28–7/29 已入库的 Kimi K3 主题旧闻。
 - 未改动 js/news-data.js，未 git/部署。
+
+## 2026-08-02 (周日) — 第三次运行
+- 产出草稿：scripts/_draft_news.md（8 条，日期 2026-08-02，display「8月2日」）。
+- 选题：中国大模型领跑OpenRouter榜单(央视/腾讯新闻)、OpenAI Astra连破10道数学难题(腾讯新闻)、扎克伯格支持开源反对封禁中国AI(新智元/腾讯新闻)、Kimi完成F轮超35亿美元融资(第一财经/网易)、字节整合飞书与豆包ToB一体化(钛媒体/网易)、Jeff Dean谈Agent下一阶段(机器之心/腾讯新闻)、华为昇腾950DT 8月上云(中关村在线)、阿里千问语音识别模型Qwen-Audio-3.0-ASR-Flash(腾讯新闻)。
+- 去重：标题无重复；避开 8/1 已入库的 DeepSeek-V4-Flash/Seedance 2.5/MiniMax H3/GPT-5.6降价/Gemini Robotics 2 等，Kimi 条为新角度（融资，非7/29开源旧闻）。
+- 未改动 js/news-data.js，未 git/部署。

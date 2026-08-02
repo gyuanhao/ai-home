@@ -1,64 +1,62 @@
-# AI家AI户·每日资讯草稿 2026-08-01
+# AI家AI户·每日资讯草稿 2026-08-02
 
-本草稿仅供人工过，未自动入库；确认后由人工/prepend 进 js/news-data.js 数组最前。
+本草稿仅供人工过，未自动入库；确认后由人工/prepend 进 js/news-data.js 数组最前
 
----
-
-## 可直接复制的 JS day 对象
+## 可直接复制的 JS day 对象（粘贴到 window.AIHomeNews 数组最前）
 
 ```js
 {
-  "date": "2026-08-01",
-  "display": "8月1日",
-  "weekday": "周六",
+  "date": "2026-08-02",
+  "display": "8月2日",
+  "weekday": "周日",
   "items": [
     {
-      "title": "DeepSeek-V4-Flash 正式版 API 上线，Agent 能力暴涨 6 倍",
-      "url": "https://tech.ifeng.com/c/8vEDXuxscG5",
-      "summary": "2840亿MoE参数、激活130亿，DeepSWE暴涨至54.4，缓存命中价低至0.2元/百万tokens。",
-      "source": "IT之家（凤凰网）"
-    },
-    {
-      "title": "OpenAI 大幅下调 GPT-5.6 定价，Luna 降幅达 80%",
-      "url": "https://view.inews.qq.com/a/20260731A05V3D00",
-      "summary": "Luna降价80%、Terra降20%，Sol新增Fast模式，行业API价格战持续升温。",
-      "source": "腾讯新闻"
-    },
-    {
-      "title": "谷歌 DeepMind 发布 Gemini Robotics 2 机器人模型",
-      "url": "https://view.inews.qq.com/a/20260731A0CGOO00",
-      "summary": "突破前代仅控上半身局限，实现人形机器人全身协同与多机协作。",
-      "source": "腾讯新闻"
-    },
-    {
-      "title": "字节跳动 Seedance 2.5 视频模型上线，单次直出 30 秒",
-      "url": "https://economy.gmw.cn/2026-07/31/content_38920425.htm",
-      "summary": "支持50个多模态参考与局部编辑，从创意工具升级为产业级生产力工具。",
-      "source": "光明网"
-    },
-    {
-      "title": "MiniMax 发布首款开源多模态模型 H3，视频编辑榜全球第一",
-      "url": "https://new.qq.com/rain/a/20260731A04F2000?refer=cp_1009",
-      "summary": "2K直出、最长15秒音画，视频生成0.8元/秒，仅为同类旗舰三分之一。",
-      "source": "央广网（腾讯新闻）"
-    },
-    {
-      "title": "特斯拉中国车机正式接入豆包大模型，千问同步内测",
-      "url": "https://view.inews.qq.com/a/20260731A073Y300",
-      "summary": "全系车型引入豆包语音助手，支持实时信息与多角色对话，需开通高级娱乐服务。",
-      "source": "北京日报客户端（腾讯新闻）"
-    },
-    {
-      "title": "多部门密集部署人工智能法与算力布局",
-      "url": "https://new.qq.com/rain/a/20260801A03OD300",
-      "summary": "加快AI立法、推进智算集群与算电协同，专家称AI已成“十五五”核心抓手。",
+      "title": "中国AI大模型领跑全球榜单：OpenRouter前五均为国产，MiMo-V2.5居首",
+      "url": "https://new.qq.com/rain/a/20260802A088AQ00?refer=cp_1009",
+      "summary": "OpenRouter周榜前五全为中国模型，小米MiMo-V2.5单周调用10.5万亿Tokens居首；HuggingFace我国开源模型下载量全球第一。",
       "source": "央视新闻（腾讯新闻）"
     },
     {
-      "title": "微信公众平台上线 AI 智能一键排版功能",
-      "url": "https://dy.163.com/article/L375KKAR0511CMF5.html",
-      "summary": "创作者可自动优化段落间距、配色与图片，大幅降低图文编辑排版成本。",
-      "source": "科技狐（网易）"
+      "title": "OpenAI官宣下一代模型Astra，连破10道数学开放难题",
+      "url": "https://new.qq.com/rain/a/20260802A071YZ00?refer=cp_1009",
+      "summary": "Astra内部版在群论、编码等十个长期难题取得突破，证明由AI生成并经Lean形式化验证，求解成本约2000美元。",
+      "source": "腾讯新闻"
+    },
+    {
+      "title": "扎克伯格高调支持开源模型，反对以封禁应对中国AI",
+      "url": "https://new.qq.com/rain/a/20260802A04LKD00",
+      "summary": "小扎撰文称AI危险论下被少数人掌控才最危险，反对封禁中国开源模型，强调超级智能应人人可用、靠制衡保安全。",
+      "source": "新智元（腾讯新闻）"
+    },
+    {
+      "title": "月之暗面Kimi完成F轮超35亿美元融资，估值升至350亿美元",
+      "url": "https://www.163.com/dy/article/L3ALO4UV0519DDQ2.html",
+      "summary": "Kimi K3爆火后完成F轮融资超35亿美元、投后估值350亿美元，并提前启动Pre-IPO轮，投前估值升至500亿美元。",
+      "source": "第一财经（网易）"
+    },
+    {
+      "title": "字节整合飞书与豆包团队，ToB业务走向一体化",
+      "url": "https://www.163.com/dy/article/L3AU884605118O92.html",
+      "summary": "字节将飞书与豆包产品团队合并成立新豆包团队，飞书GTM并入火山引擎，为2021年以来ToB领域最大调整。",
+      "source": "钛媒体（网易）"
+    },
+    {
+      "title": "Jeff Dean谈Agent与AI下一阶段：从“模型更大”转向“更好组织智能”",
+      "url": "https://view.inews.qq.com/a/20260802A07RV800",
+      "summary": "机器之心刊出Jeff Dean访谈，称长程Agent需检查点、状态管理与评价者，上下文工程与技能文件将成生态关键资产。",
+      "source": "机器之心（腾讯新闻）"
+    },
+    {
+      "title": "华为昇腾950DT高带宽芯片提前至8月上线华为云，算力翻倍",
+      "url": "https://ai.zol.com.cn/1195/11955311.html",
+      "summary": "华为昇腾950DT高带宽芯片提前至8月上线华为云，内存带宽跃升4TB/s、容量144GB，算力翻倍面向训练与解码。",
+      "source": "中关村在线"
+    },
+    {
+      "title": "阿里通义千问发布语音识别大模型Qwen-Audio-3.0-ASR-Flash",
+      "url": "https://new.qq.com/rain/a/20260802A08KWF00?refer=cp_1009",
+      "summary": "阿里通义千问发布语音识别大模型Qwen-Audio-3.0-ASR-Flash，长音频不丢词、医疗术语召回95.36%，已上阿里云百炼。",
+      "source": "腾讯新闻（AI大模型动态）"
     }
   ]
 }
@@ -66,44 +64,44 @@
 
 ---
 
-## 人类可读列表（快速扫读）
+## 人类可读列表（人工快速扫读）
 
-1. **DeepSeek-V4-Flash 正式版 API 上线，Agent 能力暴涨 6 倍**
-   - 来源：IT之家（凤凰网）
-   - URL：https://tech.ifeng.com/c/8vEDXuxscG5
-   - 摘要：2840亿MoE参数、激活130亿，DeepSWE暴涨至54.4，缓存命中价低至0.2元/百万tokens。
-
-2. **OpenAI 大幅下调 GPT-5.6 定价，Luna 降幅达 80%**
-   - 来源：腾讯新闻
-   - URL：https://view.inews.qq.com/a/20260731A05V3D00
-   - 摘要：Luna降价80%、Terra降20%，Sol新增Fast模式，行业API价格战持续升温。
-
-3. **谷歌 DeepMind 发布 Gemini Robotics 2 机器人模型**
-   - 来源：腾讯新闻
-   - URL：https://view.inews.qq.com/a/20260731A0CGOO00
-   - 摘要：突破前代仅控上半身局限，实现人形机器人全身协同与多机协作。
-
-4. **字节跳动 Seedance 2.5 视频模型上线，单次直出 30 秒**
-   - 来源：光明网
-   - URL：https://economy.gmw.cn/2026-07/31/content_38920425.htm
-   - 摘要：支持50个多模态参考与局部编辑，从创意工具升级为产业级生产力工具。
-
-5. **MiniMax 发布首款开源多模态模型 H3，视频编辑榜全球第一**
-   - 来源：央广网（腾讯新闻）
-   - URL：https://new.qq.com/rain/a/20260731A04F2000?refer=cp_1009
-   - 摘要：2K直出、最长15秒音画，视频生成0.8元/秒，仅为同类旗舰三分之一。
-
-6. **特斯拉中国车机正式接入豆包大模型，千问同步内测**
-   - 来源：北京日报客户端（腾讯新闻）
-   - URL：https://view.inews.qq.com/a/20260731A073Y300
-   - 摘要：全系车型引入豆包语音助手，支持实时信息与多角色对话，需开通高级娱乐服务。
-
-7. **多部门密集部署人工智能法与算力布局**
+1. 中国AI大模型领跑全球榜单：OpenRouter前五均为国产，MiMo-V2.5居首
    - 来源：央视新闻（腾讯新闻）
-   - URL：https://new.qq.com/rain/a/20260801A03OD300
-   - 摘要：加快AI立法、推进智算集群与算电协同，专家称AI已成“十五五”核心抓手。
+   - URL：https://new.qq.com/rain/a/20260802A088AQ00?refer=cp_1009
+   - 摘要：OpenRouter周榜前五全为中国模型，小米MiMo-V2.5单周调用10.5万亿Tokens居首；HuggingFace我国开源模型下载量全球第一。
 
-8. **微信公众平台上线 AI 智能一键排版功能**
-   - 来源：科技狐（网易）
-   - URL：https://dy.163.com/article/L375KKAR0511CMF5.html
-   - 摘要：创作者可自动优化段落间距、配色与图片，大幅降低图文编辑排版成本。
+2. OpenAI官宣下一代模型Astra，连破10道数学开放难题
+   - 来源：腾讯新闻
+   - URL：https://new.qq.com/rain/a/20260802A071YZ00?refer=cp_1009
+   - 摘要：Astra内部版在群论、编码等十个长期难题取得突破，证明由AI生成并经Lean形式化验证，求解成本约2000美元。
+
+3. 扎克伯格高调支持开源模型，反对以封禁应对中国AI
+   - 来源：新智元（腾讯新闻）
+   - URL：https://new.qq.com/rain/a/20260802A04LKD00
+   - 摘要：小扎撰文称AI危险论下被少数人掌控才最危险，反对封禁中国开源模型，强调超级智能应人人可用、靠制衡保安全。
+
+4. 月之暗面Kimi完成F轮超35亿美元融资，估值升至350亿美元
+   - 来源：第一财经（网易）
+   - URL：https://www.163.com/dy/article/L3ALO4UV0519DDQ2.html
+   - 摘要：Kimi K3爆火后完成F轮融资超35亿美元、投后估值350亿美元，并提前启动Pre-IPO轮，投前估值升至500亿美元。
+
+5. 字节整合飞书与豆包团队，ToB业务走向一体化
+   - 来源：钛媒体（网易）
+   - URL：https://www.163.com/dy/article/L3AU884605118O92.html
+   - 摘要：字节将飞书与豆包产品团队合并成立新豆包团队，飞书GTM并入火山引擎，为2021年以来ToB领域最大调整。
+
+6. Jeff Dean谈Agent与AI下一阶段：从“模型更大”转向“更好组织智能”
+   - 来源：机器之心（腾讯新闻）
+   - URL：https://view.inews.qq.com/a/20260802A07RV800
+   - 摘要：机器之心刊出Jeff Dean访谈，称长程Agent需检查点、状态管理与评价者，上下文工程与技能文件将成生态关键资产。
+
+7. 华为昇腾950DT高带宽芯片提前至8月上线华为云，算力翻倍
+   - 来源：中关村在线
+   - URL：https://ai.zol.com.cn/1195/11955311.html
+   - 摘要：华为昇腾950DT高带宽芯片提前至8月上线华为云，内存带宽跃升4TB/s、容量144GB，算力翻倍面向训练与解码。
+
+8. 阿里通义千问发布语音识别大模型Qwen-Audio-3.0-ASR-Flash
+   - 来源：腾讯新闻（AI大模型动态）
+   - URL：https://new.qq.com/rain/a/20260802A08KWF00?refer=cp_1009
+   - 摘要：阿里通义千问发布语音识别大模型Qwen-Audio-3.0-ASR-Flash，长音频不丢词、医疗术语召回95.36%，已上阿里云百炼。
