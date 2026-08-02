@@ -83,5 +83,19 @@ window.AIHomePapers = [
     "source": "官方原文 / Microsoft",
     "date": "2025-03",
     "lastUpdated": "2026-08-02"
+  },
+  {
+    "id": "workbuddy-bluebook",
+    "title": "WorkBuddy Bluebook",
+    "titleZh": "WorkBuddy 实战蓝皮书（社区开源实战指南）",
+    "org": "AlephAITech（社区共创）",
+    "category": "工具实战",
+    "tags": ["WorkBuddy", "实战", "Skills", "MCP", "自动化", "多 Agent", "社区共创"],
+    "summary": "由 AlephAITech 联合多位作者社区共创、MIT 开源的 WorkBuddy 实战蓝皮书：以真实任务为主线，从安装上手、移动办公、知识管理、内容自动化，讲到多 Agent 团队与自动化可靠性，目标是把一次成功变成团队可复用的工作系统。在线阅读体验更完整：workbuddy.homes。",
+    "officialUrl": "https://github.com/AlephAITech/WorkBuddyGuide",
+    "interpretUrl": "",
+    "source": "GitHub 开源项目 AlephAITech/WorkBuddyGuide（社区共创，MIT 协议）",
+    "date": "2026-07",
+    "lastUpdated": "2026-08-02"
   }
 ];
