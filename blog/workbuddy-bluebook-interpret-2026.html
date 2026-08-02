@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="一份社区共创、MIT 开源的 WorkBuddy 实战蓝皮书解读：从安装上手、真实案例，到多 Agent 团队与自动化可靠性，帮普通人把 WorkBuddy 真正用成生产力。附原文链接。">
+    <meta name="keywords" content="WorkBuddy,蓝皮书,实战指南,Skill,MCP,多Agent,自动化,社区开源,workbuddy.homes">
+    <title>WorkBuddy 实战蓝皮书解读：从"第一个任务"到"一支 AI 团队" — AI家AI户</title>
+    <link rel="canonical" href="https://myaishome.com/blog/workbuddy-bluebook-interpret-2026.html">
+    <meta property="og:title" content="WorkBuddy 实战蓝皮书解读：从第一个任务到一支 AI 团队 — AI家AI户">
+    <meta property="og:description" content="社区共创、MIT 开源的 WorkBuddy 实战蓝皮书省流解读：结构速览 + 最值得抄的 5 个点 + 适合谁不适合谁。">
+    <meta property="og:url" content="https://myaishome.com/blog/workbuddy-bluebook-interpret-2026.html">
+    <meta property="og:type" content="article"><meta property="og:locale" content="zh_CN">
+    <meta property="article:published_time" content="2026-08-02"><meta name="twitter:card" content="summary_large_image">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1082515322846897" crossorigin="anonymous"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TBTFSXQ6NF"></script>
+    <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-TBTFSXQ6NF');</script>
+    <link rel="stylesheet" href="../css/style.css"><link rel="stylesheet" href="../css/icons.css">
+</head>
+<body>
+<aside class="sidebar" id="sidebar"><a href="../index.html" class="sidebar-logo"><img src="https://myaishome.com/img/logo.png" alt="AI家AI户" class="logo-icon">AI家AI户</a><nav class="sidebar-nav"><ul class="sidebar-links"><li><a href="../index.html" class="sidebar-link"><svg class="sb-icon" viewBox="0 0 24 24" fill="none" stroke="#3B5BDB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.6V19a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9.6"/><path d="M9.5 20v-5.5h5V20"/></svg>首页</a></li><li><a href="../models.html" class="sidebar-link"><svg class="sb-icon" viewBox="0 0 24 24" fill="none" stroke="#3B5BDB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 21 7.5 12 12 3 7.5z"/><path d="M3 12l9 4.5 9-4.5"/><path d="M3 16.5 12 21l9-4.5"/></svg>模型库</a></li><li><a href="../compare.html" class="sidebar-link"><svg class="sb-icon" viewBox="0 0 24 24" fill="none" stroke="#3B5BDB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20v-9"/><path d="M12 20V5"/><path d="M20 20v-6"/></svg>横向对比</a></li><li><a href="../skills.html" class="sidebar-link"><svg class="sb-icon" viewBox="0 0 24 24" fill="none" stroke="#3B5BDB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M3 12h18"/><circle cx="12" cy="14.5" r="1.5"/></svg>技能包</a></li>
+            <li><a href="../tools.html" class="sidebar-link"><svg class="sb-icon" viewBox="0 0 24 24" fill="none" stroke="#3B5BDB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>工具库</a></li><li><a href="../blog/" class="sidebar-link"><svg class="sb-icon" viewBox="0 0 24 24" fill="none" stroke="#3B5BDB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l4 4v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"/><path d="M14 3v4h4"/><path d="M9 12h6"/><path d="M9 15.5h6"/></svg>博客</a></li>
+            <li><a href="../about.html" class="sidebar-link"><svg class="sb-icon" viewBox="0 0 24 24" fill="none" stroke="#3B5BDB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 11v5"/><path d="M12 8h.01"/></svg>关于</a></li></ul></nav></aside>
+<button class="sidebar-toggle" onclick="toggleSidebar()" aria-label="menu">&#9776;</button>
+<div class="sidebar-overlay" id="sidebarOverlay" onclick="closeSidebar()"></div>
+<div class="sidebar-drawer" id="sidebarDrawer">
+    <div class="drawer-head">
+        <span class="d-logo"><img src="https://myaishome.com/img/logo.png" alt="AI家AI户" class="logo-icon">AI家AI户</span>
+        <button class="drawer-close-btn" onclick="closeSidebar()" aria-label="关闭">✕</button>
+    </div>
+    <nav class="sidebar-nav">
+        <ul class="sidebar-links">
+            <li><a href="../index.html" class="sidebar-link active"><svg class="sb-icon" viewBox="0 0 24 24" fill="none" stroke="#3B5BDB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.6V19a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9.6"/><path d="M9.5 20v-5.5h5V20"/></svg>首页</a></li>
+            <li><a href="../models.html" class="sidebar-link"><svg class="sb-icon" viewBox="0 0 24 24" fill="none" stroke="#3B5BDB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 21 7.5 12 12 3 7.5z"/><path d="M3 12l9 4.5 9-4.5"/><path d="M3 16.5 12 21l9-4.5"/></svg>模型库</a></li>
+            <li><a href="../compare.html" class="sidebar-link"><svg class="sb-icon" viewBox="0 0 24 24" fill="none" stroke="#3B5BDB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20v-9"/><path d="M12 20V5"/><path d="M20 20v-6"/></svg>横向对比</a></li>
+            <li><a href="../compare-custom.html" class="sidebar-link"><svg class="sb-icon" viewBox="0 0 24 24" fill="none" stroke="#3B5BDB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1"/><path d="M8.5 12.5 11 15l4.5-4.8"/></svg>自定义对比</a></li>
+            <li><a href="../vs/" class="sidebar-link"><svg class="sb-icon" viewBox="0 0 24 24" fill="none" stroke="#3B5BDB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 8h10l-3-3"/><path d="M17 16H7l3 3"/></svg>热门对比</a></li>
+            <li><a href="../picker.html" class="sidebar-link"><svg class="sb-icon" viewBox="0 0 24 24" fill="none" stroke="#3B5BDB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h8"/><path d="M16 8h4"/><circle cx="14" cy="8" r="2"/><path d="M4 16h4"/><path d="M12 16h8"/><circle cx="10" cy="16" r="2"/></svg>AI选型器</a></li>
+            <li><a href="../news.html" class="sidebar-link"><svg class="sb-icon" viewBox="0 0 24 24" fill="none" stroke="#3B5BDB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13a1 1 0 0 0 1 1 1 1 0 0 0 1-1V8"/><path d="M4 5v13a1 1 0 0 0 1 1h11"/><path d="M8 8h5"/><path d="M8 11.5h5"/></svg>新闻</a></li>
+            <li><a href="../skills.html" class="sidebar-link"><svg class="sb-icon" viewBox="0 0 24 24" fill="none" stroke="#3B5BDB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M3 12h18"/><circle cx="12" cy="14.5" r="1.5"/></svg>技能包</a></li>
+            <li><a href="../tools.html" class="sidebar-link"><svg class="sb-icon" viewBox="0 0 24 24" fill="none" stroke="#3B5BDB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2 12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>工具库</a></li>
+            <li><a href="../blog/" class="sidebar-link"><svg class="sb-icon" viewBox="0 0 24 24" fill="none" stroke="#3B5BDB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l4 4v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"/><path d="M14 3v4h4"/><path d="M9 12h6"/><path d="M9 15.5h6"/></svg>博客</a></li>
+            <li><a href="../about.html" class="sidebar-link"><svg class="sb-icon" viewBox="0 0 24 24" fill="none" stroke="#3B5BDB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 11v5"/><path d="M12 8h.01"/></svg>关于</a></li>
+        </ul>
+    </nav>
+    <div class="sidebar-footer">
+        <button onclick="switchLang();closeSidebar();" class="sidebar-lang-btn">EN</button>
+    </div>
+</div>
+
+<main class="main-content">
+<object data="../img/icons.svg" type="image/svg+xml" style="display:none"></object>
+
+<div class="container article-body" style="max-width:780px; margin:0 auto; padding:0 24px;">
+<div class="breadcrumb"><a href="../index.html">首页</a> › <a href="../blog/">博客</a> › WorkBuddy 实战蓝皮书解读</div>
+<h1 style="font-size:30px; margin:20px 0 8px;">WorkBuddy 实战蓝皮书解读：从"第一个任务"到"一支 AI 团队"</h1>
+<p style="color:var(--text-secondary); font-size:14px; margin-bottom:24px;">发布于 2026年8月2日 · 阅读约 7 分钟 · 作者：AI家AI户</p>
+
+<section style="margin-bottom:28px;">
+<p>很多人装了 WorkBuddy，第一句话是"你好"，第二句话就卡住了——这东西到底能帮我干啥？官方文档讲功能，但没人告诉你"从哪儿下手、怎么一步步变成生产力"。</p>
+<p>最近圈子里出了一份 <strong>WorkBuddy 实战蓝皮书</strong>：由 AlephAITech 牵头、多位作者社区共创、<strong>MIT 协议开源</strong>，不以官方说明书改写为目的，而是<strong>以真实任务为主线</strong>的实战读本。在线阅读站是 <a href="https://workbuddy.homes/" target="_blank" rel="noopener">workbuddy.homes</a>，项目源码在 <a href="https://github.com/AlephAITech/WorkBuddyGuide" target="_blank" rel="noopener">GitHub</a>。</p>
+<p>我通读了一遍，下面是我给你做的省流版解读——只提炼结构和最值得抄的点，不替你搬运原文。</p>
+</section>
+
+<section style="margin-bottom:28px;"><h2>一、它解决什么问题</h2>
+<p>蓝皮书的核心理念就一句话：<strong>"从第一项任务，到一支 AI 团队。"</strong> 它不假设你已经是高手，而是让你先完成安装和第一个真实工作，再逐步进入移动办公、知识管理、专业诊断、内容自动化，最后是多 Agent 团队，把一次成功变成团队可复用的工作系统。</p>
+<p>这和市面上"先背 100 个 prompt"的教程完全相反——它主张<strong>边做边学</strong>，用真实任务倒逼你掌握工具。对普通用户来说，这条路径明显更不容易半途而废。</p>
+</section>
+
+<section style="margin-bottom:28px;"><h2>二、结构速览（帮你省去翻目录）</h2>
+<p>全书分四篇加一个附录：</p>
+<p><strong>第一篇 · 使用手册</strong>：下载安装、界面、你的第一个任务，然后是 Skill、连接器、API 和自动化——把地基打牢。</p>
+<p><strong>第二篇 · 案例篇</strong>：覆盖办公、文件、远程、资讯、知识、会议、投资、视频、自媒体和 GEO 等 10 类真实场景。这一篇最"即插即用"，遇到具体活儿直接照着跑。</p>
+<p><strong>第三篇 · 进阶篇</strong>：教你打造自己的 Skill、设计多 Agent 系统，以及——这点很多教程都不讲——<strong>自动化可靠性</strong>：怎么让自动化稳定不出错、出错了怎么回退。</p>
+<p><strong>第四篇 · 岗位与行业</strong>：不同岗位（运营、研发、财务……）的使用路线，以及行业工作流。</p>
+<p><strong>附录</strong>：常用指令模板 + 场景速查表，当工具书用。</p>
+</section>
+
+<section style="margin-bottom:28px;"><h2>三、最值得抄的 5 个点</h2>
+<p><strong>1. 把流程封装成 Skill。</strong> 把高频重复的操作沉淀成可复用技能，下次一句话调用。这跟我们之前写的 <a href="book-to-skill-experience-2026.html">把一本书变成 AI 技能</a> 是同一思路——让 AI 长成本职领域的"随身专家"。</p>
+<p><strong>2. 连接器 / MCP 接外部系统。</strong> 光在对话框里聊没用，真正提效是把 WorkBuddy 接到你已经在用的工具和数据上。</p>
+<p><strong>3. 从单助手到多 Agent 团队。</strong> 复杂任务拆给多个专长 Agent 协作，比一个"万能助手"更稳、更可控。</p>
+<p><strong>4. 自动化可靠性（重点圈出）。</strong> 蓝皮书专门讲权限边界、验收标准和失败回退。这是把"玩具"变成"生产工具"的分水岭，也是大多数人第一次搭自动化最容易翻车的地方。</p>
+<p><strong>5. 社区案例集。</strong> 有"帮你解决"场景问卷和社区投稿的真实案例，等于别人帮你踩过坑的模板库，不用从零想。</p>
+</section>
+
+<section style="margin-bottom:28px;"><h2>四、适合谁 / 不适合谁（不端水）</h2>
+<p><strong>适合：</strong>想把 WorkBuddy 真正当生产力工具、甚至团队落地的人；想系统学"怎么做 Skill、怎么搭多 Agent"的人。跟着任务走，比看零散教程省时间。</p>
+<p><strong>不太适合：</strong>只想找一句"万能 prompt"偷懒的人——这本书没有捷径，它要你动手做任务。另外，凡是涉及产品功能、价格、可用范围的时效性信息，<strong>一律以 WorkBuddy 官方渠道为准</strong>，蓝皮书也会在声明里这么提醒你。</p>
+</section>
+
+<section style="margin-bottom:28px;"><h2>五、怎么读最省事</h2>
+<p>蓝皮书自己给的路线很实在：第一次用，从第一章按顺序走完第一篇；已经有具体任务，直接进第二篇对应案例，跑通了再看第三篇；准备团队落地，重点啃第三、四篇，并记下权限边界、验收标准和失败回退。</p>
+<p>我补充一句：别贪多。先挑一个你这周真要用的工作，照着案例跑通一遍，比一口气读完四篇有用得多。</p>
+</section>
+
+<section style="margin-bottom:28px;"><h2>写在最后</h2>
+<p>这份蓝皮书最值得肯定的，是它把"如何用 AI 提效"从玄学变成了<strong>可复用的工程方法</strong>：做任务 → 沉淀 Skill → 接系统 → 上自动化 → 组团队。对中文用户来说，它还是少数有完整中文实战体系的公开资料，省去了你翻英文文档的时间。</p>
+<p>以上是我们的省流解读，只提炼要点、不转载原文。想看完整内容，请移步官方渠道：<a href="https://github.com/AlephAITech/WorkBuddyGuide" target="_blank" rel="noopener">GitHub 项目</a> 或 <a href="https://workbuddy.homes/" target="_blank" rel="noopener">在线阅读站 workbuddy.homes</a>。时效性信息以官方为准。</p>
+</section>
+
+<div style="margin-top:40px; padding-top:20px; border-top:1px solid var(--border);">
+<p style="color:var(--text-secondary); font-size:13px;">本文为 AI家AI户 对社区开源《WorkBuddy 实战蓝皮书》的省流解读，非官方翻译或转载；原文版权归原作者所有，以官方发布为准。</p>
+<p style="margin-top:8px;"><a href="../index.html">← 返回首页</a> · <a href="../blog/">更多文章</a> · <a href="https://github.com/AlephAITech/WorkBuddyGuide" target="_blank" rel="noopener">查看原文 →</a></p>
+</div>
+</div>
+
+<footer class="footer">
+    <p style="margin-top:8px;font-size:13px;color:var(--text-secondary);"><a href="../privacy.html">隐私政策</a> · <a href="../terms.html">服务条款</a> · <a href="../disclaimer.html">免责声明</a> · <a href="../contact.html">联系我们</a> · <a href="../blog/">博客</a></p>
+    </footer>
+<script src="../js/main.js"></script><script src="../js/cookie-consent.js"></script><script src="../js/mobile-nav.js"></script>
+<nav class="mobile-tabs" id="mobileTabs">
+<a href="../index.html" class="mobile-tab"><span class="tab-icon"><span class="icon icon-lg"><svg width="24" height="24" class="icon-home"><use href="../img/icons.svg#icon-home"/></svg></span></span>首页</a>
+<a href="../models.html" class="mobile-tab"><span class="tab-icon"><span class="icon icon-lg"><svg width="24" height="24" class="icon-models"><use href="../img/icons.svg#icon-models"/></svg></span></span>模型库</a>
+<a href="../compare.html" class="mobile-tab"><span class="tab-icon"><span class="icon icon-lg"><svg width="24" height="24" class="icon-compare"><use href="../img/icons.svg#icon-compare"/></svg></span></span>对比</a>
+<a href="../skills.html" class="mobile-tab"><span class="tab-icon"><span class="icon icon-lg"><svg width="24" height="24" class="icon-skills"><use href="../img/icons.svg#icon-skills"/></svg></span></span>技能包</a>
+</nav>
+</main>
+</body>
+</html>

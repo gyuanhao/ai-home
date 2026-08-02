@@ -15,7 +15,8 @@
         { title: "免费 AI 生产力工具组合", url: "blog/ai-productivity-free-2026.html", tags: "免费,生产力,工具组合" },
         { title: "AI价格战：谁真降价谁玩套路", url: "blog/ai-price-war-2026.html", tags: "价格战,API,降价" },
         { title: "AI编程工具对比 2026", url: "blog/ai-coding-tools-comparison-2026.html", tags: "编程,Cursor,Windsurf,对比" },
-        { title: "把一本书转成 Skill 的踩坑记录", url: "blog/book-to-skill-experience-2026.html", tags: "Skill,Book,WorkBuddy,经验" }
+        { title: "把一本书转成 Skill 的踩坑记录", url: "blog/book-to-skill-experience-2026.html", tags: "Skill,Book,WorkBuddy,经验" },
+        { title: "WorkBuddy 实战蓝皮书解读：从第一个任务到一支 AI 团队", url: "blog/workbuddy-bluebook-interpret-2026.html", tags: "WorkBuddy,蓝皮书,实战,Skill,多Agent,自动化" }
     ];
 
     const searchWrap = document.getElementById('heroSearch');
@@ -134,6 +135,32 @@
         })
         .catch(function () { /* 拉取失败不阻塞站内搜索 */ });
 
+    // 白皮书接入站内搜索：运行时拉取 js/papers-data.js（数据驱动，单一数据源、自动同步）
+    // 追加到同一个 index 数组，下拉结果按「白皮书」分组展示，点击新标签打开（原文/我们的解读）
+    fetch('js/papers-data.js')
+        .then(r => (r.ok ? r.text() : ''))
+        .then(text => {
+            if (!text) return;
+            const s = document.createElement('script');
+            s.textContent = text;
+            document.head.appendChild(s);
+            const papers = (window.AIHomePapers || []);
+            if (!Array.isArray(papers)) return;
+            papers.forEach(p => {
+                index.push({
+                    type: 'paper',
+                    group: '白皮书',
+                    title: p.titleZh || p.title,
+                    desc: [p.org, p.category].filter(Boolean).join(' · '),
+                    tags: (p.tags || []).join(','),
+                    url: (p.interpretUrl && p.interpretUrl.trim()) ? p.interpretUrl : (p.officialUrl || '#'),
+                    searchText: [p.title, p.titleZh, p.org, p.category, (p.tags || []).join(' '), p.summary].join(' ').toLowerCase()
+                });
+            });
+            if (input && input.value.trim()) renderResults(input.value);
+        })
+        .catch(function () { /* 拉取失败不阻塞站内搜索 */ });
+
     function renderEngines() {
         const list = tabEngines[currentTab] || ['site'];
         if (!enginesRow) return;
@@ -214,7 +241,7 @@
                 el.className = 'hero-search-result';
                 el.href = item.url;
                 el.setAttribute('data-type', item.type);
-                if (item.type === 'tool') {
+                if (item.type === 'tool' || item.type === 'paper') {
                     el.target = '_blank';
                     el.rel = 'noopener';
                 }
