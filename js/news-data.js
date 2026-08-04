@@ -7,6 +7,128 @@
  */
 window.AIHomeNews = [
   {
+    "date": "2026-08-04",
+    "display": "8月4日",
+    "weekday": "周二",
+    "items": [
+      {
+        "title": "阿里发布Qwen3.8-Max：2.4万亿参数，\"千问办公\"同步开启公测",
+        "url": "https://www.ifnews.com/news.html?aid=856458&cid=43",
+        "summary": "阿里旗舰模型Qwen3.8-Max上线，支持1M上下文与视觉理解，企业级Agent\"千问办公\"同步公测。",
+        "source": "国际金融报"
+      },
+      {
+        "title": "白宫召集OpenAI、谷歌、Anthropic，审议AI模型安全测试框架终稿",
+        "url": "https://www.163.com/dy/article/L3FM8LFQ05119FMA.html",
+        "summary": "美方拟推自愿性机制，要求AI实验室在模型对外发布前先提交政府评估，周二在白宫开会讨论。",
+        "source": "网易（极客公园）"
+      },
+      {
+        "title": "OpenAI旗下ChatGPT Atlas浏览器8月9日停服，书签需手动导出",
+        "url": "https://new.qq.com/rain/a/20260803A09L1H00",
+        "summary": "上线不足10个月的Atlas将停止服务，数据不会自动迁移，用户须提前导出书签与历史记录。",
+        "source": "腾讯新闻（IT之家）"
+      },
+      {
+        "title": "京东外卖发布自研AI智能头盔，首批免费发放给全职骑手",
+        "url": "http://www.zqrb.cn/gscy/qiyexinxi/2026-08-03/A1785740390222.html",
+        "summary": "头盔集成AI语音助手、单王带路、一键SOS与商户核验，骑手全程语音接单无需碰手机。",
+        "source": "证券日报"
+      },
+      {
+        "title": "《人民日报》：无锡上线\"词元超市\"，调用大模型省钱又方便",
+        "url": "https://so.html5.qq.com/page/real/search_news?docid=70000021_0116a7121b916152",
+        "summary": "20多种主流大模型一个账号统一调用、集中采购拿团购价，已服务超50家企业，研发成本降近三成。",
+        "source": "人民日报（腾讯新闻转载）"
+      },
+      {
+        "title": "触觉感知企业帕西尼再获10亿元战略轮融资，累计融资达35亿元",
+        "url": "https://app.bbtnews.com.cn/print.php?contentid=601157",
+        "summary": "本轮由消费电子半导体巨头、中银国际投资、鲲鹏基金等联合投资，创全球触觉感知领域融资纪录。",
+        "source": "北京商报"
+      },
+      {
+        "title": "月之暗面回应港股IPO传闻：消息不实",
+        "url": "https://www.163.com/dy/article/L3FPS1LQ0534A4SC.html",
+        "summary": "针对近日市场流传的月之暗面赴港上市消息，知情人士向媒体明确回应称传闻不属实。",
+        "source": "网易（界面新闻）"
+      },
+      {
+        "title": "韩国国家AI计算中心正式动工，目标2028年建成",
+        "url": "https://new.qq.com/rain/a/20260803A06XA700?refer=cp_1009",
+        "summary": "韩国启动国家级AI算力基础设施建设，计划2028年投用，加码本土大模型训练与推理能力。",
+        "source": "腾讯新闻（IT之家）"
+      },
+      {
+        "title": "消息称阿里内测AI办公平台\"万有无界\"，主打多智能体协同交付",
+        "url": "https://www.chinaz.com/ainews/30058.shtml",
+        "summary": "该平台由多个智能体分工协作完成任务交付，被视为阿里在AI办公赛道的又一条产品线。",
+        "source": "站长之家"
+      }
+    ]
+  },
+  {
+    "date": "2026-08-03",
+    "display": "8月3日",
+    "weekday": "周一",
+    "items": [
+      {
+        "title": "长三角(嘉兴)Token运营中心启动，\"数据模型超市\"一次接入百余款大模型",
+        "url": "https://new.qq.com/rain/a/20260803A02A4J00",
+        "summary": "嘉兴Token中心上线，企业一次接入即可按需调用DeepSeek、Qwen等百余款主流大模型。",
+        "source": "腾讯新闻"
+      },
+      {
+        "title": "亚马逊完成对OpenAI总计500亿美元全额投资",
+        "url": "https://new.qq.com/rain/a/20260803A02A4J00",
+        "summary": "亚马逊季报披露已完成对OpenAI共500亿美元投资，构建从算力到模型的全栈AI能力。",
+        "source": "腾讯新闻"
+      },
+      {
+        "title": "谷歌Gemini Spark智能体向全球更多用户开放，可订机票、整理收件箱",
+        "url": "https://dy.163.com/article/L3D3CQM605562DGT.html",
+        "summary": "谷歌Gemini Spark扩大开放，支持订机票、整理收件箱等实操，通用Agent再进一步。",
+        "source": "网易（极新）"
+      },
+      {
+        "title": "腾讯AI虚拟细胞算法登《Cell》主刊",
+        "url": "https://dy.163.com/article/L3D3CQM605562DGT.html",
+        "summary": "腾讯AI虚拟细胞算法登《Cell》主刊，为疾病研究与新药发现提供系统性计算工具。",
+        "source": "网易（极新）"
+      },
+      {
+        "title": "智谱GLM Coding Plan开放订阅",
+        "url": "https://dy.163.com/article/L3D3CQM605562DGT.html",
+        "summary": "智谱推出GLM Coding Plan订阅，面向代码生成与工程化场景，扩建算力后开放。",
+        "source": "网易（极新）"
+      },
+      {
+        "title": "欧盟《人工智能法》透明度条款生效，深度伪造须强制标识",
+        "url": "https://www.163.com/dy/article/L3D7DVRB051480KF.html",
+        "summary": "欧盟AI法透明度条款8月2日生效，聊天机器人须表明AI身份，深伪内容强制水印。",
+        "source": "网易（前瞻网）"
+      },
+      {
+        "title": "国务院印发\"十五五\"知识产权规划，首部署AI生成物保护规则",
+        "url": "https://www.163.com/dy/article/L3D7DVRB051480KF.html",
+        "summary": "国务院印发十五五知识产权规划，首次系统部署AI生成物与数据知识产权保护规则。",
+        "source": "网易（前瞻网）"
+      },
+      {
+        "title": "谷歌地球AI生图功能上线不到48小时即暂停",
+        "url": "https://www.163.com/dy/article/L3CSMFG205199O55.html",
+        "summary": "谷歌地球AI生图功能上线不到48小时暂停，专家警告可被用于叠加虚构场景造假。",
+        "source": "网易（财经早餐）"
+      },
+      {
+        "title": "GitHub AI Agent曝\"GitLost\"提示注入漏洞，可诱骗泄露私有数据",
+        "url": "https://view.inews.qq.com/a/20260803A020FU00",
+        "summary": "安全机构发现GitHub Agent工作流\"GitLost\"漏洞，公开Issue可诱骗Agent泄露私有数据。",
+        "source": "腾讯新闻（华尔街见闻）"
+      }
+    ]
+  },
+  {
     "date": "2026-08-01",
     "display": "8月1日",
     "weekday": "周六",

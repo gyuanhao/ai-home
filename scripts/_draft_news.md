@@ -1,107 +1,130 @@
-# AI家AI户·每日资讯草稿 2026-08-02
+# AI家AI户·每日资讯草稿 2026-08-04
 
-本草稿仅供人工过，未自动入库；确认后由人工/prepend 进 js/news-data.js 数组最前
+> 本草稿仅供人工过，未自动入库；确认后由人工/prepend 进 js/news-data.js 数组最前
+> **状态：已于 2026-08-04 经用户确认「部署上线」，已 prepend 进 js/news-data.js 并推送至 main 触发 Cloudflare Pages 部署。下方 URL/来源已校订（原草稿第1/4、第8/9条曾串用同一链接，已各自配对真实来源）。**
 
-## 可直接复制的 JS day 对象（粘贴到 window.AIHomeNews 数组最前）
+## 可直接复制的 JS day 对象
 
 ```js
 {
-  "date": "2026-08-02",
-  "display": "8月2日",
-  "weekday": "周日",
+  "date": "2026-08-04",
+  "display": "8月4日",
+  "weekday": "周二",
   "items": [
     {
-      "title": "中国AI大模型领跑全球榜单：OpenRouter前五均为国产，MiMo-V2.5居首",
-      "url": "https://new.qq.com/rain/a/20260802A088AQ00?refer=cp_1009",
-      "summary": "OpenRouter周榜前五全为中国模型，小米MiMo-V2.5单周调用10.5万亿Tokens居首；HuggingFace我国开源模型下载量全球第一。",
-      "source": "央视新闻（腾讯新闻）"
+      "title": "阿里发布Qwen3.8-Max：2.4万亿参数，\"千问办公\"同步开启公测",
+      "url": "https://www.ifnews.com/news.html?aid=856458&cid=43",
+      "summary": "阿里旗舰模型Qwen3.8-Max上线，支持1M上下文与视觉理解，企业级Agent\"千问办公\"同步公测。",
+      "source": "国际金融报"
     },
     {
-      "title": "OpenAI官宣下一代模型Astra，连破10道数学开放难题",
-      "url": "https://new.qq.com/rain/a/20260802A071YZ00?refer=cp_1009",
-      "summary": "Astra内部版在群论、编码等十个长期难题取得突破，证明由AI生成并经Lean形式化验证，求解成本约2000美元。",
-      "source": "腾讯新闻"
+      "title": "白宫召集OpenAI、谷歌、Anthropic，审议AI模型安全测试框架终稿",
+      "url": "https://www.163.com/dy/article/L3FM8LFQ05119FMA.html",
+      "summary": "美方拟推自愿性机制，要求AI实验室在模型对外发布前先提交政府评估，周二在白宫开会讨论。",
+      "source": "网易（极客公园）"
     },
     {
-      "title": "扎克伯格高调支持开源模型，反对以封禁应对中国AI",
-      "url": "https://new.qq.com/rain/a/20260802A04LKD00",
-      "summary": "小扎撰文称AI危险论下被少数人掌控才最危险，反对封禁中国开源模型，强调超级智能应人人可用、靠制衡保安全。",
-      "source": "新智元（腾讯新闻）"
+      "title": "OpenAI旗下ChatGPT Atlas浏览器8月9日停服，书签需手动导出",
+      "url": "https://new.qq.com/rain/a/20260803A09L1H00",
+      "summary": "上线不足10个月的Atlas将停止服务，数据不会自动迁移，用户须提前导出书签与历史记录。",
+      "source": "腾讯新闻（IT之家）"
     },
     {
-      "title": "月之暗面Kimi完成F轮超35亿美元融资，估值升至350亿美元",
-      "url": "https://www.163.com/dy/article/L3ALO4UV0519DDQ2.html",
-      "summary": "Kimi K3爆火后完成F轮融资超35亿美元、投后估值350亿美元，并提前启动Pre-IPO轮，投前估值升至500亿美元。",
-      "source": "第一财经（网易）"
+      "title": "京东外卖发布自研AI智能头盔，首批免费发放给全职骑手",
+      "url": "http://www.zqrb.cn/gscy/qiyexinxi/2026-08-03/A1785740390222.html",
+      "summary": "头盔集成AI语音助手、单王带路、一键SOS与商户核验，骑手全程语音接单无需碰手机。",
+      "source": "证券日报"
     },
     {
-      "title": "字节整合飞书与豆包团队，ToB业务走向一体化",
-      "url": "https://www.163.com/dy/article/L3AU884605118O92.html",
-      "summary": "字节将飞书与豆包产品团队合并成立新豆包团队，飞书GTM并入火山引擎，为2021年以来ToB领域最大调整。",
-      "source": "钛媒体（网易）"
+      "title": "《人民日报》：无锡上线\"词元超市\"，调用大模型省钱又方便",
+      "url": "https://so.html5.qq.com/page/real/search_news?docid=70000021_0116a7121b916152",
+      "summary": "20多种主流大模型一个账号统一调用、集中采购拿团购价，已服务超50家企业，研发成本降近三成。",
+      "source": "人民日报（腾讯新闻转载）"
     },
     {
-      "title": "Jeff Dean谈Agent与AI下一阶段：从“模型更大”转向“更好组织智能”",
-      "url": "https://view.inews.qq.com/a/20260802A07RV800",
-      "summary": "机器之心刊出Jeff Dean访谈，称长程Agent需检查点、状态管理与评价者，上下文工程与技能文件将成生态关键资产。",
-      "source": "机器之心（腾讯新闻）"
+      "title": "触觉感知企业帕西尼再获10亿元战略轮融资，累计融资达35亿元",
+      "url": "https://app.bbtnews.com.cn/print.php?contentid=601157",
+      "summary": "本轮由消费电子半导体巨头、中银国际投资、鲲鹏基金等联合投资，创全球触觉感知领域融资纪录。",
+      "source": "北京商报"
     },
     {
-      "title": "华为昇腾950DT高带宽芯片提前至8月上线华为云，算力翻倍",
-      "url": "https://ai.zol.com.cn/1195/11955311.html",
-      "summary": "华为昇腾950DT高带宽芯片提前至8月上线华为云，内存带宽跃升4TB/s、容量144GB，算力翻倍面向训练与解码。",
-      "source": "中关村在线"
+      "title": "月之暗面回应港股IPO传闻：消息不实",
+      "url": "https://www.163.com/dy/article/L3FPS1LQ0534A4SC.html",
+      "summary": "针对近日市场流传的月之暗面赴港上市消息，知情人士向媒体明确回应称传闻不属实。",
+      "source": "网易（界面新闻）"
     },
     {
-      "title": "阿里通义千问发布语音识别大模型Qwen-Audio-3.0-ASR-Flash",
-      "url": "https://new.qq.com/rain/a/20260802A08KWF00?refer=cp_1009",
-      "summary": "阿里通义千问发布语音识别大模型Qwen-Audio-3.0-ASR-Flash，长音频不丢词、医疗术语召回95.36%，已上阿里云百炼。",
-      "source": "腾讯新闻（AI大模型动态）"
+      "title": "韩国国家AI计算中心正式动工，目标2028年建成",
+      "url": "https://new.qq.com/rain/a/20260803A06XA700?refer=cp_1009",
+      "summary": "韩国启动国家级AI算力基础设施建设，计划2028年投用，加码本土大模型训练与推理能力。",
+      "source": "腾讯新闻（IT之家）"
+    },
+    {
+      "title": "消息称阿里内测AI办公平台\"万有无界\"，主打多智能体协同交付",
+      "url": "https://www.chinaz.com/ainews/30058.shtml",
+      "summary": "该平台由多个智能体分工协作完成任务交付，被视为阿里在AI办公赛道的又一条产品线。",
+      "source": "站长之家"
     }
   ]
 }
 ```
 
+## 人工快速扫读列表
+
+**1. 阿里发布Qwen3.8-Max：2.4万亿参数，"千问办公"同步开启公测**
+- 来源：国际金融报
+- URL：https://www.ifnews.com/news.html?aid=856458&cid=43
+- 摘要：阿里旗舰模型Qwen3.8-Max上线，支持1M上下文与视觉理解，企业级Agent"千问办公"同步公测。
+- 备注：模型权重下周开源，同时开源 Qwen3.8-27B；国内API定价每百万Token输入12元、输出36元。
+
+**2. 白宫召集OpenAI、谷歌、Anthropic，审议AI模型安全测试框架终稿**
+- 来源：网易（极客公园）
+- URL：https://www.163.com/dy/article/L3FM8LFQ05119FMA.html
+- 摘要：美方拟推自愿性机制，要求AI实验室在模型对外发布前先提交政府评估，周二在白宫开会讨论。
+
+**3. OpenAI旗下ChatGPT Atlas浏览器8月9日停服，书签需手动导出**
+- 来源：腾讯新闻（IT之家）
+- URL：https://new.qq.com/rain/a/20260803A09L1H00
+- 摘要：上线不足10个月的Atlas将停止服务，数据不会自动迁移，用户须提前导出书签与历史记录。
+- 备注：对普通用户实操性最强的一条，Cookies无法导出，迁移后需重新登录。
+
+**4. 京东外卖发布自研AI智能头盔，首批免费发放给全职骑手**
+- 来源：证券日报
+- URL：http://www.zqrb.cn/gscy/qiyexinxi/2026-08-03/A1785740390222.html
+- 摘要：头盔集成AI语音助手、单王带路、一键SOS与商户核验，骑手全程语音接单无需碰手机。
+
+**5. 《人民日报》：无锡上线"词元超市"，调用大模型省钱又方便**
+- 来源：人民日报（腾讯新闻转载）
+- URL：https://so.html5.qq.com/page/real/search_news?docid=70000021_0116a7121b916152
+- 摘要：20多种主流大模型一个账号统一调用、集中采购拿团购价，已服务超50家企业，研发成本降近三成。
+- 备注：与 8/3 已入库的"嘉兴Token运营中心"同属Token经济主题但为不同城市、不同报道（人民日报8月4日第12版），角度为中小企业降本。若嫌重复可删。
+
+**6. 触觉感知企业帕西尼再获10亿元战略轮融资，累计融资达35亿元**
+- 来源：北京商报
+- URL：https://app.bbtnews.com.cn/print.php?contentid=601157
+- 摘要：本轮由消费电子半导体巨头、中银国际投资、鲲鹏基金等联合投资，创全球触觉感知领域融资纪录。
+
+**7. 月之暗面回应港股IPO传闻：消息不实**
+- 来源：网易（界面新闻）
+- URL：https://www.163.com/dy/article/L3FPS1LQ0534A4SC.html
+- 摘要：针对近日市场流传的月之暗面赴港上市消息，知情人士向媒体明确回应称传闻不属实。
+
+**8. 韩国国家AI计算中心正式动工，目标2028年建成**
+- 来源：腾讯新闻（IT之家）
+- URL：https://new.qq.com/rain/a/20260803A06XA700?refer=cp_1009
+- 摘要：韩国启动国家级AI算力基础设施建设，计划2028年投用，加码本土大模型训练与推理能力。
+
+**9. 消息称阿里内测AI办公平台"万有无界"，主打多智能体协同交付**
+- 来源：站长之家
+- URL：https://www.chinaz.com/ainews/30058.shtml
+- 摘要：该平台由多个智能体分工协作完成任务交付，被视为阿里在AI办公赛道的又一条产品线。
+
 ---
 
-## 人类可读列表（人工快速扫读）
+## 已主动跳过的旧闻/重复项
 
-1. 中国AI大模型领跑全球榜单：OpenRouter前五均为国产，MiMo-V2.5居首
-   - 来源：央视新闻（腾讯新闻）
-   - URL：https://new.qq.com/rain/a/20260802A088AQ00?refer=cp_1009
-   - 摘要：OpenRouter周榜前五全为中国模型，小米MiMo-V2.5单周调用10.5万亿Tokens居首；HuggingFace我国开源模型下载量全球第一。
-
-2. OpenAI官宣下一代模型Astra，连破10道数学开放难题
-   - 来源：腾讯新闻
-   - URL：https://new.qq.com/rain/a/20260802A071YZ00?refer=cp_1009
-   - 摘要：Astra内部版在群论、编码等十个长期难题取得突破，证明由AI生成并经Lean形式化验证，求解成本约2000美元。
-
-3. 扎克伯格高调支持开源模型，反对以封禁应对中国AI
-   - 来源：新智元（腾讯新闻）
-   - URL：https://new.qq.com/rain/a/20260802A04LKD00
-   - 摘要：小扎撰文称AI危险论下被少数人掌控才最危险，反对封禁中国开源模型，强调超级智能应人人可用、靠制衡保安全。
-
-4. 月之暗面Kimi完成F轮超35亿美元融资，估值升至350亿美元
-   - 来源：第一财经（网易）
-   - URL：https://www.163.com/dy/article/L3ALO4UV0519DDQ2.html
-   - 摘要：Kimi K3爆火后完成F轮融资超35亿美元、投后估值350亿美元，并提前启动Pre-IPO轮，投前估值升至500亿美元。
-
-5. 字节整合飞书与豆包团队，ToB业务走向一体化
-   - 来源：钛媒体（网易）
-   - URL：https://www.163.com/dy/article/L3AU884605118O92.html
-   - 摘要：字节将飞书与豆包产品团队合并成立新豆包团队，飞书GTM并入火山引擎，为2021年以来ToB领域最大调整。
-
-6. Jeff Dean谈Agent与AI下一阶段：从“模型更大”转向“更好组织智能”
-   - 来源：机器之心（腾讯新闻）
-   - URL：https://view.inews.qq.com/a/20260802A07RV800
-   - 摘要：机器之心刊出Jeff Dean访谈，称长程Agent需检查点、状态管理与评价者，上下文工程与技能文件将成生态关键资产。
-
-7. 华为昇腾950DT高带宽芯片提前至8月上线华为云，算力翻倍
-   - 来源：中关村在线
-   - URL：https://ai.zol.com.cn/1195/11955311.html
-   - 摘要：华为昇腾950DT高带宽芯片提前至8月上线华为云，内存带宽跃升4TB/s、容量144GB，算力翻倍面向训练与解码。
-
-8. 阿里通义千问发布语音识别大模型Qwen-Audio-3.0-ASR-Flash
-   - 来源：腾讯新闻（AI大模型动态）
-   - URL：https://new.qq.com/rain/a/20260802A08KWF00?refer=cp_1009
-   - 摘要：阿里通义千问发布语音识别大模型Qwen-Audio-3.0-ASR-Flash，长音频不丢词、医疗术语召回95.36%，已上阿里云百炼。
+- DeepSeek-V4-Flash 正式版 API（8/1 已入库；8/4 的 21世纪经济报道深度解读属同一事件）
+- MiniMax H3 开源全模态视频模型（8/1 已入库）
+- OpenAI Astra 破解十项数学难题（8/2 已入库）
+- 高德地图"小高老师"AI原生地图（搜索命中的是 2025-08-04 旧闻，非今年）
+- AI短剧上半年22.19万部、爆款率0.47%（DataEye 报告为 7 月中下旬发布，非当日新闻）
