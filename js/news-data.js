@@ -7,6 +7,73 @@
  */
 window.AIHomeNews = [
   {
+    "date": "2026-08-05",
+    "display": "8月5日",
+    "weekday": "周三",
+    "items": [
+      {
+        "title": "GPT-5.5 Instant 全量推送：幻觉率降52.5%，新增\"记忆来源\"可查可删",
+        "url": "https://www.163.com/dy/article/L3HEJK2I05568E2X.html",
+        "summary": "免费用户同步可用，回答更短更少堆格式；点击回复末尾\"来源\"即可查看并删除错误记忆。",
+        "source": "网易科技"
+      },
+      {
+        "title": "腾讯混元发布语音识别模型 Hy ASR 3.0 preview，粤语词错误率3.12%",
+        "url": "https://www.163.com/dy/article/L3HFMQQA0511CMF5.html",
+        "summary": "基于Hy3融合识别与语义理解，普通话3.34%、英语2.62%，方言与嘈杂环境表现全面升级。",
+        "source": "网易（科技狐）"
+      },
+      {
+        "title": "彭博：中国AI\"斩杀线\"浮现，8周5款模型逼近全球前沿",
+        "url": "https://k.sina.com.cn/article_1887344341_707e96d502001timy.html",
+        "summary": "同一复杂任务DeepSeek-V4-Flash仅需0.03美元、Claude Fable5需3.15美元，美企定价权承压。",
+        "source": "新浪（观察者网）"
+      },
+      {
+        "title": "科创板日报：端侧AI元年开启，千问已进入特斯拉中国车机深度测试",
+        "url": "https://dy.163.com/article/L3I6S6NB0550B1DU.html",
+        "summary": "IDC预测2026年中国AI手机出货1.47亿台占比破53%，端侧AI市场规模有望突破8000亿元。",
+        "source": "网易（科创板日报）"
+      },
+      {
+        "title": "微信支付上线AI接入工具箱，含Skill技能包与AI友好文档、API",
+        "url": "https://www.aastocks.com/tc/mobile/news.aspx?newsid=now.1516835&newssource=aafn&newstype=61",
+        "summary": "逾七成微信支付商户开发者已用AI辅助编程，官方出工具箱降低AI生成支付代码的安全隐患。",
+        "source": "阿斯达克财经网"
+      },
+      {
+        "title": "蚂蚁灵波启动首轮融资拟募15亿，京东要建千万小时具身数据护城河",
+        "url": "https://www.163.com/dy/article/L3HE753305199NPP.html",
+        "summary": "上半年国内具身智能融资约438亿元，\"大脑派\"独占50.8%；京东计划明年积累1000万小时数据。",
+        "source": "网易（21世纪经济报道）"
+      },
+      {
+        "title": "谷歌课堂Gemini 8月10日起向全年龄段K-12学生开放",
+        "url": "https://finance.sina.com.cn/jjxw/2026-08-05/doc-inimfmyp5191437.shtml",
+        "summary": "需管理员授权，学生可把课件转成抽认卡、练习测验，并按具体作业获得情境化辅导提示。",
+        "source": "新浪财经（界面新闻）"
+      },
+      {
+        "title": "全球首款开源AI导盲机器人Milo问世，制造成本不到2000美元",
+        "url": "https://view.inews.qq.com/a/20260805A000R400",
+        "summary": "无需预先建图即可在陌生环境自主导航，硬件方案、仿真软件与预训练模型已全部开源。",
+        "source": "腾讯新闻（至顶科技）"
+      },
+      {
+        "title": "一个月9款旗舰扎堆，大模型进入\"月抛\"时代",
+        "url": "https://finance.sina.com.cn/jjxw/2026-08-05/doc-inimffsv4836249.shtml",
+        "summary": "头部模型分差明显收窄，开源阵营首次进入第一梯队，Kimi K3登顶Code Arena前端榜。",
+        "source": "新浪财经（投资界）"
+      },
+      {
+        "title": "美国FTC全面禁止进口外国先进机器人，近九成美高校论文用宇树",
+        "url": "https://view.inews.qq.com/a/20260804A0D7CH00",
+        "summary": "禁令以数据安全与本土供应链为由，分析指出可能反而拖累美国自身机器人研究进展。",
+        "source": "腾讯新闻（DeepTech深科技）"
+      }
+    ]
+  },
+  {
     "date": "2026-08-04",
     "display": "8月4日",
     "weekday": "周二",
