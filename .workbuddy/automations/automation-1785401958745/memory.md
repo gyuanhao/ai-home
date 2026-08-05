@@ -43,3 +43,8 @@
 - 去重：跳过 Qwen3.8-Max（8/4已入库）、海外巨头降价（8/1 GPT-5.6降价同事件）、DeepSeek登顶OpenRouter（8/2同主题）、月之暗面G轮500亿估值（与8/4"IPO传闻不实"口径潜在冲突，建议等官方确认）、微信AI入口灰度（8/1-8/2已报）、Gemini Robotics 2（7/31+8/1两度入库）、破壳/德塔智能（8/3消息）。
 - 流程改进：本次在写草稿前用 curl 批量 HTTP 状态码校验全部 12 个候选 URL（均 200），从源头规避 8/4 那次「URL 串味/失效」问题。建议后续每次运行都保留这一步。
 - 未改动 js/news-data.js，未 git/部署。
+
+## 2026-08-05 (周三) — 用户手动「部署上线」
+- 用户确认草稿后执行部署：将 8/5 day 对象（10 条）prepend 进 js/news-data.js 数组最前。提交 cb69f93，push origin main（da81cfb→cb69f93）。Cloudflare 构建约 60 秒后线上生效，cache-bust 验证 myaishome.com/js/news-data.js 首项已为 2026-08-05（total_days=27）。
+- 草稿文件 scripts/_draft_news.md 重置为「已发布」占位（每日 09:00 自动化会重新覆盖），与 news-data.js、memory.md 一并提交。
+- 因上一步已用 curl 校验全部 URL 均 200，本次未出现 8/4 串味/失效问题；URL 与来源直接沿用草稿。
