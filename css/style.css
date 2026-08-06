@@ -1739,3 +1739,25 @@ a:hover { color: var(--primary-dark); }
   .xb-art { display: none; }
   .xb-text p { margin-left: auto; margin-right: auto; }
 }
+
+/* ===== 滚动进场（错峰淡入上浮） ===== */
+.reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity .5s var(--ease-out, ease), transform .5s var(--ease-out, ease);
+    will-change: opacity, transform;
+}
+.reveal.in { opacity: 1; transform: translateY(0); }
+
+/* ===== 分类筛选平滑（淡出→重排→淡入） ===== */
+.filter-grid.switching { opacity: 0; transition: opacity .2s ease; }
+
+/* ===== 尊重系统“减少动态效果”偏好（必做） ===== */
+@media (prefers-reduced-motion: reduce) {
+    .reveal, .reveal.in {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+    .filter-grid.switching { opacity: 1 !important; transition: none !important; }
+}

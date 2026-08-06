@@ -102,7 +102,7 @@
 
     <div class="filters" id="paperFilters"></div>
 
-    <div class="model-grid" id="paperGrid"></div>
+    <div class="model-grid filter-grid" id="paperGrid"></div>
 </div>
 
 <footer class="footer">
@@ -111,6 +111,7 @@
 
 <script src="js/cookie-consent.js"></script>
 <script src="js/mobile-nav.js"></script>
+<script src="js/reveal.js"></script>
 <script src="js/papers-data.js"></script>
 <script>
 (function(){
@@ -133,17 +134,20 @@
     ).join('');
     filtersEl.querySelectorAll('.filter-btn').forEach(btn => {
         btn.addEventListener('click', () => {
+            const cat = btn.getAttribute('data-cat');
+            if (cat === activeCat) return;
             filtersEl.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
-            activeCat = btn.getAttribute('data-cat');
-            render();
+            activeCat = cat;
+            grid.classList.add('switching');
+            setTimeout(() => { render(true); grid.classList.remove('switching'); }, 180);
         });
     });
 
     function esc(s){ return String(s == null ? '' : s).replace(/[&<>"]/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m])); }
     function escAttr(s){ return esc(s); }
 
-    function render(){
+    function render(animate){
         let list = papers;
         if (activeCat !== 'all') list = list.filter(p => p.category === activeCat);
         if (query){
@@ -166,7 +170,8 @@
             const interpret = (p.interpretUrl && p.interpretUrl.trim()) ? p.interpretUrl.trim() : '';
             const footerLinks = '<a class="paper-link" href="' + escAttr(original) + '" target="_blank" rel="noopener" onclick="event.stopPropagation()">查看原文 ↗</a>'
                 + (interpret ? '<a class="paper-link alt" href="' + escAttr(interpret) + '" target="_blank" rel="noopener" onclick="event.stopPropagation()">我们的解读 →</a>' : '');
-            return '<div class="model-card paper-card" data-href="' + escAttr(original) + '" title="点击查看原文">'
+            const cardCls = (animate && typeof window.initReveal === 'function') ? 'model-card paper-card reveal' : 'model-card paper-card';
+            return '<div class="' + cardCls + '" data-href="' + escAttr(original) + '" title="点击查看原文">'
                 + '<div class="model-card-header"><div>'
                 + '<div class="model-name">' + esc(p.titleZh || p.title) + '</div>'
                 + '<div class="model-company">' + esc(p.org || '') + (p.date ? ' · ' + esc(p.date) : '') + '</div>'
@@ -175,15 +180,16 @@
                 + '<div class="model-desc">' + esc(p.summary || '') + '</div>'
                 + '<div class="model-footer">' + footerLinks + '</div></div>';
         }).join('');
+        if (animate && typeof window.initReveal === 'function') window.initReveal(grid);
     }
 
     searchEl.addEventListener('input', () => {
         query = searchEl.value.trim();
         searchClear.style.display = query ? 'block' : 'none';
-        render();
+        render(false);
     });
     searchClear.addEventListener('click', () => {
-        searchEl.value = ''; query = ''; searchClear.style.display = 'none'; render();
+        searchEl.value = ''; query = ''; searchClear.style.display = 'none'; render(false);
     });
 
     grid.addEventListener('click', function(e){
@@ -192,7 +198,7 @@
             window.open(card.getAttribute('data-href'), '_blank', 'noopener');
         }
     });
-    render();
+    render(true);
 })();
 </script>
 </body>

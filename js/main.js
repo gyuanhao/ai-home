@@ -1816,14 +1816,14 @@ document.addEventListener('DOMContentLoaded', function() {
         searchInput.addEventListener('input', function() {
             toggleClear();
             const query = this.value.toLowerCase();
-            renderModelCards(document.querySelector('.filter-btn.active')?.dataset.cat || 'all', query);
+            renderModelCards(document.querySelector('.filter-btn.active')?.dataset.cat || 'all', query, false);
         });
         // 清除按钮点击
         searchClear.addEventListener('click', function() {
             searchInput.value = '';
             toggleClear();
             searchInput.focus();
-            renderModelCards(document.querySelector('.filter-btn.active')?.dataset.cat || 'all', '');
+            renderModelCards(document.querySelector('.filter-btn.active')?.dataset.cat || 'all', '', false);
         });
         // 键盘快捷键 Cmd/Ctrl + K 聚焦搜索
         document.addEventListener('keydown', function(e) {
@@ -1838,11 +1838,15 @@ document.addEventListener('DOMContentLoaded', function() {
     // 筛选按钮
     document.querySelectorAll('.filter-btn').forEach(btn => {
         btn.addEventListener('click', function() {
-            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-            this.classList.add('active');
             const cat = this.dataset.cat;
             const query = document.getElementById('modelSearch')?.value.toLowerCase() || '';
-            renderModelCards(cat, query);
+            const activeEl = document.querySelector('.filter-btn.active');
+            if (cat === activeEl?.dataset.cat && !query) return;
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            const grid = document.getElementById('modelGrid');
+            if (grid) grid.classList.add('switching');
+            setTimeout(() => { renderModelCards(cat, query); if (grid) grid.classList.remove('switching'); }, 180);
         });
     });
 
@@ -1851,9 +1855,11 @@ document.addEventListener('DOMContentLoaded', function() {
     if (compareBody) renderCompareTable();
 });
 
-function renderModelCards(category, query) {
+function renderModelCards(category, query, animate) {
     const grid = document.getElementById('modelGrid');
     if (!grid) return;
+    if (animate === undefined) animate = true;
+    const canReveal = typeof window.initReveal === 'function';
     const isEn = (typeof currentLang === 'function' ? currentLang() : 'zh') === 'en';
     const detailIds = new Set(['deepseek','kimi','qwen','ernie','chatgpt','claude','gemini','bailian']);
 
@@ -1878,7 +1884,7 @@ function renderModelCards(category, query) {
     grid.innerHTML = filtered.map(m => {
         const hasDetail = detailIds.has(m.id);
         return `
-        <div class="model-card" onclick="location.href='${m.website}'" title="点击访问官网">
+        <div class="${animate && canReveal ? 'model-card reveal' : 'model-card'}" onclick="location.href='${m.website}'" title="点击访问官网">
             <div class="model-card-header">
                 <div>
                     <div class="model-name">${isEn && m.nameEn ? m.nameEn : m.name}</div>
@@ -1900,6 +1906,7 @@ function renderModelCards(category, query) {
         </div>
         `;
     }).join('');
+    if (animate && canReveal) window.initReveal(grid);
 }
 
 function renderCompareTable() {

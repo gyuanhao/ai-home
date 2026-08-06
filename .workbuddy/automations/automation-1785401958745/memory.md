@@ -48,3 +48,10 @@
 - 用户确认草稿后执行部署：将 8/5 day 对象（10 条）prepend 进 js/news-data.js 数组最前。提交 cb69f93，push origin main（da81cfb→cb69f93）。Cloudflare 构建约 60 秒后线上生效，cache-bust 验证 myaishome.com/js/news-data.js 首项已为 2026-08-05（total_days=27）。
 - 草稿文件 scripts/_draft_news.md 重置为「已发布」占位（每日 09:00 自动化会重新覆盖），与 news-data.js、memory.md 一并提交。
 - 因上一步已用 curl 校验全部 URL 均 200，本次未出现 8/4 串味/失效问题；URL 与来源直接沿用草稿。
+
+## 2026-08-06 (周四) — 第七次运行
+- 产出草稿：scripts/_draft_news.md（10 条，日期 2026-08-06，display「8月6日」）。
+- 选题主线：Jeff Dean 离职谷歌创办 Discovery Loop、股价跌5%(凤凰科技/财联社)、Meta 首款编程智能体 Muse Code(网易/财联社)、字节 SeedRealtime 音视频全双工上线豆包(腾讯/每经)、曝 DeepSeek 重启二轮融资估值5000亿(网易/i黑马)、京东开源 JoyAI-Video-Edit 边播边改(腾讯/北京日报)、Anthropic 组建自研芯片团队(腾讯/观点新媒体)、Qwen-Image-3.0 上线千问平台(腾讯新闻)、荣耀 MagicOS 10 八月版今起推送七大AI功能(腾讯新闻)、人民日报评AI治理(网易/人民网)、Sand.ai 千亿级开源 MoE 视频模型(网易/极新)。
+- 去重：跳过 DeepSeek-V4-Flash 低价解读(8/1)、OpenRouter 前五(8/2)、Hy ASR 3.0(8/5)、千问办公公测/万有无界(8/4)、月抛时代(8/5)、端侧AI概念(8/5)；Jeff Dean 条为「离职创业」新事件，与 8/2「谈Agent」不同，予以保留。腾讯 QClaw 并入 WorkBuddy 因仅见自媒体公众号、权威度不足而剔除。
+- 流程：沿用 8/5 的 curl 批量状态码校验（12 个候选 URL 全 200）；新增用 node 解析草稿 JS 块做 JSON 合法性 + 摘要≤60字 + 与 news-data.js 标题查重的自动校验，发现第10条摘要 63 字并已收敛至 59 字。建议后续固化这两步校验。
+- 未改动 js/news-data.js，未 git/部署；git status 确认仅 scripts/_draft_news.md 为 M。
