@@ -6,7 +6,209 @@
  * 仙侠站数据由 xianxia/scripts/convert_news.py 解析本文件自动同步，请勿手改 xianxia 端。
  */
 window.AIHomeNews = [
-  {
+
+{
+    "date": "2026-08-10",
+    "display": "8月10日",
+    "weekday": "周一",
+    "items": [
+      {
+        "title": "A股迎「人形机器人第一股」，宇树科技今日启动网上申购",
+        "url": "https://www.stcn.com/article/detail/4065944.html",
+        "summary": "发行价150.80元/股，对应市值约609.93亿元，拟募资60.99亿元；从受理到申购不足5个月，创年内最快纪录。",
+        "source": "证券时报网"
+      },
+      {
+        "title": "OpenAI暂停Astra模型部分研发：自主网络攻防能力过强触及高危门槛",
+        "url": "https://www.163.com/dy/article/L3TFVN2U0514R9OJ.html",
+        "summary": "内部测评发现该模型自主攻防能力过强，可能主动发起高级网络攻击；已叫停不达安全标准的测试。",
+        "source": "网易（央视财经）"
+      },
+      {
+        "title": "字节跳动被曝正训练10万亿参数大模型，处于预训练早期阶段",
+        "url": "https://view.inews.qq.com/a/20260808A00KQF00",
+        "summary": "智东西援引英国《金融时报》，称该模型处于3至6个月预训练早期，若属实将超越约8万亿参数的Mythos 5。",
+        "source": "腾讯新闻（智东西）"
+      },
+      {
+        "title": "人民日报：美国近200家科技初创联名反对限制使用中国开源模型",
+        "url": "https://k.sina.com.cn/article_1893892941_70e2834d020022ffe.html",
+        "summary": "信中称美国开发者需持续使用全球现有开放模型；美企调用中国模型词元占比每周稳超30%、峰值46%。",
+        "source": "新浪（人民日报）"
+      },
+      {
+        "title": "「Token超级工厂」魔形智能完成A轮融资，三个月内连融两轮",
+        "url": "https://www.163.com/dy/article/L3V5VNNG051180F7.html",
+        "summary": "毅达资本领投，距5月Pre-A轮仅三个月；成立两年日均Token调用量达数万亿级，收入已达数亿元。",
+        "source": "网易（智东西）"
+      },
+      {
+        "title": "国家发改委：将加快人工智能法立法进程，完善关键制度框架",
+        "url": "https://k.sina.com.cn/article_5953189932_162d6782c06704ukuc.html",
+        "summary": "同时建立技术监测与风险预警体系；上半年规上制造业AI应用普及率超30%，智能算力规模为去年同期2.8倍。",
+        "source": "新浪（光明日报）"
+      },
+      {
+        "title": "总台《2026中国AI盛典》揭晓10位年度AI人物，蔡磊获特别贡献人物",
+        "url": "https://sh.cctv.com/2026/08/08/ARTIjvdeF1dGMwEgA3ZTkPy3260808.shtml",
+        "summary": "8月9日CCTV-1播出，王兴兴、闫俊杰等10人当选，其中4位为90后；渐冻症抗争者蔡磊获特别贡献人物。",
+        "source": "央视网"
+      },
+      {
+        "title": "人民日报海外版：中国「陪伴经济」打开消费新空间，AI陪伴立法成全球样本",
+        "url": "https://news.haiwainet.cn/n/2026/0810/c3541093-32974238.html",
+        "summary": "外媒关注7月15日施行的《人工智能拟人化互动服务管理暂行办法》，称其为世界首部AI情感陪伴国家法规。",
+        "source": "海外网（人民日报海外版）"
+      },
+      {
+        "title": "星动纪元人形机器人上岗中国邮政分拣，效率基本追平人工",
+        "url": "https://view.inews.qq.com/a/20260810A02RMI00",
+        "summary": "L7机型效率基本追平人工每小时约1200件，物流分拣已实现小几百台部署，优先接手夜班粉尘等岗位。",
+        "source": "腾讯新闻（北京青年报）"
+      },
+      {
+        "title": "原字节机器人团队负责人孔涛加盟小米，挂帅新设具身智能与应用部",
+        "url": "https://view.inews.qq.com/a/20260810A02CR000",
+        "summary": "多方信源确认，新部门统管小米具身赛道；其机器人在汽车工厂自攻螺母工站双侧作业成功率已达98%。",
+        "source": "腾讯新闻（观点新媒体）"
+      }
+    ]
+  },
+{
+    "date": "2026-08-07",
+    "display": "8月7日",
+    "weekday": "周五",
+    "items": [
+      {
+        "title": "DeepSeek预告全面上调API定价，或告别「价格屠夫」低价策略",
+        "url": "https://www.stcn.com/article/detail/4062768.html",
+        "summary": "官方称涨幅较大、具体方案待定；当前V4-Flash输出2元/百万Token，年内智谱、Kimi等已多次提价。",
+        "source": "证券时报网"
+      },
+      {
+        "title": "阿里云视频模型Wan3.0开启公测，单次直出30秒并支持文档生视频",
+        "url": "https://new.qq.com/rain/a/20260807A04FA100",
+        "summary": "首次支持doc、ppt、pdf等文档输入自动成片；480P/720P/1080P分别0.3、0.6、1.2元每秒。",
+        "source": "腾讯新闻（快科技）"
+      },
+      {
+        "title": "字节跳动年中全员会：承认大模型落后，张一鸣定调不用蒸馏走捷径",
+        "url": "https://www.163.com/dy/article/L3LQ82UB05129QAF.html",
+        "summary": "梁汝波称豆包C端与Seedance仍具竞争力，接受短期落后坚持自研；飞书新客超九成同购AI产品。",
+        "source": "网易（南方都市报）"
+      },
+      {
+        "title": "中国开源大模型累计下载破百亿次，OpenRouter周调用前四全是国产",
+        "url": "https://new.qq.com/rain/a/20260807A0403M00",
+        "summary": "Hugging Face春季报告显示中国开源模型下载占比达41%，首次超过美国位居全球第一。",
+        "source": "腾讯新闻（中国电子报）"
+      },
+      {
+        "title": "MiniMax纳入港股通首日收涨17.10%，总市值站上1038亿港元",
+        "url": "https://finance.stockstar.com/IG2026080600019831.shtml",
+        "summary": "盘中一度涨超20%、成交额47.43亿港元；机构测算后续或迎超百亿港元南向增量资金。",
+        "source": "证券之星（观点网）"
+      },
+      {
+        "title": "SpaceX与特斯拉投资168亿美元，全球最大芯片厂Terafab破土动工",
+        "url": "https://www.cls.cn/detail/2447866",
+        "summary": "选址美国德州，规划930万平方米、年产1太瓦算力，供Optimus机器人与太空数据中心用芯片。",
+        "source": "财联社"
+      },
+      {
+        "title": "每经：AI驶入「L3智能体」深水区，中美前沿模型差距实质性收窄",
+        "url": "https://www.nbd.com.cn/articles/2026-08-06/4534527.html",
+        "summary": "白皮书显示2025年中国AI融资1579起共1504亿元，单笔超10亿元融资数量较上年翻倍。",
+        "source": "每日经济新闻"
+      },
+      {
+        "title": "Om AI联汇完成数亿元融资，同步开源端侧多模态模型VLX-Seek 1.5",
+        "url": "https://www.stdaily.com/web/gdxw/2026-08/06/content_560231.html",
+        "summary": "3B版本在无人机具身场景准确率提升62.9%；其可穿戴视觉中枢已服务近十万视障用户。",
+        "source": "科技日报"
+      },
+      {
+        "title": "第二届世界人形机器人运动会新增拔河项目，8月22日国家速滑馆开幕",
+        "url": "https://view.inews.qq.com/a/20260806A0718T00",
+        "summary": "采用二对二对抗形式，考验运动控制、力觉感知与多机协同自主决策，部分票档已售罄。",
+        "source": "腾讯新闻（北京日报）"
+      },
+      {
+        "title": "河北邯郸投用人形交通管理机器人，可模拟交警手势疏导车流",
+        "url": "https://view.inews.qq.com/a/20260806A0653H00",
+        "summary": "8月4日正式上岗，联动信号灯指挥，并能识别行人与非机动车违法行为进行语音劝导。",
+        "source": "腾讯新闻（北京青年报）"
+      }
+    ]
+  },
+{
+    "date": "2026-08-06",
+    "display": "8月6日",
+    "weekday": "周四",
+    "items": [
+      {
+        "title": "谷歌AI部门大洗牌：首席科学家Jeff Dean效力27年后离职创业",
+        "url": "https://tech.ifeng.com/c/8vLytv7th77",
+        "summary": "哈萨比斯转任Alphabet首席科学家，Koray接棒Gemini 4研发；消息公布后谷歌股价盘中跌逾5%。",
+        "source": "凤凰网科技（财联社）"
+      },
+      {
+        "title": "Meta推出首款AI编程智能体Muse Code，主打低价挑战OpenAI与Anthropic",
+        "url": "https://www.163.com/dy/article/L3KFA88H05198CJN.html",
+        "summary": "基于Muse Spark 1.2构建，按量付费输入1.25美元/百万token，另提供成本更低的贡献者版本。",
+        "source": "网易（财联社）"
+      },
+      {
+        "title": "字节跳动发布原生音视频全双工大模型SeedRealtime，已在豆包App全量上线",
+        "url": "https://new.qq.com/rain/a/20260806A02DR600",
+        "summary": "统一架构融合音频、视频与文本，支持边看边听边说，对话节奏问题较级联系统减少约一半。",
+        "source": "腾讯新闻（每日经济新闻）"
+      },
+      {
+        "title": "曝DeepSeek重启第二轮融资，拟募资500亿元、投前估值5000亿元",
+        "url": "https://www.163.com/dy/article/L3JVB3LV05118I96.html",
+        "summary": "据《财经》报道预计8月下旬签约；今年4月首轮已融500亿元、估值超3500亿，官方暂未回应。",
+        "source": "网易（i黑马）"
+      },
+      {
+        "title": "京东开源实时流式视频编辑模型JoyAI-Video-Edit，视频可边播边改",
+        "url": "https://new.qq.com/rain/a/20260805A0CZ0N00",
+        "summary": "720P下每秒30帧推理，支持任意时长实时替换人物与场景，适配直播电商、家装设计与影视创作。",
+        "source": "腾讯新闻（北京日报）"
+      },
+      {
+        "title": "Anthropic首次确认组建内部芯片团队，为Claude设计定制芯片",
+        "url": "https://view.inews.qq.com/a/20260805A0EXT000",
+        "summary": "采用多芯片策略并继续合作AWS、英伟达，芯片工程师年薪32万至48.5万美元，系首次公开自研计划。",
+        "source": "腾讯新闻（观点新媒体）"
+      },
+      {
+        "title": "阿里Qwen-Image-3.0正式上线千问AI平台，文生图0.18元/张起",
+        "url": "https://new.qq.com/rain/a/20260805A05EAD00",
+        "summary": "支持4.5k token长指令一次生成复杂版面与12国语言渲染，Arena文生图榜单位列国内第一。",
+        "source": "腾讯新闻"
+      },
+      {
+        "title": "荣耀MagicOS 10八月版今日起分批推送，七大AI功能覆盖数十款机型",
+        "url": "https://new.qq.com/rain/a/20260805A08XSM00",
+        "summary": "YOYO记忆支持抖音B站长视频三指下滑生成摘要；8月6日首推旗舰，8月14日覆盖中端老机型。",
+        "source": "腾讯新闻"
+      },
+      {
+        "title": "人民日报评AI治理：以善治促善智，开源有助于构筑更稳固的安全堤坝",
+        "url": "https://www.163.com/dy/article/L3KU8QPH0514R9M0_pdya11y.html",
+        "summary": "回应OpenAI模型失控事件，强调法规、技术标准与风险监测协同发力，肯定中国开源模型的取证价值。",
+        "source": "网易（人民网）"
+      },
+      {
+        "title": "Sand.ai发布全球首个千亿级开源MoE视频模型",
+        "url": "https://dy.163.com/article/L3KQJ61A05562DGT.html",
+        "summary": "同日Liquid AI发布端侧小模型LFM2.5、Mistral开源审核模型Shieldstral，开源阵营密集更新。",
+        "source": "网易（极新）"
+      }
+    ]
+  },
+{
     "date": "2026-08-05",
     "display": "8月5日",
     "weekday": "周三",
