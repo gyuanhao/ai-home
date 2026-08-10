@@ -35,7 +35,8 @@
     "bestForEn": "Devs building overseas bots & social automation.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "dify",
@@ -73,7 +74,8 @@
     "bestForEn": "Devs/teams building own AI apps.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "fastgpt",
@@ -111,7 +113,8 @@
     "bestForEn": "Enterprises wanting private KB assistant.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "manus",
@@ -149,7 +152,8 @@
     "bestForEn": "Advanced users delegating research/compile tasks to AI.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "zapier",
@@ -187,7 +191,8 @@
     "bestForEn": "Non-tech users connecting SaaS tools.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "n8n",
@@ -225,7 +230,8 @@
     "bestForEn": "Devs/ops doing system integrations.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "coze",
@@ -265,7 +271,8 @@
     "bestForEn": "Individuals/SMBs quickly building support/ops/automation bots.",
     "affiliate": false,
     "source": "coze.cn / 公开资料",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "copy-ai",
@@ -303,7 +310,8 @@
     "bestForEn": "Ops/teams doing marketing & overseas copy.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "grammarly",
@@ -341,7 +349,8 @@
     "bestForEn": "People writing EN emails, papers, docs.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "jasper",
@@ -379,7 +388,8 @@
     "bestForEn": "Marketing teams with brand rules & collab needs.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "mimeng-search",
@@ -417,7 +427,8 @@
     "bestForEn": "Students/workers writing docs needing proofread.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "feifei",
@@ -455,7 +466,8 @@
     "bestForEn": "Students, professionals, self-media writers.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "xunfei-wenshu",
@@ -493,7 +505,8 @@
     "bestForEn": "Government/office workers doing summaries & reports.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "airtable",
@@ -531,7 +544,8 @@
     "bestForEn": "Small teams building light CRM/PM.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "notion",
@@ -571,7 +585,8 @@
     "bestForEn": "People doing PKM, team docs, project tracking.",
     "affiliate": false,
     "source": "notion.so / 公开资料",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "otter",
@@ -609,7 +624,8 @@
     "bestForEn": "Teams with many EN meetings wanting auto notes.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "xmind",
@@ -645,7 +661,8 @@
     "bestForEn": "People brainstorming, study notes, planning.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "tongyi-tingwu",
@@ -683,7 +700,8 @@
     "bestForEn": "Meeting-heavy workers wanting auto minutes.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "dingtalk",
@@ -721,7 +739,8 @@
     "bestForEn": "Orgs already on DingTalk.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "feishu",
@@ -759,7 +778,8 @@
     "bestForEn": "Companies wanting unified meetings & docs.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "firefly",
@@ -797,7 +817,8 @@
     "bestForEn": "Pro designers, teams needing commercial assets.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "dalle",
@@ -835,7 +856,8 @@
     "bestForEn": "ChatGPT users wanting quick inline images.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "flux",
@@ -873,7 +895,8 @@
     "bestForEn": "Studios/devs wanting photoreal, self-hosted.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "ideogram",
@@ -911,7 +934,8 @@
     "bestForEn": "Ops making posters, social, text-in-image.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "leonardo",
@@ -949,7 +973,8 @@
     "bestForEn": "Indie games, concept artists, asset librarians.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "midjourney",
@@ -987,7 +1012,8 @@
     "bestForEn": "Illustrators, designers needing high-quality concept art.",
     "affiliate": false,
     "source": "midjourney.com / 公开资料",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "recraft",
@@ -1025,7 +1051,8 @@
     "bestForEn": "Designers making brand visuals & icons.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "stable-diffusion",
@@ -1063,7 +1090,8 @@
     "bestForEn": "Advancers/devs wanting local, controllable gen.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "jimeng",
@@ -1101,7 +1129,8 @@
     "bestForEn": "China-based creators making social imgs & short-video assets on a budget.",
     "affiliate": false,
     "source": "jimeng.jianying.com / 公开资料",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "tongyi-wanxiang",
@@ -1139,7 +1168,8 @@
     "bestForEn": "CN creators, teams on Alibaba Cloud.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "chatgpt",
@@ -1179,7 +1209,8 @@
     "affiliate": false,
     "source": "openai.com / 公开资料",
     "lastUpdated": "2026-07-30",
-    "featured": true
+    "featured": true,
+    "affiliateUrl": ""
   },
   {
     "id": "claude",
@@ -1218,7 +1249,8 @@
     "featured": true,
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "copilot-ms",
@@ -1256,7 +1288,8 @@
     "bestForEn": "Heavy Office users, enterprise.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "deepseek",
@@ -1294,7 +1327,8 @@
     "bestForEn": "Devs, budget users, self-hosting geeks.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "gemini",
@@ -1332,7 +1366,8 @@
     "bestForEn": "Heavy Google users, multimodal & web research.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "kimi",
@@ -1370,7 +1405,8 @@
     "bestForEn": "Students/workers reading papers, reports, long materials.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "yuanbao",
@@ -1408,7 +1444,8 @@
     "bestForEn": "Tencent users wanting a free daily assistant.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "wenxin",
@@ -1446,7 +1483,8 @@
     "bestForEn": "General users in Baidu ecosystem wanting CN QA & writing.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "doubao",
@@ -1485,7 +1523,8 @@
     "affiliate": false,
     "source": "doubao.com / 公开资料",
     "lastUpdated": "2026-07-30",
-    "featured": true
+    "featured": true,
+    "affiliateUrl": ""
   },
   {
     "id": "qwen",
@@ -1523,7 +1562,8 @@
     "bestForEn": "Devs & teams wanting cheap API & self-host.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "devv",
@@ -1561,7 +1601,8 @@
     "bestForEn": "Programmers wanting precise tech search.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "exa",
@@ -1599,7 +1640,8 @@
     "bestForEn": "Devs building AI products needing search API.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "felo",
@@ -1637,7 +1679,8 @@
     "bestForEn": "Learners researching foreign sources, wanting mindmaps.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "perplexity",
@@ -1675,7 +1718,8 @@
     "bestForEn": "Students/workers researching with need for traceable sources.",
     "affiliate": false,
     "source": "perplexity.ai / 公开资料",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "quark-ai",
@@ -1715,7 +1759,8 @@
     "bestForEn": "Mobile users wanting search+cloud.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "mita-search",
@@ -1753,7 +1798,8 @@
     "bestForEn": "Students/workers doing CN research, clean results.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "txyz",
@@ -1791,7 +1837,8 @@
     "bestForEn": "Researchers/legal reading papers & long docs.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "merlin",
@@ -1829,7 +1876,8 @@
     "bestForEn": "Office users wanting quick AI across pages.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "monica",
@@ -1867,7 +1915,8 @@
     "bestForEn": "Heavy users wanting in-browser AI assistant.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "sider",
@@ -1905,7 +1954,8 @@
     "bestForEn": "Users reading foreign pages, comparing models.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "webchatgpt",
@@ -1943,7 +1993,8 @@
     "bestForEn": "Legacy users wanting web in ChatGPT web.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "immersivetranslate",
@@ -1983,7 +2034,8 @@
     "bestForEn": "Bilingual users reading EN web, papers, videos.",
     "affiliate": false,
     "source": "immersivetranslate.com / 公开资料",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "bolt",
@@ -2021,7 +2073,8 @@
     "bestForEn": "Indie devs prototyping apps & tools quickly.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "codeium",
@@ -2059,7 +2112,8 @@
     "bestForEn": "Devs wanting free completion across IDEs.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "cursor",
@@ -2099,7 +2153,8 @@
     "affiliate": false,
     "source": "cursor.com / 公开资料",
     "lastUpdated": "2026-07-30",
-    "featured": true
+    "featured": true,
+    "affiliateUrl": ""
   },
   {
     "id": "github-copilot",
@@ -2137,7 +2192,8 @@
     "bestForEn": "Mainstream-IDE devs wanting stable completion.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "trae",
@@ -2175,7 +2231,8 @@
     "bestForEn": "CN devs wanting a free AI IDE.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "windsurf",
@@ -2213,7 +2270,8 @@
     "bestForEn": "Devs wanting an AI IDE with auto-editing Agent.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "v0",
@@ -2251,7 +2309,8 @@
     "bestForEn": "Frontend devs, landing-page & prototype makers.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "tongyi-lingma",
@@ -2289,7 +2348,8 @@
     "bestForEn": "CN devs wanting a free Chinese coding assistant.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "deepl",
@@ -2327,7 +2387,8 @@
     "bestForEn": "Users needing high-quality translation & proofing.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "translate-com",
@@ -2365,7 +2426,8 @@
     "bestForEn": "Casual users covering minority languages.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "caiyun",
@@ -2403,7 +2465,8 @@
     "bestForEn": "Bilingual users reading EN web & papers.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "youdao",
@@ -2441,7 +2504,8 @@
     "bestForEn": "Students learning foreign languages.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "baidu-translate",
@@ -2479,7 +2543,8 @@
     "bestForEn": "Daily multilingual & photo translation users.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "heygen",
@@ -2517,7 +2582,8 @@
     "bestForEn": "Businesses making promo, training, multilingual explainer.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "pika",
@@ -2555,7 +2621,8 @@
     "bestForEn": "Light creators wanting quick video effects.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "runway",
@@ -2593,7 +2660,8 @@
     "bestForEn": "Creators/teams doing ads, shorts, pro video.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "sora",
@@ -2629,7 +2697,8 @@
     "bestForEn": "Creators doing narrative shorts, ad storyboards, concept viz.",
     "affiliate": false,
     "source": "sora.com / 公开资料",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "vidu",
@@ -2667,7 +2736,8 @@
     "bestForEn": "CN teams doing animation, IP fan content.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "jianying",
@@ -2707,7 +2777,8 @@
     "bestForEn": "Short-video creators, users wanting quick edits.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "kling",
@@ -2745,7 +2816,8 @@
     "bestForEn": "CN teams making short videos, e-commerce, talking-head clips.",
     "affiliate": false,
     "source": "klingai.com / 公开资料",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "minimax-video",
@@ -2783,7 +2855,8 @@
     "bestForEn": "CN teams making talking-head, short-drama, character video.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "canva",
@@ -2823,7 +2896,8 @@
     "bestForEn": "Ops & design newbies making daily visuals, PPT, social.",
     "affiliate": false,
     "source": "canva.com / 公开资料",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "looka",
@@ -2861,7 +2935,8 @@
     "bestForEn": "Founders needing quick logo & brand.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "mastergo",
@@ -2899,7 +2974,8 @@
     "bestForEn": "CN UI/product teams wanting Figma alt.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "chuangketie",
@@ -2937,7 +3013,8 @@
     "bestForEn": "Office/design needing print & PPT.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "jishi-ai",
@@ -2975,7 +3052,8 @@
     "bestForEn": "Product/designers rapid UI prototyping.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "gaoding",
@@ -3013,7 +3091,8 @@
     "bestForEn": "E-com ops, social-image newbies.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "meitu",
@@ -3053,7 +3132,8 @@
     "bestForEn": "Daily retouch, portrait, social-image users.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "adobe-podcast",
@@ -3091,7 +3171,8 @@
     "bestForEn": "Podcasters, online-course & remote-interview recorders.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "descript",
@@ -3129,7 +3210,8 @@
     "bestForEn": "Podcasters, course makers, quick editors.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "elevenlabs",
@@ -3167,7 +3249,8 @@
     "bestForEn": "Creators doing audiobooks, multilingual dubbing, VTubers.",
     "affiliate": false,
     "source": "elevenlabs.io / 公开资料",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "suno",
@@ -3205,7 +3288,8 @@
     "bestForEn": "People needing quick BGM, demos, meme soundtracks.",
     "affiliate": false,
     "source": "suno.com / 公开资料",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "udio",
@@ -3243,7 +3327,8 @@
     "bestForEn": "Musicians wanting quality BGM & demos.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "minimax-audio",
@@ -3281,7 +3366,8 @@
     "bestForEn": "Creators doing CN dubbing, audiobooks, VTubers.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "xunfei-tingjian",
@@ -3319,7 +3405,8 @@
     "bestForEn": "Workers doing meeting notes, interviews, subtitles.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "zhipu-chatglm",
@@ -3357,7 +3444,8 @@
     "bestForEn": "Devs/teams wanting CN open models.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "grok",
@@ -3395,7 +3483,8 @@
     "bestForEn": "Heavy X users, advanced players wanting realtime.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "poe",
@@ -3433,7 +3522,8 @@
     "bestForEn": "Users comparing models within one app.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "character-ai",
@@ -3471,7 +3561,8 @@
     "bestForEn": "Young users wanting entertainment & roleplay.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "pi",
@@ -3509,7 +3600,8 @@
     "bestForEn": "Users wanting chit-chat & emotional support.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "llama",
@@ -3547,7 +3639,8 @@
     "bestForEn": "Meta-ecosystem users wanting free multimodal.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "huggingchat",
@@ -3585,7 +3678,8 @@
     "bestForEn": "Devs/geeks trying open models.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "baichuan",
@@ -3623,7 +3717,8 @@
     "bestForEn": "CN devs, medical search scenarios.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "step",
@@ -3661,7 +3756,8 @@
     "bestForEn": "CN multimodal players & devs.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "xunfei-spark",
@@ -3699,7 +3795,8 @@
     "bestForEn": "Users valuing CN voice & education.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "sensechat",
@@ -3737,7 +3834,8 @@
     "bestForEn": "Enterprise vision+language deployment.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "yi-chat",
@@ -3775,7 +3873,8 @@
     "bestForEn": "Devs wanting long-context API.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "mistral",
@@ -3813,7 +3912,8 @@
     "bestForEn": "EU/enterprise wanting efficient OSS.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "zhinao360",
@@ -3851,7 +3951,8 @@
     "bestForEn": "CN general users, security QA.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "command-r",
@@ -3889,7 +3990,8 @@
     "bestForEn": "Teams building enterprise KB/RAG.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "jamba",
@@ -3927,7 +4029,8 @@
     "bestForEn": "Enterprise long-doc & structured generation.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "phind",
@@ -3965,7 +4068,8 @@
     "bestForEn": "Devs wanting precise tech answers.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "minimax-chat",
@@ -4003,7 +4107,8 @@
     "bestForEn": "CN users wanting chat+voice.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "krea",
@@ -4041,7 +4146,8 @@
     "bestForEn": "Creators wanting realtime image tuning.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "artbreeder",
@@ -4079,7 +4185,8 @@
     "bestForEn": "Character/avatar experimenters.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "playground",
@@ -4117,7 +4224,8 @@
     "bestForEn": "Ops making social & blog images.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "starryai",
@@ -4155,7 +4263,8 @@
     "bestForEn": "Mobile users making art wallpapers.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "wombo",
@@ -4193,7 +4302,8 @@
     "bestForEn": "Casual users making avatars.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "fooocus",
@@ -4231,7 +4341,8 @@
     "bestForEn": "Advanced users wanting local free gen.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "getimg",
@@ -4269,7 +4380,8 @@
     "bestForEn": "Creators wanting flexible gen & edit.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "nightcafe",
@@ -4307,7 +4419,8 @@
     "bestForEn": "Art-leaning, sharing creators.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "tensor",
@@ -4345,7 +4458,8 @@
     "bestForEn": "CN creators playing open models.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "seaart",
@@ -4383,7 +4497,8 @@
     "bestForEn": "Users playing LoRA/anime models.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "luma-photon",
@@ -4421,7 +4536,8 @@
     "bestForEn": "Creators wanting camera-like quality.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "remove-bg",
@@ -4459,7 +4575,8 @@
     "bestForEn": "E-com & designers needing cutouts.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "clipdrop",
@@ -4497,7 +4614,8 @@
     "bestForEn": "Mobile users wanting quick edits.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "photoroom",
@@ -4535,7 +4653,8 @@
     "bestForEn": "E-com sellers making product shots.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "doubao-image",
@@ -4573,7 +4692,8 @@
     "bestForEn": "CN users quick image gen.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "yuanbao-image",
@@ -4611,7 +4731,8 @@
     "bestForEn": "CN creators with CN prompts.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "dreamstudio",
@@ -4649,7 +4770,8 @@
     "bestForEn": "Advanced users wanting fine-tuned gen.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "artguru",
@@ -4687,7 +4809,8 @@
     "bestForEn": "Users making social avatars & portraits.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "vanceai",
@@ -4725,7 +4848,8 @@
     "bestForEn": "Users restoring old photos & upscaling.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "cutoutpro",
@@ -4763,7 +4887,8 @@
     "bestForEn": "Short-video & e-com video makers.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "bigjpg",
@@ -4801,7 +4926,8 @@
     "bestForEn": "Artists upscaling anime/illustration.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "alchemy",
@@ -4839,7 +4965,8 @@
     "bestForEn": "Devs building image apps.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "pixelcut",
@@ -4877,7 +5004,8 @@
     "bestForEn": "E-com & social ops.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "luma-dream",
@@ -4915,7 +5043,8 @@
     "bestForEn": "Creators making quality shorts & demos.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "kaiber",
@@ -4953,7 +5082,8 @@
     "bestForEn": "Musicians making visualizations & MV.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "stable-video",
@@ -4991,7 +5121,8 @@
     "bestForEn": "Devs wanting local video gen.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "morph",
@@ -5029,7 +5160,8 @@
     "bestForEn": "Creators orchestrating complex video flows.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "moonvalley",
@@ -5067,7 +5199,8 @@
     "bestForEn": "Makers of animation & concept videos.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "genmo",
@@ -5105,7 +5238,8 @@
     "bestForEn": "Devs playing open video models.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "haiper",
@@ -5143,7 +5277,8 @@
     "bestForEn": "Creators making motion & demos.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "invideo",
@@ -5181,7 +5316,8 @@
     "bestForEn": "Ops making promo shorts & social.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "synthesia",
@@ -5219,7 +5355,8 @@
     "bestForEn": "Enterprise training & product explainers.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "d-id",
@@ -5257,7 +5394,8 @@
     "bestForEn": "Users making talking-head, memorial, edu video.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "colossyan",
@@ -5295,7 +5433,8 @@
     "bestForEn": "Enterprise internal training & onboarding.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "elai",
@@ -5333,7 +5472,8 @@
     "bestForEn": "Knowledge & promo talking-head makers.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "pixverse",
@@ -5371,7 +5511,8 @@
     "bestForEn": "CN users playing video effects & fan edits.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "veo",
@@ -5409,7 +5550,8 @@
     "bestForEn": "Pros wanting highest quality.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "topaz-video",
@@ -5447,7 +5589,8 @@
     "bestForEn": "Users restoring old films & upscaling.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "hitpaw-video",
@@ -5485,7 +5628,8 @@
     "bestForEn": "Casual users quick video fix.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "mootion",
@@ -5523,7 +5667,8 @@
     "bestForEn": "Ops on Douyin/Channels promo.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "tavus",
@@ -5561,7 +5706,8 @@
     "bestForEn": "Businesses doing 1:1 video marketing & courses.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "hedra",
@@ -5599,7 +5745,8 @@
     "bestForEn": "Character talking-head & IP short makers.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "deepbrain",
@@ -5637,7 +5784,8 @@
     "bestForEn": "Media & enterprise broadcast video.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "musicfy",
@@ -5675,7 +5823,8 @@
     "bestForEn": "Voice-clone & fun-music users.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "soundraw",
@@ -5713,7 +5862,8 @@
     "bestForEn": "Video creators needing royalty-free music.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "boomy",
@@ -5751,7 +5901,8 @@
     "bestForEn": "Casual users trying to release music.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "mubert",
@@ -5789,7 +5940,8 @@
     "bestForEn": "Streamers & video makers wanting loop BGM.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "aiva",
@@ -5827,7 +5979,8 @@
     "bestForEn": "Game/film scoring & rights-clear music.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "lalal",
@@ -5865,7 +6018,8 @@
     "bestForEn": "Musicians covering/remixing & extracting.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "moises",
@@ -5903,7 +6057,8 @@
     "bestForEn": "Instrument learners & transcribers.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "fish-audio",
@@ -5941,7 +6096,8 @@
     "bestForEn": "CN dubbing & VTuber creators.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "playht",
@@ -5979,7 +6135,8 @@
     "bestForEn": "Devs doing EN dubbing & audio.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "speechify",
@@ -6017,7 +6174,8 @@
     "bestForEn": "Dyslexic readers & commuters wanting audio.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "murf",
@@ -6055,7 +6213,8 @@
     "bestForEn": "Enterprise training & promo dubbing.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "lovo",
@@ -6093,7 +6252,8 @@
     "bestForEn": "Explainer video makers needing narration.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "krisp",
@@ -6131,7 +6291,8 @@
     "bestForEn": "Noisy remote-meeting people.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "natural-reader",
@@ -6169,7 +6330,8 @@
     "bestForEn": "Students wanting docs read aloud.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "resemble",
@@ -6207,7 +6369,8 @@
     "bestForEn": "Enterprises wanting brand voice & IVR.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "wellsaid",
@@ -6245,7 +6408,8 @@
     "bestForEn": "Large enterprise training & promo.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "listen-ink",
@@ -6283,7 +6447,8 @@
     "bestForEn": "Podcasters making show notes.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "podcastle",
@@ -6321,7 +6486,8 @@
     "bestForEn": "New podcasters & remote interviews.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "riverside",
@@ -6359,7 +6525,8 @@
     "bestForEn": "Serious podcasters & interviewers.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "vocalremover",
@@ -6397,7 +6564,8 @@
     "bestForEn": "Casual stem split & ringtone makers.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "soundful",
@@ -6435,7 +6603,8 @@
     "bestForEn": "Social/live wanting loop BGM.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "beatoven",
@@ -6473,7 +6642,8 @@
     "bestForEn": "Video creators wanting moody score.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "emvoice",
@@ -6511,7 +6681,8 @@
     "bestForEn": "Songwriters wanting vocal demos.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "replit",
@@ -6549,7 +6720,8 @@
     "bestForEn": "Students & prototype makers.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "tabnine",
@@ -6587,7 +6759,8 @@
     "bestForEn": "Enterprises valuing code privacy.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "codewhisperer",
@@ -6625,7 +6798,8 @@
     "bestForEn": "AWS users & cloud engineers.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "cody",
@@ -6663,7 +6837,8 @@
     "bestForEn": "Devs on big repos wanting precise answers.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "aider",
@@ -6701,7 +6876,8 @@
     "bestForEn": "CLI fans automating code edits.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "continue",
@@ -6739,7 +6915,8 @@
     "bestForEn": "Devs wanting private AI coding aid.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "gemini-code-assist",
@@ -6777,7 +6954,8 @@
     "bestForEn": "Google-ecosystem devs wanting long-context.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "ollama",
@@ -6815,7 +6993,8 @@
     "bestForEn": "Devs running models locally, privacy-minded.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "openrouter",
@@ -6853,7 +7032,8 @@
     "bestForEn": "AI app devs wanting flexible models.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "together",
@@ -6891,7 +7071,8 @@
     "bestForEn": "Teams hosting/fine-tuning open models.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "groq",
@@ -6929,7 +7110,8 @@
     "bestForEn": "Devs needing low-latency realtime.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "devin",
@@ -6967,7 +7149,8 @@
     "bestForEn": "Leads offloading repetitive engineering.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "marscode",
@@ -7005,7 +7188,8 @@
     "bestForEn": "CN devs wanting free cloud coding.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "codium",
@@ -7043,7 +7227,8 @@
     "bestForEn": "Devs valuing coverage & explanation.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "sweep",
@@ -7081,7 +7266,8 @@
     "bestForEn": "Teams automating issue fixes.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "streamlit",
@@ -7119,7 +7305,8 @@
     "bestForEn": "Data/ML engineers prototyping.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "gradio",
@@ -7157,7 +7344,8 @@
     "bestForEn": "Researchers showcasing models.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "langchain",
@@ -7195,7 +7383,8 @@
     "bestForEn": "Devs building LLM apps.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "modal",
@@ -7233,7 +7422,8 @@
     "bestForEn": "Devs needing elastic compute.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "railway",
@@ -7271,7 +7461,8 @@
     "bestForEn": "Indie devs deploying small projects.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "render",
@@ -7309,7 +7500,8 @@
     "bestForEn": "Web services wanting no-ops deploy.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "codegeex",
@@ -7347,7 +7539,8 @@
     "bestForEn": "CN devs wanting free completion.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "hunyuan-api",
@@ -7385,7 +7578,8 @@
     "bestForEn": "CN enterprises on Tencent Cloud.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "rytr",
@@ -7423,7 +7617,8 @@
     "bestForEn": "Tight budget, short marketing copy.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "anyword",
@@ -7461,7 +7656,8 @@
     "bestForEn": "Advertisers & landing-page makers.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "writer",
@@ -7499,7 +7695,8 @@
     "bestForEn": "Large content teams.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "peppertype",
@@ -7537,7 +7734,8 @@
     "bestForEn": "Marketers & content teams.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "copysmith",
@@ -7575,7 +7773,8 @@
     "bestForEn": "Ecommerce ops needing many descriptions.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "sudowrite",
@@ -7613,7 +7812,8 @@
     "bestForEn": "Fiction writers & storytellers.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "novelai",
@@ -7651,7 +7851,8 @@
     "bestForEn": "Web novel & anime creators.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "wordtune",
@@ -7689,7 +7890,8 @@
     "bestForEn": "Those polishing EN wording.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "quillbot",
@@ -7727,7 +7929,8 @@
     "bestForEn": "Students needing paraphrasing.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "writesonic",
@@ -7765,7 +7968,8 @@
     "bestForEn": "Bloggers & content marketers.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "hypotenuse-ai",
@@ -7803,7 +8007,8 @@
     "bestForEn": "Ecommerce & long-form authors.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "inkforge",
@@ -7839,7 +8044,8 @@
     "bestForEn": "SEO content writers.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "lavender",
@@ -7877,7 +8083,8 @@
     "bestForEn": "Sales & cold-email folks.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "surfer-seo",
@@ -7913,7 +8120,8 @@
     "bestForEn": "SEO pros & content sites.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "neuronwriter",
@@ -7951,7 +8159,8 @@
     "bestForEn": "Budget SEO writers.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "moonbeam",
@@ -7989,7 +8198,8 @@
     "bestForEn": "Bloggers & long-form writers.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "content-at-scale",
@@ -8027,7 +8237,8 @@
     "bestForEn": "Content sites needing volume.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "scalenut",
@@ -8063,7 +8274,8 @@
     "bestForEn": "Content marketing teams.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "mita-writing",
@@ -8101,7 +8313,8 @@
     "bestForEn": "ZH writers needing proofread.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "huoshan-writing",
@@ -8137,7 +8350,8 @@
     "bestForEn": "ZH long-form & self-media.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "biling",
@@ -8175,7 +8389,8 @@
     "bestForEn": "Docs & resume writers.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "yizhuan",
@@ -8213,7 +8428,8 @@
     "bestForEn": "Self-media operators.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "figma-ai",
@@ -8251,7 +8467,8 @@
     "bestForEn": "UI designers & product teams.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "adobe-express",
@@ -8289,7 +8506,8 @@
     "bestForEn": "Newbies making quick social images.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "photopea",
@@ -8327,7 +8545,8 @@
     "bestForEn": "Users editing PSD on the go.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "pixlr",
@@ -8365,7 +8584,8 @@
     "bestForEn": "Casual retouch & object removal.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "picsart",
@@ -8403,7 +8623,8 @@
     "bestForEn": "Mobile retouch & sticker users.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "khroma",
@@ -8441,7 +8662,8 @@
     "bestForEn": "Designers on brand/web palettes.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "brandmark",
@@ -8479,7 +8701,8 @@
     "bestForEn": "Founders needing quick brand visuals.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "designevo",
@@ -8517,7 +8740,8 @@
     "bestForEn": "Small biz wanting cheap logos.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "uizard",
@@ -8555,7 +8779,8 @@
     "bestForEn": "Product/design rapid prototyping.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "galileo",
@@ -8593,7 +8818,8 @@
     "bestForEn": "Designers wanting inspiration.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "framer",
@@ -8631,7 +8857,8 @@
     "bestForEn": "Product landing pages & portfolios.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "relume",
@@ -8669,7 +8896,8 @@
     "bestForEn": "Agencies & product teams building sites.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "motiff",
@@ -8707,7 +8935,8 @@
     "bestForEn": "CN UI teams wanting Figma alt.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "tailorbrands",
@@ -8745,7 +8974,8 @@
     "bestForEn": "Founders needing full brand kit.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "coolors",
@@ -8783,7 +9013,8 @@
     "bestForEn": "Anyone needing palettes.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "venngage",
@@ -8821,7 +9052,8 @@
     "bestForEn": "Workers making reports & infographics.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "snappa",
@@ -8859,7 +9091,8 @@
     "bestForEn": "Bloggers & social ops.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "vistacreate",
@@ -8897,7 +9130,8 @@
     "bestForEn": "Ops making animated social.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "lucidchart",
@@ -8935,7 +9169,8 @@
     "bestForEn": "Engineers drawing architecture.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "whimsical",
@@ -8973,7 +9208,8 @@
     "bestForEn": "Product/tech sketching.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "excalidraw",
@@ -9011,7 +9247,8 @@
     "bestForEn": "Tech diagramming & sketches.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "miro",
@@ -9049,7 +9286,8 @@
     "bestForEn": "Remote teams & workshops.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "visily",
@@ -9087,7 +9325,8 @@
     "bestForEn": "PMs & non-design prototyping.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "magician-figma",
@@ -9125,7 +9364,8 @@
     "bestForEn": "Figma users wanting mini-tools.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "vectorizer",
@@ -9163,7 +9403,8 @@
     "bestForEn": "Users vectorizing for print.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "slack-ai",
@@ -9201,7 +9442,8 @@
     "bestForEn": "Teams on Slack.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "wps-ai",
@@ -9239,7 +9481,8 @@
     "bestForEn": "CN office users on WPS.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "trello",
@@ -9277,7 +9520,8 @@
     "bestForEn": "Small teams & personal tasks.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "asana",
@@ -9315,7 +9559,8 @@
     "bestForEn": "Busy mid/large teams.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "clickup",
@@ -9353,7 +9598,8 @@
     "bestForEn": "Teams wanting one tool for all.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "todoist",
@@ -9391,7 +9637,8 @@
     "bestForEn": "Individuals & GTD fans.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "mem",
@@ -9429,7 +9676,8 @@
     "bestForEn": "Knowledge mgmt & note-takers.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "craft",
@@ -9467,7 +9715,8 @@
     "bestForEn": "Mac/iOS users writing long docs.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "tengcent-doc",
@@ -9505,7 +9754,8 @@
     "bestForEn": "CN teams & WeChat users.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "processon",
@@ -9543,7 +9793,8 @@
     "bestForEn": "CN users drawing flow/mindmap.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "boardmix",
@@ -9581,7 +9832,8 @@
     "bestForEn": "CN teams remote brainstorm.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "yinxiang",
@@ -9619,7 +9871,8 @@
     "bestForEn": "Collectors & note-takers.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "taskade",
@@ -9657,7 +9910,8 @@
     "bestForEn": "Small teams wanting light collab.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "notion-ai",
@@ -9695,7 +9949,8 @@
     "bestForEn": "Notion users doing KM.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "jira",
@@ -9733,7 +9988,8 @@
     "bestForEn": "Engineering teams, agile.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "confluence",
@@ -9771,7 +10027,8 @@
     "bestForEn": "Enterprise KB & docs.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "monday",
@@ -9809,7 +10066,8 @@
     "bestForEn": "Ops/sales teams on workflows.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "smartsheet",
@@ -9847,7 +10105,8 @@
     "bestForEn": "Enterprise PMO & sheet lovers.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "basecamp",
@@ -9885,7 +10144,8 @@
     "bestForEn": "Small teams hating complex tools.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "google-workspace",
@@ -9923,7 +10183,8 @@
     "bestForEn": "Teams/people in Google ecosystem.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "zoho",
@@ -9961,7 +10222,8 @@
     "bestForEn": "SMBs wanting low-cost suite.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "hubspot",
@@ -9999,7 +10261,8 @@
     "bestForEn": "Sales/marketing & growth teams.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "gong",
@@ -10037,7 +10300,8 @@
     "bestForEn": "Sales teams on coaching.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "zoom-ai",
@@ -10075,7 +10339,8 @@
     "bestForEn": "Heavy video-meeting people.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "andi",
@@ -10113,7 +10378,8 @@
     "bestForEn": "Users wanting clean cited answers.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "you-com",
@@ -10151,7 +10417,8 @@
     "bestForEn": "Devs & aggregator searchers.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "consensus",
@@ -10189,7 +10456,8 @@
     "bestForEn": "Researchers & review writers.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "scite",
@@ -10227,7 +10495,8 @@
     "bestForEn": "Literature review & paper writers.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "elicit",
@@ -10265,7 +10534,8 @@
     "bestForEn": "Grad students & systematic reviews.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "researchrabbit",
@@ -10303,7 +10573,8 @@
     "bestForEn": "Lit miners & direction finders.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "semantic-scholar",
@@ -10341,7 +10612,8 @@
     "bestForEn": "Researchers & bibliometrics.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "komo",
@@ -10379,7 +10651,8 @@
     "bestForEn": "Searchers wanting real discussions.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "genspark",
@@ -10417,7 +10690,8 @@
     "bestForEn": "Researchers wanting synthesized material.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "waldo",
@@ -10455,7 +10729,8 @@
     "bestForEn": "Deep researchers wanting reports.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "kagi",
@@ -10493,7 +10768,8 @@
     "bestForEn": "Ad-weary users wanting clean search.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "arc-search",
@@ -10531,7 +10807,8 @@
     "bestForEn": "Arc users & mobile search.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "scinapse",
@@ -10569,7 +10846,8 @@
     "bestForEn": "Med/life-science researchers.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "inciteful",
@@ -10607,7 +10885,8 @@
     "bestForEn": "Grad students mapping literature.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "litmaps",
@@ -10645,7 +10924,8 @@
     "bestForEn": "Review writers & trend watchers.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "connected-papers",
@@ -10683,7 +10963,8 @@
     "bestForEn": "Researchers mining related papers.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "brave-ai",
@@ -10721,7 +11002,8 @@
     "bestForEn": "Privacy-focused searchers.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "phind-search",
@@ -10759,7 +11041,8 @@
     "bestForEn": "Devs wanting precise tech search.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "perplexica",
@@ -10797,7 +11080,8 @@
     "bestForEn": "Devs wanting private AI search.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "genmind",
@@ -10835,7 +11119,8 @@
     "bestForEn": "CN researchers wanting deep reports.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "flowise",
@@ -10873,7 +11158,8 @@
     "bestForEn": "Devs wanting self-hosted flows.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "langflow",
@@ -10911,7 +11197,8 @@
     "bestForEn": "LangChain devs wanting visuals.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "autogpt",
@@ -10949,7 +11236,8 @@
     "bestForEn": "Geeks playing autonomous agents.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "agentgpt",
@@ -10987,7 +11275,8 @@
     "bestForEn": "Newbies trying autonomous agents.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "crewai",
@@ -11025,7 +11314,8 @@
     "bestForEn": "Devs building multi-agent systems.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "replicate",
@@ -11063,7 +11353,8 @@
     "bestForEn": "AI app devs wanting instant models.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "make",
@@ -11101,7 +11392,8 @@
     "bestForEn": "Teams wanting complex automation.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "ifttt",
@@ -11139,7 +11431,8 @@
     "bestForEn": "Individuals wanting small automations.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "botpress",
@@ -11177,7 +11470,8 @@
     "bestForEn": "Enterprises building support bots.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "activepieces",
@@ -11215,7 +11509,8 @@
     "bestForEn": "Teams wanting private automation.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "gpt-engineer",
@@ -11253,7 +11548,8 @@
     "bestForEn": "Indie devs quick prototyping.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "smolagents",
@@ -11291,7 +11587,8 @@
     "bestForEn": "Devs wanting light agents.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "voiceflow",
@@ -11329,7 +11626,8 @@
     "bestForEn": "Enterprises building voice/chat.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "llamaindex",
@@ -11367,7 +11665,8 @@
     "bestForEn": "Devs building RAG apps.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "babyagi",
@@ -11405,7 +11704,8 @@
     "bestForEn": "Researchers learning agent internals.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "superagent",
@@ -11443,7 +11743,8 @@
     "bestForEn": "Devs embedding agents in products.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "agentforce",
@@ -11481,7 +11782,8 @@
     "bestForEn": "Salesforce enterprise users.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "langgraph",
@@ -11519,7 +11821,8 @@
     "bestForEn": "Devs on complex agent flows.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "mindstudio",
@@ -11557,7 +11860,8 @@
     "bestForEn": "Non-tech wanting own agents.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "agenta",
@@ -11595,7 +11899,8 @@
     "bestForEn": "Devs on LLM eval & ship.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "godmode",
@@ -11633,7 +11938,8 @@
     "bestForEn": "Players watching agent process.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "cheshirecat",
@@ -11671,7 +11977,8 @@
     "bestForEn": "Devs on memory-backed assistants.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "composio",
@@ -11709,7 +12016,8 @@
     "bestForEn": "Devs wanting agents to call tools.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "portia",
@@ -11747,7 +12055,8 @@
     "bestForEn": "Devs on production agents.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "papago",
@@ -11785,7 +12094,8 @@
     "bestForEn": "CN-KR translators & K-drama fans.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "microsoft-translator",
@@ -11823,7 +12133,8 @@
     "bestForEn": "Casual translate & meeting captions.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "yandex-translate",
@@ -11861,7 +12172,8 @@
     "bestForEn": "Reading RU docs & RU-facing work.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "reverso",
@@ -11899,7 +12211,8 @@
     "bestForEn": "Language learners wanting native usage.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "linguee",
@@ -11937,7 +12250,8 @@
     "bestForEn": "Word lookup & pro usage.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "tencent-translate",
@@ -11975,7 +12289,8 @@
     "bestForEn": "CN casual translators.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "openai-translator",
@@ -12013,7 +12328,8 @@
     "bestForEn": "Devs wanting high-quality translate.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "trancy",
@@ -12051,7 +12367,8 @@
     "bestForEn": "Learners studying via shows.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "niutrans",
@@ -12089,7 +12406,8 @@
     "bestForEn": "CN enterprises needing translate API.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "alibaba-translate",
@@ -12127,7 +12445,8 @@
     "bestForEn": "Cross-border e-com & multilingual listings.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "volc-translate",
@@ -12165,7 +12484,8 @@
     "bestForEn": "CN devs needing translate API.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "modernmt",
@@ -12203,7 +12523,8 @@
     "bestForEn": "Enterprise localization & tech docs.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "qwen-translate",
@@ -12241,7 +12562,8 @@
     "bestForEn": "CN users wanting natural translate.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "glm-translate",
@@ -12279,7 +12601,8 @@
     "bestForEn": "CN academic/business translate.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "weglot",
@@ -12317,7 +12640,8 @@
     "bestForEn": "Export/cross-border multilingual sites.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "phrase",
@@ -12355,7 +12679,8 @@
     "bestForEn": "Cross-border firms localizing products.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "lilt",
@@ -12393,7 +12718,8 @@
     "bestForEn": "Localization teams & pro translators.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "unbabel",
@@ -12431,7 +12757,8 @@
     "bestForEn": "Cross-border firms with multilingual support.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "intuitive",
@@ -12469,7 +12796,8 @@
     "bestForEn": "Cross-border meetings needing captions.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "capybara",
@@ -12507,7 +12835,8 @@
     "bestForEn": "Bilingual users reading EN web & papers.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "maxai",
@@ -12545,7 +12874,8 @@
     "bestForEn": "Web readers wanting summaries.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "chatgpt-sidebar",
@@ -12583,7 +12913,8 @@
     "bestForEn": "Those wanting inline Q&A.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "youtube-summarizer",
@@ -12619,7 +12950,8 @@
     "bestForEn": "YouTube learners.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "eightify",
@@ -12655,7 +12987,8 @@
     "bestForEn": "YouTube speed-viewers.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "wiseone",
@@ -12691,7 +13024,8 @@
     "bestForEn": "Foreign-language readers.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "webpilot",
@@ -12727,7 +13061,8 @@
     "bestForEn": "Read-and-ask users.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "chatgpt-writer",
@@ -12765,7 +13100,8 @@
     "bestForEn": "Quick email repliers.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "notegpt",
@@ -12803,7 +13139,8 @@
     "bestForEn": "Students taking notes.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "glasp",
@@ -12841,7 +13178,8 @@
     "bestForEn": "Researchers & collectors.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "swiftread",
@@ -12877,7 +13215,8 @@
     "bestForEn": "Fast article skimmers.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "askyoutube",
@@ -12913,7 +13252,8 @@
     "bestForEn": "Video deep-divers.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "hix-copilot",
@@ -12951,7 +13291,8 @@
     "bestForEn": "Write-while-browsing users.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "perplexity-extension",
@@ -12987,7 +13328,8 @@
     "bestForEn": "Those wanting cited answers.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "glarity",
@@ -13023,7 +13365,8 @@
     "bestForEn": "Search-result skimmers.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "tldr-this",
@@ -13059,7 +13402,8 @@
     "bestForEn": "Long-article skimmers.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "scholarcy",
@@ -13095,7 +13439,8 @@
     "bestForEn": "Paper-reading researchers.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "summarize-tech",
@@ -13131,7 +13476,8 @@
     "bestForEn": "Those wanting video transcripts.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "bob-translate",
@@ -13169,7 +13515,8 @@
     "bestForEn": "Mac users translating.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "felloai",
@@ -13207,7 +13554,8 @@
     "bestForEn": "Multi-model Q&A users.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "fireflies-extension",
@@ -13243,7 +13591,8 @@
     "bestForEn": "Meeting-heavy workers.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "harpa",
@@ -13281,7 +13630,8 @@
     "bestForEn": "Web automation users.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "superpower-chatgpt",
@@ -13319,7 +13669,8 @@
     "bestForEn": "Heavy ChatGPT users.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   },
   {
     "id": "prompt-genius",
@@ -13357,6 +13708,7 @@
     "bestForEn": "Prompt collectors.",
     "affiliate": false,
     "source": "公开资料 / 官网",
-    "lastUpdated": "2026-07-30"
+    "lastUpdated": "2026-07-30",
+    "affiliateUrl": ""
   }
 ]
