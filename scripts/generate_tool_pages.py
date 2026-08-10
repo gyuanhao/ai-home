@@ -185,8 +185,9 @@ const tools = __TOOLS_JSON__;
                 + '<div class="model-tags">' + tags + '</div>'
                 + '<div class="model-desc">' + esc(t.summary || '') + '</div>'
                 + '<div class="model-footer">'
-                + '<div class="model-price"><strong>' + esc((t.priceLabel || '').split(' / ')[0]) + '</strong>' + ((t.priceLabel || '').includes('/') ? ' / ' + esc((t.priceLabel || '').split(' / ').slice(1).join(' / ')) : '') + '</div>'
-                + '</div></div>';
+            + '<div class="model-price"><strong>' + esc((t.priceLabel || '').split(' / ')[0]) + '</strong>' + ((t.priceLabel || '').includes('/') ? ' / ' + esc((t.priceLabel || '').split(' / ').slice(1).join(' / ')) : '') + '</div>'
+            + '<a class="model-detail-link" href="tools/' + esc(t.id) + '.html">详情 →</a>'
+            + '</div></div>';
         }).join('');
     }
 

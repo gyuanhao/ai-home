@@ -7,6 +7,174 @@ window.AIHome = window.AIHome || {};
 
 AIHome.NEWS = [
   {
+    "title": "GPT-5.5 Instant 全量推送：幻觉率降52.5%，新增\"记忆来源\"可查可删",
+    "url": "https://www.163.com/dy/article/L3HEJK2I05568E2X.html",
+    "date": "08-05",
+    "source": "网易科技"
+  },
+  {
+    "title": "腾讯混元发布语音识别模型 Hy ASR 3.0 preview，粤语词错误率3.12%",
+    "url": "https://www.163.com/dy/article/L3HFMQQA0511CMF5.html",
+    "date": "08-05",
+    "source": "网易（科技狐）"
+  },
+  {
+    "title": "彭博：中国AI\"斩杀线\"浮现，8周5款模型逼近全球前沿",
+    "url": "https://k.sina.com.cn/article_1887344341_707e96d502001timy.html",
+    "date": "08-05",
+    "source": "新浪（观察者网）"
+  },
+  {
+    "title": "科创板日报：端侧AI元年开启，千问已进入特斯拉中国车机深度测试",
+    "url": "https://dy.163.com/article/L3I6S6NB0550B1DU.html",
+    "date": "08-05",
+    "source": "网易（科创板日报）"
+  },
+  {
+    "title": "微信支付上线AI接入工具箱，含Skill技能包与AI友好文档、API",
+    "url": "https://www.aastocks.com/tc/mobile/news.aspx?newsid=now.1516835&newssource=aafn&newstype=61",
+    "date": "08-05",
+    "source": "阿斯达克财经网"
+  },
+  {
+    "title": "蚂蚁灵波启动首轮融资拟募15亿，京东要建千万小时具身数据护城河",
+    "url": "https://www.163.com/dy/article/L3HE753305199NPP.html",
+    "date": "08-05",
+    "source": "网易（21世纪经济报道）"
+  },
+  {
+    "title": "谷歌课堂Gemini 8月10日起向全年龄段K-12学生开放",
+    "url": "https://finance.sina.com.cn/jjxw/2026-08-05/doc-inimfmyp5191437.shtml",
+    "date": "08-05",
+    "source": "新浪财经（界面新闻）"
+  },
+  {
+    "title": "全球首款开源AI导盲机器人Milo问世，制造成本不到2000美元",
+    "url": "https://view.inews.qq.com/a/20260805A000R400",
+    "date": "08-05",
+    "source": "腾讯新闻（至顶科技）"
+  },
+  {
+    "title": "一个月9款旗舰扎堆，大模型进入\"月抛\"时代",
+    "url": "https://finance.sina.com.cn/jjxw/2026-08-05/doc-inimffsv4836249.shtml",
+    "date": "08-05",
+    "source": "新浪财经（投资界）"
+  },
+  {
+    "title": "美国FTC全面禁止进口外国先进机器人，近九成美高校论文用宇树",
+    "url": "https://view.inews.qq.com/a/20260804A0D7CH00",
+    "date": "08-05",
+    "source": "腾讯新闻（DeepTech深科技）"
+  },
+  {
+    "title": "阿里发布Qwen3.8-Max：2.4万亿参数，\"千问办公\"同步开启公测",
+    "url": "https://www.ifnews.com/news.html?aid=856458&cid=43",
+    "date": "08-04",
+    "source": "国际金融报"
+  },
+  {
+    "title": "白宫召集OpenAI、谷歌、Anthropic，审议AI模型安全测试框架终稿",
+    "url": "https://www.163.com/dy/article/L3FM8LFQ05119FMA.html",
+    "date": "08-04",
+    "source": "网易（极客公园）"
+  },
+  {
+    "title": "OpenAI旗下ChatGPT Atlas浏览器8月9日停服，书签需手动导出",
+    "url": "https://new.qq.com/rain/a/20260803A09L1H00",
+    "date": "08-04",
+    "source": "腾讯新闻（IT之家）"
+  },
+  {
+    "title": "京东外卖发布自研AI智能头盔，首批免费发放给全职骑手",
+    "url": "http://www.zqrb.cn/gscy/qiyexinxi/2026-08-03/A1785740390222.html",
+    "date": "08-04",
+    "source": "证券日报"
+  },
+  {
+    "title": "《人民日报》：无锡上线\"词元超市\"，调用大模型省钱又方便",
+    "url": "https://so.html5.qq.com/page/real/search_news?docid=70000021_0116a7121b916152",
+    "date": "08-04",
+    "source": "人民日报（腾讯新闻转载）"
+  },
+  {
+    "title": "触觉感知企业帕西尼再获10亿元战略轮融资，累计融资达35亿元",
+    "url": "https://app.bbtnews.com.cn/print.php?contentid=601157",
+    "date": "08-04",
+    "source": "北京商报"
+  },
+  {
+    "title": "月之暗面回应港股IPO传闻：消息不实",
+    "url": "https://www.163.com/dy/article/L3FPS1LQ0534A4SC.html",
+    "date": "08-04",
+    "source": "网易（界面新闻）"
+  },
+  {
+    "title": "韩国国家AI计算中心正式动工，目标2028年建成",
+    "url": "https://new.qq.com/rain/a/20260803A06XA700?refer=cp_1009",
+    "date": "08-04",
+    "source": "腾讯新闻（IT之家）"
+  },
+  {
+    "title": "消息称阿里内测AI办公平台\"万有无界\"，主打多智能体协同交付",
+    "url": "https://www.chinaz.com/ainews/30058.shtml",
+    "date": "08-04",
+    "source": "站长之家"
+  },
+  {
+    "title": "长三角(嘉兴)Token运营中心启动，\"数据模型超市\"一次接入百余款大模型",
+    "url": "https://new.qq.com/rain/a/20260803A02A4J00",
+    "date": "08-03",
+    "source": "腾讯新闻"
+  },
+  {
+    "title": "亚马逊完成对OpenAI总计500亿美元全额投资",
+    "url": "https://new.qq.com/rain/a/20260803A02A4J00",
+    "date": "08-03",
+    "source": "腾讯新闻"
+  },
+  {
+    "title": "谷歌Gemini Spark智能体向全球更多用户开放，可订机票、整理收件箱",
+    "url": "https://dy.163.com/article/L3D3CQM605562DGT.html",
+    "date": "08-03",
+    "source": "网易（极新）"
+  },
+  {
+    "title": "腾讯AI虚拟细胞算法登《Cell》主刊",
+    "url": "https://dy.163.com/article/L3D3CQM605562DGT.html",
+    "date": "08-03",
+    "source": "网易（极新）"
+  },
+  {
+    "title": "智谱GLM Coding Plan开放订阅",
+    "url": "https://dy.163.com/article/L3D3CQM605562DGT.html",
+    "date": "08-03",
+    "source": "网易（极新）"
+  },
+  {
+    "title": "欧盟《人工智能法》透明度条款生效，深度伪造须强制标识",
+    "url": "https://www.163.com/dy/article/L3D7DVRB051480KF.html",
+    "date": "08-03",
+    "source": "网易（前瞻网）"
+  },
+  {
+    "title": "国务院印发\"十五五\"知识产权规划，首部署AI生成物保护规则",
+    "url": "https://www.163.com/dy/article/L3D7DVRB051480KF.html",
+    "date": "08-03",
+    "source": "网易（前瞻网）"
+  },
+  {
+    "title": "谷歌地球AI生图功能上线不到48小时即暂停",
+    "url": "https://www.163.com/dy/article/L3CSMFG205199O55.html",
+    "date": "08-03",
+    "source": "网易（财经早餐）"
+  },
+  {
+    "title": "GitHub AI Agent曝\"GitLost\"提示注入漏洞，可诱骗泄露私有数据",
+    "url": "https://view.inews.qq.com/a/20260803A020FU00",
+    "date": "08-03",
+    "source": "腾讯新闻（华尔街见闻）"
+  },
+  {
     "title": "DeepSeek-V4-Flash 正式版 API 上线，Agent 能力暴涨 6 倍",
     "url": "https://tech.ifeng.com/c/8vEDXuxscG5",
     "date": "08-01",
