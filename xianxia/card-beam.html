@@ -1,0 +1,462 @@
+<!-- Card Beam · adapted from oriform.art · keep this line if redistributing -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>灵脉光带 · Card Beam | AI 仙侠世界</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Sans+SC:wght@400;500;700&display=swap">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #07070f;
+    font-family: "Noto Sans SC", "Microsoft YaHei", sans-serif;
+    color: #e8e8f5;
+  }
+
+  /* 仙侠深空背景 */
+  .bg {
+    position: fixed;
+    inset: 0;
+    background:
+      radial-gradient(120% 80% at 50% 0%, rgba(124, 92, 246, 0.20), transparent 60%),
+      radial-gradient(100% 70% at 50% 100%, rgba(34, 211, 238, 0.14), transparent 55%),
+      #07070f;
+    z-index: 0;
+  }
+
+  /* 顶部标题条 */
+  .topbar {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 30;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 22px;
+    pointer-events: none;
+  }
+  .topbar a, .topbar .title { pointer-events: auto; }
+  .title {
+    font-family: "Ma Shan Zheng", cursive;
+    font-size: 26px;
+    letter-spacing: 2px;
+    color: #d8c9ff;
+    text-shadow: 0 0 18px rgba(167, 139, 250, 0.55);
+  }
+  .title small {
+    font-family: "Noto Sans SC", sans-serif;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: rgba(180, 200, 255, 0.6);
+    margin-left: 8px;
+  }
+  .back-btn {
+    text-decoration: none;
+    color: #cfe9ff;
+    font-size: 14px;
+    padding: 8px 14px;
+    border: 1px solid rgba(120, 180, 255, 0.35);
+    border-radius: 20px;
+    background: rgba(20, 28, 60, 0.5);
+    backdrop-filter: blur(6px);
+    transition: all .25s ease;
+  }
+  .back-btn:hover { background: rgba(40, 60, 120, 0.7); color: #fff; }
+
+  /* 卡片流容器 */
+  .stage {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+  }
+  .card-stream {
+    position: absolute;
+    width: 100vw;
+    height: 220px;
+    display: flex;
+    align-items: center;
+    overflow: visible;
+  }
+  .card-line {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    white-space: nowrap;
+    will-change: transform;
+    cursor: grab;
+    user-select: none;
+  }
+  .card-line:active { cursor: grabbing; }
+
+  .card {
+    position: relative;
+    width: 260px;
+    height: 200px;
+    flex-shrink: 0;
+    border-radius: 16px;
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: linear-gradient(160deg, rgba(28, 30, 58, 0.92), rgba(16, 18, 38, 0.92));
+    border: 1px solid rgba(140, 160, 255, 0.25);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+    overflow: hidden;
+    transition: border-color .3s ease, box-shadow .3s ease, transform .3s ease;
+  }
+  .card .emoji {
+    font-size: 46px;
+    line-height: 1;
+    filter: drop-shadow(0 0 10px rgba(167, 139, 250, 0.5));
+  }
+  .card .cname {
+    font-size: 22px;
+    font-weight: 700;
+    color: #f2f0ff;
+  }
+  .card .csub {
+    font-size: 13px;
+    color: rgba(180, 195, 255, 0.7);
+    margin-top: 4px;
+  }
+  .card .ctag {
+    align-self: flex-start;
+    font-size: 11px;
+    letter-spacing: 1px;
+    padding: 3px 10px;
+    border-radius: 12px;
+    background: rgba(124, 92, 246, 0.18);
+    border: 1px solid rgba(167, 139, 250, 0.35);
+    color: #cdb8ff;
+  }
+
+  /* 光束扫过时的高亮 */
+  .card.in-beam {
+    border-color: rgba(34, 211, 238, 0.9);
+    box-shadow: 0 0 30px rgba(34, 211, 238, 0.35), 0 18px 40px rgba(0, 0, 0, 0.45);
+    transform: translateY(-4px);
+  }
+  .card .scan-flash {
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
+    background: linear-gradient(90deg, transparent, rgba(34, 211, 238, 0.45), transparent);
+    opacity: 0;
+    pointer-events: none;
+  }
+  .card.flash .scan-flash {
+    animation: flash .6s ease-out;
+  }
+  @keyframes flash {
+    0% { opacity: 0; transform: translateX(-100%); }
+    50% { opacity: 1; }
+    100% { opacity: 0; transform: translateX(100%); }
+  }
+
+  /* 粒子 + 光束画布 */
+  #beamCanvas {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 20;
+    pointer-events: none;
+  }
+
+  .hint {
+    position: fixed;
+    bottom: 18px; left: 50%;
+    transform: translateX(-50%);
+    z-index: 30;
+    font-size: 12px;
+    color: rgba(180, 200, 255, 0.55);
+    text-align: center;
+    pointer-events: none;
+  }
+
+  .credit {
+    position: fixed;
+    bottom: 14px; right: 16px;
+    z-index: 30;
+    font-family: "Roboto Mono", monospace;
+    font-size: 11px;
+    color: #ff9a9c;
+    opacity: .8;
+  }
+  .credit a { color: #ff9a9c; text-decoration: none; }
+
+  /* 无障碍：减少动态 */
+  @media (prefers-reduced-motion: reduce) {
+    .card-line { animation: none !important; }
+    .card.flash .scan-flash { animation: none; }
+  }
+</style>
+</head>
+<body>
+  <div class="bg"></div>
+
+  <div class="topbar">
+    <div class="title">灵脉光带<small>CARD BEAM</small></div>
+    <a class="back-btn" href="index.html">← 返回仙侠世界</a>
+  </div>
+
+  <div class="stage">
+    <div class="card-stream">
+      <div class="card-line" id="cardLine"></div>
+    </div>
+  </div>
+
+  <canvas id="beamCanvas"></canvas>
+
+  <div class="hint">拖动卡片流 · 光束所至，法宝现形</div>
+  <div class="credit">effect by <a href="https://www.oriform.art/#/effects/card-beam" target="_blank" rel="noopener">oriform.art</a></div>
+
+<script>
+/* ===== 法宝卡数据（取自本站真实 AI 工具） ===== */
+const CARDS = [
+  { emoji: "🐋", name: "DeepSeek", sub: "深度求索 · 推理模型" },
+  { emoji: "🌟", name: "Kimi", sub: "月之暗面 · 长文本" },
+  { emoji: "🎨", name: "可灵 Kling", sub: "快手 · 视频生成" },
+  { emoji: "🤖", name: "通义千问", sub: "阿里 · 大模型" },
+  { emoji: "🐶", name: "豆包", sub: "字节 · 全能助手" },
+  { emoji: "🧩", name: "Coze 扣子", sub: "字节 · Agent 平台" },
+  { emoji: "🖌️", name: "即梦", sub: "字节 · 图像生成" },
+  { emoji: "🔮", name: "Midjourney", sub: "图像 · 美学标杆" },
+  { emoji: "📚", name: "秘塔", sub: "搜索 · 结构化" },
+  { emoji: "💻", name: "通义灵码", sub: "阿里 · 编程助手" },
+  { emoji: "🗣️", name: "文心一言", sub: "百度 · 大模型" },
+  { emoji: "⚡", name: "Claude", sub: "Anthropic · 长上下文" },
+];
+
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const isTouch = window.matchMedia("(hover: none)").matches;
+
+/* ===== 卡片流控制器（自动滚动 + 拖拽 + 光束扫描检测） ===== */
+class CardStream {
+  constructor() {
+    this.line = document.getElementById("cardLine");
+    this.position = 0;
+    this.velocity = 60;
+    this.direction = -1;
+    this.isAnimating = !reduceMotion;
+    this.isDragging = false;
+    this.lastMouseX = 0;
+    this.friction = 0.96;
+    this.minVelocity = 25;
+    this.lineWidth = 0;
+    this.populate();
+    this.bind();
+    this.updateClipping();
+    if (!reduceMotion) this.animate();
+  }
+
+  populate() {
+    // 复制两份，保证循环无缝
+    const make = () => CARDS.map((c) => {
+      const el = document.createElement("div");
+      el.className = "card";
+      el.innerHTML = `
+        <div class="emoji">${c.emoji}</div>
+        <div>
+          <div class="cname">${c.name}</div>
+          <div class="csub">${c.sub}</div>
+        </div>
+        <div class="ctag">法宝</div>
+        <div class="scan-flash"></div>`;
+      return el;
+    });
+    make().forEach((e) => this.line.appendChild(e));
+    make().forEach((e) => this.line.appendChild(e));
+  }
+
+  bind() {
+    const down = (e) => {
+      this.isDragging = true;
+      this.isAnimating = false;
+      this.lastMouseX = e.clientX ?? e.touches[0].clientX;
+      this.line.style.cursor = "grabbing";
+    };
+    const move = (e) => {
+      if (!this.isDragging) return;
+      const x = e.clientX ?? (e.touches ? e.touches[0].clientX : this.lastMouseX);
+      const dx = x - this.lastMouseX;
+      this.position += dx;
+      this.lastMouseX = x;
+      this.line.style.transform = `translateX(${this.position}px)`;
+      this.updateClipping();
+    };
+    const up = () => {
+      if (!this.isDragging) return;
+      this.isDragging = false;
+      this.velocity = Math.max(this.minVelocity, 60);
+      this.isAnimating = !reduceMotion;
+    };
+    this.line.addEventListener("mousedown", down);
+    document.addEventListener("mousemove", move);
+    document.addEventListener("mouseup", up);
+    this.line.addEventListener("touchstart", down, { passive: true });
+    document.addEventListener("touchmove", move, { passive: true });
+    document.addEventListener("touchend", up);
+    window.addEventListener("resize", () => this.updateClipping());
+  }
+
+  animate() {
+    const step = () => {
+      if (this.isAnimating && !this.isDragging) {
+        this.velocity = this.velocity * this.friction;
+        if (this.velocity < this.minVelocity) this.velocity = this.minVelocity;
+        this.position += this.velocity * this.direction;
+        this.line.style.transform = `translateX(${this.position}px)`;
+        this.updateClipping();
+      }
+      requestAnimationFrame(step);
+    };
+    step();
+  }
+
+  updateClipping() {
+    const beamX = window.innerWidth / 2;
+    const bw = 10;
+    const left = beamX - bw / 2, right = beamX + bw / 2;
+    this.line.querySelectorAll(".card").forEach((card) => {
+      const r = card.getBoundingClientRect();
+      const hit = r.left < right && r.right > left;
+      card.classList.toggle("in-beam", hit);
+      if (hit && !card.dataset.scanned) {
+        card.dataset.scanned = "1";
+        card.classList.add("flash");
+        setTimeout(() => card.classList.remove("flash"), 600);
+      } else if (!hit) {
+        delete card.dataset.scanned;
+      }
+    });
+  }
+}
+
+/* ===== 粒子扫描器（改编自 oriform ParticleScanner，去 Three.js，主题青/紫） ===== */
+class BeamParticles {
+  constructor() {
+    this.canvas = document.getElementById("beamCanvas");
+    this.ctx = this.canvas.getContext("2d");
+    this.w = window.innerWidth;
+    this.h = window.innerHeight;
+    this.lightBarX = this.w / 2;
+    this.lightBarWidth = 3;
+    this.fadeZone = Math.min(120, this.h * 0.35);
+    this.particles = [];
+    this.maxParticles = isTouch ? 220 : 700;
+    this.gradient = this.makeGradient();
+    this.resize();
+    window.addEventListener("resize", () => this.resize());
+    if (!reduceMotion) this.loop();
+    else this.drawStatic();
+  }
+
+  makeGradient() {
+    const c = document.createElement("canvas");
+    c.width = c.height = 16;
+    const g = c.getContext("2d");
+    const h = 8;
+    const grad = g.createRadialGradient(h, h, 0, h, h, h);
+    grad.addColorStop(0, "rgba(255,255,255,1)");
+    grad.addColorStop(0.3, "rgba(186,180,255,0.85)");
+    grad.addColorStop(0.7, "rgba(124,92,246,0.4)");
+    grad.addColorStop(1, "transparent");
+    g.fillStyle = grad;
+    g.beginPath();
+    g.arc(h, h, h, 0, Math.PI * 2);
+    g.fill();
+    return c;
+  }
+
+  resize() {
+    this.w = window.innerWidth;
+    this.h = window.innerHeight;
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    this.canvas.width = this.w * dpr;
+    this.canvas.height = this.h * dpr;
+    this.ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    this.lightBarX = this.w / 2;
+    this.fadeZone = Math.min(120, this.h * 0.35);
+  }
+
+  spawn() {
+    return {
+      x: this.lightBarX + (Math.random() - 0.5) * this.lightBarWidth * 3,
+      y: Math.random() * this.h,
+      vx: 0.3 + Math.random() * 1.1,
+      vy: (Math.random() - 0.5) * 0.3,
+      r: 0.4 + Math.random() * 1.1,
+      a: 0.5 + Math.random() * 0.5,
+      decay: 0.004 + Math.random() * 0.02,
+      life: 1,
+    };
+  }
+
+  drawBar() {
+    const x = this.lightBarX;
+    const g = this.ctx.createLinearGradient(0, 0, 0, this.h);
+    g.addColorStop(0, "rgba(255,255,255,0)");
+    g.addColorStop(this.fadeZone / this.h, "rgba(180,220,255,0.9)");
+    g.addColorStop(1 - this.fadeZone / this.h, "rgba(180,220,255,0.9)");
+    g.addColorStop(1, "rgba(255,255,255,0)");
+    this.ctx.globalCompositeOperation = "lighter";
+    this.ctx.fillStyle = g;
+    this.ctx.fillRect(x - 1, 0, 2, this.h);
+    // 外晕
+    const glow = this.ctx.createLinearGradient(x - 14, 0, x + 14, 0);
+    glow.addColorStop(0, "rgba(124,92,246,0)");
+    glow.addColorStop(0.5, "rgba(167,139,250,0.5)");
+    glow.addColorStop(1, "rgba(124,92,246,0)");
+    this.ctx.fillStyle = glow;
+    this.ctx.fillRect(x - 14, 0, 28, this.h);
+    this.ctx.globalCompositeOperation = "destination-in";
+    this.ctx.fillStyle = g;
+    this.ctx.fillRect(0, 0, this.w, this.h);
+    this.ctx.globalCompositeOperation = "source-over";
+  }
+
+  loop() {
+    this.ctx.clearRect(0, 0, this.w, this.h);
+    this.drawBar();
+    this.ctx.globalCompositeOperation = "lighter";
+    if (this.particles.length < this.maxParticles && Math.random() < 0.8) {
+      this.particles.push(this.spawn());
+    }
+    for (let i = this.particles.length - 1; i >= 0; i--) {
+      const p = this.particles[i];
+      p.x += p.vx; p.y += p.vy; p.life -= p.decay;
+      if (p.x > this.w + 8 || p.life <= 0) { this.particles.splice(i, 1); continue; }
+      let fa = 1;
+      if (p.y < this.fadeZone) fa = p.y / this.fadeZone;
+      else if (p.y > this.h - this.fadeZone) fa = (this.h - p.y) / this.fadeZone;
+      this.ctx.globalAlpha = Math.max(0, p.a * fa * p.life);
+      this.ctx.drawImage(this.gradient, p.x - p.r, p.y - p.r, p.r * 2, p.r * 2);
+    }
+    this.ctx.globalAlpha = 1;
+    this.ctx.globalCompositeOperation = "source-over";
+    requestAnimationFrame(() => this.loop());
+  }
+
+  drawStatic() {
+    this.drawBar();
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  new CardStream();
+  new BeamParticles();
+});
+</script>
+</body>
+</html>

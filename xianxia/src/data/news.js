@@ -7,6 +7,186 @@ window.AIHome = window.AIHome || {};
 
 AIHome.NEWS = [
   {
+    "title": "A股迎「人形机器人第一股」，宇树科技今日启动网上申购",
+    "url": "https://www.stcn.com/article/detail/4065944.html",
+    "date": "08-10",
+    "source": "证券时报网"
+  },
+  {
+    "title": "OpenAI暂停Astra模型部分研发：自主网络攻防能力过强触及高危门槛",
+    "url": "https://www.163.com/dy/article/L3TFVN2U0514R9OJ.html",
+    "date": "08-10",
+    "source": "网易（央视财经）"
+  },
+  {
+    "title": "字节跳动被曝正训练10万亿参数大模型，处于预训练早期阶段",
+    "url": "https://view.inews.qq.com/a/20260808A00KQF00",
+    "date": "08-10",
+    "source": "腾讯新闻（智东西）"
+  },
+  {
+    "title": "人民日报：美国近200家科技初创联名反对限制使用中国开源模型",
+    "url": "https://k.sina.com.cn/article_1893892941_70e2834d020022ffe.html",
+    "date": "08-10",
+    "source": "新浪（人民日报）"
+  },
+  {
+    "title": "「Token超级工厂」魔形智能完成A轮融资，三个月内连融两轮",
+    "url": "https://www.163.com/dy/article/L3V5VNNG051180F7.html",
+    "date": "08-10",
+    "source": "网易（智东西）"
+  },
+  {
+    "title": "国家发改委：将加快人工智能法立法进程，完善关键制度框架",
+    "url": "https://k.sina.com.cn/article_5953189932_162d6782c06704ukuc.html",
+    "date": "08-10",
+    "source": "新浪（光明日报）"
+  },
+  {
+    "title": "总台《2026中国AI盛典》揭晓10位年度AI人物，蔡磊获特别贡献人物",
+    "url": "https://sh.cctv.com/2026/08/08/ARTIjvdeF1dGMwEgA3ZTkPy3260808.shtml",
+    "date": "08-10",
+    "source": "央视网"
+  },
+  {
+    "title": "人民日报海外版：中国「陪伴经济」打开消费新空间，AI陪伴立法成全球样本",
+    "url": "https://news.haiwainet.cn/n/2026/0810/c3541093-32974238.html",
+    "date": "08-10",
+    "source": "海外网（人民日报海外版）"
+  },
+  {
+    "title": "星动纪元人形机器人上岗中国邮政分拣，效率基本追平人工",
+    "url": "https://view.inews.qq.com/a/20260810A02RMI00",
+    "date": "08-10",
+    "source": "腾讯新闻（北京青年报）"
+  },
+  {
+    "title": "原字节机器人团队负责人孔涛加盟小米，挂帅新设具身智能与应用部",
+    "url": "https://view.inews.qq.com/a/20260810A02CR000",
+    "date": "08-10",
+    "source": "腾讯新闻（观点新媒体）"
+  },
+  {
+    "title": "DeepSeek预告全面上调API定价，或告别「价格屠夫」低价策略",
+    "url": "https://www.stcn.com/article/detail/4062768.html",
+    "date": "08-07",
+    "source": "证券时报网"
+  },
+  {
+    "title": "阿里云视频模型Wan3.0开启公测，单次直出30秒并支持文档生视频",
+    "url": "https://new.qq.com/rain/a/20260807A04FA100",
+    "date": "08-07",
+    "source": "腾讯新闻（快科技）"
+  },
+  {
+    "title": "字节跳动年中全员会：承认大模型落后，张一鸣定调不用蒸馏走捷径",
+    "url": "https://www.163.com/dy/article/L3LQ82UB05129QAF.html",
+    "date": "08-07",
+    "source": "网易（南方都市报）"
+  },
+  {
+    "title": "中国开源大模型累计下载破百亿次，OpenRouter周调用前四全是国产",
+    "url": "https://new.qq.com/rain/a/20260807A0403M00",
+    "date": "08-07",
+    "source": "腾讯新闻（中国电子报）"
+  },
+  {
+    "title": "MiniMax纳入港股通首日收涨17.10%，总市值站上1038亿港元",
+    "url": "https://finance.stockstar.com/IG2026080600019831.shtml",
+    "date": "08-07",
+    "source": "证券之星（观点网）"
+  },
+  {
+    "title": "SpaceX与特斯拉投资168亿美元，全球最大芯片厂Terafab破土动工",
+    "url": "https://www.cls.cn/detail/2447866",
+    "date": "08-07",
+    "source": "财联社"
+  },
+  {
+    "title": "每经：AI驶入「L3智能体」深水区，中美前沿模型差距实质性收窄",
+    "url": "https://www.nbd.com.cn/articles/2026-08-06/4534527.html",
+    "date": "08-07",
+    "source": "每日经济新闻"
+  },
+  {
+    "title": "Om AI联汇完成数亿元融资，同步开源端侧多模态模型VLX-Seek 1.5",
+    "url": "https://www.stdaily.com/web/gdxw/2026-08/06/content_560231.html",
+    "date": "08-07",
+    "source": "科技日报"
+  },
+  {
+    "title": "第二届世界人形机器人运动会新增拔河项目，8月22日国家速滑馆开幕",
+    "url": "https://view.inews.qq.com/a/20260806A0718T00",
+    "date": "08-07",
+    "source": "腾讯新闻（北京日报）"
+  },
+  {
+    "title": "河北邯郸投用人形交通管理机器人，可模拟交警手势疏导车流",
+    "url": "https://view.inews.qq.com/a/20260806A0653H00",
+    "date": "08-07",
+    "source": "腾讯新闻（北京青年报）"
+  },
+  {
+    "title": "谷歌AI部门大洗牌：首席科学家Jeff Dean效力27年后离职创业",
+    "url": "https://tech.ifeng.com/c/8vLytv7th77",
+    "date": "08-06",
+    "source": "凤凰网科技（财联社）"
+  },
+  {
+    "title": "Meta推出首款AI编程智能体Muse Code，主打低价挑战OpenAI与Anthropic",
+    "url": "https://www.163.com/dy/article/L3KFA88H05198CJN.html",
+    "date": "08-06",
+    "source": "网易（财联社）"
+  },
+  {
+    "title": "字节跳动发布原生音视频全双工大模型SeedRealtime，已在豆包App全量上线",
+    "url": "https://new.qq.com/rain/a/20260806A02DR600",
+    "date": "08-06",
+    "source": "腾讯新闻（每日经济新闻）"
+  },
+  {
+    "title": "曝DeepSeek重启第二轮融资，拟募资500亿元、投前估值5000亿元",
+    "url": "https://www.163.com/dy/article/L3JVB3LV05118I96.html",
+    "date": "08-06",
+    "source": "网易（i黑马）"
+  },
+  {
+    "title": "京东开源实时流式视频编辑模型JoyAI-Video-Edit，视频可边播边改",
+    "url": "https://new.qq.com/rain/a/20260805A0CZ0N00",
+    "date": "08-06",
+    "source": "腾讯新闻（北京日报）"
+  },
+  {
+    "title": "Anthropic首次确认组建内部芯片团队，为Claude设计定制芯片",
+    "url": "https://view.inews.qq.com/a/20260805A0EXT000",
+    "date": "08-06",
+    "source": "腾讯新闻（观点新媒体）"
+  },
+  {
+    "title": "阿里Qwen-Image-3.0正式上线千问AI平台，文生图0.18元/张起",
+    "url": "https://new.qq.com/rain/a/20260805A05EAD00",
+    "date": "08-06",
+    "source": "腾讯新闻"
+  },
+  {
+    "title": "荣耀MagicOS 10八月版今日起分批推送，七大AI功能覆盖数十款机型",
+    "url": "https://new.qq.com/rain/a/20260805A08XSM00",
+    "date": "08-06",
+    "source": "腾讯新闻"
+  },
+  {
+    "title": "人民日报评AI治理：以善治促善智，开源有助于构筑更稳固的安全堤坝",
+    "url": "https://www.163.com/dy/article/L3KU8QPH0514R9M0_pdya11y.html",
+    "date": "08-06",
+    "source": "网易（人民网）"
+  },
+  {
+    "title": "Sand.ai发布全球首个千亿级开源MoE视频模型",
+    "url": "https://dy.163.com/article/L3KQJ61A05562DGT.html",
+    "date": "08-06",
+    "source": "网易（极新）"
+  },
+  {
     "title": "GPT-5.5 Instant 全量推送：幻觉率降52.5%，新增\"记忆来源\"可查可删",
     "url": "https://www.163.com/dy/article/L3HEJK2I05568E2X.html",
     "date": "08-05",
