@@ -5,18 +5,18 @@
 AI家AI户 坚持"便利店"模式——不是权威评测，而是省事的来源标注与更新日期。内容由真人维护（站长即用户「抱走西瓜」），覆盖语言模型、图像/视频模型、代码模型、Agent 平台与 AI 辅助工具六大品类，并每日更新 AI 资讯。
 
 ## 核心导航
-- [模型库](https://myaishome.com/models.html)：44 个 AI 模型按 6 大品类对比，含版本、功能、定价。
-- [工具库](https://myaishome.com/tools.html)：352 个 AI 工具分类检索，覆盖对话、图像、视频、音频、编程、写作、设计、办公、搜索、Agent、翻译、浏览器插件 12 类。
-- [模型对比](https://myaishome.com/compare.html)：自由对比多个模型的参数与价格。
-- [每日 AI 资讯](https://myaishome.com/news.html)：工作日更新的 AI 行业快讯。
-- [白皮书解读](https://myaishome.com/papers.html)：AI 行业报告省流版解读。
+- [模型库](https://myaishome.com/models)：44 个 AI 模型按 6 大品类对比，含版本、功能、定价。
+- [工具库](https://myaishome.com/tools)：352 个 AI 工具分类检索，覆盖对话、图像、视频、音频、编程、写作、设计、办公、搜索、Agent、翻译、浏览器插件 12 类。
+- [模型对比](https://myaishome.com/compare)：自由对比多个模型的参数与价格。
+- [每日 AI 资讯](https://myaishome.com/news)：工作日更新的 AI 行业快讯。
+- [白皮书解读](https://myaishome.com/papers)：AI 行业报告省流版解读。
 
 ## 关于
-- [关于我们](https://myaishome.com/about.html)：站长介绍与站点理念。
-- [隐私政策](https://myaishome.com/privacy.html)
-- [免责声明](https://myaishome.com/disclaimer.html)
+- [关于我们](https://myaishome.com/about)：站长介绍与站点理念。
+- [隐私政策](https://myaishome.com/privacy)
+- [免责声明](https://myaishome.com/disclaimer)
 
 ## 联系
 - 邮箱：195486937@qq.com
-- 小红书：抱走西瓜（https://www.xiaohongshu.com/search_result?keyword=抱走西瓜）
-- [联系我们](https://myaishome.com/contact.html)
+- 小红书：@抱走西瓜（站内搜索）
+- [联系我们](https://myaishome.com/contact)
