@@ -6,6 +6,8 @@ import os
 PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MODELS_DIR = os.path.join(PROJECT_DIR, 'models')
 JSON_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'models.json')
+SITE = 'https://myaishome.com'
+OG_IMAGE = f'{SITE}/img/og-image.png'
 
 # Auto-build comparison: pick up to 3 other models from same category
 def get_comparisons(model, all_models):
@@ -78,9 +80,14 @@ def generate_page(m, all_models, model_map):
     <meta property="og:url" content="https://myaishome.com/models/{model_id}.html">
     <meta property="og:type" content="article">
     <meta property="og:locale" content="zh_CN">
+    <meta property="og:image" content="{OG_IMAGE}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="{model_name} — AI家AI户模型评测">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{seo_title}">
     <meta name="twitter:description" content="{seo_desc}">
+    <meta name="twitter:image" content="{OG_IMAGE}">
     <meta name="google-site-verification" content="xt9f05QoKT1xpnVg94WeUsSOYPO88A3CT1j57ePzKZ8" />
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-TBTFSXQ6NF"></script>
     <script>
@@ -98,7 +105,7 @@ def generate_page(m, all_models, model_map):
       "name":"{model_name}",
       "applicationCategory":"AIApplication",
       "operatingSystem":"Web",
-      "offers":{{"@type":"Offer","price":"0","priceCurrency":"CNY"}},
+      "offers":{{"@type":"Offer","price":"{m.get('priceLabel','').split('/')[0].replace('免费','0').replace('$','').strip()}","priceCurrency":"CNY"}},
       "description":"{m.get('strengths','')[:200]}",
       "url":"https://myaishome.com/models/{model_id}.html"
     }}
@@ -149,7 +156,7 @@ def generate_page(m, all_models, model_map):
             <h1><span id="detail-name">{model_name}</span><span data-i18n="detail.h1"> 怎么样？</span></h1>
             <span id="detail-badge" class="detail-badge {pc}"></span>
         </div>
-        <p class="detail-subtitle" id="detail-subtitle">{company} · {category} · 更新于 {m.get('lastUpdated','')}</p>
+        <p class="detail-subtitle" id="detail-subtitle">{company} · {category} · 更新于 <time datetime="{m.get('lastUpdated','')}">{m.get('lastUpdated','')}</time></p>
         <p class="detail-summary" id="detail-summary">{m.get('strengths','')}</p>
         <div class="detail-actions">
             <a href="{m.get('website','#')}" id="detail-cta" class="detail-cta" target="_blank" rel="nofollow noopener" onclick="gtag('event','click',{{'event_category':'model_detail','event_label':'{model_id}_visit'}})">访问官网 →</a>
@@ -212,8 +219,9 @@ def generate_page(m, all_models, model_map):
     </section>
 
     <section class="detail-section detail-source">
-        <p id="detail-source">📋 数据来源：{m.get('source','')}</p>
-        <p id="detail-date">🕐 最后更新：{m.get('lastUpdated','')}</p>
+        <p id="detail-source">📋 数据来源：{m.get('source','')}；作者/整理：AI家AI户（抱走西瓜）</p>
+        <p id="detail-date">🕐 最后更新：<time datetime="{m.get('lastUpdated','')}">{m.get('lastUpdated','')}</time></p>
+        <p style="font-size:13px;color:var(--text-secondary);margin-top:8px;">本站不对官方价格与功能变动负责，使用前请再次核实官网信息。发现错误可通过<a href="../contact.html">联系我们</a>反馈。</p>
     </section>
 
     <section class="detail-section">

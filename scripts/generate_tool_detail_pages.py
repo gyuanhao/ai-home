@@ -16,6 +16,7 @@ JSON_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'tools.json
 OUT_DIR = os.path.join(PROJECT_DIR, 'tools')
 SITE = 'https://myaishome.com'
 LOGO = f'{SITE}/img/logo.png'
+OG_IMAGE = f'{SITE}/img/og-image.png'
 
 SIDEBAR = '''<aside class="sidebar" id="sidebar">
     <a href="../index.html" class="sidebar-logo">
@@ -108,6 +109,7 @@ def page(t):
             "name": name,
             "description": summary,
             "brand": {"@type": "Brand", "name": company},
+            "image": OG_IMAGE,
             "url": canon,
             "offers": {
                 "@type": "Offer",
@@ -143,6 +145,14 @@ def page(t):
     <meta property="og:url" content="{canon}">
     <meta property="og:type" content="article">
     <meta property="og:locale" content="zh_CN">
+    <meta property="og:image" content="{OG_IMAGE}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="{esc(name)} — AI家AI户工具库">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{esc(name)} — AI家AI户">
+    <meta name="twitter:description" content="{esc(desc_meta)}">
+    <meta name="twitter:image" content="{OG_IMAGE}">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1082515322846897" crossorigin="anonymous"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-TBTFSXQ6NF"></script>
     <script>
@@ -172,6 +182,11 @@ __SIDEBAR__
     </div>
 
     <a class="model-link" href="{esc(official)}" target="_blank" rel="noopener" style="display:inline-block;margin:14px 0 24px;">访问官网 →</a>
+
+    <div class="about-section" style="background:var(--surface);padding:16px 18px;border-radius:10px;border-left:4px solid var(--primary);">
+        <h2 style="margin-top:0;font-size:16px;">一句话结论</h2>
+        <p style="margin:0;color:var(--text-primary);">{esc(best_for)} 适合关注 {esc(category)} 的用户；价格档位为 {esc(price_label)}，数据更新于 <time datetime="{esc(last_updated)}">{esc(last_updated)}</time>。</p>
+    </div>
 
     <div class="about-section">
         <h2>这是什么</h2>
@@ -204,7 +219,7 @@ __SIDEBAR__
         <div class="model-tags">{tag_html}</div>
     </div>
 
-    <p style="margin-top:20px;color:var(--text-secondary);font-size:13px;">信息最后更新：{esc(last_updated)}。数据来自公开资料与官网，以官方最新为准。</p>
+    <p style="margin-top:20px;color:var(--text-secondary);font-size:13px;">信息最后更新：<time datetime="{esc(last_updated)}">{esc(last_updated)}</time>。数据来自公开资料与官网，以官方最新为准。如发现错误或过时信息，欢迎<a href="../contact.html">联系我们</a>。</p>
 
     <div style="margin:24px 0 8px;">
         <a href="../tools.html" class="hot-view-all">← 返回工具库</a>
@@ -212,7 +227,10 @@ __SIDEBAR__
 </div>
 
 <footer class="footer">
-    <p style="margin-top:8px;font-size:13px;color:var(--text-secondary);"><a href="../privacy.html">隐私政策</a> · <a href="../terms.html">服务条款</a> · <a href="../disclaimer.html">免责声明</a> · <a href="../contact.html">联系我们</a> · <a href="../blog/">博客</a></p>
+    <p style="margin-top:8px;font-size:13px;color:var(--text-secondary);"><a href="../privacy.html">隐私政策</a> · <a href="../terms.html">服务条款</a> · <a href="../disclaimer.html">免责声明</a> · <a href="../contact.html">联系我们</a> · <a href="../blog/">博客</a> · <a href="../about.html">关于</a></p>
+    <p style="margin-top:6px;font-size:13px;color:var(--text-secondary);">关注我们：
+        <a href="https://www.xiaohongshu.com/search_result?keyword=%E6%8A%B1%E8%B5%B0%E8%A5%BF%E7%93%9C" target="_blank" rel="noopener me">小红书 @抱走西瓜</a>
+    </p>
 </footer>
 
 <script src="../js/main.js"></script>

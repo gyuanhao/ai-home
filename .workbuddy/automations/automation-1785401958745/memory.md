@@ -73,3 +73,12 @@
 - 流程：18 个候选 URL 全部 curl 校验 200（含纠正搜索结果里被污染的 `app@stcn.com` 域名，实际为 www.stcn.com/article/detail/4065944.html）；node 脚本校验三个 day 对象的 JSON 合法性、摘要≤60字、URL 全 https、块内与 news-data.js 标题查重、U+FFFD 乱码扫描 → 修掉 1 处乱码后 ALL_CHECKS_PASSED。临时脚本已删除。
 - 环境提示：Git Bash 下 `cat > /tmp/x.js <<'EOF'` 会吞掉反斜杠转义、且 /tmp 被 MSYS 转成 C:\tmp 导致找不到文件；校验脚本应改用 Write 工具写到工作区相对路径再执行。
 - 未改动 js/news-data.js，未 git/部署；git status 确认仅 scripts/_draft_news.md 与本 memory.md 为 M。
+
+## 2026-08-11 (周二) — 第十次运行
+- 产出草稿：scripts/_draft_news.md（10 条，日期 2026-08-11，display「8月11日」）。
+- **积压已清**：js/news-data.js 首项为 2026-08-10、total_days=30，8/6 与 8/7 均已入库，本次无需再带附录补录，草稿结构回归单日形态。
+- 选题主线：英伟达联合六大华尔街机构设5000亿美元算力融资平台(腾讯/财联社)、Meta 重回开源发布 Muse Glimmer 30B Agent 模型(36氪/爱范儿)、Anthropic 取消 Sonnet 5 涨价50%永久锁价(腾讯/华尔街见闻)、Claude Code 8/14 默认自动模式(腾讯/量子位)、上半年中国占全球人形机器人出货超97%(新浪/环球时报)、宇树中签率0.0181%创科创板新低(网易/证券时报)、千问开放平台上线覆盖手机PC眼镜三端(新浪财经/时代周报)、微信灰度朋友圈「AI帮写」(网易/爱范儿)、微软 Maia 300 最快9月亮相(腾讯/IT之家)、OpenAI 发布 GPT-5.6-Cyber 与 Daybreak 红蓝双层(网易/cnBeta)。
+- 去重：跳过 OpenRouter 69万亿Token中国前四（8/2 入库 + 8/7 草稿，已三度）、GPT-6/Astra 10万亿参数爆料（8/10 已入库「暂停 Astra」且仅爆料）、Sonnet 5.5「Fennec」泄露（未证实且与第3条同主体）、SeedRealtime（8/6 已入库）、高盛万亿投资预测、Meta 1.4万亿索赔（非AI主线）。
+- 流程：16 个候选 URL curl 批量校验，其中 www.chinaz.com 返回 000 不可达 → 舍弃「英伟达开源 VoiceChat 11B」一条（未找到更权威单篇替代），入选 10 条全部 200。node 校验脚本（写到 scripts/_check_draft_tmp.js 再执行、跑完即删）通过：JSON 合法、摘要 43–54 字全部 ≤60、URL 全 https、块内与 news-data.js 标题无重复、U+FFFD 扫描修掉 2 处后清零。
+- 经验：Write 工具落盘的中文正文偶发 U+FFFD 替换字符，**每次必须跑一遍 FFFD 扫描**，仅靠肉眼看不出来。
+- 未改动 js/news-data.js，未 git/部署；git status 仅 scripts/_draft_news.md 为 M。
