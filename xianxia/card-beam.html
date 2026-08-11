@@ -246,13 +246,13 @@ class CardStream {
   constructor() {
     this.line = document.getElementById("cardLine");
     this.position = 0;
-    this.velocity = 60;
+    this.velocity = 9;
     this.direction = -1;
     this.isAnimating = !reduceMotion;
     this.isDragging = false;
     this.lastMouseX = 0;
-    this.friction = 0.96;
-    this.minVelocity = 25;
+    this.friction = 0.992;
+    this.minVelocity = 5;
     this.lineWidth = 0;
     this.populate();
     this.bind();
@@ -298,7 +298,7 @@ class CardStream {
     const up = () => {
       if (!this.isDragging) return;
       this.isDragging = false;
-      this.velocity = Math.max(this.minVelocity, 60);
+      this.velocity = 9;
       this.isAnimating = !reduceMotion;
     };
     this.line.addEventListener("mousedown", down);
@@ -355,6 +355,7 @@ class BeamParticles {
     this.fadeZone = Math.min(120, this.h * 0.35);
     this.particles = [];
     this.maxParticles = isTouch ? 220 : 700;
+    this.breath = 1;
     this.gradient = this.makeGradient();
     this.resize();
     window.addEventListener("resize", () => this.resize());
@@ -405,21 +406,24 @@ class BeamParticles {
 
   drawBar() {
     const x = this.lightBarX;
+    const breath = this.breath; // 0..1 呼吸系数
     const g = this.ctx.createLinearGradient(0, 0, 0, this.h);
     g.addColorStop(0, "rgba(255,255,255,0)");
-    g.addColorStop(this.fadeZone / this.h, "rgba(180,220,255,0.9)");
-    g.addColorStop(1 - this.fadeZone / this.h, "rgba(180,220,255,0.9)");
+    const coreA = 0.5 + 0.42 * breath;
+    g.addColorStop(this.fadeZone / this.h, `rgba(180,220,255,${coreA})`);
+    g.addColorStop(1 - this.fadeZone / this.h, `rgba(180,220,255,${coreA})`);
     g.addColorStop(1, "rgba(255,255,255,0)");
     this.ctx.globalCompositeOperation = "lighter";
     this.ctx.fillStyle = g;
     this.ctx.fillRect(x - 1, 0, 2, this.h);
-    // 外晕
-    const glow = this.ctx.createLinearGradient(x - 14, 0, x + 14, 0);
+    // 外晕随呼吸明暗
+    const glowA = 0.22 + 0.5 * breath;
+    const glow = this.ctx.createLinearGradient(x - 16, 0, x + 16, 0);
     glow.addColorStop(0, "rgba(124,92,246,0)");
-    glow.addColorStop(0.5, "rgba(167,139,250,0.5)");
+    glow.addColorStop(0.5, `rgba(167,139,250,${glowA})`);
     glow.addColorStop(1, "rgba(124,92,246,0)");
     this.ctx.fillStyle = glow;
-    this.ctx.fillRect(x - 14, 0, 28, this.h);
+    this.ctx.fillRect(x - 16, 0, 32, this.h);
     this.ctx.globalCompositeOperation = "destination-in";
     this.ctx.fillStyle = g;
     this.ctx.fillRect(0, 0, this.w, this.h);
@@ -427,12 +431,15 @@ class BeamParticles {
   }
 
   loop() {
+    // 缓慢呼吸：约 5.7s 一轮的明暗/缩放节奏
+    this.breath = 0.5 + 0.5 * Math.sin(performance.now() * 0.0011);
     this.ctx.clearRect(0, 0, this.w, this.h);
     this.drawBar();
     this.ctx.globalCompositeOperation = "lighter";
     if (this.particles.length < this.maxParticles && Math.random() < 0.8) {
       this.particles.push(this.spawn());
     }
+    const pBreath = 0.45 + 0.55 * this.breath; // 粒子整体随呼吸明暗
     for (let i = this.particles.length - 1; i >= 0; i--) {
       const p = this.particles[i];
       p.x += p.vx; p.y += p.vy; p.life -= p.decay;
@@ -440,8 +447,9 @@ class BeamParticles {
       let fa = 1;
       if (p.y < this.fadeZone) fa = p.y / this.fadeZone;
       else if (p.y > this.h - this.fadeZone) fa = (this.h - p.y) / this.fadeZone;
-      this.ctx.globalAlpha = Math.max(0, p.a * fa * p.life);
-      this.ctx.drawImage(this.gradient, p.x - p.r, p.y - p.r, p.r * 2, p.r * 2);
+      this.ctx.globalAlpha = Math.max(0, p.a * fa * p.life * pBreath);
+      const rr = p.r * (0.82 + 0.36 * this.breath); // 轻微缩放呼吸
+      this.ctx.drawImage(this.gradient, p.x - rr, p.y - rr, rr * 2, rr * 2);
     }
     this.ctx.globalAlpha = 1;
     this.ctx.globalCompositeOperation = "source-over";
