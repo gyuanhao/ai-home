@@ -142,6 +142,7 @@ def generate_page(m, all_models, model_map):
     <a href="../models.html" class="mobile-tab">📦<span>模型库</span></a>
     <a href="../compare.html" class="mobile-tab">⚖️<span>对比</span></a>
     <a href="../skills.html" class="mobile-tab">🛠<span>技能包</span></a>
+    <a href="../papers.html" class="mobile-tab">📄<span>白皮书</span></a>
 </nav>
 
 <main class="detail-page">
