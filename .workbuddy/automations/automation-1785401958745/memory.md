@@ -82,3 +82,17 @@
 - 流程：16 个候选 URL curl 批量校验，其中 www.chinaz.com 返回 000 不可达 → 舍弃「英伟达开源 VoiceChat 11B」一条（未找到更权威单篇替代），入选 10 条全部 200。node 校验脚本（写到 scripts/_check_draft_tmp.js 再执行、跑完即删）通过：JSON 合法、摘要 43–54 字全部 ≤60、URL 全 https、块内与 news-data.js 标题无重复、U+FFFD 扫描修掉 2 处后清零。
 - 经验：Write 工具落盘的中文正文偶发 U+FFFD 替换字符，**每次必须跑一遍 FFFD 扫描**，仅靠肉眼看不出来。
 - 未改动 js/news-data.js，未 git/部署；git status 仅 scripts/_draft_news.md 为 M。
+
+## 2026-08-12 (周三) — 第十一次运行
+- 产出草稿：scripts/_draft_news.md（10 条，日期 2026-08-12，display「8月12日」）。
+- **积压仍在**：js/news-data.js 首项仍为 2026-08-10，8/11 草稿（10 条）仍未入库。已在草稿开头明确提示人工按 **8/11 → 8/12** 顺序依次 prepend（最新置顶），避免漏掉未上线内容。
+- 选题主线：英伟达万亿参数开源 Nemotron 4(钛媒体/搜狐)、面壁智能启动IPO辅导冲刺端侧大模型第一股(经济观察网)、智源AREX自主研究智能体(央广网)、芝商所10月推算力期货H100/B200(财联社)、Anthropic与Riot签91亿美元20年算力大单(财联社)、戴盟机器人数亿元融资蚂蚁领投(新京报)、上海十五五软件规划推自主芯片+大模型融合(每经)、OpenAI 70亿美元员工回购估值8520亿(科创板日报)、Anthropic为Claude加隐形水印响应欧盟AI法案(腾讯新闻)、Gartner称2026推理支出首超训练(极新早报)。
+- 去重：跳过 英伟达5000亿平台+黄仁勋回应(8/11已收)、Meta Muse Glimmer/扎克伯格长文(8/11)、Anthropic锁价/Claude Code自动模式(8/11)、GPT-5.6-Cyber(8/11)、中国机器人出货97%/宇树中签/千问平台/微信AI帮写/Maia 300(均8/11)、中国开源下载破百亿/字节10万亿/DeepSeek提价/阿里云Wan3.0(8/07–8/10已入库)。
+- 流程：10 个候选 URL 全部 curl 校验（8 个直返 200，2 个 new.qq.com 返回 301 经 -L 重定向至 news.qq.com 后 200）；node 校验脚本（写到 scripts/_check_draft_tmp.js 再执行、跑完即删）通过：JSON 合法、摘要 34–47 字全部 ≤60、URL 全 https、与 news-data.js(108条)+8/11草稿标题查重全无碰撞、FFFD 扫描 0。
+- 未改动 js/news-data.js，未 git/部署；git status 仅 scripts/_draft_news.md 为 M。
+
+## 2026-08-12 (周三) — 用户手动「部署上线」（8/11+8/12 积压触发）
+- **数据缺口修复**：8/12 自动化运行覆盖工作区 scripts/_draft_news.md，致 8/11 草稿（10条）仅存于 git HEAD、磁盘工作树丢失。从 `git show HEAD:scripts/_draft_news.md` 恢复 8/11 对象，与当前 8/12 对象一并入库，避免日期缺口。
+- **入库**：node 脚本抽取两 day 对象 → 校验（FFFD 扫描0、摘要≤60字、URL 全 https、与 108 条历史标题查重0冲突）→ prepend（8/12 置顶、8/11 次之）进 window.AIHomeNews。new Function 加载校验：总天数 32、首项 2026-08-12、结构异常 0。
+- **提交**：git commit + push origin main；Cloudflare Pages 自动构建上线（myaishome.com）。scripts/_draft_news.md 重置为「已发布」占位。仅提交 js/news-data.js / _draft_news.md / 本 memory.md，未带其它无关改动。
+- **经验**：每日 09:00 自动化会直接覆盖工作区草稿；若存在未入库的多天积压，必须在下次运行前完成部署，否则较早那天的草稿会被静默覆盖、且永不进 news-data.js。建议后续自动化在「最新 day 对象日期 ≠ news-data.js 首项日期」时先告警/暂存再覆盖。
