@@ -96,3 +96,10 @@
 - **入库**：node 脚本抽取两 day 对象 → 校验（FFFD 扫描0、摘要≤60字、URL 全 https、与 108 条历史标题查重0冲突）→ prepend（8/12 置顶、8/11 次之）进 window.AIHomeNews。new Function 加载校验：总天数 32、首项 2026-08-12、结构异常 0。
 - **提交**：git commit + push origin main；Cloudflare Pages 自动构建上线（myaishome.com）。scripts/_draft_news.md 重置为「已发布」占位。仅提交 js/news-data.js / _draft_news.md / 本 memory.md，未带其它无关改动。
 - **经验**：每日 09:00 自动化会直接覆盖工作区草稿；若存在未入库的多天积压，必须在下次运行前完成部署，否则较早那天的草稿会被静默覆盖、且永不进 news-data.js。建议后续自动化在「最新 day 对象日期 ≠ news-data.js 首项日期」时先告警/暂存再覆盖。
+
+## 2026-08-13 (周四) — 第十二次运行
+- 产出草稿：scripts/_draft_news.md（10 条，日期 2026-08-13，display「8月13日」，weekday「周四」）。
+- 选题主线（当日双头条：DeepSeek V4 Pro 0813 正式版 + 马斯克 Grok 4.6 同日发布）：DeepSeek V4 Pro 正式版上线(腾讯新闻)、Grok 4.6 长程智能体编程(新浪财经)、腾讯Q2资本开支暴增176%自由现金流转负(新浪财经)、谷歌Pixel 11 系列 Gemini 代订餐厅叫车(新浪财经)、微软 MAI-Code-1.1-Flash 编程模型价降至1/4(IT之家)、阿里云灵骏真武M890超节点乌兰察布上线(环球网)、Anthropic+Redwood 概念推理指数CRI(Anthropic官方)、白宫拟将前沿开放模型纳入发布前安全测试(WIRED/未尽研究)、字节新设「AI数据与安全」一级部门(凤凰网科技)、美银2500亿美元AI基础设施融资(路透/国际财经时报)。
+- 去重：刻意避开 8/10–8/12 已入库项（Nemotron 4、面壁IPO、智源AREX、芝商所期货、Anthropic+Riot、戴盟、上海十五五、OpenAI回购、Anthropic水印、Gartner、英伟达5000亿、Muse Glimmer、Sonnet5锁价、Claude Code自动、机器人出货97%、宇树、千问平台、微信AI帮写、Maia 300、GPT-5.6-Cyber、Astra暂停、字节10万亿、宇树申购、发改委AI法、总台AI盛典等）；与 news-data.js 128 条标题查重 0 碰撞。字节「AI数据与安全」原报道为 8/11（近期且数据文件未收），作为补充纳入并在草稿注明。
+- 流程：10 个候选 URL 全部 curl 校验（DoNews 原链返回 000 不可达 → 替换为新浪财经同主题 L46B1EK905568W0A，200）；node 校验脚本（写到 scripts/_check_draft_tmp.js 再执行、跑完即删）通过：JSON 合法、摘要 31–46 字全部 ≤60、URL 全 https、块内与 news-data.js 标题查重 0 碰撞、FFFD 扫描 0。
+- 未改动 js/news-data.js，未 git/部署；git status 仅 scripts/_draft_news.md 为 M。

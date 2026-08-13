@@ -7,6 +7,73 @@
  */
 window.AIHomeNews = [
 {
+    "date": "2026-08-13",
+    "display": "8月13日",
+    "weekday": "周四",
+    "items": [
+      {
+        "title": "DeepSeek V4 Pro 正式版上线，多项 Agent 测试逼近 Claude Fable 5",
+        "url": "https://new.qq.com/rain/a/20260813A047OR00?refer=cp_1009",
+        "summary": "0813版支持1M上下文与384K输出，多项Agent测试逼近Fable 5，价格暂未上涨。",
+        "source": "腾讯新闻"
+      },
+      {
+        "title": "马斯克发布 Grok 4.6，主打长程智能体与复杂编程",
+        "url": "https://www.163.com/dy/article/L46B1EK905568W0A.html",
+        "summary": "主打长程智能体与编程，综合智能指数61追平GPT-5.6，API价仅前沿一半。",
+        "source": "新浪财经"
+      },
+      {
+        "title": "腾讯 Q2 资本开支暴增 176%，AI 投入激进致现金流转负",
+        "url": "https://finance.sina.com.cn/stock/hkstock/hkstocknews/2026-08-13/doc-inincnuy3396808.shtml",
+        "summary": "砸528亿买算力、自由现金流转负138亿，AI投入激进但商业化可期。",
+        "source": "新浪财经"
+      },
+      {
+        "title": "谷歌发布 Pixel 11 系列，Gemini 可代订餐厅与叫车",
+        "url": "https://www.163.com/dy/article/L4603BNP05568W0A.html",
+        "summary": "Gemini可后台代订餐厅、叫车、点咖啡，AI手机竞争升温、全系涨价。",
+        "source": "新浪财经"
+      },
+      {
+        "title": "微软推出 MAI-Code-1.1-Flash 编程模型，价格降至初代 1/4",
+        "url": "https://so.html5.qq.com/page/real/search_news?docid=70000021_1376a7bf8c706852",
+        "summary": "代码能力升22%、Token消耗降25%，价格降至初代1/4并新增原生视觉。",
+        "source": "IT之家"
+      },
+      {
+        "title": "阿里云灵骏真武 M890 超节点实例上线，乌兰察布首发",
+        "url": "https://www.163.com/dy/article/L44IA83E0514R9OJ.html",
+        "summary": "乌兰察布首发64卡800GB/s互联，可承载十万亿参数级MoE推理。",
+        "source": "环球网"
+      },
+      {
+        "title": "Anthropic 与 Redwood 发布概念推理指数 CRI",
+        "url": "https://alignment.anthropic.com/2026/conceptual-reasoning-index/",
+        "summary": "测试无标准答案的概念推理，Opus 5得73.6、上限约91，新评测维度。",
+        "source": "Anthropic"
+      },
+      {
+        "title": "白宫拟将前沿开放模型纳入发布前安全测试框架",
+        "url": "https://www.163.com/dy/article/L46SLO2305562QFT.html",
+        "summary": "监管或由开源/闭源转向性能门槛，中国开源模型在美部署或受波及。",
+        "source": "WIRED / 未尽研究"
+      },
+      {
+        "title": "字节新设「AI数据与安全」一级部门，与 Seed 平行",
+        "url": "https://tech.ifeng.com/c/8vVRX2ReKOi",
+        "summary": "张一鸣「坚决不蒸馏」后，把数据升格为与Seed平行的一级战略部门。",
+        "source": "凤凰网科技"
+      },
+      {
+        "title": "美银启动 2500 亿美元 AI 基础设施融资计划",
+        "url": "https://www.ibtimes.sg/bank-america-launches-250-billion-us-infrastructure-financing-initiative-ai-boom-92020",
+        "summary": "18个月投向数据中心、电力与关键矿产，华尔街深度进场AI基建。",
+        "source": "路透 / 国际财经时报"
+      }
+    ]
+  },
+{
     "date": "2026-08-12",
     "display": "8月12日",
     "weekday": "周三",
