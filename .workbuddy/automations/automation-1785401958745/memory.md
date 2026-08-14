@@ -103,3 +103,15 @@
 - 去重：刻意避开 8/10–8/12 已入库项（Nemotron 4、面壁IPO、智源AREX、芝商所期货、Anthropic+Riot、戴盟、上海十五五、OpenAI回购、Anthropic水印、Gartner、英伟达5000亿、Muse Glimmer、Sonnet5锁价、Claude Code自动、机器人出货97%、宇树、千问平台、微信AI帮写、Maia 300、GPT-5.6-Cyber、Astra暂停、字节10万亿、宇树申购、发改委AI法、总台AI盛典等）；与 news-data.js 128 条标题查重 0 碰撞。字节「AI数据与安全」原报道为 8/11（近期且数据文件未收），作为补充纳入并在草稿注明。
 - 流程：10 个候选 URL 全部 curl 校验（DoNews 原链返回 000 不可达 → 替换为新浪财经同主题 L46B1EK905568W0A，200）；node 校验脚本（写到 scripts/_check_draft_tmp.js 再执行、跑完即删）通过：JSON 合法、摘要 31–46 字全部 ≤60、URL 全 https、块内与 news-data.js 标题查重 0 碰撞、FFFD 扫描 0。
 - 未改动 js/news-data.js，未 git/部署；git status 仅 scripts/_draft_news.md 为 M。
+
+## 2026-08-14 (周五) — 第十三次运行
+- 产出草稿：scripts/_draft_news.md（10 条，日期 2026-08-14，display「8月14日」，weekday「周五」）。
+- 选题主线（当日双头条：DeepSeek Harness 开源 + 谷歌 Gemini 3.7 Flash 发布）：DeepSeek 开源 Harness 智能体框架(每经)、谷歌 Gemini 3.7 Flash 发布(网易/财闻)、Anthropic 估值或破2万亿最快10月上市(网易/每经早参)、OpenAI 年内二度换CRO加速商业化(赛迪)、Databricks 50亿融资估值1900亿(腾讯新闻/雷递)、AMD 创纪录发债47.5亿加码AI算力(新浪财经/财联社)、复旦白泽Whitzard登AI安全榜全球第二(央广网/央视)、AI消费硬件爆发外骨骼+458%眼镜+151.7%(央视/新浪)、京东Q2 AI成交额增125%(智东西/腾讯新闻)、自变量机器人1小时分拣1816件超Figure AI(前沿在线/网易)。
+- 去重：跳过 DeepSeek V4 Pro 正式版(8/13已入库，本次 Harness 为同公司不同产品新角度保留)、腾讯Q2资本开支/阿里云灵骏/微软MAI-Code/Grok4.6/Pixel11(均8/13)、国产开源破百亿/MiniMax H3/OpenRouter前五(8/7+8/10)、荣耀Robot Phone(8/12发布今日聚合，防日期陷阱)、李开复/大空头观点类。与 news-data.js 138 条标题查重 0 碰撞。
+- 流程：10 个候选 URL 全部 curl 校验 200（含 new.qq.com 经 -L 重定向、view.inews.qq.com 内链均稳）；node 校验脚本（写到 scripts/_check_draft_tmp.js 再执行、跑完即删）通过：JSON 合法、摘要 40–56 字全部 ≤60、URL 全 https、块内与 news-data.js 标题查重 0 碰撞、FFFD 扫描 0。
+- 未改动 js/news-data.js，未 git/部署；git status 仅 scripts/_draft_news.md 为 M。
+
+### 2026-08-13 部署（用户触发「部署」）
+- 入库：node 脚本解析 scripts/_draft_news.md 的 day 对象 → 校验（摘要≤60字、URL 全 https、与历史标题查重 0 碰撞、FFFD 0）→ prepend 进 window.AIHomeNews 数组最前。new Function 加载校验：总天数 33、首项 2026-08-13、次项 2026-08-12、结构异常 0；git diff 仅 67 行插入、0 删除（缩进与现有完全一致）。
+- 提交+推送：git commit 7eff0e9 + `git push origin main` 成功（c768ba0..7eff0e9 main->main），GitHub Pages 自动构建上线 myaishome.com。提交含 js/news-data.js / _draft_news.md / 本 memory.md；未带无关改动。
+- 临时文件（_inject_news.js、news-data.js.bak、_check_draft_tmp.js）均已清理。

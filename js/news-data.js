@@ -7,6 +7,73 @@
  */
 window.AIHomeNews = [
 {
+    "date": "2026-08-14",
+    "display": "8月14日",
+    "weekday": "周五",
+    "items": [
+      {
+        "title": "DeepSeek 开源 Harness 智能体框架，补齐 Vibe Coding 入口",
+        "url": "https://www.nbd.com.cn/articles/2026-08-14/4541621.html",
+        "summary": "8/13晚开源 DeepSeek Harness(DSH) 开发者预览版，一切皆插件，可接代码库自动改码跑测试。",
+        "source": "每日经济新闻"
+      },
+      {
+        "title": "谷歌发布 Gemini 3.7 Flash，主打编程与自主智能体",
+        "url": "https://www.163.com/dy/article/L49E7CRE0550WHYR_pdya11y.html",
+        "summary": "8/13发布，主打编程与自主智能体，输入价降至前代一半，已上线 Gemini Spark。",
+        "source": "网易 / 财闻"
+      },
+      {
+        "title": "Anthropic 估值或破 2 万亿美元，最快 10 月上市",
+        "url": "https://www.163.com/dy/article/L49CRG5O0512B07B.html",
+        "summary": "据投资方人士，最快10月IPO，估值预期达2万亿美元，年化营收增至470亿美元。",
+        "source": "网易 / 每日经济新闻"
+      },
+      {
+        "title": "OpenAI 年内二度换 CRO，加速商业化落地",
+        "url": "https://www.ccidnet.com/AIqqy/1122976.jhtml",
+        "summary": "任命 Dali Rajic 任首席营收官，技术负责人等多名高管离任，周活突破10亿。",
+        "source": "赛迪网"
+      },
+      {
+        "title": "Databricks 完成 50 亿美元融资，估值升至 1900 亿",
+        "url": "https://new.qq.com/rain/a/20260814A047NJ00?refer=cp_1009",
+        "summary": "Coatue、黑石等领投，年化营收破70亿美元，资金投向 Lakebase、Genie 等 Agent 基建。",
+        "source": "腾讯新闻 / 雷递网"
+      },
+      {
+        "title": "AMD 创纪录发债 47.5 亿美元，加码 AI 算力",
+        "url": "https://finance.sina.com.cn/roll/2026-08-14/doc-ininfrty2770554.shtml",
+        "summary": "创芯片制造商发债规模纪录，承诺向 Anthropic 最高投50亿美元，AI 需求持续催融资。",
+        "source": "新浪财经 / 财联社"
+      },
+      {
+        "title": "复旦白泽 Whitzard 登国际 AI 安全榜全球第二",
+        "url": "https://www.toutiao.com/article/7673541928448721443/",
+        "summary": "CyberGym 榜单以91.2%漏洞攻防成功率列全球第二、高校第一，成本不足5000元。",
+        "source": "央广网 / 央视新闻"
+      },
+      {
+        "title": "AI 消费硬件爆发：外骨骼 +458%、眼镜 +151.7%",
+        "url": "https://cj.sina.com.cn/article/norm_detail?url=https%3A%2F%2Ffinance.sina.com.cn%2Froll%2F2026-08-14%2Fdoc-ininfrtu4249949.shtml&finpagefr=w_110",
+        "summary": "央视聚焦 AI+消费加速，上半年智能外骨骼与眼镜网零额分别增458.4%和151.7%。",
+        "source": "央视网 / 新浪财经"
+      },
+      {
+        "title": "京东 Q2 AI 产品成交额增 125%，加速布局机器人",
+        "url": "https://view.inews.qq.com/a/20260814A00H9B00",
+        "summary": "AI眼镜、AIPC等成交额同比增125%，首个 RoboBase 开工，5年布局80余机器人基地。",
+        "source": "智东西 / 腾讯新闻"
+      },
+      {
+        "title": "自变量机器人 1 小时分拣 1816 件，超 Figure AI",
+        "url": "https://www.163.com/dy/article/L48L156C05569XIR.html",
+        "summary": "公开直播创纪录，单台1小时完成1816件分拣，效率超海外 Figure AI 同类测试。",
+        "source": "前沿在线 / 网易"
+      }
+    ]
+  },
+{
     "date": "2026-08-13",
     "display": "8月13日",
     "weekday": "周四",
