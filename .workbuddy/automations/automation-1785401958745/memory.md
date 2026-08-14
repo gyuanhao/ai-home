@@ -111,6 +111,12 @@
 - 流程：10 个候选 URL 全部 curl 校验 200（含 new.qq.com 经 -L 重定向、view.inews.qq.com 内链均稳）；node 校验脚本（写到 scripts/_check_draft_tmp.js 再执行、跑完即删）通过：JSON 合法、摘要 40–56 字全部 ≤60、URL 全 https、块内与 news-data.js 标题查重 0 碰撞、FFFD 扫描 0。
 - 未改动 js/news-data.js，未 git/部署；git status 仅 scripts/_draft_news.md 为 M。
 
+### 2026-08-14 部署（用户触发「部署上线」）
+- 入库：node 脚本解析 scripts/_draft_news.md 的 2026-08-14 day 对象 → 校验（摘要≤60字、URL 全 https、与 138 条历史标题查重 0 碰撞、FFFD 0）→ prepend 进 window.AIHomeNews 数组最前。load 校验：数组 34、首项 2026-08-14、次项 2026-08-13、结构异常 0；git diff 仅插入（无删除，缩进与现有一致）。
+- 提交+推送：git commit fc42b36 + `git push origin main` 成功（7eff0e9..fc42b36 main->main），GitHub → Cloudflare Pages 自动构建上线 myaishome.com。提交含 js/news-data.js / _draft_news.md（已重置为「已发布」占位）/ 本 memory.md；未带无关改动（.workbuddy/memory/2026-08-12.md、2026-08-13.md 保持未提交）。
+- 验证：raw.githubusercontent.com 已含 2026-08-14（源正确，34天）；myaishome.com 直连初读仍为 2026-08-13（边缘缓存），sleep 50s 后 cache-bust 验证首项已为 2026-08-14、total_days=34 → 部署成功。结论同前：上线后边缘缓存约需 1 分钟刷新，验证以 cache-bust 为准。
+- 临时文件（_inject_news.js、news-data.js.bak）已清理。
+
 ### 2026-08-13 部署（用户触发「部署」）
 - 入库：node 脚本解析 scripts/_draft_news.md 的 day 对象 → 校验（摘要≤60字、URL 全 https、与历史标题查重 0 碰撞、FFFD 0）→ prepend 进 window.AIHomeNews 数组最前。new Function 加载校验：总天数 33、首项 2026-08-13、次项 2026-08-12、结构异常 0；git diff 仅 67 行插入、0 删除（缩进与现有完全一致）。
 - 提交+推送：git commit 7eff0e9 + `git push origin main` 成功（c768ba0..7eff0e9 main->main），GitHub Pages 自动构建上线 myaishome.com。提交含 js/news-data.js / _draft_news.md / 本 memory.md；未带无关改动。
