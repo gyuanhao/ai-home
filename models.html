@@ -205,6 +205,18 @@
 </footer>
 
 <script src="js/main.js"></script>
+<script>
+// 支持 ?q= 深链（首页搜索 / 站内搜索跳转直达结果）
+// main.js 在 DOMContentLoaded 里挂监听器，这里也要等 DOMContentLoaded 后再派发事件
+document.addEventListener('DOMContentLoaded', function () {
+    var q = new URLSearchParams(location.search).get('q');
+    var el = document.getElementById('modelSearch');
+    if (q && el) {
+        el.value = q;
+        el.dispatchEvent(new Event('input'));
+    }
+});
+</script>
 <script src="js/cookie-consent.js"></script>
 <script src="js/mobile-nav.js"></script>
 <script src="js/reveal.js"></script>

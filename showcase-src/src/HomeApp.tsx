@@ -3,6 +3,7 @@ import { StaggerReveal } from "./components/ui/stagger-reveal";
 import { HoverCard } from "./components/ui/hover-card";
 import { Magnetic } from "./components/ui/magnetic";
 import { InkLink } from "./components/ui/ink-link";
+import { HomeSearch } from "./components/HomeSearch";
 import {
   Brain,
   Image as ImageIcon,
@@ -14,7 +15,6 @@ import {
   ArrowUpRight,
   Compass,
   Layers,
-  Search,
   Sparkles,
 } from "lucide-react";
 
@@ -229,44 +229,24 @@ export default function App() {
             </div>
           </div>
 
-          {/* Right column: decorative search prompt + organic shapes */}
-          <div className="hidden md:block md:col-span-5 md:col-start-8 relative">
-            <div className="relative mt-8">
+          {/* Right column: working search module + organic shapes */}
+          <div className="md:col-span-5 md:col-start-8 relative md:mt-8">
+            <div className="relative md:mt-8">
               {/* Large organic blob shape */}
               <div
-                className="absolute -top-6 -left-4 w-72 h-72 rounded-full opacity-[0.06]"
+                className="absolute -top-6 -left-4 w-72 h-72 rounded-full opacity-[0.06] pointer-events-none"
                 style={{
                   background: "radial-gradient(circle, #E8542C, transparent 70%)",
                 }}
               />
-              {/* Search-like card, tilted */}
-              <div className="relative rotate-3">
+              {/* Search card, tilted */}
+              <div className="relative rotate-1 md:rotate-3">
                 <div className="rounded-2xl border border-[#E8DFD3] bg-white/60 backdrop-blur-sm p-6 shadow-[0_10px_40px_-10px_rgba(232,84,44,0.10)]">
-                  <div className="flex items-center gap-2 mb-4 text-sm text-[#475569]">
-                    <Search className="w-4 h-4" strokeWidth={1.5} />
-                    站内搜索
-                  </div>
-                  <div className="space-y-2">
-                    {["Kimi", "Claude", "Cursor", "DeepSeek", "AI绘画"].map((tag, i) => (
-                      <span
-                        key={tag}
-                        className="inline-block mr-2 px-3 py-1 rounded-full text-xs font-medium border"
-                        style={{
-                          borderColor: i % 2 === 0 ? "#E8542C33" : "#4A7C5933",
-                          color: i % 2 === 0 ? "#E8542C" : "#4A7C59",
-                        }}
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                  <div className="mt-4 pt-4 border-t border-[#E8DFD3] text-xs text-[#475569]">
-                    热门搜索词，点词直达详情
-                  </div>
+                  <HomeSearch />
                 </div>
               </div>
               {/* Small floating label */}
-              <div className="absolute -bottom-6 -right-2 -rotate-6">
+              <div className="absolute -bottom-6 -right-2 -rotate-6 hidden md:block">
                 <div className="rounded-full bg-[#1A1A1A] text-[#FAF7F2] px-4 py-1.5 text-xs font-medium">
                   不当裁判，只当便利店
                 </div>

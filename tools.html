@@ -208,6 +208,18 @@ const tools = [{"id": "cozel", "name": "Coze（海外）", "nameEn": "Coze Globa
             window.open(card.getAttribute('data-href'), '_blank', 'noopener');
         }
     });
+
+    // 支持 ?q= 深链（首页搜索 / 站内搜索跳转直达结果）
+    (function () {
+        var q = new URLSearchParams(location.search).get('q');
+        if (q) {
+            searchEl.value = q;
+            query = q.trim();
+            searchClear.style.display = query ? 'block' : 'none';
+            render();
+        }
+    })();
+
     render();
 })();
 </script>
