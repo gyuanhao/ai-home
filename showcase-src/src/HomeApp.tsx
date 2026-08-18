@@ -330,8 +330,8 @@ export default function App() {
           </div>
         </div>
 
-        {/* Horizontal scroll row */}
-        <div className="overflow-x-auto scrollbar-hide px-6">
+        {/* Horizontal scroll row — 与上方标题/网格两端对齐 */}
+        <div className="overflow-x-auto scrollbar-hide max-w-6xl mx-auto px-6">
           <div className="flex gap-5 pb-4" style={{ width: "max-content" }}>
             {blogPosts.map((post, i) => (
               <a
