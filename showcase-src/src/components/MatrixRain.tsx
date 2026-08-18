@@ -15,9 +15,12 @@ import { useEffect, useRef } from "react";
 export const MatrixRain = ({
   className,
   colors = ["#E8542C", "#D4A574"],
+  speed = 1,
 }: {
   className?: string;
   colors?: [string, string] | string[];
+  /** 每帧下移步长（字符行数），0.5 = 半速 */
+  speed?: number;
 }) => {
   const wrapRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -67,10 +70,10 @@ export const MatrixRain = ({
       ctx.fillStyle = "rgba(26,26,26,0.12)";
       ctx.fillRect(0, 0, W, H);
       for (let i = 0; i < cols; i++) {
-        const y = drops[i] * FONT;
+        const y = Math.floor(drops[i]) * FONT;
         // 头部：亮纸白，醒目但不刺眼
         drawChar(i * FONT, y, "#FAF7F2", GLYPHS[Math.floor(Math.random() * GLYPHS.length)]);
-        // 尾随 3 个渐隐字符（橙色/沙金交替）
+        // 尾随 3 个渐隐字符（主题色交替）
         for (let j = 1; j <= 3; j++) {
           drawChar(
             i * FONT,
@@ -81,7 +84,7 @@ export const MatrixRain = ({
         }
         // 到底重置
         if (y > H && Math.random() > 0.975) drops[i] = 0;
-        drops[i]++;
+        drops[i] += speed; // speed: 每帧下移步长（0.5 = 半速）
       }
       raf = requestAnimationFrame(step);
     };
@@ -134,7 +137,7 @@ export const MatrixRain = ({
       window.removeEventListener("resize", resize);
       stop();
     };
-  }, []);
+  }, [speed]);
 
   return (
     <div ref={wrapRef} className={"absolute inset-0 pointer-events-none " + (className || "")}>
