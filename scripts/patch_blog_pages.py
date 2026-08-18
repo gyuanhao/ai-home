@@ -40,7 +40,7 @@ def patch_file(path):
     )
 
     # Clarify author
-    html = html.replace('作者：AI家AI户', '作者：gyuanhao（抱走西瓜）/ AI家AI户')
+    html = html.replace('作者：AI家AI户', '作者：抱走西瓜 / AI家AI户')
 
     # Add a core summary section right after the meta line if not present
     if 'class="article-summary"' not in html and '<p style="color:var(--text-secondary); font-size:14px; margin-bottom:24px;">' in html:
