@@ -93,7 +93,7 @@ export default function ModelsApp() {
       </header>
 
       <div className="max-w-6xl mx-auto px-6 pb-6">
-        <div className="relative max-w-xl">
+        <div className="relative max-w-4xl">
           <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-[#475569]" />
           <input
             type="text"
