@@ -150,7 +150,7 @@ export default function ToolsApp() {
         </div>
 
         {/* 分类 chips */}
-        <div className="mt-4 flex gap-2 overflow-x-auto pb-1 scrollbar-hide">
+        <div className="mt-4 flex gap-2 overflow-x-auto pb-2 pr-4 scrollbar-hide">
           <button
             onClick={() => setCat("all")}
             className={`inline-block px-3.5 py-1.5 rounded-full text-xs font-medium border whitespace-nowrap transition-colors ${
