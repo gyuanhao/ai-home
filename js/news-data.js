@@ -7,6 +7,142 @@
  */
 window.AIHomeNews = [
 {
+    "date": "2026-08-18",
+    "display": "8月18日",
+    "weekday": "周二",
+    "items": [
+      {
+        "title": "智象未来发布交互式世界模型 HiDream-O1-World，WBench 登顶",
+        "url": "https://k.sina.com.cn/article_5953740931_162dee08306703v61y.html",
+        "summary": "支持漫游、编辑、交互，一键生成可自由探索的世界，Navi分榜80.9分居首。",
+        "source": "新浪科技"
+      },
+      {
+        "title": "阿里发布 AI 音乐模型 HappyShrimp，一句话生成整首歌",
+        "url": "https://news.qq.com/rain/a/20260817A0C84X00",
+        "summary": "中文名快乐虾米，端到端整曲生成词曲编唱，首日与太合音乐达成战略合作。",
+        "source": "腾讯新闻"
+      },
+      {
+        "title": "支付宝发布国内首个全栈智能体商业底座与 AHA 互联协议",
+        "url": "https://www.163.com/dy/article/L4I7292S05568W0A.html",
+        "summary": "联合千问、华为、OPPO等20余家共建，一次适配即可分发到手机、车机与AI眼镜。",
+        "source": "网易科技"
+      },
+      {
+        "title": "Stripe 逾 70 亿美元收购 AI 模型网关 OpenRouter",
+        "url": "https://www.163.com/dy/article/L4JPMQM20534A4SC.html",
+        "summary": "较5月13亿美元估值涨逾5倍，支付巨头拿下开发者调用400多个模型的入口。",
+        "source": "界面新闻"
+      },
+      {
+        "title": "Anthropic Claude 突发大规模宕机，网页与 Claude Code 受影响",
+        "url": "https://view.inews.qq.com/a/20260817A05RXB00",
+        "summary": "17日凌晨起登录失败、页面空白，状态页标记重大故障，API与Console仍正常。",
+        "source": "太平洋科技"
+      },
+      {
+        "title": "宇树发布「超人」人形机器人，原地跳高 2 米破人类纪录",
+        "url": "https://view.inews.qq.com/a/20260817A07EOX00",
+        "summary": "0.85米腿长跳高2米、极限速度12.66米/秒，研发仅3个多月，机器人板块走高。",
+        "source": "腾讯新闻"
+      },
+      {
+        "title": "梅卡曼德通过港交所聆讯，冲刺「具身眼脑手第一股」",
+        "url": "https://view.inews.qq.com/a/20260817A0B7CX00",
+        "summary": "不造整机只做眼脑手，AI+3D视觉引导组件全球份额约22.1%排名第一。",
+        "source": "腾讯新闻"
+      },
+      {
+        "title": "香港九光发布小睿 G3 人形机器人，可平稳搬运 50 公斤",
+        "url": "https://view.inews.qq.com/a/20260817A0DMLX00",
+        "summary": "香港科学园发布，44套全身力控系统，硬拉超100公斤，主打重载与高危作业。",
+        "source": "腾讯新闻"
+      },
+      {
+        "title": "AI 视频平台 Higgsfield 融资 4 亿美元，估值升至 54 亿",
+        "url": "https://www.163.com/dy/article/L4JMA6GA05562DGT.html",
+        "summary": "DST Global、高盛、英特尔等参投，成立不到两年年化收入已达7亿美元。",
+        "source": "极新"
+      },
+      {
+        "title": "觅蜂科技获中国电信领投数亿元融资，破解具身「数据荒漠」",
+        "url": "https://www.cnstock.com/commonDetail/761197",
+        "summary": "MEgo无本体采集产品已量产，治理平台把人工数据处理效率提升10倍以上。",
+        "source": "上海证券报"
+      }
+    ]
+  },
+
+{
+    "date": "2026-08-17",
+    "display": "8月17日",
+    "weekday": "周一",
+    "items": [
+      {
+        "title": "智谱发布 GLM-5.3，后训练 Scaling 让编程能力跃升约 50%",
+        "url": "https://news.qq.com/rain/a/20260814A0955I00",
+        "summary": "基座不变、靠后训练Scaling，编程较上代提升约50%，两周后开源权重。",
+        "source": "腾讯新闻"
+      },
+      {
+        "title": "阿里开源 Qwen3.8-27B，270 亿参数单卡即可本地部署",
+        "url": "https://new.qq.com/rain/a/20260815A00U2S00?refer=cp_1009",
+        "summary": "270亿参数稠密多模态，家用显卡可跑，原生262K可扩至1M。",
+        "source": "腾讯新闻 / 智东西"
+      },
+      {
+        "title": "OpenAI 推 Ultrafast 模式，GPT-5.6 Sol 推理提速 14 倍",
+        "url": "https://new.qq.com/rain/a/20260817A07OI100?refer=cp_1009",
+        "summary": "借Cerebras算力，GPT-5.6 Sol峰值750 token/s，提速最高14倍。",
+        "source": "腾讯新闻"
+      },
+      {
+        "title": "Anthropic 发布 186 页风险报告，预警智能体互害",
+        "url": "https://view.inews.qq.com/a/20260815A071NO00",
+        "summary": "多智能体实验现互害与隐瞒违规，对齐风险等级上调至较低。",
+        "source": "腾讯新闻 / DeepTech"
+      },
+      {
+        "title": "苹果联合阿里训练国行专属模型，Apple Intelligence 落地在即",
+        "url": "https://news.qq.com/rain/a/20260817A062QC00",
+        "summary": "路透称双方联合训练国行专属模型，数月内随iOS上线。",
+        "source": "腾讯新闻 / 太平洋科技"
+      },
+      {
+        "title": "办公 Agent 走向模型聚合，千问办公/库库AI/WorkBuddy/TRAE 四国杀",
+        "url": "https://www.huxiu.com/article/4883413.html",
+        "summary": "腾讯、字节、阿里、百度办公Agent齐走模型聚合，拼路由。",
+        "source": "虎嗅"
+      },
+      {
+        "title": "Anthropic 拟 60 亿美元收购以色列 AI 公司 Decart",
+        "url": "https://view.inews.qq.com/a/20260816A0877200",
+        "summary": "彭博称洽购约60亿美元，补强芯片效率，IPO前最大并购。",
+        "source": "币界网 / 彭博"
+      },
+      {
+        "title": "小红书开源 dots3-note 生活向大模型，华为昇腾当天适配",
+        "url": "https://new.qq.com/rain/a/20260816A04TE800?refer=cp_1009",
+        "summary": "280B MoE生活向大模型，专注长程Agent，昇腾0 Day适配。",
+        "source": "腾讯新闻 / IT之家"
+      },
+      {
+        "title": "第二届世界人形机器人运动会 8/22 北京开幕",
+        "url": "https://big5.cri.cn/gate/big5/city.cri.cn/20260814/3f0abc9f-4382-4013-8e11-b8daf6790864.html",
+        "summary": "8/22北京冰丝带开赛，2056台机器人、16国666队同台竞技。",
+        "source": "人民网 / 国际在线"
+      },
+      {
+        "title": "张一鸣明确反对把蒸馏当捷径，字节坚定大模型自研",
+        "url": "https://www.163.com/dy/article/L4DC181G05561FZY.html",
+        "summary": "张一鸣Seed全员会表态拒走蒸馏捷径，字节坚定自研。",
+        "source": "网易 / 文伯虎财经"
+      }
+    ]
+  },
+
+{
     "date": "2026-08-14",
     "display": "8月14日",
     "weekday": "周五",

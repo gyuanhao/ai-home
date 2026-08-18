@@ -129,3 +129,19 @@
 - 去重/避坑：跳过「智能体个人信息保护自律公约」(实为7/13旧闻)、「Codex Goal模式」(5月changelog非本周)、DeepSeek峰谷定价/Harness(8/7+8/14已入库)、英伟达5000亿/Meta Muse Glimmer/Grok 4.6(8/11–8/13已入库)；与 news-data.js 148 条标题查重 0 碰撞。
 - 流程：10 个候选 URL 全部 curl 校验（加浏览器UA后均 200；people.com.cn 仅沙箱出口拦截、真实可访问，保留）；node 校验脚本通过：JSON 合法、摘要 31–57 字全部 ≤60、URL 全 https、与历史标题查重 0 碰撞、FFFD 扫描 0。临时脚本已删除。
 - 未改动 js/news-data.js，未 git/部署；仅覆盖 scripts/_draft_news.md。
+
+## 2026-08-18 (周二) — 第十五次运行
+- 产出草稿：scripts/_draft_news.md（10 条，日期 2026-08-18，display「8月18日」，weekday「周二」）。
+- **入库缺口未收敛**：news-data.js 首项仍为 2026-08-14（148 条标题 / 34 天），8/15–8/17 均未入库。本次按规则覆盖了上一版 8/17 草稿，故在草稿内新增「本次已跳过」表格，把 8/17 那批 10 条选题逐条登记，防止后续重复；若要补 8/17，需另行恢复。
+- 选题主线（8/17–8/18 新增，10 条）：智象未来 HiDream-O1-World 交互式世界模型 WBench Navi 登顶 80.9(新浪科技)、阿里 AI 音乐模型 HappyShrimp 快乐虾米+太合音乐(腾讯新闻)、支付宝全栈智能体商业底座+AHA 跨端协议(网易科技)、Stripe 逾 70 亿美元收购 OpenRouter(界面新闻)、Claude 大规模宕机(太平洋科技)、宇树「超人」原地跳高 2 米破人类纪录(腾讯新闻)、梅卡曼德通过港交所聆讯(腾讯新闻)、香港九光小睿 G3 搬运 50 公斤(腾讯新闻)、Higgsfield 4 亿美元融资估值 54 亿(极新)、觅蜂科技中国电信领投数亿元(上海证券报)。
+- 去重/避坑：跳过 GLM-5.3、Qwen3.8-27B、OpenAI Ultrafast、Anthropic 186 页报告、办公 Agent 四国杀等（8/17 草稿已收）；DeepSeek 峰谷定价（8/7 入库）、Anthropic 冲刺 2 万亿 IPO（8/14 入库）、Claude 隐形水印（已入库）；Qwen 下载破 30 亿次与 8/17 Qwen3.8 条目重叠亦跳过。
+- 流程经验：10 个 URL 全部 curl（-L + 浏览器 UA）返回 200，含 view.inews.qq.com / news.qq.com / 163.com / k.sina.com.cn / cnstock.com。当日聚合早报（163 极新、界面 AI 早报）可作源，但注意**不要让两条 item 指向同一篇聚合稿**，需为每条另找专稿 URL。
+- 校验：node 临时脚本（scripts/_check_draft_tmp.js，跑完即删）通过——JSON 合法、字段顺序与 window.AIHomeNews 一致、摘要 34–41 字全部 ≤60、URL 全 https 且无重复、与 148 条历史标题 0 碰撞、FFFD 0。写文件时曾出现 1 处 FFFD（"提"字被替换），已 grep 定位并修正——今后写完必须扫一次 FFFD。
+- 未改动 js/news-data.js 或其它文件，未执行 git、未部署。
+
+### 2026-08-18 合并上线（用户追加「8/17+8/18 一起上线」）
+- 恢复被 8/18 运行覆盖的 8/17（10条）+ 今日 8/18（10条）合并 prepend 进 window.AIHomeNews 数组最前（8/18 置顶、8/17 次之，其后接原 8/14）。注入脚本初版缺数组元素逗号导致 SyntaxError，改 fmtDay 末尾加 `},` 重跑后 `node --check` 通过。
+- 完整校验：总天数 36、首项 2026-08-18 / 次项 2026-08-17 / 三序 2026-08-14、日期非递增、字段顺序一致、标题全局唯一、FFFD 0。已知历史缺陷（1 个 http URL=2026-08-04 京东头盔、14 条摘要>60 字属 2026-07-22~08-05）非本次引入、未改。
+- 提交+推送：git commit + `git push origin main`，GitHub → Cloudflare Pages 自动构建上线 myaishome.com。提交含 js/news-data.js / _draft_news.md（重置「已发布」占位）/ 本 memory.md / 当日工作日志；临时校验脚本已删。
+- 验证：raw.githubusercontent.com 含 2026-08-18；myaishome.com cache-bust 确认首项 2026-08-18、total_days=36 → 部署成功。
+- 经验：每日 09:00 自动化会直接覆盖工作区草稿；若存在未入库的多天积压（如 8/15–8/17 缺口），应在下次运行前完成部署，否则较早那天的草稿会被静默覆盖、且永不进 news-data.js。
