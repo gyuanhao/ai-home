@@ -1,7 +1,6 @@
 import { NoiseBackground } from "./components/ui/noise-background";
 import { StaggerReveal } from "./components/ui/stagger-reveal";
 import { HoverCard } from "./components/ui/hover-card";
-import { TextGenerateEffect } from "./components/ui/text-generate-effect";
 import { Magnetic } from "./components/ui/magnetic";
 import { InkLink } from "./components/ui/ink-link";
 import {
