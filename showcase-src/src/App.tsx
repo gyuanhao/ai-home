@@ -7,6 +7,7 @@ import { GlowingEffect } from "./components/ui/glowing-effect";
 import { Magnetic } from "./components/ui/magnetic";
 import { MovingBorder } from "./components/ui/moving-border";
 import { FloatingNavbar } from "./components/ui/floating-navbar";
+import { MatrixRain } from "./components/MatrixRain";
 import {
   Brain,
   Image as ImageIcon,
@@ -90,6 +91,8 @@ export default function App() {
       <section className="relative min-h-screen w-full">
         <AuroraBackground className="absolute inset-0">
           <Spotlight className="opacity-100" fill="rgba(14,165,233,0.18)" />
+          {/* Matrix rain in hero — sky-blue tint, subtle underlay */}
+          <MatrixRain colors={["#0ea5e9", "#38bdf8"]} className="opacity-35" />
           <div className="relative z-10 flex flex-col items-center text-center px-6 pt-32 pb-20 max-w-4xl mx-auto">
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs text-neutral-300">
               <span className="w-1.5 h-1.5 rounded-full bg-primary" />

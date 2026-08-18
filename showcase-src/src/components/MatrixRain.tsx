@@ -2,8 +2,9 @@
 import { useEffect, useRef } from "react";
 
 /**
- * MatrixRain — 黑客帝国数字雨（首页深色彩蛋带局部背景）
- * 设计：0/1 二进制 + 少量汉字点缀（AI/侠/道…），柿子橙+沙金双色拖尾
+ * MatrixRain — 黑客帝国数字雨（首页深色彩蛋带局部背景 / 展示馆 Hero）
+ * 设计：0/1 二进制 + 少量汉字点缀（AI/侠/道…），默认柿子橙+沙金双色拖尾
+ * 可通过 colors prop 换主题色（如展示馆天蓝 #0ea5e9）
  * 性能：
  *  - IntersectionObserver 离开视口自动暂停
  *  - visibilitychange 切后台暂停
@@ -11,7 +12,13 @@ import { useEffect, useRef } from "react";
  *  - devicePixelRatio 上限 2，移动端自动降流
  * 零依赖，纯 canvas。
  */
-export const MatrixRain = ({ className }: { className?: string }) => {
+export const MatrixRain = ({
+  className,
+  colors = ["#E8542C", "#D4A574"],
+}: {
+  className?: string;
+  colors?: [string, string] | string[];
+}) => {
   const wrapRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -25,7 +32,7 @@ export const MatrixRain = ({ className }: { className?: string }) => {
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const isMobile = window.innerWidth < 640;
     const FONT = isMobile ? 13 : 16;
-    const COLORS = ["#E8542C", "#D4A574"]; // 柿子橙 + 沙金
+    const COLORS = colors.length >= 2 ? colors : [colors[0] || "#E8542C", "#D4A574"];
     const GLYPHS = "0101010101AI江湖侠道悟算";
 
     let W = 0;
