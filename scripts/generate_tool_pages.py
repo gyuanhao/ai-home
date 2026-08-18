@@ -133,6 +133,17 @@ __SIDEBAR__
     <div class="model-grid" id="toolGrid"></div>
 </div>
 
+<div class="container" style="max-width:860px;">
+    <section class="about-section">
+        <h2>关于工具库的常见问题</h2>
+        <div class="faq-list">
+            <details class="faq"><summary>Q：AI家AI户 工具库收录哪些类型的工具？</summary><p>A：覆盖对话、图像、视频、音频、编程、写作、设计、办公、搜索、Agent、翻译、浏览器插件共 12 类主流 AI 工具，每个都标注价格、来源与更新日期。</p></details>
+            <details class="faq"><summary>Q：工具信息多久更新一次？</summary><p>A：数据来自各产品官网与公开文档，最后更新于 __UPDATED__，价格或功能变动以官方为准。</p></details>
+            <details class="faq"><summary>Q：这么多工具怎么选？</summary><p>A：用顶部搜索框按名称 / 标签筛选，或用分类按钮缩小范围；点「详情」看功能、优缺点与同类替代品对比后再决定。</p></details>
+        </div>
+    </section>
+</div>
+
 <footer class="footer">
     <p style="margin-top:8px;font-size:13px;color:var(--text-secondary);"><a href="privacy.html">隐私政策</a> · <a href="terms.html">服务条款</a> · <a href="disclaimer.html">免责声明</a> · <a href="contact.html">联系我们</a> · <a href="blog/">博客</a> · <a href="about.html">关于</a></p>
     <p style="margin-top:6px;font-size:13px;color:var(--text-secondary);">关注我们：
@@ -232,7 +243,7 @@ def gen_listing(tools):
     updated = max((t.get('lastUpdated', '') for t in tools), default='')
     html = (LISTING_TPL
             .replace('__SIDEBAR__', SIDEBAR.replace('__LOGO__', LOGO))
-            .replace('__CANON__', f'{SITE}/tools.html')
+            .replace('__CANON__', f'{SITE}/tools')
             .replace('__COUNT__', str(len(tools)))
             .replace('__UPDATED__', updated)
             .replace('__TOOLS_JSON__', tools_json)

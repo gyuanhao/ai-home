@@ -7,6 +7,246 @@ window.AIHome = window.AIHome || {};
 
 AIHome.NEWS = [
   {
+    "title": "DeepSeek 开源 Harness 智能体框架，补齐 Vibe Coding 入口",
+    "url": "https://www.nbd.com.cn/articles/2026-08-14/4541621.html",
+    "date": "08-14",
+    "source": "每日经济新闻"
+  },
+  {
+    "title": "谷歌发布 Gemini 3.7 Flash，主打编程与自主智能体",
+    "url": "https://www.163.com/dy/article/L49E7CRE0550WHYR_pdya11y.html",
+    "date": "08-14",
+    "source": "网易 / 财闻"
+  },
+  {
+    "title": "Anthropic 估值或破 2 万亿美元，最快 10 月上市",
+    "url": "https://www.163.com/dy/article/L49CRG5O0512B07B.html",
+    "date": "08-14",
+    "source": "网易 / 每日经济新闻"
+  },
+  {
+    "title": "OpenAI 年内二度换 CRO，加速商业化落地",
+    "url": "https://www.ccidnet.com/AIqqy/1122976.jhtml",
+    "date": "08-14",
+    "source": "赛迪网"
+  },
+  {
+    "title": "Databricks 完成 50 亿美元融资，估值升至 1900 亿",
+    "url": "https://new.qq.com/rain/a/20260814A047NJ00?refer=cp_1009",
+    "date": "08-14",
+    "source": "腾讯新闻 / 雷递网"
+  },
+  {
+    "title": "AMD 创纪录发债 47.5 亿美元，加码 AI 算力",
+    "url": "https://finance.sina.com.cn/roll/2026-08-14/doc-ininfrty2770554.shtml",
+    "date": "08-14",
+    "source": "新浪财经 / 财联社"
+  },
+  {
+    "title": "复旦白泽 Whitzard 登国际 AI 安全榜全球第二",
+    "url": "https://www.toutiao.com/article/7673541928448721443/",
+    "date": "08-14",
+    "source": "央广网 / 央视新闻"
+  },
+  {
+    "title": "AI 消费硬件爆发：外骨骼 +458%、眼镜 +151.7%",
+    "url": "https://cj.sina.com.cn/article/norm_detail?url=https%3A%2F%2Ffinance.sina.com.cn%2Froll%2F2026-08-14%2Fdoc-ininfrtu4249949.shtml&finpagefr=w_110",
+    "date": "08-14",
+    "source": "央视网 / 新浪财经"
+  },
+  {
+    "title": "京东 Q2 AI 产品成交额增 125%，加速布局机器人",
+    "url": "https://view.inews.qq.com/a/20260814A00H9B00",
+    "date": "08-14",
+    "source": "智东西 / 腾讯新闻"
+  },
+  {
+    "title": "自变量机器人 1 小时分拣 1816 件，超 Figure AI",
+    "url": "https://www.163.com/dy/article/L48L156C05569XIR.html",
+    "date": "08-14",
+    "source": "前沿在线 / 网易"
+  },
+  {
+    "title": "DeepSeek V4 Pro 正式版上线，多项 Agent 测试逼近 Claude Fable 5",
+    "url": "https://new.qq.com/rain/a/20260813A047OR00?refer=cp_1009",
+    "date": "08-13",
+    "source": "腾讯新闻"
+  },
+  {
+    "title": "马斯克发布 Grok 4.6，主打长程智能体与复杂编程",
+    "url": "https://www.163.com/dy/article/L46B1EK905568W0A.html",
+    "date": "08-13",
+    "source": "新浪财经"
+  },
+  {
+    "title": "腾讯 Q2 资本开支暴增 176%，AI 投入激进致现金流转负",
+    "url": "https://finance.sina.com.cn/stock/hkstock/hkstocknews/2026-08-13/doc-inincnuy3396808.shtml",
+    "date": "08-13",
+    "source": "新浪财经"
+  },
+  {
+    "title": "谷歌发布 Pixel 11 系列，Gemini 可代订餐厅与叫车",
+    "url": "https://www.163.com/dy/article/L4603BNP05568W0A.html",
+    "date": "08-13",
+    "source": "新浪财经"
+  },
+  {
+    "title": "微软推出 MAI-Code-1.1-Flash 编程模型，价格降至初代 1/4",
+    "url": "https://so.html5.qq.com/page/real/search_news?docid=70000021_1376a7bf8c706852",
+    "date": "08-13",
+    "source": "IT之家"
+  },
+  {
+    "title": "阿里云灵骏真武 M890 超节点实例上线，乌兰察布首发",
+    "url": "https://www.163.com/dy/article/L44IA83E0514R9OJ.html",
+    "date": "08-13",
+    "source": "环球网"
+  },
+  {
+    "title": "Anthropic 与 Redwood 发布概念推理指数 CRI",
+    "url": "https://alignment.anthropic.com/2026/conceptual-reasoning-index/",
+    "date": "08-13",
+    "source": "Anthropic"
+  },
+  {
+    "title": "白宫拟将前沿开放模型纳入发布前安全测试框架",
+    "url": "https://www.163.com/dy/article/L46SLO2305562QFT.html",
+    "date": "08-13",
+    "source": "WIRED / 未尽研究"
+  },
+  {
+    "title": "字节新设「AI数据与安全」一级部门，与 Seed 平行",
+    "url": "https://tech.ifeng.com/c/8vVRX2ReKOi",
+    "date": "08-13",
+    "source": "凤凰网科技"
+  },
+  {
+    "title": "美银启动 2500 亿美元 AI 基础设施融资计划",
+    "url": "https://www.ibtimes.sg/bank-america-launches-250-billion-us-infrastructure-financing-initiative-ai-boom-92020",
+    "date": "08-13",
+    "source": "路透 / 国际财经时报"
+  },
+  {
+    "title": "英伟达研发万亿参数开源模型 Nemotron 4，剑指顶级开源阵营",
+    "url": "https://www.sohu.com/a/1061728509_121400326",
+    "date": "08-12",
+    "source": "钛媒体"
+  },
+  {
+    "title": "面壁智能启动IPO辅导，冲刺「端侧大模型第一股」",
+    "url": "https://www.eeo.com.cn/2026/0812/994925.shtml",
+    "date": "08-12",
+    "source": "经济观察网"
+  },
+  {
+    "title": "智源研究院发布AREX自主研究智能体，权重已开源",
+    "url": "https://so.html5.qq.com/page/real/search_news?docid=70000021_3546a7b800872052",
+    "date": "08-12",
+    "source": "央广网"
+  },
+  {
+    "title": "芝商所拟10月推出算力期货，AI算力迈向大宗商品化",
+    "url": "https://news.qq.com/rain/a/20260812A01G7300",
+    "date": "08-12",
+    "source": "财联社"
+  },
+  {
+    "title": "Anthropic与矿企Riot签91亿美元20年算力大单",
+    "url": "https://www.chinastarmarket.cn/detail/2451108",
+    "date": "08-12",
+    "source": "财联社"
+  },
+  {
+    "title": "戴盟机器人完成数亿元融资，蚂蚁集团领投",
+    "url": "https://www.163.com/dy/article/L42S6ICL0512D3VJ.html",
+    "date": "08-12",
+    "source": "新京报"
+  },
+  {
+    "title": "上海印发「十五五」软件规划，推动自主芯片与大模型融合",
+    "url": "https://new.qq.com/rain/a/20260812A03B0Y00",
+    "date": "08-12",
+    "source": "每日经济新闻"
+  },
+  {
+    "title": "OpenAI完成70亿美元员工股份回购，估值维持8520亿",
+    "url": "https://www.163.com/dy/article/L439PA6T0550B1DU.html",
+    "date": "08-12",
+    "source": "科创板日报"
+  },
+  {
+    "title": "Anthropic为Claude输出加隐形水印，响应欧盟AI法案",
+    "url": "https://new.qq.com/rain/a/20260812A01AGM00",
+    "date": "08-12",
+    "source": "腾讯新闻"
+  },
+  {
+    "title": "Gartner：2026年AI推理支出将首超模型训练",
+    "url": "https://www.163.com/dy/article/L44975UC05562DGT.html",
+    "date": "08-12",
+    "source": "极新早报"
+  },
+  {
+    "title": "英伟达联手六大华尔街巨头，设算力融资平台筹逾5000亿美元",
+    "url": "https://view.inews.qq.com/a/20260811A01QFA00",
+    "date": "08-11",
+    "source": "腾讯新闻（财联社）"
+  },
+  {
+    "title": "Meta重回开源：发布300亿参数Agent模型Muse Glimmer，单张显卡可本地运行",
+    "url": "https://www.36kr.com/p/3934265198345348",
+    "date": "08-11",
+    "source": "36氪（爱范儿）"
+  },
+  {
+    "title": "Anthropic取消涨价50%计划，永久锁定Claude Sonnet 5发布价",
+    "url": "https://news.qq.com/rain/a/20260811A020EZ00",
+    "date": "08-11",
+    "source": "腾讯新闻（华尔街见闻）"
+  },
+  {
+    "title": "Claude Code将于8月14日默认开启自动模式，额外token费用官方承担",
+    "url": "https://view.inews.qq.com/a/20260810A06CCA00",
+    "date": "08-11",
+    "source": "腾讯新闻（量子位）"
+  },
+  {
+    "title": "上半年中国厂商占全球人形机器人出货量超97%，智元、宇树合计约75%",
+    "url": "https://news.sina.cn/2026-08-11/detail-inimwuhv7728838.d.html",
+    "date": "08-11",
+    "source": "新浪（环球时报）"
+  },
+  {
+    "title": "宇树科技网上最终中签率0.0181%，创科创板历史新低",
+    "url": "https://www.163.com/dy/article/L41GNU0K053469RG.html",
+    "date": "08-11",
+    "source": "网易（证券时报）"
+  },
+  {
+    "title": "阿里千问开放平台上线，覆盖手机、PC与AI眼镜三类终端",
+    "url": "https://t.cj.sina.com.cn/articles/view/1644119190/61ff449602002mnxs",
+    "date": "08-11",
+    "source": "新浪财经（时代周报）"
+  },
+  {
+    "title": "微信灰度上线朋友圈「AI帮写」，可由AI助手小微生成文案",
+    "url": "https://www.163.com/dy/article/L41NU00S0511CSAO.html",
+    "date": "08-11",
+    "source": "网易（爱范儿）"
+  },
+  {
+    "title": "微软下一代AI芯片Maia 300最快9月亮相，洽谈台积电2027年交付超30万颗",
+    "url": "https://view.inews.qq.com/a/20260810A0CVFY00",
+    "date": "08-11",
+    "source": "腾讯新闻（IT之家）"
+  },
+  {
+    "title": "OpenAI发布GPT-5.6-Cyber，Daybreak网络安全计划拆分红蓝双层",
+    "url": "https://www.163.com/dy/article/L41NI21K0511BLFD.html",
+    "date": "08-11",
+    "source": "网易（cnBeta）"
+  },
+  {
     "title": "A股迎「人形机器人第一股」，宇树科技今日启动网上申购",
     "url": "https://www.stcn.com/article/detail/4065944.html",
     "date": "08-10",

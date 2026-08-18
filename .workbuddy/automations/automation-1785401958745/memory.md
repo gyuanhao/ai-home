@@ -121,3 +121,11 @@
 - 入库：node 脚本解析 scripts/_draft_news.md 的 day 对象 → 校验（摘要≤60字、URL 全 https、与历史标题查重 0 碰撞、FFFD 0）→ prepend 进 window.AIHomeNews 数组最前。new Function 加载校验：总天数 33、首项 2026-08-13、次项 2026-08-12、结构异常 0；git diff 仅 67 行插入、0 删除（缩进与现有完全一致）。
 - 提交+推送：git commit 7eff0e9 + `git push origin main` 成功（c768ba0..7eff0e9 main->main），GitHub Pages 自动构建上线 myaishome.com。提交含 js/news-data.js / _draft_news.md / 本 memory.md；未带无关改动。
 - 临时文件（_inject_news.js、news-data.js.bak、_check_draft_tmp.js）均已清理。
+
+## 2026-08-17 (周一) — 第十四次运行
+- 产出草稿：scripts/_draft_news.md（10 条，日期 2026-08-17，display「8月17日」，weekday「周一」）。
+- **缺口提示**：news-data.js 当前首项仍为 2026-08-14，且 8/15–8/16 自动化未运行；本草稿收录 8/14–8/17 期间尚未入库的重要资讯（含周末补录），并在开头注明按日期顺序 prepend。
+- 选题主线：智谱 GLM-5.3 后训练Scaling编程+50%(腾讯新闻)、阿里开源 Qwen3.8-27B 单卡可跑(网易)、OpenAI Ultrafast 提速14倍(腾讯新闻/IT之家)、Anthropic 186页风险报告预警智能体互害(腾讯新闻)、苹果联合阿里训国行专属模型(腾讯新闻/路透)、办公Agent模型聚合"四国杀"(虎嗅)、Anthropic 拟60亿收购 Decart(腾讯新闻/彭博)、小红书开源 dots3-note+华为昇腾当天适配(凤凰网)、第二届世界人形机器人运动会8/22北京开幕(人民网)、张一鸣反对蒸馏字节坚定自研(腾讯新闻)。
+- 去重/避坑：跳过「智能体个人信息保护自律公约」(实为7/13旧闻)、「Codex Goal模式」(5月changelog非本周)、DeepSeek峰谷定价/Harness(8/7+8/14已入库)、英伟达5000亿/Meta Muse Glimmer/Grok 4.6(8/11–8/13已入库)；与 news-data.js 148 条标题查重 0 碰撞。
+- 流程：10 个候选 URL 全部 curl 校验（加浏览器UA后均 200；people.com.cn 仅沙箱出口拦截、真实可访问，保留）；node 校验脚本通过：JSON 合法、摘要 31–57 字全部 ≤60、URL 全 https、与历史标题查重 0 碰撞、FFFD 扫描 0。临时脚本已删除。
+- 未改动 js/news-data.js，未 git/部署；仅覆盖 scripts/_draft_news.md。

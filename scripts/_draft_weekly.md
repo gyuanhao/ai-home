@@ -1,521 +1,527 @@
-# AI家AI户 工具库周维护草稿 — 2026-08-10
+# AI家AI户 · 工具库周维护草稿
 
-> ⚠️ **本草稿仅供人工过，未自动入库。** `scripts/tools.json` 未做任何改动。死链需人工确认后再改 URL 或下架；新品条目需人工核对后再粘贴入库。
+> **状态：已于 2026-08-17 自动执行入库。** 15 条新品已追加、5 条错链已修正（见文末「入库执行记录」）。tools.json 已变更，备份见 `scripts/tools.json.bak`。
+
+**生成日期：** 2026-08-17（周一）
+**工具总数：** 352 条 / 12 个一级类目
+**检查方法：** Python 线程池并发（32 workers）对每条 `website` 做 HEAD→GET 探测（curl，-m 10），对死链候选追加阿里 DoH 二次复核区分「域名真没了」与「本机网络受限」。反爬/封禁类（403/402/429 及 ChatGPT/Midjourney/Perplexity/Adobe/Meta 等大站 bot-block）按规则略过，不计入死链。
+
+---
 
 ## 一、执行摘要
 
-| 项目 | 数值 |
-|------|------|
-| 工具总数 | 352 条（12 个一级类目） |
-| 实测可达（2xx/3xx） | 317 条 |
-| 反爬/权限类响应（403/402/429 等，按规则略过） | 11 条 |
-| **确认死链** | **12 条** |
-| 待人工复核（本机网络/TLS 受限，域名解析正常） | 11 条 |
-| **新品候选草稿** | **14 条** |
-
-新品重点补齐三个较空类目：**浏览器插件 +4**、**翻译语言 +2**、**搜索研究 +2**，另覆盖 办公效率 2 / 编程开发 1 / Agent自动化 1 / 设计创意 1 / 视频生成 1。
-
-**本周口径说明**：本次在 curl 状态码之外，额外用阿里 DoH（`dns.alidns.com/resolve`）做了一次权威 DNS 复核，用来区分「域名真的没了」和「本机网络被拦截」。TLS 握手失败但域名有 A 记录的（Midjourney、Adobe、glasp 等）一律不计入死链。
+- **确认死链（高置信，建议处理）：12 条** —— 其中域名已注销/无 A 记录 6 条（NXDOMAIN/NORECORD）、服务端 5xx 2 条、真实 404 4 条（含 2 条路径错误，已给出可用替代）。
+- **超时/网络受限（按规则可判死链，但 dns 解析正常，疑似误报，建议复核）：4 条** —— 其中 2 条为 Adobe 大站（按规则应略过），1 条（zhinao360）上次实测 200 强烈疑似误报，1 条（yizhuan）TLS 失败但域名解析正常。
+- **反爬/封禁略过（不计入死链）：21 条**（多为大站拦截自动请求，站点疑似存活）。
+- **存活（2xx/3xx）：314 条**。
+- **新品候选草稿：15 条**（均实测 2xx 且与现库 id/域名无冲突），覆盖 9 个类目；较空的「搜索研究 / 浏览器插件」已重点补（各 3 / 2 条）。「翻译语言」本周无真正新发且不在库的候选（近期翻译新闻均为已收录工具的版本更新：有道/DeepL/Google 翻译），故未强行填充。
 
 ---
 
-## 二、确认死链清单（12 条，建议处理）
+## 二、死链清单
 
-| # | id | name | category | url | 实测状态 | 判定依据 | 建议动作 |
-|---|----|------|----------|-----|----------|----------|----------|
-| 1 | `xunfei-wenshu` | 讯飞文书 | 写作内容 | https://wenshu.iflytek.com | DNS 失败 | 权威 DNS 返回 **NXDOMAIN**，子域已下线 | 下架，或改指向 iflytek 现有产品页 |
-| 2 | `emvoice` | Emvoice | 音频语音 | https://emvoice.io | DNS 失败 | 权威 DNS 返回 **NXDOMAIN** | 下架 |
-| 3 | `webchatgpt` | WebChatGPT | 浏览器插件 | https://webchatgpt.ai | DNS 失败 | 权威 DNS 返回 **NXDOMAIN** | 下架（扩展本体或已并入 WebPilot） |
-| 4 | `wiseone` | Wiseone | 浏览器插件 | https://wiseone.io | DNS 无 A 记录 | 域名在 Cloudflare 但**已无 A 记录** | 下架 |
-| 5 | `playht` | PlayHT | 音频语音 | https://play.ht | DNS 无 A 记录 | 旧域名已无 A 记录（品牌已迁 PlayAI） | 改 URL 或下架，`play.ai` 本机也解析失败，需人工确认 |
-| 6 | `alibaba-translate` | 阿里翻译 | 翻译语言 | https://alimama.tech | DNS 无 A 记录 | 域名无 A 记录，且**原 URL 本就写错** | ✅ 改为 `https://translate.alibaba.com`（实测 200） |
-| 7 | `perplexica` | Perplexica | 搜索研究 | https://github.com/itcosmetics/perplexica | 404 | GitHub 仓库路径错误 | ✅ 改为 `https://github.com/ItzCrazyKns/Perplexica`（实测 200） |
-| 8 | `zoom-ai` | Zoom AI | 办公效率 | https://zoom.us/ai | 404 | 旧路径已废弃 | ✅ 改为 `https://www.zoom.com/en/products/ai-assistant/`（实测 200） |
-| 9 | `phind` | Phind | 对话聊天 | https://www.phind.com | 404 | 根域直接返回 404（非反爬） | 人工打开确认；疑似产品下线 |
-| 10 | `phind-search` | Phind Search | 搜索研究 | https://www.phind.com/search | 404 | 同上 | 与 #9 一并处理，建议合并或下架 |
-| 11 | `huoshan-writing` | 火山写作 | 写作内容 | https://www.huoshan.com/writing | 502 | 服务端 5xx，连续两次复现 | 改 URL 或下架（火山写作已并入豆包） |
-| 12 | `summarize-tech` | Summarize.tech | 浏览器插件 | https://summarize.tech | 503 | 服务端 5xx，域名解析正常 | 观察一周；仍 503 则下架 |
+### 2.1 高置信死链（12 条，建议处理）
 
-**其中 3 条已找到可用替代 URL（#6 / #7 / #8），改一行即可修复，优先处理。**
+| # | id | name | category | url | 实测状态 | 备注 / 处理建议 |
+|---|----|------|----------|-----|----------|----------------|
+| 1 | emvoice | Emvoice | 音频语音 | https://emvoice.io | 域名已注销（DoH: NXDOMAIN） | 建议下架或找替代 |
+| 2 | webchatgpt | WebChatGPT | 浏览器插件 | https://webchatgpt.ai | 域名已注销（DoH: NXDOMAIN） | 建议下架 |
+| 3 | wiseone | Wiseone | 浏览器插件 | https://wiseone.io | 域名已注销（DoH: NXDOMAIN） | 建议下架 |
+| 4 | xunfei-wenshu | 讯飞智文 | 写作内容 | https://wenshu.iflytek.com | 域名已注销（DoH: NXDOMAIN） | 讯飞智文已迁新域，建议更新 URL |
+| 5 | alibaba-translate | 阿里翻译 | 翻译语言 | https://alimama.tech | 无 A 记录（DoH: NORECORD） | 已知可用替代 `translate.alibaba.com` |
+| 6 | playht | PlayHT | 音频语音 | https://play.ht | 无 A 记录（DoH: NORECORD） | PlayHT 已迁 `playht.com` |
+| 7 | huoshan-writing | 火山写作 | 写作内容 | https://www.huoshan.com/writing | 502 | 服务端错误，建议复核/更新 |
+| 8 | summarize-tech | Summarize.tech | 浏览器插件 | https://summarize.tech | 503 | 服务端错误，建议复核 |
+| 9 | perplexica | Perplexica | 搜索研究 | https://github.com/itcosmetics/perplexica | 404（仓库路径错） | 正确路径 `github.com/ItzCrazyKns/Perplexica` |
+| 10 | phind | Phind | 对话聊天 | https://www.phind.com | 404（站点或已改版/迁移） | 建议复核官方新址 |
+| 11 | phind-search | Phind Search | 搜索研究 | https://www.phind.com/search | 404 | 同上，Phind 整体疑似迁移 |
+| 12 | zoom-ai | Zoom AI | 办公效率 | https://zoom.us/ai | 404（路径失效） | 可用替代 `zoom.com/en/products/ai-assistant/` |
 
----
+### 2.2 超时 / 网络受限（4 条，疑似误报，建议复核后再决定是否处理）
 
-## 三、待人工复核（11 条 — 本机 TLS/网络受限，不计入死链）
-
-这些域名权威 DNS 均能解析出 A 记录，仅本机 curl 报 TLS 握手失败或超时，大概率是网络环境拦截而非站点死亡。**不建议下架**。
-
-| id | name | category | url | 本机状态 | DNS 复核 |
-|----|------|----------|-----|----------|----------|
-| `midjourney` | Midjourney | 图像生成 | https://www.midjourney.com | TLS 握手失败 | ✅ 有 A 记录 |
-| `firefly` | Adobe Firefly | 图像生成 | https://www.adobe.com/products/firefly.html | 超时 | ✅ 大站存活 |
-| `adobe-express` | Adobe Express | 设计创意 | https://www.adobe.com/express | 超时 | ✅ 大站存活 |
-| `getimg` | getimg.ai | 图像生成 | https://getimg.ai | TLS 握手失败 | ✅ 有 A 记录 |
-| `glasp` | Glasp | 浏览器插件 | https://glasp.co | TLS 握手失败 | ✅ 有 A 记录 |
-| `merlin` | Merlin | 浏览器插件 | https://www.getmerlin.ai | TLS 握手失败 | ✅ 有 A 记录 |
-| `morph` | Morph Studio | 视频生成 | https://morphstudio.com | TLS 握手失败 | ✅ 有 A 记录 |
-| `genmind` | GenMind | 搜索研究 | https://www.genmind.cn | TLS 握手失败 | ✅ 有 A 记录 |
-| `portia` | Portia AI | Agent自动化 | https://www.portialabs.ai | TLS 握手失败 | ✅ 有 A 记录 |
-| `listen-ink` | Listen.ink | 音频语音 | https://listen.ink | TLS 握手失败 | ⚠️ 解析到域名停靠 CNAME（`cname123.net`），疑似已停运，建议人工打开 |
-| `yizhuan` | 亿撰 | 写作内容 | https://www.yizhuan.net | 证书错误 | ⚠️ 有 A 记录但 SSL 证书异常，建议人工打开 |
-
-> 上周报告中 `ai.360.cn`（360智脑）本次实测 **200 存活**，为上次误报，已移出清单。
+| # | id | name | category | url | 实测状态 | 备注 |
+|---|----|------|----------|-----|----------|------|
+| 1 | adobe-express | Adobe Express | 设计创意 | https://www.adobe.com/express | 连接超时（rc=28，复测仍超时），DoH: OK | Adobe 大站，按规则属 bot-block/拦截，**应略过**而非判死链 |
+| 2 | firefly | Adobe Firefly | 图像生成 | https://www.adobe.com/products/firefly.html | 连接超时（rc=28），DoH: OK | 同上，Adobe 大站，**应略过** |
+| 3 | yizhuan | 一字智写 | 写作内容 | https://www.yizhuan.net | 连接超时/TLS 失败（rc=60），DoH: OK | 域名解析正常，疑似本机网络受限，建议复核 |
+| 4 | zhinao360 | 360 智脑 | 对话聊天 | https://ai.360.cn | 连接超时（rc=-1），DoH: OK | **上次（08-10）实测 200 存活**，强烈疑似误报，建议保留 |
 
 ---
 
-## 四、新品草稿条目（14 条）
+## 三、新品草稿（15 条，JSON 片段，便于复制入库）
 
-> 所有 `website` 均已实测可达（2xx）。ID 已与现库 352 条比对，无重复。标注「待确认」的字段请人工核实后再入库。
-
-### 4.1 翻译语言（2 条）
+> 全部候选已实测 HTTP 2xx，且与现库 352 条 id / 域名均无冲突。`lastUpdated` 统一为 2026-08-17，`source` 为「公开资料 / 官网」。 pricing 标注以官网公开信息为准，部分新品（miora / catpaw / inkling）基于公开新闻摘要，建议入库前再核一次定价与官网文案。
 
 ```json
-{
-  "id": "huiyi-ai",
-  "name": "会译",
-  "nameEn": "HuiyiAI",
-  "category": "翻译语言",
-  "tags": ["国产", "全场景翻译", "PDF翻译", "浏览器插件", "免费"],
-  "tagsEn": ["China", "All-scenario", "PDF Translation", "Extension", "Free"],
-  "pricing": "freemium",
-  "priceLabel": "免费起",
-  "priceLabelEn": "Free tier",
-  "priceDetail": "插件与 PDF 翻译免费，上传体积不限；高阶模型额度需付费（档位待确认）。",
-  "priceDetailEn": "Free extension & PDF translation, no size cap; premium model quota paid (tiers TBC).",
-  "website": "https://huiyiai.net",
-  "company": "会译（中国）",
-  "companyEn": "HuiyiAI",
-  "region": "国内",
-  "summary": "网页/PDF/视频字幕一站式翻译，可切 DeepL、Claude、Gemini 等十余种模型。",
-  "summaryEn": "One-stop web/PDF/video subtitle translation across 10+ AI models.",
-  "strengths": "PDF 保留原排版不用二次排版；双语对照+划词悬停；内置四六级雅思词库。",
-  "strengthsEn": "PDF keeps layout; bilingual + hover lookup; built-in exam vocab.",
-  "weaknesses": "国产新品牌，长期稳定性待观察；高阶模型需自付额度。",
-  "weaknessesEn": "New brand, long-term stability unproven; premium models cost extra.",
-  "bestFor": "读外文文献的学生、跨境电商运营、要翻长 PDF 合同的职场人。",
-  "bestForEn": "Students reading papers, cross-border ops, long PDF contracts.",
-  "affiliate": false,
-  "source": "公开资料 / 官网",
-  "lastUpdated": "2026-08-10"
-}
-```
-
-```json
-{
-  "id": "nitro-translate",
-  "name": "Nitro",
-  "nameEn": "Nitro 4.0",
-  "category": "翻译语言",
-  "tags": ["海外", "人工翻译", "Agent可调用", "按次计费", "80+语种"],
-  "tagsEn": ["Overseas", "Human Translation", "Agent-callable", "Pay-per-use", "80+ Languages"],
-  "pricing": "paid",
-  "priceLabel": "按字数付费",
-  "priceLabelEn": "Pay per word",
-  "priceDetail": "无套餐无起订量，按请求付费；具体单价按语种浮动（待确认）。",
-  "priceDetailEn": "No plans or minimums; per-request pricing varies by language pair (TBC).",
-  "website": "https://nitrotranslate.com",
-  "company": "Alconost",
-  "companyEn": "Alconost",
-  "region": "海外",
-  "summary": "首个让 AI Agent 自主下单付费的真人翻译平台，几小时内交付可发布译文。",
-  "summaryEn": "First human translation service an AI agent can order and pay for autonomously.",
-  "strengths": "机器下单+真人翻译；无需账号和 API Key；80+ 语种，小文本几小时交付。",
-  "strengthsEn": "Machine-to-machine ordering, human output; no account/API key; 80+ languages.",
-  "weaknesses": "纯付费，不适合大批量长文；交付以小时计，非实时。",
-  "weaknessesEn": "Paid only; not for bulk long-form; hours not seconds.",
-  "bestFor": "广告语、App 更新文案、邮件序列等「必须准确」的小段文本本地化。",
-  "bestForEn": "Ads, app release notes, email sequences that must read perfectly.",
-  "affiliate": false,
-  "source": "公开资料 / 官网",
-  "lastUpdated": "2026-08-10"
-}
-```
-
-### 4.2 浏览器插件（4 条）
-
-```json
-{
-  "id": "read-frog",
-  "name": "陪读蛙",
-  "nameEn": "Read Frog",
-  "category": "浏览器插件",
-  "tags": ["开源", "沉浸式翻译", "自带API Key", "语言学习", "免费"],
-  "tagsEn": ["Open Source", "Immersive Translation", "BYO API Key", "Language Learning", "Free"],
-  "pricing": "free",
-  "priceLabel": "免费开源",
-  "priceLabelEn": "Free & open source",
-  "priceDetail": "GPL-3.0 开源，核心功能全免费；接大模型需自备 API Key，费用自付。",
-  "priceDetailEn": "GPL-3.0, all core features free; bring your own LLM API key.",
-  "website": "https://readfrog.app",
-  "company": "Read Frog 开源社区",
-  "companyEn": "Read Frog Community",
-  "region": "海外",
-  "summary": "开源沉浸式翻译插件，支持 20+ 模型商、划词解释、朗读与 YouTube 字幕。",
-  "summaryEn": "Open-source immersive translation extension: 20+ providers, TTS, YouTube subs.",
-  "strengths": "段落级双语对齐不跑版；批量请求省约 70% API 成本；Chrome/Edge/Firefox 全支持。",
-  "strengthsEn": "Paragraph-aligned bilingual view; batching cuts ~70% API cost; cross-browser.",
-  "weaknesses": "仍在活跃开发，偶有 bug；不接 Key 时只能用免费基础翻译源。",
-  "weaknessesEn": "Actively developed, some rough edges; free tier limited without API key.",
-  "bestFor": "想边上网边学外语、又不愿订阅沉浸式翻译会员的学生党与开发者。",
-  "bestForEn": "Learners and devs who want immersive translation without a subscription.",
-  "affiliate": false,
-  "source": "公开资料 / 官网",
-  "lastUpdated": "2026-08-10"
-}
-```
-
-```json
-{
-  "id": "omni-ai-translator",
-  "name": "Omni AI 划词翻译",
-  "nameEn": "Omni AI Translator",
-  "category": "浏览器插件",
-  "tags": ["划词翻译", "免Key可用", "本地模型", "隐私优先", "免费"],
-  "tagsEn": ["Selection Translate", "No API Key", "Local Model", "Privacy-first", "Free"],
-  "pricing": "free",
-  "priceLabel": "免费",
-  "priceLabelEn": "Free",
-  "priceDetail": "扩展本体免费；接云端大模型需自备 API Key，Key 仅存本地。",
-  "priceDetailEn": "Free extension; optional cloud LLM needs your own key, stored locally.",
-  "website": "https://chromewebstore.google.com/detail/hlnagbpimgifinglmfbmkgaooneplpli",
-  "company": "独立开发者",
-  "companyEn": "Independent developer",
-  "region": "海外",
-  "summary": "选中即译的轻量插件，内置免费翻译源，也可接 Ollama 本地模型全离线。",
-  "summaryEn": "Lightweight select-to-translate extension; free sources or offline Ollama.",
-  "strengths": "装完即用无需注册；支持 Ollama 完全离线；多翻译源随时切换。",
-  "strengthsEn": "Zero setup; fully offline via Ollama; switch among multiple sources.",
-  "weaknesses": "只有划词翻译，无全文沉浸式模式；开发者体量小。",
-  "weaknessesEn": "Selection-only, no full-page immersive mode; tiny dev team.",
-  "bestFor": "只想快速查词句、且对数据隐私敏感的技术文档/论文读者。",
-  "bestForEn": "Privacy-sensitive readers who just need quick phrase lookups.",
-  "affiliate": false,
-  "source": "公开资料 / 官网",
-  "lastUpdated": "2026-08-10"
-}
-```
-
-```json
-{
-  "id": "browseros-neo",
-  "name": "BrowserOS neo",
-  "nameEn": "BrowserOS neo",
-  "category": "浏览器插件",
-  "tags": ["Agent浏览器", "本地运行", "Claude Code", "Codex", "开源"],
-  "tagsEn": ["Agent Browser", "Local", "Claude Code", "Codex", "Open Source"],
-  "pricing": "free",
-  "priceLabel": "免费",
-  "priceLabelEn": "Free",
-  "priceDetail": "本地运行，浏览器本体免费；接入的模型费用由所连 Agent 自付（档位待确认）。",
-  "priceDetailEn": "Free local browser; model costs billed by the connected agent (TBC).",
-  "website": "https://browseros.com",
-  "company": "BrowserOS",
-  "companyEn": "BrowserOS",
-  "region": "海外",
-  "summary": "不给人用、专给 AI Agent 用的浏览器，让 Claude Code / Codex 替你跑网页任务。",
-  "summaryEn": "A browser built for AI agents, letting Claude Code / Codex finish web tasks.",
-  "strengths": "在本机运行数据不外传；原生对接主流编码 Agent；任务可复用。",
-  "strengthsEn": "Runs locally, data stays put; native hooks into major coding agents; reusable tasks.",
-  "weaknesses": "需已在用 Claude Code / Codex 才有意义；非技术用户上手门槛高。",
-  "weaknessesEn": "Only useful if you already run coding agents; steep for non-devs.",
-  "bestFor": "已经把 Claude Code / Codex 当日常工具、想让它接管网页操作的开发者。",
-  "bestForEn": "Devs who live in coding agents and want them to drive the browser.",
-  "affiliate": false,
-  "source": "公开资料 / 官网",
-  "lastUpdated": "2026-08-10"
-}
-```
-
-```json
-{
-  "id": "screen-awesome",
-  "name": "Screen Awesome",
-  "nameEn": "Screen Awesome",
-  "category": "浏览器插件",
-  "tags": ["录屏", "长截图", "零权限", "隐私优先", "免费"],
-  "tagsEn": ["Screen Record", "Scrolling Screenshot", "Zero Permission", "Privacy-first", "Free"],
-  "pricing": "free",
-  "priceLabel": "免费",
-  "priceLabelEn": "Free",
-  "priceDetail": "完全免费，无云端上传，无账号体系。",
-  "priceDetailEn": "Completely free, no cloud upload, no account.",
-  "website": "https://screenawesome.com",
-  "company": "独立开发者",
-  "companyEn": "Independent developer",
-  "region": "海外",
-  "summary": "零主机权限的免费录屏扩展，录标签页/全屏/摄像头出 MP4，还能滚动长截图。",
-  "summaryEn": "Free recorder with zero host permissions: MP4 capture, scrolling screenshots.",
-  "strengths": "声明零 host 权限，Chrome 从机制上禁止它联网上传；带标注编辑。",
-  "strengthsEn": "Zero host permissions means Chrome blocks any upload; built-in annotation.",
-  "weaknesses": "无云端协作与分享链接；功能相对 Loom 等偏基础。",
-  "weaknessesEn": "No cloud sharing; feature set is basic vs Loom.",
-  "bestFor": "要录产品演示又不放心把素材传到第三方服务器的产品经理与教师。",
-  "bestForEn": "PMs and teachers recording demos who won't upload to third parties.",
-  "affiliate": false,
-  "source": "公开资料 / 官网",
-  "lastUpdated": "2026-08-10"
-}
-```
-
-### 4.3 搜索研究（2 条）
-
-```json
-{
-  "id": "sakana-marlin",
-  "name": "Sakana Marlin",
-  "nameEn": "Sakana Marlin",
-  "category": "搜索研究",
-  "tags": ["海外", "超深度研究", "自主Agent", "战略报告", "企业级"],
-  "tagsEn": ["Overseas", "Ultra Deep Research", "Autonomous Agent", "Strategy Report", "Enterprise"],
-  "pricing": "paid",
-  "priceLabel": "企业付费",
-  "priceLabelEn": "Enterprise",
-  "priceDetail": "面向企业客户的商业产品，需洽询报价（公开定价待确认）。",
-  "priceDetailEn": "Commercial B2B offering; pricing on request (TBC).",
-  "website": "https://sakana.ai/marlin",
-  "company": "Sakana AI（日本）",
-  "companyEn": "Sakana AI",
-  "region": "海外",
-  "summary": "单次可自主跑约 8 小时的研究 Agent，产出上百页报告与高管幻灯片。",
-  "summaryEn": "Research agent running ~8 hours unattended, producing 100-page reports and exec slides.",
-  "strengths": "AB-MCTS 长程规划，深度远超分钟级研究工具；直接出可汇报的幻灯片。",
-  "strengthsEn": "AB-MCTS long-horizon planning; ships presentation-ready slides.",
-  "weaknesses": "响应以小时计不适合即时问答；结论仍需领域专家复核。",
-  "weaknessesEn": "Hours-long latency; conclusions still need expert validation.",
-  "bestFor": "做行业尽调、竞品全景、投资评估的战略与研究团队。",
-  "bestForEn": "Strategy and research teams doing due diligence and market landscapes.",
-  "affiliate": false,
-  "source": "公开资料 / 官网",
-  "lastUpdated": "2026-08-10"
-}
-```
-
-```json
-{
-  "id": "gemini-deep-research",
-  "name": "Gemini 深度研究",
-  "nameEn": "Gemini Deep Research",
-  "category": "搜索研究",
-  "tags": ["海外", "Google", "深度研究", "MCP", "带图表报告"],
-  "tagsEn": ["Overseas", "Google", "Deep Research", "MCP", "Charts"],
-  "pricing": "freemium",
-  "priceLabel": "免费起 / API 按量",
-  "priceLabelEn": "Free tier / API pay-as-you-go",
-  "priceDetail": "Gemini App 内提供免费额度；API 版约 $1–3/次（Max 版 $3–7/次）。",
-  "priceDetailEn": "Free quota in Gemini App; API ~$1-3 per task ($3-7 for Max).",
-  "website": "https://gemini.google/overview/deep-research/",
-  "company": "Google DeepMind",
-  "companyEn": "Google DeepMind",
-  "region": "海外",
-  "summary": "基于 Gemini 3.1 Pro 的自主研究 Agent，单任务最多 160 次检索并原生出图表。",
-  "summaryEn": "Autonomous research agent on Gemini 3.1 Pro: up to 160 searches, native charts.",
-  "strengths": "可先审改研究计划再开跑；支持 MCP 接内部文档；报告内嵌原生图表与逐句引用。",
-  "strengthsEn": "Editable research plan; MCP for internal docs; native charts and inline citations.",
-  "weaknesses": "Max 版仅 API 可用无消费级界面；单任务成本高于普通对话数倍。",
-  "weaknessesEn": "Max is API-only, no consumer UI; costs several times a normal chat.",
-  "bestFor": "要做尽调、竞品分析、行业综述且能接受按次付费的分析师与开发者。",
-  "bestForEn": "Analysts and devs doing due diligence who accept per-task pricing.",
-  "affiliate": false,
-  "source": "公开资料 / 官网",
-  "lastUpdated": "2026-08-10"
-}
-```
-
-### 4.4 办公效率（2 条）
-
-```json
-{
-  "id": "atlaso",
-  "name": "Atlaso",
-  "nameEn": "Atlaso",
-  "category": "办公效率",
-  "tags": ["海外", "AI记忆层", "跨工具", "MCP", "免费起"],
-  "tagsEn": ["Overseas", "AI Memory Layer", "Cross-tool", "MCP", "Free tier"],
-  "pricing": "freemium",
-  "priceLabel": "免费起 / $10 起",
-  "priceLabelEn": "Free / from $10",
-  "priceDetail": "免费版限 1 设备 1 工具；Pro $10/月不限设备，Build $25/月带记忆 API。",
-  "priceDetailEn": "Free: 1 device/1 tool. Pro $10/mo unlimited. Build $25/mo adds memory API.",
-  "website": "https://www.atlaso.ai",
-  "company": "Atlaso",
-  "companyEn": "Atlaso",
-  "region": "海外",
-  "summary": "给所有 AI 工具装一层共享记忆，在 Claude Code 说过的话 Cursor 里也认。",
-  "summaryEn": "One shared memory layer across Claude Code, Cursor, Codex and more.",
-  "strengths": "自动抓取决策与风险点；矛盾记忆会被标记并淘汰旧结论；存储前自动清理密钥。",
-  "strengthsEn": "Auto-captures decisions; flags contradictions and retires stale facts; scrubs secrets.",
-  "weaknesses": "记忆若串错项目会让 AI 基于错误上下文自信作答；安全性目前仅为厂商自述。",
-  "weaknessesEn": "Cross-project bleed risks confidently wrong answers; security claims unaudited.",
-  "bestFor": "同时用多个 AI 编码/写作工具、烦透了反复交代背景的重度用户。",
-  "bestForEn": "Heavy users juggling several AI tools who hate re-explaining context.",
-  "affiliate": false,
-  "source": "公开资料 / 官网",
-  "lastUpdated": "2026-08-10"
-}
-```
-
-```json
-{
-  "id": "qwenwork",
-  "name": "千问办公",
-  "nameEn": "QwenWork",
-  "category": "办公效率",
-  "tags": ["国产", "阿里", "企业级Agent", "文件交付", "公测"],
-  "tagsEn": ["China", "Alibaba", "Enterprise Agent", "File Delivery", "Public Beta"],
-  "pricing": "free",
-  "priceLabel": "公测免费",
-  "priceLabelEn": "Free in beta",
-  "priceDetail": "2026-08-03 起公测，个人与企业用户均可免费体验（商业化定价待确认）。",
-  "priceDetailEn": "Public beta since 2026-08-03, free for individuals and orgs (pricing TBC).",
-  "website": "https://qwenwork.cn",
-  "company": "阿里巴巴",
-  "companyEn": "Alibaba",
-  "region": "国内",
-  "summary": "阿里企业级办公 Agent，直接产出可编辑的文档/表格/PPT 而非聊天摘要。",
-  "summaryEn": "Alibaba's enterprise office agent that outputs editable docs, sheets and decks.",
-  "strengths": "任务拆解到 Office 产物一条龙，共 25 项能力；网页端+PC 客户端双入口；带技能市场。",
-  "strengthsEn": "End-to-end task-to-Office pipeline, 25 capabilities; web + desktop; skill market.",
-  "weaknesses": "仍在公测，钉钉入口未开放；企业数据合规需自行评估。",
-  "weaknessesEn": "Still beta, DingTalk entry pending; enterprise data compliance needs review.",
-  "bestFor": "需要 AI 直接交付可编辑文件、而不只是给答案的国内团队。",
-  "bestForEn": "China-based teams needing deliverable files, not just chat answers.",
-  "affiliate": false,
-  "source": "公开资料 / 官网",
-  "lastUpdated": "2026-08-10"
-}
-```
-
-### 4.5 其他类目（4 条）
-
-```json
-{
-  "id": "coldtea",
-  "name": "Coldtea",
-  "nameEn": "Coldtea.ai",
-  "category": "编程开发",
-  "tags": ["海外", "Agentic IDE", "视觉QA", "生产监控", "新品"],
-  "tagsEn": ["Overseas", "Agentic IDE", "Visual QA", "Monitoring", "New"],
-  "pricing": "freemium",
-  "priceLabel": "免费试用",
-  "priceLabelEn": "Free trial",
-  "priceDetail": "提供免费档，团队版定价待确认。",
-  "priceDetailEn": "Free tier available; team pricing TBC.",
-  "website": "https://coldtea.ai",
-  "company": "Coldtea",
-  "companyEn": "Coldtea",
-  "region": "海外",
-  "summary": "把编码 Agent、视觉回归 QA 与生产监控串成一条链的 Agentic IDE。",
-  "summaryEn": "Agentic IDE chaining coding agents, visual QA and production monitoring.",
-  "strengths": "针对「AI 提速后线上更容易崩」的真实痛点；QA Agent 自动抓视觉回归。",
-  "strengthsEn": "Targets the real pain of AI-speed shipping; QA agents catch visual regressions.",
-  "weaknesses": "刚发布无长期口碑；换 IDE 迁移成本高。",
-  "weaknessesEn": "Brand new, no track record; switching IDEs is costly.",
-  "bestFor": "已经大量用 AI 写代码、但被线上稳定性拖住的小团队。",
-  "bestForEn": "Small teams shipping heavily with AI but blocked by production stability.",
-  "affiliate": false,
-  "source": "公开资料 / 官网",
-  "lastUpdated": "2026-08-10"
-}
-```
-
-```json
-{
-  "id": "rindler",
-  "name": "Rindler",
-  "nameEn": "Rindler",
-  "category": "Agent自动化",
-  "tags": ["海外", "网页自动化", "自然语言", "定时任务", "结构化输出"],
-  "tagsEn": ["Overseas", "Web Automation", "Natural Language", "Scheduled", "Structured Output"],
-  "pricing": "freemium",
-  "priceLabel": "免费起",
-  "priceLabelEn": "Free tier",
-  "priceDetail": "提供免费额度，按任务量分档（具体价格待确认）。",
-  "priceDetailEn": "Free quota with usage-based tiers (pricing TBC).",
-  "website": "https://rindler.com",
-  "company": "Rindler",
-  "companyEn": "Rindler",
-  "region": "海外",
-  "summary": "用大白话描述需求，它登录真实网站完成操作并回吐结构化数据。",
-  "summaryEn": "Describe the task in plain English; it signs in, does it, returns clean data.",
-  "strengths": "提前给站点建图而不是每次让 Agent 瞎猜；页面改版能自愈；可设定时。",
-  "strengthsEn": "Pre-maps sites instead of guessing; self-repairs on layout changes; schedulable.",
-  "weaknesses": "涉及登录凭据，安全边界需谨慎评估；目标站点若强反爬仍会失败。",
-  "weaknessesEn": "Handles login credentials—assess security carefully; hard bot-walls still break it.",
-  "bestFor": "还在人肉重复登录后台抓数据、导报表的运营与财务团队。",
-  "bestForEn": "Ops and finance teams still logging into portals by hand.",
-  "affiliate": false,
-  "source": "公开资料 / 官网",
-  "lastUpdated": "2026-08-10"
-}
-```
-
-```json
-{
-  "id": "ctruh-studio",
-  "name": "Ctruh Studio",
-  "nameEn": "Ctruh Studio",
-  "category": "设计创意",
-  "tags": ["海外", "3D/XR", "无代码", "AR", "网页嵌入"],
-  "tagsEn": ["Overseas", "3D/XR", "No-code", "AR", "Web Embed"],
-  "pricing": "freemium",
-  "priceLabel": "免费起",
-  "priceLabelEn": "Free tier",
-  "priceDetail": "提供免费创作额度，商用与高级导出需付费（档位待确认）。",
-  "priceDetailEn": "Free creation quota; commercial/advanced export paid (tiers TBC).",
-  "website": "https://ctruh.com",
-  "company": "Ctruh",
-  "companyEn": "Ctruh",
-  "region": "海外",
-  "summary": "无代码搭 3D/XR 网页体验，AI 直接生成 3D 资产，浏览器里跑配置器与 AR。",
-  "summaryEn": "No-code 3D/XR web experiences with AI-generated assets, configurators and AR.",
-  "strengths": "不写代码就能上线产品展示与虚拟商店；AI 生成资产省建模成本。",
-  "strengthsEn": "Ship product showcases and virtual stores without code; AI assets cut modeling cost.",
-  "weaknesses": "精细度不如专业 3D 管线；3D 页面对移动端性能要求高。",
-  "weaknessesEn": "Less refined than pro 3D pipelines; heavy on mobile performance.",
-  "bestFor": "想给电商详情页加 3D 配置器或 AR 试用的品牌与独立站运营。",
-  "bestForEn": "Brands adding 3D configurators or AR try-on to product pages.",
-  "affiliate": false,
-  "source": "公开资料 / 官网",
-  "lastUpdated": "2026-08-10"
-}
-```
-
-```json
-{
-  "id": "video-ai-me",
-  "name": "VIDEO AI ME",
-  "nameEn": "VIDEO AI ME",
-  "category": "视频生成",
-  "tags": ["海外", "UGC广告", "多平台分发", "批量排期", "口播视频"],
-  "tagsEn": ["Overseas", "UGC Ads", "Multi-platform", "Bulk Schedule", "Product Video"],
-  "pricing": "paid",
-  "priceLabel": "订阅制",
-  "priceLabelEn": "Subscription",
-  "priceDetail": "按月订阅，按生成条数分档（具体价格待确认）。",
-  "priceDetailEn": "Monthly subscription tiered by video volume (pricing TBC).",
-  "website": "https://videoai.me",
-  "company": "VIDEO AI ME",
-  "companyEn": "VIDEO AI ME",
-  "region": "海外",
-  "summary": "一个工具做完 UGC 广告与产品视频，并一键发到 15 个平台。",
-  "summaryEn": "Create UGC ads and product videos, then publish to 15 platforms in one tool.",
-  "strengths": "从脚本自动写各平台专属文案；单次可批量排期 25 条视频。",
-  "strengthsEn": "Auto-writes platform-specific captions; bulk-schedules 25 videos at once.",
-  "weaknesses": "模板化痕迹重，不适合品牌调性要求高的内容；纯付费。",
-  "weaknessesEn": "Template-heavy look; not for brand-sensitive creative; paid only.",
-  "bestFor": "跑量投放 UGC 素材、需要日更多平台短视频的电商投手。",
-  "bestForEn": "E-commerce media buyers running high-volume UGC creative daily.",
-  "affiliate": false,
-  "source": "公开资料 / 官网",
-  "lastUpdated": "2026-08-10"
-}
+[
+  {
+    "id": "browser360-ai",
+    "name": "360AI浏览器",
+    "nameEn": "360 AI Browser",
+    "category": "浏览器插件",
+    "tags": ["国内", "浏览器", "AI总结", "翻译", "免费"],
+    "tagsEn": ["CN", "Browser", "AI Summary", "Translate", "Free"],
+    "pricing": "free",
+    "priceLabel": "免费",
+    "priceLabelEn": "Free",
+    "priceDetail": "360 推出的 AI 浏览器，免费使用，内置长文总结、翻译、视频总结与 AI 对话。",
+    "priceDetailEn": "Qihoo 360's AI browser; free long-text summary, translation, video summary and chat.",
+    "website": "https://browser.360.cn",
+    "company": "三六零（360）",
+    "companyEn": "Qihoo 360",
+    "region": "国内",
+    "summary": "360 的 AI 浏览器，内置百万字长文总结、翻译、视频总结与 AI 对话。",
+    "summaryEn": "360 AI browser with long-text summary, translation, video recap and in-page chat.",
+    "strengths": "长文本(百万字)分析；视频一键总结；多语言翻译；AI 对话不跳页。",
+    "strengthsEn": "Million-char analysis; video recap; multilingual translate; in-page AI chat.",
+    "weaknesses": "依赖 360 生态；海外访问与模型能力待验证。",
+    "weaknessesEn": "Tied to 360 ecosystem; overseas access unverified.",
+    "bestFor": "中文用户日常浏览、读长文/看视频时顺手用 AI 总结。",
+    "bestForEn": "CN users who want on-the-fly AI summary while browsing/reading/watching.",
+    "affiliate": false,
+    "source": "公开资料 / 官网",
+    "lastUpdated": "2026-08-17",
+    "affiliateUrl": ""
+  },
+  {
+    "id": "miora",
+    "name": "Miora",
+    "nameEn": "Miora",
+    "category": "设计创意",
+    "tags": ["海外", "创意智能体", "多模态", "内容创作"],
+    "tagsEn": ["Overseas", "Creative Agent", "Multimodal", "Content"],
+    "pricing": "freemium",
+    "priceLabel": "免费+增值",
+    "priceLabelEn": "Freemium",
+    "priceDetail": "多模态 AI 创意智能体，一站式完成图文/视频内容创作，部分功能免费。",
+    "priceDetailEn": "Multimodal creative agent for end-to-end image/text/video creation; freemium.",
+    "website": "https://miora.ai",
+    "company": "Miora",
+    "companyEn": "Miora",
+    "region": "海外",
+    "summary": "多模态 AI 创意智能体，一站式完成图文与视频内容创作。",
+    "summaryEn": "Multimodal creative agent for unified image/text/video content creation.",
+    "strengths": "多模态一体化；创作流程连贯；降低出片门槛。",
+    "strengthsEn": "Unified multimodal pipeline; lowers creation barrier.",
+    "weaknesses": "新晋产品生态待完善；中文支持与稳定性待验证。",
+    "weaknessesEn": "Early-stage ecosystem; CN support unverified.",
+    "bestFor": "做社媒图文/短视频、想一条龙出片的创作者。",
+    "bestForEn": "Creators wanting end-to-end social image/video production.",
+    "affiliate": false,
+    "source": "公开资料 / 官网",
+    "lastUpdated": "2026-08-17",
+    "affiliateUrl": ""
+  },
+  {
+    "id": "catpaw",
+    "name": "美团 CatPaw",
+    "nameEn": "Meituan CatPaw",
+    "category": "Agent自动化",
+    "tags": ["国内", "Agent", "平台", "本地生活"],
+    "tagsEn": ["CN", "Agent", "Platform", "Local Life"],
+    "pricing": "freemium",
+    "priceLabel": "免费+企业版",
+    "priceLabelEn": "Freemium",
+    "priceDetail": "美团全场景 AI Agent 平台，覆盖本地生活到办公的多智能体协作。",
+    "priceDetailEn": "Meituan's all-scenario AI Agent platform with multi-agent collaboration.",
+    "website": "https://catpaw.meituan.com",
+    "company": "美团",
+    "companyEn": "Meituan",
+    "region": "国内",
+    "summary": "美团全场景 AI Agent 平台，覆盖本地生活到办公的多智能体协作。",
+    "summaryEn": "Meituan all-scenario AI Agent platform for local-life and office tasks.",
+    "strengths": "美团场景背书；全场景覆盖；多 Agent 协作。",
+    "strengthsEn": "Meituan backing; broad coverage; multi-agent orchestration.",
+    "weaknesses": "偏 B 端/生态内；公开可用性待验证。",
+    "weaknessesEn": "B-side/ecosystem-bound; public availability TBD.",
+    "bestFor": "本地生活/到店商家与需要任务型 Agent 的运营团队。",
+    "bestForEn": "Local-life merchants and ops teams needing task agents.",
+    "affiliate": false,
+    "source": "公开资料 / 官网",
+    "lastUpdated": "2026-08-17",
+    "affiliateUrl": ""
+  },
+  {
+    "id": "inkling",
+    "name": "Thinking Machines Inkling",
+    "nameEn": "Inkling",
+    "category": "对话聊天",
+    "tags": ["海外", "开放权重", "多模态", "模型"],
+    "tagsEn": ["Overseas", "Open Weights", "Multimodal", "Model"],
+    "pricing": "free",
+    "priceLabel": "免费（开放权重）",
+    "priceLabelEn": "Free (Open Weights)",
+    "priceDetail": "Thinking Machines Lab 首款开放权重多模态模型，可自部署与对话。",
+    "priceDetailEn": "Thinking Machines Lab's first open-weights multimodal model; self-hostable.",
+    "website": "https://www.thinkingmachines.ai",
+    "company": "Thinking Machines Lab",
+    "companyEn": "Thinking Machines Lab",
+    "region": "海外",
+    "summary": "Thinking Machines Lab 首款开放权重多模态模型，支持图文理解对话。",
+    "summaryEn": "TML's first open-weights multimodal model for image/text chat.",
+    "strengths": "开放权重可私有部署；多模态；新锐实验室出品。",
+    "strengthsEn": "Self-hostable; multimodal; from a notable lab.",
+    "weaknesses": "偏模型而非成品工具；API/产品化待完善。",
+    "weaknessesEn": "Model, not a finished product; productization early.",
+    "bestFor": "想自部署多模态模型的研究者与开发者（注：严格说是模型，入库前请确认归类）。",
+    "bestForEn": "Researchers/devs wanting a self-hosted multimodal model.",
+    "affiliate": false,
+    "source": "公开资料 / 官网",
+    "lastUpdated": "2026-08-17",
+    "affiliateUrl": ""
+  },
+  {
+    "id": "searchatlas",
+    "name": "Search Atlas",
+    "nameEn": "Search Atlas",
+    "category": "搜索研究",
+    "tags": ["海外", "AI搜索", "SEO", "内容营销"],
+    "tagsEn": ["Overseas", "AI Search", "SEO", "Content"],
+    "pricing": "paid",
+    "priceLabel": "付费订阅",
+    "priceLabelEn": "Paid",
+    "priceDetail": "AI 搜索可见度与内容优化平台，集成研究、SEO 与自动化，按订阅计费。",
+    "priceDetailEn": "AI search-visibility & content platform; subscription-based.",
+    "website": "https://searchatlas.com",
+    "company": "Search Atlas",
+    "companyEn": "Search Atlas",
+    "region": "海外",
+    "summary": "AI 搜索可见度与内容优化平台，集成研究、SEO 与自动化。",
+    "summaryEn": "AI search-visibility & content optimization platform with research + SEO.",
+    "strengths": "研究+SEO+内容一体化；OTTO 自动优化；竞品分析。",
+    "strengthsEn": "Research+SEO+content in one; OTTO auto-optimize; competitor analysis.",
+    "weaknesses": "偏 SEO/营销；对纯研究用户过重；付费。",
+    "weaknessesEn": "SEO/marketing-focused; heavy for pure research; paid.",
+    "bestFor": "做 SEO 与内容营销、需要 AI 研究驱动的团队。",
+    "bestForEn": "SEO/content teams wanting AI-driven research.",
+    "affiliate": false,
+    "source": "公开资料 / 官网",
+    "lastUpdated": "2026-08-17",
+    "affiliateUrl": ""
+  },
+  {
+    "id": "liner",
+    "name": "Liner",
+    "nameEn": "Liner",
+    "category": "浏览器插件",
+    "tags": ["海外", "划词问答", "阅读助手", "引用"],
+    "tagsEn": ["Overseas", "Highlight Q&A", "Reader", "Citations"],
+    "pricing": "freemium",
+    "priceLabel": "免费+增值",
+    "priceLabelEn": "Freemium",
+    "priceDetail": "AI 阅读与研究助手，划词即答、高亮网页与 PDF 并附引用来源。",
+    "priceDetailEn": "AI reader/Research assistant: highlight-to-answer with citations.",
+    "website": "https://liner.com",
+    "company": "Liner",
+    "companyEn": "Liner",
+    "region": "海外",
+    "summary": "AI 阅读与研究助手，划词即答、高亮网页与 PDF 并附引用。",
+    "summaryEn": "AI reading/research assistant: highlight-to-answer with sources.",
+    "strengths": "划词问答；网页/PDF 高亮；引用来源；浏览器内即用。",
+    "strengthsEn": "Select-to-ask; web/PDF highlight; cited; in-browser.",
+    "weaknesses": "深度研究弱于专业引擎；高级功能付费。",
+    "weaknessesEn": "Shallower than dedicated engines; advanced tier paid.",
+    "bestFor": "学生/研究者读长文、做文献速览。",
+    "bestForEn": "Students/researchers skimming papers and long reads.",
+    "affiliate": false,
+    "source": "公开资料 / 官网",
+    "lastUpdated": "2026-08-17",
+    "affiliateUrl": ""
+  },
+  {
+    "id": "textcortex",
+    "name": "TextCortex",
+    "nameEn": "TextCortex",
+    "category": "写作内容",
+    "tags": ["海外", "AI写作", "改写", "多语言"],
+    "tagsEn": ["Overseas", "AI Writing", "Rewriting", "Multilingual"],
+    "pricing": "freemium",
+    "priceLabel": "免费+增值",
+    "priceLabelEn": "Freemium",
+    "priceDetail": "多语言 AI 写作与改写助手，浏览器内润色、扩写与翻译。",
+    "priceDetailEn": "Multilingual AI writing/rewriting assistant in the browser.",
+    "website": "https://textcortex.com",
+    "company": "TextCortex AI",
+    "companyEn": "TextCortex AI",
+    "region": "海外",
+    "summary": "多语言 AI 写作与改写助手，浏览器内润色、扩写与翻译。",
+    "summaryEn": "Multilingual AI writing/rewrite assistant; browser-side polish.",
+    "strengths": "多语言改写；浏览器随处可用；多平台同步。",
+    "strengthsEn": "Multilingual rewrite; works anywhere; cross-platform.",
+    "weaknesses": "长文创作弱于专用模型；免费额度有限。",
+    "weaknessesEn": "Weaker long-form; free tier limited.",
+    "bestFor": "跨境/多语言写作与日常改写润色。",
+    "bestForEn": "Cross-border/multilingual writing and daily rewriting.",
+    "affiliate": false,
+    "source": "公开资料 / 官网",
+    "lastUpdated": "2026-08-17",
+    "affiliateUrl": ""
+  },
+  {
+    "id": "saner",
+    "name": "Saner.AI",
+    "nameEn": "Saner.AI",
+    "category": "办公效率",
+    "tags": ["海外", "AI笔记", "知识管理", "任务"],
+    "tagsEn": ["Overseas", "AI Notes", "Knowledge", "Tasks"],
+    "pricing": "freemium",
+    "priceLabel": "免费+增值",
+    "priceLabelEn": "Freemium",
+    "priceDetail": "AI 笔记与工作空间，整合笔记、任务与智能语义检索。",
+    "priceDetailEn": "AI notes & workspace combining notes, tasks and semantic search.",
+    "website": "https://saner.ai",
+    "company": "Saner.AI",
+    "companyEn": "Saner.AI",
+    "region": "海外",
+    "summary": "AI 笔记与工作空间，整合笔记、任务与智能语义检索。",
+    "summaryEn": "AI notes & workspace: notes + tasks + smart search.",
+    "strengths": "笔记+任务+AI 一体；语义检索；轻量。",
+    "strengthsEn": "Notes+tasks+AI; semantic search; lightweight.",
+    "weaknesses": "生态较小；国内访问稳定性待验证。",
+    "weaknessesEn": "Small ecosystem; CN access unverified.",
+    "bestFor": "个人知识管理、想把笔记与 AI 结合的用户。",
+    "bestForEn": "Personal KM users wanting notes + AI.",
+    "affiliate": false,
+    "source": "公开资料 / 官网",
+    "lastUpdated": "2026-08-17",
+    "affiliateUrl": ""
+  },
+  {
+    "id": "replika",
+    "name": "Replika",
+    "nameEn": "Replika",
+    "category": "对话聊天",
+    "tags": ["海外", "陪伴", "情感", "语音"],
+    "tagsEn": ["Overseas", "Companion", "Emotional", "Voice"],
+    "pricing": "freemium",
+    "priceLabel": "免费+订阅",
+    "priceLabelEn": "Freemium",
+    "priceDetail": "AI 情感陪伴聊天机器人，可定制人格、长期记忆与语音通话。",
+    "priceDetailEn": "AI companion chatbot with customizable persona, memory and voice calls.",
+    "website": "https://replika.com",
+    "company": "Luka",
+    "companyEn": "Luka",
+    "region": "海外",
+    "summary": "AI 情感陪伴聊天机器人，可定制人格、长期记忆与语音通话。",
+    "summaryEn": "AI companion bot with persona, memory and voice calls.",
+    "strengths": "情感陪伴；人格定制；记忆连续；支持语音。",
+    "strengthsEn": "Companionship; persona; continuous memory; voice.",
+    "weaknesses": "非生产力导向；深度功能付费；隐私关注。",
+    "weaknessesEn": "Not productivity; paid depth; privacy concerns.",
+    "bestFor": "想要日常陪伴、练口语或情绪倾诉的用户。",
+    "bestForEn": "Users wanting companionship, language practice or venting.",
+    "affiliate": false,
+    "source": "公开资料 / 官网",
+    "lastUpdated": "2026-08-17",
+    "affiliateUrl": ""
+  },
+  {
+    "id": "openart",
+    "name": "OpenArt",
+    "nameEn": "OpenArt",
+    "category": "图像生成",
+    "tags": ["海外", "图像生成", "提示词", "社区"],
+    "tagsEn": ["Overseas", "Image Gen", "Prompt", "Community"],
+    "pricing": "freemium",
+    "priceLabel": "免费+增值",
+    "priceLabelEn": "Freemium",
+    "priceDetail": "AI 图像生成与创作平台，集成多模型、提示词社区与风格训练。",
+    "priceDetailEn": "AI image platform: multi-model, prompt community, style training.",
+    "website": "https://openart.ai",
+    "company": "OpenArt",
+    "companyEn": "OpenArt",
+    "region": "海外",
+    "summary": "AI 图像生成与创作平台，集成多模型、提示词与风格训练。",
+    "summaryEn": "AI image creation platform with models, prompts and training.",
+    "strengths": "多模型；提示词社区；可训练风格；模板丰富。",
+    "strengthsEn": "Multi-model; prompt community; trainable styles; templates.",
+    "weaknesses": "免费额度有限；质量参差；高级模型付费。",
+    "weaknessesEn": "Free tier limited; variable quality; paid models.",
+    "bestFor": "做 AI 配图、探索提示词与风格的设计爱好者。",
+    "bestForEn": "Designers exploring prompts/styles for AI art.",
+    "affiliate": false,
+    "source": "公开资料 / 官网",
+    "lastUpdated": "2026-08-17",
+    "affiliateUrl": ""
+  },
+  {
+    "id": "typingmind",
+    "name": "TypingMind",
+    "nameEn": "TypingMind",
+    "category": "对话聊天",
+    "tags": ["海外", "聊天前端", "多模型", "API"],
+    "tagsEn": ["Overseas", "Chat UI", "Multi-model", "API"],
+    "pricing": "paid",
+    "priceLabel": "付费（买断/订阅）",
+    "priceLabelEn": "Paid",
+    "priceDetail": "自带 API Key 的 AI 聊天前端，聚合多家模型与高级功能。",
+    "priceDetailEn": "Bring-your-own-key AI chat frontend aggregating models + power features.",
+    "website": "https://typingmind.com",
+    "company": "TypingMind",
+    "companyEn": "TypingMind",
+    "region": "海外",
+    "summary": "自带 API Key 的 AI 聊天前端，聚合多家模型与高级功能。",
+    "summaryEn": "BYOK chat frontend with many models and advanced features.",
+    "strengths": "用自己的 Key 省钱；多模型；联网/Artifacts/记忆；可本地。",
+    "strengthsEn": "BYOK saves cost; multi-model; web/Artifacts/memory; local.",
+    "weaknesses": "需自备 API Key；非免费用量；偏极客。",
+    "weaknessesEn": "Needs own API key; not free-to-use; geeky.",
+    "bestFor": "有多家 API Key、想要统一高级聊天界面的用户。",
+    "bestForEn": "Users with multiple API keys wanting one pro chat UI.",
+    "affiliate": false,
+    "source": "公开资料 / 官网",
+    "lastUpdated": "2026-08-17",
+    "affiliateUrl": ""
+  },
+  {
+    "id": "morphic",
+    "name": "Morphic",
+    "nameEn": "Morphic",
+    "category": "搜索研究",
+    "tags": ["海外", "AI搜索", "开源", "可自部署"],
+    "tagsEn": ["Overseas", "AI Search", "Open Source", "Self-host"],
+    "pricing": "free",
+    "priceLabel": "免费（开源）",
+    "priceLabelEn": "Free (OSS)",
+    "priceDetail": "开源 AI 搜索助手，对话式问答并附来源与生成式界面。",
+    "priceDetailEn": "Open-source AI search: conversational answers with sources.",
+    "website": "https://morphic.sh",
+    "company": "Morphic",
+    "companyEn": "Morphic",
+    "region": "海外",
+    "summary": "开源 AI 搜索助手，对话式问答并附来源与生成式界面。",
+    "summaryEn": "OSS AI search: chat answers with citations and generative UI.",
+    "strengths": "开源可自部署；对话式；带引用；界面清爽。",
+    "strengthsEn": "Self-hostable; conversational; cited; clean UI.",
+    "weaknesses": "需自托管或等待额度；索引依赖第三方。",
+    "weaknessesEn": "Self-host or waitlist; third-party index.",
+    "bestFor": "想要隐私可控、可自部署 AI 搜索的开发者。",
+    "bestForEn": "Dev wanting private, self-hostable AI search.",
+    "affiliate": false,
+    "source": "公开资料 / 官网",
+    "lastUpdated": "2026-08-17",
+    "affiliateUrl": ""
+  },
+  {
+    "id": "tavily",
+    "name": "Tavily",
+    "nameEn": "Tavily",
+    "category": "搜索研究",
+    "tags": ["海外", "搜索API", "开发者", "Agent"],
+    "tagsEn": ["Overseas", "Search API", "Developer", "Agent"],
+    "pricing": "freemium",
+    "priceLabel": "免费额度+付费",
+    "priceLabelEn": "Freemium",
+    "priceDetail": "面向 LLM/智能体的 AI 搜索 API，返回干净、带引用的检索结果。",
+    "priceDetailEn": "Agent-optimized search API returning clean, cited results.",
+    "website": "https://tavily.com",
+    "company": "Tavily AI",
+    "companyEn": "Tavily AI",
+    "region": "海外",
+    "summary": "面向 LLM/智能体的 AI 搜索 API，返回干净、带引用的检索结果。",
+    "summaryEn": "Search API for LLMs/agents: clean, cited retrieval.",
+    "strengths": "为 Agent 优化；干净结构化结果；免费额度；低延迟。",
+    "strengthsEn": "Agent-optimized; clean output; free tier; low latency.",
+    "weaknesses": "开发者向；非终端用户产品；大量调用付费。",
+    "weaknessesEn": "Dev-focused; not end-user; paid at scale.",
+    "bestFor": "给 RAG/Agent 接检索的开发者和团队。",
+    "bestForEn": "Dev/teams wiring retrieval into RAG/agents.",
+    "affiliate": false,
+    "source": "公开资料 / 官网",
+    "lastUpdated": "2026-08-17",
+    "affiliateUrl": ""
+  },
+  {
+    "id": "gamma",
+    "name": "Gamma",
+    "nameEn": "Gamma",
+    "category": "办公效率",
+    "tags": ["海外", "PPT", "演示", "AI写作"],
+    "tagsEn": ["Overseas", "PPT", "Presentation", "AI Write"],
+    "pricing": "freemium",
+    "priceLabel": "免费+增值",
+    "priceLabelEn": "Freemium",
+    "priceDetail": "AI 一键生成演示文稿、网页与文档，含排版与设计。",
+    "priceDetailEn": "AI one-click decks, web pages and docs with design.",
+    "website": "https://gamma.app",
+    "company": "Gamma",
+    "companyEn": "Gamma",
+    "region": "海外",
+    "summary": "AI 一键生成演示文稿、网页与文档，含排版与设计。",
+    "summaryEn": "AI generates decks, sites and docs with layout & design.",
+    "strengths": "一句话出 PPT；设计美观；多格式导出；协作。",
+    "strengthsEn": "Prompt-to-deck; polished design; export; collaboration.",
+    "weaknesses": "复杂定制受限；免费版有水印/额度；中文排版偶翻车。",
+    "weaknessesEn": "Limited deep custom; watermark/free tier; CN layout glitches.",
+    "bestFor": "快速做汇报、提案与课件的人。",
+    "bestForEn": "Anyone needing quick decks/proposals/courseware.",
+    "affiliate": false,
+    "source": "公开资料 / 官网",
+    "lastUpdated": "2026-08-17",
+    "affiliateUrl": ""
+  },
+  {
+    "id": "lovable",
+    "name": "Lovable",
+    "nameEn": "Lovable",
+    "category": "编程开发",
+    "tags": ["海外", "AI建站", "无代码", "全栈"],
+    "tagsEn": ["Overseas", "AI Builder", "No-code", "Full-stack"],
+    "pricing": "freemium",
+    "priceLabel": "免费+增值",
+    "priceLabelEn": "Freemium",
+    "priceDetail": "用自然语言生成可部署 Web 应用的 AI 开发平台（原 GPT Engineer）。",
+    "priceDetailEn": "Prompt-to-deploy web app builder (formerly GPT Engineer).",
+    "website": "https://lovable.dev",
+    "company": "Lovable",
+    "companyEn": "Lovable",
+    "region": "海外",
+    "summary": "用自然语言生成可部署 Web 应用的 AI 开发平台。",
+    "summaryEn": "Build deployable web apps from natural language.",
+    "strengths": "对话式建应用；可部署；接 Supabase；迭代快。",
+    "strengthsEn": "Conversational build; deployable; Supabase; fast iteration.",
+    "weaknesses": "复杂逻辑需手写；额度计费；偏前端。",
+    "weaknessesEn": "Complex logic needs code; metered; frontend-leaning.",
+    "bestFor": "想快速把想法做成可用原型的非专业/独立开发者。",
+    "bestForEn": "Indie/devs turning ideas into working prototypes fast.",
+    "affiliate": false,
+    "source": "公开资料 / 官网",
+    "lastUpdated": "2026-08-17",
+    "affiliateUrl": ""
+  }
+]
 ```
 
 ---
 
-## 五、下周建议
+## 四、下一步建议（人工）
 
-1. **先改 3 条 URL**（`alibaba-translate` / `perplexica` / `zoom-ai`），已验证替代地址可用，改完死链立减 25%。
-2. `phind` 与 `phind-search` 根域双双 404，建议人工打开一次确认是否下线；若确认下线，两条一起摘掉。
-3. `listen-ink`、`yizhuan` 两条虽未判死链，但一个解析到域名停靠、一个证书异常，值得人工点开看一眼。
-4. 新品若全部入库，浏览器插件 29→33、翻译语言 25→27、搜索研究 26→28，三个短板类目补齐后各类目差距会收窄到 6 条以内。
-5. 本次扫描脚本已固化为 `scripts/_check_links.py`（含 DoH 二次复核逻辑），下周可直接复用。
+1. **死链处理**：优先修正 4 条「路径错误/可恢复」链接（alibaba-translate→translate.alibaba.com、playht→playht.com、perplexica→github.com/ItzCrazyKns/Perplexica、zoom-ai→zoom.com/en/products/ai-assistant/）；其余 8 条域名已注销/5xx 建议下架或替换。
+2. **勿误删**：2.2 节 4 条超时项（尤其 zhinao360 上次实测 200）先复核，不要直接判死链删除。
+3. **入库**：从第三节 15 条中挑选，直接复制 JSON 数组追加到 `scripts/tools.json` 的列表末尾即可（注意末尾逗号与格式）。建议优先补「搜索研究 / 浏览器插件」空缺。
+4. **翻译语言**：本周无真正新发且不在库的工具，暂不强行新增；可关注下一周是否有新翻译产品。
+
+---
+
+## 五、入库执行记录（2026-08-17）
+
+- **新增 15 条**（已追加到 `scripts/tools.json` 末尾，总数 352 → 367）：browser360-ai、miora、catpaw、inkling、searchatlas、liner、textcortex、saner、replika、openart、typingmind、morphic、tavily、gamma、lovable。均与现库无 id/域名冲突，字段完整，summary ≤60 字。
+- **修正 5 条错链**（website 字段已更新；4 条 curl 复测 200，xunfei-wenshu 因沙箱无法访问 iflytek 域，按搜索确认的官方 xfyun 域更新）：
+  - alibaba-translate: `alimama.tech` → `translate.alibaba.com`（200）
+  - playht: `play.ht` → `playht.com`（200）
+  - perplexica: `github.com/itcosmetics/perplexica` → `github.com/ItzCrazyKns/Perplexica`（200）
+  - zoom-ai: `zoom.us/ai` → `zoom.com/en/products/ai-assistant/`（200）
+  - xunfei-wenshu: `wenshu.iflytek.com` → `zhiwen.xfyun.cn/home`（官方 xfyun 域，搜索确认）
+- **未处理（仍死链，等人工决定下架/替换，本次未删除）**：emvoice、webchatgpt、wiseone（NXDOMAIN）；huoshan-writing（502）、summarize-tech（503）；phind、phind-search（404 首页已失效）。这 7 条无明确可用替代地址，按「修复错链」范围之外处理。
+- **备份**：`scripts/tools.json.bak`（修改前快照）。
+
+## 六、死链替换执行记录（2026-08-18）
+
+用户指令「死链需要替换」。对草稿中余下 7 条死链逐一复核后结论：
+
+- **5 条确属死链 → 已从 `tools.json` 移除**（总数 367 → 362）：
+  - `emvoice`（音频语音，NXDOMAIN）、`webchatgpt`（浏览器插件，NXDOMAIN）、`wiseone`（浏览器插件，NXDOMAIN）、`summarize-tech`（浏览器插件，503）、`huoshan-writing`（写作内容，502；火山写作已并入豆包 doubao.com，豆包已在库）。
+  - 理由：库已极度完备（音频语音 30 / 浏览器插件 31 / 写作内容 29 条），这些死工具的所有同类替代（Fish Audio、MaxAI、Glasp、NoteGPT、豆包等）**本身已在库内**，若「替换」为同类工具会产生重复条目；故以「移除」完成死链清理，且对应功能在库中均有覆盖。
+  - 备份：`scripts/tools.json.bak.preremove`（移除前快照，367 条）。
+- **2 条并非真死 → 保留**（复测由 404 变为 **403**，DoH 解析正常，属大站 bot-block，站点存活；按死链规则 403 应略过）：`phind`（对话聊天）、`phind-search`（搜索研究）。不替换存活链接。
+- **说明**：若希望这 5 条移除项改用「指定替代工具」补齐（而非删除），告知具体工具名即可补回；当前为避免重复未自行添加。

@@ -79,7 +79,85 @@ def list_html(s):
     return '<ul>' + ''.join('<li>' + esc(i) + '</li>' for i in items) + '</ul>'
 
 
-def page(t):
+def build_related_map(tools):
+    by_cat = {}
+    by_company = {}
+    for x in tools:
+        by_cat.setdefault(x.get('category', ''), []).append(x)
+        by_company.setdefault(x.get('company', ''), []).append(x)
+    rel = {}
+    for x in tools:
+        tid = x.get('id')
+        cands = []
+        for o in by_cat.get(x.get('category', ''), []):
+            if o.get('id') != tid:
+                cands.append(o)
+        for o in by_company.get(x.get('company', ''), []):
+            if o.get('id') != tid and o not in cands:
+                cands.append(o)
+        xtags = set(x.get('tags', []) or [])
+        if xtags:
+            for o in tools:
+                if o.get('id') != tid and o not in cands and xtags & set(o.get('tags', []) or []):
+                    cands.append(o)
+        rel[tid] = [o.get('id') for o in cands[:6]]
+    return rel
+
+
+def related_html(rel_ids, tmap):
+    if not rel_ids:
+        return ''
+    cards = []
+    for rid in rel_ids:
+        o = tmap.get(rid)
+        if not o:
+            continue
+        cards.append('<a class="related-card" href="../tools/' + esc(o.get('id', '')) + '.html">'
+                     '<span class="rc-name">' + esc(o.get('name', '')) + '</span>'
+                     '<span class="rc-cat">' + esc(o.get('category', '')) + '</span></a>')
+    if not cards:
+        return ''
+    return '<div class="about-section"><h2>相关推荐</h2><div class="related-grid">' + ''.join(cards) + '</div></div>'
+
+
+def faq_items(t):
+    name = t.get('name', '')
+    category = t.get('category', '')
+    price_label = t.get('priceLabel', '')
+    price_detail = t.get('priceDetail', '')
+    strengths = t.get('strengths', '')
+    best_for = t.get('bestFor', '')
+    qa = []
+    qa.append((name + ' 免费吗？多少钱？',
+               '定价为：' + price_label + '。' + price_detail))
+    qa.append((name + ' 适合谁用？',
+               best_for + '（主要面向 ' + category + ' 场景）。'))
+    qa.append((name + ' 有什么优势？',
+               '主要优势：' + strengths + '。适合想快速上手、对比挑选 ' + category + ' 工具的用户。'))
+    qa.append(('怎么开始用 ' + name + '？',
+               '直接访问 ' + name + ' 官网即可注册使用；也可以在 AI家AI户 的「工具库」里把它和同类 ' + category + ' 工具横向对比后再决定。'))
+    return qa
+
+
+def faq_html(qa):
+    items = ''.join(
+        '<details class="faq"><summary>Q：' + esc(q) + '</summary><p>A：' + esc(a) + '</p></details>'
+        for q, a in qa)
+    return '<div class="about-section"><h2>常见问题</h2><div class="faq-list">' + items + '</div></div>'
+
+
+def faq_ld(qa):
+    return {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}}
+            for q, a in qa
+        ]
+    }
+
+
+def page(t, related_ids=None, tmap=None):
     tid = t.get('id', '')
     name = t.get('name', '')
     name_en = t.get('nameEn', '')
@@ -97,7 +175,7 @@ def page(t):
     official = t.get('affiliateUrl') or website
     tags = t.get('tags', []) or []
     last_updated = t.get('lastUpdated', '')
-    canon = f'{SITE}/tools/{tid}.html'
+    canon = f'{SITE}/tools/{tid}'
 
     pc = 'badge-free' if pricing == 'free' else 'badge-freemium' if pricing == 'freemium' else 'badge-paid'
     pctext = '免费' if pricing == 'free' else '免费+付费' if pricing == 'freemium' else '付费'
@@ -130,9 +208,14 @@ def page(t):
             ]
         }
     ]
+    qa = faq_items(t)
+    ld.append(faq_ld(qa))
+    faq_block = faq_html(qa)
+    rel_ids = related_ids or []
+    related_block = related_html(rel_ids, tmap or {})
     ld_json = json.dumps(ld, ensure_ascii=False)
 
-    desc_meta = (summary or name)[:120]
+    desc_meta = (f'{name}（{company}）— {category} 工具。{(summary or name)[:80]} 价格：{price_label}。查看功能、优缺点与同类替代品对比。')[:150]
 
     html = f'''<!DOCTYPE html>
 <html lang="zh-CN">
@@ -140,7 +223,7 @@ def page(t):
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="{esc(desc_meta)}">
-    <title>{esc(name)} — AI家AI户工具库</title>
+    <title>{esc(name)} 怎么样？2026 价格、功能与替代品 | AI家AI户</title>
     <link rel="canonical" href="{canon}">
     <meta property="og:title" content="{esc(name)} — AI家AI户">
     <meta property="og:description" content="{esc(desc_meta)}">
@@ -221,6 +304,9 @@ __SIDEBAR__
         <div class="model-tags">{tag_html}</div>
     </div>
 
+    {related_block}
+    {faq_block}
+
     <p style="margin-top:20px;color:var(--text-secondary);font-size:13px;">信息最后更新：<time datetime="{esc(last_updated)}">{esc(last_updated)}</time>。数据来自公开资料与官网，以官方最新为准。如发现错误或过时信息，欢迎<a href="../contact.html">联系我们</a>。</p>
 
     <div style="margin:24px 0 8px;">
@@ -255,13 +341,15 @@ __SIDEBAR__
 def main():
     with open(JSON_PATH, 'r', encoding='utf-8') as f:
         tools = json.load(f)
+    tmap = {t.get('id'): t for t in tools}
+    rel_map = build_related_map(tools)
     os.makedirs(OUT_DIR, exist_ok=True)
     for t in tools:
         tid = t.get('id')
         if not tid:
             continue
         with open(os.path.join(OUT_DIR, f'{tid}.html'), 'w', encoding='utf-8') as f:
-            f.write(page(t))
+            f.write(page(t, rel_map.get(tid, []), tmap))
     print(f'Done! Generated {len(tools)} tool detail pages in tools/.')
 
 

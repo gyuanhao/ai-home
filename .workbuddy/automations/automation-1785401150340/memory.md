@@ -26,3 +26,18 @@
 ## 规则变更（2026-08-03 用户指令）
 - 死链检查口径调整：**反爬/封禁类响应（403/402/429，以及大站明显 bot-block）直接略过，不计入死链清单**。仅当出现 无法解析域名 / 连接超时 / 5xx / 真实 404 时才判为死链。已同步写入自动化 prompt。
 - 影响：下一次运行死链数将大幅下降（本该约 38 条 → 仅保留 5xx/真实 404 类）。
+
+## 2026-08-17（第三次执行）
+- 工具总数 352 条。检查脚本本次重建为 `scripts/_check_links.py`（线程池 32 并发 + 阿里 DoH 二次复核），上次提到的 `_check_links.py` 在本 workspace 已不存在，故重写。
+- 扫描结果：OK 314 / 略过(反爬) 21 / 确认死链 12 / 超时-网络受限 4。
+  - 高置信死链 12：域名注销(NXDOMAIN)4 → emvoice、webchatgpt、wiseone、xunfei-wenshu；无 A 记录(NORECORD)2 → alibaba-translate(alimama.tech)、playht(play.ht)；5xx 2 → huoshan-writing(502)、summarize-tech(503)；真实 404 4 → perplexica(路径错)、phind、phind-search、zoom-ai。
+  - 4 条超时项（doh=OK，疑似误报，未计入硬死链）：adobe-express / firefly（Adobe 大站，按规则应略过）、yizhuan（TLS 失败）、zhinao360（上次 08-10 实测 200，强烈疑似误报，建议保留）。
+- 新品草稿 15 条，全部实测 2xx 且与现库 id/域名无冲突；覆盖 9 类目：搜索研究3( searchatlas/morphic/tavily )、浏览器插件2( browser360-ai/liner )、对话聊天3( inkling/replika/typingmind )、办公效率2( saner/gamma )、写作内容1( textcortex )、设计创意1( miora )、Agent自动化1( catpaw )、图像生成1( openart )、编程开发1( lovable )。
+- 翻译语言本周无真正新发且不在库的候选（近期翻译新闻均为已收录工具版本更新），未强行填充。
+- 交付物：`scripts/_draft_weekly.md`（开头注明"仅供人工过，未自动入库"，tools.json 未改动）；嵌入 JSON 已校验可解析、字段完整、summary≤60字。
+- 注：候选多为公开资料/官网摘要，定价与文案建议入库前再核一次。
+- **同日用户指令「新品直接入库，并修复错链」已执行**：`scripts/tools.json` 由 352 → 367 条。新增 15 条全部入库；修正 5 条错链（alibaba-translate→translate.alibaba.com、playht→playht.com、perplexica→github.com/ItzCrazyKns/Perplexica、zoom-ai→zoom.com/en/products/ai-assistant/、xunfei-wenshu→zhiwen.xfyun.cn/home，前 4 条 curl 复测 200）。其余 7 条真死链（emvoice/webchatgpt/wiseone NXDOMAIN、huoshan-writing 502、summarize-tech 503、phind/phind-search 404 首页失效）按「修复错链」范围之外，未删除，等人工决定下架/替换。备份 `scripts/tools.json.bak`。草稿文件已标注「已入库」。
+- **2026-08-18 用户补指令「死链需要替换」**：对草稿余下 7 条死链复核后处理——
+  - 移除 5 条确属死链（emvoice/webchatgpt/wiseone NXDOMAIN、summarize-tech 503、huoshan-writing 502；火山写作已并入豆包），总数 367 → 362。理由：库已完备，其同类替代均已在库，替换为同类会重复，故以移除清理。
+  - 保留 phind/phind-search：复测由 404 变 403（DoH OK），属 bot-block 站点存活，按规则 403 略过、非死链，不替换。
+  - 备份 `scripts/tools.json.bak.preremove`。如需以指定替代工具补齐这 5 条，告知工具名即可补回。

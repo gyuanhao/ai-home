@@ -74,10 +74,10 @@ def generate_page(m, all_models, model_map):
     <meta name="description" content="{seo_desc}">
     <meta name="keywords" content="{seo_kw}">
     <title>{seo_title}</title>
-    <link rel="canonical" href="https://myaishome.com/models/{model_id}.html">
+    <link rel="canonical" href="https://myaishome.com/models/{model_id}">
     <meta property="og:title" content="{seo_title}">
     <meta property="og:description" content="{seo_desc}">
-    <meta property="og:url" content="https://myaishome.com/models/{model_id}.html">
+    <meta property="og:url" content="https://myaishome.com/models/{model_id}">
     <meta property="og:type" content="article">
     <meta property="og:locale" content="zh_CN">
     <meta property="og:image" content="{OG_IMAGE}">
@@ -107,7 +107,18 @@ def generate_page(m, all_models, model_map):
       "operatingSystem":"Web",
       "offers":{{"@type":"Offer","price":"{m.get('priceLabel','').split('/')[0].replace('免费','0').replace('$','').strip()}","priceCurrency":"CNY"}},
       "description":"{m.get('strengths','')[:200]}",
-      "url":"https://myaishome.com/models/{model_id}.html"
+      "url":"https://myaishome.com/models/{model_id}"
+    }}
+    </script>
+    <script type="application/ld+json">
+    {{
+      "@context":"https://schema.org",
+      "@type":"FAQPage",
+      "mainEntity":[
+        {{"@type":"Question","name":"{model_name} 免费吗？价格多少？","acceptedAnswer":{{"@type":"Answer","text":"{m.get('priceLabel','')}。{m.get('priceDetail','')}"}}}},
+        {{"@type":"Question","name":"{model_name} 适合做什么？","acceptedAnswer":{{"@type":"Answer","text":"{m.get('bestFor','')}。{m.get('strengths','')}"}}}},
+        {{"@type":"Question","name":"怎么开始用 {model_name}？","acceptedAnswer":{{"@type":"Answer","text":"点击页面顶部「访问官网」注册即可；也可以在 AI家AI户 的「模型库」里把它和其他模型横向对比后再决定。"}}}}
+      ]
     }}
     </script>
 </head>
@@ -232,6 +243,15 @@ def generate_page(m, all_models, model_map):
         </div>
         <div style="text-align:center;margin-top:16px;">
             <a href="../compare.html" class="detail-cta" style="display:inline-block;" data-i18n="detail.compareAll">查看全部横评 →</a>
+        </div>
+    </section>
+
+    <section class="detail-section">
+        <h2>常见问题</h2>
+        <div class="faq-list">
+            <details class="faq"><summary>Q：{model_name} 免费吗？价格多少？</summary><p>A：{m.get('priceLabel','')}。{m.get('priceDetail','')}</p></details>
+            <details class="faq"><summary>Q：{model_name} 适合做什么？</summary><p>A：{m.get('bestFor','')}。{m.get('strengths','')}</p></details>
+            <details class="faq"><summary>Q：怎么开始用 {model_name}？</summary><p>A：点击页面顶部「访问官网」注册即可；也可以在 AI家AI户 的「模型库」里把它和其他模型横向对比后再决定。</p></details>
         </div>
     </section>
 
