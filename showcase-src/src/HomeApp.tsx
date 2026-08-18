@@ -4,6 +4,7 @@ import { HoverCard } from "./components/ui/hover-card";
 import { Magnetic } from "./components/ui/magnetic";
 import { InkLink } from "./components/ui/ink-link";
 import { HomeSearch } from "./components/HomeSearch";
+import { MatrixRain } from "./components/MatrixRain";
 import {
   Brain,
   Image as ImageIcon,
@@ -372,6 +373,8 @@ export default function App() {
             backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E")`,
           }}
         />
+        {/* Matrix rain background (deep section only) */}
+        <MatrixRain className="opacity-70" />
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
           <span className="inline-block px-3 py-1 rounded-full text-xs font-medium bg-[#E8542C]/20 text-[#E8542C] mb-6">
             彩蛋玩法
