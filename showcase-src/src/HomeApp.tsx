@@ -330,15 +330,15 @@ export default function App() {
           </div>
         </div>
 
-        {/* Horizontal scroll row — 与上方标题/网格两端对齐 */}
-        <div className="overflow-x-auto scrollbar-hide max-w-6xl mx-auto px-6">
-          <div className="flex gap-5 pb-4" style={{ width: "max-content" }}>
+        {/* Grid: 2 rows × 3 cols, responsive (1 col mobile, 2 tablet, 3 desktop) */}
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
             {blogPosts.map((post, i) => (
               <a
                 key={post.title}
                 href={post.href}
-                className="group flex-shrink-0 w-80 rounded-2xl border border-[#E8DFD3] bg-white/50 backdrop-blur-sm p-6 hover:border-[#E8542C]/40 hover:shadow-[0_15px_50px_-15px_rgba(232,84,44,0.12)] transition-all duration-300"
-                style={{ transform: i % 2 === 0 ? "rotate(-0.5deg)" : "rotate(0.5deg)" }}
+                className="group flex flex-col rounded-2xl border border-[#E8DFD3] bg-white/50 backdrop-blur-sm p-6 hover:border-[#E8542C]/40 hover:shadow-[0_15px_50px_-15px_rgba(232,84,44,0.12)] transition-all duration-300"
+                style={{ transform: i % 2 === 0 ? "rotate(-0.3deg)" : "rotate(0.3deg)" }}
               >
                 <span className="inline-block px-2.5 py-0.5 rounded-full text-xs font-medium bg-[#E8542C]/10 text-[#E8542C] mb-4">
                   {post.tag}
