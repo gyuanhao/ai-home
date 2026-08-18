@@ -1,0 +1,137 @@
+/* ============================================================
+   AI家AI户 · 全站设计系统 design-system.css
+   ============================================================
+   阶段0：从首页/展示馆抽取的统一视觉 token + 组件皮肤。
+   用途：静态详情页/内容页换肤时引用（<link> 此文件），
+        保证全站与首页（暖纸白反SaaS美学）视觉一致。
+   配色：暖纸白 #FAF7F2 · 墨黑 #1A1A1A · 柿子橙 #E8542C · 鼠尾草绿 #4A7C59 · 沙金 #D4A574
+   ============================================================ */
+
+:root {
+  /* ── 品牌色 ── */
+  --ds-bg: #FAF7F2;            /* 暖纸白 · 页面底色 */
+  --ds-bg-card: #FFFFFF;       /* 卡片面 */
+  --ds-bg-soft: #F3EDE4;       /* 浅浮雕面 */
+  --ds-ink: #1A1A1A;           /* 墨黑 · 主文字 */
+  --ds-ink-soft: #475569;      /* 次级文字 */
+  --ds-ink-faint: #64748B;     /* 弱提示文字 */
+  --ds-orange: #E8542C;        /* 柿子橙 · 强调/主行动 */
+  --ds-orange-soft: rgba(232, 84, 44, 0.10);
+  --ds-sage: #4A7C59;          /* 鼠尾草绿 · 次级强调 */
+  --ds-sage-soft: rgba(74, 124, 89, 0.10);
+  --ds-sand: #D4A574;          /* 沙金 · 三级强调 */
+  --ds-line: #E8DFD3;          /* 分隔线/描边 */
+
+  /* ── 字体 ── */
+  --ds-font: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", system-ui, -apple-system, sans-serif;
+
+  /* ── 圆角 ── */
+  --ds-radius-sm: 10px;
+  --ds-radius: 14px;
+  --ds-radius-lg: 20px;
+  --ds-radius-full: 999px;
+
+  /* ── 阴影（暖色柔影，非冷灰） ── */
+  --ds-shadow-sm: 0 1px 2px rgba(26, 26, 26, 0.05);
+  --ds-shadow: 0 8px 30px -12px rgba(26, 26, 26, 0.12);
+  --ds-shadow-orange: 0 14px 44px -16px rgba(232, 84, 44, 0.18);
+
+  /* ── 动效 ── */
+  --ds-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --ds-dur: 0.3s;
+}
+
+/* ── 基础：背景层次（噪声 + 色块，非纯平） ── */
+body {
+  background-color: var(--ds-bg);
+  color: var(--ds-ink);
+  font-family: var(--ds-font);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  background-image:
+    radial-gradient(600px 400px at 8% 4%, rgba(232, 84, 44, 0.06), transparent 70%),
+    radial-gradient(500px 380px at 92% 12%, rgba(74, 124, 89, 0.05), transparent 70%),
+    radial-gradient(700px 500px at 55% 90%, rgba(212, 165, 116, 0.06), transparent 70%);
+  background-attachment: fixed;
+}
+
+/* ── 排版 ── */
+.ds-h1 { font-size: 28px; font-weight: 800; letter-spacing: -0.02em; line-height: 1.2; }
+.ds-h2 { font-size: 22px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.3; }
+.ds-h3 { font-size: 17px; font-weight: 600; line-height: 1.4; }
+.ds-body { font-size: 15px; color: var(--ds-ink-soft); }
+.ds-muted { font-size: 13px; color: var(--ds-ink-faint); }
+.ds-link {
+  color: var(--ds-orange);
+  text-decoration: none;
+  border-bottom: 1.5px solid rgba(232, 84, 44, 0.25);
+  transition: border-color var(--ds-dur) var(--ds-ease), color var(--ds-dur) var(--ds-ease);
+}
+.ds-link:hover { border-bottom-color: var(--ds-orange); }
+
+/* ── 卡片（通用） ── */
+.ds-card {
+  background: var(--ds-bg-card);
+  border: 1px solid var(--ds-line);
+  border-radius: var(--ds-radius);
+  box-shadow: var(--ds-shadow-sm);
+  transition: transform var(--ds-dur) var(--ds-ease), box-shadow var(--ds-dur) var(--ds-ease), border-color var(--ds-dur) var(--ds-ease);
+}
+.ds-card:hover {
+  border-color: rgba(232, 84, 44, 0.35);
+  box-shadow: var(--ds-shadow-orange);
+  transform: translateY(-2px);
+}
+
+/* ── 按钮 ── */
+.ds-btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 9px 18px;
+  border-radius: var(--ds-radius-full);
+  font-size: 14px; font-weight: 600;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background-color var(--ds-dur) var(--ds-ease), color var(--ds-dur) var(--ds-ease), border-color var(--ds-dur) var(--ds-ease);
+}
+.ds-btn-primary { background: var(--ds-orange); color: #fff; }
+.ds-btn-primary:hover { background: var(--ds-ink); }
+.ds-btn-ghost { background: transparent; color: var(--ds-ink); border-color: rgba(26, 26, 26, 0.18); }
+.ds-btn-ghost:hover { color: var(--ds-orange); border-color: var(--ds-orange); }
+
+/* ── 标签 chip ── */
+.ds-chip {
+  display: inline-block;
+  padding: 3px 11px;
+  border-radius: var(--ds-radius-full);
+  font-size: 12px; font-weight: 500;
+  background: var(--ds-orange-soft); color: var(--ds-orange);
+  border: 1px solid rgba(232, 84, 44, 0.22);
+}
+.ds-chip-sage { background: var(--ds-sage-soft); color: var(--ds-sage); border-color: rgba(74, 124, 89, 0.22); }
+
+/* ── 详情/对比表 ── */
+.ds-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.ds-table th, .ds-table td {
+  padding: 10px 14px; text-align: left;
+  border-bottom: 1px solid var(--ds-line);
+  vertical-align: top;
+}
+.ds-table th { font-weight: 600; background: var(--ds-bg-soft); white-space: nowrap; }
+.ds-table tr:last-child th, .ds-table tr:last-child td { border-bottom: none; }
+
+/* ── 手绘下划线标题（首页风格） ── */
+.ds-underline-title { position: relative; display: inline-block; }
+.ds-underline-title::after {
+  content: "";
+  position: absolute; left: 0; bottom: -4px;
+  width: 100%; height: 6px;
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 8C40 3 80 4 120 6S180 9 198 4' fill='none' stroke='%23E8542C' stroke-width='2.5' stroke-linecap='round' opacity='0.5'/%3E%3C/svg%3E") no-repeat center / 100% 100%;
+}
+
+/* ── 尊重减少动效偏好 ── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
