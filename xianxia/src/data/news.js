@@ -7,6 +7,126 @@ window.AIHome = window.AIHome || {};
 
 AIHome.NEWS = [
   {
+    "title": "智象未来发布交互式世界模型 HiDream-O1-World，WBench 登顶",
+    "url": "https://k.sina.com.cn/article_5953740931_162dee08306703v61y.html",
+    "date": "08-18",
+    "source": "新浪科技"
+  },
+  {
+    "title": "阿里发布 AI 音乐模型 HappyShrimp，一句话生成整首歌",
+    "url": "https://news.qq.com/rain/a/20260817A0C84X00",
+    "date": "08-18",
+    "source": "腾讯新闻"
+  },
+  {
+    "title": "支付宝发布国内首个全栈智能体商业底座与 AHA 互联协议",
+    "url": "https://www.163.com/dy/article/L4I7292S05568W0A.html",
+    "date": "08-18",
+    "source": "网易科技"
+  },
+  {
+    "title": "Stripe 逾 70 亿美元收购 AI 模型网关 OpenRouter",
+    "url": "https://www.163.com/dy/article/L4JPMQM20534A4SC.html",
+    "date": "08-18",
+    "source": "界面新闻"
+  },
+  {
+    "title": "Anthropic Claude 突发大规模宕机，网页与 Claude Code 受影响",
+    "url": "https://view.inews.qq.com/a/20260817A05RXB00",
+    "date": "08-18",
+    "source": "太平洋科技"
+  },
+  {
+    "title": "宇树发布「超人」人形机器人，原地跳高 2 米破人类纪录",
+    "url": "https://view.inews.qq.com/a/20260817A07EOX00",
+    "date": "08-18",
+    "source": "腾讯新闻"
+  },
+  {
+    "title": "梅卡曼德通过港交所聆讯，冲刺「具身眼脑手第一股」",
+    "url": "https://view.inews.qq.com/a/20260817A0B7CX00",
+    "date": "08-18",
+    "source": "腾讯新闻"
+  },
+  {
+    "title": "香港九光发布小睿 G3 人形机器人，可平稳搬运 50 公斤",
+    "url": "https://view.inews.qq.com/a/20260817A0DMLX00",
+    "date": "08-18",
+    "source": "腾讯新闻"
+  },
+  {
+    "title": "AI 视频平台 Higgsfield 融资 4 亿美元，估值升至 54 亿",
+    "url": "https://www.163.com/dy/article/L4JMA6GA05562DGT.html",
+    "date": "08-18",
+    "source": "极新"
+  },
+  {
+    "title": "觅蜂科技获中国电信领投数亿元融资，破解具身「数据荒漠」",
+    "url": "https://www.cnstock.com/commonDetail/761197",
+    "date": "08-18",
+    "source": "上海证券报"
+  },
+  {
+    "title": "智谱发布 GLM-5.3，后训练 Scaling 让编程能力跃升约 50%",
+    "url": "https://news.qq.com/rain/a/20260814A0955I00",
+    "date": "08-17",
+    "source": "腾讯新闻"
+  },
+  {
+    "title": "阿里开源 Qwen3.8-27B，270 亿参数单卡即可本地部署",
+    "url": "https://new.qq.com/rain/a/20260815A00U2S00?refer=cp_1009",
+    "date": "08-17",
+    "source": "腾讯新闻 / 智东西"
+  },
+  {
+    "title": "OpenAI 推 Ultrafast 模式，GPT-5.6 Sol 推理提速 14 倍",
+    "url": "https://new.qq.com/rain/a/20260817A07OI100?refer=cp_1009",
+    "date": "08-17",
+    "source": "腾讯新闻"
+  },
+  {
+    "title": "Anthropic 发布 186 页风险报告，预警智能体互害",
+    "url": "https://view.inews.qq.com/a/20260815A071NO00",
+    "date": "08-17",
+    "source": "腾讯新闻 / DeepTech"
+  },
+  {
+    "title": "苹果联合阿里训练国行专属模型，Apple Intelligence 落地在即",
+    "url": "https://news.qq.com/rain/a/20260817A062QC00",
+    "date": "08-17",
+    "source": "腾讯新闻 / 太平洋科技"
+  },
+  {
+    "title": "办公 Agent 走向模型聚合，千问办公/库库AI/WorkBuddy/TRAE 四国杀",
+    "url": "https://www.huxiu.com/article/4883413.html",
+    "date": "08-17",
+    "source": "虎嗅"
+  },
+  {
+    "title": "Anthropic 拟 60 亿美元收购以色列 AI 公司 Decart",
+    "url": "https://view.inews.qq.com/a/20260816A0877200",
+    "date": "08-17",
+    "source": "币界网 / 彭博"
+  },
+  {
+    "title": "小红书开源 dots3-note 生活向大模型，华为昇腾当天适配",
+    "url": "https://new.qq.com/rain/a/20260816A04TE800?refer=cp_1009",
+    "date": "08-17",
+    "source": "腾讯新闻 / IT之家"
+  },
+  {
+    "title": "第二届世界人形机器人运动会 8/22 北京开幕",
+    "url": "https://big5.cri.cn/gate/big5/city.cri.cn/20260814/3f0abc9f-4382-4013-8e11-b8daf6790864.html",
+    "date": "08-17",
+    "source": "人民网 / 国际在线"
+  },
+  {
+    "title": "张一鸣明确反对把蒸馏当捷径，字节坚定大模型自研",
+    "url": "https://www.163.com/dy/article/L4DC181G05561FZY.html",
+    "date": "08-17",
+    "source": "网易 / 文伯虎财经"
+  },
+  {
     "title": "DeepSeek 开源 Harness 智能体框架，补齐 Vibe Coding 入口",
     "url": "https://www.nbd.com.cn/articles/2026-08-14/4541621.html",
     "date": "08-14",
