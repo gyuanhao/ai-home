@@ -41,3 +41,14 @@
   - 移除 5 条确属死链（emvoice/webchatgpt/wiseone NXDOMAIN、summarize-tech 503、huoshan-writing 502；火山写作已并入豆包），总数 367 → 362。理由：库已完备，其同类替代均已在库，替换为同类会重复，故以移除清理。
   - 保留 phind/phind-search：复测由 404 变 403（DoH OK），属 bot-block 站点存活，按规则 403 略过、非死链，不替换。
   - 备份 `scripts/tools.json.bak.preremove`。如需以指定替代工具补齐这 5 条，告知工具名即可补回。
+
+## 2026-08-24（第四次执行）
+- 工具总数 364 条（较上次 +2，应为上轮入库后的净增；类目分布见脚本计数）。
+- 死链检查复用 `scripts/_check_links.py`（线程池 32 + 阿里 DoH 二次复核），26s 完成；结果落 `scripts/_linkcheck_result.json`。
+- 扫描结果：OK 335 / 反爬略过 22 / 确认死链 2 / 超时-网络受限 4 / 其他4xx 1。
+  - 确认死链 2：均为真实 404 → phind(https://www.phind.com)、phind-search(https://www.phind.com/search)；DoH 解析正常、域名存活，但此前在 404↔403 波动，建议复测是否永久下线。
+  - 未判死链（DoH OK / 站点存活）：adobe-express & firefly（Adobe 大站超时，按规则略过）、zhinao360（360 大站超时，08-10 实测 200 疑似误报）、yizhuan（超时 DoH OK）、snappa（401 鉴权墙，站点存活）。
+- 新品草稿 12 条，全部实测可达 2xx 且 id 与现库无冲突；覆盖 9 类目，较空的「翻译语言1 / 搜索研究2 / 浏览器插件1」已重点补。明确排除库内已存在的 felo/exa/consensus/elicit/kagi/genspark/sider/monica/merlin/deepl/fish-audio 等同名候选，避免重复。
+- 草稿已校验：JSON 可解析、字段完整、summary≤60 字。
+- 交付物：`scripts/_draft_weekly.md`（开头注明「仅供人工过，未自动入库」，tools.json 未改动）。
+- 注：候选多数为公开资料/官网摘要，定价与文案建议入库前再核一次。

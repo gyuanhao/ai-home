@@ -145,3 +145,18 @@
 - 提交+推送：git commit + `git push origin main`，GitHub → Cloudflare Pages 自动构建上线 myaishome.com。提交含 js/news-data.js / _draft_news.md（重置「已发布」占位）/ 本 memory.md / 当日工作日志；临时校验脚本已删。
 - 验证：raw.githubusercontent.com 含 2026-08-18；myaishome.com cache-bust 确认首项 2026-08-18、total_days=36 → 部署成功。
 - 经验：每日 09:00 自动化会直接覆盖工作区草稿；若存在未入库的多天积压（如 8/15–8/17 缺口），应在下次运行前完成部署，否则较早那天的草稿会被静默覆盖、且永不进 news-data.js。
+
+## 2026-08-24 (周一) — 第十六次运行
+- **运行缺口**：8/19–8/23 自动化未运行（中间 5 天无草稿产出）；news-data.js 首项仍为 2026-08-18。本草稿仅产出 2026-08-24 当天，并在草稿开头注明「8/19–8/23 未运行，部署时按 8/24 顺序 prepend 即可，无需补中间日期」。
+- 产出草稿：scripts/_draft_news.md（10 条，日期 2026-08-24，display「8月24日」，weekday「周一」）。
+- 选题主线（8/21–8/24 新增，10 条）：阿里港股配售800亿投全栈AI基建(证券时报)、字节豆包将推独立办公App对标WorkBuddy(腾讯新闻)、DeepSeek V4 Flash Vision-Exp多模态上线(腾讯新闻)、Anthropic四大Agent工具转GA含Computer Use/Skills/Files(官方)、科大讯飞将发全国产算力主力通用大模型(新浪财经)、五部门《AI拟人化互动服务管理暂行办法》施行(人民日报海外版)、雷鸟iO AI眼镜2499元无摄像头全天候记忆(智东西)、OpenAI开源Codex Harness(53AI)、开源模型Vercel Token份额两月翻倍至62%(网易科技)、英伟达AI服务器将涨价超15%(量子位)。
+- 去重：刻意避开已入库的 8/17–8/18 选题（GLM-5.3、Qwen3.8-27B、小红书dots3-note、世界人形机器人运动会8/22开幕、HiDream、阿里HappyShrimp、支付宝底座、Stripe收OpenRouter、Claude宕机、宇树超人、梅卡曼德、九光小睿、Higgsfield、觅蜂等）及更早历史；选题均为 8/21 之后且不与 168 条历史标题碰撞。
+- 流程：node 临时脚本（scripts/_check_draft_tmp.js，跑完即删）校验通过——JSON 合法、字段顺序与 window.AIHomeNews 一致、摘要 34–50 字全部 ≤60、URL 全 https、与 168 条历史标题 0 碰撞、FFFD 0。10 个候选 URL curl 校验 9 个返回 200；xinhuanet.com 沙箱出口 403（WAF 拦截、真实可访问），已替换为同样权威且可达的 智东西 163 链接（200）。
+- 未改动 js/news-data.js 或其它正式文件，未执行 git、未部署；仅覆盖 scripts/_draft_news.md。
+
+### 2026-08-24 部署上线（用户追加「将新资讯部署上线」）
+- 注入：node 临时脚本 scripts/_inject_news_tmp.js（从草稿 ```js 块 JSON.parse 出新 day 对象，直接 prepend 至 window.AIHomeNews 数组最前，复用 0/4/6/8 缩进；跑完即删）。已校验：新 date=2026-08-24 为最新、与既有 0 重复、所有 url=https、摘要≤60、FFFD 0。
+- 完整校验（vm 沙箱 eval + node --check）：总天数 37、首项 2026-08-24（10 条）/ 次项 2026-08-18、语法 OK、FFFD 0、坏 url/摘要=0。
+- 提交+推送：git add js/news-data.js scripts/_draft_news.md → git commit "news: 部署 2026-08-24 每日AI资讯（10条）上线" → `git push origin main`（commit 1f3864e，+70/−8）。草稿重置为「已发布」占位；自动化 memory 的 8/18 节里提到的当日工作日志未涉及本步。
+- 验证：Cloudflare Pages 构建约 45s 后，myaishome.com/js/news-data.js?cb= 首项确认为 2026-08-24、次项 2026-08-18 → 部署成功。
+- 经验：注入脚本从草稿 JSON.parse 比手写转义更稳，杜绝 FFFD 与缩进漂移；push 后需等构建（~45s）再 cache-bust 验证，首查若仍显示旧日期属正常传播时延。
