@@ -7,6 +7,73 @@
  */
 window.AIHomeNews = [
 {
+    "date": "2026-08-24",
+    "display": "8月24日",
+    "weekday": "周一",
+    "items": [
+      {
+        "title": "阿里巴巴港股配售800亿港元，全额投入全栈AI基建",
+        "url": "https://www.stcn.com/article/detail/4103803.html",
+        "summary": "2019年港股上市以来首次新股配售，净额797亿全投算力、模型与商业化。",
+        "source": "证券时报"
+      },
+      {
+        "title": "字节豆包将推独立办公App，对标腾讯WorkBuddy",
+        "url": "https://news.qq.com/rain/a/20260823A0AR8800?adChannelId=news_news_tech",
+        "summary": "从豆包工作任务模式拆分，连飞书钉钉企微，抢占桌面Agent入口。",
+        "source": "腾讯新闻"
+      },
+      {
+        "title": "DeepSeek V4 Flash Vision-Exp上线，补齐多模态视觉",
+        "url": "https://new.qq.com/rain/a/20260821A0BGU500?refer=cp_1009",
+        "summary": "实验版支持图文混合输入，多模态Agent能力接近Opus-4.8。",
+        "source": "腾讯新闻"
+      },
+      {
+        "title": "Anthropic四大Agent工具转GA：Computer Use/Skills/Files",
+        "url": "https://claude.com/blog/computer-use-skills-api-files-api",
+        "summary": "Computer Use、Skills、Files API与浏览器工具正式可用，单次多动作降本。",
+        "source": "Anthropic官方"
+      },
+      {
+        "title": "科大讯飞将发全国产算力主力通用大模型",
+        "url": "https://finance.sina.com.cn/jjxw/2026-08-24/doc-inipkkzx0132517.shtml",
+        "summary": "1024开发者节正式发布，8月底先出阶段版，代码与性价比冲国内第一梯队。",
+        "source": "新浪财经"
+      },
+      {
+        "title": "五部门《AI拟人化互动服务管理暂行办法》施行",
+        "url": "https://www.163.com/dy/article/L4SHTE1D0514R9OJ.html",
+        "summary": "划清AI陪伴边界，禁替代人际交往，未成年人防沉迷与数据保护升级。",
+        "source": "人民日报海外版"
+      },
+      {
+        "title": "雷鸟发布iO AI眼镜：2499元、无摄像头、全天候记忆",
+        "url": "https://www.163.com/dy/article/L4SJSNRE051180F7.html",
+        "summary": "34克双目显示，接DeepSeek与千问，记24小时上下文，隐私灯硬件绑定。",
+        "source": "智东西"
+      },
+      {
+        "title": "OpenAI开源Codex Harness，Agent运行框架对外开放",
+        "url": "https://www.53ai.com/news/OpenSourceLLM/2026082394631.html",
+        "summary": "Apache-2.0放出Agent Loop、SDK与app-server，同模型换框架成绩近三倍。",
+        "source": "53AI"
+      },
+      {
+        "title": "开源模型在Vercel平台Token份额两月翻倍至62%",
+        "url": "https://www.163.com/dy/article/L52AED2G05561FZX.html",
+        "summary": "8月22日开放权重占62%，较两月前28%跃升，开源逼近闭源性能。",
+        "source": "网易科技"
+      },
+      {
+        "title": "英伟达AI服务器将涨价超15%，2027年初生效",
+        "url": "https://www.163.com/dy/article/L51KLI6E0511DSSR.html",
+        "summary": "受DRAM/HBM成本飙升推动，Vera Rubin与Blackwell系统涨价，倒逼自研芯片。",
+        "source": "量子位"
+      }
+    ]
+},
+{
     "date": "2026-08-18",
     "display": "8月18日",
     "weekday": "周二",
