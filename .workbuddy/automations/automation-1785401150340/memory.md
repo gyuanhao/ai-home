@@ -52,3 +52,8 @@
 - 草稿已校验：JSON 可解析、字段完整、summary≤60 字。
 - 交付物：`scripts/_draft_weekly.md`（开头注明「仅供人工过，未自动入库」，tools.json 未改动）。
 - 注：候选多数为公开资料/官网摘要，定价与文案建议入库前再核一次。
+- **同日二次指令「死链替换/移除 + 候选上线部署」已执行并验证**：
+  - 移除 `phind`/`phind-search`（多源确认 2026-01-16 永久关停，无可用替代 URL）。
+  - 12 条草稿候选全部入库（修 `strengths`/`weaknesses` 为分号字符串，规避生成脚本类型错误）；重新生成 `tools/<id>.html`；`index.html` 英雄区改「374 个工具」。
+  - 提交 `1ccbc9e` 并 `git push origin main`（Cloudflare Pages 自动构建）。
+  - **线上复测确认生效**：`tools.json` 解析 374 条、phind 已移除、12 新工具 12/12 存在；首页「374 个工具」；新详情页 307→200 正常。**无残留差异，本次维护闭环。**
