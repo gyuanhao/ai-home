@@ -1,4 +1,8 @@
 # AI家AI户·每日资讯草稿（已发布占位）
 
-> 本草稿已于 2026-08-24 部署上线：2026-08-24 当天 10 条已 prepend 进 `js/news-data.js` 数组最前。
-> 次日运行将自动覆盖本文件生成新草稿。请勿手动编辑本文件。
+本文件由每日 09:00 自动化任务覆盖写入当日草稿。
+
+最近一次已部署：2026-08-25（周二，10 条）——
+已 prepend 进 `js/news-data.js` 数组最前（days=38，首项 2026-08-25），
+并已 `git push origin main` 上线 myaishome.com，同时按 `xianxia/SYNC.md`
+跑 `python xianxia/scripts/sync_xianxia.py` 同步仙侠站（仅 `xianxia/src/data/news.js` 变化）。

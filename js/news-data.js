@@ -7,6 +7,73 @@
  */
 window.AIHomeNews = [
 {
+    "date": "2026-08-25",
+    "display": "8月25日",
+    "weekday": "周二",
+    "items": [
+      {
+        "title": "Anthropic两款新模型marshmallow与melon曝光，对话体验或超Opus 5",
+        "url": "https://k.sina.com.cn/article_5952915705_162d248f906703m5qw.html",
+        "summary": "开发者在API发现marshmallow与melon新代号，早期实测对话体验超越Opus 5。",
+        "source": "新浪科技 / 机器之心"
+      },
+      {
+        "title": "小鹏机器人首轮融资超9亿美元，估值63亿美元刷新中国具身智能纪录",
+        "url": "https://caifuhao.eastmoney.com/news/20260824185327921768400",
+        "summary": "小鹏人形机器人完成首轮超9亿美元融资，投后估值63亿美元创行业纪录。",
+        "source": "东方财富"
+      },
+      {
+        "title": "Hugging Face探索出售，估值或超130亿美元",
+        "url": "https://mp.weixin.qq.com/s/x-oeHI4HhU8Qs963LGKAag",
+        "summary": "全球最大开源AI社区Hugging Face被曝寻求出售，交易估值或超过130亿美元。",
+        "source": "腾讯研究院 / 财讯"
+      },
+      {
+        "title": "2026世界机器人大会闭幕，上半年人形机器人出货超4万台",
+        "url": "https://www.worldrobotconference.com/news/3616.html",
+        "summary": "2026世界机器人大会闭幕，373家企业首发311款新品，上半年人形机器人出货超4万台。",
+        "source": "世界机器人大会 / IT之家"
+      },
+      {
+        "title": "软银创纪录发债1万亿日元押注AI，全球科技巨头集体借钱狂奔",
+        "url": "https://news.qq.com/rain/a/20260824A0CDRA00",
+        "summary": "软银拟发1万亿日元7年期债券押注AI，资金投向OpenAI追加投资等。",
+        "source": "腾讯新闻"
+      },
+      {
+        "title": "国产AI编程工具冲进全球第一梯队，Kimi K3前端代码评测登顶",
+        "url": "https://news.qq.com/rain/a/20260824A0C49N00",
+        "summary": "腾讯新闻报道国产AI编程工具跻身全球第一梯队，Kimi K3前端代码评测登顶。",
+        "source": "腾讯新闻"
+      },
+      {
+        "title": "天工Ultra机器人400米跑38.15秒，打破人类世界纪录",
+        "url": "https://new.qq.com/rain/a/20260825A000WX00?refer=cp_1009",
+        "summary": "天工Ultra以38.15秒跑完400米，超越人类43.03秒世界纪录并夺冠。",
+        "source": "腾讯新闻 / 新京报"
+      },
+      {
+        "title": "阿里视频大模型Wan3.0正式上线，支持文档生视频",
+        "url": "https://view.inews.qq.com/a/20260824A0C8DO00",
+        "summary": "阿里Wan3.0视频模型上线，支持文档生视频，单次可生成30秒片段。",
+        "source": "腾讯新闻"
+      },
+      {
+        "title": "OpenAI吸纳Instant团队，补齐智能体跨会话持久记忆",
+        "url": "https://runtimewire.com/article/instant-team-joins-openai-cloud-shutdown",
+        "summary": "OpenAI吸纳Instant团队，为Agent补齐跨会话持久记忆与状态管理层。",
+        "source": "RuntimeWire"
+      },
+      {
+        "title": "英伟达与Poolside签60亿美元授权，收编工程师加码开源Nemotron",
+        "url": "https://so.html5.qq.com/page/real/search_news?docid=70000021_3456a8be55e97752",
+        "summary": "英伟达与Poolside签60亿美元授权，收编百名工程师加码开源Nemotron。",
+        "source": "环球网科技 / 网易"
+      }
+    ]
+  },
+{
     "date": "2026-08-24",
     "display": "8月24日",
     "weekday": "周一",

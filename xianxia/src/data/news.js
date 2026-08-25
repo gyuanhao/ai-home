@@ -7,6 +7,126 @@ window.AIHome = window.AIHome || {};
 
 AIHome.NEWS = [
   {
+    "title": "Anthropic两款新模型marshmallow与melon曝光，对话体验或超Opus 5",
+    "url": "https://k.sina.com.cn/article_5952915705_162d248f906703m5qw.html",
+    "date": "08-25",
+    "source": "新浪科技 / 机器之心"
+  },
+  {
+    "title": "小鹏机器人首轮融资超9亿美元，估值63亿美元刷新中国具身智能纪录",
+    "url": "https://caifuhao.eastmoney.com/news/20260824185327921768400",
+    "date": "08-25",
+    "source": "东方财富"
+  },
+  {
+    "title": "Hugging Face探索出售，估值或超130亿美元",
+    "url": "https://mp.weixin.qq.com/s/x-oeHI4HhU8Qs963LGKAag",
+    "date": "08-25",
+    "source": "腾讯研究院 / 财讯"
+  },
+  {
+    "title": "2026世界机器人大会闭幕，上半年人形机器人出货超4万台",
+    "url": "https://www.worldrobotconference.com/news/3616.html",
+    "date": "08-25",
+    "source": "世界机器人大会 / IT之家"
+  },
+  {
+    "title": "软银创纪录发债1万亿日元押注AI，全球科技巨头集体借钱狂奔",
+    "url": "https://news.qq.com/rain/a/20260824A0CDRA00",
+    "date": "08-25",
+    "source": "腾讯新闻"
+  },
+  {
+    "title": "国产AI编程工具冲进全球第一梯队，Kimi K3前端代码评测登顶",
+    "url": "https://news.qq.com/rain/a/20260824A0C49N00",
+    "date": "08-25",
+    "source": "腾讯新闻"
+  },
+  {
+    "title": "天工Ultra机器人400米跑38.15秒，打破人类世界纪录",
+    "url": "https://new.qq.com/rain/a/20260825A000WX00?refer=cp_1009",
+    "date": "08-25",
+    "source": "腾讯新闻 / 新京报"
+  },
+  {
+    "title": "阿里视频大模型Wan3.0正式上线，支持文档生视频",
+    "url": "https://view.inews.qq.com/a/20260824A0C8DO00",
+    "date": "08-25",
+    "source": "腾讯新闻"
+  },
+  {
+    "title": "OpenAI吸纳Instant团队，补齐智能体跨会话持久记忆",
+    "url": "https://runtimewire.com/article/instant-team-joins-openai-cloud-shutdown",
+    "date": "08-25",
+    "source": "RuntimeWire"
+  },
+  {
+    "title": "英伟达与Poolside签60亿美元授权，收编工程师加码开源Nemotron",
+    "url": "https://so.html5.qq.com/page/real/search_news?docid=70000021_3456a8be55e97752",
+    "date": "08-25",
+    "source": "环球网科技 / 网易"
+  },
+  {
+    "title": "阿里巴巴港股配售800亿港元，全额投入全栈AI基建",
+    "url": "https://www.stcn.com/article/detail/4103803.html",
+    "date": "08-24",
+    "source": "证券时报"
+  },
+  {
+    "title": "字节豆包将推独立办公App，对标腾讯WorkBuddy",
+    "url": "https://news.qq.com/rain/a/20260823A0AR8800?adChannelId=news_news_tech",
+    "date": "08-24",
+    "source": "腾讯新闻"
+  },
+  {
+    "title": "DeepSeek V4 Flash Vision-Exp上线，补齐多模态视觉",
+    "url": "https://new.qq.com/rain/a/20260821A0BGU500?refer=cp_1009",
+    "date": "08-24",
+    "source": "腾讯新闻"
+  },
+  {
+    "title": "Anthropic四大Agent工具转GA：Computer Use/Skills/Files",
+    "url": "https://claude.com/blog/computer-use-skills-api-files-api",
+    "date": "08-24",
+    "source": "Anthropic官方"
+  },
+  {
+    "title": "科大讯飞将发全国产算力主力通用大模型",
+    "url": "https://finance.sina.com.cn/jjxw/2026-08-24/doc-inipkkzx0132517.shtml",
+    "date": "08-24",
+    "source": "新浪财经"
+  },
+  {
+    "title": "五部门《AI拟人化互动服务管理暂行办法》施行",
+    "url": "https://www.163.com/dy/article/L4SHTE1D0514R9OJ.html",
+    "date": "08-24",
+    "source": "人民日报海外版"
+  },
+  {
+    "title": "雷鸟发布iO AI眼镜：2499元、无摄像头、全天候记忆",
+    "url": "https://www.163.com/dy/article/L4SJSNRE051180F7.html",
+    "date": "08-24",
+    "source": "智东西"
+  },
+  {
+    "title": "OpenAI开源Codex Harness，Agent运行框架对外开放",
+    "url": "https://www.53ai.com/news/OpenSourceLLM/2026082394631.html",
+    "date": "08-24",
+    "source": "53AI"
+  },
+  {
+    "title": "开源模型在Vercel平台Token份额两月翻倍至62%",
+    "url": "https://www.163.com/dy/article/L52AED2G05561FZX.html",
+    "date": "08-24",
+    "source": "网易科技"
+  },
+  {
+    "title": "英伟达AI服务器将涨价超15%，2027年初生效",
+    "url": "https://www.163.com/dy/article/L51KLI6E0511DSSR.html",
+    "date": "08-24",
+    "source": "量子位"
+  },
+  {
     "title": "智象未来发布交互式世界模型 HiDream-O1-World，WBench 登顶",
     "url": "https://k.sina.com.cn/article_5953740931_162dee08306703v61y.html",
     "date": "08-18",

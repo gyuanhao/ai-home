@@ -160,3 +160,11 @@
 - 提交+推送：git add js/news-data.js scripts/_draft_news.md → git commit "news: 部署 2026-08-24 每日AI资讯（10条）上线" → `git push origin main`（commit 1f3864e，+70/−8）。草稿重置为「已发布」占位；自动化 memory 的 8/18 节里提到的当日工作日志未涉及本步。
 - 验证：Cloudflare Pages 构建约 45s 后，myaishome.com/js/news-data.js?cb= 首项确认为 2026-08-24、次项 2026-08-18 → 部署成功。
 - 经验：注入脚本从草稿 JSON.parse 比手写转义更稳，杜绝 FFFD 与缩进漂移；push 后需等构建（~45s）再 cache-bust 验证，首查若仍显示旧日期属正常传播时延。
+
+## 2026-08-25 (周二) — 第十七次运行 + 部署上线
+- 产出草稿：scripts/_draft_news.md（10 条，日期 2026-08-25，display「8月25日」，weekday「周二」）。
+- 选题主线（8/23–8/25 新增）：Anthropic marshmallow/melon 新模型曝光(新浪/机器之心)、小鹏机器人首轮融资超9亿美元估值63亿(东方财富)、Hugging Face 探索出售估值超130亿(腾讯研究院/财讯)、2026世界机器人大会闭幕上半年人形出货超4万台(世界机器人大会/IT之家)、软银发债1万亿日元押注AI(腾讯新闻)、国产AI编程工具Kimi K3前端登顶(腾讯新闻)、天工Ultra 400米38.15秒破人类纪录(腾讯/新京报)、阿里Wan3.0视频模型上线支持文档生视频(腾讯新闻)、OpenAI吸纳Instant团队补智能体持久记忆(RuntimeWire)、英伟达与Poolside签60亿美元授权加码Nemotron(环球网/网易)。
+- 流程：10 个候选 URL curl 全 200；node 校验（JSON 合法、字段顺序一致、摘要34–47字≤60、URL全https、与178条历史标题0碰撞、FFFD 0）通过。
+- **部署上线（用户追加「上线部署」）**：node 临时脚本从草稿 JSON.parse 出 day 对象 → prepend 进 window.AIHomeNews 数组最前（复用 0/4/6/8 缩进）→ node --check + vm eval 校验（days=38、首项2026-08-25/次项2026-08-24、FFFD 0、坏url/摘要 0）。额外按 xianxia/SYNC.md 跑 `python xianxia/scripts/sync_xianxia.py`，仅 xianxia/src/data/news.js 变化（10 条新讯 date=08-25 已入），models/skills 重生成无 diff。
+- 提交+推送：git add js/news-data.js scripts/_draft_news.md xianxia/src/data/news.js 本memory → commit → `git push origin main`；Cloudflare Pages 自动构建（~45s）上线 myaishome.com 与 /xianxia。草稿重置为「已发布」占位，临时注入脚本已删。
+- 验证：cache-bust 确认 myaishome.com/js/news-data.js 首项 2026-08-25、xianxia/src/data/news.js 含 10 条 08-25 → 部署成功。
