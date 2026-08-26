@@ -71,7 +71,7 @@
 <section style="margin-bottom:28px;">
 <p>上次写完那个AI工具对比站之后，我这个小白上车也能冒充司机了，私下和线上也开始有人问编程工具的事。</p>
 <p>说实话，我主业是财务研究分析，虽然大学本科是工程类的背景，但是编程的技能还是纯属现学。不得不说这两年AI卷得离谱，龙虾还没吃明白就过气了。</p>
-<p>说回正题，我自己日常用的就两个：WorkBuddy 和 Claude Code。其余几个是朋友在用、或者技术圈子里讨论得多的，我把听来的也一起说说。不端水，有偏见就有偏见。</p>
+<p>说回正题，我自己日常用的就两个：WorkBuddy 和 <a href="../tools/claude.html">Claude</a> Code。其余几个是朋友在用、或者技术圈子里讨论得多的，我把听来的也一起说说。不端水，有偏见就有偏见。</p>
 </section>
 
 <section style="margin-bottom:28px;"><h2>先说 WorkBuddy</h2>
@@ -83,13 +83,13 @@
 <section style="margin-bottom:28px;"><h2>再说 Claude Code</h2>
 <p>Claude Code 和 WorkBuddy 是完全不同的东西。它是一个终端 Agent，你装好之后在命令行里调用，它能直接读你的项目结构、理解代码、然后帮你改。</p>
 <p>我用它做过什么？我做了一个小程序，目前还在等待审核中。整体用下来，对简单编程，还是非常省事的。我用 WorkBuddy 聊出了一个PRD，就直接在 Claude Code 中做出了一个 demo。过程中它会给出一些交互的建议，测试后还是比较惊喜的，另外在编译过程中出现的报错基本都能准确定位到。</p>
-<p>但它的缺点主要是使用上感觉开局会比 WorkBuddy 麻烦一些。我用的是在 VS Code 里调用 Claude Code，再用 CCSwitch 介入 DeepSeek 模型，因为内地和香港都不能直接用 Claude，所以自己评估了一下工作难度，其实国内的大模型区别应该不大了。但是不得不说，调用 DeepSeek API 的费用，比 WorkBuddy 不要省太多——我就充了 10 块钱，用了一个星期不到，小程序已经可以提交审核发布了，才用了 7 块多；反观 WorkBuddy，充个加量包一天没了。</p>
+<p>但它的缺点主要是使用上感觉开局会比 WorkBuddy 麻烦一些。我用的是在 VS Code 里调用 Claude Code，再用 CCSwitch 介入 <a href="../tools/deepseek.html">DeepSeek</a> 模型，因为内地和香港都不能直接用 Claude，所以自己评估了一下工作难度，其实国内的大模型区别应该不大了。但是不得不说，调用 DeepSeek API 的费用，比 WorkBuddy 不要省太多——我就充了 10 块钱，用了一个星期不到，小程序已经可以提交审核发布了，才用了 7 块多；反观 WorkBuddy，充个加量包一天没了。</p>
 <p>我自己的感受是：网上总说用其他 Agent 会觉得 AI 真强大，但是用 Claude 会觉得自己是个垃圾，我是有点不知道怎么体会，但是感觉确实蛮好用的，所以还要继续发掘背后的强大。</p></section>
 
 <section style="margin-bottom:28px;"><h2>剩下几个，我听圈子里说的</h2>
-<p><strong>Cursor</strong>，朋友圈里的评价很两极。有人说它是 2026 年最好的 AI IDE，没有之一，TAB 补全的准确率高到让人怀疑它在读你脑子。但另一边也有人说它"对新手不友好"——补全太激进了，看不懂代码的人容易被误导，接受一个看起来对但实际有 bug 的建议。价格是 $20/月，不是谁都愿意掏。而且最近有人在讨论 Cursor 在国内的模型限制问题，有人因为这个转去了 Windsurf。</p>
-<p><strong>GitHub Copilot</strong>，我听到的最多一句话是"公司花钱用，自己掏钱不买"。不是说它不好，而是它的核心价值在 GitHub 生态整合。如果你用 GitHub 做项目管理、CI/CD 那一套，确实无缝。但单论补全体验，很多人说不如 Cursor 聪明。Agent 模式今年开始推，能自动修 bug、跑测试，但稳定性和实际效果还有待考验。有人在知乎上说"我用它修一个 SQL 脚本，跑是能跑了，但它把索引建议顺手删了"——大概就是这种感觉。</p>
-<p><strong>通义灵码</strong>，阿里系的朋友用得最多。免费，中文注释写得特别自然，不是那种机翻味。有人说对 Java 和 Go 后端开发特别友好，因为对阿里系组件的理解很深。但也有朋友说它的补全速度比 Cursor 慢半拍，而且 IDE 集成目前主推 JetBrains 和 VS Code，其他编辑器支持一般。整体评价：对新手和阿里云生态用户最友好，是企业级应用的好选择，但极致效率党可能会换别的。</p>
+<p><strong><a href="../tools/cursor.html">Cursor</a></strong>，朋友圈里的评价很两极。有人说它是 2026 年最好的 AI IDE，没有之一，TAB 补全的准确率高到让人怀疑它在读你脑子。但另一边也有人说它"对新手不友好"——补全太激进了，看不懂代码的人容易被误导，接受一个看起来对但实际有 bug 的建议。价格是 $20/月，不是谁都愿意掏。而且最近有人在讨论 Cursor 在国内的模型限制问题，有人因为这个转去了 <a href="../tools/windsurf.html">Windsurf</a>。</p>
+<p><strong><a href="../tools/github-copilot.html">GitHub Copilot</a></strong>，我听到的最多一句话是"公司花钱用，自己掏钱不买"。不是说它不好，而是它的核心价值在 GitHub 生态整合。如果你用 GitHub 做项目管理、CI/CD 那一套，确实无缝。但单论补全体验，很多人说不如 Cursor 聪明。Agent 模式今年开始推，能自动修 bug、跑测试，但稳定性和实际效果还有待考验。有人在知乎上说"我用它修一个 SQL 脚本，跑是能跑了，但它把索引建议顺手删了"——大概就是这种感觉。</p>
+<p><strong><a href="../tools/tongyi-lingma.html">通义灵码</a></strong>，阿里系的朋友用得最多。免费，中文注释写得特别自然，不是那种机翻味。有人说对 Java 和 Go 后端开发特别友好，因为对阿里系组件的理解很深。但也有朋友说它的补全速度比 Cursor 慢半拍，而且 IDE 集成目前主推 JetBrains 和 VS Code，其他编辑器支持一般。整体评价：对新手和阿里云生态用户最友好，是企业级应用的好选择，但极致效率党可能会换别的。</p>
 <p><strong>Windsurf</strong>，听朋友说是 Cursor 的轻量替代。Cursor 在国内遭模型限制之后，有些人转去了 Windsurf。优点是上下文理解做得好，能比较准确地感知整个项目结构。价格也便宜一些。但 Agent 能力和补全体验，圈子里普遍认为比 Cursor 还差一口气。有人说如果只是想要 AI 辅助写代码，Windsurf 够用；如果想要最强 Agent 帮你干活，还是要去 Cursor 或 Claude Code。</p></section>
 
 <section style="margin-bottom:28px;"><h2>总结</h2>

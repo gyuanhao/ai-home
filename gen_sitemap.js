@@ -4,14 +4,20 @@ const path = require('path');
 
 const ROOT = __dirname;
 const BASE = 'https://myaishome.com/';
-const TODAY = '2026-07-13';
+const TODAY = '2026-08-18';
 
 const EXCLUDE = new Set([
   '404.html',
   'hero-demo.html',
   'skills/template.html',
   'ads.txt',
+  'index_legacy.html',
+  'models_legacy.html',
+  'tools_legacy.html',
 ]);
+
+// 源码/备份/彩蛋目录不在公开 sitemap 内（与站点干净 URL 方案、canonical 对齐）
+const EXCLUDE_DIR_PREFIX = ['showcase-src/', 'xianxia/'];
 
 function walk(dir, relBase) {
   const out = [];
@@ -20,6 +26,7 @@ function walk(dir, relBase) {
     if (e.name === '.git' || e.name === 'node_modules') continue;
     const full = path.join(dir, e.name);
     const rel = relBase ? path.posix.join(relBase, e.name) : e.name;
+    if (EXCLUDE_DIR_PREFIX.some(p => rel.startsWith(p))) continue;
     if (e.isDirectory()) {
       out.push(...walk(full, rel));
     } else if (e.name.endsWith('.html')) {
@@ -31,9 +38,11 @@ function walk(dir, relBase) {
 }
 
 function urlFor(rel) {
-  // rel uses forward slashes already
+  // 站点使用干净 URL（无 .html），与 canonical 标签一致
   if (rel === 'index.html') return BASE;
-  return BASE + rel;
+  if (rel === 'showcase/index.html') return BASE + 'showcase';
+  const pretty = rel.replace(/\.html$/, '');
+  return BASE + pretty;
 }
 
 function metaFor(rel) {
