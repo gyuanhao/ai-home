@@ -7,6 +7,126 @@ window.AIHome = window.AIHome || {};
 
 AIHome.NEWS = [
   {
+    "title": "阿里正式开源Qwen3.8-Flash，训练成本降九成重划性价比基准",
+    "url": "https://www.toutiao.com/article/7678356666886210088",
+    "date": "08-27",
+    "source": "新京报"
+  },
+  {
+    "title": "智谱认领“牛来”Ox Alpha并开源GLM-5.3-Flash，全由国产芯片承载",
+    "url": "https://new.qq.com/rain/a/20260827A08CPX00",
+    "date": "08-27",
+    "source": "北京青年报 / 腾讯新闻"
+  },
+  {
+    "title": "英伟达Q2营收962亿美元同比翻倍，Vera Rubin全面量产",
+    "url": "https://new.qq.com/rain/a/20260827A08GF100",
+    "date": "08-27",
+    "source": "腾讯新闻 / 第一财经"
+  },
+  {
+    "title": "OpenAI自研推理芯片Jalapeño跑分超英伟达1.5至1.9倍",
+    "url": "https://www.toutiao.com/article/7678335146143105576",
+    "date": "08-27",
+    "source": "极客公园"
+  },
+  {
+    "title": "腾讯混元开源Hy-MT2翻译模型，1.25-bit量化压至约440MB可离线",
+    "url": "https://hy.tencent.com/research/100041",
+    "date": "08-27",
+    "source": "腾讯混元"
+  },
+  {
+    "title": "阿里“千问办公”国际版QwenWork开启公测，杰富瑞实测得分第一",
+    "url": "https://finance.sina.cn/2026-08-26/detail-iniprumt6048164.d.html",
+    "date": "08-27",
+    "source": "上海证券报 / 新浪财经"
+  },
+  {
+    "title": "Anthropic发布AI原生软件开发手册，把单向流水线改成循环",
+    "url": "https://new.qq.com/rain/a/20260826A0B3QG00",
+    "date": "08-27",
+    "source": "腾讯新闻（转述Anthropic官方）"
+  },
+  {
+    "title": "工信部就国家人形机器人产业标准体系建设指南征求意见",
+    "url": "https://so.html5.qq.com/page/real/search_news?docid=70000021_3576a8f9c2d64052",
+    "date": "08-27",
+    "source": "新华社 / 腾讯新闻"
+  },
+  {
+    "title": "据报DeepSeek推进二轮融资估值约5000亿并筹备科创板IPO",
+    "url": "https://k.sina.com.cn/article_7880068204_1d5b04c6c06801ghs2.html",
+    "date": "08-27",
+    "source": "新浪财经 / The Information"
+  },
+  {
+    "title": "京东物流发布“超脑”大模型3.0，亿级包裹路径规划压至秒级",
+    "url": "https://finance.sina.com.cn/stock/relnews/hk/2026-08-26/doc-iniprumt6095947.shtml",
+    "date": "08-27",
+    "source": "新浪财经 / 第一财经"
+  },
+  {
+    "title": "国务院印发《关于深入实施“人工智能+”行动的意见》，部署6大行动与8项支撑",
+    "url": "https://www.gov.cn/zhengce/202508/content_7037899.htm",
+    "date": "08-26",
+    "source": "中国政府网 / 新华社"
+  },
+  {
+    "title": "英伟达 Vera Rubin 首秀：DeepSeek V4 Pro 跑 AgentX 负载每兆瓦吞吐最高提升30倍",
+    "url": "https://view.inews.qq.com/a/20260825A06ODX00",
+    "date": "08-26",
+    "source": "机器之心 / 腾讯新闻"
+  },
+  {
+    "title": "苹果发布首款2纳米 M6 芯片，Mac mini 本地AI推理性能最高提升4倍",
+    "url": "https://www.apple.com.cn/cn/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute/",
+    "date": "08-26",
+    "source": "Apple Newsroom / 新浪财经"
+  },
+  {
+    "title": "中消协提示：AI客服不能“自动生成”免责，经营者须建责任承接机制",
+    "url": "https://view.inews.qq.com/a/20260826A00E3K00",
+    "date": "08-26",
+    "source": "中国青年报 / 腾讯新闻"
+  },
+  {
+    "title": "OpenAI 宣布 9月29日旧金山 DevDay 聚焦新一代大模型 GPT-6",
+    "url": "https://view.inews.qq.com/a/20260825A0CFLF00",
+    "date": "08-26",
+    "source": "IT时代网 / 腾讯新闻"
+  },
+  {
+    "title": "我国星载AI卫星“木铎一号”成功发射，可轨识别山火滑坡等灾害",
+    "url": "https://view.inews.qq.com/a/20260825V09II000",
+    "date": "08-26",
+    "source": "央视网 / 腾讯新闻"
+  },
+  {
+    "title": "具身智能“通用大脑”公司 Generalist 获2亿美元新融资，英伟达、李飞飞、贝索斯入局",
+    "url": "https://mp.weixin.qq.com/s?__biz=MzIzNjc1NzUzMw==&mid=2247914906&idx=2&sn=7f154c2b309c744ddf04fa598a23e842",
+    "date": "08-26",
+    "source": "量子位"
+  },
+  {
+    "title": "阿里千问预告 8月26日晚开源 Qwen3.8-Flash-Next，基于下一代 Qwen4 架构",
+    "url": "https://view.inews.qq.com/a/20260826A00UFJ00",
+    "date": "08-26",
+    "source": "IT时代网 / 腾讯新闻"
+  },
+  {
+    "title": "IDC：2025年中国AI基础数据服务市场62.62亿元，同比增27.8%",
+    "url": "https://view.inews.qq.com/a/20260825A0BYPW00",
+    "date": "08-26",
+    "source": "中国新闻网 / 腾讯新闻"
+  },
+  {
+    "title": "AI模型“越狱”频发，OpenAI沙盒被逃脱，安全测试标准待重构",
+    "url": "https://www.163.com/dy/article/L57TH5G405198NMR.html",
+    "date": "08-26",
+    "source": "华尔街见闻 / 网易"
+  },
+  {
     "title": "Anthropic两款新模型marshmallow与melon曝光，对话体验或超Opus 5",
     "url": "https://k.sina.com.cn/article_5952915705_162d248f906703m5qw.html",
     "date": "08-25",

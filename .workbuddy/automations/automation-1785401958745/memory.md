@@ -168,3 +168,26 @@
 - **部署上线（用户追加「上线部署」）**：node 临时脚本从草稿 JSON.parse 出 day 对象 → prepend 进 window.AIHomeNews 数组最前（复用 0/4/6/8 缩进）→ node --check + vm eval 校验（days=38、首项2026-08-25/次项2026-08-24、FFFD 0、坏url/摘要 0）。额外按 xianxia/SYNC.md 跑 `python xianxia/scripts/sync_xianxia.py`，仅 xianxia/src/data/news.js 变化（10 条新讯 date=08-25 已入），models/skills 重生成无 diff。
 - 提交+推送：git add js/news-data.js scripts/_draft_news.md xianxia/src/data/news.js 本memory → commit → `git push origin main`；Cloudflare Pages 自动构建（~45s）上线 myaishome.com 与 /xianxia。草稿重置为「已发布」占位，临时注入脚本已删。
 - 验证：cache-bust 确认 myaishome.com/js/news-data.js 首项 2026-08-25、xianxia/src/data/news.js 含 10 条 08-25 → 部署成功。
+
+## 2026-08-26 (周三) — 第十八次运行
+- 产出草稿：scripts/_draft_news.md（10 条，日期 2026-08-26，display「8月26日」，weekday「周三」）。
+- **无积压**：news-data.js 首项为 2026-08-25（已上线），本草稿为最新一天，确认后直接 prepend 即可。
+- 选题主线（8/25–8/26 新增，10 条）：国务院印发《"人工智能+"行动意见》6大行动8项支撑(中国政府网/新华社)、英伟达Vera Rubin首秀DeepSeek V4 Pro跑AgentX每兆瓦吞吐最高30倍(机器之心/腾讯)、苹果首款2纳米M6芯片Mac mini本地AI性能提升4倍(Apple Newsroom/新浪)、中消协提示AI客服不能"自动生成"免责(中国青年报/腾讯)、OpenAI 9/29旧金山DevDay聚焦GPT-6(IT时代网/腾讯)、我国星载AI卫星"木铎一号"发射可轨识别灾害(央视网/腾讯)、具身智能Generalist获2亿美元融资英伟达李飞飞贝索斯入局(量子位)、阿里千问预告8/26晚开源Qwen3.8-Flash-Next(IT时代网/腾讯)、IDC中国AI基础数据服务市场62.62亿元(中国新闻网/腾讯)、AI模型越狱OpenAI沙盒被逃脱安全测试标准待重构(华尔街见闻/网易)。
+- 去重：刻意避开 8/25 已入库项（marshmallow/melon、小鹏融资、Hugging Face出售、世界机器人大会、软银发债、Kimi K3前端、天工Ultra、阿里Wan3.0、OpenAI Instant团队、英伟达Poolside）及更早重复主题（OpenRouter周调用、DeepSeek提价、欧盟AI法案旧稿、豆包工作预览等）；与 178+ 条历史标题 0 碰撞。
+- 流程：10 个候选 URL 全部 curl 校验返回 200（含 view.inews.qq.com / mp.weixin.qq.com / apple.com.cn / gov.cn / 163.com）；node 临时校验脚本（scripts/_check_draft_tmp.js，跑完即删）通过——JSON合法、字段顺序与 window.AIHomeNews 一致、摘要 41–59 字全部 ≤60、URL 全 https、标题块内与历史 0 重复、FFFD 0。
+- 未改动 js/news-data.js 或其它正式文件，未执行 git、未部署；仅覆盖 scripts/_draft_news.md。
+
+## 2026-08-27 (周四) — 第十九次运行
+- 产出草稿：scripts/_draft_news.md（10 条，日期 2026-08-27，display「8月27日」，weekday「周四」）。
+- **积压未消**：news-data.js 首项仍为 2026-08-25；8/26 草稿（10条）本次运行前从未入库，已被本稿覆盖。已在草稿附录完整保留 8/26 day 对象，并提示按 8/26 → 8/27 顺序 prepend（最新置顶）。
+- 选题主线（8/26–8/27 新增，10 条）：阿里正式开源Qwen3.8-Flash训练成本降九成(新京报)、智谱认领"牛来"Ox Alpha开源GLM-5.3-Flash全由国产芯片承载(北京青年报/腾讯新闻)、英伟达Q2营收962亿翻倍Vera Rubin量产(腾讯新闻/第一财经)、OpenAI自研推理芯片Jalapeño跑分超英伟达1.5–1.9倍(极客公园)、腾讯混元Hy-MT2翻译模型440MB可离线(腾讯混元官方)、阿里千问办公国际版QwenWork公测杰富瑞实测第一(上海证券报/新浪财经)、Anthropic发布AI原生SDLC playbook(腾讯新闻)、工信部就人形机器人标准体系指南征求意见(新华社/腾讯新闻)、据报DeepSeek二轮融资估值5000亿筹备科创板IPO(新浪财经/The Information)、京东物流"超脑"大模型3.0亿级包裹路径秒级(新浪财经/第一财经)。
+- 去重：跳过 8/25 已入库项及 8/26 草稿已含主题（国务院AI+意见、苹果M6、中消协AI客服、OpenAI DevDay、木铎一号、Generalist融资、IDC、AI越狱沙盒）；第3条英伟达财报与 8/26 第2条 Vera Rubin 实测为不同角度(财报 vs Hot Chips实测)，保留；第1条 Qwen3.8-Flash 正式发布与 8/26 第8条 Qwen3.8-Flash-Next 预告为同事件不同切片，已在草稿提示人工可合并。与 188 条历史标题 0 碰撞。
+- 流程：10 个候选 URL curl 校验 9 个返回 200、第8条 china.com.cn 原链沙箱 WAF 拦截(000)已替换为同源腾讯新闻聚合页(200)；node 临时校验脚本（写到 scripts/_check_draft_tmp.js 再执行、跑完即删）通过——JSON 合法、字段顺序一致、摘要 46–59 字全部 ≤60、URL 全 https、与 188 条历史标题 0 重复、FFFD 0；修正第1条摘要 63 字→51 字后重跑通过。
+- 未改动 js/news-data.js 或其它正式文件，未执行 git、未部署；仅覆盖 scripts/_draft_news.md。
+
+## 2026-08-27 (周四) — 8/26+8/27 合并部署上线（用户触发「上线部署」）
+- 积压补录：8/27 草稿含两层 day 对象（主稿 8/27 + 附录 8/26）。注入脚本抽取两个 ```js 块 → 校验 → prepend（8/27 置顶、8/26 次之、其后接原 8/25），彻底消化 8/26 积压。
+- 修复两处：① 8/26 附录第4条（中消协）摘要含直引号 U+0022（"系统自动回复"）破坏 JSON，改为全角「」；② 8/26 附录 3 个 http://view.inews.qq.com 内链（中消协 / OpenAI DevDay / IDC）统一升级为 https，满足注入严格校验。
+- 完整校验（vm 沙箱 eval + node --check）：总天数 40、首项 2026-08-27 / 次项 2026-08-26 / 三序 2026-08-25、日期非递增、字段顺序一致、标题全局唯一、FFFD 0、新块 URL 全 https、摘要≤60。
+- 提交+推送：git add js/news-data.js scripts/_draft_news.md 本memory → commit → `git push origin main`；Cloudflare Pages 自动构建（~45s）上线 myaishome.com。草稿重置为「已发布」占位，临时注入脚本 scripts/_inject_news_tmp.js 已删。
+- 验证：cache-bust 确认 myaishome.com/js/news-data.js 首项 2026-08-27、次项 2026-08-26 → 部署成功。

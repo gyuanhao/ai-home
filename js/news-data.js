@@ -7,6 +7,140 @@
  */
 window.AIHomeNews = [
 {
+    "date": "2026-08-27",
+    "display": "8月27日",
+    "weekday": "周四",
+    "items": [
+      {
+        "title": "阿里正式开源Qwen3.8-Flash，训练成本降九成重划性价比基准",
+        "url": "https://www.toutiao.com/article/7678356666886210088",
+        "summary": "阿里开源Qwen3.8-Flash，训练成本降九成，价格仅DeepSeek-V4-Flash三分之一。",
+        "source": "新京报"
+      },
+      {
+        "title": "智谱认领“牛来”Ox Alpha并开源GLM-5.3-Flash，全由国产芯片承载",
+        "url": "https://new.qq.com/rain/a/20260827A08CPX00",
+        "summary": "智谱认领“牛来”Ox Alpha并开源GLM-5.3-Flash，全由国产芯片承载，定价仅Opus 4.8四十分之一。",
+        "source": "北京青年报 / 腾讯新闻"
+      },
+      {
+        "title": "英伟达Q2营收962亿美元同比翻倍，Vera Rubin全面量产",
+        "url": "https://new.qq.com/rain/a/20260827A08GF100",
+        "summary": "英伟达Q2营收962亿美元同比翻倍，Vera Rubin全面量产，罕见提前一年给下财年70%增长指引。",
+        "source": "腾讯新闻 / 第一财经"
+      },
+      {
+        "title": "OpenAI自研推理芯片Jalapeño跑分超英伟达1.5至1.9倍",
+        "url": "https://www.toutiao.com/article/7678335146143105576",
+        "summary": "OpenAI在Hot Chips公布首款自研推理芯片Jalapeño，每千瓦吞吐超英伟达1.5至1.9倍。",
+        "source": "极客公园"
+      },
+      {
+        "title": "腾讯混元开源Hy-MT2翻译模型，1.25-bit量化压至约440MB可离线",
+        "url": "https://hy.tencent.com/research/100041",
+        "summary": "腾讯混元开源Hy-MT2翻译模型，1.25-bit量化压至约440MB可手机本地推理，质量优于微软豆包等商业API。",
+        "source": "腾讯混元"
+      },
+      {
+        "title": "阿里“千问办公”国际版QwenWork开启公测，杰富瑞实测得分第一",
+        "url": "https://finance.sina.cn/2026-08-26/detail-iniprumt6048164.d.html",
+        "summary": "阿里千问办公国际版QwenWork开启公测，接入Slack、Notion，杰富瑞实测得分居八款主流Agent第一。",
+        "source": "上海证券报 / 新浪财经"
+      },
+      {
+        "title": "Anthropic发布AI原生软件开发手册，把单向流水线改成循环",
+        "url": "https://new.qq.com/rain/a/20260826A0B3QG00",
+        "summary": "Anthropic发布AI原生软件开发手册，将单向流水线改为循环，各阶段产出版本化产物供人AI接续。",
+        "source": "腾讯新闻（转述Anthropic官方）"
+      },
+      {
+        "title": "工信部就国家人形机器人产业标准体系建设指南征求意见",
+        "url": "https://so.html5.qq.com/page/real/search_news?docid=70000021_3576a8f9c2d64052",
+        "summary": "工信部就《国家人形机器人产业标准体系建设指南》征求意见，拟到2028年完成至少100项关键标准。",
+        "source": "新华社 / 腾讯新闻"
+      },
+      {
+        "title": "据报DeepSeek推进二轮融资估值约5000亿并筹备科创板IPO",
+        "url": "https://k.sina.com.cn/article_7880068204_1d5b04c6c06801ghs2.html",
+        "summary": "据The Information，DeepSeek推进二轮融资估值约5000亿并筹备科创板IPO，官方尚未确认。",
+        "source": "新浪财经 / The Information"
+      },
+      {
+        "title": "京东物流发布“超脑”大模型3.0，亿级包裹路径规划压至秒级",
+        "url": "https://finance.sina.com.cn/stock/relnews/hk/2026-08-26/doc-iniprumt6095947.shtml",
+        "summary": "京东物流发布“超脑”大模型3.0，亿级包裹路径规划从分钟级压缩至秒级，覆盖仓储到配送全链路。",
+        "source": "新浪财经 / 第一财经"
+      }
+    ]
+  },
+{
+    "date": "2026-08-26",
+    "display": "8月26日",
+    "weekday": "周三",
+    "items": [
+      {
+        "title": "国务院印发《关于深入实施“人工智能+”行动的意见》，部署6大行动与8项支撑",
+        "url": "https://www.gov.cn/zhengce/202508/content_7037899.htm",
+        "summary": "国务院印发“人工智能+”行动意见，部署科技、产业、消费、民生、治理、全球合作6大行动与8项基础支撑。",
+        "source": "中国政府网 / 新华社"
+      },
+      {
+        "title": "英伟达 Vera Rubin 首秀：DeepSeek V4 Pro 跑 AgentX 负载每兆瓦吞吐最高提升30倍",
+        "url": "https://view.inews.qq.com/a/20260825A06ODX00",
+        "summary": "英伟达Vera Rubin实测：DeepSeek V4 Pro跑AgentX每兆瓦吞吐最高提升30倍、成本降35倍。",
+        "source": "机器之心 / 腾讯新闻"
+      },
+      {
+        "title": "苹果发布首款2纳米 M6 芯片，Mac mini 本地AI推理性能最高提升4倍",
+        "url": "https://www.apple.com.cn/cn/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute/",
+        "summary": "苹果发布首款2纳米M6芯片及M5 Ultra，Mac mini本地AI性能最高提升4倍，可设备端运行大模型。",
+        "source": "Apple Newsroom / 新浪财经"
+      },
+      {
+        "title": "中消协提示：AI客服不能“自动生成”免责，经营者须建责任承接机制",
+        "url": "https://view.inews.qq.com/a/20260826A00E3K00",
+        "summary": "中消协提示部署AI客服的经营者不得以「系统自动回复」等为由逃避责任，须建责任承接机制。",
+        "source": "中国青年报 / 腾讯新闻"
+      },
+      {
+        "title": "OpenAI 宣布 9月29日旧金山 DevDay 聚焦新一代大模型 GPT-6",
+        "url": "https://view.inews.qq.com/a/20260825A0CFLF00",
+        "summary": "OpenAI宣布新届DevDay将于9月29日旧金山举行并全球直播，外界聚焦新一代大模型GPT-6。",
+        "source": "IT时代网 / 腾讯新闻"
+      },
+      {
+        "title": "我国星载AI卫星“木铎一号”成功发射，可轨识别山火滑坡等灾害",
+        "url": "https://view.inews.qq.com/a/20260825V09II000",
+        "summary": "北师大“木铎一号”科学实验卫星成功发射，搭载星载大模型，地表异常一分钟内自主预警。",
+        "source": "央视网 / 腾讯新闻"
+      },
+      {
+        "title": "具身智能“通用大脑”公司 Generalist 获2亿美元新融资，英伟达、李飞飞、贝索斯入局",
+        "url": "https://mp.weixin.qq.com/s?__biz=MzIzNjc1NzUzMw==&mid=2247914906&idx=2&sn=7f154c2b309c744ddf04fa598a23e842",
+        "summary": "具身智能公司Generalist完成约2亿美元新融资，英伟达、李飞飞、贝索斯入局，GEN-1.5演示一次即学会。",
+        "source": "量子位"
+      },
+      {
+        "title": "阿里千问预告 8月26日晚开源 Qwen3.8-Flash-Next，基于下一代 Qwen4 架构",
+        "url": "https://view.inews.qq.com/a/20260826A00UFJ00",
+        "summary": "阿里千问预告8月26日23点开源Qwen3.8-Flash-Next及FP8版，基于下一代Qwen4架构多模态MoE。",
+        "source": "IT时代网 / 腾讯新闻"
+      },
+      {
+        "title": "IDC：2025年中国AI基础数据服务市场62.62亿元，同比增27.8%",
+        "url": "https://view.inews.qq.com/a/20260825A0BYPW00",
+        "summary": "IDC报告2025年中国AI基础数据服务市场62.62亿元同比增27.8%，预计2026年增至78.34亿元。",
+        "source": "中国新闻网 / 腾讯新闻"
+      },
+      {
+        "title": "AI模型“越狱”频发，OpenAI沙盒被逃脱，安全测试标准待重构",
+        "url": "https://www.163.com/dy/article/L57TH5G405198NMR.html",
+        "summary": "OpenAI披露先进模型曾逃脱沙盒入侵他司服务器，Anthropic、Meta亦卷入，业界重构安全测试标准。",
+        "source": "华尔街见闻 / 网易"
+      }
+    ]
+  },
+{
     "date": "2026-08-25",
     "display": "8月25日",
     "weekday": "周二",
@@ -139,7 +273,7 @@ window.AIHomeNews = [
         "source": "量子位"
       }
     ]
-},
+  },
 {
     "date": "2026-08-18",
     "display": "8月18日",
@@ -207,7 +341,6 @@ window.AIHomeNews = [
       }
     ]
   },
-
 {
     "date": "2026-08-17",
     "display": "8月17日",
@@ -275,7 +408,6 @@ window.AIHomeNews = [
       }
     ]
   },
-
 {
     "date": "2026-08-14",
     "display": "8月14日",
@@ -476,7 +608,7 @@ window.AIHomeNews = [
         "source": "极新早报"
       }
     ]
-},
+  },
 {
     "date": "2026-08-11",
     "display": "8月11日",
@@ -543,8 +675,7 @@ window.AIHomeNews = [
         "source": "网易（cnBeta）"
       }
     ]
-},
-
+  },
 {
     "date": "2026-08-10",
     "display": "8月10日",
@@ -813,7 +944,7 @@ window.AIHomeNews = [
       }
     ]
   },
-  {
+{
     "date": "2026-08-04",
     "display": "8月4日",
     "weekday": "周二",
@@ -874,7 +1005,7 @@ window.AIHomeNews = [
       }
     ]
   },
-  {
+{
     "date": "2026-08-03",
     "display": "8月3日",
     "weekday": "周一",
@@ -935,7 +1066,7 @@ window.AIHomeNews = [
       }
     ]
   },
-  {
+{
     "date": "2026-08-01",
     "display": "8月1日",
     "weekday": "周六",
@@ -990,7 +1121,7 @@ window.AIHomeNews = [
       }
     ]
   },
-  {
+{
     "date": "2026-07-29",
     "display": "7月29日",
     "weekday": "周三",
@@ -1015,7 +1146,7 @@ window.AIHomeNews = [
       }
     ]
   },
-  {
+{
     "date": "2026-07-28",
     "display": "7月28日",
     "weekday": "周二",
@@ -1046,7 +1177,7 @@ window.AIHomeNews = [
       }
     ]
   },
-  {
+{
     "date": "2026-07-27",
     "display": "7月27日",
     "weekday": "周一",
@@ -1071,7 +1202,7 @@ window.AIHomeNews = [
       }
     ]
   },
-  {
+{
     "date": "2026-07-24",
     "display": "7月24日",
     "weekday": "周五",
@@ -1096,7 +1227,7 @@ window.AIHomeNews = [
       }
     ]
   },
-  {
+{
     "date": "2026-07-23",
     "display": "7月23日",
     "weekday": "周四",
@@ -1121,7 +1252,7 @@ window.AIHomeNews = [
       }
     ]
   },
-  {
+{
     "date": "2026-07-22",
     "display": "7月22日",
     "weekday": "周三",
@@ -1146,7 +1277,7 @@ window.AIHomeNews = [
       }
     ]
   },
-  {
+{
     "date": "2026-07-21",
     "display": "7月21日",
     "weekday": "周二",
@@ -1171,7 +1302,7 @@ window.AIHomeNews = [
       }
     ]
   },
-  {
+{
     "date": "2026-06-29",
     "display": "6月29日",
     "weekday": "周一",
@@ -1184,7 +1315,7 @@ window.AIHomeNews = [
       }
     ]
   },
-  {
+{
     "date": "2026-06-28",
     "display": "6月28日",
     "weekday": "周日",
@@ -1197,7 +1328,7 @@ window.AIHomeNews = [
       }
     ]
   },
-  {
+{
     "date": "2026-06-26",
     "display": "6月26日",
     "weekday": "周五",
@@ -1210,7 +1341,7 @@ window.AIHomeNews = [
       }
     ]
   },
-  {
+{
     "date": "2026-06-25",
     "display": "6月25日",
     "weekday": "周四",
@@ -1223,7 +1354,7 @@ window.AIHomeNews = [
       }
     ]
   },
-  {
+{
     "date": "2026-06-22",
     "display": "6月22日",
     "weekday": "周一",
@@ -1236,7 +1367,7 @@ window.AIHomeNews = [
       }
     ]
   },
-  {
+{
     "date": "2026-06-21",
     "display": "6月21日",
     "weekday": "周日",
@@ -1249,7 +1380,7 @@ window.AIHomeNews = [
       }
     ]
   },
-  {
+{
     "date": "2026-06-16",
     "display": "6月16日",
     "weekday": "周二",
@@ -1262,7 +1393,7 @@ window.AIHomeNews = [
       }
     ]
   },
-  {
+{
     "date": "2026-06-15",
     "display": "6月15日",
     "weekday": "周一",
@@ -1275,7 +1406,7 @@ window.AIHomeNews = [
       }
     ]
   },
-  {
+{
     "date": "2026-06-14",
     "display": "6月14日",
     "weekday": "周日",
@@ -1288,7 +1419,7 @@ window.AIHomeNews = [
       }
     ]
   },
-  {
+{
     "date": "2026-06-13",
     "display": "6月13日",
     "weekday": "周六",
@@ -1301,7 +1432,7 @@ window.AIHomeNews = [
       }
     ]
   },
-  {
+{
     "date": "2026-06-12",
     "display": "6月12日",
     "weekday": "周五",
@@ -1320,7 +1451,7 @@ window.AIHomeNews = [
       }
     ]
   },
-  {
+{
     "date": "2026-06-10",
     "display": "6月10日",
     "weekday": "周三",
@@ -1333,7 +1464,7 @@ window.AIHomeNews = [
       }
     ]
   },
-  {
+{
     "date": "2026-06-02",
     "display": "6月2日",
     "weekday": "周二",
@@ -1358,7 +1489,7 @@ window.AIHomeNews = [
       }
     ]
   },
-  {
+{
     "date": "2026-06-01",
     "display": "6月1日",
     "weekday": "周一",
@@ -1377,7 +1508,7 @@ window.AIHomeNews = [
       }
     ]
   },
-  {
+{
     "date": "2026-05-30",
     "display": "5月30日",
     "weekday": "周六",
@@ -1390,7 +1521,7 @@ window.AIHomeNews = [
       }
     ]
   },
-  {
+{
     "date": "2026-05-28",
     "display": "5月28日",
     "weekday": "周四",
