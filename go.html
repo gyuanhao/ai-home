@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<title>跳转中…</title>
+<script>
+const GO_MAP = {"xhs-tools-cozel-0827": {"page": "tools/cozel", "source": "xiaohongshu", "medium": "social", "campaign": "0827", "platform_label": "小红书", "created": "2026-08-27"}, "xhs-tools-cursor-0827": {"page": "tools/cursor", "source": "xiaohongshu", "medium": "social", "campaign": "0827", "platform_label": "小红书", "created": "2026-08-27"}, "xhs-tools-deepseek-0827": {"page": "tools/deepseek", "source": "xiaohongshu", "medium": "social", "campaign": "0827", "platform_label": "小红书", "created": "2026-08-27"}, "xhs-tools-chatgpt-0827": {"page": "tools/chatgpt", "source": "xiaohongshu", "medium": "social", "campaign": "0827", "platform_label": "小红书", "created": "2026-08-27"}, "bili-blog-ai-agent-guide-2026-0827": {"page": "blog/ai-agent-guide-2026", "source": "bilibili", "medium": "social_video", "campaign": "0827", "platform_label": "B站", "created": "2026-08-27"}, "bili-blog-deepseek-vs-chatgpt-claude-2026-0827": {"page": "blog/deepseek-vs-chatgpt-claude-2026", "source": "bilibili", "medium": "social_video", "campaign": "0827", "platform_label": "B站", "created": "2026-08-27"}, "zh-models-chatgpt-0827": {"page": "models/chatgpt", "source": "zhihu", "medium": "social", "campaign": "0827", "platform_label": "知乎", "created": "2026-08-27"}, "xhs-about-0827": {"page": "about", "source": "xiaohongshu", "medium": "social", "campaign": "0827", "platform_label": "小红书", "created": "2026-08-27"}};
+const BASE = "https://myaishome.com";
+(function () {
+  var p = new URLSearchParams(location.search);
+  var k = p.get('k');
+  if (k && GO_MAP[k]) {
+    var e = GO_MAP[k];
+    var url = BASE + '/' + e.page + '?utm_source=' + encodeURIComponent(e.source)
+            + '&utm_medium=' + encodeURIComponent(e.medium)
+            + '&utm_campaign=' + encodeURIComponent(e.campaign);
+    location.replace(url);
+    return;
+  }
+  // 兜底：直接传 p/s/c/m
+  var pg = p.get('p'), s = p.get('s'), c = p.get('c'), m = p.get('m');
+  if (pg) {
+    var u = BASE + '/' + pg;
+    var q = [];
+    if (s) q.push('utm_source=' + encodeURIComponent(s));
+    if (m) q.push('utm_medium=' + encodeURIComponent(m));
+    if (c) q.push('utm_campaign=' + encodeURIComponent(c));
+    if (q.length) u += '?' + q.join('&');
+    location.replace(u);
+    return;
+  }
+  location.replace(BASE + '/');
+})();
+</script>
+</head>
+<body style="font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;padding:48px;text-align:center;color:#888">
+  正在跳转到 myaishome.com …
+</body>
+</html>

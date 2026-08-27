@@ -1,0 +1,10 @@
+[
+  {"page": "tools/cozel",            "platform": "xiaohongshu", "campaign": "0827"},
+  {"page": "tools/cursor",           "platform": "xiaohongshu", "campaign": "0827"},
+  {"page": "tools/deepseek",         "platform": "xiaohongshu", "campaign": "0827"},
+  {"page": "tools/chatgpt",          "platform": "xiaohongshu", "campaign": "0827"},
+  {"page": "blog/ai-agent-guide-2026", "platform": "bilibili", "campaign": "0827"},
+  {"page": "blog/deepseek-vs-chatgpt-claude-2026", "platform": "bilibili", "campaign": "0827"},
+  {"page": "models/chatgpt",         "platform": "zhihu",       "campaign": "0827"},
+  {"page": "about",                  "platform": "xiaohongshu", "campaign": "0827"}
+]

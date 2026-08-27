@@ -14,6 +14,7 @@ const EXCLUDE = new Set([
   'index_legacy.html',
   'models_legacy.html',
   'tools_legacy.html',
+  'go.html', // 重定向页，meta noindex，不入 sitemap
 ]);
 
 // 源码/备份/彩蛋目录不在公开 sitemap 内（与站点干净 URL 方案、canonical 对齐）

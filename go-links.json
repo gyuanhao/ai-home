@@ -1,0 +1,66 @@
+{
+  "xhs-tools-cozel-0827": {
+    "page": "tools/cozel",
+    "source": "xiaohongshu",
+    "medium": "social",
+    "campaign": "0827",
+    "platform_label": "小红书",
+    "created": "2026-08-27"
+  },
+  "xhs-tools-cursor-0827": {
+    "page": "tools/cursor",
+    "source": "xiaohongshu",
+    "medium": "social",
+    "campaign": "0827",
+    "platform_label": "小红书",
+    "created": "2026-08-27"
+  },
+  "xhs-tools-deepseek-0827": {
+    "page": "tools/deepseek",
+    "source": "xiaohongshu",
+    "medium": "social",
+    "campaign": "0827",
+    "platform_label": "小红书",
+    "created": "2026-08-27"
+  },
+  "xhs-tools-chatgpt-0827": {
+    "page": "tools/chatgpt",
+    "source": "xiaohongshu",
+    "medium": "social",
+    "campaign": "0827",
+    "platform_label": "小红书",
+    "created": "2026-08-27"
+  },
+  "bili-blog-ai-agent-guide-2026-0827": {
+    "page": "blog/ai-agent-guide-2026",
+    "source": "bilibili",
+    "medium": "social_video",
+    "campaign": "0827",
+    "platform_label": "B站",
+    "created": "2026-08-27"
+  },
+  "bili-blog-deepseek-vs-chatgpt-claude-2026-0827": {
+    "page": "blog/deepseek-vs-chatgpt-claude-2026",
+    "source": "bilibili",
+    "medium": "social_video",
+    "campaign": "0827",
+    "platform_label": "B站",
+    "created": "2026-08-27"
+  },
+  "zh-models-chatgpt-0827": {
+    "page": "models/chatgpt",
+    "source": "zhihu",
+    "medium": "social",
+    "campaign": "0827",
+    "platform_label": "知乎",
+    "created": "2026-08-27"
+  },
+  "xhs-about-0827": {
+    "page": "about",
+    "source": "xiaohongshu",
+    "medium": "social",
+    "campaign": "0827",
+    "platform_label": "小红书",
+    "created": "2026-08-27"
+  }
+}
