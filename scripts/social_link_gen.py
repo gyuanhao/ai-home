@@ -115,6 +115,16 @@ def build_shortcode(prefix, page, campaign, reg):
     return code
 
 
+def find_existing(reg, page, plat_src, campaign):
+    """幂等：已存在 (page, source, campaign) 三元组 → 复用其短码。"""
+    for code, e in reg.items():
+        if (e.get("page") == page
+                and e.get("source") == plat_src
+                and e.get("campaign") == campaign):
+            return code
+    return None
+
+
 def pick_copy(platform, shortcode, link, note=None):
     if note:
         return note.replace("{link}", link)
@@ -146,8 +156,10 @@ def add_link(page, platform, campaign, note=None, dry_run=False):
         return None
 
     reg = load_registry()
-    code = build_shortcode(plat["prefix"], page, campaign, reg)
-    short = f"{BASE}/go.html?k={code}"
+    # 幂等：同 page+source+campaign 已存在 → 复用其短码，不新增
+    existing_code = find_existing(reg, page, plat["src"], campaign)
+    code = existing_code if existing_code else build_shortcode(plat["prefix"], page, campaign, reg)
+    short = f"{BASE}/go?k={code}"
     full = (f"{BASE}/{page}"
             f"?utm_source={plat['src']}&utm_medium={plat['medium']}"
             f"&utm_campaign={campaign}")
