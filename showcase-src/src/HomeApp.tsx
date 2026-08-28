@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { NoiseBackground } from "./components/ui/noise-background";
 import { StaggerReveal } from "./components/ui/stagger-reveal";
 import { HoverCard } from "./components/ui/hover-card";
@@ -5,6 +6,8 @@ import { Magnetic } from "./components/ui/magnetic";
 import { InkLink } from "./components/ui/ink-link";
 import { HomeSearch } from "./components/HomeSearch";
 import { MatrixRain } from "./components/MatrixRain";
+import { SiteNav, SiteFooter } from "./components/SiteChrome";
+import { Lang, t, loadLang, saveLang } from "./lib/i18n";
 import {
   Brain,
   Image as ImageIcon,
@@ -19,56 +22,64 @@ import {
   Sparkles,
 } from "lucide-react";
 
-const categories = [
-  {
-    icon: <Brain className="w-5 h-5" strokeWidth={1.5} />,
-    name: "语言模型",
-    count: "12 款",
-    desc: "ChatGPT、DeepSeek、Claude——谁更会写，谁更便宜",
-    accent: "#E8542C",
-    span: "md:col-span-2 md:row-span-1",
-  },
-  {
-    icon: <ImageIcon className="w-5 h-5" strokeWidth={1.5} />,
-    name: "图像模型",
-    count: "5 款",
-    desc: "Midjourney、FLUX、即梦——出图风格与额度对比",
-    accent: "#4A7C59",
-    span: "",
-  },
-  {
-    icon: <Video className="w-5 h-5" strokeWidth={1.5} />,
-    name: "视频模型",
-    count: "6 款",
-    desc: "Sora、可灵、Runway——生成时长与画质",
-    accent: "#D4A574",
-    span: "",
-  },
-  {
-    icon: <Code2 className="w-5 h-5" strokeWidth={1.5} />,
-    name: "代码模型",
-    count: "7 款",
-    desc: "Cursor、Copilot、Claude Code——谁更懂你的仓库",
-    accent: "#E8542C",
-    span: "",
-  },
-  {
-    icon: <Bot className="w-5 h-5" strokeWidth={1.5} />,
-    name: "Agent 平台",
-    count: "6 款",
-    desc: "Coze、Dify、Manus——搭智能体的门槛与上限",
-    accent: "#4A7C59",
-    span: "md:col-span-2",
-  },
-  {
-    icon: <Wrench className="w-5 h-5" strokeWidth={1.5} />,
-    name: "AI 辅助工具",
-    count: "8 款",
-    desc: "写作、设计、翻译、会议——散装工具收进一张表",
-    accent: "#D4A574",
-    span: "",
-  },
-];
+function categoryData(lang: Lang) {
+  return [
+    {
+      icon: <Brain className="w-5 h-5" strokeWidth={1.5} />,
+      name: t(lang, "catLlm"),
+      cat: "语言模型",
+      count: "12 " + (lang === "zh" ? "款" : ""),
+      desc: t(lang, "catLlmDesc"),
+      accent: "#E8542C",
+      span: "md:col-span-2 md:row-span-1",
+    },
+    {
+      icon: <ImageIcon className="w-5 h-5" strokeWidth={1.5} />,
+      name: t(lang, "catImage"),
+      cat: "图像模型",
+      count: "5 " + (lang === "zh" ? "款" : ""),
+      desc: t(lang, "catImageDesc"),
+      accent: "#4A7C59",
+      span: "",
+    },
+    {
+      icon: <Video className="w-5 h-5" strokeWidth={1.5} />,
+      name: t(lang, "catVideo"),
+      cat: "视频模型",
+      count: "6 " + (lang === "zh" ? "款" : ""),
+      desc: t(lang, "catVideoDesc"),
+      accent: "#D4A574",
+      span: "",
+    },
+    {
+      icon: <Code2 className="w-5 h-5" strokeWidth={1.5} />,
+      name: t(lang, "catCode"),
+      cat: "代码模型",
+      count: "7 " + (lang === "zh" ? "款" : ""),
+      desc: t(lang, "catCodeDesc"),
+      accent: "#E8542C",
+      span: "",
+    },
+    {
+      icon: <Bot className="w-5 h-5" strokeWidth={1.5} />,
+      name: t(lang, "catAgent"),
+      cat: "Agent 平台",
+      count: "6 " + (lang === "zh" ? "款" : ""),
+      desc: t(lang, "catAgentDesc"),
+      accent: "#4A7C59",
+      span: "md:col-span-2",
+    },
+    {
+      icon: <Wrench className="w-5 h-5" strokeWidth={1.5} />,
+      name: t(lang, "catTools"),
+      cat: "AI辅助工具",
+      count: "8 " + (lang === "zh" ? "款" : ""),
+      desc: t(lang, "catToolsDesc"),
+      accent: "#D4A574",
+      span: "",
+    },
+  ];
+}
 
 const blogPosts = [
   {
@@ -103,69 +114,80 @@ const blogPosts = [
   },
 ];
 
-const stats = [
-  { num: "352", label: "AI 工具" },
-  { num: "44", label: "模型" },
-  { num: "6", label: "大品类" },
-];
+function featuredModels(lang: Lang) {
+  return [
+    {
+      name: "DeepSeek",
+      company: lang === "zh" ? "深度求索" : "DeepSeek AI",
+      desc: lang === "zh" ? "网页/APP对话免费，推理能力突出" : "Free web/app chat, strong reasoning",
+      tags: lang === "zh" ? "编程 · 推理 · 中文原生" : "Coding · Reasoning · Chinese",
+      badge: lang === "zh" ? "免费+付费" : "Free+Paid",
+      href: "models/deepseek.html",
+      accent: "#E8542C",
+    },
+    {
+      name: "Kimi",
+      company: lang === "zh" ? "月之暗面" : "Moonshot AI",
+      desc: lang === "zh" ? "中文写作最细腻，长文案生成不跑题" : "Best Chinese writing, stays on-topic",
+      tags: lang === "zh" ? "写作 · PPT · 深度研究" : "Writing · PPT · Research",
+      badge: lang === "zh" ? "免费+付费" : "Free+Paid",
+      href: "models/kimi.html",
+      accent: "#4A7C59",
+    },
+    {
+      name: lang === "zh" ? "通义千问" : "Tongyi Qianwen",
+      company: lang === "zh" ? "阿里巴巴" : "Alibaba Cloud",
+      desc: lang === "zh" ? "阿里云生态深度集成，企业级首选" : "Deep Alibaba ecosystem, enterprise-grade",
+      tags: lang === "zh" ? "企业级 · 开源 · 阿里云" : "Enterprise · Open Source · Alibaba",
+      badge: lang === "zh" ? "免费+付费" : "Free+Paid",
+      href: "models/qwen.html",
+      accent: "#D4A574",
+    },
+  ];
+}
 
 export default function App() {
+  const [lang, setLang] = useState<Lang>(() => loadLang());
+
+  useEffect(() => {
+    document.documentElement.lang = lang === "en" ? "en" : "zh-CN";
+  }, [lang]);
+
+  const toggleLang = () => {
+    const next = lang === "zh" ? "en" : "zh";
+    saveLang(next);
+    setLang(next);
+  };
+
+  const categories = categoryData(lang);
+  const stats = [
+    { num: "352", label: t(lang, "statTools") },
+    { num: "44", label: t(lang, "statModels") },
+    { num: "6", label: t(lang, "statCategories") },
+  ];
+  const featured = featuredModels(lang);
+
   return (
     <NoiseBackground variant="cream" className="min-h-screen">
       {/* ── NAVBAR ── */}
-      <nav className="sticky top-0 z-50 backdrop-blur-md bg-[#FAF7F2]/80 border-b border-[#E8DFD3]/60">
-        <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-3">
-          <a href="index.html" className="flex items-center gap-2 font-bold text-[#1A1A1A]">
-            <span className="w-2.5 h-2.5 rounded-full bg-[#E8542C]" />
-            AI家AI户
-          </a>
-          <div className="hidden md:flex items-center gap-6 text-sm text-[#475569]">
-            <InkLink href="models.html">模型库</InkLink>
-            <InkLink href="tools.html">工具库</InkLink>
-            <InkLink href="compare.html">对比</InkLink>
-            <InkLink href="blog/">博客</InkLink>
-            <InkLink href="papers.html">白皮书</InkLink>
-            <InkLink href="about.html">关于</InkLink>
-            <InkLink href="showcase/" className="text-[#E8542C]">展示馆</InkLink>
-          </div>
-          <div className="flex items-center gap-3">
-            <a
-              href="xianxia/index.html"
-              className="text-sm text-[#4A7C59] hover:text-[#1A1A1A] transition"
-            >
-              AI江湖
-            </a>
-            <Magnetic>
-              <a
-                href="tools.html"
-                className="inline-flex items-center gap-1.5 rounded-full bg-[#1A1A1A] px-4 py-2 text-sm font-medium text-[#FAF7F2] hover:bg-[#E8542C] transition-colors duration-300"
-              >
-                进入站点 <ArrowRight className="w-3.5 h-3.5" />
-              </a>
-            </Magnetic>
-          </div>
-        </div>
-      </nav>
+      <SiteNav lang={lang} onToggleLang={toggleLang} />
 
       {/* ── HERO: left-aligned, non-symmetric ── */}
       <header className="relative max-w-6xl mx-auto px-6 pt-20 pb-16 md:pt-28 md:pb-24">
-        {/* Asymmetric grid: text 7 cols, decorative 5 cols */}
         <div className="grid md:grid-cols-12 gap-8 items-start">
           <div className="md:col-span-7 md:col-start-1">
             {/* Eyebrow */}
             <div className="flex items-center gap-2 mb-6 text-sm text-[#475569]">
               <span className="w-1 h-1 rounded-full bg-[#E8542C]" />
-              <span>中文 AI 选型导航 · 便利店模式</span>
+              <span>{t(lang, "homeEyebrow")}</span>
             </div>
 
-            {/* Headline: left-aligned, large, mixed weight */}
             <h1 className="text-[2.5rem] md:text-[4.2rem] leading-[1.05] font-extrabold tracking-tight text-[#1A1A1A] mb-6">
-              把 AI 选型，
+              {t(lang, "homeHero1")}
               <br />
-              变成
+              {t(lang, "homeHero2")}
               <span className="relative inline-block">
-                <span className="relative z-10 text-[#E8542C]">三分钟</span>
-                {/* Hand-drawn underline */}
+                <span className="relative z-10 text-[#E8542C]">{t(lang, "homeHeroAccent")}</span>
                 <svg
                   className="absolute -bottom-1 left-0 w-full"
                   height="12"
@@ -183,23 +205,20 @@ export default function App() {
                   />
                 </svg>
               </span>
-              的事
+              {t(lang, "homeHero3")}
             </h1>
 
-            {/* Subhead */}
             <p className="text-lg md:text-xl text-[#475569] leading-relaxed max-w-lg mb-8">
-              352 个工具、44 个模型、6 大品类，全部按价格、功能、适用场景整理到一起。
-              你只管看维度、比差异、点链接，剩下的自己判断。
+              {t(lang, "homeSubtitle")}
             </p>
 
-            {/* CTAs: non-centered, mixed */}
             <div className="flex flex-wrap items-center gap-4 mb-10">
               <Magnetic>
                 <a
                   href="tools.html"
                   className="inline-flex items-center gap-2 rounded-full bg-[#E8542C] px-7 py-3 text-sm font-semibold text-white hover:bg-[#1A1A1A] transition-colors duration-300"
                 >
-                  浏览工具库 <ArrowRight className="w-4 h-4" />
+                  {t(lang, "homeCtaTools")} <ArrowRight className="w-4 h-4" />
                 </a>
               </Magnetic>
               <Magnetic>
@@ -207,7 +226,7 @@ export default function App() {
                   href="models.html"
                   className="inline-flex items-center gap-2 rounded-full border border-[#1A1A1A]/20 px-7 py-3 text-sm font-semibold text-[#1A1A1A] hover:border-[#E8542C] hover:text-[#E8542C] transition-colors duration-300"
                 >
-                  看模型对比
+                  {t(lang, "homeCtaModels")}
                 </a>
               </Magnetic>
               <a
@@ -215,11 +234,10 @@ export default function App() {
                 className="inline-flex items-center gap-1.5 text-sm font-medium text-[#4A7C59] hover:text-[#E8542C] transition"
               >
                 <Compass className="w-4 h-4" strokeWidth={1.5} />
-                不知道选什么？试试 AI选型器
+                {t(lang, "homePicker")}
               </a>
             </div>
 
-            {/* Stats: inline, not card-grid */}
             <div className="flex items-baseline gap-8">
               {stats.map((s) => (
                 <div key={s.label}>
@@ -230,26 +248,22 @@ export default function App() {
             </div>
           </div>
 
-          {/* Right column: working search module + organic shapes */}
           <div className="md:col-span-5 md:col-start-8 relative md:mt-8">
             <div className="relative md:mt-8">
-              {/* Large organic blob shape */}
               <div
                 className="absolute -top-6 -left-4 w-72 h-72 rounded-full opacity-[0.06] pointer-events-none"
                 style={{
                   background: "radial-gradient(circle, #E8542C, transparent 70%)",
                 }}
               />
-              {/* Search card, tilted */}
               <div className="relative rotate-1 md:rotate-3">
                 <div className="rounded-2xl border border-[#E8DFD3] bg-white/60 backdrop-blur-sm p-6 shadow-[0_10px_40px_-10px_rgba(232,84,44,0.10)]">
                   <HomeSearch />
                 </div>
               </div>
-              {/* Small floating label */}
               <div className="absolute -bottom-6 -right-2 -rotate-6 hidden md:block">
                 <div className="rounded-full bg-[#1A1A1A] text-[#FAF7F2] px-4 py-1.5 text-xs font-medium">
-                  不当裁判，只当便利店
+                  {lang === "zh" ? "不当裁判，只当便利店" : "Not the judge, just a convenience store"}
                 </div>
               </div>
             </div>
@@ -262,10 +276,8 @@ export default function App() {
         <StaggerReveal>
           <div className="border-l-2 border-[#E8542C] pl-5">
             <p className="text-base leading-relaxed text-[#1A1A1A] font-medium">
-              <strong>核心结论：</strong>
-              AI家AI户是一个中文 AI 工具与模型对比导航站，收录 352 个工具、44 个模型，
-              按语言/图像/视频/代码/Agent/辅助工具 6 大品类整理，每页标注价格、来源与最后更新日期，
-              帮你三分钟缩小选择范围。
+              <strong>{t(lang, "homeCoreTitle")}</strong>
+              {t(lang, "homeCoreText")}
             </p>
           </div>
         </StaggerReveal>
@@ -276,18 +288,18 @@ export default function App() {
         <div className="flex items-end justify-between mb-8">
           <div>
             <h2 className="text-3xl font-extrabold tracking-tight text-[#1A1A1A]">
-              六大品类，一张表管完
+              {t(lang, "homeBentoTitle")}
             </h2>
-            <p className="mt-2 text-[#475569]">从语言到视频，从代码到 Agent</p>
+            <p className="mt-2 text-[#475569]">{t(lang, "homeBentoSubtitle")}</p>
           </div>
           <InkLink href="tools.html" className="hidden md:inline-block text-sm whitespace-nowrap">
-            浏览全部工具 →
+            {t(lang, "homeBentoCta")}
           </InkLink>
         </div>
 
         <div className="grid md:grid-cols-3 gap-4 auto-rows-[12rem]">
           {categories.map((c, i) => (
-            <StaggerReveal key={c.name} delay={i * 0.08} className={c.span}>
+            <StaggerReveal key={c.cat} delay={i * 0.08} className={c.span}>
               <HoverCard className="h-full p-6 flex flex-col justify-between">
                 <div className="flex items-center gap-3">
                   <span
@@ -303,11 +315,11 @@ export default function App() {
                 </div>
                 <p className="text-sm text-[#475569] leading-relaxed">{c.desc}</p>
                 <a
-                  href={`models.html?cat=${c.name}`}
+                  href={`models.html?cat=${encodeURIComponent(c.cat)}`}
                   className="inline-flex items-center gap-1 text-sm font-medium"
                   style={{ color: c.accent }}
                 >
-                  去看 <ArrowUpRight className="w-3.5 h-3.5" />
+                  {t(lang, "catCta")} <ArrowUpRight className="w-3.5 h-3.5" />
                 </a>
               </HoverCard>
             </StaggerReveal>
@@ -321,17 +333,16 @@ export default function App() {
           <div className="flex items-end justify-between">
             <div>
               <h2 className="text-3xl font-extrabold tracking-tight text-[#1A1A1A]">
-                精选分享
+                {t(lang, "homeBlogTitle")}
               </h2>
-              <p className="mt-2 text-[#475569]">挑几篇我们写的真实体验与指南</p>
+              <p className="mt-2 text-[#475569]">{t(lang, "homeBlogSubtitle")}</p>
             </div>
             <InkLink href="blog/" className="text-sm whitespace-nowrap">
-              查看全部博客 →
+              {t(lang, "homeBlogCta")}
             </InkLink>
           </div>
         </div>
 
-        {/* Grid: 2 rows × 3 cols, responsive (1 col mobile, 2 tablet, 3 desktop) */}
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
             {blogPosts.map((post, i) => (
@@ -349,7 +360,7 @@ export default function App() {
                 </h3>
                 <p className="text-sm text-[#475569] leading-relaxed">{post.desc}</p>
                 <div className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[#1A1A1A] group-hover:text-[#E8542C] transition-colors">
-                  读全文 <ArrowUpRight className="w-3.5 h-3.5" />
+                  {lang === "zh" ? "读全文" : "Read"} <ArrowUpRight className="w-3.5 h-3.5" />
                 </div>
               </a>
             ))}
@@ -366,31 +377,29 @@ export default function App() {
               "linear-gradient(135deg, #1A1A1A 0%, #2D2419 50%, #1A1A1A 100%)",
           }}
         />
-        {/* Noise overlay */}
         <div
           className="absolute inset-0 opacity-[0.04]"
           style={{
             backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E")`,
           }}
         />
-        {/* Matrix rain background (deep section only) — 半速流动 */}
         <MatrixRain className="opacity-70" speed={0.5} />
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
           <span className="inline-block px-3 py-1 rounded-full text-xs font-medium bg-[#E8542C]/20 text-[#E8542C] mb-6">
-            彩蛋玩法
+            {t(lang, "homeXianxiaTag")}
           </span>
           <h2 className="text-3xl md:text-4xl font-extrabold text-[#FAF7F2] mb-4">
-            踏入 AI 江湖，寻找你的本命
+            {t(lang, "homeXianxiaTitle")}
           </h2>
           <p className="text-[#FAF7F2]/70 max-w-xl mx-auto mb-8 leading-relaxed">
-            网页表格太乏味了？来游历 AI 的仙侠世界，在江湖中探寻你感兴趣的模型与秘籍。
+            {t(lang, "homeXianxiaSubtitle")}
           </p>
           <Magnetic>
             <a
               href="xianxia/index.html"
               className="inline-flex items-center gap-2 rounded-full bg-[#E8542C] px-7 py-3 text-sm font-semibold text-white hover:bg-[#FAF7F2] hover:text-[#1A1A1A] transition-colors duration-300"
             >
-              踏入 AI 江湖 <ArrowRight className="w-4 h-4" />
+              {t(lang, "homeXianxiaCta")} <ArrowRight className="w-4 h-4" />
             </a>
           </Magnetic>
         </div>
@@ -401,19 +410,15 @@ export default function App() {
         <div className="grid md:grid-cols-12 gap-8 items-start">
           <div className="md:col-span-4">
             <h2 className="text-3xl font-extrabold tracking-tight text-[#1A1A1A] mb-2">
-              大家都在看
+              {t(lang, "homeFeaturedTitle")}
             </h2>
-            <p className="text-[#475569] mb-4">最热门的3个模型</p>
+            <p className="text-[#475569] mb-4">{t(lang, "homeFeaturedSubtitle")}</p>
             <InkLink href="models.html" className="text-sm">
-              查看全部44个模型 →
+              {t(lang, "homeFeaturedCta")}
             </InkLink>
           </div>
           <div className="md:col-span-8 grid gap-4">
-            {[
-              { name: "DeepSeek", company: "深度求索", desc: "网页/APP对话免费，推理能力突出", tags: "编程 · 推理 · 中文原生", badge: "免费+付费", href: "models/deepseek.html", accent: "#E8542C" },
-              { name: "Kimi", company: "月之暗面", desc: "中文写作最细腻，长文案生成不跑题", tags: "写作 · PPT · 深度研究", badge: "免费+付费", href: "models/kimi.html", accent: "#4A7C59" },
-              { name: "通义千问", company: "阿里巴巴", desc: "阿里云生态深度集成，企业级首选", tags: "企业级 · 开源 · 阿里云", badge: "免费+付费", href: "models/qwen.html", accent: "#D4A574" },
-            ].map((m, i) => (
+            {featured.map((m, i) => (
               <StaggerReveal key={m.name} delay={i * 0.1}>
                 <a
                   href={m.href}
@@ -447,36 +452,7 @@ export default function App() {
       </section>
 
       {/* ── FOOTER ── */}
-      <footer className="border-t border-[#E8DFD3] py-10 px-6">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-sm text-[#475569]">
-          <div className="flex items-center gap-2">
-            <span className="w-2.5 h-2.5 rounded-full bg-[#E8542C]" />
-            AI家AI户 · 抱走西瓜 维护
-          </div>
-          <div className="flex flex-wrap gap-5">
-            <InkLink href="models.html">模型库</InkLink>
-            <InkLink href="tools.html">工具库</InkLink>
-            <InkLink href="about.html">关于</InkLink>
-            <InkLink href="privacy.html">隐私政策</InkLink>
-            <InkLink href="blog/">博客</InkLink>
-            <InkLink href="papers.html">白皮书</InkLink>
-          </div>
-          <div className="text-xs text-[#475569]/70">
-            数据来源各产品官网 · 不接软广 · 站点最后更新 2026年8月
-          </div>
-        </div>
-        <div className="max-w-6xl mx-auto mt-4 text-xs text-[#475569]/60 px-0">
-          关注我们：
-          <a
-            href="https://www.xiaohongshu.com/search_result?keyword=%E6%8A%B1%E8%B5%B0%E8%A5%BF%E7%93%9C"
-            target="_blank"
-            rel="noopener me"
-            className="hover:text-[#E8542C] transition"
-          >
-            小红书 @抱走西瓜
-          </a>
-        </div>
-      </footer>
+      <SiteFooter lang={lang} />
     </NoiseBackground>
   );
 }

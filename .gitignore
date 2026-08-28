@@ -13,3 +13,9 @@ Thumbs.db
 
 # === 仙侠：AI 图像生成的中间/调试产物（非线上资源） ===
 xianxia/assets/images/generated/
+
+# === 构建中间产物（vite 输出到 home-new，最终产物已拷到站点根） ===
+home-new/
+
+# === 本地验证脚本（非站点内容） ===
+_verify/

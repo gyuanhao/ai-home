@@ -1,10 +1,12 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ChevronDown } from "lucide-react";
 import { Magnetic } from "./ui/magnetic";
 import { InkLink } from "./ui/ink-link";
 import { Lang, t } from "../lib/i18n";
 
 /**
  * SiteNav — 全站共享导航（与首页视觉一致：sticky + blur + 墨黑按钮）
+ *
+ * 2026-08-28 统一：顶部导航条目与侧边导航完全一致，对比类用下拉聚合。
  */
 export function SiteNav({
   lang,
@@ -20,10 +22,44 @@ export function SiteNav({
           <span className="w-2.5 h-2.5 rounded-full bg-[#E8542C]" />
           AI家AI户
         </a>
-        <div className="hidden md:flex items-center gap-6 text-sm text-[#475569]">
+
+        {/* desktop nav: 与侧边栏项目保持一致 */}
+        <div className="hidden lg:flex items-center gap-5 text-sm text-[#475569]">
           <InkLink href="models.html">{t(lang, "navModels")}</InkLink>
           <InkLink href="tools.html">{t(lang, "navTools")}</InkLink>
-          <InkLink href="compare.html">{t(lang, "navCompare")}</InkLink>
+
+          {/* 对比类下拉 */}
+          <div className="relative group">
+            <button className="flex items-center gap-0.5 hover:text-[#E8542C] transition-colors">
+              {t(lang, "navCompare")} <ChevronDown className="w-3.5 h-3.5 opacity-70" />
+            </button>
+            <div className="absolute left-0 top-full pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+              <div className="bg-[#FAF7F2]/95 backdrop-blur-md border border-[#E8DFD3]/80 rounded-xl shadow-lg p-1.5 min-w-[140px]">
+                <a
+                  href="compare.html"
+                  className="block px-3 py-2 rounded-lg text-sm hover:bg-[#E8542C]/10 hover:text-[#E8542C] transition-colors"
+                >
+                  {t(lang, "navCompare")}
+                </a>
+                <a
+                  href="compare-custom.html"
+                  className="block px-3 py-2 rounded-lg text-sm hover:bg-[#E8542C]/10 hover:text-[#E8542C] transition-colors"
+                >
+                  {t(lang, "navCompareCustom")}
+                </a>
+                <a
+                  href="vs/"
+                  className="block px-3 py-2 rounded-lg text-sm hover:bg-[#E8542C]/10 hover:text-[#E8542C] transition-colors"
+                >
+                  {t(lang, "navVs")}
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <InkLink href="picker.html">{t(lang, "navPicker")}</InkLink>
+          <InkLink href="news.html">{t(lang, "navNews")}</InkLink>
+          <InkLink href="skills.html">{t(lang, "navSkills")}</InkLink>
           <InkLink href="blog/">{t(lang, "navBlog")}</InkLink>
           <InkLink href="papers.html">{t(lang, "navPapers")}</InkLink>
           <InkLink href="about.html">{t(lang, "navAbout")}</InkLink>
@@ -31,6 +67,7 @@ export function SiteNav({
             {t(lang, "navShowcase")}
           </InkLink>
         </div>
+
         <div className="flex items-center gap-3">
           <button
             onClick={onToggleLang}

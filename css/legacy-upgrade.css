@@ -71,13 +71,17 @@ a:hover { color: var(--primary-dark); }
 .related-card:hover { border-color: var(--primary); }
 
 /* —— 滚动进场基类（与 js/reveal.js 配合，错峰淡入上浮） —— */
-.reveal {
+/* 渐进增强：初始隐藏态仅在 <html.reveal-ready> 时生效（由 js/reveal.js 注入）。
+   若 reveal.js 被移除/加载失败，.reveal 不隐藏，内容照常可见。 */
+.reveal-ready .reveal {
   opacity: 0;
   transform: translateY(22px);
   transition: opacity 0.6s var(--ease-out, ease), transform 0.6s var(--ease-out, ease);
   will-change: opacity, transform;
 }
-.reveal.in { opacity: 1; transform: translateY(0); }
+.reveal-ready .reveal.in { opacity: 1; transform: translateY(0); }
+/* 新闻列表由 JS 动态注入，确保其容器始终可见，不被 reveal 隐藏 */
+.about-section:has(#newsContainer) { opacity: 1 !important; transform: none !important; }
 @media (prefers-reduced-motion: reduce) {
   .reveal, .reveal.in { opacity: 1 !important; transform: none !important; transition: none !important; }
 }
