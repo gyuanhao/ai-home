@@ -191,3 +191,11 @@
 - 完整校验（vm 沙箱 eval + node --check）：总天数 40、首项 2026-08-27 / 次项 2026-08-26 / 三序 2026-08-25、日期非递增、字段顺序一致、标题全局唯一、FFFD 0、新块 URL 全 https、摘要≤60。
 - 提交+推送：git add js/news-data.js scripts/_draft_news.md 本memory → commit → `git push origin main`；Cloudflare Pages 自动构建（~45s）上线 myaishome.com。草稿重置为「已发布」占位，临时注入脚本 scripts/_inject_news_tmp.js 已删。
 - 验证：cache-bust 确认 myaishome.com/js/news-data.js 首项 2026-08-27、次项 2026-08-26 → 部署成功。
+
+## 2026-08-28 (周五) — 第二十次运行
+- 产出草稿：scripts/_draft_news.md（10 条，日期 2026-08-28，display「8月28日」，weekday「周五」）。
+- **无积压**：news-data.js 当前首项为 2026-08-27（8/26+8/27 合并已上线），本草稿为最新一天，确认后直接 prepend 即可。
+- 选题主线（8/27–8/28 新增，10 条）：谷歌内部开测Gemini 3.8 Flash预览版(凤凰网科技)、我国日均词元调用量破500万亿+十五五4万亿算力网(央视网)、英伟达129亿美元收购Hugging Face(腾讯新闻/The Information)、软银拟收购1X多数股权估值60亿(凤凰网科技)、2026 AGIC深圳开幕商汤首发SenseNova U1 Pro(深圳新闻网)、央行副行长谈智能体支付(新京报/腾讯新闻)、《2026新加坡共识》聚焦AI智能体安全(清华/腾讯新闻)、原华为盘古王云鹤创业基元律动融资(观察者网/腾讯新闻)、马斯克黄仁勋奥尔特曼齐聚G20科技部长会(界面快讯/腾讯新闻)、Anthropic曾拟70亿收购MatX转合作(凤凰网科技/路透)。
+- 去重：第3条英伟达-HF 为 8/25「探索出售」的后续进展（具名买方、接近达成），作新进展保留；第4条软银1X 与 8/25「软银发债」不同事件；第10条 MatX 与 8/27「组建自研芯片团队」互补而非重复。与 208 条历史标题 0 碰撞。
+- 流程：10 个候选 URL 全部 curl 校验返回 200；node 临时校验脚本（写到 scripts/_check_draft_tmp.js 再执行、跑完即删）通过——JSON 合法、字段顺序一致、摘要 38–53 字全部 ≤60、URL 全 https、与 208 条历史标题 0 重复、FFFD 0。
+- 未改动 js/news-data.js 或其它正式文件，未执行 git、未部署；仅覆盖 scripts/_draft_news.md。

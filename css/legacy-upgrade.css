@@ -1,0 +1,83 @@
+/* ============================================================
+   AI家AI户 · 旧版单页换肤层 legacy-upgrade.css
+   ------------------------------------------------------------
+   用途：让仍使用 css/style.css（蓝紫 #0ea5e9 / #3B5BDB）的旧版
+        单页（about / skills / news / compare / contact / privacy /
+        terms / disclaimer / picker / 404 / hero-demo / papers）
+        在不改写结构的前提下，统一到「暖纸白反SaaS」新视觉语言：
+        柿子橙主色 + 鼠尾草绿辅色 + 暖纸白底。
+   加载顺序：css/style.css → css/legacy-upgrade.css → css/design-system.css
+   本文件只覆盖 token 与少量皮肤，不动布局，可随时移除 <link> 回滚。
+   ============================================================ */
+
+:root {
+  /* —— 主色：蓝紫 → 柿子橙 —— */
+  --primary: #E8542C;
+  --primary-dark: #C2410C;
+  --primary-light: rgba(232, 84, 44, 0.10);
+  /* —— 辅色 —— */
+  --accent-orange: #E8542C;
+  --accent-green: #4A7C59;          /* 鼠尾草绿 */
+  --accent-red: #D64545;
+  /* —— 背景：冷灰 → 暖纸白 —— */
+  --bg: #FAF7F2;
+  --card-bg: #FFFFFF;
+  --border: #E8DFD3;
+  --border-strong: #D9CDBC;
+  /* —— 文字 —— */
+  --text: #1A1A1A;
+  --text-secondary: #475569;
+  /* —— 阴影：暖色柔影 —— */
+  --shadow-lg: 0 12px 28px rgba(232, 84, 44, 0.10);
+}
+
+/* —— 页面底色：暖纸白（覆盖 style.css 冷灰底） —— */
+html, body { background-color: #FAF7F2; }
+
+/* —— 侧栏图标去蓝：强制覆盖 inline stroke 属性 —— */
+.sidebar-link .sb-icon,
+.sidebar-nav svg .sb-icon,
+.sb-icon { stroke: var(--primary) !important; }
+
+/* —— 侧栏暖底 + 暖描边 —— */
+.sidebar {
+  background: #FFFDF9;
+  border-right: 1px solid var(--border);
+}
+.sidebar-logo { color: var(--text); }
+.sidebar-link.active {
+  background: var(--primary-light);
+  color: var(--primary-dark);
+  font-weight: 600;
+}
+.sidebar-link:hover { background: var(--primary-light); color: var(--primary-dark); }
+.sidebar-link.active .sb-icon,
+.sidebar-link:hover .sb-icon { opacity: 1; stroke: var(--primary) !important; }
+
+/* —— 主内容区透出暖底 —— */
+.main-content { background: transparent; }
+
+/* —— 标题强调色统一为橙 —— */
+.hero h1 span,
+h1 span, h2 span { color: var(--primary); }
+
+/* —— 链接在 hover 时加深橙 —— */
+a:hover { color: var(--primary-dark); }
+
+/* —— 移动端底部 Tab 激活色 —— */
+.mobile-tab.active { color: var(--primary); }
+
+/* —— 卡片 hover 描边转暖橙 —— */
+.related-card:hover { border-color: var(--primary); }
+
+/* —— 滚动进场基类（与 js/reveal.js 配合，错峰淡入上浮） —— */
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.6s var(--ease-out, ease), transform 0.6s var(--ease-out, ease);
+  will-change: opacity, transform;
+}
+.reveal.in { opacity: 1; transform: translateY(0); }
+@media (prefers-reduced-motion: reduce) {
+  .reveal, .reveal.in { opacity: 1 !important; transform: none !important; transition: none !important; }
+}
