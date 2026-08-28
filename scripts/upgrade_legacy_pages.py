@@ -10,9 +10,10 @@ upgrade_legacy_pages.py — 将旧版单页（蓝紫主题、无动效）统一�
   3) 注入 js/reveal.js + 初始化脚本（给 .main-content 顶层块加 .reveal 并 initReveal）
      —— papers.html 已有自己的 reveal 逻辑，仅做 1)+2) 换肤，跳过 3)
 
-目标页（均为站点根目录、由 css/style.css 驱动的内容页）：
+目标页（由 css/style.css 驱动的内容页，支持子目录）：
   about / skills / news / compare / compare-custom / contact /
-  disclaimer / privacy / terms / picker / 404 / hero-demo / papers
+  disclaimer / privacy / terms / picker / 404 / hero-demo / papers /
+  blog/index / vs/index
 
 排除：index|tools|models.html(React SPA)、*_legacy.html(备份)、
       showcase*/、go.html、social-card-*/、node_modules/。
@@ -29,39 +30,24 @@ PAGES = [
     "hero-demo.html", "papers.html",
 ]
 
+# 自动发现 blog / vs 目录下所有旧版内容页（排除已有 React/新样式的页面）
+for subdir in ("blog", "vs"):
+    sub_path = os.path.join(ROOT, subdir)
+    if os.path.isdir(sub_path):
+        for f in sorted(os.listdir(sub_path)):
+            if f.endswith(".html"):
+                PAGES.append(f"{subdir}/{f}")
+
 # papers 已有独立 reveal 逻辑，只换肤不重复注入动效脚本
 NO_MOTION = {"papers.html"}
 
-LINK_MARKER = '<link rel="stylesheet" href="css/style.css">'
-INJECT_LINKS = (
-    '<link rel="stylesheet" href="css/style.css">\n'
-    '    <link rel="stylesheet" href="css/design-system.css">\n'
-    '    <link rel="stylesheet" href="css/legacy-upgrade.css">'
-)
+STYLE_RE = re.compile(r'<link\s+rel="stylesheet"\s+href="([^"]*css/style\.css)">')
 
-REVEAL_SNIPPET = """    <script src="js/reveal.js"></script>
-    <script>
-    (function () {
-      var m = document.querySelector('.main-content');
-      if (m) {
-        var sel = ':scope > .container > *, :scope > section, :scope > .about-section, '
-                + ':scope > .page-hero, :scope > .hero, :scope > .related, '
-                + ':scope > .tool-grid, :scope > .model-grid, :scope > .compare-wrap, '
-                + ':scope > .compare-panel';
-        var blocks = m.querySelectorAll(sel);
-        if (!blocks.length) {
-          blocks = Array.prototype.filter.call(m.children, function (c) {
-            return !/footer|nav|script|mobile-tabs|sidebar|object|svg/i.test(c.tagName + ' ' + (c.className || ''));
-          });
-        }
-        Array.prototype.forEach.call(blocks, function (b) {
-          if (b && !b.classList.contains('reveal')) b.classList.add('reveal');
-        });
-      }
-      if (window.initReveal) window.initReveal(document);
-    })();
-    </script>
-"""
+
+def rel_prefix(page):
+    """返回从页面所在目录指向站点根的相对前缀，例如 blog/index.html -> ../"""
+    depth = page.count('/')
+    return '../' * depth
 
 
 def upgrade(page):
@@ -72,6 +58,7 @@ def upgrade(page):
         html = f.read()
 
     actions = []
+    prefix = rel_prefix(page)
 
     # 1) 侧栏蓝色 stroke → 柿子橙
     n_stroke = html.count('stroke="#3B5BDB"')
@@ -81,18 +68,48 @@ def upgrade(page):
 
     # 2) 注入 design-system + legacy-upgrade（幂等）
     if "legacy-upgrade.css" not in html:
-        if LINK_MARKER in html:
-            html = html.replace(LINK_MARKER, INJECT_LINKS, 1)
+        m = STYLE_RE.search(html)
+        if m:
+            style_link = m.group(0)
+            inject_links = (
+                f'{style_link}\n'
+                f'    <link rel="stylesheet" href="{prefix}css/design-system.css">\n'
+                f'    <link rel="stylesheet" href="{prefix}css/legacy-upgrade.css">'
+            )
+            html = html.replace(style_link, inject_links, 1)
             actions.append("注入 design-system.css + legacy-upgrade.css")
         else:
-            return f"[WARN] {page}: 未找到 '{LINK_MARKER}'，跳过链接注入"
+            return f"[WARN] {page}: 未找到 css/style.css 链接，跳过链接注入"
     else:
         actions.append("链接已注入(跳过)")
 
     # 3) 注入 reveal 动效（papers 除外，已自有逻辑）
     if page not in NO_MOTION and "js/reveal.js" not in html:
         if "</body>" in html:
-            html = html.replace("</body>", REVEAL_SNIPPET + "</body>", 1)
+            snippet = f"""    <script src="{prefix}js/reveal.js"></script>
+    <script>
+    (function () {{
+      var m = document.querySelector('.main-content');
+      if (m) {{
+        var sel = ':scope > .container > *, :scope > section, :scope > .about-section, '
+                + ':scope > .page-hero, :scope > .hero, :scope > .related, '
+                + ':scope > .tool-grid, :scope > .model-grid, :scope > .compare-wrap, '
+                + ':scope > .compare-panel, :scope > .blog-list';
+        var blocks = m.querySelectorAll(sel);
+        if (!blocks.length) {{
+          blocks = Array.prototype.filter.call(m.children, function (c) {{
+            return !/footer|nav|script|mobile-tabs|sidebar|object|svg/i.test(c.tagName + ' ' + (c.className || ''));
+          }});
+        }}
+        Array.prototype.forEach.call(blocks, function (b) {{
+          if (b && !b.classList.contains('reveal')) b.classList.add('reveal');
+        }});
+      }}
+      if (window.initReveal) window.initReveal(document);
+    }})();
+    </script>
+"""
+            html = html.replace("</body>", snippet + "</body>", 1)
             actions.append("注入 js/reveal.js + 滚动进场初始化")
         else:
             return f"[WARN] {page}: 未找到 </body>"
