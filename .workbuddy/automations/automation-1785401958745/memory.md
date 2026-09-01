@@ -199,3 +199,10 @@
 - 去重：第3条英伟达-HF 为 8/25「探索出售」的后续进展（具名买方、接近达成），作新进展保留；第4条软银1X 与 8/25「软银发债」不同事件；第10条 MatX 与 8/27「组建自研芯片团队」互补而非重复。与 208 条历史标题 0 碰撞。
 - 流程：10 个候选 URL 全部 curl 校验返回 200；node 临时校验脚本（写到 scripts/_check_draft_tmp.js 再执行、跑完即删）通过——JSON 合法、字段顺序一致、摘要 38–53 字全部 ≤60、URL 全 https、与 208 条历史标题 0 重复、FFFD 0。
 - 未改动 js/news-data.js 或其它正式文件，未执行 git、未部署；仅覆盖 scripts/_draft_news.md。
+
+## 2026-09-01 (周二) — 第二十一次运行
+- 产出草稿：scripts/_draft_news.md（10 条，日期 2026-09-01，display「9月1日」，weekday「周二」）。
+- 选题主线（8/31–9/1 新增，10 条）：OpenAI 广告年化破10亿美元(每经)、OpenClaw 2.0 发布长期记忆+多Agent(腾讯研究院)、英伟达35亿美元入股联发科(通信世界网)、欧盟将ChatGPT列为VLOSE纳入DSA最严监管(腾讯新闻)、谷歌开源TimesFM-3多变量零样本时间序列(搜狐科技)、工信部启动AI应用服务商培育专项行动(中国经济网)、国家AI基金14亿增资快手可灵估值180亿(科创板日报)、MiniMax H3 Max解锁AI实时直播(腾讯新闻)、成都全国首部AI地方政府规章9/1施行(锦观新闻)、北京中小学AI通识课升级(北京日报)。
+- 去重：与已入库 news-data.js（首项 2026-08-27，208 条标题）0 碰撞；刻意避开 DeepSeek V4-Flash-Vision-Exp（8/24 已入库同事件）、DeepSeek/月之暗面 Pre-IPO 融资（多次入库）、智谱「牛来」OpenRouter 第一（8/27）、OpenAI 采购 Mac 训练智能体（同批聚合早报）。草稿内 10 条标题彼此不重复。
+- 流程：10 个候选 URL 全部 curl（-L + 浏览器 UA）返回 200；node 校验脚本（写到 scripts/_check_draft_tmp.js 再执行、跑完即删）通过——JSON 合法、摘要 28–48 字全部 ≤60、URL 全 https（原 2 个 http://view.inews.qq.com 已升级 https）、与 208 条历史标题 0 碰撞、FFFD 0。
+- 未改动 js/news-data.js 或其它正式文件，未执行 git、未部署；仅覆盖 scripts/_draft_news.md。

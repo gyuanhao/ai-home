@@ -7,6 +7,74 @@
  */
 window.AIHomeNews = [
 {
+    "date": "2026-09-01",
+    "display": "9月1日",
+    "weekday": "周二",
+    "items": [
+        {
+            "title": "ChatGPT广告年化收入破10亿美元，推出不足200天即覆盖40余国",
+            "url": "https://www.toutiao.com/article/7680345873091461678/",
+            "summary": "ChatGPT广告推出不足200天年化收入破10亿美元，覆盖40余国并开放印度欧洲自助投放。",
+            "source": "每日经济新闻"
+        },
+        {
+            "title": "开源个人AI助手 OpenClaw 发布 2.0，新增长期记忆与多Agent协作",
+            "url": "https://www.sohu.com/a/1070192038_455313",
+            "summary": "OpenClaw发布2.0，新增长期记忆与多Agent协作，933名贡献者提交超1.6万PR。",
+            "source": "腾讯研究院"
+        },
+        {
+            "title": "英伟达35亿美元入股联发科，扩大AI芯片生态",
+            "url": "https://www.cww.net.cn/article?id=613114",
+            "summary": "英伟达以35亿美元可转债入股联发科，后者引入NVLink Fusion扩大AI芯片生态。",
+            "source": "通信世界网"
+        },
+        {
+            "title": "欧盟将ChatGPT列为「超大型在线搜索引擎」，纳入DSA最严监管",
+            "url": "https://new.qq.com/rain/a/20260901A007E700",
+            "summary": "欧盟将ChatGPT列为超大型在线搜索引擎纳入DSA最严监管，违规最高罚全球营收6%。",
+            "source": "腾讯新闻"
+        },
+        {
+            "title": "谷歌开源 TimesFM-3 时间序列模型，原生支持多变量零样本预测",
+            "url": "https://www.sohu.com/a/1070238042_122572393",
+            "summary": "谷歌开源TimesFM-3，3.3亿参数原生支持多变量零样本预测，登顶三大公开榜。",
+            "source": "搜狐科技"
+        },
+        {
+            "title": "工信部启动AI应用服务商培育专项行动，年底资源池破2000家",
+            "url": "https://www.ce.cn/cysc//newmain/yc/jsxw/202609/t20260901_3183575.shtml",
+            "summary": "工信部启动AI应用服务商培育专项行动，2026年底资源池破2000家、2027年底不少于3000家。",
+            "source": "中国经济网"
+        },
+        {
+            "title": "国家AI产业基金14亿元增资快手可灵，投后估值约180亿美元",
+            "url": "https://new.qq.com/rain/a/20260901A035HJ00",
+            "summary": "国家AI产业基金14亿元增资快手可灵，投后估值约180亿美元，创视频大模型最大融资纪录。",
+            "source": "科创板日报"
+        },
+        {
+            "title": "MiniMax H3 Max上线，5秒视频3秒生成解锁AI实时直播",
+            "url": "https://new.qq.com/rain/a/20260831A06YO500?refer=cp_1009",
+            "summary": "MiniMax H3 Max上线，5秒视频3秒生成快过播放，支撑24小时AI实时直播。",
+            "source": "腾讯新闻"
+        },
+        {
+            "title": "全国首部AI产业地方政府规章《成都市促进人工智能产业发展办法》9月1日施行",
+            "url": "https://view.inews.qq.com/a/20260831A0ALTR00",
+            "summary": "全国首部AI产业地方政府规章9月1日施行，确立以人为本、分级分类监管原则。",
+            "source": "锦观新闻"
+        },
+        {
+            "title": "北京中小学AI通识课新学期升级，新增集成电路与具身智能实验室",
+            "url": "https://view.inews.qq.com/a/20260901A02L0P00",
+            "summary": "北京中小学AI通识课新学期升级，中关村三小2.0版新增集成电路与具身智能实验室。",
+            "source": "北京日报"
+        }
+    ]
+}
+,
+{
     "date": "2026-08-27",
     "display": "8月27日",
     "weekday": "周四",
