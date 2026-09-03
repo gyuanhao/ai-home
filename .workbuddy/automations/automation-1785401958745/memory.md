@@ -223,3 +223,11 @@
 - 去重：9/2 草稿 10 条（Runway Solaris、腾讯Hy4、讯飞星火X2.5、影眸、VAST、Anthropic Fable 5.1、Manus、马斯克、Anthropic-Lambda、戴尔Q2）全部作为附录保留且未重复入选本日主稿；与 news-data.js（首项 9/1，218 条标题）0 碰撞。
 - 流程：10 个候选 URL 全部 curl（-L + 浏览器UA）返回 200（people.com.cn 沙箱出口 000 不可达 → 豆包手机一条改用 news.qq.com 同主题链接 200）；node 临时校验脚本（scripts/_check_draft_tmp.js，跑完即删）通过——解析出两个 day 对象(9/3+9/2附录)、JSON 合法、摘要 31–40 字全部 ≤60、URL 全 https、块内与历史 218 条标题 0 碰撞、FFFD 扫描 0。
 - 未改动 js/news-data.js 或其它正式文件，未执行 git、未部署；仅覆盖 scripts/_draft_news.md。
+
+### 2026-09-03 部署上线 + 45天自动下线规则（用户追加「部署上线，并加规则：超过45天的新闻线上删除」）
+- 入库：node 临时脚本（scripts/_inject_news_tmp.js，跑完即删）抽取草稿两个 day 对象（9/3 主稿 + 9/2 附录）→ 校验 → prepend（9/3 置顶、9/2 次之、其后接原 9/1）。
+- **45 天自动下线规则（新规则，已固化）**：以 date 字段计龄，删除「运行日 2026-09-03 − 45 天 = 2026-07-20」之前的所有 day 对象。本次因此剔除 16 条旧闻（2026-05-28 ~ 2026-06-29），保留 27 天（2026-07-21 ~ 2026-09-03）。规则同时写入：(a) 自动化 prompt 第 6 步常驻清理规则；(b) js/news-data.js 文件头注释。
+- 完整校验：总天数 41 → 27、首项 2026-09-03（9/3） / 次项 2026-09-02（9/2） / 末项 2026-07-21；9/3 位于 index 0、9/2 位于 index 1；FFFD 0；新 20 条 URL 全 https；标题全局唯一；node --check 通过。已知历史缺陷（2026-08-04 京东头盔为 http 而非 https）为旧有、未改，仅作 warning。
+- 提交+推送：git add js/news-data.js scripts/_draft_news.md 本memory → commit 21d1741 → `git push origin main`（9a2c651..21d1741）。草稿重置为「已发布」占位；临时注入脚本已删。
+- 验证：raw.githubusercontent.com 与 myaishome.com（cache-bust）首项均确认为 2026-09-03 → 部署成功。
+- 备注：仙侠子站 xianxia/src/data/news.js 由 xianxia/scripts/sync_xianxia.py 从 news.html 派生（非直接读 news-data.js），本次未跑同步，列为后续可选项（需先重渲 news.html 再跑 convert_news.py，且其会顺带重渲 models/skills，故未纳入本次提交）。
