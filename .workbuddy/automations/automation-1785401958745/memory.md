@@ -206,3 +206,20 @@
 - 去重：与已入库 news-data.js（首项 2026-08-27，208 条标题）0 碰撞；刻意避开 DeepSeek V4-Flash-Vision-Exp（8/24 已入库同事件）、DeepSeek/月之暗面 Pre-IPO 融资（多次入库）、智谱「牛来」OpenRouter 第一（8/27）、OpenAI 采购 Mac 训练智能体（同批聚合早报）。草稿内 10 条标题彼此不重复。
 - 流程：10 个候选 URL 全部 curl（-L + 浏览器 UA）返回 200；node 校验脚本（写到 scripts/_check_draft_tmp.js 再执行、跑完即删）通过——JSON 合法、摘要 28–48 字全部 ≤60、URL 全 https（原 2 个 http://view.inews.qq.com 已升级 https）、与 208 条历史标题 0 碰撞、FFFD 0。
 - 未改动 js/news-data.js 或其它正式文件，未执行 git、未部署；仅覆盖 scripts/_draft_news.md。
+- **同日手动部署**：用户随后要求「上线部署已更新的内容」。已将该草稿 prepend 进 js/news-data.js（数组首项变为 2026-09-01，共 41 天），node 校验通过（首项=9月1日、10条、0重复标题、新10条全 https 且摘要≤60）；git commit 9a2c651 并 `git push -u origin main` 成功（上游此前 gone 已修复）；Cloudflare 自动部署后实测 https://myaishome.com/js/news-data.js 返回 200 且含 2026-09-01 与首条标题，确认已上线。xianxia 子站（xianxia/scripts/convert_news.py）未同步，如需同步需另跑 convert + 独立部署（未执行）。
+
+## 2026-09-02 (周三) — 第二十二次运行
+- 产出草稿：scripts/_draft_news.md（10 条，日期 2026-09-02，display「9月2日」，weekday「周三」）。
+- **无积压**：news-data.js 首项为 2026-09-01（9/1 已部署），本草稿为最新一天，确认后直接 prepend 即可。
+- 选题主线（9/1–9/2 新增，10 条）：Runway 发布「界面世界模型」Solaris 无代码实时生成界面(腾讯研究院)、腾讯混元 Hy4 preview 轻量版开源 1.5TB压至214GB(IT之家)、科大讯飞开源星火X2.5端侧模型原生百万Token上下文(上游新闻)、影眸发布 Hyper3D WorldGen 单图秒级生成可交互3D场景(每经)、VAST 完成约30亿元融资并发布 Tripo P2.0 原生四边面拓扑3D模型(界面新闻)、Anthropic 发布 Fable 5.1 典型任务成本降25%缓存读取降75%(腾讯新闻)、Manus 恢复独立运营肖弘等创始团队重掌(腾讯新闻)、马斯克称AI或令全球经济增20%–30%十年内人形机器人达10亿台(华尔街见闻)、Anthropic 与 Lambda 签350亿美元云协议英伟达持得州机房租约(新浪财经)、戴尔 Q2 AI服务器订单创纪录609亿美元全年指引上调250亿(腾讯新闻)。
+- 去重：与 news-data.js（首项 9/1，约218条标题）0 碰撞；刻意避开 Solaris 同篇聚合内其余4条（混元Hy4/星火X2.5/影眸/Manus 均另取专稿 URL，避免两条指向同一聚合）、Anthropic 91亿美元Riot大单（8/12已入库，本次350亿Lambda为不同交易）、戴尔旧财报；OpenAI Astra 限制网络安全（仅聚合早报、历史已有 Astra 主题）与三星HBM5/软银SBEnergy IPO（同聚合稿、非专稿）置于草稿「已跳过」小节，留待权威专稿。
+- 流程：10 个候选 URL 全部 curl（-L + 浏览器UA）返回 200；node 临时校验脚本（scripts/_check_draft_tmp.js，跑完即删）通过——JSON 合法、字段顺序与 window.AIHomeNews 一致、摘要 32–41 字全部 ≤60、URL 全 https、块内与历史 218 条标题 0 碰撞、FFFD 扫描 0。
+- 未改动 js/news-data.js 或其它正式文件，未执行 git、未部署；仅覆盖 scripts/_draft_news.md（git status 确认仅此文件为 M）。
+
+## 2026-09-03 (周四) — 第二十三次运行
+- 产出草稿：scripts/_draft_news.md（主稿 10 条，日期 2026-09-03，display「9月3日」，weekday「周四」）。
+- **积压仍在**：news-data.js 首项仍为 2026-09-01（41 天），9/2 草稿（10 条）本次运行前从未入库，已被本稿覆盖。已在草稿附录完整保留 9/2 day 对象，并提示按 **9/2 → 9/3** 顺序 prepend（9/3 置顶）。
+- 选题主线（9/1–9/3 新增、且不在 9/2 草稿主题内，10 条）：中央网信办「清朗·整治AI技术滥用」第二阶段(cac.gov.cn)、谷歌 Gemini 3.8 Flash / 3.8 Flash Cyber 六周第三次迭代(IT之家)、博通 Q3 净利+216% AI 半导体营收167亿(每经)、李飞飞 World Labs 多模态世界模型 Atlas(腾讯新闻)、苹果诉 OpenAI 前员工窃取电路设计商业秘密(环球网)、Meta Muse Spark 1.3 编码工具调用减约20%(界面新闻)、梅卡曼德登陆港交所成「眼脑手第一股」(上海证券报)、OpenAI Astra 达「Critical」网络安全阈值 ExploitBench 满分(OpenAI官方)、香港兰桂坊机器人酒保智平方 AlphaBot 2(深圳新闻网)、豆包手机努比亚 NaviX Ultra 获入网许可(腾讯新闻)。
+- 去重：9/2 草稿 10 条（Runway Solaris、腾讯Hy4、讯飞星火X2.5、影眸、VAST、Anthropic Fable 5.1、Manus、马斯克、Anthropic-Lambda、戴尔Q2）全部作为附录保留且未重复入选本日主稿；与 news-data.js（首项 9/1，218 条标题）0 碰撞。
+- 流程：10 个候选 URL 全部 curl（-L + 浏览器UA）返回 200（people.com.cn 沙箱出口 000 不可达 → 豆包手机一条改用 news.qq.com 同主题链接 200）；node 临时校验脚本（scripts/_check_draft_tmp.js，跑完即删）通过——解析出两个 day 对象(9/3+9/2附录)、JSON 合法、摘要 31–40 字全部 ≤60、URL 全 https、块内与历史 218 条标题 0 碰撞、FFFD 扫描 0。
+- 未改动 js/news-data.js 或其它正式文件，未执行 git、未部署；仅覆盖 scripts/_draft_news.md。
