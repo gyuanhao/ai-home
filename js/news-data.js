@@ -8,6 +8,142 @@
  */
 window.AIHomeNews = [
 {
+    "date": "2026-09-08",
+    "display": "9月8日",
+    "weekday": "周二",
+    "items": [
+        {
+            "title": "最高法发布首部涉AI司法裁判规则，明确人工智能纠纷案件审理意见",
+            "url": "https://www.toutiao.com/article/7682685770909418036/",
+            "summary": "最高法发布首部涉AI司法裁判规则，明确人工智能纠纷案件的审理24条意见。",
+            "source": "最高人民法院"
+        },
+        {
+            "title": "华为发布 Mate XT 2 三折叠手机，首发麒麟9050 Pro 与 HarmonyOS 7",
+            "url": "https://www.news.cn/tech/20260907/f5f4d24136004cd480aee192f087f8c2/c.html",
+            "summary": "华为发布Mate XT 2三折叠手机，首发麒麟9050 Pro芯片与HarmonyOS 7系统级智能体。",
+            "source": "新华网"
+        },
+        {
+            "title": "微信视觉团队开源多模态嵌入模型 WeMM-Embedding，日调用破十亿",
+            "url": "https://tech.ifeng.com/c/8wFL1Pu27oS",
+            "summary": "微信视觉团队开源多模态嵌入模型WeMM-Embedding，登顶MMEB-v2、日调用破十亿。",
+            "source": "凤凰网科技"
+        },
+        {
+            "title": "工信部发布「十五五」信息通信业规划：算力目标9800 EFLOPS、布局6G",
+            "url": "https://www.ce.cn/xwzx/gnsz/gdxw/202609/t20260908_3199402.shtml",
+            "summary": "工信部发布十五五信息通信业规划：算力目标9800 EFLOPS、布局6G与万卡智算集群。",
+            "source": "中国经济网"
+        },
+        {
+            "title": "阿里千问开源 Qwen-Drive-1.0-4B，首个自动驾驶视觉语言基础模型",
+            "url": "https://weibo.com/1798777247/5340539911144845",
+            "summary": "阿里千问开源Qwen-Drive-1.0-4B，首个统一3D感知、问答与运动规划的自动驾驶VLM。",
+            "source": "通义千问"
+        },
+        {
+            "title": "OpenAI 达成「自动化研究实习生」里程碑，首席科学家呼吁放缓研发",
+            "url": "https://news.qq.com/rain/a/20260908A03EF100",
+            "summary": "OpenAI宣布达成自动化研究实习生里程碑，首席科学家发文呼吁统一安全标准前放缓。",
+            "source": "腾讯新闻"
+        },
+        {
+            "title": "Anthropic 11个月锁定5170亿美元算力，IPO推迟至11月、估值锚定2万亿",
+            "url": "https://www.163.com/dy/article/L67DH22S05198NMR.html",
+            "summary": "Anthropic 11个月锁定5170亿美元算力，IPO推迟至11月、估值锚定2万亿美元。",
+            "source": "华尔街见闻"
+        },
+        {
+            "title": "科大讯飞发布星火 X2.5 大模型，MoE 293B-A30B 基于全国产算力",
+            "url": "https://www.sohu.com/a/1072878798_362042",
+            "summary": "科大讯飞发布星火X2.5大模型，MoE 293B-A30B架构、基于全国产算力完成训推。",
+            "source": "央广网"
+        },
+        {
+            "title": "具身智能企业加速进化 Booster 完成近10亿元融资，一季度出货增500%",
+            "url": "https://ijiwei.com/n/1064285",
+            "summary": "具身智能企业加速进化(Booster)完成近10亿元融资，一季度出货同比增500%。",
+            "source": "爱集微"
+        },
+        {
+            "title": "国家反诈 AI App 上线，公安部刑侦局指导、融合大模型反诈",
+            "url": "https://www.workercn.cn/c/2026-09-08/8888083.shtml",
+            "summary": "国家反诈AI App上线，由公安部刑侦局指导、上海公安研发，融合大模型反诈。",
+            "source": "中工网"
+        }
+    ]
+}
+,
+{
+    "date": "2026-09-04",
+    "display": "9月4日",
+    "weekday": "周五",
+    "items": [
+        {
+            "title": "OpenAI 正式发布 GPT-6 Astra，布罗克曼称「欢迎来到 AGI 时代」",
+            "url": "https://www.163.com/dy/article/L5VK33HQ0512D3VJ.html",
+            "summary": "OpenAI发布GPT-6 Astra，ARC-AGI-3达99.9%，布罗克曼称开启AGI时代。",
+            "source": "新京报"
+        },
+        {
+            "title": "ChatGPT、Claude、Grok 罕见同时宕机，引 AI 基础设施共因风险讨论",
+            "url": "https://www.cnstock.com/commonDetail/785745",
+            "summary": "9月3日晚至4日凌晨，ChatGPT、Claude、Grok罕见同时故障，Downdetector峰值报障数万，已恢复。",
+            "source": "上海证券报"
+        },
+        {
+            "title": "谷歌发布 WeatherNext 3 全球 AI 气象模型，分辨率达 5 公里",
+            "url": "https://view.inews.qq.com/a/20260904A00HOT00",
+            "summary": "谷歌DeepMind发布WeatherNext 3全球AI气象模型，直学卫星观测，分辨率5公里、每小时预报。",
+            "source": "腾讯新闻"
+        },
+        {
+            "title": "谷歌 Docs、Gmail、Keep 上线 Gemini AI 语音功能",
+            "url": "https://view.inews.qq.com/a/20260904A02XV300",
+            "summary": "谷歌在Docs、Gmail、Keep上线Gemini语音功能，可对话查询、写作与整理笔记。",
+            "source": "腾讯新闻"
+        },
+        {
+            "title": "奥特曼首次确认 OpenAI 将自研人形机器人",
+            "url": "https://news.qq.com/rain/a/20260904A036GR00",
+            "summary": "奥特曼在播客中首次确认OpenAI将自研人形机器人，短期聚焦数据中心等工业场景。",
+            "source": "腾讯新闻"
+        },
+        {
+            "title": "英伟达 RTX Spark AI PC 将于 10 月上市，含 6 家 OEM",
+            "url": "https://www.ithome.com/0/998/202.htm",
+            "summary": "英伟达RTX Spark AI PC将于10月上市，20核Grace+Blackwell、1 Petaflop本地算力。",
+            "source": "IT之家"
+        },
+        {
+            "title": "Anthropic 拟完成 150 亿美元 IPO 前信贷融资",
+            "url": "https://new.qq.com/rain/a/20260904A02SQS00?refer=cp_1009",
+            "summary": "据彭博，Anthropic接近敲定150亿美元IPO前信贷额度，由大摩牵头，扫清上市障碍。",
+            "source": "腾讯新闻"
+        },
+        {
+            "title": "月之暗面秘密递交港交所 A1，Pre-IPO 估值 500 亿美元",
+            "url": "https://new.qq.com/rain/a/20260903A056P500?refer=cp_1009",
+            "summary": "月之暗面本周保密递交港交所A1，同步推进500亿美元Pre-IPO轮，Kimi上市启动。",
+            "source": "腾讯新闻"
+        },
+        {
+            "title": "沙特 Humain 借中国 MiniMax 推阿拉伯语大模型 HUMAIN-M3",
+            "url": "https://view.inews.qq.com/a/20260903A0BHH100",
+            "summary": "沙特Humain推出阿拉伯语大模型HUMAIN-M3，由MiniMax开发，借中国开源力量出海。",
+            "source": "财联社"
+        },
+        {
+            "title": "OpenAI 新版 GPT Image 2.5 可伪造发布会画面，deepfake 风险引关注",
+            "url": "https://www.163.com/dy/article/L5V8IB3A0511DSSR.html",
+            "summary": "OpenAI未正式发布的GPT Image 2.5已向部分用户推送，可逼真伪造GPT-6发布会画面。",
+            "source": "量子位"
+        }
+    ]
+}
+,
+{
     "date": "2026-09-03",
     "display": "9月3日",
     "weekday": "周四",
@@ -1423,110 +1559,6 @@ window.AIHomeNews = [
             "url": "https://www.163.com/dy/article/L2U9EUB4051180F7.html",
             "summary": "数字员工Devin开发方Cognition宣布K3接入桌面客户端与CLI，并在FrontierCode 1.1基准上称其为测试过首款性能逼近前沿水准的开源模型。",
             "source": "智东西"
-        }
-    ]
-}
-,
-{
-    "date": "2026-07-24",
-    "display": "7月24日",
-    "weekday": "周五",
-    "items": [
-        {
-            "title": "DeepSeek V4正式开源：代码能力超GPT-5.4，定价仅海外1/10",
-            "url": "https://www.toutiao.com/a7667602007120806435",
-            "summary": "DeepSeek V4于7月20日以MIT协议开源，Codeforces评分3206超GPT-5.4，背后离不开幻方量化持续的自有资金支持。",
-            "source": "今日头条"
-        },
-        {
-            "title": "阿里Qwen 3.8预览版发布，2.4万亿参数对标顶尖闭源",
-            "url": "https://www.toutiao.com/a7667602007120806435",
-            "summary": "Qwen 3.8于7月19日发布预览版，2.4万亿参数规模紧随Kimi K3，引发社区对国产开源模型集群效应的讨论。",
-            "source": "今日头条"
-        },
-        {
-            "title": "GLM-5.2在Hugging Face入侵事件中被官方用于本地取证分析",
-            "url": "https://www.toutiao.com/a7667602007120806435",
-            "summary": "GLM-5.2因平台安全事件被官方安全团队本地部署用于取证分析，真实生产环境下的应用能力引发全社区关注。",
-            "source": "今日头条"
-        }
-    ]
-}
-,
-{
-    "date": "2026-07-23",
-    "display": "7月23日",
-    "weekday": "周四",
-    "items": [
-        {
-            "title": "国产四款开源大模型包揽Hugging Face核心讨论",
-            "url": "https://www.toutiao.com/a7667602007120806435",
-            "summary": "7月下旬数据显示，DeepSeek、Qwen、GLM、Kimi四款国产开源模型几乎包揽平台核心讨论量，海外传统开源模型同期声量微弱。",
-            "source": "Hugging Face"
-        },
-        {
-            "title": "阿里云百炼将上线Kimi K3模型API",
-            "url": "https://www.163.com/dy/article/L2UOABRD0512B07B.html",
-            "summary": "在Kimi K3开源后，千问AI平台与阿里云百炼宣布后续将上线K3模型API，Nebius、Baseten、Fireworks等海外厂商亦同步适配。",
-            "source": "每日经济新闻"
-        },
-        {
-            "title": "华为昇腾CANN宣布昇腾950全系列完成Kimi K3部署适配",
-            "url": "https://www.163.com/dy/article/L2UOABRD0512B07B.html",
-            "summary": "华为昇腾CANN宣布昇腾950全系列、Atlas A3产品完成K3部署适配；趋境科技基于SGLang完成在昇腾910C上的Day0适配并开源成果。",
-            "source": "每日经济新闻"
-        }
-    ]
-}
-,
-{
-    "date": "2026-07-22",
-    "display": "7月22日",
-    "weekday": "周三",
-    "items": [
-        {
-            "title": "Kimi K3发布前Hugging Face为其做预热网页，3700名开发者排队",
-            "url": "https://www.163.com/dy/article/L2U9EUB4051180F7.html",
-            "summary": "上线前已有近3700名开发者等待下载，上线10分钟前页面还短暂出现404，社区讨论热度空前。",
-            "source": "智东西"
-        },
-        {
-            "title": "Cognition宣布Kimi K3接入Devin桌面客户端与命令行工具",
-            "url": "https://www.163.com/dy/article/L2U9EUB4051180F7.html",
-            "summary": "数字员工Devin开发方Cognition称在FrontierCode 1.1评测上，K3是其测试过首款性能逼近前沿水准的开源模型。",
-            "source": "智东西"
-        },
-        {
-            "title": "Nebius、Baseten、Fireworks等海外AI基础设施厂商Day0适配Kimi K3",
-            "url": "https://www.163.com/dy/article/L2UOABRD0512B07B.html",
-            "summary": "北美AI基础设施厂商宣布首日完成适配，Nebius评价K3为首个达到前沿性能水平的开放权重模型。",
-            "source": "每日经济新闻"
-        }
-    ]
-}
-,
-{
-    "date": "2026-07-21",
-    "display": "7月21日",
-    "weekday": "周二",
-    "items": [
-        {
-            "title": "海外开发者称Kimi K3为本地版Fable 5",
-            "url": "https://www.163.com/dy/article/L2U9EUB4051180F7.html",
-            "summary": "OsmanticAI创始人称K3为本地版Fable 5并建议大家下载体验，调侃永远夺不走自己的Fable 5。",
-            "source": "智东西"
-        },
-        {
-            "title": "开源与闭源差距缩至约4分，Artificial Analysis发榜",
-            "url": "https://www.toutiao.com/a7667746180054532659",
-            "summary": "Artificial Analysis数据显示，领先开放权重模型与最强闭源模型之间差距约4分，为近几个月最小。",
-            "source": "AINews"
-        },
-        {
-            "title": "月之暗面资本化加速，汤臣倍健追加投资",
-            "url": "https://new.qq.com/rain/a/20260729A02J6P00?refer=cp_1009",
-            "summary": "在K3开源引爆社区之际，月之暗面资本化进程加速、汤臣倍健追加投资，引发国产开源大模型重塑全球API定价体系的讨论。",
-            "source": "腾讯新闻"
         }
     ]
 }
