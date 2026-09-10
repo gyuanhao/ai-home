@@ -8,6 +8,140 @@
  */
 window.AIHomeNews = [
 {
+    "date": "2026-09-10",
+    "display": "9月10日",
+    "weekday": "周四",
+    "items": [
+        {
+            "title": "DeepSeek V4.1 Flash 正式发布并下调 Flash 系列价格，同时筹备科创板 IPO",
+            "url": "https://new.qq.com/rain/a/20260910A0331J00",
+            "summary": "DeepSeek 9/10 发布 V4.1 Flash 超 V4 Pro，免费路由请求并降价，筹备科创板 IPO。",
+            "source": "科创板日报 / 腾讯新闻"
+        },
+        {
+            "title": "AI 编程独角兽 Cognition 完成 20 亿美元 E 轮，估值 480 亿美元",
+            "url": "https://new.qq.com/rain/a/20260909A02X5U00",
+            "summary": "开发 Devin 的 Cognition 完成 20 亿 E 轮，估值 480 亿、年化近 9 亿，a16z 领投。",
+            "source": "腾讯新闻 / IT时代网"
+        },
+        {
+            "title": "Anthropic 复盘 4 起 Claude 越权事故，授权 METR 独立调查",
+            "url": "https://anthropic.com/news/improving-alignment-security-efforts",
+            "summary": "Anthropic 4 起 Claude 越权事故，Mythos 5 复现有害操作约 80%，授权 METR 调查。",
+            "source": "Anthropic 官方"
+        },
+        {
+            "title": "智元机器人发布 AGILE2.0 感控一体模型，机器人进入「睁眼运动」时代",
+            "url": "https://new.qq.com/rain/a/20260909A08ZJ200",
+            "summary": "智元发布 AGILE2.0 感控一体模型，端到端打通视觉与全身运动控制，机器人可「边看边想边动」，告别盲动。",
+            "source": "新民晚报 / 腾讯新闻"
+        },
+        {
+            "title": "京东启动「物理AI加速计划」，五年采购 300 万台机器人、布局 80 个 RoboBase",
+            "url": "https://stcn.com/article/detail/4178747.html",
+            "summary": "京东科技探索者大会启动物理AI加速计划：五年采购 300 万台机器人、100 万台无人车，布局 80 个机器人产业基地。",
+            "source": "证券时报"
+        },
+        {
+            "title": "智象未来 vivago R1 内容创作智能体全球上线，单次可生成 5 分钟视频",
+            "url": "https://new.qq.com/rain/a/20260909A03RKG00",
+            "summary": "智象未来 vivago R1 全球上线，对话式创作单次生成 5 分钟视频，多智能体协同保一致性，可用成功率 85%。",
+            "source": "凤凰网科技 / 腾讯新闻"
+        },
+        {
+            "title": "英矽智能 AI 设计药物 Rentosertib 登《自然·生物技术》，可逆转生物学年龄",
+            "url": "https://new.qq.com/rain/a/20260908A0B7FG00",
+            "summary": "英矽智能 AI 药 Rentosertib 登《自然·生物技术》，2a 期逆转生物学年龄 3–4 年。",
+            "source": "腾讯新闻 / 科普中国"
+        },
+        {
+            "title": "亮源新创发布 Light REACT 全身韧性智能，关节失效可自主恢复",
+            "url": "https://view.inews.qq.com/a/20260909A07LNB00",
+            "summary": "亮源新创发布 Light REACT 全身韧性技术，机器人无需故障标签即可在关节失效后自主调整动作继续行走或爬行。",
+            "source": "凤凰网 / 腾讯新闻"
+        },
+        {
+            "title": "Inception 发布扩散语言模型 Mercury 2.5，吞吐达 1107 tokens/秒",
+            "url": "https://www.inceptionlabs.ai/blog/introducing-mercury-2-5",
+            "summary": "Inception Labs 发布扩散 LLM Mercury 2.5，智能提升 40%、达 1107 tok/s。",
+            "source": "Inception Labs 官方 / 腾讯新闻"
+        },
+        {
+            "title": "优必选上半年交付约 600 台 Walker S2，联手沐曦开发人形机器人专用芯片",
+            "url": "https://view.inews.qq.com/a/20260909A08SJU00",
+            "summary": "大和报告称优必选上半年交付约 600 台 Walker S2，收入超 10 亿，联手沐曦开发专用芯片。",
+            "source": "财闻 / 腾讯新闻"
+        }
+    ]
+},
+{
+    "date": "2026-09-09",
+    "display": "9月9日",
+    "weekday": "周三",
+    "items": [
+        {
+            "title": "DeepSeek V4.1 Flash 中间版开启内测，新架构原生多模态、速度超500 tokens/s",
+            "url": "https://www.oschina.net/news/502383",
+            "summary": "DeepSeek V4.1 Flash中间版内测：新架构原生多模态，实测输出超500 tokens/s。",
+            "source": "开源中国"
+        },
+        {
+            "title": "面壁智能开源 MiniCPM5-2B，2B 端侧模型登顶 AA 榜 4B 以下第一",
+            "url": "https://www.sohu.com/a/1073526541_115978",
+            "summary": "面壁智能开源2B端侧模型MiniCPM5-2B，AA榜4B以下第一，智能体指标领先同级10倍。",
+            "source": "智东西"
+        },
+        {
+            "title": "腾讯文档「AI工作台」上线，基于 WorkBuddy Agent 内核",
+            "url": "https://www.cnr.cn/tech/techph/20260908/t20260908_527808119.shtml",
+            "summary": "腾讯文档推出AI工作台，基于WorkBuddy Agent内核，支持人机双写与后台任务执行。",
+            "source": "央广网"
+        },
+        {
+            "title": "Meta 发布个人 AI 智能体 Muse，可代发邮件订票",
+            "url": "https://www.ithome.com/0/999/960.htm",
+            "summary": "Meta发布个人AI智能体Muse，可代发邮件订票，免费+20/100美元订阅，年内上眼镜。",
+            "source": "IT之家"
+        },
+        {
+            "title": "OpenAI 用万级智能体 88 小时攻克纳维-斯托克斯千年难题",
+            "url": "https://news.qq.com/rain/a/20260909A036K900",
+            "summary": "OpenAI未发布模型用万级智能体88小时攻克纳维-斯托克斯千年难题，陶哲轩发警告。",
+            "source": "凤凰网科技"
+        },
+        {
+            "title": "微信支付智能眼镜 SDK 正式上线，Rokid 首批接入",
+            "url": "https://new.qq.com/rain/a/20260908A06P6G00",
+            "summary": "微信支付智能眼镜SDK上线，Rokid首批接入，语音唤起扫一扫、滑动镜腿确认付款。",
+            "source": "腾讯新闻"
+        },
+        {
+            "title": "松延动力推出具身智能子品牌 Scalabot，发布世界模型 HERON",
+            "url": "https://news.qq.com/rain/a/20260908A0ALV300",
+            "summary": "松延动力发布具身智能品牌Scalabot及世界模型HERON，由机器人本体延伸至具身大脑。",
+            "source": "界面新闻"
+        },
+        {
+            "title": "Mistral 完成 30 亿欧元 D 轮融资，估值超 210 亿欧元",
+            "url": "https://news.qq.com/rain/a/20260908A08A3B00",
+            "summary": "法国Mistral完成30亿欧元D轮融资，估值超210亿欧元，创欧洲科技最大股权融资。",
+            "source": "腾讯新闻"
+        },
+        {
+            "title": "谷歌 DeepMind 发布 AlphaGenome Atlas，预测 90 亿人类基因变异",
+            "url": "https://www.nature.com/articles/d41586-026-02835-4",
+            "summary": "谷歌DeepMind发布AlphaGenome Atlas，预计算90亿人类基因变异影响，免费开放研究。",
+            "source": "Nature"
+        },
+        {
+            "title": "亚马逊与高通合作定制 AI 芯片，最高 600 亿美元采购",
+            "url": "https://www.toutiao.com/article/7683315035841577499/",
+            "summary": "亚马逊与高通合作开发AI数据中心定制芯片，最高600亿美元采购绑定2500万股权证。",
+            "source": "每日经济新闻"
+        }
+    ]
+},
+{
     "date": "2026-09-08",
     "display": "9月8日",
     "weekday": "周二",
@@ -73,8 +207,7 @@ window.AIHomeNews = [
             "source": "中工网"
         }
     ]
-}
-,
+},
 {
     "date": "2026-09-04",
     "display": "9月4日",
@@ -141,8 +274,7 @@ window.AIHomeNews = [
             "source": "量子位"
         }
     ]
-}
-,
+},
 {
     "date": "2026-09-03",
     "display": "9月3日",
@@ -209,8 +341,7 @@ window.AIHomeNews = [
             "source": "腾讯新闻"
         }
     ]
-}
-,
+},
 {
     "date": "2026-09-02",
     "display": "9月2日",
@@ -277,8 +408,7 @@ window.AIHomeNews = [
             "source": "腾讯新闻"
         }
     ]
-}
-,
+},
 {
     "date": "2026-09-01",
     "display": "9月1日",
@@ -345,8 +475,7 @@ window.AIHomeNews = [
             "source": "北京日报"
         }
     ]
-}
-,
+},
 {
     "date": "2026-08-27",
     "display": "8月27日",
@@ -413,8 +542,7 @@ window.AIHomeNews = [
             "source": "新浪财经 / 第一财经"
         }
     ]
-}
-,
+},
 {
     "date": "2026-08-26",
     "display": "8月26日",
@@ -481,8 +609,7 @@ window.AIHomeNews = [
             "source": "华尔街见闻 / 网易"
         }
     ]
-}
-,
+},
 {
     "date": "2026-08-25",
     "display": "8月25日",
@@ -549,8 +676,7 @@ window.AIHomeNews = [
             "source": "环球网科技 / 网易"
         }
     ]
-}
-,
+},
 {
     "date": "2026-08-24",
     "display": "8月24日",
@@ -617,8 +743,7 @@ window.AIHomeNews = [
             "source": "量子位"
         }
     ]
-}
-,
+},
 {
     "date": "2026-08-18",
     "display": "8月18日",
@@ -685,8 +810,7 @@ window.AIHomeNews = [
             "source": "上海证券报"
         }
     ]
-}
-,
+},
 {
     "date": "2026-08-17",
     "display": "8月17日",
@@ -753,8 +877,7 @@ window.AIHomeNews = [
             "source": "网易 / 文伯虎财经"
         }
     ]
-}
-,
+},
 {
     "date": "2026-08-14",
     "display": "8月14日",
@@ -821,8 +944,7 @@ window.AIHomeNews = [
             "source": "前沿在线 / 网易"
         }
     ]
-}
-,
+},
 {
     "date": "2026-08-13",
     "display": "8月13日",
@@ -889,8 +1011,7 @@ window.AIHomeNews = [
             "source": "路透 / 国际财经时报"
         }
     ]
-}
-,
+},
 {
     "date": "2026-08-12",
     "display": "8月12日",
@@ -957,8 +1078,7 @@ window.AIHomeNews = [
             "source": "极新早报"
         }
     ]
-}
-,
+},
 {
     "date": "2026-08-11",
     "display": "8月11日",
@@ -1025,8 +1145,7 @@ window.AIHomeNews = [
             "source": "网易（cnBeta）"
         }
     ]
-}
-,
+},
 {
     "date": "2026-08-10",
     "display": "8月10日",
@@ -1093,8 +1212,7 @@ window.AIHomeNews = [
             "source": "腾讯新闻（观点新媒体）"
         }
     ]
-}
-,
+},
 {
     "date": "2026-08-07",
     "display": "8月7日",
@@ -1161,8 +1279,7 @@ window.AIHomeNews = [
             "source": "腾讯新闻（北京青年报）"
         }
     ]
-}
-,
+},
 {
     "date": "2026-08-06",
     "display": "8月6日",
@@ -1229,8 +1346,7 @@ window.AIHomeNews = [
             "source": "网易（极新）"
         }
     ]
-}
-,
+},
 {
     "date": "2026-08-05",
     "display": "8月5日",
@@ -1297,8 +1413,7 @@ window.AIHomeNews = [
             "source": "腾讯新闻（DeepTech深科技）"
         }
     ]
-}
-,
+},
 {
     "date": "2026-08-04",
     "display": "8月4日",
@@ -1359,8 +1474,7 @@ window.AIHomeNews = [
             "source": "站长之家"
         }
     ]
-}
-,
+},
 {
     "date": "2026-08-03",
     "display": "8月3日",
@@ -1421,8 +1535,7 @@ window.AIHomeNews = [
             "source": "腾讯新闻（华尔街见闻）"
         }
     ]
-}
-,
+},
 {
     "date": "2026-08-01",
     "display": "8月1日",
@@ -1477,8 +1590,7 @@ window.AIHomeNews = [
             "source": "科技狐（网易）"
         }
     ]
-}
-,
+},
 {
     "date": "2026-07-29",
     "display": "7月29日",
@@ -1503,8 +1615,7 @@ window.AIHomeNews = [
             "source": "微博 / 光明日报"
         }
     ]
-}
-,
+},
 {
     "date": "2026-07-28",
     "display": "7月28日",
@@ -1535,8 +1646,7 @@ window.AIHomeNews = [
             "source": "观点新媒体"
         }
     ]
-}
-,
+},
 {
     "date": "2026-07-27",
     "display": "7月27日",
