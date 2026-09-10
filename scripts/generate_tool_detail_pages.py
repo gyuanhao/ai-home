@@ -13,8 +13,21 @@ import os
 
 PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 JSON_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'tools.json')
+FEATURED_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'featured_tools.json')
 OUT_DIR = os.path.join(PROJECT_DIR, 'tools')
 SITE = 'https://myaishome.com'
+
+
+def load_featured():
+    """精品工具 id 集合：精品页正常索引；其余长尾薄页 noindex，避免 AdSense 判 scaled/thin content。"""
+    try:
+        with open(FEATURED_PATH, 'r', encoding='utf-8') as f:
+            return set(json.load(f))
+    except Exception:
+        return set()
+
+
+FEATURED = load_featured()
 LOGO = f'{SITE}/img/logo.png'
 OG_IMAGE = f'{SITE}/img/og-image.png'
 
@@ -216,6 +229,7 @@ def page(t, related_ids=None, tmap=None):
     ld_json = json.dumps(ld, ensure_ascii=False)
 
     desc_meta = (f'{name}（{company}）— {category} 工具。{(summary or name)[:80]} 价格：{price_label}。查看功能、优缺点与同类替代品对比。')[:150]
+    robots_meta = '' if tid in FEATURED else '<meta name="robots" content="noindex">'
 
     html = f'''<!DOCTYPE html>
 <html lang="zh-CN">
@@ -225,6 +239,7 @@ def page(t, related_ids=None, tmap=None):
     <meta name="description" content="{esc(desc_meta)}">
     <title>{esc(name)} 怎么样？2026 价格、功能与替代品 | AI家AI户</title>
     <link rel="canonical" href="{canon}">
+    {robots_meta}
     <meta property="og:title" content="{esc(name)} — AI家AI户">
     <meta property="og:description" content="{esc(desc_meta)}">
     <meta property="og:url" content="{canon}">
