@@ -188,6 +188,7 @@ def page(t, related_ids=None, tmap=None):
     official = t.get('affiliateUrl') or website
     tags = t.get('tags', []) or []
     last_updated = t.get('lastUpdated', '')
+    editor_note = (t.get('editorNote') or '').strip()
     canon = f'{SITE}/tools/{tid}'
 
     pc = 'badge-free' if pricing == 'free' else 'badge-freemium' if pricing == 'freemium' else 'badge-paid'
@@ -230,6 +231,11 @@ def page(t, related_ids=None, tmap=None):
 
     desc_meta = (f'{name}（{company}）— {category} 工具。{(summary or name)[:80]} 价格：{price_label}。查看功能、优缺点与同类替代品对比。')[:150]
     robots_meta = '' if tid in FEATURED else '<meta name="robots" content="noindex">'
+    editor_block = (
+        '<div class="about-section" style="background:var(--surface);padding:16px 18px;border-radius:10px;border-left:4px solid var(--primary);">'
+        '<h2 style="margin-top:0;font-size:16px;">编辑点评</h2>'
+        f'<p style="margin:0;color:var(--text-primary);">{esc(editor_note)}</p></div>'
+    ) if editor_note else ''
 
     html = f'''<!DOCTYPE html>
 <html lang="zh-CN">
@@ -287,6 +293,8 @@ __SIDEBAR__
         <h2 style="margin-top:0;font-size:16px;">一句话结论</h2>
         <p style="margin:0;color:var(--text-primary);">{esc(best_for)} 适合关注 {esc(category)} 的用户；价格档位为 {esc(price_label)}，数据更新于 <time datetime="{esc(last_updated)}">{esc(last_updated)}</time>。</p>
     </div>
+
+    {editor_block}
 
     <div class="about-section">
         <h2>这是什么</h2>
