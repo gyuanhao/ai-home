@@ -8,6 +8,183 @@
  */
 window.AIHomeNews = [
 {
+    "date": "2026-09-16",
+    "display": "9月16日",
+    "weekday": "周三",
+    "items": [
+        {
+            "title": "国常会部署加强算力网等规划建设，机构称国产AI算力兑现元年",
+            "url": "https://cls.cn/detail/2367123",
+            "summary": "国常会要求加强算力网规划建设，机构称2026年国产AI算力迎兑现元年。",
+            "source": "财联社"
+        },
+        {
+            "title": "优必选全球首个万台级工业人形机器人工厂投产，每10分钟下线1台",
+            "url": "https://gu.qq.com/resources/shy/news/detail-v2/index.html?t=1#/index?_tentrees_trans=0&id=SN20260916070525950a8ef6",
+            "summary": "优必选工业人形机器人超级智慧工厂投产，全球首个万台级、每10分钟下线1台。",
+            "source": "每日经济新闻"
+        },
+        {
+            "title": "国产AI芯片中报盘点：谁真正赚到钱？",
+            "url": "https://new.qq.com/rain/a/20260913A08RJ400",
+            "summary": "年中报披露国产AI芯片厂商业绩分化，谁真正赚到钱引发关注。",
+            "source": "腾讯新闻"
+        },
+        {
+            "title": "DeepSeek一口气扩招150人，加码下一代模型与算力研发",
+            "url": "https://new.qq.com/rain/a/20260913A088R200",
+            "summary": "DeepSeek启动扩招约150人，重点补强下一代模型与算力基础设施研发。",
+            "source": "腾讯新闻"
+        },
+        {
+            "title": "智谱完成约50亿美元融资，加码下一代大模型与算力基建",
+            "url": "https://gu.qq.com/resources/shy/news/detail-v2/index.html?t=1#/index?_tentrees_trans=0&id=SN2026091409111998581add",
+            "summary": "智谱宣布完成约50亿美元融资，过半用于GLM下一代模型与算力基建。",
+            "source": "腾讯新闻 / 每日经济新闻"
+        },
+        {
+            "title": "智象未来完成C+轮融资，加速多模态生成式AI研发",
+            "url": "https://gu.qq.com/resources/shy/news/detail-v2/index.html?t=1#/index?_tentrees_trans=0&id=SN20260916040629950a697e",
+            "summary": "智象未来宣布完成C+轮系列融资，加速多模态生成式AI研发与落地。",
+            "source": "每日经济新闻 / 腾讯新闻"
+        },
+        {
+            "title": "紫东太初开源 ZDTaichu5.0-9B，9项空间基准8项第一",
+            "url": "https://www.yicai.com/news/103365002.html",
+            "summary": "紫东太初开源9B空间具身多模态模型，九大空间基准八项组别第一。",
+            "source": "第一财经"
+        }
+    ]
+},
+{
+    "date": "2026-09-15",
+    "display": "9月15日",
+    "weekday": "周二",
+    "items": [
+        {
+            "title": "《人工智能安全治理框架3.0》于国家网络安全宣传周发布",
+            "url": "https://www.cac.gov.cn/2026-09/14/c_1791137092283345.htm",
+            "summary": "网安周发布《人工智能安全治理框架3.0》，更新风险分类与综合治理措施。",
+            "source": "中央网信办 / 人民网"
+        },
+        {
+            "title": "工信部印发《人工智能中小企业创业支持计划(2026—2028年)》",
+            "url": "https://finance.people.com.cn/BIG5/n1/2026/0914/c1004-40797995.html",
+            "summary": "工信部三年计划培育万家AI科创中小企、2000家小巨人，普惠算力扶持。",
+            "source": "人民网 / 工信部"
+        },
+        {
+            "title": "苹果发布新一代 Apple Intelligence，Siri AI 测试版正式上线",
+            "url": "https://www.chinastarmarket.cn/detail/2482879",
+            "summary": "苹果 iOS 27 推送新版 Siri AI 测试版，支持个人上下文与跨应用操作。",
+            "source": "科创板日报 / 财联社"
+        },
+        {
+            "title": "全球首个 AI+脑机接口医疗器械标准在我国发布",
+            "url": "https://news.cctv.cn/2026/09/14/ARTIGEvdtyIh2TQS45aRyzbd260914.shtml",
+            "summary": "国家药监局发布全球首个AI处理脑电数据的脑机接口医疗器械标准。",
+            "source": "央视网 / 国家药监局"
+        },
+        {
+            "title": "AI「降速」之争升温：阿莫迪呼吁放缓，中方称威胁叙事无益治理",
+            "url": "https://my-h5news.app.xinhuanet.com/h5/article.html?articleId=20260914ae3ae9c63ccb4cd88f2c8731cf4e37a7",
+            "summary": "阿莫迪呼吁放缓前沿AI、奥特曼等响应；中方指威胁叙事干扰全球治理。",
+            "source": "新华网 / 外交部"
+        },
+        {
+            "title": "云知声发布新一代主力模型 U2-Flash，迈向递归自改进(RSI)",
+            "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0915/2026091500090_c.pdf",
+            "summary": "云知声港交所公告发布 U2-Flash，建模型自主训练闭环迈向RSI。",
+            "source": "云知声 / 港交所"
+        },
+        {
+            "title": "上海AI实验室开源书生-S2 多模态大模型，科学任务领先",
+            "url": "https://www.stdaily.com/web/gdxw/2026-09/13/content_580275.html",
+            "summary": "浦江论坛发布书生-S2，开源第一梯队，生命科学材料任务领先。",
+            "source": "科技日报 / 上海AI实验室"
+        },
+        {
+            "title": "宇树发布人形机器人 G1+，标准版售价 9.5 万元",
+            "url": "https://finance.sina.com.cn/roll/2026-09-14/doc-iniruxus9388403.shtml",
+            "summary": "宇树 G1+ 升级肩腰扭矩110%、配3D激光雷达，标准版售价9.5万。",
+            "source": "新浪财经 / 北京商报"
+        },
+        {
+            "title": "英伟达在华 AI 芯片份额跌至不足 8%，国产份额突破 60%",
+            "url": "https://finance.jrj.com.cn/2026/09/14225758430285.shtml",
+            "summary": "服贸会摩尔线程称英伟达在华AI芯片份额跌至不足8%，国产破60%。",
+            "source": "金融界 / 网易"
+        },
+        {
+            "title": "小米首款 AI 大模型门锁 5Max 开启预售",
+            "url": "https://www.163.com/dy/article/L6PJ9QGB0534A4SC.html",
+            "summary": "小米首款AI大模型门锁5Max预售，UWB无感开锁+双摄异常识别。",
+            "source": "界面新闻 / 网易"
+        }
+    ]
+},
+{
+    "date": "2026-09-11",
+    "display": "9月11日",
+    "weekday": "周五",
+    "items": [
+        {
+            "title": "OpenAI 在 ChatGPT Work 推出 Data agent，企业数据一键变交互看板",
+            "url": "https://openai.com/index/put-data-to-work/",
+            "summary": "OpenAI 推出 ChatGPT Work 的 Data agent，连接企业数据自动生成交互看板与洞察。",
+            "source": "OpenAI 官方"
+        },
+        {
+            "title": "宇树开源通用人形机器人基础模型 UnifoLM-WLA-1.0，6B 参数覆盖 64 项任务",
+            "url": "https://tech.ifeng.com/c/8wJ9ZdRDQ8K",
+            "summary": "宇树开源 6B 参数通用人形机器人基础模型，覆盖行走抓取等 64 项任务，权重全开放。",
+            "source": "凤凰网科技"
+        },
+        {
+            "title": "Anthropic 研究所发布《变革性 AI 的经济情景》工作论文",
+            "url": "https://news.qq.com/rain/a/20260910A09BM300",
+            "summary": "Anthropic 研究所工作论文测算：极端情景下变革性 AI 可令 GDP 年增 15.4%。",
+            "source": "腾讯新闻"
+        },
+        {
+            "title": "OpenAI 暂停 200 美元 ChatGPT Pro 新订阅，高端算力供给告急",
+            "url": "https://www.36kr.com/p/3978220011928576",
+            "summary": "OpenAI 宣布暂停 200 美元 ChatGPT Pro 新用户订阅，称高端算力供给已近极限。",
+            "source": "36氪"
+        },
+        {
+            "title": "中国商务部回应美方 AI 蒸馏技术指控，指其以国家安全为名行双重标准",
+            "url": "https://www.mofcom.gov.cn/syxwfb/art/2026/art_7f1622463a7c48ef9fad600ce0ef702f.html",
+            "summary": "商务部回应美方所谓 AI 蒸馏技术出口管制指控，指其以国家安全为名行双重标准。",
+            "source": "商务部官网"
+        },
+        {
+            "title": "英伟达与 Palantir 合作，为主权 AI 供应链打造技术栈",
+            "url": "https://nvidianews.nvidia.com/news/nvidia-and-palantir-bring-sovereign-intelligence-to-critical-supply-chains",
+            "summary": "英伟达与 Palantir 合作，将 Nemotron 模型与 Foundry 结合，服务关键供应链主权 AI。",
+            "source": "NVIDIA 官方"
+        },
+        {
+            "title": "美司法部调查英伟达与 Groq 170 亿美元交易，涉嫌规避反垄断",
+            "url": "https://www.toutiao.com/article/7683844241595892233/",
+            "summary": "美司法部就英伟达与 Groq 170 亿美元算力交易展开反垄断调查，疑规避监管。",
+            "source": "今日头条 / QQ 新闻"
+        },
+        {
+            "title": "OpenAI 任命 AI 对齐权威 Paul Christiano 加入基金会董事会与安全委员会",
+            "url": "https://www.chinastarmarket.cn/detail/2479076",
+            "summary": "OpenAI 任命对齐研究权威 Paul Christiano 进入基金会董事会及安全与安保委员会。",
+            "source": "财联社"
+        },
+        {
+            "title": "法律 AI 创企 Harvey 完成 5.5 亿美元融资，估值达 155 亿美元",
+            "url": "https://www.harvey.ai/en-US/blog/harvey-raises-dollar550m-at-a-dollar155b-valuation-to-help-legal-teams-own-their-intelligence",
+            "summary": "法律 AI 公司 Harvey 完成 5.5 亿美元融资，估值 155 亿美元，红杉 a16z 等参投。",
+            "source": "Harvey 官方"
+        }
+    ]
+},
+{
     "date": "2026-09-10",
     "display": "9月10日",
     "weekday": "周四",
@@ -1533,142 +1710,6 @@ window.AIHomeNews = [
             "url": "https://view.inews.qq.com/a/20260803A020FU00",
             "summary": "安全机构发现GitHub Agent工作流\"GitLost\"漏洞，公开Issue可诱骗Agent泄露私有数据。",
             "source": "腾讯新闻（华尔街见闻）"
-        }
-    ]
-},
-{
-    "date": "2026-08-01",
-    "display": "8月1日",
-    "weekday": "周六",
-    "items": [
-        {
-            "title": "DeepSeek-V4-Flash 正式版 API 上线，Agent 能力暴涨 6 倍",
-            "url": "https://tech.ifeng.com/c/8vEDXuxscG5",
-            "summary": "2840亿MoE参数、激活130亿，DeepSWE暴涨至54.4，缓存命中价低至0.2元/百万tokens。",
-            "source": "IT之家（凤凰网）"
-        },
-        {
-            "title": "OpenAI 大幅下调 GPT-5.6 定价，Luna 降幅达 80%",
-            "url": "https://view.inews.qq.com/a/20260731A05V3D00",
-            "summary": "Luna降价80%、Terra降20%，Sol新增Fast模式，行业API价格战持续升温。",
-            "source": "腾讯新闻"
-        },
-        {
-            "title": "谷歌 DeepMind 发布 Gemini Robotics 2 机器人模型",
-            "url": "https://view.inews.qq.com/a/20260731A0CGOO00",
-            "summary": "突破前代仅控上半身局限，实现人形机器人全身协同与多机协作。",
-            "source": "腾讯新闻"
-        },
-        {
-            "title": "字节跳动 Seedance 2.5 视频模型上线，单次直出 30 秒",
-            "url": "https://economy.gmw.cn/2026-07/31/content_38920425.htm",
-            "summary": "支持50个多模态参考与局部编辑，从创意工具升级为产业级生产力工具。",
-            "source": "光明网"
-        },
-        {
-            "title": "MiniMax 发布首款开源多模态模型 H3，视频编辑榜全球第一",
-            "url": "https://new.qq.com/rain/a/20260731A04F2000?refer=cp_1009",
-            "summary": "2K直出、最长15秒音画，视频生成0.8元/秒，仅为同类旗舰三分之一。",
-            "source": "央广网（腾讯新闻）"
-        },
-        {
-            "title": "特斯拉中国车机正式接入豆包大模型，千问同步内测",
-            "url": "https://view.inews.qq.com/a/20260731A073Y300",
-            "summary": "全系车型引入豆包语音助手，支持实时信息与多角色对话，需开通高级娱乐服务。",
-            "source": "北京日报客户端（腾讯新闻）"
-        },
-        {
-            "title": "多部门密集部署人工智能法与算力布局",
-            "url": "https://new.qq.com/rain/a/20260801A03OD300",
-            "summary": "加快AI立法、推进智算集群与算电协同，专家称AI已成“十五五”核心抓手。",
-            "source": "央视新闻（腾讯新闻）"
-        },
-        {
-            "title": "微信公众平台上线 AI 智能一键排版功能",
-            "url": "https://dy.163.com/article/L375KKAR0511CMF5.html",
-            "summary": "创作者可自动优化段落间距、配色与图片，大幅降低图文编辑排版成本。",
-            "source": "科技狐（网易）"
-        }
-    ]
-},
-{
-    "date": "2026-07-29",
-    "display": "7月29日",
-    "weekday": "周三",
-    "items": [
-        {
-            "title": "开源生态持续完善，人工智能下沉实体经济",
-            "url": "https://news.cctv.com/2026/07/29/ARTIaepkWeDrEVUe64xpEuPq260729.shtml",
-            "summary": "7月27日月之暗面将旗舰大模型Kimi K3全量开源，总参数达2.8万亿，为全球参数规模最大的开源大模型，带动AI加速融入实体产业。",
-            "source": "央视网"
-        },
-        {
-            "title": "从追赶到领跑，中国开源模型深度融入实体经济",
-            "url": "https://new.qq.com/rain/a/20260729A032HQ00?refer=cp_1009",
-            "summary": "今年以来国产大模型开源步伐明显加快，多家头部企业相继开放主力模型；报告显示中国开源模型下载量已占全球41%，主流调用榜单前六均来自中国团队。",
-            "source": "腾讯新闻"
-        },
-        {
-            "title": "月之暗面开放Kimi K3开源大模型，适配AI短剧团队需求",
-            "url": "https://weibo.com/1403664603/5326001454455434",
-            "summary": "K3具备原生视觉理解与100万token上下文，中小工作室可本地私有化部署、自主微调，缓解AI短剧赛道人物一致性等痛点，但行业仍面临审核与成本压力。",
-            "source": "微博 / 光明日报"
-        }
-    ]
-},
-{
-    "date": "2026-07-28",
-    "display": "7月28日",
-    "weekday": "周二",
-    "items": [
-        {
-            "title": "月之暗面全栈开源Kimi K3，引爆全球开发者社区，登顶Hugging Face趋势榜榜首",
-            "url": "https://www.163.com/dy/article/L2UOABRD0512B07B.html",
-            "summary": "K3采用2.8万亿参数混合专家架构，同步开源MoonEP、FlashKDA、AgentEnv三大训练基础设施，采用修改版MIT许可证，全球开发者可下载部署与二次开发。",
-            "source": "每日经济新闻"
-        },
-        {
-            "title": "Kimi K3登顶开源社区趋势榜：30分钟超4000赞，创平台最快增长纪录",
-            "url": "https://view.inews.qq.com/a/20260728A09U4N00",
-            "summary": "7月27日23时开源后30分钟内获超4000赞登顶Hugging Face趋势榜，近3700名开发者排队等待下载。",
-            "source": "每日经济新闻"
-        },
-        {
-            "title": "海内外云厂商Day0适配Kimi K3，国产算力跑通推理环节",
-            "url": "https://view.inews.qq.com/a/20260728A076IO00",
-            "summary": "阿里、华为昇腾、海光等数十家AI基础设施厂商宣布首日适配Kimi K3，国产算力完成推理环节跑通，但训练尚未实现。",
-            "source": "21世纪经济报道"
-        },
-        {
-            "title": "Kimi K3推理成本优势明显：BrowseComp单次任务成本约为GPT-5.6 Sol一半",
-            "url": "https://view.inews.qq.com/a/20260728A098AU00",
-            "summary": "据Artificial Analysis数据，K3在BrowseComp基准单次任务成本仅为GPT-5.6 Sol一半，较Claude Fable 5便宜近一个数量级，扩展效率较K2提升约2.5倍。",
-            "source": "观点新媒体"
-        }
-    ]
-},
-{
-    "date": "2026-07-27",
-    "display": "7月27日",
-    "weekday": "周一",
-    "items": [
-        {
-            "title": "刚刚，Kimi K3开源！2.8万亿参数砸向全球",
-            "url": "https://www.163.com/dy/article/L2U9EUB4051180F7.html",
-            "summary": "月之暗面发布Kimi K3模型权重、技术报告，并开源MoonEP、FlashKDA、AgentEnv三项Infra技术；Hugging Face CEO称其30分钟登顶趋势榜。",
-            "source": "智东西"
-        },
-        {
-            "title": "Kimi K3把开源推向前沿：开放权重而非完全MIT，商业使用附条件",
-            "url": "https://www.toutiao.com/a7667746180054532659",
-            "summary": "K3约2.8万亿总参数、激活约1040亿，支持100万token上下文与原生视觉；采用自定义许可证，年收入超2000万美元的大型托管商需另签协议。",
-            "source": "AINews"
-        },
-        {
-            "title": "Cognition将Kimi K3接入Devin，称其为评测中首款接近前沿的开源模型",
-            "url": "https://www.163.com/dy/article/L2U9EUB4051180F7.html",
-            "summary": "数字员工Devin开发方Cognition宣布K3接入桌面客户端与CLI，并在FrontierCode 1.1基准上称其为测试过首款性能逼近前沿水准的开源模型。",
-            "source": "智东西"
         }
     ]
 }

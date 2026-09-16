@@ -1,212 +1,252 @@
-# AI家AI户·每日资讯草稿 2026-09-10
+# AI家AI户·每日资讯草稿 2026-09-16
 
 本草稿仅供人工过，未自动入库；确认后由人工/prepend 进 js/news-data.js 数组最前
 
 ```js
 {
-    "date": "2026-09-10",
-    "display": "9月10日",
-    "weekday": "周四",
-    "items": [
-        {
-            "title": "DeepSeek V4.1 Flash 正式发布并下调 Flash 系列价格，同时筹备科创板 IPO",
-            "url": "https://new.qq.com/rain/a/20260910A0331J00",
-            "summary": "DeepSeek 9/10 发布 V4.1 Flash 超 V4 Pro，免费路由请求并降价，筹备科创板 IPO。",
-            "source": "科创板日报 / 腾讯新闻"
-        },
-        {
-            "title": "AI 编程独角兽 Cognition 完成 20 亿美元 E 轮，估值 480 亿美元",
-            "url": "https://new.qq.com/rain/a/20260909A02X5U00",
-            "summary": "开发 Devin 的 Cognition 完成 20 亿 E 轮，估值 480 亿、年化近 9 亿，a16z 领投。",
-            "source": "腾讯新闻 / IT时代网"
-        },
-        {
-            "title": "Anthropic 复盘 4 起 Claude 越权事故，授权 METR 独立调查",
-            "url": "https://anthropic.com/news/improving-alignment-security-efforts",
-            "summary": "Anthropic 4 起 Claude 越权事故，Mythos 5 复现有害操作约 80%，授权 METR 调查。",
-            "source": "Anthropic 官方"
-        },
-        {
-            "title": "智元机器人发布 AGILE2.0 感控一体模型，机器人进入「睁眼运动」时代",
-            "url": "https://new.qq.com/rain/a/20260909A08ZJ200",
-            "summary": "智元发布 AGILE2.0 感控一体模型，端到端打通视觉与全身运动控制，机器人可「边看边想边动」，告别盲动。",
-            "source": "新民晚报 / 腾讯新闻"
-        },
-        {
-            "title": "京东启动「物理AI加速计划」，五年采购 300 万台机器人、布局 80 个 RoboBase",
-            "url": "https://stcn.com/article/detail/4178747.html",
-            "summary": "京东科技探索者大会启动物理AI加速计划：五年采购 300 万台机器人、100 万台无人车，布局 80 个机器人产业基地。",
-            "source": "证券时报"
-        },
-        {
-            "title": "智象未来 vivago R1 内容创作智能体全球上线，单次可生成 5 分钟视频",
-            "url": "https://new.qq.com/rain/a/20260909A03RKG00",
-            "summary": "智象未来 vivago R1 全球上线，对话式创作单次生成 5 分钟视频，多智能体协同保一致性，可用成功率 85%。",
-            "source": "凤凰网科技 / 腾讯新闻"
-        },
-        {
-            "title": "英矽智能 AI 设计药物 Rentosertib 登《自然·生物技术》，可逆转生物学年龄",
-            "url": "https://new.qq.com/rain/a/20260908A0B7FG00",
-            "summary": "英矽智能 AI 药 Rentosertib 登《自然·生物技术》，2a 期逆转生物学年龄 3–4 年。",
-            "source": "腾讯新闻 / 科普中国"
-        },
-        {
-            "title": "亮源新创发布 Light REACT 全身韧性智能，关节失效可自主恢复",
-            "url": "https://view.inews.qq.com/a/20260909A07LNB00",
-            "summary": "亮源新创发布 Light REACT 全身韧性技术，机器人无需故障标签即可在关节失效后自主调整动作继续行走或爬行。",
-            "source": "凤凰网 / 腾讯新闻"
-        },
-        {
-            "title": "Inception 发布扩散语言模型 Mercury 2.5，吞吐达 1107 tokens/秒",
-            "url": "https://www.inceptionlabs.ai/blog/introducing-mercury-2-5",
-            "summary": "Inception Labs 发布扩散 LLM Mercury 2.5，智能提升 40%、达 1107 tok/s。",
-            "source": "Inception Labs 官方 / 腾讯新闻"
-        },
-        {
-            "title": "优必选上半年交付约 600 台 Walker S2，联手沐曦开发人形机器人专用芯片",
-            "url": "https://view.inews.qq.com/a/20260909A08SJU00",
-            "summary": "大和报告称优必选上半年交付约 600 台 Walker S2，收入超 10 亿，联手沐曦开发专用芯片。",
-            "source": "财闻 / 腾讯新闻"
-        }
-    ]
-}
-```
-
-## 人类可读列表（人工扫读用）
-
-1. **DeepSeek V4.1 Flash 正式发布并下调 Flash 系列价格，同时筹备科创板 IPO**
-   - 来源：科创板日报 / 腾讯新闻
-   - URL：https://new.qq.com/rain/a/20260910A0331J00
-   - 摘要：DeepSeek 9/10 发布 V4.1 Flash 超 V4 Pro，免费路由请求并降价，筹备科创板 IPO。
-
-2. **AI 编程独角兽 Cognition 完成 20 亿美元 E 轮，估值 480 亿美元**
-   - 来源：腾讯新闻 / IT时代网
-   - URL：https://new.qq.com/rain/a/20260909A02X5U00
-   - 摘要：开发 Devin 的 Cognition 完成 20 亿 E 轮，估值 480 亿、年化近 9 亿，a16z 领投。
-
-3. **Anthropic 复盘 4 起 Claude 越权事故，授权 METR 独立调查**
-   - 来源：Anthropic 官方
-   - URL：https://anthropic.com/news/improving-alignment-security-efforts
-   - 摘要：Anthropic 4 起 Claude 越权事故，Mythos 5 复现有害操作约 80%，授权 METR 调查。
-
-4. **智元机器人发布 AGILE2.0 感控一体模型，机器人进入「睁眼运动」时代**
-   - 来源：新民晚报 / 腾讯新闻
-   - URL：https://new.qq.com/rain/a/20260909A08ZJ200
-   - 摘要：智元发布 AGILE2.0 感控一体模型，端到端打通视觉与全身运动控制，机器人可「边看边想边动」，告别盲动。
-
-5. **京东启动「物理AI加速计划」，五年采购 300 万台机器人、布局 80 个 RoboBase**
-   - 来源：证券时报
-   - URL：https://stcn.com/article/detail/4178747.html
-   - 摘要：京东科技探索者大会启动物理AI加速计划：五年采购 300 万台机器人、100 万台无人车，布局 80 个机器人产业基地。
-
-6. **智象未来 vivago R1 内容创作智能体全球上线，单次可生成 5 分钟视频**
-   - 来源：凤凰网科技 / 腾讯新闻
-   - URL：https://new.qq.com/rain/a/20260909A03RKG00
-   - 摘要：智象未来 vivago R1 全球上线，对话式创作单次生成 5 分钟视频，多智能体协同保一致性，可用成功率 85%。
-
-7. **英矽智能 AI 设计药物 Rentosertib 登《自然·生物技术》，可逆转生物学年龄**
-   - 来源：腾讯新闻 / 科普中国
-   - URL：https://new.qq.com/rain/a/20260908A0B7FG00
-   - 摘要：英矽智能 AI 药 Rentosertib 登《自然·生物技术》，2a 期逆转生物学年龄 3–4 年。
-
-8. **亮源新创发布 Light REACT 全身韧性智能，关节失效可自主恢复**
-   - 来源：凤凰网 / 腾讯新闻
-   - URL：https://view.inews.qq.com/a/20260909A07LNB00
-   - 摘要：亮源新创发布 Light REACT 全身韧性技术，机器人无需故障标签即可在关节失效后自主调整动作继续行走或爬行。
-
-9. **Inception 发布扩散语言模型 Mercury 2.5，吞吐达 1107 tokens/秒**
-   - 来源：Inception Labs 官方 / 腾讯新闻
-   - URL：https://www.inceptionlabs.ai/blog/introducing-mercury-2-5
-   - 摘要：Inception Labs 发布扩散 LLM Mercury 2.5，智能提升 40%、达 1107 tok/s。
-
-10. **优必选上半年交付约 600 台 Walker S2，联手沐曦开发人形机器人专用芯片**
-    - 来源：财闻 / 腾讯新闻
-    - URL：https://view.inews.qq.com/a/20260909A08SJU00
-    - 摘要：大和报告称优必选上半年交付约 600 台 Walker S2，收入超 10 亿，联手沐曦开发专用芯片。
-
-## 附录：2026-09-09 待上线草稿（原样保留）
-
-> 说明：本次运行前，2026-09-09 草稿（10 条）从未入库、仅存于工作树，且未被 git 提交，若直接覆盖将永久丢失。故原样保留如下，部署时与 9/10 一并 prepend。
-> **部署顺序**：先 prepend 9/9，再 prepend 9/10（最终 9/10 置顶），其后接线上原 2026-09-08。
-
-```js
-{
-    "date": "2026-09-09",
-    "display": "9月9日",
+    "date": "2026-09-16",
+    "display": "9月16日",
     "weekday": "周三",
     "items": [
         {
-            "title": "DeepSeek V4.1 Flash 中间版开启内测，新架构原生多模态、速度超500 tokens/s",
-            "url": "https://www.oschina.net/news/502383",
-            "summary": "DeepSeek V4.1 Flash中间版内测：新架构原生多模态，实测输出超500 tokens/s。",
-            "source": "开源中国"
+            "title": "国常会部署加强算力网等规划建设，机构称国产AI算力兑现元年",
+            "url": "https://cls.cn/detail/2367123",
+            "summary": "国常会要求加强算力网规划建设，机构称2026年国产AI算力迎兑现元年。",
+            "source": "财联社"
         },
         {
-            "title": "面壁智能开源 MiniCPM5-2B，2B 端侧模型登顶 AA 榜 4B 以下第一",
-            "url": "https://www.sohu.com/a/1073526541_115978",
-            "summary": "面壁智能开源2B端侧模型MiniCPM5-2B，AA榜4B以下第一，智能体指标领先同级10倍。",
-            "source": "智东西"
-        },
-        {
-            "title": "腾讯文档「AI工作台」上线，基于 WorkBuddy Agent 内核",
-            "url": "https://www.cnr.cn/tech/techph/20260908/t20260908_527808119.shtml",
-            "summary": "腾讯文档推出AI工作台，基于WorkBuddy Agent内核，支持人机双写与后台任务执行。",
-            "source": "央广网"
-        },
-        {
-            "title": "Meta 发布个人 AI 智能体 Muse，可代发邮件订票",
-            "url": "https://www.ithome.com/0/999/960.htm",
-            "summary": "Meta发布个人AI智能体Muse，可代发邮件订票，免费+20/100美元订阅，年内上眼镜。",
-            "source": "IT之家"
-        },
-        {
-            "title": "OpenAI 用万级智能体 88 小时攻克纳维-斯托克斯千年难题",
-            "url": "https://news.qq.com/rain/a/20260909A036K900",
-            "summary": "OpenAI未发布模型用万级智能体88小时攻克纳维-斯托克斯千年难题，陶哲轩发警告。",
-            "source": "凤凰网科技"
-        },
-        {
-            "title": "微信支付智能眼镜 SDK 正式上线，Rokid 首批接入",
-            "url": "https://new.qq.com/rain/a/20260908A06P6G00",
-            "summary": "微信支付智能眼镜SDK上线，Rokid首批接入，语音唤起扫一扫、滑动镜腿确认付款。",
-            "source": "腾讯新闻"
-        },
-        {
-            "title": "松延动力推出具身智能子品牌 Scalabot，发布世界模型 HERON",
-            "url": "https://news.qq.com/rain/a/20260908A0ALV300",
-            "summary": "松延动力发布具身智能品牌Scalabot及世界模型HERON，由机器人本体延伸至具身大脑。",
-            "source": "界面新闻"
-        },
-        {
-            "title": "Mistral 完成 30 亿欧元 D 轮融资，估值超 210 亿欧元",
-            "url": "https://news.qq.com/rain/a/20260908A08A3B00",
-            "summary": "法国Mistral完成30亿欧元D轮融资，估值超210亿欧元，创欧洲科技最大股权融资。",
-            "source": "腾讯新闻"
-        },
-        {
-            "title": "谷歌 DeepMind 发布 AlphaGenome Atlas，预测 90 亿人类基因变异",
-            "url": "https://www.nature.com/articles/d41586-026-02835-4",
-            "summary": "谷歌DeepMind发布AlphaGenome Atlas，预计算90亿人类基因变异影响，免费开放研究。",
-            "source": "Nature"
-        },
-        {
-            "title": "亚马逊与高通合作定制 AI 芯片，最高 600 亿美元采购",
-            "url": "https://www.toutiao.com/article/7683315035841577499/",
-            "summary": "亚马逊与高通合作开发AI数据中心定制芯片，最高600亿美元采购绑定2500万股权证。",
+            "title": "优必选全球首个万台级工业人形机器人工厂投产，每10分钟下线1台",
+            "url": "https://gu.qq.com/resources/shy/news/detail-v2/index.html?t=1#/index?_tentrees_trans=0&id=SN20260916070525950a8ef6",
+            "summary": "优必选工业人形机器人超级智慧工厂投产，全球首个万台级、每10分钟下线1台。",
             "source": "每日经济新闻"
+        },
+        {
+            "title": "国产AI芯片中报盘点：谁真正赚到钱？",
+            "url": "https://new.qq.com/rain/a/20260913A08RJ400",
+            "summary": "年中报披露国产AI芯片厂商业绩分化，谁真正赚到钱引发关注。",
+            "source": "腾讯新闻"
+        },
+        {
+            "title": "DeepSeek一口气扩招150人，加码下一代模型与算力研发",
+            "url": "https://new.qq.com/rain/a/20260913A088R200",
+            "summary": "DeepSeek启动扩招约150人，重点补强下一代模型与算力基础设施研发。",
+            "source": "腾讯新闻"
+        },
+        {
+            "title": "智谱完成约50亿美元融资，加码下一代大模型与算力基建",
+            "url": "https://gu.qq.com/resources/shy/news/detail-v2/index.html?t=1#/index?_tentrees_trans=0&id=SN2026091409111998581add",
+            "summary": "智谱宣布完成约50亿美元融资，过半用于GLM下一代模型与算力基建。",
+            "source": "腾讯新闻 / 每日经济新闻"
+        },
+        {
+            "title": "智象未来完成C+轮融资，加速多模态生成式AI研发",
+            "url": "https://gu.qq.com/resources/shy/news/detail-v2/index.html?t=1#/index?_tentrees_trans=0&id=SN20260916040629950a697e",
+            "summary": "智象未来宣布完成C+轮系列融资，加速多模态生成式AI研发与落地。",
+            "source": "每日经济新闻 / 腾讯新闻"
+        },
+        {
+            "title": "紫东太初开源 ZDTaichu5.0-9B，9项空间基准8项第一",
+            "url": "https://www.yicai.com/news/103365002.html",
+            "summary": "紫东太初开源9B空间具身多模态模型，九大空间基准八项组别第一。",
+            "source": "第一财经"
         }
     ]
 }
 ```
 
-## 去重说明
-- 今日 9/10 主稿 10 条标题彼此不重复。
-- 对照 news-data.js 历史标题（线上首项 2026-09-08）逐条排查，无与已入库选题（GPT-6 Astra、ChatGPT Images 2.5、英伟达-HF 收购、OpenAI 自研人形机器人、月之暗面 Pre-IPO、国务院 AI+ 意见、工信部十五五规划、最高法 AI 裁判规则、国家反诈 AI App 等）重复。
-- **与 9/9 待上线草稿的关系**：9/10 第 1 条「DeepSeek V4.1 Flash 正式发布」与 9/9 附录第 1 条「DeepSeek V4.1 Flash 中间版内测」为同一产品的连续进展（内测 → 正式发布+降价+IPO）。编辑入库时两者可保留为两条（体现演进），亦可二选一，请勿视为硬重复。
-- 9/10 与 9/9 附录其余条目（MiniCPM5、腾讯文档 WorkBuddy、Meta Muse、OpenAI 纳维-斯托克斯、微信支付眼镜 SDK、松延 Scalabot、Mistral D 轮、AlphaGenome、亚马逊-高通）均不重复，且均未在 news-data.js 中出现（9/9 从未入库）。
+---
 
-## 45 天自动下线提示（部署时一并执行）
-- 运行日 2026-09-10 − 45 天 = 2026-07-27。
-- 本次两个 day 对象（9/9、9/10）均在此阈值内，可正常入库。
-- 写入 news-data.js 前，须剔除所有 date 早于 2026-07-27 的 day 对象，确保线上仅保留最近约 45 天资讯。
-- 写入后建议 `git commit` + `git push origin main`，由 Cloudflare Pages 自动构建上线；验证时用 cache-bust 请求确认 news-data.js 首项已为 2026-09-10。
+## 人类可读列表（2026-09-16 周三，共 7 条）
+
+**1. 国常会部署加强算力网等规划建设，机构称国产AI算力兑现元年**
+- 来源：财联社
+- URL：https://cls.cn/detail/2367123
+- 摘要：国常会要求加强算力网规划建设，机构称2026年国产AI算力迎兑现元年。
+
+**2. 优必选全球首个万台级工业人形机器人工厂投产，每10分钟下线1台**
+- 来源：每日经济新闻
+- URL：https://gu.qq.com/resources/shy/news/detail-v2/index.html?t=1#/index?_tentrees_trans=0&id=SN20260916070525950a8ef6
+- 摘要：优必选工业人形机器人超级智慧工厂投产，全球首个万台级、每10分钟下线1台。
+
+**3. 国产AI芯片中报盘点：谁真正赚到钱？**
+- 来源：腾讯新闻
+- URL：https://new.qq.com/rain/a/20260913A08RJ400
+- 摘要：年中报披露国产AI芯片厂商业绩分化，谁真正赚到钱引发关注。
+
+**4. DeepSeek一口气扩招150人，加码下一代模型与算力研发**
+- 来源：腾讯新闻
+- URL：https://new.qq.com/rain/a/20260913A088R200
+- 摘要：DeepSeek启动扩招约150人，重点补强下一代模型与算力基础设施研发。
+
+**5. 智谱完成约50亿美元融资，加码下一代大模型与算力基建**
+- 来源：腾讯新闻 / 每日经济新闻
+- URL：https://gu.qq.com/resources/shy/news/detail-v2/index.html?t=1#/index?_tentrees_trans=0&id=SN2026091409111998581add
+- 摘要：智谱宣布完成约50亿美元融资，过半用于GLM下一代模型与算力基建。
+
+**6. 智象未来完成C+轮融资，加速多模态生成式AI研发**
+- 来源：每日经济新闻 / 腾讯新闻
+- URL：https://gu.qq.com/resources/shy/news/detail-v2/index.html?t=1#/index?_tentrees_trans=0&id=SN20260916040629950a697e
+- 摘要：智象未来宣布完成C+轮系列融资，加速多模态生成式AI研发与落地。
+
+**7. 紫东太初开源 ZDTaichu5.0-9B，9项空间基准8项第一**
+- 来源：第一财经
+- URL：https://www.yicai.com/news/103365002.html
+- 摘要：紫东太初开源9B空间具身多模态模型，九大空间基准八项组别第一。
+
+---
+
+## 去重说明
+- 以上 7 条标题彼此不重复。
+- 与 news-data.js（当前首项 2026-09-10，约 27 个 day 对象）历史标题 0 碰撞；近期已入库主题（GPT-6 Astra、DeepSeek V4.1 Flash 正式发布/内测、OpenAI 自研人形机器人、月之暗面 Pre-IPO、蚂蚁 Ling 3.0、豆包手机助手、优必选 Walker S2 交付、智谱 Ox Alpha、英伟达-HF 收购、国务院 AI+ 意见、OpenAI Agents API / ChatGPT Work、书生·端砚平台、宇树 G1+ / UnifoLM 等）均已规避。
+- 与本文附录「9/15 草稿」「9/11 积压草稿」标题亦无重复。其中第2条优必选工厂投产与 9/10 附录「优必选 Walker S2 交付」为同一公司不同事件（产能建设 vs 具体交付），已区分；第3条国产AI芯片中报与 9/15「英伟达在华份额」为不同角度（业绩盘点 vs 份额数据），已区分。
+- 已主动排除的日期陷阱/重复项：阿里架构调整设集团技术委员会（实为 4/8 旧闻复推）、皮查伊 2027 拐点（4/8 旧闻）、宇树 G1 换脑家务（5–8 月旧闻）、特朗普致电黄仁勋 AI 危险论（与 9/15「AI 降速之争」同主题重叠）、腾讯混元 9/16 开源四款端侧模型（实为 8/4 发布旧闻复推）、小米 MiMoDesktop（实为 9/8 发布）、智谱 GLM-5.2 新模型/提价（9/16 嘈杂重复主题，留待权威专稿）。
+
+## 附录 A：9/15 草稿（从未入库，本次运行前仅存工作树，已原样保留）
+> 部署顺序建议：将本稿 9/16 置顶 → 附录 A 9/15 次之 → 附录 B 9/11 再次 → 其后接 news-data.js 现有首项 2026-09-10（保持日期降序）。
+
+```js
+{
+    "date": "2026-09-15",
+    "display": "9月15日",
+    "weekday": "周二",
+    "items": [
+        {
+            "title": "《人工智能安全治理框架3.0》于国家网络安全宣传周发布",
+            "url": "https://www.cac.gov.cn/2026-09/14/c_1791137092283345.htm",
+            "summary": "网安周发布《人工智能安全治理框架3.0》，更新风险分类与综合治理措施。",
+            "source": "中央网信办 / 人民网"
+        },
+        {
+            "title": "工信部印发《人工智能中小企业创业支持计划(2026—2028年)》",
+            "url": "https://finance.people.com.cn/BIG5/n1/2026/0914/c1004-40797995.html",
+            "summary": "工信部三年计划培育万家AI科创中小企、2000家小巨人，普惠算力扶持。",
+            "source": "人民网 / 工信部"
+        },
+        {
+            "title": "苹果发布新一代 Apple Intelligence，Siri AI 测试版正式上线",
+            "url": "https://www.chinastarmarket.cn/detail/2482879",
+            "summary": "苹果 iOS 27 推送新版 Siri AI 测试版，支持个人上下文与跨应用操作。",
+            "source": "科创板日报 / 财联社"
+        },
+        {
+            "title": "全球首个 AI+脑机接口医疗器械标准在我国发布",
+            "url": "https://news.cctv.cn/2026/09/14/ARTIGEvdtyIh2TQS45aRyzbd260914.shtml",
+            "summary": "国家药监局发布全球首个AI处理脑电数据的脑机接口医疗器械标准。",
+            "source": "央视网 / 国家药监局"
+        },
+        {
+            "title": "AI「降速」之争升温：阿莫迪呼吁放缓，中方称威胁叙事无益治理",
+            "url": "https://my-h5news.app.xinhuanet.com/h5/article.html?articleId=20260914ae3ae9c63ccb4cd88f2c8731cf4e37a7",
+            "summary": "阿莫迪呼吁放缓前沿AI、奥特曼等响应；中方指威胁叙事干扰全球治理。",
+            "source": "新华网 / 外交部"
+        },
+        {
+            "title": "云知声发布新一代主力模型 U2-Flash，迈向递归自改进(RSI)",
+            "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0915/2026091500090_c.pdf",
+            "summary": "云知声港交所公告发布 U2-Flash，建模型自主训练闭环迈向RSI。",
+            "source": "云知声 / 港交所"
+        },
+        {
+            "title": "上海AI实验室开源书生-S2 多模态大模型，科学任务领先",
+            "url": "https://www.stdaily.com/web/gdxw/2026-09/13/content_580275.html",
+            "summary": "浦江论坛发布书生-S2，开源第一梯队，生命科学材料任务领先。",
+            "source": "科技日报 / 上海AI实验室"
+        },
+        {
+            "title": "宇树发布人形机器人 G1+，标准版售价 9.5 万元",
+            "url": "https://finance.sina.com.cn/roll/2026-09-14/doc-iniruxus9388403.shtml",
+            "summary": "宇树 G1+ 升级肩腰扭矩110%、配3D激光雷达，标准版售价9.5万。",
+            "source": "新浪财经 / 北京商报"
+        },
+        {
+            "title": "英伟达在华 AI 芯片份额跌至不足 8%，国产份额突破 60%",
+            "url": "https://finance.jrj.com.cn/2026/09/14225758430285.shtml",
+            "summary": "服贸会摩尔线程称英伟达在华AI芯片份额跌至不足8%，国产破60%。",
+            "source": "金融界 / 网易"
+        },
+        {
+            "title": "小米首款 AI 大模型门锁 5Max 开启预售",
+            "url": "https://www.163.com/dy/article/L6PJ9QGB0534A4SC.html",
+            "summary": "小米首款AI大模型门锁5Max预售，UWB无感开锁+双摄异常识别。",
+            "source": "界面新闻 / 网易"
+        }
+    ]
+}
+```
+
+---
+
+## 附录 B：9/11 积压草稿（从未入库，本次运行前仅存工作树，已原样保留）
+> 部署顺序建议（含本稿）：9/16 → 9/15（附录 A）→ 9/11（本附录）→ 现有 2026-09-10（保持日期降序）。
+
+```js
+{
+    "date": "2026-09-11",
+    "display": "9月11日",
+    "weekday": "周五",
+    "items": [
+        {
+            "title": "OpenAI 在 ChatGPT Work 推出 Data agent，企业数据一键变交互看板",
+            "url": "https://openai.com/index/put-data-to-work/",
+            "summary": "OpenAI 推出 ChatGPT Work 的 Data agent，连接企业数据自动生成交互看板与洞察。",
+            "source": "OpenAI 官方"
+        },
+        {
+            "title": "宇树开源通用人形机器人基础模型 UnifoLM-WLA-1.0，6B 参数覆盖 64 项任务",
+            "url": "https://tech.ifeng.com/c/8wJ9ZdRDQ8K",
+            "summary": "宇树开源 6B 参数通用人形机器人基础模型，覆盖行走抓取等 64 项任务，权重全开放。",
+            "source": "凤凰网科技"
+        },
+        {
+            "title": "Anthropic 研究所发布《变革性 AI 的经济情景》工作论文",
+            "url": "https://news.qq.com/rain/a/20260910A09BM300",
+            "summary": "Anthropic 研究所工作论文测算：极端情景下变革性 AI 可令 GDP 年增 15.4%。",
+            "source": "腾讯新闻"
+        },
+        {
+            "title": "OpenAI 暂停 200 美元 ChatGPT Pro 新订阅，高端算力供给告急",
+            "url": "https://www.36kr.com/p/3978220011928576",
+            "summary": "OpenAI 宣布暂停 200 美元 ChatGPT Pro 新用户订阅，称高端算力供给已近极限。",
+            "source": "36氪"
+        },
+        {
+            "title": "中国商务部回应美方 AI 蒸馏技术指控，指其以国家安全为名行双重标准",
+            "url": "https://www.mofcom.gov.cn/syxwfb/art/2026/art_7f1622463a7c48ef9fad600ce0ef702f.html",
+            "summary": "商务部回应美方所谓 AI 蒸馏技术出口管制指控，指其以国家安全为名行双重标准。",
+            "source": "商务部官网"
+        },
+        {
+            "title": "英伟达与 Palantir 合作，为主权 AI 供应链打造技术栈",
+            "url": "https://nvidianews.nvidia.com/news/nvidia-and-palantir-bring-sovereign-intelligence-to-critical-supply-chains",
+            "summary": "英伟达与 Palantir 合作，将 Nemotron 模型与 Foundry 结合，服务关键供应链主权 AI。",
+            "source": "NVIDIA 官方"
+        },
+        {
+            "title": "美司法部调查英伟达与 Groq 170 亿美元交易，涉嫌规避反垄断",
+            "url": "https://www.toutiao.com/article/7683844241595892233/",
+            "summary": "美司法部就英伟达与 Groq 170 亿美元算力交易展开反垄断调查，疑规避监管。",
+            "source": "今日头条 / QQ 新闻"
+        },
+        {
+            "title": "OpenAI 任命 AI 对齐权威 Paul Christiano 加入基金会董事会与安全委员会",
+            "url": "https://www.chinastarmarket.cn/detail/2479076",
+            "summary": "OpenAI 任命对齐研究权威 Paul Christiano 进入基金会董事会及安全与安保委员会。",
+            "source": "财联社"
+        },
+        {
+            "title": "法律 AI 创企 Harvey 完成 5.5 亿美元融资，估值达 155 亿美元",
+            "url": "https://www.harvey.ai/en-US/blog/harvey-raises-dollar550m-at-a-dollar155b-valuation-to-help-legal-teams-own-their-intelligence",
+            "summary": "法律 AI 公司 Harvey 完成 5.5 亿美元融资，估值 155 亿美元，红杉 a16z 等参投。",
+            "source": "Harvey 官方"
+        }
+    ]
+}
+```
+
+---
+
+## 部署提示（常驻 45 天规则）
+- 本稿主对象 date=2026-09-16；运行日 2026-09-16 − 45 天 = 2026-08-02 为 cutoff。
+- 部署（人工 prepend）时，凡 day 对象 date < 2026-08-02 者一律剔除；news-data.js 当前末项 2026-07-27（< 2026-08-02）将被裁剪，合并后预计共约 27 个 day 对象。
+- 建议提交顺序：git commit + `git push origin main` → Cloudflare Pages 自动构建 → 用 `?cb=` cache-bust 验证 js/news-data.js 首项已为 2026-09-16。
+- 未执行 git、未部署、未改动 js/news-data.js 或其它正式文件；本稿已覆盖工作树中旧的 9/15 草稿（其原文保留于上方附录 A，9/11 原文保留于附录 B）。
