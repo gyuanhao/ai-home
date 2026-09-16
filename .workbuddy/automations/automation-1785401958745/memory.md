@@ -309,3 +309,11 @@
 - 流程：7 个候选 URL 全部 curl（-L + 浏览器UA）返回 200（含 cls.cn / new.qq.com / gu.qq.com 每经 / yicai.com 第一财经）；node 临时校验脚本（scripts/_check_draft_tmp.js，跑完即删）通过——解析出 3 个 day 对象(9/16+9/15附录+9/11附录)、JSON 合法、摘要 29–36 字全部 ≤60、URL 全 https、与 246 条历史标题 0 碰撞、块内标题 0 重复、FFFD 扫描 0。
 - 未改动 js/news-data.js 或其它正式文件，未执行 git、未部署；仅覆盖 scripts/_draft_news.md。
 - 45天规则：运行日 2026-09-16 − 45 = 2026-08-02 为 cutoff；部署时 date<2026-08-02 者剔除，当前末项 2026-07-27（< 2026-08-02）将被裁剪。
+
+## 2026-09-16 (周三) — 用户手动「部署上线」
+- 用户确认草稿后执行部署：用 node 临时脚本（scripts/_deploy_merge_tmp.js，跑完即删）将 9/16(7)+9/15(10)+9/11(9) 三个 day 对象按降序 prepend 进 js/news-data.js 数组最前；同时应用 45 天裁剪，剔除 08-01/07-29/07-28/07-27（date<2026-08-02）。
+- 合并结果：26 个 day 对象，首项 2026-09-16、末项 2026-08-03；校验通过（首项正确、末项≥cutoff、无重复日期、块内标题无重复、新条目 URL 全 https、新条目摘要最长 56 字≤60）。历史既有 1 条 http 链接(zqrb 08-03)与 1 条 61 字摘要不强制、未改动。
+- 同步：重跑 xianxia/scripts/convert_news.py 再生 xianxia/src/data/news.js（254 条），保持仙侠风云榜与主站一致。
+- 提交：git commit「deploy: 每日AI资讯 9/16+9/15+9/11 草稿入库，应用45天裁剪(末项8-03)」→ push origin main（c0f0143→fa4ff7a）；仅提交 js/news-data.js / scripts/_draft_news.md / xianxia/src/data/news.js / 本 memory.md，未带其它未提交改动（1785401150340 memory、untracked 文件等保持未提交）。
+- 验证：cache-bust 拉取 myaishome.com/js/news-data.js?cb= 确认线上首项已为 2026-09-16、末项 2026-08-03、共 26 个 day 对象 → 部署成功（Cloudflare Pages 自动构建已生效）。
+- 积压清零：此前多日未部署导致的 9/11、9/15 草稿积压本次一并入库，工作树不再有未上线草稿。
