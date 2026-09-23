@@ -317,3 +317,43 @@
 - 提交：git commit「deploy: 每日AI资讯 9/16+9/15+9/11 草稿入库，应用45天裁剪(末项8-03)」→ push origin main（c0f0143→fa4ff7a）；仅提交 js/news-data.js / scripts/_draft_news.md / xianxia/src/data/news.js / 本 memory.md，未带其它未提交改动（1785401150340 memory、untracked 文件等保持未提交）。
 - 验证：cache-bust 拉取 myaishome.com/js/news-data.js?cb= 确认线上首项已为 2026-09-16、末项 2026-08-03、共 26 个 day 对象 → 部署成功（Cloudflare Pages 自动构建已生效）。
 - 积压清零：此前多日未部署导致的 9/11、9/15 草稿积压本次一并入库，工作树不再有未上线草稿。
+
+## 2026-09-17 (周四) — 第三十一次运行
+- 产出草稿：scripts/_draft_news.md（10 条，日期 2026-09-17，display「9月17日」，weekday「周四」）。
+- **无积压**：news-data.js 首项为 2026-09-16（9/16 部署），本草稿为最新一天，确认后直接 prepend 即可。
+- 选题主线（9/16–9/17 新增，10 条）：谷歌 Gemini 3.8 Live 实时语音模型(谷歌官方)、阿里 Qwen3.8-27B 登顶 Hugging Face 最受欢迎开源模型(今日头条)、Anthropic 合并 Claude Chat 与 Cowork 为「一个 Claude」(cnBeta)、飞书 8.0 原生集成「豆包工作伙伴」团队智能体(科技日报)、vivo 发布四款蓝心大模型+系统级蓝心 Harness(腾讯新闻)、蚂蚁开源安全护栏 SingProbe Infra(腾讯新闻)、零跑技术日完全自研具身智能机器人(证券时报)、OpenAI 模型失配披露框架首发6份报告(OpenAI官方/Unite.AI)、香港首份五年规划将 AI 列重要产业筹建 AI 城市大脑(新浪/香港政府新闻网)、豆包 2.1 Pro 更新0915版强化证据溯源 Token 降三成(环球网/今日头条)。
+- 去重：10 条标题彼此不重复，对照 news-data.js（首项 9/16，约 26 个 day 对象）历史标题 0 碰撞；刻意避开已入库主题（国常会算力网、优必选万台工厂、国产AI芯片中报、DeepSeek扩招、智谱50亿、智象C+轮、紫东太初、Gemini 3.8 Flash、网络安周AI框架3.0、工信部中小企业计划、iOS27 Siri、AI+脑机接口标准、国务院AI+意见、GPT-6 Astra、DeepSeek V4.1 Flash、OpenAI自研人形机器人、月之暗面Pre-IPO、OpenAI 1.2万亿融资等）。
+- 流程：10 个候选 URL 全部 curl（-L+浏览器UA）返回 200；node 临时校验脚本（scripts/_check_draft_tmp.js，跑完即删）通过——JSON 合法、字段顺序与 window.AIHomeNews 一致、摘要 25–54 字全部 ≤60、URL 全 https、与历史标题 0 碰撞、FFFD 扫描 0。
+- 未改动 js/news-data.js 或其它正式文件，未执行 git、未部署；仅覆盖 scripts/_draft_news.md（git status 确认仅此文件为 M）。
+- 45天规则：运行日 2026-09-17 − 45 = 2026-08-03 为 cutoff；部署时 date<2026-08-03 者剔除，当前末项 2026-08-03（==阈值）保留。
+
+## 2026-09-18 (周五) — 第三十二次运行
+- 产出草稿：scripts/_draft_news.md（主稿 6 条，日期 2026-09-18，display「9月18日」，weekday「周五」）。
+- **积压再现**：news-data.js 首项仍为 2026-09-16，而 2026-09-17 草稿（第三十一次运行）从未部署。本草稿将 9/17（10 条）原样保留为「附录 A」，提示部署顺序 **9/18 → 9/17 → 现有 9/16**，避免覆盖丢失 9/17 内容。
+- 选题主线（9/16–9/17 新增，6 条）：OpenAI 推 Astra for Law 法律版配 2.3 亿法律索引与 26 插件(OpenAI官方)、Anthropic 开放生命科学验证计划放开 Mythos/Opus/Sonnet(Anthropic官方)、xAI Grok Voice 登陆 fal 平台 0.7 秒响应支持 25+ 语言(fal.ai)、腾讯开源 BrowserSkill 0.3.0 借用户浏览器驱动 Agent(腾讯/GitHub)、小米 MiMo-V2.6 公开强化学习训练仪表盘累计成本超 128 万美元(小米/通信产业报)、谷歌开放 Home MCP 允许第三方 Agent 控制智能家居(Unite.AI/谷歌)。
+- 去重/避坑：6 条标题彼此不重复，对照 9/17 草稿 10 条与 news-data.js（首项 9/16）历史标题 0 碰撞；主动避开已入库/已草稿主题（Gemini 3.8 Live、Qwen3.8-27B、一个 Claude、飞书8.0、vivo蓝心、蚂蚁SingProbe、零跑机器人、OpenAI失配框架、香港五年规划、豆包2.1 Pro、国常会算力网、优必选工厂、国产AI芯片中报、DeepSeek扩招、智谱50亿等）；继续跳过日期陷阱旧闻（AlphaGenome Atlas 9/8、GPT-Live-1 9/10、蚂蚁 Ling-3.0-flash-Fin 9/9、Gemini Omni 1.1 Flash 8/27 GA、GLM-5.3-Flash 8/26、OpenAI agents 黑入 HF 8/26）。
+- 流程：6 个候选 URL 全部 curl（-L+浏览器UA）返回 200；摘要 38–51 字全部 ≤60、URL 全 https、字段顺序与 window.AIHomeNews 一致。
+- 未改动 js/news-data.js 或其它正式文件，未执行 git、未部署；仅覆盖 scripts/_draft_news.md。
+- 45天规则：运行日 2026-09-18 − 45 = 2026-08-04 为 cutoff；部署时 date<2026-08-04 者剔除，当前末项 2026-08-03（< 2026-08-04）**将被裁剪**，保留其余约 25 个 day 对象（2026-08-04 ~ 2026-09-16）。
+
+## 2026-09-21 (周一) — 第三十三次运行
+- 产出草稿：scripts/_draft_news.md（主稿 10 条，日期 2026-09-21，display「9月21日」，weekday「周一」）。
+- **积压仍重**：news-data.js 首项仍为 2026-09-16（9/16 部署后，9/17 与 9/18 草稿均从未入库，仅存工作树；9/19–9/20 周末自动化未运行）。本稿在附录 A 原样保留 9/18（6 条）、附录 B 原样保留 9/17（10 条），并提示部署顺序 9/21 → 9/18 → 9/17 → 现有 9/16（保持日期降序），避免较早草稿被静默覆盖丢失。
+- 选题主线（9/20–9/21 新增，10 条）：阶跃星辰 Step 5 Preview 推理多模态跃升(腾讯新闻/每经)、阿里达摩院 DAMO RADAR 多癌早筛影像模型登 Science(IT之家/人民网)、微信开源 WeKnora 企业知识框架(腾讯/GitHub)、网信办拟禁止向未成年人提供 AI 虚拟陪伴等生成式服务(南方都市报)、剪映发布 Hub 与剪映助手 Agent 一句话生成带素材成片(科技日报)、阿里开源 Qwen-Image-2.1 图像模型(阿里通义千问官方)、阿里发布 Qwen3.8-Omni-Flash 全模态模型(阿里通义千问官方)、华为昇腾 960 NPO 超节点发布(新华网)、硅基流动完成 B+/C 轮融资近 29 亿元(每日经济新闻)、长鑫科技第五代 DRAM(G5) 量产(腾讯新闻/证券时报)。
+- 去重/避坑：10 条标题彼此不重复，对照 9/18（6）、9/17（10）草稿及 news-data.js（首项 9/16，254 条标题）0 碰撞；刻意避开已入库/已草稿主题（Gemini 3.8 Live、Qwen3.8-27B、一个 Claude、飞书8.0、vivo蓝心、蚂蚁SingProbe、零跑机器人、OpenAI失配框架、香港五年规划、豆包2.1 Pro、OpenAI Astra for Law、Anthropic 生命科学验证、xAI Grok Voice、腾讯 BrowserSkill、小米 MiMo-V2.6、谷歌 Home MCP、国常会算力网、优必选工厂、国产AI芯片中报、DeepSeek扩招、智谱50亿、智象C+轮、紫东太初、网安周AI框架3.0、工信部中小企业计划、iOS27 Siri、AI+脑机接口、书生-S2、宇树G1+、英伟达在华份额、小米AI门锁等）。
+- 流程：10 个候选 URL 全部 curl（-L + 浏览器 UA）返回 200；原 chinaz.com WeKnora 链 000 不可达 → 改用 GitHub 官方仓库（200）。node 临时校验脚本（scripts/_check_draft_tmp.js，跑完即删）通过——解析出 3 个 day 对象(9/21+9/18附录+9/17附录)、JSON 合法、摘要 24–32 字全部 ≤60、URL 全 https、块内与 254 条历史标题 0 碰撞、FFFD 扫描 0。
+- 未改动 js/news-data.js 或其它正式文件，未执行 git、未部署；仅覆盖 scripts/_draft_news.md。
+- 45天规则：运行日 2026-09-21 − 45 = 2026-08-07 为 cutoff；部署时 date<2026-08-07 者剔除，当前末项 2026-08-03（< 2026-08-07）将被裁剪。
+- **部署告警（待人工处理）**：9/17 与 9/18 均已积压未上线，news-data.js 首项仍停在 2026-09-16；建议尽快按 9/21→9/18→9/17 顺序 prepend 消化积压，否则 9/17、9/18 草稿内容将随下次自动化覆盖而永久丢失。
+
+## 2026-09-23 (周三) — 用户手动「把本周还没部署的一起完成部署」（本次未做资讯搜索/新草稿）
+- 指令解读：一次性消化工作树中全部未上线草稿（资讯 + 工具库两条流水线）。
+- **资讯积压**：scripts/_draft_news.md 中三个从未入库的 day 对象 —— 9/21 主稿(10) + 附录A 9/18(6) + 附录B 9/17(10)，共 26 条。
+- 入库方式：node 临时脚本按「顶层花括号切块 + 旧条目文本逐字节保留」将 9/21→9/18→9/17 按降序 prepend 进 js/news-data.js（避免整文件重排产生噪声 diff）。
+- **45 天裁剪**：运行日 2026-09-23 − 45 = `2026-08-09` 为 cutoff，剔除 2026-08-03/04/05/06/07 共 5 个过期 day 对象。合并后 **24 个 day 对象 / 232 条**，首项 2026-09-21、次项 09-18、三序 09-17、末项 2026-08-10（≥ cutoff）。
+- 校验：`node --check` 通过；window.AIHomeNews 加载正常；日期严格降序 ✔；FFFD 0；非 https 0；标题全局唯一 ✔；新增 26 条摘要 31–54 字全部 ≤60。
+- 仙侠同步：重跑 `xianxia/scripts/convert_news.py` 再生 xianxia/src/data/news.js（232 条），风云榜与主站一致。
+- **工具库积压（同一指令一并完成）**：scripts/_draft_weekly.md（9/21 周维护）中的 13 条新品入库 tools.json，同时下架确认死链 `sweep`（域名注销）：388 → **400 条**（备份 scripts/tools.json.bak.deploy）。重建 tools/ 全部 400 个详情页 + tools.html 列表页，删除 tools/sweep.html，index.html 计数 380+ → 400+（6 处）。
+- 提交：单一 commit 覆盖两条流水线 → push origin main，Cloudflare Pages 自动构建。
+- **流程经验（重要）**：「文本块切分 + 拼接」方案中，chunk 取自 `{` 到 `}`（首尾无空白），块间的 2 空格缩进由 join 时的 `','+EOL+'  '` 提供；新增条目需先 `JSON.stringify(t,null,2)` 再给「首行以外的每一行」+2 空格。首次实现误用 `trim()` 后直接 join，导致 388 个块的顶层缩进丢失（tools.json 出现 426 行无意义删除），已用备份回滚重做。**此类入库务必用 `git diff --numstat` 复核删除行数是否恰等于被删条目行数。**
+

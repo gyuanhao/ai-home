@@ -7,6 +7,162 @@ window.AIHome = window.AIHome || {};
 
 AIHome.NEWS = [
   {
+    "title": "阶跃星辰发布 Step 5 Preview，推理与多模态能力大幅跃升",
+    "url": "https://news.qq.com/rain/a/20260920A05FD400",
+    "date": "09-21",
+    "source": "腾讯新闻 / 每日经济新闻"
+  },
+  {
+    "title": "阿里达摩院 DAMO RADAR 医学影像模型登《Science》",
+    "url": "https://www.ithome.com/1/004/178.htm",
+    "date": "09-21",
+    "source": "IT之家 / 人民网"
+  },
+  {
+    "title": "微信开源 WeKnora 企业知识框架，统一接入文档与多种模型",
+    "url": "https://github.com/Tencent/WeKnora",
+    "date": "09-21",
+    "source": "腾讯 / GitHub"
+  },
+  {
+    "title": "网信办拟禁止向未成年人提供 AI 虚拟陪伴等生成式服务",
+    "url": "https://www.nfnews.com/content/A6EBpq4xoK.html",
+    "date": "09-21",
+    "source": "南方都市报"
+  },
+  {
+    "title": "剪映发布 Hub 与剪映助手 Agent，一句话生成带素材成片",
+    "url": "https://www.stdaily.com/web/gdxw/2026-09/20/content_584720.html",
+    "date": "09-21",
+    "source": "科技日报"
+  },
+  {
+    "title": "阿里开源 Qwen-Image-2.1 图像模型，细节与文字渲染再升级",
+    "url": "https://qwen.ai/blog?id=qwen-image-2.1",
+    "date": "09-21",
+    "source": "阿里通义千问官方"
+  },
+  {
+    "title": "阿里发布 Qwen3.8-Omni-Flash 全模态模型，实时音视频交互",
+    "url": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+    "date": "09-21",
+    "source": "阿里通义千问官方"
+  },
+  {
+    "title": "华为昇腾 960 NPO 超节点发布，单柜算力再上台阶",
+    "url": "https://www.news.cn/fortune/20260920/2b08fccf65b046a7b004649520ecb3a3/c.html",
+    "date": "09-21",
+    "source": "新华网"
+  },
+  {
+    "title": "硅基流动完成 B+/C 轮融资近 29 亿元，加速 AI 基础设施",
+    "url": "https://www.163.com/dy/article/L795D6FK0512B07B.html",
+    "date": "09-21",
+    "source": "每日经济新闻"
+  },
+  {
+    "title": "长鑫科技第五代 DRAM（G5）量产，国产存储再突破",
+    "url": "https://news.qq.com/rain/a/20260920A09KPG00",
+    "date": "09-21",
+    "source": "腾讯新闻 / 证券时报"
+  },
+  {
+    "title": "OpenAI 推出 Astra for Law 法律版，配 2.3 亿条法律索引与 26 个插件",
+    "url": "https://openai.com/index/astra-for-law/",
+    "date": "09-18",
+    "source": "OpenAI 官方"
+  },
+  {
+    "title": "Anthropic 开放生命科学验证计划，向合规生物团队放开模型",
+    "url": "https://www.anthropic.com/news/life-sciences-verification-program",
+    "date": "09-18",
+    "source": "Anthropic 官方"
+  },
+  {
+    "title": "xAI Grok Voice 登陆 fal 平台，0.7 秒响应支持 25+ 语言",
+    "url": "https://fal.ai/grok-voice",
+    "date": "09-18",
+    "source": "fal.ai"
+  },
+  {
+    "title": "腾讯开源 BrowserSkill 0.3.0，借用户浏览器帮 Agent 自动操作",
+    "url": "https://ai-tldr.dev/tools/browserskill",
+    "date": "09-18",
+    "source": "腾讯 / GitHub"
+  },
+  {
+    "title": "小米 MiMo-V2.6 公开强化学习训练仪表盘，直播训练全过程",
+    "url": "https://mimo.xiaomi.com/rl",
+    "date": "09-18",
+    "source": "小米 / 通信产业报"
+  },
+  {
+    "title": "谷歌开放 Home MCP，允许 Claude/ChatGPT 等 Agent 控制智能家居",
+    "url": "https://www.unite.ai/google-opens-home-mcp-early-access-to-ai-agents-for-smart-home-control",
+    "date": "09-18",
+    "source": "Unite.AI / 谷歌"
+  },
+  {
+    "title": "谷歌发布 Gemini 3.8 Live 实时语音模型，可后台调工具、支持97种语言",
+    "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/",
+    "date": "09-17",
+    "source": "谷歌官方"
+  },
+  {
+    "title": "阿里 Qwen3.8-27B 登顶 Hugging Face 全球最受欢迎开源模型",
+    "url": "https://www.toutiao.com/article/7686291390255186447/",
+    "date": "09-17",
+    "source": "今日头条"
+  },
+  {
+    "title": "Anthropic 合并 Claude Chat 与 Cowork 为「一个 Claude」，内置 Docs/Slides/Design",
+    "url": "https://www.cnbeta.com.tw/articles/tech/1578298.htm",
+    "date": "09-17",
+    "source": "cnBeta"
+  },
+  {
+    "title": "飞书 8.0 原生集成「豆包工作伙伴」团队智能体",
+    "url": "https://www.stdaily.com/web/gdxw/2026-09/16/content_581901.html",
+    "date": "09-17",
+    "source": "科技日报"
+  },
+  {
+    "title": "vivo 发布四款蓝心大模型与系统级蓝心 Harness",
+    "url": "https://news.qq.com/rain/a/20260916A05VSA00",
+    "date": "09-17",
+    "source": "腾讯新闻"
+  },
+  {
+    "title": "蚂蚁开源大模型安全护栏 SingProbe Infra，边生成边识别风险",
+    "url": "https://news.qq.com/rain/a/20260916A0CSHQ00",
+    "date": "09-17",
+    "source": "腾讯新闻"
+  },
+  {
+    "title": "零跑技术日发布完全自研具身智能机器人",
+    "url": "https://www.stcn.com/article/detail/4188068.html",
+    "date": "09-17",
+    "source": "证券时报"
+  },
+  {
+    "title": "OpenAI 建立模型失配披露框架，首发 6 份异常行为报告",
+    "url": "https://www.unite.ai/openai-launches-misalignment-reporting-framework-with-six-incident-reports",
+    "date": "09-17",
+    "source": "OpenAI 官方 / Unite.AI"
+  },
+  {
+    "title": "香港首份五年规划将 AI 列为重要产业，筹建「AI 城市大脑」",
+    "url": "https://k.sina.com.cn/article_5953466437_162dab0450670bcnys.html",
+    "date": "09-17",
+    "source": "新浪 / 香港政府新闻网"
+  },
+  {
+    "title": "豆包 2.1 Pro 更新至 0915 版，强化证据溯源、Token 成本降三成",
+    "url": "https://www.toutiao.com/article/7686024913283252736/",
+    "date": "09-17",
+    "source": "环球网 / 今日头条"
+  },
+  {
     "title": "国常会部署加强算力网等规划建设，机构称国产AI算力兑现元年",
     "url": "https://cls.cn/detail/2367123",
     "date": "09-16",
@@ -1241,293 +1397,5 @@ AIHome.NEWS = [
     "url": "https://view.inews.qq.com/a/20260810A02CR000",
     "date": "08-10",
     "source": "腾讯新闻（观点新媒体）"
-  },
-  {
-    "title": "DeepSeek预告全面上调API定价，或告别「价格屠夫」低价策略",
-    "url": "https://www.stcn.com/article/detail/4062768.html",
-    "date": "08-07",
-    "source": "证券时报网"
-  },
-  {
-    "title": "阿里云视频模型Wan3.0开启公测，单次直出30秒并支持文档生视频",
-    "url": "https://new.qq.com/rain/a/20260807A04FA100",
-    "date": "08-07",
-    "source": "腾讯新闻（快科技）"
-  },
-  {
-    "title": "字节跳动年中全员会：承认大模型落后，张一鸣定调不用蒸馏走捷径",
-    "url": "https://www.163.com/dy/article/L3LQ82UB05129QAF.html",
-    "date": "08-07",
-    "source": "网易（南方都市报）"
-  },
-  {
-    "title": "中国开源大模型累计下载破百亿次，OpenRouter周调用前四全是国产",
-    "url": "https://new.qq.com/rain/a/20260807A0403M00",
-    "date": "08-07",
-    "source": "腾讯新闻（中国电子报）"
-  },
-  {
-    "title": "MiniMax纳入港股通首日收涨17.10%，总市值站上1038亿港元",
-    "url": "https://finance.stockstar.com/IG2026080600019831.shtml",
-    "date": "08-07",
-    "source": "证券之星（观点网）"
-  },
-  {
-    "title": "SpaceX与特斯拉投资168亿美元，全球最大芯片厂Terafab破土动工",
-    "url": "https://www.cls.cn/detail/2447866",
-    "date": "08-07",
-    "source": "财联社"
-  },
-  {
-    "title": "每经：AI驶入「L3智能体」深水区，中美前沿模型差距实质性收窄",
-    "url": "https://www.nbd.com.cn/articles/2026-08-06/4534527.html",
-    "date": "08-07",
-    "source": "每日经济新闻"
-  },
-  {
-    "title": "Om AI联汇完成数亿元融资，同步开源端侧多模态模型VLX-Seek 1.5",
-    "url": "https://www.stdaily.com/web/gdxw/2026-08/06/content_560231.html",
-    "date": "08-07",
-    "source": "科技日报"
-  },
-  {
-    "title": "第二届世界人形机器人运动会新增拔河项目，8月22日国家速滑馆开幕",
-    "url": "https://view.inews.qq.com/a/20260806A0718T00",
-    "date": "08-07",
-    "source": "腾讯新闻（北京日报）"
-  },
-  {
-    "title": "河北邯郸投用人形交通管理机器人，可模拟交警手势疏导车流",
-    "url": "https://view.inews.qq.com/a/20260806A0653H00",
-    "date": "08-07",
-    "source": "腾讯新闻（北京青年报）"
-  },
-  {
-    "title": "谷歌AI部门大洗牌：首席科学家Jeff Dean效力27年后离职创业",
-    "url": "https://tech.ifeng.com/c/8vLytv7th77",
-    "date": "08-06",
-    "source": "凤凰网科技（财联社）"
-  },
-  {
-    "title": "Meta推出首款AI编程智能体Muse Code，主打低价挑战OpenAI与Anthropic",
-    "url": "https://www.163.com/dy/article/L3KFA88H05198CJN.html",
-    "date": "08-06",
-    "source": "网易（财联社）"
-  },
-  {
-    "title": "字节跳动发布原生音视频全双工大模型SeedRealtime，已在豆包App全量上线",
-    "url": "https://new.qq.com/rain/a/20260806A02DR600",
-    "date": "08-06",
-    "source": "腾讯新闻（每日经济新闻）"
-  },
-  {
-    "title": "曝DeepSeek重启第二轮融资，拟募资500亿元、投前估值5000亿元",
-    "url": "https://www.163.com/dy/article/L3JVB3LV05118I96.html",
-    "date": "08-06",
-    "source": "网易（i黑马）"
-  },
-  {
-    "title": "京东开源实时流式视频编辑模型JoyAI-Video-Edit，视频可边播边改",
-    "url": "https://new.qq.com/rain/a/20260805A0CZ0N00",
-    "date": "08-06",
-    "source": "腾讯新闻（北京日报）"
-  },
-  {
-    "title": "Anthropic首次确认组建内部芯片团队，为Claude设计定制芯片",
-    "url": "https://view.inews.qq.com/a/20260805A0EXT000",
-    "date": "08-06",
-    "source": "腾讯新闻（观点新媒体）"
-  },
-  {
-    "title": "阿里Qwen-Image-3.0正式上线千问AI平台，文生图0.18元/张起",
-    "url": "https://new.qq.com/rain/a/20260805A05EAD00",
-    "date": "08-06",
-    "source": "腾讯新闻"
-  },
-  {
-    "title": "荣耀MagicOS 10八月版今日起分批推送，七大AI功能覆盖数十款机型",
-    "url": "https://new.qq.com/rain/a/20260805A08XSM00",
-    "date": "08-06",
-    "source": "腾讯新闻"
-  },
-  {
-    "title": "人民日报评AI治理：以善治促善智，开源有助于构筑更稳固的安全堤坝",
-    "url": "https://www.163.com/dy/article/L3KU8QPH0514R9M0_pdya11y.html",
-    "date": "08-06",
-    "source": "网易（人民网）"
-  },
-  {
-    "title": "Sand.ai发布全球首个千亿级开源MoE视频模型",
-    "url": "https://dy.163.com/article/L3KQJ61A05562DGT.html",
-    "date": "08-06",
-    "source": "网易（极新）"
-  },
-  {
-    "title": "GPT-5.5 Instant 全量推送：幻觉率降52.5%，新增\"记忆来源\"可查可删",
-    "url": "https://www.163.com/dy/article/L3HEJK2I05568E2X.html",
-    "date": "08-05",
-    "source": "网易科技"
-  },
-  {
-    "title": "腾讯混元发布语音识别模型 Hy ASR 3.0 preview，粤语词错误率3.12%",
-    "url": "https://www.163.com/dy/article/L3HFMQQA0511CMF5.html",
-    "date": "08-05",
-    "source": "网易（科技狐）"
-  },
-  {
-    "title": "彭博：中国AI\"斩杀线\"浮现，8周5款模型逼近全球前沿",
-    "url": "https://k.sina.com.cn/article_1887344341_707e96d502001timy.html",
-    "date": "08-05",
-    "source": "新浪（观察者网）"
-  },
-  {
-    "title": "科创板日报：端侧AI元年开启，千问已进入特斯拉中国车机深度测试",
-    "url": "https://dy.163.com/article/L3I6S6NB0550B1DU.html",
-    "date": "08-05",
-    "source": "网易（科创板日报）"
-  },
-  {
-    "title": "微信支付上线AI接入工具箱，含Skill技能包与AI友好文档、API",
-    "url": "https://www.aastocks.com/tc/mobile/news.aspx?newsid=now.1516835&newssource=aafn&newstype=61",
-    "date": "08-05",
-    "source": "阿斯达克财经网"
-  },
-  {
-    "title": "蚂蚁灵波启动首轮融资拟募15亿，京东要建千万小时具身数据护城河",
-    "url": "https://www.163.com/dy/article/L3HE753305199NPP.html",
-    "date": "08-05",
-    "source": "网易（21世纪经济报道）"
-  },
-  {
-    "title": "谷歌课堂Gemini 8月10日起向全年龄段K-12学生开放",
-    "url": "https://finance.sina.com.cn/jjxw/2026-08-05/doc-inimfmyp5191437.shtml",
-    "date": "08-05",
-    "source": "新浪财经（界面新闻）"
-  },
-  {
-    "title": "全球首款开源AI导盲机器人Milo问世，制造成本不到2000美元",
-    "url": "https://view.inews.qq.com/a/20260805A000R400",
-    "date": "08-05",
-    "source": "腾讯新闻（至顶科技）"
-  },
-  {
-    "title": "一个月9款旗舰扎堆，大模型进入\"月抛\"时代",
-    "url": "https://finance.sina.com.cn/jjxw/2026-08-05/doc-inimffsv4836249.shtml",
-    "date": "08-05",
-    "source": "新浪财经（投资界）"
-  },
-  {
-    "title": "美国FTC全面禁止进口外国先进机器人，近九成美高校论文用宇树",
-    "url": "https://view.inews.qq.com/a/20260804A0D7CH00",
-    "date": "08-05",
-    "source": "腾讯新闻（DeepTech深科技）"
-  },
-  {
-    "title": "阿里发布Qwen3.8-Max：2.4万亿参数，\"千问办公\"同步开启公测",
-    "url": "https://www.ifnews.com/news.html?aid=856458&cid=43",
-    "date": "08-04",
-    "source": "国际金融报"
-  },
-  {
-    "title": "白宫召集OpenAI、谷歌、Anthropic，审议AI模型安全测试框架终稿",
-    "url": "https://www.163.com/dy/article/L3FM8LFQ05119FMA.html",
-    "date": "08-04",
-    "source": "网易（极客公园）"
-  },
-  {
-    "title": "OpenAI旗下ChatGPT Atlas浏览器8月9日停服，书签需手动导出",
-    "url": "https://new.qq.com/rain/a/20260803A09L1H00",
-    "date": "08-04",
-    "source": "腾讯新闻（IT之家）"
-  },
-  {
-    "title": "京东外卖发布自研AI智能头盔，首批免费发放给全职骑手",
-    "url": "http://www.zqrb.cn/gscy/qiyexinxi/2026-08-03/A1785740390222.html",
-    "date": "08-04",
-    "source": "证券日报"
-  },
-  {
-    "title": "《人民日报》：无锡上线\"词元超市\"，调用大模型省钱又方便",
-    "url": "https://so.html5.qq.com/page/real/search_news?docid=70000021_0116a7121b916152",
-    "date": "08-04",
-    "source": "人民日报（腾讯新闻转载）"
-  },
-  {
-    "title": "触觉感知企业帕西尼再获10亿元战略轮融资，累计融资达35亿元",
-    "url": "https://app.bbtnews.com.cn/print.php?contentid=601157",
-    "date": "08-04",
-    "source": "北京商报"
-  },
-  {
-    "title": "月之暗面回应港股IPO传闻：消息不实",
-    "url": "https://www.163.com/dy/article/L3FPS1LQ0534A4SC.html",
-    "date": "08-04",
-    "source": "网易（界面新闻）"
-  },
-  {
-    "title": "韩国国家AI计算中心正式动工，目标2028年建成",
-    "url": "https://new.qq.com/rain/a/20260803A06XA700?refer=cp_1009",
-    "date": "08-04",
-    "source": "腾讯新闻（IT之家）"
-  },
-  {
-    "title": "消息称阿里内测AI办公平台\"万有无界\"，主打多智能体协同交付",
-    "url": "https://www.chinaz.com/ainews/30058.shtml",
-    "date": "08-04",
-    "source": "站长之家"
-  },
-  {
-    "title": "长三角(嘉兴)Token运营中心启动，\"数据模型超市\"一次接入百余款大模型",
-    "url": "https://new.qq.com/rain/a/20260803A02A4J00",
-    "date": "08-03",
-    "source": "腾讯新闻"
-  },
-  {
-    "title": "亚马逊完成对OpenAI总计500亿美元全额投资",
-    "url": "https://new.qq.com/rain/a/20260803A02A4J00",
-    "date": "08-03",
-    "source": "腾讯新闻"
-  },
-  {
-    "title": "谷歌Gemini Spark智能体向全球更多用户开放，可订机票、整理收件箱",
-    "url": "https://dy.163.com/article/L3D3CQM605562DGT.html",
-    "date": "08-03",
-    "source": "网易（极新）"
-  },
-  {
-    "title": "腾讯AI虚拟细胞算法登《Cell》主刊",
-    "url": "https://dy.163.com/article/L3D3CQM605562DGT.html",
-    "date": "08-03",
-    "source": "网易（极新）"
-  },
-  {
-    "title": "智谱GLM Coding Plan开放订阅",
-    "url": "https://dy.163.com/article/L3D3CQM605562DGT.html",
-    "date": "08-03",
-    "source": "网易（极新）"
-  },
-  {
-    "title": "欧盟《人工智能法》透明度条款生效，深度伪造须强制标识",
-    "url": "https://www.163.com/dy/article/L3D7DVRB051480KF.html",
-    "date": "08-03",
-    "source": "网易（前瞻网）"
-  },
-  {
-    "title": "国务院印发\"十五五\"知识产权规划，首部署AI生成物保护规则",
-    "url": "https://www.163.com/dy/article/L3D7DVRB051480KF.html",
-    "date": "08-03",
-    "source": "网易（前瞻网）"
-  },
-  {
-    "title": "谷歌地球AI生图功能上线不到48小时即暂停",
-    "url": "https://www.163.com/dy/article/L3CSMFG205199O55.html",
-    "date": "08-03",
-    "source": "网易（财经早餐）"
-  },
-  {
-    "title": "GitHub AI Agent曝\"GitLost\"提示注入漏洞，可诱骗泄露私有数据",
-    "url": "https://view.inews.qq.com/a/20260803A020FU00",
-    "date": "08-03",
-    "source": "腾讯新闻（华尔街见闻）"
   }
 ];
