@@ -357,3 +357,16 @@
 - 提交：单一 commit 覆盖两条流水线 → push origin main，Cloudflare Pages 自动构建。
 - **流程经验（重要）**：「文本块切分 + 拼接」方案中，chunk 取自 `{` 到 `}`（首尾无空白），块间的 2 空格缩进由 join 时的 `','+EOL+'  '` 提供；新增条目需先 `JSON.stringify(t,null,2)` 再给「首行以外的每一行」+2 空格。首次实现误用 `trim()` 后直接 join，导致 388 个块的顶层缩进丢失（tools.json 出现 426 行无意义删除），已用备份回滚重做。**此类入库务必用 `git diff --numstat` 复核删除行数是否恰等于被删条目行数。**
 
+## 2026-09-24 (周四) — 草稿产出 + 用户手动「部署上线」（同轮完成）
+
+- 起始状态：`js/news-data.js` 首项 2026-09-21（9/23 部署后无新草稿），工作树与 HEAD 一致，`scripts/_draft_news.md` 为 9/23 留下的占位；今日自动化本身未产出草稿（仓库内无任何文件被修改）。
+- **草稿产出**：`scripts/_draft_news.md`（10 条，date 2026-09-24，display「9月24日」，weekday「周四」）。
+- 选题主线（9/22–9/24）：马斯克称两三年内中国可补齐算力缺口(每经)、梁文锋署名 DeepSeek 公开 Dsec Agent 训练沙箱论文(每经)、千问发布 Qwen-Audio-3.1 五款语音模型全线降价(每经)、OpenAI 与 Anthropic 掌门人联合国安理会呼吁 AI 安全合作(每经)、小鹏首条人形机器人产线落地广东年底量产(科技日报)、蚂蚁百灵开源 Ming-Image-0.1-Design 登 UI/UX 开源第一(腾讯/驱动中国)、手机端侧生成式 AI 备案增至 10 款(新京报)、环球时报「具身智能实干时代」Galbot S1 在宁德时代常态化作业超 3 个月、云栖大会阿里 Qwen4 已训练/参数将扩至 5T–10T(今日头条)、阿里云首款智能体电脑 Qwen Book 云栖亮相(每经)。
+- 去重：10 条彼此不重复；与历史 232 条按 20 个关键词比对 **0 碰撞**；主动避开已入库主题（Gemini 3.8 Live、Qwen3.8-27B、飞书 8.0、vivo 蓝心、零跑机器人、OpenAI 失配框架、Astra for Law、xAI Grok Voice、腾讯 BrowserSkill、小米 MiMo-V2.6、谷歌 Home MCP、Qwen3.8-Omni-Flash、昇腾 960 NPO、硅基流动、长鑫 G5 等）。旧闻陷阱：小鹏 Iron 产线 9/8 投产属旧角度，改用 9/22 广东省 AI 应用对接大会最新口径。
+- 流程：10 个候选 URL 全部 curl（-L + 浏览器 UA）返回 200；草稿 JS 块 JSON 解析通过、字段顺序 `date/display/weekday/items` 与 `title/url/summary/source` 一致、摘要 39–60 字全部 ≤60（首版 1 条 61 字已裁到 60）、URL 全 https、FFFD 0。
+- **入库**：node 临时脚本（`scripts/_deploy_merge_tmp.js`，跑完即删）按顶层花括号切块 prepend；**45 天裁剪**：运行日 2026-09-24 − 45 = `2026-08-10` 为 cutoff，原末项恰为 2026-08-10（== cutoff，保留），**本次 0 剔除**。结果 **25 个 day 对象 / 242 条**，首项 2026-09-24、次项 09-21、末项 2026-08-10。
+- **流程经验 A（新增，重要）**：`js/news-data.js` 中 **items 元素是 6 行多行对象**（`{` 8 空格、字段 12 空格、`}` 8 空格），**不是单行内联**。首次实现用「解析 → 重新序列化 → 按 0/4/8 单行内联重排」重写了**全部 24 个旧 day 对象**，`git diff --numstat` 立刻暴露 **1392 删除行 = 232 条 × 6 行**（把所有多行条目压成单行的结果），已 `git checkout --` 回滚。**正确做法：旧块逐字节原样保留（不要重排），只对新 day 对象用 fmt() 生成；写前用「fmt(旧块) === 旧块原文」往返自检。** 修正后 diff = **67 增 / 0 删**（精确等于 1 个新 day 对象行数 1+3+1+10×6+1+1）。
+- **流程经验 B（新增）**：本仓库 `core.autocrlf=true`，`js/news-data.js` 工作区是 **CRLF**（1570 CRLF / 0 lone LF），而 `git show HEAD:...` 输出的是 LF 版。**EOL 必须以工作区实际字节为准（读工作区文件判定），不能按 git blob 判定**，否则整文件行尾翻转会产生海量假 diff。另注：`news-data.js` 的 day 对象顶格（col 0）、块间分隔符是 `','+EOL`（**没有** 2 空格缩进），与 `tools.json` 的 `','+EOL+'  '` 不同。
+- 同步：重跑 `xianxia/scripts/convert_news.py` → `xianxia/src/data/news.js`（242 条）。
+- 工具库：本周无积压（9/21 周维护草稿已于 9/23 一并入库，tools.json = 400 条），本次未动。
+

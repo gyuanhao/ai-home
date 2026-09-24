@@ -8,6 +8,73 @@
  */
 window.AIHomeNews = [
 {
+    "date": "2026-09-24",
+    "display": "9月24日",
+    "weekday": "周四",
+    "items": [
+        {
+            "title": "马斯克：两到三年内中国就能补齐算力缺口",
+            "url": "https://news.qq.com/rain/a/20260924A03EM700",
+            "summary": "马斯克称中国大模型单位算力产出接近全球顶尖，预计两三年内靠光刻与芯片制造补齐算力缺口。",
+            "source": "每日经济新闻"
+        },
+        {
+            "title": "梁文锋署名，DeepSeek 公开大规模 Agent 训练沙箱论文",
+            "url": "https://news.qq.com/rain/a/20260924A03OES00",
+            "summary": "DeepSeek 发布 Dsec 论文，单日服务 300 万个沙箱、峰值并发超 38 万，支撑 V4.1 强化学习训练。",
+            "source": "每日经济新闻"
+        },
+        {
+            "title": "千问发布 Qwen-Audio-3.1 系列，语音模型全线降价",
+            "url": "https://news.qq.com/rain/a/20260924A03EMV00",
+            "summary": "千问推出五款语音模型覆盖识别、合成、实时交互与创作，ASR 降价 95%、Realtime 降约 85%。",
+            "source": "每日经济新闻"
+        },
+        {
+            "title": "OpenAI 与 Anthropic 掌门人联合国呼吁加强 AI 安全合作",
+            "url": "https://www.toutiao.com/article/7688880591923675675/",
+            "summary": "奥尔特曼与阿莫代伊在安理会呼吁国际合作应对 AI 风险，特朗普则反对国际协调。",
+            "source": "每日经济新闻"
+        },
+        {
+            "title": "小鹏首条人形机器人生产线落地广东，年底量产",
+            "url": "https://www.stdaily.com/web/gdxw/2026-09/22/content_586133.html",
+            "summary": "何小鹏透露产线本月落地广东，全球首次实现机器人自动化生产机器人，明年二季度国内交付。",
+            "source": "科技日报"
+        },
+        {
+            "title": "蚂蚁百灵开源 UI 设计模型 Ming-Image-0.1-Design",
+            "url": "https://news.qq.com/rain/a/20260923A0AK0300",
+            "summary": "两个 6B 模型分别生成 UI 与拆解透明图层，UI/UX 专项评测开源第一，权重以 MIT 协议开放。",
+            "source": "腾讯新闻"
+        },
+        {
+            "title": "手机端侧生成式 AI 备案增至 10 款，荣耀小米阶跃在列",
+            "url": "https://www.toutiao.com/article/7688669349187502628/",
+            "summary": "网信办新增 YOYO Claw、Xiaomi miclaw、阶跃终端 AI 三款手机端侧服务备案，累计达 10 款。",
+            "source": "新京报"
+        },
+        {
+            "title": "中国具身智能进入「实干时代」，Galbot S1 工厂常态化作业",
+            "url": "https://3w.huanqiu.com/a/de583b/4TKfcKvMqUj?agt=23",
+            "summary": "银河通用 Galbot S1 在宁德时代产线 7×24 连续作业超 3 个月，商业部署规模已破千台。",
+            "source": "环球时报"
+        },
+        {
+            "title": "云栖大会：阿里 Qwen4 已在训练，参数将扩至 5 至 10 万亿",
+            "url": "https://www.toutiao.com/article/7688768283075543590/",
+            "summary": "阿里披露下一代 Qwen4 已进入训练，未来版本参数达 5T—10T，并发布真武 V900 训推一体芯片。",
+            "source": "今日头条"
+        },
+        {
+            "title": "阿里云首款智能体电脑 Qwen Book 云栖亮相",
+            "url": "https://m.nbd.com.cn/articles/2026-09-23/4589778.html",
+            "summary": "Qwen Book 配全局 AI 按键与语音手写笔，主打跨应用智能体任务，并与 Omarchy 探索 Agent 桌面。",
+            "source": "每日经济新闻"
+        }
+    ]
+},
+{
     "date": "2026-09-21",
     "display": "9月21日",
     "weekday": "周一",

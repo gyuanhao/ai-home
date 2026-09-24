@@ -7,6 +7,66 @@ window.AIHome = window.AIHome || {};
 
 AIHome.NEWS = [
   {
+    "title": "马斯克：两到三年内中国就能补齐算力缺口",
+    "url": "https://news.qq.com/rain/a/20260924A03EM700",
+    "date": "09-24",
+    "source": "每日经济新闻"
+  },
+  {
+    "title": "梁文锋署名，DeepSeek 公开大规模 Agent 训练沙箱论文",
+    "url": "https://news.qq.com/rain/a/20260924A03OES00",
+    "date": "09-24",
+    "source": "每日经济新闻"
+  },
+  {
+    "title": "千问发布 Qwen-Audio-3.1 系列，语音模型全线降价",
+    "url": "https://news.qq.com/rain/a/20260924A03EMV00",
+    "date": "09-24",
+    "source": "每日经济新闻"
+  },
+  {
+    "title": "OpenAI 与 Anthropic 掌门人联合国呼吁加强 AI 安全合作",
+    "url": "https://www.toutiao.com/article/7688880591923675675/",
+    "date": "09-24",
+    "source": "每日经济新闻"
+  },
+  {
+    "title": "小鹏首条人形机器人生产线落地广东，年底量产",
+    "url": "https://www.stdaily.com/web/gdxw/2026-09/22/content_586133.html",
+    "date": "09-24",
+    "source": "科技日报"
+  },
+  {
+    "title": "蚂蚁百灵开源 UI 设计模型 Ming-Image-0.1-Design",
+    "url": "https://news.qq.com/rain/a/20260923A0AK0300",
+    "date": "09-24",
+    "source": "腾讯新闻"
+  },
+  {
+    "title": "手机端侧生成式 AI 备案增至 10 款，荣耀小米阶跃在列",
+    "url": "https://www.toutiao.com/article/7688669349187502628/",
+    "date": "09-24",
+    "source": "新京报"
+  },
+  {
+    "title": "中国具身智能进入「实干时代」，Galbot S1 工厂常态化作业",
+    "url": "https://3w.huanqiu.com/a/de583b/4TKfcKvMqUj?agt=23",
+    "date": "09-24",
+    "source": "环球时报"
+  },
+  {
+    "title": "云栖大会：阿里 Qwen4 已在训练，参数将扩至 5 至 10 万亿",
+    "url": "https://www.toutiao.com/article/7688768283075543590/",
+    "date": "09-24",
+    "source": "今日头条"
+  },
+  {
+    "title": "阿里云首款智能体电脑 Qwen Book 云栖亮相",
+    "url": "https://m.nbd.com.cn/articles/2026-09-23/4589778.html",
+    "date": "09-24",
+    "source": "每日经济新闻"
+  },
+  {
     "title": "阶跃星辰发布 Step 5 Preview，推理与多模态能力大幅跃升",
     "url": "https://news.qq.com/rain/a/20260920A05FD400",
     "date": "09-21",
