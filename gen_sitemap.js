@@ -4,7 +4,7 @@ const path = require('path');
 
 const ROOT = __dirname;
 const BASE = 'https://myaishome.com/';
-const TODAY = '2026-08-18';
+const TODAY = '2026-09-28';
 
 const EXCLUDE = new Set([
   '404.html',
@@ -18,7 +18,8 @@ const EXCLUDE = new Set([
 ]);
 
 // 源码/备份/彩蛋目录不在公开 sitemap 内（与站点干净 URL 方案、canonical 对齐）
-const EXCLUDE_DIR_PREFIX = ['showcase-src/', 'xianxia/'];
+// home-new = vite 构建中间产物；social-card-zhihu-motion = 社媒卡片生成项目；_verify = 本地校验脚本
+const EXCLUDE_DIR_PREFIX = ['showcase-src/', 'xianxia/', 'home-new/', 'social-card-zhihu-motion/', '_verify/'];
 
 function walk(dir, relBase) {
   const out = [];
@@ -32,6 +33,11 @@ function walk(dir, relBase) {
       out.push(...walk(full, rel));
     } else if (e.name.endsWith('.html')) {
       if (EXCLUDE.has(rel)) continue;
+      // 排除已标记 noindex 的页（与 AdSense 薄页治理的精品/长尾分层保持一致：
+      // 既已 noindex，就不该再出现在 sitemap，否则 Search Console 会报「已提交但被 noindex」）
+      try {
+        if (/<meta\s+name="robots"\s+content="noindex"/.test(fs.readFileSync(full, 'utf8'))) continue;
+      } catch (_) { /* 读取失败则照常收录 */ }
       out.push(rel);
     }
   }
