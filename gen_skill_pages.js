@@ -16,6 +16,15 @@ if (!fs.existsSync(OUT_DIR)) fs.mkdirSync(OUT_DIR, { recursive: true });
 
 const D = eval(fs.readFileSync(SRC, 'utf8').match(/const skillsData = (\[[\s\S]*\]);/)[1]);
 
+// 精品技能清单：仅精品参与索引，其余长尾页 noindex（AdSense thin content 治理）
+let FEATURED_SKILLS = new Set();
+try {
+  FEATURED_SKILLS = new Set(JSON.parse(
+    fs.readFileSync(path.join(ROOT, 'scripts/featured_skills.json'), 'utf8')));
+} catch (e) {
+  console.warn('未找到 scripts/featured_skills.json，跳过 noindex 分层');
+}
+
 // ---------------- 分类文案库 ----------------
 const CAT_BANK = {
   '文档处理': {
@@ -338,6 +347,10 @@ function buildPage(s, idx, slug) {
     offers: { '@type': 'Offer', price: '0', priceCurrency: 'CNY' }
   });
 
+  // 精品/长尾分层：仅精品技能参与索引，其余加 noindex（治理 scaled/template content）
+  const robotsMeta = (FEATURED_SKILLS.size && !FEATURED_SKILLS.has(s.name))
+    ? '<meta name="robots" content="noindex">\n    ' : '';
+
   return `<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -347,6 +360,7 @@ function buildPage(s, idx, slug) {
     <meta name="keywords" content="${esc(s.nameZh)},${esc(s.name)},AI技能,${esc(s.cat)},Agent技能">
     <title>${title}</title>
     <link rel="canonical" href="${url}">
+    ${robotsMeta}
     <meta property="og:title" content="${title}">
     <meta property="og:description" content="${desc}">
     <meta property="og:url" content="${url}">
