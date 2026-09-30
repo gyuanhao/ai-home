@@ -370,3 +370,21 @@
 - 同步：重跑 `xianxia/scripts/convert_news.py` → `xianxia/src/data/news.js`（242 条）。
 - 工具库：本周无积压（9/21 周维护草稿已于 9/23 一并入库，tools.json = 400 条），本次未动。
 
+## 2026-09-30 (周三) — 第三十四次运行
+- 产出草稿：scripts/_draft_news.md（主稿 10 条，date 2026-09-30，display「9月30日」，weekday「周三」）。
+- **运行缺口**：9/25–9/29 自动化未运行（无草稿产出）。news-data.js 首项仍为 2026-09-24（9/24 部署后无新入库）。9/25 草稿（10 条，OpenAI Aeon、智元×长隆等）此前从未入库、且将被本次运行覆盖，故在草稿「附录 A」**原样保留 9/25 对象**，并提示部署顺序 9/30 → 9/25 → 现有 9/24（保持日期降序），避免 9/25 内容永久丢失。
+- 选题主线（9/28–9/30 新增，10 条）：OpenAI DevDay 2026 连发25项更新含常驻智能体 Dots 与 GPT-6.1 Sol(智东西/网易)、OpenAI 因安全不达标取消 GPT-6.1 Astra 发布(腾讯新闻)、AMD 82亿美元收购李飞飞 World Labs(腾讯新闻/财联社)、CNNIC 我国生成式AI用户破7亿(中国新闻网)、华为开源 openPangu-2.0 全套训练代码(华为官方)、逐际动力×东土科技全国产电子架构人形机器人(21世纪经济报道)、DeepSeek Harness v0.2 桌面端(智东西)、英伟达 Open Agent Safety 平台 BlueField-4 DPU(澎湃)、IDC 上半年全球人形机器人出货增432%中国占95%(中新经纬)、国新办十五五科技强国将攻关AI等前沿(中国政府网/新华社)。
+- 去重/避坑：主稿 10 条与 news-data.js（首项 9/24，242 条历史标题）0 碰撞；与附录 9/25（10 条）标题亦无重复；刻意避开已入库/已草稿主题（马斯克算力缺口、DeepSeek Dsec、千问Qwen-Audio-3.1、OpenAI/Anthropic安理会、小鹏产线、蚂蚁Ming-Image、手机端侧备案、云栖Qwen4、阿里Qwen Book、腾讯元宝鸿蒙版、ChatGPT Voice GPT-6、Gemini 3.8 Live、Anthropic ART、小米MiMo-V3、Kimi OK Computer、百度蒸汽机、智元×长隆、SAFA）。
+- 流程：10 个候选 URL 全部 curl（-L + 浏览器UA）返回 200；node 临时校验脚本（scripts/_check_draft_tmp.js，跑完即删）通过——解析出 2 个 day 对象(9/30+9/25附录)、JSON 合法、字段顺序与 window.AIHomeNews 一致、摘要 42–60 字全部 ≤60、URL 全 https、块内与 242 条历史标题 0 碰撞、FFFD 扫描 0。
+- 未改动 js/news-data.js 或其它正式文件，未执行 git、未部署；仅覆盖 scripts/_draft_news.md。
+- 45天规则：运行日 2026-09-30 − 45 = 2026-08-16 为 cutoff；部署时 date<2026-08-16 者剔除，当前末项 2026-08-10（< 2026-08-16）将被裁剪。
+
+### 2026-09-30 部署上线（用户触发「请部署」）
+- 入库：node 临时脚本（scripts/_deploy_news_tmp.js，跑完即删）解析草稿两个 day 对象（9/30 主稿 + 9/25 附录），按降序 prepend（9/30 → 9/25 → 原 9/24）；同时应用 45 天裁剪 cutoff=2026-08-16，剔除 08-10/08-11/08-12/08-13/08-14 共 5 天。
+- **踩坑修复（重要，已入库教训）**：首次装配误用分隔符 `}\r\n,\r\n{`（逗号独占一行），正确应为 **`},\r\n{`（逗号紧贴前一 block 的 `}`）**，即 day 块之间是 `','+EOL` 而非 `EOL+','+EOL`。错误版本导致中段出现 ~19 处「1 行→2 行」的假 diff（174 增 / 354 删）。用 `git diff -U0 | grep '^@@'` 一眼看出中段 hunk 后定位；已 `cp .bak.deploy` 回滚重跑。**教训：装配后必须查 hunk 分布——正确结果应只有「顶部一段插入 + 底部一段删除」，任何中段 hunk 都是分隔符/缩进错位。**（news-data.js 顶格 col 0 + `','+EOL`；与 tools.json 的 `','+EOL+'  '` 不同。）
+- 结果：**22 个 day 对象 / 212 条**，首项 2026-09-30、次项 09-25、三序 09-24、末项 2026-08-17。校验：`node --check` 通过；vm 加载正常；日期严格降序 ✔；FFFD 0；非 https 0；全条目摘要 ≤60；**既有 day 块与备份逐字节一致（changed=0）**；最终 diff = 134 增 / 335 删（仅顶部插 2 块 + 底部删 5 块）。
+- 仙侠同步：重跑 `xianxia/scripts/convert_news.py` → `xianxia/src/data/news.js`（212 条，首条 09-30）。
+- 验证：cache-bust 请求确认 myaishome.com 首项已为 2026-09-30。
+- 临时文件（scripts/_deploy_news_tmp.js、js/news-data.js.bak.deploy）已清理。
+- **下次注意**：9/25 积压已随本次一并入库，工作树不再有未上线草稿；下次运行按常规产出当日草稿即可。
+

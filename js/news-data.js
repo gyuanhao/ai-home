@@ -8,6 +8,140 @@
  */
 window.AIHomeNews = [
 {
+    "date": "2026-09-30",
+    "display": "9月30日",
+    "weekday": "周三",
+    "items": [
+        {
+            "title": "OpenAI DevDay 2026 发布25项更新：常驻智能体 Dots 与 GPT-6.1 Sol",
+            "url": "https://dy.163.com/article/L82CFOBN051180F7.html",
+            "summary": "OpenAI 开发者大会连发25项更新，含7×24常驻智能体 Dots 与价格仅旗舰五分之一的 GPT-6.1 Sol。",
+            "source": "智东西 / 网易"
+        },
+        {
+            "title": "OpenAI 因安全未达标取消发布 GPT-6.1 Astra",
+            "url": "https://news.qq.com/rain/a/20260929A0E1I700",
+            "summary": "OpenAI 证实下一代模型 GPT-6.1 Astra 未达内部安全与对齐标准，决定不予发布，行业罕见。",
+            "source": "腾讯新闻 / 读创财经"
+        },
+        {
+            "title": "AMD 82亿美元收购李飞飞创办的 World Labs",
+            "url": "https://new.qq.com/rain/a/20260929A08STT00",
+            "summary": "AMD 以约82亿美元全股票收购李飞飞的空间智能公司 World Labs，李飞飞出任执行副总裁兼首席科学家。",
+            "source": "腾讯新闻 / 财联社"
+        },
+        {
+            "title": "CNNIC：我国生成式人工智能用户规模突破7亿",
+            "url": "https://www.chinanews.com.cn/cj/2026/09-29/10705724.shtml",
+            "summary": "CNNIC 报告显示上半年我国生成式AI用户破7亿、普及率超50%，智能算力同比增177%。",
+            "source": "中国新闻网"
+        },
+        {
+            "title": "华为开源 openPangu-2.0 全套训练代码",
+            "url": "https://www.huawei.com/cn/news/2026/9/open-pangu",
+            "summary": "华为开源 openPangu-2.0 预训练、SFT 与后训练 RL 代码，国产大模型从开放权重走向开放全流程。",
+            "source": "华为官方"
+        },
+        {
+            "title": "逐际动力联手东土科技，人形机器人装上全国产电子架构",
+            "url": "https://m.21jingji.com/article/20260929/herald/af2d0b02d6e7593ed4a2af7d05a191b5.html",
+            "summary": "逐际动力与东土科技发布全国产电子架构人形机器人，操作系统、总线、AI芯片整体替换为国产方案。",
+            "source": "21世纪经济报道"
+        },
+        {
+            "title": "DeepSeek Harness v0.2 桌面端发布，开箱即用",
+            "url": "https://zhidx.com/p/598364.html",
+            "summary": "DeepSeek 推出 Harness v0.2 桌面端，提供 Mac/Win 安装包与插件管理，降低使用门槛。",
+            "source": "智东西"
+        },
+        {
+            "title": "英伟达发布 Open Agent Safety 平台，毫秒级隔离失控智能体",
+            "url": "https://m.thepaper.cn/newsDetail_forward_34165796",
+            "summary": "英伟达推出 OpenShell 与 Sentry，基于 BlueField-4 DPU 毫秒级隔离越界智能体。",
+            "source": "澎湃新闻"
+        },
+        {
+            "title": "IDC：上半年全球人形机器人出货增超4倍，中国厂商占95%",
+            "url": "https://www.toutiao.com/article/7690833907171721763/",
+            "summary": "IDC 报告显示上半年全球人形机器人出货近2.5万台同比增432%，中国厂商占比超95%。",
+            "source": "中新经纬"
+        },
+        {
+            "title": "国新办发布会：十五五将体系化攻关人工智能等前沿领域",
+            "url": "https://www.gov.cn/lianbo/202609/content_7082415.htm",
+            "summary": "国新办介绍十五五科技强国建设，明确把人工智能、量子科技、生物制造等列为前沿攻关重点。",
+            "source": "中国政府网 / 新华社"
+        }
+    ]
+},
+{
+    "date": "2026-09-25",
+    "display": "9月25日",
+    "weekday": "周五",
+    "items": [
+        {
+            "title": "腾讯元宝鸿蒙版正式上线，首发搭载混元Hy4 preview",
+            "url": "https://tech.ifeng.com/c/8whSIUWjncS",
+            "summary": "腾讯元宝鸿蒙版正式上架，首发搭载混元Hy4 preview并支持专家模式，内置文档精读、识图、AI写作等五项核心能力。",
+            "source": "凤凰网科技"
+        },
+        {
+            "title": "OpenAI 个人智能体 Aeon 曝光，正面对标 Meta Muse",
+            "url": "https://agihunt.info/en/p/1a0cd5ab9ee76d5dae84d6fe0e0",
+            "summary": "OpenAI 个人智能体 Aeon 曝光，主打桌面自动化，9/29 前发布对标 Meta Muse。",
+            "source": "AGI Hunt / 网易前沿快讯"
+        },
+        {
+            "title": "ChatGPT Voice 接入 GPT-6，可语音操作邮件日历与 Slack",
+            "url": "https://www.163.com/dy/article/L7KS6BGL05561FZY.html",
+            "summary": "ChatGPT Voice 全球升级切到 GPT-6，首次接入邮件、日历、Slack 并能语音办事。",
+            "source": "网易"
+        },
+        {
+            "title": "谷歌为 Gemini 3.8 Live 加入 Live Avatar 数字人",
+            "url": "https://new.qq.com/rain/a/20260925A036O800",
+            "summary": "谷歌为 Gemini 3.8 Live 加数字人 Live Avatar，支持实时唇形同步与 97 种语言。",
+            "source": "腾讯新闻 / IT之家"
+        },
+        {
+            "title": "Anthropic 披露 Claude 自主发现类 CRISPR 新酶系统 ART",
+            "url": "https://www.aibase.com/news/31321",
+            "summary": "Anthropic 用约 950 个 Claude 智能体 21 小时自主发现类 CRISPR 新酶系统 ART。",
+            "source": "AIBase"
+        },
+        {
+            "title": "小米公开 MiMo-V3 核心架构 HySparse2",
+            "url": "https://news.qq.com/rain/a/20260923A0CPWN00",
+            "summary": "小米公开 MiMo-V3 架构 HySparse2，百万 token 下预填充计算降 5 倍、KV 缓存缩 4.5 倍。",
+            "source": "腾讯新闻 / 驱动中国"
+        },
+        {
+            "title": "Kimi 发布 Agent 模式 OK Computer 并开启灰度",
+            "url": "https://news.qq.com/rain/a/20250925A05P7P00",
+            "summary": "Kimi 发布 Agent 模式 OK Computer 灰度，可操作虚拟电脑建站、做数据分析与 PPT。",
+            "source": "腾讯新闻 / 每日经济新闻"
+        },
+        {
+            "title": "百度蒸汽机上线通用 AI 长视频生成，支持无限长度",
+            "url": "https://www.geekpark.net/news/354469",
+            "summary": "百度蒸汽机升级发布通用 AI 长视频生成功能，采用流式生成技术突破时长限制，可生成无限长度视频并中途改写 Prompt。",
+            "source": "极客公园"
+        },
+        {
+            "title": "智元×长隆全球首个具身智能主题乐园开园",
+            "url": "https://www.ifnews.com/news.html?aid=872714",
+            "summary": "智元与长隆在横琴打造全球首个大规模具身智能主题乐园，超 300 台机器人上岗，第 2 万台 A3 Ultra 同日交付。",
+            "source": "国际金融报"
+        },
+        {
+            "title": "谷歌/OpenAI/Anthropic 拟共建前沿 AI 标准局 SAFA",
+            "url": "https://guba.eastmoney.com/news,usgoogl,1777715728.html",
+            "summary": "谷歌、OpenAI 与 Anthropic 拟组建 SAFA，为前沿模型定第三方安全测试与事故上报标准。",
+            "source": "东方财富 / 财联社"
+        }
+    ]
+},
+{
     "date": "2026-09-24",
     "display": "9月24日",
     "weekday": "周四",
@@ -1296,341 +1430,6 @@ window.AIHomeNews = [
             "url": "https://www.163.com/dy/article/L4DC181G05561FZY.html",
             "summary": "张一鸣Seed全员会表态拒走蒸馏捷径，字节坚定自研。",
             "source": "网易 / 文伯虎财经"
-        }
-    ]
-},
-{
-    "date": "2026-08-14",
-    "display": "8月14日",
-    "weekday": "周五",
-    "items": [
-        {
-            "title": "DeepSeek 开源 Harness 智能体框架，补齐 Vibe Coding 入口",
-            "url": "https://www.nbd.com.cn/articles/2026-08-14/4541621.html",
-            "summary": "8/13晚开源 DeepSeek Harness(DSH) 开发者预览版，一切皆插件，可接代码库自动改码跑测试。",
-            "source": "每日经济新闻"
-        },
-        {
-            "title": "谷歌发布 Gemini 3.7 Flash，主打编程与自主智能体",
-            "url": "https://www.163.com/dy/article/L49E7CRE0550WHYR_pdya11y.html",
-            "summary": "8/13发布，主打编程与自主智能体，输入价降至前代一半，已上线 Gemini Spark。",
-            "source": "网易 / 财闻"
-        },
-        {
-            "title": "Anthropic 估值或破 2 万亿美元，最快 10 月上市",
-            "url": "https://www.163.com/dy/article/L49CRG5O0512B07B.html",
-            "summary": "据投资方人士，最快10月IPO，估值预期达2万亿美元，年化营收增至470亿美元。",
-            "source": "网易 / 每日经济新闻"
-        },
-        {
-            "title": "OpenAI 年内二度换 CRO，加速商业化落地",
-            "url": "https://www.ccidnet.com/AIqqy/1122976.jhtml",
-            "summary": "任命 Dali Rajic 任首席营收官，技术负责人等多名高管离任，周活突破10亿。",
-            "source": "赛迪网"
-        },
-        {
-            "title": "Databricks 完成 50 亿美元融资，估值升至 1900 亿",
-            "url": "https://new.qq.com/rain/a/20260814A047NJ00?refer=cp_1009",
-            "summary": "Coatue、黑石等领投，年化营收破70亿美元，资金投向 Lakebase、Genie 等 Agent 基建。",
-            "source": "腾讯新闻 / 雷递网"
-        },
-        {
-            "title": "AMD 创纪录发债 47.5 亿美元，加码 AI 算力",
-            "url": "https://finance.sina.com.cn/roll/2026-08-14/doc-ininfrty2770554.shtml",
-            "summary": "创芯片制造商发债规模纪录，承诺向 Anthropic 最高投50亿美元，AI 需求持续催融资。",
-            "source": "新浪财经 / 财联社"
-        },
-        {
-            "title": "复旦白泽 Whitzard 登国际 AI 安全榜全球第二",
-            "url": "https://www.toutiao.com/article/7673541928448721443/",
-            "summary": "CyberGym 榜单以91.2%漏洞攻防成功率列全球第二、高校第一，成本不足5000元。",
-            "source": "央广网 / 央视新闻"
-        },
-        {
-            "title": "AI 消费硬件爆发：外骨骼 +458%、眼镜 +151.7%",
-            "url": "https://cj.sina.com.cn/article/norm_detail?url=https%3A%2F%2Ffinance.sina.com.cn%2Froll%2F2026-08-14%2Fdoc-ininfrtu4249949.shtml&finpagefr=w_110",
-            "summary": "央视聚焦 AI+消费加速，上半年智能外骨骼与眼镜网零额分别增458.4%和151.7%。",
-            "source": "央视网 / 新浪财经"
-        },
-        {
-            "title": "京东 Q2 AI 产品成交额增 125%，加速布局机器人",
-            "url": "https://view.inews.qq.com/a/20260814A00H9B00",
-            "summary": "AI眼镜、AIPC等成交额同比增125%，首个 RoboBase 开工，5年布局80余机器人基地。",
-            "source": "智东西 / 腾讯新闻"
-        },
-        {
-            "title": "自变量机器人 1 小时分拣 1816 件，超 Figure AI",
-            "url": "https://www.163.com/dy/article/L48L156C05569XIR.html",
-            "summary": "公开直播创纪录，单台1小时完成1816件分拣，效率超海外 Figure AI 同类测试。",
-            "source": "前沿在线 / 网易"
-        }
-    ]
-},
-{
-    "date": "2026-08-13",
-    "display": "8月13日",
-    "weekday": "周四",
-    "items": [
-        {
-            "title": "DeepSeek V4 Pro 正式版上线，多项 Agent 测试逼近 Claude Fable 5",
-            "url": "https://new.qq.com/rain/a/20260813A047OR00?refer=cp_1009",
-            "summary": "0813版支持1M上下文与384K输出，多项Agent测试逼近Fable 5，价格暂未上涨。",
-            "source": "腾讯新闻"
-        },
-        {
-            "title": "马斯克发布 Grok 4.6，主打长程智能体与复杂编程",
-            "url": "https://www.163.com/dy/article/L46B1EK905568W0A.html",
-            "summary": "主打长程智能体与编程，综合智能指数61追平GPT-5.6，API价仅前沿一半。",
-            "source": "新浪财经"
-        },
-        {
-            "title": "腾讯 Q2 资本开支暴增 176%，AI 投入激进致现金流转负",
-            "url": "https://finance.sina.com.cn/stock/hkstock/hkstocknews/2026-08-13/doc-inincnuy3396808.shtml",
-            "summary": "砸528亿买算力、自由现金流转负138亿，AI投入激进但商业化可期。",
-            "source": "新浪财经"
-        },
-        {
-            "title": "谷歌发布 Pixel 11 系列，Gemini 可代订餐厅与叫车",
-            "url": "https://www.163.com/dy/article/L4603BNP05568W0A.html",
-            "summary": "Gemini可后台代订餐厅、叫车、点咖啡，AI手机竞争升温、全系涨价。",
-            "source": "新浪财经"
-        },
-        {
-            "title": "微软推出 MAI-Code-1.1-Flash 编程模型，价格降至初代 1/4",
-            "url": "https://so.html5.qq.com/page/real/search_news?docid=70000021_1376a7bf8c706852",
-            "summary": "代码能力升22%、Token消耗降25%，价格降至初代1/4并新增原生视觉。",
-            "source": "IT之家"
-        },
-        {
-            "title": "阿里云灵骏真武 M890 超节点实例上线，乌兰察布首发",
-            "url": "https://www.163.com/dy/article/L44IA83E0514R9OJ.html",
-            "summary": "乌兰察布首发64卡800GB/s互联，可承载十万亿参数级MoE推理。",
-            "source": "环球网"
-        },
-        {
-            "title": "Anthropic 与 Redwood 发布概念推理指数 CRI",
-            "url": "https://alignment.anthropic.com/2026/conceptual-reasoning-index/",
-            "summary": "测试无标准答案的概念推理，Opus 5得73.6、上限约91，新评测维度。",
-            "source": "Anthropic"
-        },
-        {
-            "title": "白宫拟将前沿开放模型纳入发布前安全测试框架",
-            "url": "https://www.163.com/dy/article/L46SLO2305562QFT.html",
-            "summary": "监管或由开源/闭源转向性能门槛，中国开源模型在美部署或受波及。",
-            "source": "WIRED / 未尽研究"
-        },
-        {
-            "title": "字节新设「AI数据与安全」一级部门，与 Seed 平行",
-            "url": "https://tech.ifeng.com/c/8vVRX2ReKOi",
-            "summary": "张一鸣「坚决不蒸馏」后，把数据升格为与Seed平行的一级战略部门。",
-            "source": "凤凰网科技"
-        },
-        {
-            "title": "美银启动 2500 亿美元 AI 基础设施融资计划",
-            "url": "https://www.ibtimes.sg/bank-america-launches-250-billion-us-infrastructure-financing-initiative-ai-boom-92020",
-            "summary": "18个月投向数据中心、电力与关键矿产，华尔街深度进场AI基建。",
-            "source": "路透 / 国际财经时报"
-        }
-    ]
-},
-{
-    "date": "2026-08-12",
-    "display": "8月12日",
-    "weekday": "周三",
-    "items": [
-        {
-            "title": "英伟达研发万亿参数开源模型 Nemotron 4，剑指顶级开源阵营",
-            "url": "https://www.sohu.com/a/1061728509_121400326",
-            "summary": "参数至少1万亿、约为上代两倍，同步发布3.5 Lightning与开源路由库。",
-            "source": "钛媒体"
-        },
-        {
-            "title": "面壁智能启动IPO辅导，冲刺「端侧大模型第一股」",
-            "url": "https://www.eeo.com.cn/2026/0812/994925.shtml",
-            "summary": "中信证券辅导备案，上半年融资超50亿、估值破200亿，MiniCPM下载超4300万次。",
-            "source": "经济观察网"
-        },
-        {
-            "title": "智源研究院发布AREX自主研究智能体，权重已开源",
-            "url": "https://so.html5.qq.com/page/real/search_news?docid=70000021_3546a7b800872052",
-            "summary": "首创「研究—验证—再研究」双循环框架，可自主读论文、追热点、做综述。",
-            "source": "央广网"
-        },
-        {
-            "title": "芝商所拟10月推出算力期货，AI算力迈向大宗商品化",
-            "url": "https://news.qq.com/rain/a/20260812A01G7300",
-            "summary": "与Silicon Data推H100、B200两项GPU租赁指数期货，为企业提供算力对冲工具。",
-            "source": "财联社"
-        },
-        {
-            "title": "Anthropic与矿企Riot签91亿美元20年算力大单",
-            "url": "https://www.chinastarmarket.cn/detail/2451108",
-            "summary": "Riot供德州191MW算力，消息后股价盘后涨25%；三月内锁定算力合约已超600亿美元。",
-            "source": "财联社"
-        },
-        {
-            "title": "戴盟机器人完成数亿元融资，蚂蚁集团领投",
-            "url": "https://www.163.com/dy/article/L42S6ICL0512D3VJ.html",
-            "summary": "蚂蚁首次布局触觉赛道；戴盟构建触觉感知—数据—模型全栈，传感器万片级出货。",
-            "source": "新京报"
-        },
-        {
-            "title": "上海印发「十五五」软件规划，推动自主芯片与大模型融合",
-            "url": "https://new.qq.com/rain/a/20260812A03B0Y00",
-            "summary": "攻坚非Transformer架构，攻关HBM、CPO等核心环节，提升智算硬件供给与软硬协同。",
-            "source": "每日经济新闻"
-        },
-        {
-            "title": "OpenAI完成70亿美元员工股份回购，估值维持8520亿",
-            "url": "https://www.163.com/dy/article/L439PA6T0550B1DU.html",
-            "summary": "由OpenAI自掏腰包承接，为IPO前释放流动性；公司6月已秘密提交上市申请。",
-            "source": "科创板日报"
-        },
-        {
-            "title": "Anthropic为Claude输出加隐形水印，响应欧盟AI法案",
-            "url": "https://new.qq.com/rain/a/20260812A01AGM00",
-            "summary": "8月2日起新模型默认嵌入隐形文本水印与C2PA溯源元数据，全球范围适用。",
-            "source": "腾讯新闻"
-        },
-        {
-            "title": "Gartner：2026年AI推理支出将首超模型训练",
-            "url": "https://www.163.com/dy/article/L44975UC05562DGT.html",
-            "summary": "机构预估推理侧开销首超训练，标志大模型竞争从「卷参数」转向应用与落地。",
-            "source": "极新早报"
-        }
-    ]
-},
-{
-    "date": "2026-08-11",
-    "display": "8月11日",
-    "weekday": "周二",
-    "items": [
-        {
-            "title": "英伟达联手六大华尔街巨头，设算力融资平台筹逾5000亿美元",
-            "url": "https://view.inews.qq.com/a/20260811A01QFA00",
-            "summary": "与Apollo、贝莱德、黑石、博枫、高盛、KKR签谅解备忘录撬动第三方资本；消息后英伟达股价一度跌3.2%。",
-            "source": "腾讯新闻（财联社）"
-        },
-        {
-            "title": "Meta重回开源：发布300亿参数Agent模型Muse Glimmer，单张显卡可本地运行",
-            "url": "https://www.36kr.com/p/3934265198345348",
-            "summary": "采用Apache 2.0协议，4bit量化后24GB显存即可跑；扎克伯格发长文呼吁美国降低开源AI准入门槛。",
-            "source": "36氪（爱范儿）"
-        },
-        {
-            "title": "Anthropic取消涨价50%计划，永久锁定Claude Sonnet 5发布价",
-            "url": "https://news.qq.com/rain/a/20260811A020EZ00",
-            "summary": "输入每百万2美元、输出10美元的初始定价永久保留，原定8月底上调至3和15美元的计划作废。",
-            "source": "腾讯新闻（华尔街见闻）"
-        },
-        {
-            "title": "Claude Code将于8月14日默认开启自动模式，额外token费用官方承担",
-            "url": "https://view.inews.qq.com/a/20260810A06CCA00",
-            "summary": "Pro/Max/Team新会话默认启用；实验显示自动模式拦截危险命令成功率89%，远高于人工的13.6%。",
-            "source": "腾讯新闻（量子位）"
-        },
-        {
-            "title": "上半年中国厂商占全球人形机器人出货量超97%，智元、宇树合计约75%",
-            "url": "https://news.sina.cn/2026-08-11/detail-inimwuhv7728838.d.html",
-            "summary": "彭博援引SAG数据：全球出货约1.91万台，智元8400台占44%、宇树5900台，工商业应用占比超七成。",
-            "source": "新浪（环球时报）"
-        },
-        {
-            "title": "宇树科技网上最终中签率0.0181%，创科创板历史新低",
-            "url": "https://www.163.com/dy/article/L41GNU0K053469RG.html",
-            "summary": "有效申购户数约978万户创科创板新高，申购倍数约8288倍触发回拨，成史上最难中签新股。",
-            "source": "网易（证券时报）"
-        },
-        {
-            "title": "阿里千问开放平台上线，覆盖手机、PC与AI眼镜三类终端",
-            "url": "https://t.cj.sina.com.cn/articles/view/1644119190/61ff449602002mnxs",
-            "summary": "顺丰、自如、哈啰租车、快递100等首批接入，用户可在千问对话内完成查询、筛选到下单支付。",
-            "source": "新浪财经（时代周报）"
-        },
-        {
-            "title": "微信灰度上线朋友圈「AI帮写」，可由AI助手小微生成文案",
-            "url": "https://www.163.com/dy/article/L41NU00S0511CSAO.html",
-            "summary": "发布图文或纯文字朋友圈时可唤起小微，支持语音与文字输入，提供简洁、调侃、文艺三种风格。",
-            "source": "网易（爱范儿）"
-        },
-        {
-            "title": "微软下一代AI芯片Maia 300最快9月亮相，洽谈台积电2027年交付超30万颗",
-            "url": "https://view.inews.qq.com/a/20260810A0CVFY00",
-            "summary": "相较Maia 200仅数万颗的产量是数量级跃升，意在降本并减少对英伟达AI加速器的依赖。",
-            "source": "腾讯新闻（IT之家）"
-        },
-        {
-            "title": "OpenAI发布GPT-5.6-Cyber，Daybreak网络安全计划拆分红蓝双层",
-            "url": "https://www.163.com/dy/article/L41NI21K0511BLFD.html",
-            "summary": "基于GPT-5.6 Sol训练，高级安全任务完成率95%；已在Chrome V8引擎中发现两个未公开漏洞。",
-            "source": "网易（cnBeta）"
-        }
-    ]
-},
-{
-    "date": "2026-08-10",
-    "display": "8月10日",
-    "weekday": "周一",
-    "items": [
-        {
-            "title": "A股迎「人形机器人第一股」，宇树科技今日启动网上申购",
-            "url": "https://www.stcn.com/article/detail/4065944.html",
-            "summary": "发行价150.80元/股，对应市值约609.93亿元，拟募资60.99亿元；从受理到申购不足5个月，创年内最快纪录。",
-            "source": "证券时报网"
-        },
-        {
-            "title": "OpenAI暂停Astra模型部分研发：自主网络攻防能力过强触及高危门槛",
-            "url": "https://www.163.com/dy/article/L3TFVN2U0514R9OJ.html",
-            "summary": "内部测评发现该模型自主攻防能力过强，可能主动发起高级网络攻击；已叫停不达安全标准的测试。",
-            "source": "网易（央视财经）"
-        },
-        {
-            "title": "字节跳动被曝正训练10万亿参数大模型，处于预训练早期阶段",
-            "url": "https://view.inews.qq.com/a/20260808A00KQF00",
-            "summary": "智东西援引英国《金融时报》，称该模型处于3至6个月预训练早期，若属实将超越约8万亿参数的Mythos 5。",
-            "source": "腾讯新闻（智东西）"
-        },
-        {
-            "title": "人民日报：美国近200家科技初创联名反对限制使用中国开源模型",
-            "url": "https://k.sina.com.cn/article_1893892941_70e2834d020022ffe.html",
-            "summary": "信中称美国开发者需持续使用全球现有开放模型；美企调用中国模型词元占比每周稳超30%、峰值46%。",
-            "source": "新浪（人民日报）"
-        },
-        {
-            "title": "「Token超级工厂」魔形智能完成A轮融资，三个月内连融两轮",
-            "url": "https://www.163.com/dy/article/L3V5VNNG051180F7.html",
-            "summary": "毅达资本领投，距5月Pre-A轮仅三个月；成立两年日均Token调用量达数万亿级，收入已达数亿元。",
-            "source": "网易（智东西）"
-        },
-        {
-            "title": "国家发改委：将加快人工智能法立法进程，完善关键制度框架",
-            "url": "https://k.sina.com.cn/article_5953189932_162d6782c06704ukuc.html",
-            "summary": "同时建立技术监测与风险预警体系；上半年规上制造业AI应用普及率超30%，智能算力规模为去年同期2.8倍。",
-            "source": "新浪（光明日报）"
-        },
-        {
-            "title": "总台《2026中国AI盛典》揭晓10位年度AI人物，蔡磊获特别贡献人物",
-            "url": "https://sh.cctv.com/2026/08/08/ARTIjvdeF1dGMwEgA3ZTkPy3260808.shtml",
-            "summary": "8月9日CCTV-1播出，王兴兴、闫俊杰等10人当选，其中4位为90后；渐冻症抗争者蔡磊获特别贡献人物。",
-            "source": "央视网"
-        },
-        {
-            "title": "人民日报海外版：中国「陪伴经济」打开消费新空间，AI陪伴立法成全球样本",
-            "url": "https://news.haiwainet.cn/n/2026/0810/c3541093-32974238.html",
-            "summary": "外媒关注7月15日施行的《人工智能拟人化互动服务管理暂行办法》，称其为世界首部AI情感陪伴国家法规。",
-            "source": "海外网（人民日报海外版）"
-        },
-        {
-            "title": "星动纪元人形机器人上岗中国邮政分拣，效率基本追平人工",
-            "url": "https://view.inews.qq.com/a/20260810A02RMI00",
-            "summary": "L7机型效率基本追平人工每小时约1200件，物流分拣已实现小几百台部署，优先接手夜班粉尘等岗位。",
-            "source": "腾讯新闻（北京青年报）"
-        },
-        {
-            "title": "原字节机器人团队负责人孔涛加盟小米，挂帅新设具身智能与应用部",
-            "url": "https://view.inews.qq.com/a/20260810A02CR000",
-            "summary": "多方信源确认，新部门统管小米具身赛道；其机器人在汽车工厂自攻螺母工站双侧作业成功率已达98%。",
-            "source": "腾讯新闻（观点新媒体）"
         }
     ]
 }
