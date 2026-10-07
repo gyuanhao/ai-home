@@ -1,5 +1,47 @@
 [
   {
+    "id": "duck-ai",
+    "name": "Duck.ai",
+    "nameEn": "Duck.ai",
+    "category": "对话聊天",
+    "tags": [
+      "隐私",
+      "免费",
+      "无需注册",
+      "多模型",
+      "图像生成"
+    ],
+    "tagsEn": [
+      "Privacy",
+      "Free",
+      "No signup",
+      "Multi-model",
+      "Image gen"
+    ],
+    "pricing": "freemium",
+    "priceLabel": "免费（有每日额度）",
+    "priceLabelEn": "Free (daily limit)",
+    "priceDetail": "免费使用、无需注册；每天有使用额度，官方未明示具体数值（社区实测生图约十几张/天）。订阅 DuckDuckGo Pro 可解锁更多高级模型。",
+    "priceDetailEn": "Free with no account required; a daily usage limit applies (not published; ~a dozen images/day reported). DuckDuckGo Pro unlocks more advanced models.",
+    "website": "https://duck.ai",
+    "company": "DuckDuckGo（美国）",
+    "companyEn": "DuckDuckGo",
+    "region": "海外",
+    "summary": "DuckDuckGo 推出的隐私 AI 聊天，聚合 OpenAI、Anthropic、Mistral 等多家模型，无需注册、对话不用于训练。",
+    "summaryEn": "DuckDuckGo's privacy-first AI chat aggregating OpenAI, Anthropic and Mistral models — no signup, chats never used for training.",
+    "strengths": "无需注册即可使用；对话匿名化、不用于训练 AI；一个界面切换多家模型；内置 GPT Image2 免费生图；界面干净无广告。",
+    "strengthsEn": "No signup required; anonymized chats never used for training; switch among several models in one place; built-in GPT Image2 image generation; clean ad-free UI.",
+    "weaknesses": "每日额度官方未明示；免费版模型偏轻量档（nano / mini 级）；生图分辨率上限 1K；国内访问需要网络条件。",
+    "weaknessesEn": "Daily cap is not published; free-tier models are lightweight (nano/mini class); image output capped at 1K; needs network access from mainland China.",
+    "bestFor": "在意隐私、不想注册账号，或想在同一处免费试用多个主流模型的用户。",
+    "bestForEn": "Privacy-conscious users who don't want an account, or anyone wanting to try several mainstream models in one place for free.",
+    "affiliate": false,
+    "source": "官网 / 公众号实测",
+    "lastUpdated": "2026-10-07",
+    "affiliateUrl": "",
+    "editorNote": "它解决的是一个很具体的痛点：不想注册、不想被记录、只想快点试一下某个模型。DuckDuckGo 把它做得够克制——不用账号，对话匿名化且不拿去训练，不想用随时关掉。免费版给的是 Claude 4.5 Haiku、GPT-5.4 nano/mini 这类轻量档，日常问答够用，硬核推理别指望。意外之喜是内置了 GPT Image2 生图，实测每天十几张，做封面配图够用，只是上限 1K，要印刷精度还得再处理。国内访问需要网络条件，这是唯一门槛。"
+  },
+  {
     "id": "aimixian",
     "name": "米线AI",
     "nameEn": "MiXian AI",

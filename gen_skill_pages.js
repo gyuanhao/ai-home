@@ -25,6 +25,24 @@ try {
   console.warn('未找到 scripts/featured_skills.json，跳过 noindex 分层');
 }
 
+// 精品技能的「编辑点评」：每页独有的 editorial 内容（scripts/skill_notes.json，{name: 文案}）
+// 技能页正文原本是按分类套用的模板文案库，点评是用来打破「同分类文字雷同」的关键。
+let SKILL_NOTES = {};
+try {
+  SKILL_NOTES = JSON.parse(fs.readFileSync(path.join(ROOT, 'scripts/skill_notes.json'), 'utf8'));
+} catch (e) {
+  console.warn('未找到 scripts/skill_notes.json，跳过编辑点评');
+}
+
+// 精品技能的「适用场景」：同样是每页独有内容（scripts/skill_scenes.json）
+// 与点评一起，让精品页的独有内容超过模板文案占比。
+let SKILL_SCENES = {};
+try {
+  SKILL_SCENES = JSON.parse(fs.readFileSync(path.join(ROOT, 'scripts/skill_scenes.json'), 'utf8'));
+} catch (e) {
+  console.warn('未找到 scripts/skill_scenes.json，跳过适用场景');
+}
+
 // ---------------- 分类文案库 ----------------
 const CAT_BANK = {
   '文档处理': {
@@ -351,6 +369,24 @@ function buildPage(s, idx, slug) {
   const robotsMeta = (FEATURED_SKILLS.size && !FEATURED_SKILLS.has(s.name))
     ? '<meta name="robots" content="noindex">\n    ' : '';
 
+  // 编辑点评（精品技能独有）：排在功能概述之前，给模板文案之外的判断
+  const noteText = SKILL_NOTES[s.name];
+  const editorHtml = noteText
+    ? `<div style="background:var(--surface);padding:16px 18px;border-radius:10px;border-left:4px solid var(--primary);margin:18px 0 6px;">
+        <h2 class="sd-section" style="margin-top:0;">编辑点评</h2>
+        <p style="margin:0;color:var(--text-primary);">${esc(noteText)}</p>
+    </div>
+    `
+    : '';
+
+  // 适用场景（精品技能独有）
+  const sceneText = SKILL_SCENES[s.name];
+  const sceneHtml = sceneText
+    ? `
+    <h2 class="sd-section">适用场景与注意事项</h2>
+    <p>${esc(sceneText)}</p>`
+    : '';
+
   return `<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -437,6 +473,8 @@ function buildPage(s, idx, slug) {
         <span class="sd-tag sd-tag--cat">分类 · ${esc(s.cat)}</span>
         <span class="sd-tag sd-tag--team">团队 · ${esc(s.team)}</span>
     </div>
+
+    ${editorHtml}${sceneHtml}
 
     <h2 class="sd-section">一、功能概述</h2>
     <p class="sd-overview">${esc(overview)}。该技能让 AI 在「${esc(s.cat)}」领域具备专项能力，适合希望通过自然语言快速完成相关任务的用户。</p>
