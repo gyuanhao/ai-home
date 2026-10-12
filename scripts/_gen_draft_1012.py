@@ -1,0 +1,325 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""生成 2026-10-12 工具库周维护草稿报告 scripts/_draft_weekly.md + scripts/_draft_newtools.json"""
+import json
+
+TODAY = "2026-10-12"
+SRC = "公开资料 / 官网"
+
+TOOLS = [
+    {
+        "id": "lara-translate", "name": "Lara Translate", "nameEn": "Lara Translate",
+        "category": "翻译语言",
+        "tags": ["专业翻译", "企业本地化", "多语种", "API", "术语库"],
+        "tagsEn": ["professional translation", "enterprise localization", "multilingual", "API", "glossary"],
+        "pricing": "freemium", "priceLabel": "免费 + 订阅",
+        "priceDetail": "Lara Translate 有免费档；Lara API / TranslationOS 面向团队按量订阅，具体档位需官网确认。",
+        "website": "https://laratranslate.com/translate",
+        "company": "Translated", "companyEn": "Translated", "region": "海外",
+        "summary": "Translated 出品的专业级 AI 翻译，Lara 3 模型主打企业本地化。",
+        "strengths": "专用翻译模型 Lara 3；厂商盲测 82% 译文免修改；覆盖 21 种企业本地化语言；提供 API 与 TranslationOS 工作流。",
+        "weaknesses": "精度数据为厂商自评口径，独立评测尚未跟进；免费额度有限。",
+        "bestFor": "本地化团队、专业译员与需要术语一致性的企业文档翻译。",
+        "source": SRC, "lastUpdated": TODAY,
+    },
+    {
+        "id": "plamo-translate", "name": "PLaMo翻译", "nameEn": "PLaMo Translate",
+        "category": "翻译语言",
+        "tags": ["日语翻译", "会议同传", "多语种", "日本国产", "低成本"],
+        "tagsEn": ["Japanese translation", "meeting interpretation", "multilingual", "Japan-built", "low cost"],
+        "pricing": "freemium", "priceLabel": "免费 + 订阅",
+        "priceDetail": "可免费开始；Lite 个人版 11 月底前两个月免费，会议翻译有免费试用；厂商称每 10 万字符约 14 日元。",
+        "website": "https://translate.preferredai.jp",
+        "company": "Preferred Networks", "companyEn": "Preferred Networks", "region": "海外",
+        "summary": "日本 PFN 出品，53 语种翻译加在线会议实时同传。",
+        "strengths": "日语特化，数据收集与处理均在日境内；一口气扩展到 53 语种；会议翻译支持 Zoom/Meet/Teams 与术语表；成本约为海外同类一成。",
+        "weaknesses": "精度对比为厂商口径；无公开 API；强项集中在日语场景。",
+        "bestFor": "日企、中日双语团队与需要会议实时翻译的用户。",
+        "source": SRC, "lastUpdated": TODAY,
+    },
+    {
+        "id": "spira-ai", "name": "Spira AI", "nameEn": "Spira AI",
+        "category": "视频生成",
+        "tags": ["AI数字人", "短视频", "社媒自动化", "批量生成"],
+        "tagsEn": ["AI influencer", "short video", "social automation", "batch generation"],
+        "pricing": "paid", "priceLabel": "付费（发布期优惠）",
+        "priceDetail": "付费订阅；Product Hunt 发布月曾有 5 折，具体档位待核。",
+        "website": "https://spira.ai",
+        "company": "Spira", "companyEn": "Spira", "region": "海外",
+        "summary": "自主运营的 AI 网红，加脚本到成片的一键短视频生成。",
+        "strengths": "AI 网红可学习品牌语气并跨 TikTok/Instagram/X 自动发布；粘贴脚本即出带字幕、音乐的成片；支持一张照片加语音样本克隆形象与声音。",
+        "weaknesses": "效果未经独立验证；数字人形象与声音克隆有合规风险；定价待核。",
+        "bestFor": "跨境电商与内容团队的日更短视频与社媒托管。",
+        "source": SRC, "lastUpdated": TODAY,
+    },
+    {
+        "id": "weftcut", "name": "WeftCut", "nameEn": "WeftCut",
+        "category": "视频生成",
+        "tags": ["开源", "视频剪辑", "MCP", "跨平台", "Agent驱动"],
+        "tagsEn": ["open source", "video editing", "MCP", "cross-platform", "agent-native"],
+        "pricing": "free", "priceLabel": "免费 / 开源",
+        "priceDetail": "完全免费开源；支持 macOS、Windows、Linux。",
+        "website": "https://weftcut.com",
+        "company": "WeftCut", "companyEn": "WeftCut", "region": "海外",
+        "summary": "为 MCP 智能体而生的开源跨平台 AI 视频编辑器。",
+        "strengths": "开源免费；原生支持 Claude、Cursor 等 Agent 通过 MCP 驱动剪辑；macOS/Windows/Linux 三平台桌面可用。",
+        "weaknesses": "早期项目，功能与稳定性待验证；需要适应 Agent 驱动的工作流。",
+        "bestFor": "想用自然语言驱动剪辑的创作者与视频自动化流程搭建者。",
+        "source": SRC, "lastUpdated": TODAY,
+    },
+    {
+        "id": "copperos", "name": "CopperOS", "nameEn": "CopperOS",
+        "category": "浏览器插件",
+        "tags": ["开源", "浏览器自动化", "Chrome", "BYO-Key", "隐私"],
+        "tagsEn": ["open source", "browser automation", "Chrome", "BYO key", "privacy"],
+        "pricing": "free", "priceLabel": "免费 / 开源（Beta）",
+        "priceDetail": "Beta 期完全免费开源；自备 OpenAI/OpenRouter Key 或本地 Ollama 模型，模型费用自理。",
+        "website": "https://github.com/Jesse0502/CopperOS",
+        "company": "jassydev", "companyEn": "jassydev", "region": "海外",
+        "summary": "开源 Chrome 扩展，让 AI 在你的登录标签页里代办网页任务。",
+        "strengths": "MIT 开源；在自己已登录的标签页中读页面、点按钮、填表单；侧栏实时可见每一步并配审批模式；支持本地 Ollama 模型。",
+        "weaknesses": "仅 Chrome 系；需自备模型 Key，非技术用户门槛高；Beta 期稳定性有限。",
+        "bestFor": "想自动化重复网页操作又重视可控与隐私的开发者和进阶用户。",
+        "source": SRC, "lastUpdated": TODAY,
+    },
+    {
+        "id": "tootsy", "name": "Tootsy", "nameEn": "Tootsy",
+        "category": "浏览器插件",
+        "tags": ["侧边栏", "浏览器自动化", "本地模型", "隐私", "免费"],
+        "tagsEn": ["sidebar", "browser automation", "local model", "privacy", "free"],
+        "pricing": "free", "priceLabel": "免费",
+        "priceDetail": "完全免费；无服务器无账号无追踪，模型自选（本地 Ollama/LM Studio 或云端 API）。",
+        "website": "https://github.com/rbughao/tootsy",
+        "company": "Bughao", "companyEn": "Bughao", "region": "海外",
+        "summary": "住在 Chrome 侧边栏的免费 AI 助手，模型任选还能本地跑。",
+        "strengths": "免费无账号无追踪；支持本地 Ollama/LM Studio 与主流云端模型；每个动作需确认，可设黑名单网站；能读页面、填表、定时任务、查本地文件。",
+        "weaknesses": "仅 Chrome/Edge；需自行配置模型端点；功能多但需逐个摸索。",
+        "bestFor": "重视隐私、想边浏览边让 AI 干活又不想订阅的用户。",
+        "source": SRC, "lastUpdated": TODAY,
+    },
+    {
+        "id": "ai-newtab", "name": "AI Homepage", "nameEn": "AI Homepage",
+        "category": "浏览器插件",
+        "tags": ["开源", "新标签页", "个性化", "MIT", "无服务器"],
+        "tagsEn": ["open source", "new tab", "personalized", "MIT", "serverless"],
+        "pricing": "free", "priceLabel": "免费 / 开源",
+        "priceDetail": "MIT 开源免费；需自备 Anthropic API Key，按模型调用付费。",
+        "website": "https://github.com/ThariqS/ai-newtab",
+        "company": "ThariqS", "companyEn": "ThariqS", "region": "海外",
+        "summary": "开源新标签页扩展，Claude 读你的浏览记录每天生成个人首页。",
+        "strengths": "MIT 开源、无中间服务器；Agent 读取最常访问页面后生成 React 首页，可指定报纸/终端等风格；按 6/12/24/48 小时自动重建。",
+        "weaknesses": "需自备 API Key 且每次构建上传最多 8 个页面 HTML（可能含隐私内容）；需从源码加载，未上架商店；仅桌面 Chrome。",
+        "bestFor": "愿意用自己 Anthropic Key 换取个性化晨读首页的开发者与资讯重度用户。",
+        "source": SRC, "lastUpdated": TODAY,
+    },
+    {
+        "id": "smart-blur", "name": "Smart Blur", "nameEn": "Smart Blur",
+        "category": "浏览器插件",
+        "tags": ["隐私", "屏幕共享", "本地AI", "免费", "PII"],
+        "tagsEn": ["privacy", "screen sharing", "local AI", "free", "PII"],
+        "pricing": "free", "priceLabel": "免费",
+        "priceDetail": "完全免费；本地模型运行，无需账号。",
+        "website": "https://smartbuildlabs.com",
+        "company": "Smart Build Labs", "companyEn": "Smart Build Labs", "region": "海外",
+        "summary": "本地 AI 自动模糊网页敏感信息，共享屏幕不泄密。",
+        "strengths": "免费、本地运行、无需账号，数据不出本机；自动识别并模糊 PII；共享屏幕或公共场合即装即用。",
+        "weaknesses": "仅 Chrome；识别准确率依赖本地模型；功能单一。",
+        "bestFor": "经常共享屏幕的远程办公者、客服与教学场景。",
+        "source": SRC, "lastUpdated": TODAY,
+    },
+    {
+        "id": "audionaut", "name": "Audionaut", "nameEn": "Audionaut",
+        "category": "音频语音",
+        "tags": ["开源", "音频编辑", "跨平台", "MCP", "免费"],
+        "tagsEn": ["open source", "audio editor", "cross-platform", "MCP", "free"],
+        "pricing": "free", "priceLabel": "免费 / 开源",
+        "priceDetail": "完全免费开源；支持 macOS、Windows、Linux。",
+        "website": "https://audionaut.app",
+        "company": "Audionaut", "companyEn": "Audionaut", "region": "海外",
+        "summary": "免费开源跨平台多轨音频编辑器，内置 MCP 供 AI 代理操作。",
+        "strengths": "开源免费；macOS/Windows/Linux 三平台；多轨编辑；内置 MCP 可让 AI 代理直接参与音频制作。",
+        "weaknesses": "早期项目，插件生态与专业功能不及传统 DAW；AI 能力依赖外部代理。",
+        "bestFor": "播客与音乐创作者、想用 Agent 辅助音频制作的进阶用户。",
+        "source": SRC, "lastUpdated": TODAY,
+    },
+    {
+        "id": "openswarm", "name": "OpenSwarm", "nameEn": "OpenSwarm",
+        "category": "Agent自动化",
+        "tags": ["桌面", "多智能体", "免费", "并行", "工作区"],
+        "tagsEn": ["desktop", "multi-agent", "free", "parallel", "workspace"],
+        "pricing": "free", "priceLabel": "免费（等待列表）",
+        "priceDetail": "官方称 100% 免费；macOS 桌面版，当前需加入等待列表。",
+        "website": "https://www.openswarm.com",
+        "company": "OpenSwarm", "companyEn": "OpenSwarm", "region": "海外",
+        "summary": "免费 AI 桌面工作区，并行调度多个智能体干活。",
+        "strengths": "一个桌面内并行调度多个 Agent，覆盖开发、浏览、研究等任务；免费；Product Hunt 10-08 日榜第一。",
+        "weaknesses": "目前仅 macOS 且需排队等待列表；新项目长期能力待观察。",
+        "bestFor": "想同时跑多个 AI Agent 又不想自行拼装工具的 Mac 用户。",
+        "source": SRC, "lastUpdated": TODAY,
+    },
+    {
+        "id": "irisgo", "name": "IrisGo", "nameEn": "IrisGo",
+        "category": "Agent自动化",
+        "tags": ["工作流自动化", "个人助理", "免费Beta", "本地", "自学习"],
+        "tagsEn": ["workflow automation", "personal assistant", "free beta", "on-device", "learning"],
+        "pricing": "freemium", "priceLabel": "免费（Beta）",
+        "priceDetail": "Beta 期免费；正式定价未公布，待核。",
+        "website": "https://irisgo.ai",
+        "company": "IrisGo", "companyEn": "IrisGo", "region": "海外",
+        "summary": "会观察你工作方式的 AI 操作系统，自动代办重复行政流程。",
+        "strengths": "边用边学，把重复行政流程自动化；本地运行；Product Hunt 10-07 日榜第一；Beta 免费。",
+        "weaknesses": "Beta 阶段功能与稳定性有限；正式收费模式未知；需授权其观察操作习惯。",
+        "bestFor": "被邮件、待办和会议记录淹没的自由职业者与小团队创始人。",
+        "source": SRC, "lastUpdated": TODAY,
+    },
+    {
+        "id": "gitglow", "name": "GitGlow", "nameEn": "GitGlow",
+        "category": "编程开发",
+        "tags": ["Git", "代码审查", "本地优先", "可视化", "Agent协作"],
+        "tagsEn": ["Git", "code review", "local-first", "visual", "agent workflow"],
+        "pricing": "freemium", "priceLabel": "待核",
+        "priceDetail": "定价未在发布页明确，待核（本地优先工具，预计有免费档）。",
+        "website": "https://www.gitglow.dev",
+        "company": "GitGlow", "companyEn": "GitGlow", "region": "海外",
+        "summary": "本地优先的可视化 Git 工作台，专为审查智能体写的改动。",
+        "strengths": "本地优先不上传代码；可视化暂存、提交历史与冲突解决；专为审查 AI Agent 产出设计；支持并行工作区。",
+        "weaknesses": "定价待核；新产品生态待验证；与现有 Git 客户端并存有迁移成本。",
+        "bestFor": "大量使用 AI 编码代理、需要精细审查每一处改动的开发者。",
+        "source": SRC, "lastUpdated": TODAY,
+    },
+    {
+        "id": "adviserry", "name": "Adviserry", "nameEn": "Adviserry",
+        "category": "办公效率",
+        "tags": ["Newsletter", "YouTube", "行动清单", "信息过滤", "周报"],
+        "tagsEn": ["newsletter", "YouTube", "action list", "information filter", "weekly digest"],
+        "pricing": "freemium", "priceLabel": "待核",
+        "priceDetail": "定价未明确，预计免费档加订阅，待核。",
+        "website": "https://adviserry.com",
+        "company": "Adviserry", "companyEn": "Adviserry", "region": "海外",
+        "summary": "把你订阅的专家 newsletter 和 YouTube 频道变成每周行动清单。",
+        "strengths": "自动读取所关注专家的更新并提炼可执行动作；把被动阅读转为行动；上线即获 Product Hunt 与 There's An AI For That 推荐。",
+        "weaknesses": "依赖第三方内容源抓取稳定性；定价待核；更适合英语资讯源。",
+        "bestFor": "订阅了大量 newsletter 和频道却很少付诸行动的知识工作者。",
+        "source": SRC, "lastUpdated": TODAY,
+    },
+    {
+        "id": "kernelai", "name": "KernelAI", "nameEn": "KernelAI",
+        "category": "对话聊天",
+        "tags": ["本地模型", "移动端", "离线", "隐私", "免费"],
+        "tagsEn": ["local models", "mobile", "offline", "privacy", "free"],
+        "pricing": "free", "priceLabel": "免费",
+        "priceDetail": "完全免费；无账号无订阅无广告，模型下载到手机本地运行。",
+        "website": "https://kernelai.app",
+        "company": "KernelAI", "companyEn": "KernelAI", "region": "海外",
+        "summary": "在手机上离线跑 53 个开源模型的私人 AI 助手。",
+        "strengths": "iOS/Android 通用；内置 53 个来自 15 家实验室的开源模型；完全离线无账号；文档问答、识图、听写均在设备端完成。",
+        "weaknesses": "模型 112MB-3.11GB，受手机内存限制；联网搜索为可选；GGUF 导入尚属实验性。",
+        "bestFor": "注重隐私、想在手机上免费用本地模型的移动用户。",
+        "source": SRC, "lastUpdated": TODAY,
+    },
+    {
+        "id": "siteprint", "name": "Siteprint", "nameEn": "Siteprint",
+        "category": "设计创意",
+        "tags": ["设计提取", "Safari", "DESIGN.md", "设计令牌", "本地"],
+        "tagsEn": ["design extraction", "Safari", "DESIGN.md", "design tokens", "local"],
+        "pricing": "freemium", "priceLabel": "免费 + $9.99 买断",
+        "priceDetail": "免费档可检查色板、字体、布局并导出令牌；Pro 一次性 $9.99 解锁提示词、DESIGN.md、主题与双站风格混合。",
+        "website": "https://siteprint.app",
+        "company": "Siteprint", "companyEn": "Siteprint", "region": "海外",
+        "summary": "测量任意网站设计，一键生成给 AI 编码代理的精确提示词。",
+        "strengths": "本地运行无账号无追踪；输出带角色标注的色板、字阶、间距与版式蓝图；直接对接 Claude Code/Cursor/Codex；买断制便宜。",
+        "weaknesses": "仅 macOS Safari；不复制图片与文案；不直接生成网站。",
+        "bestFor": "用 AI 编码代理复刻参考网站设计的前端与设计师。",
+        "source": SRC, "lastUpdated": TODAY,
+    },
+]
+
+# ---- 校验 ----
+FIELDS = ["id","name","nameEn","category","tags","tagsEn","pricing","priceLabel","priceDetail",
+          "website","company","companyEn","region","summary","strengths","weaknesses","bestFor","source","lastUpdated"]
+CATS = {"对话聊天","写作内容","图像生成","视频生成","音频语音","编程开发","办公效率",
+        "搜索研究","Agent自动化","浏览器插件","翻译语言","设计创意"}
+errors = []
+for t in TOOLS:
+    for f in FIELDS:
+        if f not in t or t[f] in (None, "", []):
+            errors.append("%s 缺字段 %s" % (t.get("id"), f))
+    if t["category"] not in CATS:
+        errors.append("%s 类目非法: %s" % (t["id"], t["category"]))
+    if t["pricing"] not in ("free","freemium","paid"):
+        errors.append("%s pricing 非法" % t["id"])
+    if len(t["summary"]) > 60:
+        errors.append("%s summary 超长 %d 字" % (t["id"], len(t["summary"])))
+    if t["region"] not in ("国内","海外"):
+        errors.append("%s region 非法" % t["id"])
+if errors:
+    print("校验失败:")
+    for e in errors: print(" -", e)
+    raise SystemExit(1)
+print("校验通过：%d 条，字段齐全，summary 最长 %d 字" % (len(TOOLS), max(len(t["summary"]) for t in TOOLS)))
+
+# ---- 纯 JSON ----
+with open("scripts/_draft_newtools.json", "w", encoding="utf-8") as f:
+    json.dump(TOOLS, f, ensure_ascii=False, indent=2)
+print("已写 scripts/_draft_newtools.json")
+
+# ---- Markdown 报告 ----
+from collections import Counter, OrderedDict
+cat_order = ["翻译语言","视频生成","浏览器插件","音频语音","Agent自动化","编程开发","办公效率","对话聊天","设计创意"]
+cat_count = Counter(t["category"] for t in TOOLS)
+by_cat = OrderedDict((c, [t for t in TOOLS if t["category"] == c]) for c in cat_order if cat_count.get(c))
+
+L = []
+L.append("# AI家AI户 · 工具库周维护草稿报告")
+L.append("")
+L.append("**日期：2026-10-12（周一）**　|　**执行：自动化 `automation-1785401150340`**")
+L.append("")
+L.append("> ⚠️ 本草稿仅供人工过，未自动入库。tools.json 未被修改。请挑选条目复制至 tools.json 并重新生成详情页后部署。")
+L.append("")
+L.append("## 一、执行摘要")
+L.append("")
+L.append("- **工具总数（扫描基线）**：401 条（12 个一级类目）。")
+L.append("- **死链检查**：扫描 401 条 URL，OK 366 / 反爬略过 33 / 其他 4xx 1（snappa 401 鉴权墙，站点存活）/ 初判异常 1。")
+L.append("  - 唯一初判死链 `yizhuan`（rc=28 超时）经二次复核排除：**HTTP 实测 200 + DoH 有 A 记录**，站点存活；HTTPS 超时系已知证书不匹配问题（CN=aaacredit.org.cn，09-28 已记录），建议保留、后续可改 http:// 或推动站点换证书。")
+L.append("  - **本周确认死链 0 条**（连续第四周为 0），库内链接健康，无需下架/替换。")
+L.append("- **本次新品候选**：**15 条**，全部官方域名 curl 实测可达（2xx/3xx，含重定向终点复核），id 与现库 401 条零冲突、零域名重叠。")
+L.append("- **覆盖类目**（9 个）：" + " / ".join("%s %d" % (c, n) for c, n in cat_count.most_common()) + "。")
+L.append("- 重点补较空的「翻译语言 2 / 视频生成 2 / 浏览器插件 4」；候选多为本周 Product Hunt 日榜/周榜新品或大厂新发布（10-05 至 10-12 窗口）。")
+L.append("")
+L.append("## 二、死链清单")
+L.append("")
+L.append("**本周确认死链：0 条。** 库内链接健康，无需下架/替换。")
+L.append("")
+L.append("| id | name | category | url | 实测状态 | 处置 |")
+L.append("|----|------|---------|-----|---------|------|")
+L.append("| — | — | — | — | — | 无死链 |")
+L.append("")
+L.append("> 说明：按本自动化口径，仅「无法解析域名 / 连接超时 / 5xx / 真实 404」判为死链；403/402/429 及大站（ChatGPT、Midjourney、Perplexity、Adobe、Meta AI 等）明显 bot-block 直接略过。本周 33 条反爬略过项均为大站或已知拦截；`yizhuan` 超时经二次 GET 实测 HTTP 200 排除。明细见 `scripts/_linkcheck_result.json`。")
+L.append("")
+L.append("## 三、新品草稿条目（15 条）")
+L.append("")
+L.append("每条均为 19 字段 JSON，可直接并入 `scripts/tools.json`（纯 JSON 版本见 `scripts/_draft_newtools.json`）。标注「待核」的定价/细节建议入库前再核一次官网。summary 均 ≤60 字。")
+L.append("")
+n = 0
+for cat, items in by_cat.items():
+    L.append("### %s（%d 条）" % (cat, len(items)))
+    L.append("")
+    for t in items:
+        n += 1
+        L.append("#### %d. %s — %s" % (n, t["id"], t["name"]))
+        L.append("")
+        L.append("```json")
+        L.append(json.dumps(t, ensure_ascii=False, indent=2))
+        L.append("```")
+        L.append("")
+L.append("## 四、备注")
+L.append("")
+L.append("- 候选均为公开资料/官网摘要，定价与文案建议入库前再核一次；`gitglow`、`adviserry`、`irisgo` 定价待核。")
+L.append("- 已排除与现库重复或非独立新品：ElevenLabs Eleven v4、Suno Speech、Synthesia Sessions、Google Workspace Skills、Kimi 浏览器扩展（均为已在库产品的模型/功能更新）；AnySearch（07 月 PH 周榜，非本周新品）；PixVerse R2 等同源更新。")
+L.append("- 视频生成类 `weftcut.com`、浏览器插件类 4 条全部实测 200；`openswarm.ai` 域名已停放出售，官网实为 `openswarm.com`，已采用后者。")
+L.append("- 写作内容、图像生成、搜索研究类本周无干净独立新品，未强行填充。")
+L.append("")
+
+with open("scripts/_draft_weekly.md", "w", encoding="utf-8") as f:
+    f.write("\n".join(L))
+print("已写 scripts/_draft_weekly.md（%d 行）" % len(L))

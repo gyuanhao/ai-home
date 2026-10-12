@@ -1,399 +1,622 @@
 # AI家AI户 · 工具库周维护草稿报告
 
-> **本草稿仅供人工过，未自动入库。** `scripts/tools.json` 未被改动，请勿直接 merge。
+**日期：2026-10-12（周一）**　|　**执行：自动化 `automation-1785401150340`**
 
-- **生成日期**：2026-09-21（周一，自动化定时任务）
-- **工具总数（基线）**：388 条 · 12 个一级类目
-- **检查方式**：`scripts/_check_links.py`（线程池 32 并发 + HEAD→GET 回退 + 阿里 DoH 二次复核），中间结果 `_linkcheck_result.json`
-
----
+> ⚠️ 本草稿仅供人工过，未自动入库。tools.json 未被修改。请挑选条目复制至 tools.json 并重新生成详情页后部署。
 
 ## 一、执行摘要
 
-| 指标 | 数值 |
-|---|---|
-| 扫描 URL 总数 | 388 |
-| 正常（2xx/3xx） | 357 |
-| 反爬/封禁类略过（403/402/429，大站 bot-block） | 22 |
-| **确认死链（建议下架/替换）** | **1** |
-| 误报（超时但 DoH 有 A 记录 / HEAD 不被支持） | 7 |
-| 其他 4xx（鉴权墙，站点存活） | 1 |
-| **新品草稿候选** | **13** |
+- **工具总数（扫描基线）**：401 条（12 个一级类目）。
+- **死链检查**：扫描 401 条 URL，OK 366 / 反爬略过 33 / 其他 4xx 1（snappa 401 鉴权墙，站点存活）/ 初判异常 1。
+  - 唯一初判死链 `yizhuan`（rc=28 超时）经二次复核排除：**HTTP 实测 200 + DoH 有 A 记录**，站点存活；HTTPS 超时系已知证书不匹配问题（CN=aaacredit.org.cn，09-28 已记录），建议保留、后续可改 http:// 或推动站点换证书。
+  - **本周确认死链 0 条**（连续第四周为 0），库内链接健康，无需下架/替换。
+- **本次新品候选**：**15 条**，全部官方域名 curl 实测可达（2xx/3xx，含重定向终点复核），id 与现库 401 条零冲突、零域名重叠。
+- **覆盖类目**（9 个）：浏览器插件 4 / 翻译语言 2 / 视频生成 2 / Agent自动化 2 / 音频语音 1 / 编程开发 1 / 办公效率 1 / 对话聊天 1 / 设计创意 1。
+- 重点补较空的「翻译语言 2 / 视频生成 2 / 浏览器插件 4」；候选多为本周 Product Hunt 日榜/周榜新品或大厂新发布（10-05 至 10-12 窗口）。
 
-**一句话结论**：库内链接整体健康，本周仅 `sweep` 一条确属死链（域名注销）；另有 7 条超时与 1 条 404 经二次核实均为沙箱网络/HEAD 误报，无需处理。新品草稿 13 条，覆盖 搜索研究 / 浏览器插件 / 办公效率 / Agent自动化 / 音频语音 / 编程开发 六类，全部 URL 实测可达。
+## 二、死链清单
 
----
+**本周确认死链：0 条。** 库内链接健康，无需下架/替换。
 
-## 二、死链清单（确认的 1 条）
+| id | name | category | url | 实测状态 | 处置 |
+|----|------|---------|-----|---------|------|
+| — | — | — | — | — | 无死链 |
 
-| id | name | category | url | 实测状态 | 处理建议 |
-|---|---|---|---|---|---|
-| `sweep` | Sweep | 编程开发 | https://sweep.dev | 连接失败 rc=6（无法解析主机）；阿里 DoH 查询无 A 记录（NORECORD）；GET 同样 000/rc=6 | **确认死链**。Sweep AI 已被 OpenAI 收购并关停产品，域名不再托管。建议下架，或在同类「自动修 issue / 生成 PR」赛道以 已在库的 Devin / Cursor 等补足 |
+> 说明：按本自动化口径，仅「无法解析域名 / 连接超时 / 5xx / 真实 404」判为死链；403/402/429 及大站（ChatGPT、Midjourney、Perplexity、Adobe、Meta AI 等）明显 bot-block 直接略过。本周 33 条反爬略过项均为大站或已知拦截；`yizhuan` 超时经二次 GET 实测 HTTP 200 排除。明细见 `scripts/_linkcheck_result.json`。
 
----
+## 三、新品草稿条目（15 条）
 
-## 三、非死链但需留意的项（人工知悉即可，不计入死链）
+每条均为 19 字段 JSON，可直接并入 `scripts/tools.json`（纯 JSON 版本见 `scripts/_draft_newtools.json`）。标注「待核」的定价/细节建议入库前再核一次官网。summary 均 ≤60 字。
 
-> 按任务口径：反爬/封禁响应与「超时但域名可解析」均不判死链。以下为本周被初判异常、经二次核实后排除的项，列出供人工备查。
+### 翻译语言（2 条）
 
-**1) 初判 404，二次 GET 实测 200 → 误报（HEAD 不被支持）**
-- `step`（对话聊天，https://www.stepfun.com）：HEAD 返回 404，改用 GET 跟随重定向返回 **200**（CNAME→redirect.stepfun.com，国内 IP 正常）。站点存活，不动。
+#### 1. lara-translate — Lara Translate
 
-**2) 连接超时（rc=28），但阿里 DoH 均有 A 记录 → 沙箱出口抖动 / 大站拦截误报，不判死链**
-- `adobe-express`（设计创意，https://www.adobe.com/express）— Adobe 大站，任务白名单，超时非死站
-- `firefly`（图像生成，https://www.adobe.com/products/firefly.html）— Adobe 大站，同上
-- `aimixian`（图像生成，https://aimixian.cn）— DoH OK，沙箱不可达
-- `browser360-ai`（浏览器插件，https://browser.360.cn）— 360 大站，DoH OK
-- `zhinao360`（对话聊天，https://ai.360.cn）— 360 大站，DoH OK（历史多次实测 200）
-- `yizhuan`（写作内容，https://www.yizhuan.net）— DoH OK，沙箱不可达
-
-**3) 其他 4xx（鉴权墙，站点存活）**
-- `snappa`（设计创意，https://snappa.com）— 返回 **401**，需登录/鉴权，站点存活，不判死链。
-
-**4) 反爬/封禁类略过（22 条）**
-含 ChatGPT / Midjourney / Perplexity / Adobe / Meta AI / GitHub / 字节/百度等大站对自动请求的 403/402/429 拦截，按规则直接略过，不计入死链清单（这些站点通常存活）。
-
----
-
-## 四、新品草稿条目（13 条，便于人工复制入库）
-
-> 字段格式与 `tools.json` 一致；`summary` 均 ≤60 字。`pricing` 标注「待核」者建议入库前再核官网档位。
-> 类目分布：搜索研究 2 / 浏览器插件 2 / 办公效率 3 / Agent自动化 2 / 音频语音 2 / 编程开发 2。
-> 注：翻译语言类本周无干净独立新品（PolyPal / Hi Translate / Transync 已在库），未强行填充。
-
-### 1. parallel-search（搜索研究 · 海外）
 ```json
 {
-  "id": "parallel-search",
-  "name": "Parallel",
-  "nameEn": "Parallel",
-  "category": "搜索研究",
-  "tags": ["海外", "深度研究", "引用来源", "AI搜索"],
-  "tagsEn": ["Overseas", "Deep Research", "Cited", "AI Search"],
+  "id": "lara-translate",
+  "name": "Lara Translate",
+  "nameEn": "Lara Translate",
+  "category": "翻译语言",
+  "tags": [
+    "专业翻译",
+    "企业本地化",
+    "多语种",
+    "API",
+    "术语库"
+  ],
+  "tagsEn": [
+    "professional translation",
+    "enterprise localization",
+    "multilingual",
+    "API",
+    "glossary"
+  ],
   "pricing": "freemium",
-  "priceLabel": "免费 / 会员（待核）",
-  "priceDetail": "面向开发者的深度研究搜索引擎，基于权威索引返回高准确度答案；具体档位待核。",
-  "website": "https://parallel.ai",
-  "company": "Parallel",
-  "companyEn": "Parallel",
+  "priceLabel": "免费 + 订阅",
+  "priceDetail": "Lara Translate 有免费档；Lara API / TranslationOS 面向团队按量订阅，具体档位需官网确认。",
+  "website": "https://laratranslate.com/translate",
+  "company": "Translated",
+  "companyEn": "Translated",
   "region": "海外",
-  "summary": "面向开发者的深度研究搜索引擎，基于权威索引提供高准确度答案。",
-  "strengths": "答案准确度高；引用权威索引；适合严谨研究。",
-  "weaknesses": "档位与中文支持待核；偏开发者向。",
-  "bestFor": "做深度调研、需要可溯源答案的研究者与工程团队。",
+  "summary": "Translated 出品的专业级 AI 翻译，Lara 3 模型主打企业本地化。",
+  "strengths": "专用翻译模型 Lara 3；厂商盲测 82% 译文免修改；覆盖 21 种企业本地化语言；提供 API 与 TranslationOS 工作流。",
+  "weaknesses": "精度数据为厂商自评口径，独立评测尚未跟进；免费额度有限。",
+  "bestFor": "本地化团队、专业译员与需要术语一致性的企业文档翻译。",
   "source": "公开资料 / 官网",
-  "lastUpdated": "2026-09-21"
+  "lastUpdated": "2026-10-12"
 }
 ```
 
-### 2. tinyfish（搜索研究 · 海外）
+#### 2. plamo-translate — PLaMo翻译
+
 ```json
 {
-  "id": "tinyfish",
-  "name": "TinyFish",
-  "nameEn": "TinyFish",
-  "category": "搜索研究",
-  "tags": ["海外", "网页抓取", "Agent", "API"],
-  "tagsEn": ["Overseas", "Web Fetch", "Agent", "API"],
+  "id": "plamo-translate",
+  "name": "PLaMo翻译",
+  "nameEn": "PLaMo Translate",
+  "category": "翻译语言",
+  "tags": [
+    "日语翻译",
+    "会议同传",
+    "多语种",
+    "日本国产",
+    "低成本"
+  ],
+  "tagsEn": [
+    "Japanese translation",
+    "meeting interpretation",
+    "multilingual",
+    "Japan-built",
+    "low cost"
+  ],
   "pricing": "freemium",
-  "priceLabel": "免费（Search&Fetch）/ 用量计费",
-  "priceDetail": "搜索与抓取免费，Agent 多步操作按用量计费；为 Agent 提供从搜索到登录操作的完整网页工作流。",
-  "website": "https://www.tinyfish.ai",
-  "company": "TinyFish",
-  "companyEn": "TinyFish",
+  "priceLabel": "免费 + 订阅",
+  "priceDetail": "可免费开始；Lite 个人版 11 月底前两个月免费，会议翻译有免费试用；厂商称每 10 万字符约 14 日元。",
+  "website": "https://translate.preferredai.jp",
+  "company": "Preferred Networks",
+  "companyEn": "Preferred Networks",
   "region": "海外",
-  "summary": "一站式网页工作流：搜索→抓取→鉴权多步操作，适配 Agent。",
-  "strengths": "搜索+抓取+操作一体；可经登录做多步任务；token 友好。",
-  "weaknesses": "复杂站点稳定性待验证；学习曲线。",
-  "bestFor": "需要让 Agent 真正操作网页（含登录态）的开发者。",
+  "summary": "日本 PFN 出品，53 语种翻译加在线会议实时同传。",
+  "strengths": "日语特化，数据收集与处理均在日境内；一口气扩展到 53 语种；会议翻译支持 Zoom/Meet/Teams 与术语表；成本约为海外同类一成。",
+  "weaknesses": "精度对比为厂商口径；无公开 API；强项集中在日语场景。",
+  "bestFor": "日企、中日双语团队与需要会议实时翻译的用户。",
   "source": "公开资料 / 官网",
-  "lastUpdated": "2026-09-21"
+  "lastUpdated": "2026-10-12"
 }
 ```
 
-### 3. chathop（浏览器插件 · 海外）
-```json
-{
-  "id": "chathop",
-  "name": "ChatHop",
-  "nameEn": "ChatHop",
-  "category": "浏览器插件",
-  "tags": ["海外", "跨模型", "对话迁移", "浏览器"],
-  "tagsEn": ["Overseas", "Cross-model", "Chat Migration", "Browser"],
-  "pricing": "freemium",
-  "priceLabel": "免费 20 次/月",
-  "priceDetail": "每月 20 次免费使用，可在 ChatGPT/Claude/Gemini 间迁移对话并保留上下文，支持文本与 Markdown 导出。",
-  "website": "https://chathop.com",
-  "company": "ChatHop",
-  "companyEn": "ChatHop",
-  "region": "海外",
-  "summary": "跨 ChatGPT/Claude/Gemini 迁移对话的浏览器工具，保留上下文。",
-  "strengths": "破除模型锁定；保留上下文迁移；导出便捷。",
-  "weaknesses": "免费额度有限；仅浏览器端。",
-  "bestFor": "频繁在多模型间切换、想复用对话上下文的知识工作者。",
-  "source": "公开资料 / 官网",
-  "lastUpdated": "2026-09-21"
-}
-```
+### 视频生成（2 条）
 
-### 4. aside（浏览器插件 · 海外）
-```json
-{
-  "id": "aside",
-  "name": "Aside",
-  "nameEn": "Aside",
-  "category": "浏览器插件",
-  "tags": ["海外", "Agent浏览器", "自动操作", "本地加密"],
-  "tagsEn": ["Overseas", "Agentic Browser", "Automation", "Local Encryption"],
-  "pricing": "freemium",
-  "priceLabel": "免费 / 订阅（待核）",
-  "priceDetail": "本地运行并加密，可登录账号代为完成消息、支付、内部工具等复杂任务；支持 Claude 或 ChatGPT 订阅。档位待核。",
-  "website": "https://getaside.ai",
-  "company": "Aside",
-  "companyEn": "Aside",
-  "region": "海外",
-  "summary": "为人与 Agent 重造的浏览器，可登录账号自动完成复杂任务。",
-  "strengths": "Agentic 浏览基准表现好；本地加密；可操作登录态页面。",
-  "weaknesses": "需订阅大模型；隐私依赖本地加密实现。",
-  "bestFor": "想让 AI 代为处理跨网站复杂任务（含登录）的用户。",
-  "source": "公开资料 / 官网",
-  "lastUpdated": "2026-09-21"
-}
-```
+#### 3. spira-ai — Spira AI
 
-### 5. toki（办公效率 · 海外）
 ```json
 {
-  "id": "toki",
-  "name": "Toki",
-  "nameEn": "Toki",
-  "category": "办公效率",
-  "tags": ["海外", "会议安排", "AI助理", "日历"],
-  "tagsEn": ["Overseas", "Scheduling", "AI Assistant", "Calendar"],
-  "pricing": "freemium",
-  "priceLabel": "免费 / 会员（待核）",
-  "priceDetail": "AI 行政助理，跨人与日历协商会议时段并保护专注时间；档位待核。",
-  "website": "https://usetoki.com",
-  "company": "Toki",
-  "companyEn": "Toki",
-  "region": "海外",
-  "summary": "替你协商日历时段的 AI 行政助理，保护专注时间。",
-  "strengths": "自动协调多方时间；减少会议打断；省去来回沟通。",
-  "weaknesses": "需接入日历权限；执行质量取决于集成。",
-  "bestFor": "会议繁多、希望把排期交给 AI 协理的职场人。",
-  "source": "公开资料 / 官网",
-  "lastUpdated": "2026-09-21"
-}
-```
-
-### 6. llmagnet（办公效率 · 海外）
-```json
-{
-  "id": "llmagnet",
-  "name": "LLMagnet",
-  "nameEn": "LLMagnet",
-  "category": "办公效率",
-  "tags": ["海外", "AI可见性", "WordPress", "SEO"],
-  "tagsEn": ["Overseas", "AI Visibility", "WordPress", "SEO"],
-  "pricing": "freemium",
-  "priceLabel": "免费版 / 付费（待核）",
-  "priceDetail": "WordPress 插件，追踪 ChatGPT/Claude/Gemini 等 AI 爬虫访问，生成 llms.txt 与结构化数据提升 AI 可见性；档位待核。",
-  "website": "https://llmagnet.com",
-  "company": "LLMagnet",
-  "companyEn": "LLMagnet",
-  "region": "海外",
-  "summary": "给 WordPress 加 AI 可见性层，追踪 ChatGPT/Claude 等爬虫。",
-  "strengths": "专注 GEO/AI 可见性；一键生成 llms.txt；可视化得分。",
-  "weaknesses": "仅限 WordPress；价值依赖站点被 AI 抓取。",
-  "bestFor": "希望内容被 AI 引擎更好检索的 WordPress 站长。",
-  "source": "公开资料 / 官网",
-  "lastUpdated": "2026-09-21"
-}
-```
-
-### 7. resurf（办公效率 · 海外）
-```json
-{
-  "id": "resurf",
-  "name": "Resurf",
-  "nameEn": "Resurf",
-  "category": "办公效率",
-  "tags": ["海外", "本地优先", "上下文库", "MCP"],
-  "tagsEn": ["Overseas", "On-device", "Context Library", "MCP"],
-  "pricing": "freemium",
-  "priceLabel": "免费 / 会员（待核）",
-  "priceDetail": "Mac/iPhone/iPad 端本地个人上下文库，保存笔记/链接/图片/PDF，通过 MCP 与 CLI 交给 AI 使用，iCloud 私有同步；档位待核。",
-  "website": "https://resurf.so",
-  "company": "Resurf",
-  "companyEn": "Resurf",
-  "region": "海外",
-  "summary": "Mac 端本地个人上下文库，供 AI 通过 MCP/CLI 调用。",
-  "strengths": "本地优先、隐私好；MCP/CLI 接入；多端 iCloud 同步。",
-  "weaknesses": "仅苹果生态；国内访问与网络依赖待核。",
-  "bestFor": "重视隐私、想给多个 AI 工具统一上下文的 Mac 用户。",
-  "source": "公开资料 / 官网",
-  "lastUpdated": "2026-09-21"
-}
-```
-
-### 8. naoma（Agent自动化 · 海外）
-```json
-{
-  "id": "naoma",
-  "name": "Naoma",
-  "nameEn": "Naoma",
-  "category": "Agent自动化",
-  "tags": ["海外", "销售", "AI演示", "会议预约"],
-  "tagsEn": ["Overseas", "Sales", "AI Demo", "Meeting Booking"],
+  "id": "spira-ai",
+  "name": "Spira AI",
+  "nameEn": "Spira AI",
+  "category": "视频生成",
+  "tags": [
+    "AI数字人",
+    "短视频",
+    "社媒自动化",
+    "批量生成"
+  ],
+  "tagsEn": [
+    "AI influencer",
+    "short video",
+    "social automation",
+    "batch generation"
+  ],
   "pricing": "paid",
-  "priceLabel": "付费（按用量，待核）",
-  "priceDetail": "AI 账户执行官（Demo Agent V2），用实时产品演示接待访客、答疑、资质评估并预约会议，已跑过 5 万+ 演示；具体定价待核。",
-  "website": "https://naoma.ai",
-  "company": "Naoma",
-  "companyEn": "Naoma",
+  "priceLabel": "付费（发布期优惠）",
+  "priceDetail": "付费订阅；Product Hunt 发布月曾有 5 折，具体档位待核。",
+  "website": "https://spira.ai",
+  "company": "Spira",
+  "companyEn": "Spira",
   "region": "海外",
-  "summary": "AI 账户执行官，把官网流量变成已预约的合格会议。",
-  "strengths": "替代预约表单；实时演示+资质评估；记得回访访客。",
-  "weaknesses": "偏 B2B SaaS；效果取决于资格判断准确度。",
-  "bestFor": "想用 AI 替代销售开发、自动预约 Demo 的 B2B 团队。",
+  "summary": "自主运营的 AI 网红，加脚本到成片的一键短视频生成。",
+  "strengths": "AI 网红可学习品牌语气并跨 TikTok/Instagram/X 自动发布；粘贴脚本即出带字幕、音乐的成片；支持一张照片加语音样本克隆形象与声音。",
+  "weaknesses": "效果未经独立验证；数字人形象与声音克隆有合规风险；定价待核。",
+  "bestFor": "跨境电商与内容团队的日更短视频与社媒托管。",
   "source": "公开资料 / 官网",
-  "lastUpdated": "2026-09-21"
+  "lastUpdated": "2026-10-12"
 }
 ```
 
-### 9. appwrite（Agent自动化 · 海外）
-```json
-{
-  "id": "appwrite",
-  "name": "Appwrite 2.0",
-  "nameEn": "Appwrite 2.0",
-  "category": "Agent自动化",
-  "tags": ["海外", "开源", "后端", "基础设施"],
-  "tagsEn": ["Overseas", "Open Source", "Backend", "Infrastructure"],
-  "pricing": "freemium",
-  "priceLabel": "开源核心 / 云付费",
-  "priceDetail": "为 Agent 重做的开源后端平台，提供数据库、鉴权、存储与函数，并新增 Agent 友好能力，省去手搓服务器基础设施。",
-  "website": "https://appwrite.io",
-  "company": "Appwrite",
-  "companyEn": "Appwrite",
-  "region": "海外",
-  "summary": "为 Agent 重做的开源后端，含数据库/鉴权/函数。",
-  "strengths": "开源可自托管；后端能力齐全；Agent 友好。",
-  "weaknesses": "需一定工程能力；云版按量付费。",
-  "bestFor": "为 Agent 应用快速搭建后端、偏好开源的开发者团队。",
-  "source": "公开资料 / 官网",
-  "lastUpdated": "2026-09-21"
-}
-```
+#### 4. weftcut — WeftCut
 
-### 10. oats（音频语音 · 海外）
 ```json
 {
-  "id": "oats",
-  "name": "Oats",
-  "nameEn": "Oats",
-  "category": "音频语音",
-  "tags": ["海外", "会议笔记", "端侧", "开源"],
-  "tagsEn": ["Overseas", "Meeting Notes", "On-device", "Open Source"],
+  "id": "weftcut",
+  "name": "WeftCut",
+  "nameEn": "WeftCut",
+  "category": "视频生成",
+  "tags": [
+    "开源",
+    "视频剪辑",
+    "MCP",
+    "跨平台",
+    "Agent驱动"
+  ],
+  "tagsEn": [
+    "open source",
+    "video editing",
+    "MCP",
+    "cross-platform",
+    "agent-native"
+  ],
   "pricing": "free",
   "priceLabel": "免费 / 开源",
-  "priceDetail": "免费开源的本地会议笔记工具，macOS/Windows 端侧 LLM 运行，无需机器人入会或订阅；云端后端（ariso.ai）提供增强转写与说话人识别。",
-  "website": "https://useoats.com",
-  "company": "Oats",
-  "companyEn": "Oats",
+  "priceDetail": "完全免费开源；支持 macOS、Windows、Linux。",
+  "website": "https://weftcut.com",
+  "company": "WeftCut",
+  "companyEn": "WeftCut",
   "region": "海外",
-  "summary": "免费开源的本地会议笔记工具，端侧 LLM 运行无订阅。",
-  "strengths": "免费开源；端侧运行隐私好；无需会议机器人。",
-  "weaknesses": "增强功能依赖云端；仅桌面端。",
-  "bestFor": "想本地、免费做会议笔记、在意隐私的用户。",
+  "summary": "为 MCP 智能体而生的开源跨平台 AI 视频编辑器。",
+  "strengths": "开源免费；原生支持 Claude、Cursor 等 Agent 通过 MCP 驱动剪辑；macOS/Windows/Linux 三平台桌面可用。",
+  "weaknesses": "早期项目，功能与稳定性待验证；需要适应 Agent 驱动的工作流。",
+  "bestFor": "想用自然语言驱动剪辑的创作者与视频自动化流程搭建者。",
   "source": "公开资料 / 官网",
-  "lastUpdated": "2026-09-21"
+  "lastUpdated": "2026-10-12"
 }
 ```
 
-### 11. quiethint（音频语音 · 海外）
+### 浏览器插件（4 条）
+
+#### 5. copperos — CopperOS
+
 ```json
 {
-  "id": "quiethint",
-  "name": "QuietHint",
-  "nameEn": "QuietHint",
+  "id": "copperos",
+  "name": "CopperOS",
+  "nameEn": "CopperOS",
+  "category": "浏览器插件",
+  "tags": [
+    "开源",
+    "浏览器自动化",
+    "Chrome",
+    "BYO-Key",
+    "隐私"
+  ],
+  "tagsEn": [
+    "open source",
+    "browser automation",
+    "Chrome",
+    "BYO key",
+    "privacy"
+  ],
+  "pricing": "free",
+  "priceLabel": "免费 / 开源（Beta）",
+  "priceDetail": "Beta 期完全免费开源；自备 OpenAI/OpenRouter Key 或本地 Ollama 模型，模型费用自理。",
+  "website": "https://github.com/Jesse0502/CopperOS",
+  "company": "jassydev",
+  "companyEn": "jassydev",
+  "region": "海外",
+  "summary": "开源 Chrome 扩展，让 AI 在你的登录标签页里代办网页任务。",
+  "strengths": "MIT 开源；在自己已登录的标签页中读页面、点按钮、填表单；侧栏实时可见每一步并配审批模式；支持本地 Ollama 模型。",
+  "weaknesses": "仅 Chrome 系；需自备模型 Key，非技术用户门槛高；Beta 期稳定性有限。",
+  "bestFor": "想自动化重复网页操作又重视可控与隐私的开发者和进阶用户。",
+  "source": "公开资料 / 官网",
+  "lastUpdated": "2026-10-12"
+}
+```
+
+#### 6. tootsy — Tootsy
+
+```json
+{
+  "id": "tootsy",
+  "name": "Tootsy",
+  "nameEn": "Tootsy",
+  "category": "浏览器插件",
+  "tags": [
+    "侧边栏",
+    "浏览器自动化",
+    "本地模型",
+    "隐私",
+    "免费"
+  ],
+  "tagsEn": [
+    "sidebar",
+    "browser automation",
+    "local model",
+    "privacy",
+    "free"
+  ],
+  "pricing": "free",
+  "priceLabel": "免费",
+  "priceDetail": "完全免费；无服务器无账号无追踪，模型自选（本地 Ollama/LM Studio 或云端 API）。",
+  "website": "https://github.com/rbughao/tootsy",
+  "company": "Bughao",
+  "companyEn": "Bughao",
+  "region": "海外",
+  "summary": "住在 Chrome 侧边栏的免费 AI 助手，模型任选还能本地跑。",
+  "strengths": "免费无账号无追踪；支持本地 Ollama/LM Studio 与主流云端模型；每个动作需确认，可设黑名单网站；能读页面、填表、定时任务、查本地文件。",
+  "weaknesses": "仅 Chrome/Edge；需自行配置模型端点；功能多但需逐个摸索。",
+  "bestFor": "重视隐私、想边浏览边让 AI 干活又不想订阅的用户。",
+  "source": "公开资料 / 官网",
+  "lastUpdated": "2026-10-12"
+}
+```
+
+#### 7. ai-newtab — AI Homepage
+
+```json
+{
+  "id": "ai-newtab",
+  "name": "AI Homepage",
+  "nameEn": "AI Homepage",
+  "category": "浏览器插件",
+  "tags": [
+    "开源",
+    "新标签页",
+    "个性化",
+    "MIT",
+    "无服务器"
+  ],
+  "tagsEn": [
+    "open source",
+    "new tab",
+    "personalized",
+    "MIT",
+    "serverless"
+  ],
+  "pricing": "free",
+  "priceLabel": "免费 / 开源",
+  "priceDetail": "MIT 开源免费；需自备 Anthropic API Key，按模型调用付费。",
+  "website": "https://github.com/ThariqS/ai-newtab",
+  "company": "ThariqS",
+  "companyEn": "ThariqS",
+  "region": "海外",
+  "summary": "开源新标签页扩展，Claude 读你的浏览记录每天生成个人首页。",
+  "strengths": "MIT 开源、无中间服务器；Agent 读取最常访问页面后生成 React 首页，可指定报纸/终端等风格；按 6/12/24/48 小时自动重建。",
+  "weaknesses": "需自备 API Key 且每次构建上传最多 8 个页面 HTML（可能含隐私内容）；需从源码加载，未上架商店；仅桌面 Chrome。",
+  "bestFor": "愿意用自己 Anthropic Key 换取个性化晨读首页的开发者与资讯重度用户。",
+  "source": "公开资料 / 官网",
+  "lastUpdated": "2026-10-12"
+}
+```
+
+#### 8. smart-blur — Smart Blur
+
+```json
+{
+  "id": "smart-blur",
+  "name": "Smart Blur",
+  "nameEn": "Smart Blur",
+  "category": "浏览器插件",
+  "tags": [
+    "隐私",
+    "屏幕共享",
+    "本地AI",
+    "免费",
+    "PII"
+  ],
+  "tagsEn": [
+    "privacy",
+    "screen sharing",
+    "local AI",
+    "free",
+    "PII"
+  ],
+  "pricing": "free",
+  "priceLabel": "免费",
+  "priceDetail": "完全免费；本地模型运行，无需账号。",
+  "website": "https://smartbuildlabs.com",
+  "company": "Smart Build Labs",
+  "companyEn": "Smart Build Labs",
+  "region": "海外",
+  "summary": "本地 AI 自动模糊网页敏感信息，共享屏幕不泄密。",
+  "strengths": "免费、本地运行、无需账号，数据不出本机；自动识别并模糊 PII；共享屏幕或公共场合即装即用。",
+  "weaknesses": "仅 Chrome；识别准确率依赖本地模型；功能单一。",
+  "bestFor": "经常共享屏幕的远程办公者、客服与教学场景。",
+  "source": "公开资料 / 官网",
+  "lastUpdated": "2026-10-12"
+}
+```
+
+### 音频语音（1 条）
+
+#### 9. audionaut — Audionaut
+
+```json
+{
+  "id": "audionaut",
+  "name": "Audionaut",
+  "nameEn": "Audionaut",
   "category": "音频语音",
-  "tags": ["海外", "会议助手", "端侧", "隐私"],
-  "tagsEn": ["Overseas", "Meeting Assistant", "On-device", "Privacy"],
-  "pricing": "freemium",
-  "priceLabel": "免费 / BYOK（待核）",
-  "priceDetail": "Mac 端本地实时会议助手，用本地 Whisper 转写、通过 BYOK 调用 Claude 给出现场建议，原始音频不出本机；档位待核。",
-  "website": "https://quiethint.com",
-  "company": "QuietHint",
-  "companyEn": "QuietHint",
+  "tags": [
+    "开源",
+    "音频编辑",
+    "跨平台",
+    "MCP",
+    "免费"
+  ],
+  "tagsEn": [
+    "open source",
+    "audio editor",
+    "cross-platform",
+    "MCP",
+    "free"
+  ],
+  "pricing": "free",
+  "priceLabel": "免费 / 开源",
+  "priceDetail": "完全免费开源；支持 macOS、Windows、Linux。",
+  "website": "https://audionaut.app",
+  "company": "Audionaut",
+  "companyEn": "Audionaut",
   "region": "海外",
-  "summary": "Mac 端本地实时会议助手，用 Whisper 转写、不上传云端。",
-  "strengths": "隐私优先、音频不出本机；实时在场建议；适配任意会议软件。",
-  "weaknesses": "仅 Apple 芯片 Mac；需自备 Claude Key。",
-  "bestFor": "注重隐私、用 Mac 开会的职场人。",
+  "summary": "免费开源跨平台多轨音频编辑器，内置 MCP 供 AI 代理操作。",
+  "strengths": "开源免费；macOS/Windows/Linux 三平台；多轨编辑；内置 MCP 可让 AI 代理直接参与音频制作。",
+  "weaknesses": "早期项目，插件生态与专业功能不及传统 DAW；AI 能力依赖外部代理。",
+  "bestFor": "播客与音乐创作者、想用 Agent 辅助音频制作的进阶用户。",
   "source": "公开资料 / 官网",
-  "lastUpdated": "2026-09-21"
+  "lastUpdated": "2026-10-12"
 }
 ```
 
-### 12. twigg（编程开发 · 海外）
+### Agent自动化（2 条）
+
+#### 10. openswarm — OpenSwarm
+
 ```json
 {
-  "id": "twigg",
-  "name": "Twigg",
-  "nameEn": "Twigg",
-  "category": "编程开发",
-  "tags": ["海外", "LLM API", "上下文管理", "开发者"],
-  "tagsEn": ["Overseas", "LLM API", "Context Management", "Developer"],
-  "pricing": "freemium",
-  "priceLabel": "免费 / 付费（待核）",
-  "priceDetail": "有状态上下文层 API，集中维护对话状态与上下文，免每次重传全量历史，跨模型路由无供应商锁定；档位待核。",
-  "website": "https://twigg.ai",
-  "company": "Twigg",
-  "companyEn": "Twigg",
+  "id": "openswarm",
+  "name": "OpenSwarm",
+  "nameEn": "OpenSwarm",
+  "category": "Agent自动化",
+  "tags": [
+    "桌面",
+    "多智能体",
+    "免费",
+    "并行",
+    "工作区"
+  ],
+  "tagsEn": [
+    "desktop",
+    "multi-agent",
+    "free",
+    "parallel",
+    "workspace"
+  ],
+  "pricing": "free",
+  "priceLabel": "免费（等待列表）",
+  "priceDetail": "官方称 100% 免费；macOS 桌面版，当前需加入等待列表。",
+  "website": "https://www.openswarm.com",
+  "company": "OpenSwarm",
+  "companyEn": "OpenSwarm",
   "region": "海外",
-  "summary": "LLM 有状态上下文层 API，会话状态集中管理免重传。",
-  "strengths": "降低上下文管理负担；跨供应商无锁定；集中看板。",
-  "weaknesses": "新增一层依赖；档位待核。",
-  "bestFor": "构建自主 Agent 或企业聊天、需高效管理对话状态的工程师。",
+  "summary": "免费 AI 桌面工作区，并行调度多个智能体干活。",
+  "strengths": "一个桌面内并行调度多个 Agent，覆盖开发、浏览、研究等任务；免费；Product Hunt 10-08 日榜第一。",
+  "weaknesses": "目前仅 macOS 且需排队等待列表；新项目长期能力待观察。",
+  "bestFor": "想同时跑多个 AI Agent 又不想自行拼装工具的 Mac 用户。",
   "source": "公开资料 / 官网",
-  "lastUpdated": "2026-09-21"
+  "lastUpdated": "2026-10-12"
 }
 ```
 
-### 13. elva（编程开发 · 海外）
+#### 11. irisgo — IrisGo
+
 ```json
 {
-  "id": "elva",
-  "name": "Elva",
-  "nameEn": "Elva",
-  "category": "编程开发",
-  "tags": ["海外", "API", "MCP", "开发者"],
-  "tagsEn": ["Overseas", "API", "MCP", "Developer"],
+  "id": "irisgo",
+  "name": "IrisGo",
+  "nameEn": "IrisGo",
+  "category": "Agent自动化",
+  "tags": [
+    "工作流自动化",
+    "个人助理",
+    "免费Beta",
+    "本地",
+    "自学习"
+  ],
+  "tagsEn": [
+    "workflow automation",
+    "personal assistant",
+    "free beta",
+    "on-device",
+    "learning"
+  ],
   "pricing": "freemium",
-  "priceLabel": "免费 / Startup $100 月",
-  "priceDetail": "由 Theneo 推出，从代码仓库自动发现 API、生成 OpenAPI 3.1 与评分目录，一键产出带鉴权与分析的托管 MCP 服务器；免费档含 1 仓库/1 MCP/1000 调用，Startup $100/月。",
-  "website": "https://getelva.ai",
-  "company": "Theneo（Elva）",
-  "companyEn": "Theneo",
+  "priceLabel": "免费（Beta）",
+  "priceDetail": "Beta 期免费；正式定价未公布，待核。",
+  "website": "https://irisgo.ai",
+  "company": "IrisGo",
+  "companyEn": "IrisGo",
   "region": "海外",
-  "summary": "从代码自动发现 API 并生成托管 MCP 服务器，面向 Agent。",
-  "strengths": "无需手写 spec；自动治理与鉴权；托管 MCP 即开即用。",
-  "weaknesses": "扫描可能漏 webhook/动态路径；生成描述需复核。",
-  "bestFor": "API 现在要同时服务人类与 Agent、需治理与暴露的团队。",
+  "summary": "会观察你工作方式的 AI 操作系统，自动代办重复行政流程。",
+  "strengths": "边用边学，把重复行政流程自动化；本地运行；Product Hunt 10-07 日榜第一；Beta 免费。",
+  "weaknesses": "Beta 阶段功能与稳定性有限；正式收费模式未知；需授权其观察操作习惯。",
+  "bestFor": "被邮件、待办和会议记录淹没的自由职业者与小团队创始人。",
   "source": "公开资料 / 官网",
-  "lastUpdated": "2026-09-21"
+  "lastUpdated": "2026-10-12"
 }
 ```
 
----
+### 编程开发（1 条）
 
-## 五、人工过检建议（决策清单）
+#### 12. gitglow — GitGlow
 
-1. **死链处理**：仅 `sweep` 一条需决定——建议下架（同类 Devin/Cursor 已在库），或替换为指定替代工具。
-2. **误报项**：step / aimixian / browser360-ai / firefly / adobe-express / zhinao360 / yizhuan 共 7 条超时均为沙箱网络误报（DoH 有 A 记录），`step` 二次 GET 实测 200，`snappa` 为 401 鉴权墙——均**无需处理**。
-3. **新品入库**：13 条草稿均已在官方域名实测可达（resurf.so 为 429 限流=存活）。建议入库前：
-   - 复核标注「待核」的档位（parallel-search / aside / toki / llmagnet / resurf / naoma / quiethint / twigg）；
-   - 确认 `summary` 与文案口径符合站点定位；
-   - 跑 `generate_tool_pages.py` 重建详情页与 `tools.html`，并更新首页计数（当前 388 → 401）。
-4. **未覆盖类目**：图像生成 / 视频生成 / 写作内容 / 对话聊天 / 设计创意 本周无干净独立新品，未强行填充；翻译语言类无新独立品（PolyPal/Hi Translate/Transync 已在库）。
+```json
+{
+  "id": "gitglow",
+  "name": "GitGlow",
+  "nameEn": "GitGlow",
+  "category": "编程开发",
+  "tags": [
+    "Git",
+    "代码审查",
+    "本地优先",
+    "可视化",
+    "Agent协作"
+  ],
+  "tagsEn": [
+    "Git",
+    "code review",
+    "local-first",
+    "visual",
+    "agent workflow"
+  ],
+  "pricing": "freemium",
+  "priceLabel": "待核",
+  "priceDetail": "定价未在发布页明确，待核（本地优先工具，预计有免费档）。",
+  "website": "https://www.gitglow.dev",
+  "company": "GitGlow",
+  "companyEn": "GitGlow",
+  "region": "海外",
+  "summary": "本地优先的可视化 Git 工作台，专为审查智能体写的改动。",
+  "strengths": "本地优先不上传代码；可视化暂存、提交历史与冲突解决；专为审查 AI Agent 产出设计；支持并行工作区。",
+  "weaknesses": "定价待核；新产品生态待验证；与现有 Git 客户端并存有迁移成本。",
+  "bestFor": "大量使用 AI 编码代理、需要精细审查每一处改动的开发者。",
+  "source": "公开资料 / 官网",
+  "lastUpdated": "2026-10-12"
+}
+```
+
+### 办公效率（1 条）
+
+#### 13. adviserry — Adviserry
+
+```json
+{
+  "id": "adviserry",
+  "name": "Adviserry",
+  "nameEn": "Adviserry",
+  "category": "办公效率",
+  "tags": [
+    "Newsletter",
+    "YouTube",
+    "行动清单",
+    "信息过滤",
+    "周报"
+  ],
+  "tagsEn": [
+    "newsletter",
+    "YouTube",
+    "action list",
+    "information filter",
+    "weekly digest"
+  ],
+  "pricing": "freemium",
+  "priceLabel": "待核",
+  "priceDetail": "定价未明确，预计免费档加订阅，待核。",
+  "website": "https://adviserry.com",
+  "company": "Adviserry",
+  "companyEn": "Adviserry",
+  "region": "海外",
+  "summary": "把你订阅的专家 newsletter 和 YouTube 频道变成每周行动清单。",
+  "strengths": "自动读取所关注专家的更新并提炼可执行动作；把被动阅读转为行动；上线即获 Product Hunt 与 There's An AI For That 推荐。",
+  "weaknesses": "依赖第三方内容源抓取稳定性；定价待核；更适合英语资讯源。",
+  "bestFor": "订阅了大量 newsletter 和频道却很少付诸行动的知识工作者。",
+  "source": "公开资料 / 官网",
+  "lastUpdated": "2026-10-12"
+}
+```
+
+### 对话聊天（1 条）
+
+#### 14. kernelai — KernelAI
+
+```json
+{
+  "id": "kernelai",
+  "name": "KernelAI",
+  "nameEn": "KernelAI",
+  "category": "对话聊天",
+  "tags": [
+    "本地模型",
+    "移动端",
+    "离线",
+    "隐私",
+    "免费"
+  ],
+  "tagsEn": [
+    "local models",
+    "mobile",
+    "offline",
+    "privacy",
+    "free"
+  ],
+  "pricing": "free",
+  "priceLabel": "免费",
+  "priceDetail": "完全免费；无账号无订阅无广告，模型下载到手机本地运行。",
+  "website": "https://kernelai.app",
+  "company": "KernelAI",
+  "companyEn": "KernelAI",
+  "region": "海外",
+  "summary": "在手机上离线跑 53 个开源模型的私人 AI 助手。",
+  "strengths": "iOS/Android 通用；内置 53 个来自 15 家实验室的开源模型；完全离线无账号；文档问答、识图、听写均在设备端完成。",
+  "weaknesses": "模型 112MB-3.11GB，受手机内存限制；联网搜索为可选；GGUF 导入尚属实验性。",
+  "bestFor": "注重隐私、想在手机上免费用本地模型的移动用户。",
+  "source": "公开资料 / 官网",
+  "lastUpdated": "2026-10-12"
+}
+```
+
+### 设计创意（1 条）
+
+#### 15. siteprint — Siteprint
+
+```json
+{
+  "id": "siteprint",
+  "name": "Siteprint",
+  "nameEn": "Siteprint",
+  "category": "设计创意",
+  "tags": [
+    "设计提取",
+    "Safari",
+    "DESIGN.md",
+    "设计令牌",
+    "本地"
+  ],
+  "tagsEn": [
+    "design extraction",
+    "Safari",
+    "DESIGN.md",
+    "design tokens",
+    "local"
+  ],
+  "pricing": "freemium",
+  "priceLabel": "免费 + $9.99 买断",
+  "priceDetail": "免费档可检查色板、字体、布局并导出令牌；Pro 一次性 $9.99 解锁提示词、DESIGN.md、主题与双站风格混合。",
+  "website": "https://siteprint.app",
+  "company": "Siteprint",
+  "companyEn": "Siteprint",
+  "region": "海外",
+  "summary": "测量任意网站设计，一键生成给 AI 编码代理的精确提示词。",
+  "strengths": "本地运行无账号无追踪；输出带角色标注的色板、字阶、间距与版式蓝图；直接对接 Claude Code/Cursor/Codex；买断制便宜。",
+  "weaknesses": "仅 macOS Safari；不复制图片与文案；不直接生成网站。",
+  "bestFor": "用 AI 编码代理复刻参考网站设计的前端与设计师。",
+  "source": "公开资料 / 官网",
+  "lastUpdated": "2026-10-12"
+}
+```
+
+## 四、备注
+
+- 候选均为公开资料/官网摘要，定价与文案建议入库前再核一次；`gitglow`、`adviserry`、`irisgo` 定价待核。
+- 已排除与现库重复或非独立新品：ElevenLabs Eleven v4、Suno Speech、Synthesia Sessions、Google Workspace Skills、Kimi 浏览器扩展（均为已在库产品的模型/功能更新）；AnySearch（07 月 PH 周榜，非本周新品）；PixVerse R2 等同源更新。
+- 视频生成类 `weftcut.com`、浏览器插件类 4 条全部实测 200；`openswarm.ai` 域名已停放出售，官网实为 `openswarm.com`，已采用后者。
+- 写作内容、图像生成、搜索研究类本周无干净独立新品，未强行填充。

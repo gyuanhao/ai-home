@@ -123,3 +123,59 @@
 - 流程经验：改写大型 JSON（528KB）时采用「顶层花括号切块 + 旧条目逐字节保留」，务必注意块间 2 空格缩进的补回，并用 `git diff --numstat` 复核（首次实现因 `trim()` 丢失缩进产生 426 行假删除，已回滚重做）。
 - **本次维护闭环：草稿→入库→生成→部署→线上验证，无残留差异。**
 
+## 2026-09-28（第八次执行，本周）
+- 工具总数 400 条，12 个一级类目。死链检查复用 `scripts/_check_links.py`（线程池 32 + 阿里 DoH 二次复核），24s 完成；结果落 `scripts/_linkcheck_result.json`。
+- 扫描结果：**OK 371 / 反爬略过 23 / 真实死链 0 / 初判异常 6**。
+  - **真实死链 0 条 → 库内链接健康，无需下架/替换。**（连续第二周为 0）
+  - 初判异常 6 条经二次 GET + DoH 全部排除：`yi-chat`(lingyiwanwu.com) 复测 200、`zhinao360`(ai.360.cn) 复测 200（均为沙箱 rc=28 抖动误报）；`adobe-express`/`firefly` 属 Adobe 大站 bot-block（按规则略过）；`snappa` 401 鉴权墙。
+  - **本周新发现（需人工关注，非死链）**：`yizhuan`(https://www.yizhuan.net) 域名存活、HTTP 200 正常返回「四川宜转信息科技有限公司」，但 **HTTPS 返回的证书是 CN=aaacredit.org.cn（WoTrus DV），与域名不匹配**，浏览器会弹证书告警。建议改 http:// 或联系站点换证书，不建议下架。
+  - 方法论固化：初次 `rc=28` 超时**必须**二次 GET 复核后再定性 —— 本周 6 条异常有 2 条复测直接 200，若不复核会造成误报。
+- 新品草稿 **14 条**，全部 curl 实测 2xx、id 与现库 400 条零冲突、19 字段齐全、summary≤60字（最长 38）；覆盖 8 类目，重点补最空的「翻译语言 2 / 浏览器插件 2 / 搜索研究 2」：
+  - 翻译语言：tencent-hy-translate（腾讯混元 09-24 上线，33 语种+端侧离线）、polyglot（Mac 本地字幕翻译，09-25）
+  - 浏览器插件：chat-cx（30+ 聊天聚合一侧栏）、lisen（复用 Cartesia 音色免费朗读，走 Chrome 商店链接）
+  - 搜索研究：ceptile（HN 09-23，检索→排序→生成可回源）、noan（Agent 事实层，PH 日榜 #3）
+  - Agent自动化：hemory（PH 09-26 日榜第一，MCP 对话记忆）、penguin-harness（国内开源自进化 Harness）、openmuse（CopilotKit MIT 个人 Agent）
+  - 编程开发：floot-mcp（PH 09-25 日榜 #2）、tensorblock-forge；音频语音：eclatira；写作内容：sherpa-pocketfm（Pocket FM）；视频生成：google-vids（09-23 免费 1080p）
+  - 图像/设计/办公/对话类本周仅大厂模型或既有产品功能更新，未强行填充。
+  - 标注「待核」档位（noan / tensorblock-forge / sherpa-pocketfm）建议入库前再核。
+- 交付物：`scripts/_draft_weekly.md`（开头注明「本草稿仅供人工过，未自动入库」，tools.json 未改动，git status 已确认）。
+- **本次为只读维护，未自动入库**（自动化 prompt 仅要求产出草稿报告）。若需像 08-17/08-24/09-14/09-23 那样直接入库并部署 Cloudflare Pages，需用户明确指令或更新自动化 prompt。
+- 已验证的候选官网清单（下周可复用，避免重复搜）：hy.tencent.com、getpolyglot.app、chat.cx、lisen(Chrome 商店)、ceptile.com、getnoan.com、hemory.com、penguin.ooo、github.com/CopilotKit/openmuse、eclatira.com、floot.com、tensorblock.co、sherpa.pocketfm.com、vids.new。**注意坑**：`lisen.app` / `noan.ai` / `unrealagent.dev` 均被无关站点占用，不可用作官网。
+
+
+## 2026-10-05（第九次执行，本周）
+- 工具总数 400 条，12 个一级类目。死链检查复用 `scripts/_check_links.py`（线程池 32 + 阿里 DoH 二次复核）。
+- 扫描结果：**OK 364 / 反爬略过 30 / 初判异常 6 / 其他4xx 1**。
+  - **真实死链 0 条 → 连续第三周为 0，库内链接健康。**（09-28 亦为 0）
+  - 初判异常 6 条（均 rc=28 超时）经二次 GET + DoH 全部排除：adobe-express / firefly（Adobe 大站 bot-block，按规则略过）；browser360-ai（二次 GET 实测 200）；yi-chat（lingyiwanwu.com，DoH OK，历史复测 200）；yizhuan（yizhuan.net，DoH OK，历史确认 HTTP 200 仅 HTTPS 证书告警）；snappa（401 鉴权墙，站点存活）。
+  - 方法论重申：rc=28 超时**必须**二次 GET 复核后再定性，避免误报。
+- 新品草稿 **15 条**，全部官方域名 curl 实测可达（2xx/3xx），id 与现库 400 条零冲突、零域名重叠，19 字段 JSON 已校验可解析、summary≤60字。覆盖 8 类目，重点补最空的「翻译语言 2 / 浏览器插件 2 / 搜索研究 1」：
+  - 翻译语言：translate-like-me（Mac 菜单栏、用你的风格改写，10-04 上新）、linguo-translate（Mac 离线+AI，€3.99 买断）
+  - 浏览器插件：tabbit（美团 AI 原生浏览器）、nanobrowser（开源 Chrome 扩展、BYO Key）
+  - 搜索研究：rankcontrol（GEO，被 ChatGPT 引用+Google 排名）
+  - Agent自动化：ami-ai（GPT-6 Astra 获客）、solid（给智能体配电脑/账号/预算）、sai（自主计算机舰队）、naise-ai（自主营销智能体）
+  - 视频生成：clueso-mcp（聊天生成视频）、rxfilmstudio（AI 视频工作区）
+  - 音频语音：speechka（实时语音翻译+声音克隆，44 语）
+  - 编程开发：jev（类型安全决策 API）、gitbot（开源、把编码指令封装为 Bot）
+  - 办公效率：wzrd（文档/幻灯片/表单/表格变对话式 AI 体验）
+  - 标注「待核」档位 9 条（rankcontrol/ami-ai/sai/naise-ai/clueso-mcp/rxfilmstudio/jev/wzrd，solid 仅档位已核）建议入库前再核官网定价。
+- 已排除重复：PixVerse R2（PixVerse 已在库）、Sider Omni Sidebar / Microsoft Copilot / Floot MCP / Framer 3.0（与现库同源或重复）。
+- 交付物：`scripts/_draft_weekly.md`（开头注明「本草稿仅供人工过，未自动入库」，tools.json 未改动）。生成脚本留存 `scripts/_gen_draft.py`。
+- **本次为只读维护，未自动入库**（自动化 prompt 仅要求产出草稿报告）。如需像 08-17/08-24/09-14/09-23 那样直接入库并部署 Cloudflare Pages，需用户明确指令或更新自动化 prompt。
+
+## 2026-10-12（第十次执行，本周）
+- 工具总数 401 条（较上周 +1，应为人工新增），12 个一级类目。死链检查复用 `scripts/_check_links.py`（线程池 32 + 阿里 DoH 二次复核）。
+- 扫描结果：**OK 366 / 反爬略过 33 / 其他4xx 1（snappa 401 鉴权墙）/ 初判异常 1**。
+  - **真实死链 0 条 → 连续第四周为 0，库内链接健康。**
+  - 唯一初判死链 `yizhuan`（rc=28 超时）经二次 GET 复核排除：HTTP 实测 200 + DoH 有 A 记录，站点存活；HTTPS 超时系已知证书不匹配（CN=aaacredit.org.cn，09-28 已记录）。建议保留，后续可改 http:// 或推动站点换证书。
+- 新品草稿 **15 条**，全部官方域名 curl 实测可达（含重定向终点复核），id 与现库 401 条零冲突、零域名重叠，19 字段齐全、summary≤60字（最长 41）。覆盖 9 类目，重点补最空的「翻译语言 2 / 视频生成 2 / 浏览器插件 4」：
+  - 翻译语言：lara-translate（Translated Lara 3，10-07 GA）、plamo-translate（PFN 53 语种+会议同传，10-07）
+  - 浏览器插件：copperos、tootsy、ai-newtab（AI Homepage，MIT）、smart-blur
+  - 视频生成：spira-ai（AI 网红+成片）、weftcut（开源 MCP 视频编辑器）
+  - Agent自动化：openswarm（PH 10-08 日榜#1）、irisgo（PH 10-07 日榜#1）
+  - 另有 audionaut（音频）/ gitglow（编程）/ adviserry（办公）/ kernelai（对话）/ siteprint（设计）
+  - 标注「待核」档位 3 条（gitglow / adviserry / irisgo）建议入库前再核官网定价。
+  - 已排除重复：ElevenLabs Eleven v4 / Suno Speech / Synthesia Sessions / Google Workspace Skills / Kimi 浏览器扩展（均为在库产品的模型或功能更新）；AnySearch（07 月 PH 周榜，非本周新品）。
+  - **坑**：`openswarm.ai` 域名已停放出售（302→atom.com），官网实为 `openswarm.com`；`laratranslate.com` 301→`/translate` 才是应用页。
+- 交付物：`scripts/_draft_weekly.md`（开头注明「本草稿仅供人工过，未自动入库」，tools.json 未改动，git status 已确认）+ `scripts/_draft_newtools.json`（纯 JSON）。生成脚本 `scripts/_gen_draft_1012.py`。
+- **本次为只读维护，未自动入库**（自动化 prompt 仅要求产出草稿报告）。如需入库并部署 Cloudflare Pages，需用户明确指令或更新自动化 prompt。
