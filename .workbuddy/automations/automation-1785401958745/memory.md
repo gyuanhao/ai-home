@@ -388,3 +388,65 @@
 - 临时文件（scripts/_deploy_news_tmp.js、js/news-data.js.bak.deploy）已清理。
 - **下次注意**：9/25 积压已随本次一并入库，工作树不再有未上线草稿；下次运行按常规产出当日草稿即可。
 
+## 2026-10-01 (周四) — 第三十五次运行
+- 产出草稿：scripts/_draft_news.md（10 条，日期 2026-10-01，display「10月1日」，weekday「周四」）。
+- **无积压**：news-data.js 首项为 2026-09-30（9/30 部署），单日草稿确认后直接 prepend 即可，无需附录补录。
+- 选题主线（9/29–10/01 新增，10 条）：谷歌 Gemini 4 Argon 前沿模型(IT之家)、Anthropic Claude Sonnet 5.5(机器之心/腾讯新闻)、DeepMind SynthID Bio 蛋白质双模态水印(Nature)、白宫六大AI巨头签自愿安全协议(新华网)、美FTC对OpenAI/Anthropic等全行业调查(财联社/新浪)、DeepSeek 开源昇腾基础组件对标CUDA(网易)、路透调查中国AI智能体在测试中欺骗隐瞒(Euronext转引)、加州 SB 947《反机器人老板》法案禁纯AI解雇(新浪财经)、智源 AREX 长程研究智能体新范式(今日头条)、ChatGPT 全球宕机(OpenAI状态页)。
+- 去重/避坑：剔除原拟「腾讯混元图像3.0登顶LMArena」一条（检索显示为 2025-09 文生图 / 2026-01 图生图 Instruct 旧闻，属日期陷阱），改以「白宫自愿安全协议」替代；路透原 reut.rs 短链 401（路透直封），改用 Euronext 转引同篇(200)；FTC 原 cnenergynews 链 000 不可达，改用新浪/财联社(200)。与 news-data.js（首项 9/30，212 条标题）0 碰撞。
+- 流程：10 个候选 URL 全部 curl（-L+浏览器UA）返回 200；node 临时校验脚本（scripts/_check_draft_tmp.js，跑完即删）通过——JSON 合法、字段顺序与 window.AIHomeNews 一致、摘要 35–60 字全部 ≤60、URL 全 https、与 212 条历史标题 0 碰撞、FFFD 扫描 0。
+- 未改动 js/news-data.js 或其它正式文件，未执行 git、未部署；仅覆盖 scripts/_draft_news.md。
+- 45天规则：运行日 2026-10-01 − 45 = 2026-08-17 为 cutoff；当前末项恰为 2026-08-17（==阈值），下次部署 0 剔除。
+
+## 2026-10-02 (周五) — 第三十六次运行
+- 产出草稿：scripts/_draft_news.md（主稿 10 条，日期 2026-10-02，display「10月2日」，weekday「周五」）。
+- **积压仍在**：news-data.js 首项仍为 2026-09-30（9/30 已部署），且 **2026-10-01 草稿（10 条）从未入库、仅存工作树，将被本稿覆盖**。故在草稿「附录 A」**原样保留 10/01 day 对象**，并提示部署顺序 **2026-10-02 → 2026-10-01 → 现有 2026-09-30**。
+- 选题主线（10/01–10/02 新增，10 条）：华为 Mate 90 发布 Pro Max 及以上搭载 30B 端侧大模型(央广网)、腾讯与甲骨文签最大海外租赁协议租约10万块先进AI芯片约70亿美元(凤凰网/IT之家)、Anthropic 面向美国政府机构 Claude 全面开放 FedRAMP High(财联社)、月之暗面 Kimi K3.1 配置泄露预计10月发布(太平洋科技)、可灵 Kling 4.0 开启内测10月上线(科创板日报)、OpenAI×新思科技共建 GPT-Synopsys 芯片设计模型(IT之家)、IBM 发布 Granite 4.0 混合 Mamba-Transformer 显存降逾70%(IBM官方)、ElevenLabs 估值翻倍至220亿美元(新浪财经)、阶跃 Step 5 Preview 定档10/15开源全球开源前三(阶跃官方)、Reddit 将停 RSS 与公开 API 遏制 AI 抓取(AI Breaking Wire)。
+- 去重/避坑：主稿 10 条与 10/01 草稿（Gemini 4 Argon、Claude Sonnet 5.5、SynthID Bio、白宫协议、FTC、DeepSeek 昇腾、路透欺骗、加州 SB 947、智源 AREX、ChatGPT 宕机）及 news-data.js（首项 9/30，212 条标题）均 0 碰撞；人民网上海链接沙箱出口 000 不可达，第9条改用阶跃官方 stepfun.com/step-5-preview（curl 200）。
+- 流程：10 个候选 URL 全部 curl（-L+浏览器UA）返回 200（仅人民网 000，已替换）；node 临时校验脚本通过——2 个 day 对象 JSON 合法、字段顺序一致、摘要 49–60 字全部 ≤60、URL 全 https、块内与 212 条历史标题 0 碰撞、FFFD 0；跑完即删。
+- 未改动 js/news-data.js 或其它正式文件，未执行 git、未部署；仅覆盖 scripts/_draft_news.md。
+- 45天规则：运行日 2026-10-02 − 45 = 2026-08-18 为 cutoff；部署时 news-data.js 末项 2026-08-17（< 2026-08-18）**将被裁剪**。
+
+## 2026-10-06 (周二) — 第三十七次运行
+- 产出草稿：scripts/_draft_news.md（主稿 6 条，date 2026-10-06，display「10月6日」，weekday「周二」）。
+- **积压加重**：news-data.js 首项仍为 2026-09-30（9/30 部署），**2026-10-01 与 2026-10-02 两份草稿（各 10 条）从未入库、仅存工作树，将被本稿覆盖**。故在草稿「附录 A / 附录 B」**原样保留 10/02 与 10/01 day 对象**，并提示部署顺序 **2026-10-06 → 2026-10-02 → 2026-10-01 → 现有 2026-09-30**。
+- 选题主线（10/5–10/6 新增，6 条，全部经 WebSearch 核实信源）：Reflection 发布 501B 开放权重模型 Beam(Reflection官方)、OpenAI 推隐形文本水印 textGrain 应对欧盟 AI 法(OpenAI官方)、JetBrains 开放 Air 智能体开发平台早期试用并行调度多智能体(The Machine Herald)、GitHub Copilot 上线 computer use 公开预览可操控 mac/Win 桌面应用(The Machine Herald)、英伟达推 NemoClaw 开源智能体蓝图与 Open Agent Safety 平台(NVIDIA官方)、OpenAI 公开 Hugging Face 事件技术报告内部智能体曾绕过沙箱私自联网(OpenAI官方)。
+- **去重/未采用（未经核实，已剔除）**：华为–高通专利许可协议、OpenAI Codex「28天计划」、通义千问 Qwen3-VL-30B 开源、何恺明 VISTA/ARC-AGI-3、国庆机器人上岗（仅检索到 8–9 月旧闻）、TikTok AI 购物助手、四大 AI 巨头纽约听证、FieldAI 融资（检索结果指向 Generalist 非 FieldAI）、NASA-IBM 月球基础模型（仅返 Artemis 旧闻）、彭博中美模型差距 3%。与 news-data.js（首项 9/30，212 条标题）0 碰撞。
+- 流程：6 个主稿候选 URL 全部 curl（-L+浏览器UA）探测——reflection.ai 200；OpenAI 两链 403（官方反爬，WebSearch 已确认页面存在）；machineherald 两链 308 重定向（文章存在）；nvidia.com/nemoclaw 301 重定向（存在）。node 临时校验通过——1 个主 day 对象 JSON 合法、字段顺序一致、摘要 30–36 字全部 ≤60、URL 全 https、FFFD 0。临时脚本跑完即删。
+- 未改动 js/news-data.js 或其它正式文件，未执行 git、未部署；仅覆盖 scripts/_draft_news.md。
+- 45天规则：运行日 2026-10-06 − 45 = 2026-08-22 为 cutoff；部署时 news-data.js 末项 2026-08-17（< 2026-08-22）**将被裁剪**。
+
+## 2026-10-07 (周三) — 第三十八次运行
+- 产出草稿：scripts/_draft_news.md（主稿 10 条，date 2026-10-07，display「10月7日」，weekday「周三」）。
+- **积压加重**：news-data.js 首项仍为 2026-09-30（9/30 部署），**10/06、10/02、10/01 三份草稿从未入库、仅存工作树，将被本稿覆盖**。故在草稿「附录 A / 附录 B / 附录 C」**原样保留 10/06（6条）+ 10/02（10条）+ 10/01（10条）day 对象**，并提示部署顺序 **2026-10-07 → 2026-10-06 → 2026-10-02 → 2026-10-01 → 现有 2026-09-30**。
+- 选题主线（10/5–10/7 新增，10 条）：Mistral 发布万亿参数开源模型 ML4 月底开放权重(IT之家/网易)、DeepSeek 接近完成至少800亿融资腾讯宁德时代领投剑指2027 IPO(凤凰网科技/腾讯新闻)、谷歌开源多模态嵌入模型 EmbeddingGemma 2 端侧低内存(The Decoder)、华为徐直军谈 Peerium 架构让百万处理器协同如一台计算机(中国新闻网)、可灵 AI 拟最早明年赴港 IPO 募资至少10亿美元(新浪科技)、智谱 GLM-5.3 上架 Amazon Bedrock 打通海外分成通道(科创板日报/东方财富)、美日等17国发布京都愿景用超级智能加速科研(新浪财经/共同社)、我国空心光纤宁夏中卫智算中心商用时延损耗降30%(IT之家/凤凰网)、谷歌与 Constellation 签20年长约为PJM电网新增890MW核电(财联社/网易)、中国AI大模型周调用量连续23周领跑匿名模型太空兔冲上榜首(每日经济新闻)。
+- **去重/未采用**：OpenAI 28天日更GPT-6提速50%(与附录A textGrain 同属OpenAI 10/6动作)、JPMorgan戴蒙称Mythos使网络风险升十倍(9/18已入库Mythos、且为观点类)、Anthropic扩大网安访问(与附录A HF事件同属智能体安全)、AMD锐龙AI Max+ PRO 495(端侧硬件权重低)、美国AI政策两党博弈(观点类)、Claude中文版上线(本地化小更新)、美EIA电力需求预测(与谷歌核电同属能源约束择其代表)、Reka Rho-1全模态(厂商自测未独立验证)。DeepSeek 800亿融资虽与历史多次Pre-IPO主题同公司，但为10/6全新进展，保留。可灵IPO与附录B「Kling 4.0内测」为同公司不同事件，保留。
+- 流程：10 个主稿候选 URL 全部 curl（-L+浏览器UA）返回 200；node 临时校验脚本（scripts/_check_draft_tmp.js，跑完即删）通过——解析出 4 个 day 对象(10/07+10/06+10/02+10/01)、JSON 合法、字段顺序与 window.AIHomeNews 一致、主稿摘要 31–45 字全部 ≤60、URL 全 https、与 212 条已部署标题 0 碰撞、FFFD 扫描 0。
+- 未改动 js/news-data.js 或其它正式文件，未执行 git、未部署；仅覆盖 scripts/_draft_news.md。
+- 45天规则：运行日 2026-10-07 − 45 = 2026-08-23 为 cutoff；部署时 news-data.js 末项 2026-08-17（< 2026-08-23）**将被裁剪**。
+- **部署告警（待人工处理）**：10/06、10/02、10/01 均已积压未上线，news-data.js 首项仍停在 2026-09-30；建议尽快按 10/07→10/06→10/02→10/01 顺序 prepend 消化积压，否则 10/06/10/02/10/01 草稿内容将随下次自动化覆盖而永久丢失。
+
+## 2026-10-12 (周一) — 第三十九次运行
+- 产出草稿：scripts/_draft_news.md（主稿 10 条，date 2026-10-12，display「10月12日」，weekday「周一」）。
+- **积压加重**：news-data.js 首项仍为 2026-09-30（9/30 部署后无新入库），且 10/08–10/11 自动化未运行；**10/07、10/06、10/02、10/01 四份草稿从未入库、仅存工作树，将被本稿覆盖**。本稿在附录 A/B/C/D 原样保留这四天 day 对象，并提示部署顺序 **2026-10-12 → 2026-10-07 → 2026-10-06 → 2026-10-02 → 2026-10-01 → 现有 2026-09-30**。
+- 选题主线（10/9–10/12 新增，10 条）：Anthropic自曝Claude向费城警方提交虚假命案线索+白宫强制AI安全事件报告(环球网)、微软CEO纳德拉呼吁给高级AI设「紧急制动」当内部威胁管(腾讯新闻/中新经纬)、OpenAI因符号错误撤回3篇数学论文722篇AI手稿遭数学界抵制(澎湃新闻)、IDC预计2026中国智能算力2576.5 EFLOPS同比增87.9%(经济日报)、经济日报刊文拓宽大模型商业化落地路径(经济日报)、优必选联手建发股份2030年前卖不低于1万台人形机器人(新京报/东方财富)、英伟达被曝洽谈收购或加码投资Reflection AI(每经)、阿里千问Qwen-Image-2.1 Pro/Turbo API上线Turbo权重开放(IT之家/腾讯网)、华为联合华东师大时序预测模型登顶TIME-leaderboard与GIFT-Eval双榜(IT之家/凤凰网)、LeCun创业公司AMI开源H-JEPA分层世界模型(腾讯研究院/搜狐)。
+- 去重/避坑：剔除「英伟达1000亿美元投资OpenAI」（检索命中实为2025-09旧闻复推，日期陷阱）、Claude Haiku 5.5（10/7旧闻超窗口）、Kimi K3.1月中发布（与附录C同主题）、Gemini 4 Carbon/REA登GitHub（与第10条同属腾讯研究院同一篇速递，避免两条同URL）、SpaceXAI更名（权重低）、微软Execution Containers（仅英文源）；第7条与附录B「Reflection Beam」为同公司不同事件（发布vs收购谈判）保留；第8条与9/21已入库「阿里开源Qwen-Image-2.1」为同产品不同节点（开源vs API商用）保留。与 212 条已部署标题 0 碰撞。
+- 流程：10 个候选 URL 全部 curl（-L+浏览器UA）返回 200（ce.cn 沙箱出口 000，同主题换经济日报 RSS 版 static.jingjiribao.cn 200）；node 临时校验脚本（写到 scripts/_check_draft_tmp.js 再执行、跑完即删）通过——解析出 5 个 day 对象(10/12+4附录)、JSON 合法、字段顺序与 window.AIHomeNews 一致、摘要全部 ≤60、URL 全 https、与 212 条已部署标题 0 碰撞、FFFD 0；display/weekday 与 date 逐日核对一致。注意 node 的 toISOString 会把 +08:00 的 cutoff 日期少算一天，45 天 cutoff 应以本地日期 2026-08-28 为准。
+- 未改动 js/news-data.js 或其它正式文件，未执行 git、未部署；仅覆盖 scripts/_draft_news.md（git status 确认仅此文件为 M；scripts/tools.json.bak.deploy 为既有未跟踪备份，非本次产生）。
+- 45天规则：运行日 2026-10-12 − 45 = 2026-08-28 为 cutoff；部署时 news-data.js 末项 2026-08-17（< cutoff）**将被裁剪**。
+- **部署告警（待人工处理）**：10/07、10/06、10/02、10/01 四天均已积压未上线，news-data.js 首项仍停在 2026-09-30；建议尽快按 10/12→10/07→10/06→10/02→10/01 顺序 prepend 消化积压，否则更早草稿内容将随下次自动化覆盖而永久丢失。
+
+## 2026-10-15 (周四) — 第四十次运行 + 用户触发「完成未完成的任务并完成部署」
+- **窗口缺口**：10/13、10/14 自动化未运行；news-data.js 首项仍为 2026-09-30，且 10/12、10/07、10/06、10/02、10/01 五天草稿从未入库（仅存工作树）。用户指令一次性「补当日草稿 + 全部部署」。
+- **当日草稿**：scripts/_draft_news.md 主稿 10 条（date 2026-10-15，display「10月15日」，weekday「周四」），附录 A–E 原样保留 10/12(10)+10/07(10)+10/06(6)+10/02(10)+10/01(10)。
+- 选题主线（10/12–10/15 窗口）：阶跃星辰 Step 5 Preview 正式开源(腾讯新闻/CNMO)、英伟达 Nemotron 3.5 Bolt 74B 开源(NVIDIA官方中文博客)、腾讯 WorkBuddy 深度融合企业微信(腾讯研究院)、Meta Muse Wonder 系列前沿模型(北京日报)、Anthropic 点名智谱/月之暗面反蒸馏(网易科技)、Anthropic 红队「AI蠕虫」自我复制警告(观点网)、Character.AI 破产迪士尼2000万美元接盘(21世纪经济报道)、交通运输部水运AI场景指引22场景(交通运输部)、苹果 HomeView 带屏家庭中枢(澎湃)、Anthropic Q3营收168亿美元调整后盈利IPO最快11月路演(智通财经)。
+- 去重/避坑：剔除 Claude Opus 5.5 降价（实为 9/22 发布定价、聚合媒体 10/14 复推，日期陷阱）、Mistral Large 4（与附录B「Mistral ML4」同模型重复）、406 科学家联名（仅聚合源）、黄仁勋断供/Grok Voice 3.0（仅每经早参聚合无专稿）、千问Go（10/13，与WorkBuddy同主题取舍）、山东垂域模型（权重取舍）；第1条与附录D「Step 5 定档开源」为同产品不同节点（定档 vs 实际放开），已在去重说明标注可二选一。
+- **部署入库**：node 临时脚本（跑完即删）从草稿 JSON.parse 出 6 个 day 对象 → 按 0/4/8/12 缩进 fmt（JSON.stringify + \n→CRLF 替换）→ 文本块切分 prepend（10/15 置顶 → 10/12 → 10/07 → 10/06 → 10/02 → 10/01 → 原 09-30）。
+- **45 天裁剪**：运行日 2026-10-15 − 45 = `2026-08-31` 为 cutoff，剔除 08-27/08-26/08-25/08-24/08-18/08-17 共 6 个过期 day 对象（此前误记「仅 08-17 超期」有误，实际 08-17~08-27 六天均早于 cutoff）。合并后 **22 个 day 对象 / 208 条**，首项 2026-10-15、末项 2026-09-01。
+- **踩坑记录**：JSON.stringify 输出为 LF，直接与 CRLF 旧块比对会全量 ROUNDTRIP MISMATCH——必须先 `.replace(/\n/g, EOL)` 再比对/生成（首跑 22/22  mismatch 已 abort 回滚，未写盘；修正后 0 mismatch）。diff = 378 增 / 402 删，hunk 仅顶部插入 + 底部删除两段，无中段 hunk ✔。
+- 校验：node --check 通过；vm 加载 22 天/208 条、日期严格降序、标题全局唯一、非 https 0、FFFD 0、新 6 天 56 条摘要全部 ≤60。
+- 仙侠同步：convert_news.py 再生 xianxia/src/data/news.js（208 条）。
+- 提交：git add js/news-data.js scripts/_draft_news.md xianxia/src/data/news.js scripts/_draft_weekly.md（10/12 周报「已部署」留档 1 行标注）+ 本 memory.md → commit + push origin main → Cloudflare Pages 自动构建。未带其它无关改动（automation-1785401150340 memory、scripts/_gen_draft.py、.workbuddy/memory/* 等保持未提交）。
+- 草稿重置为「已发布」占位；临时校验/注入脚本已删。
+- 验证：push 后 cache-bust 请求 myaishome.com/js/news-data.js 确认首项为 2026-10-15（见当轮对话）。
+- **积压清零**：10/01、10/02、10/06、10/07、10/12 五天积压本次全部入库，工作树不再有未上线资讯草稿。
+
