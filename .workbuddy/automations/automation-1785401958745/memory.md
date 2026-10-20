@@ -450,3 +450,30 @@
 - 验证：push 后 cache-bust 请求 myaishome.com/js/news-data.js 确认首项为 2026-10-15（见当轮对话）。
 - **积压清零**：10/01、10/02、10/06、10/07、10/12 五天积压本次全部入库，工作树不再有未上线资讯草稿。
 
+## 2026-10-16 (周五) — 第四十一次运行
+- 产出草稿：scripts/_draft_news.md（10 条，日期 2026-10-16，display「10月16日」，weekday「周五」）。
+- 选题主线：Meta 发布 Muse Spark Open 开放权重 8160 亿参数可跑两台 Mac Studio(财联社/今日头条)、微软完成 MAI-Base-2 预训练 2.8T/80B 苏莱曼称算效超 OpenAI 同类 1/4(凤凰网原创/微软官方)、英伟达 Nemotron 3.5 Super VL 120B 单 GPU 5 倍吞吐多模态智能体(开发者博客)、蚂蚁百灵开源 Ling-3.1-flash 560B 部署 8 卡降至 4 卡(腾讯研究院/搜狐)、清华面壁等开源 PilotDeck 2.0 办公 Agent 工作台(腾讯研究院/搜狐)、昆仑万维开源 Matrix-Game 4.0 单张 5090 实时视频游戏模型(腾讯研究院/搜狐)、SpaceXSI 发布 Grok Voice 3.0 语音综合指数登顶(腾讯研究院/搜狐)、DeepSeek 宕机近 5 小时补偿 API 用户 7 日消耗全额返还(光明网)、IBM 开源 Granite Switch 4.1 单端点统一聊天/决策/语音(Hugging Face 博客)、工信部发布《人工智能安全评测框架(2026版)》+ 济南产业大会十大关键词(中国新闻网)。
+- 去重/避坑：跳过 阶跃 Step 5 开放权重（10/15 已入库「正式开源」同事件复读）、Anthropic/谷歌 Gemini/苹果 HomeView（10/15 已密集覆盖）、央视 AI 推荐夹带私货（检索命中多为 2026-01 旧闻，日期陷阱未纳入）；英伟达 Nemotron 3.5 Bolt(10/15)与 Super VL 120B 同系列不同定位、Meta Muse Wonder(10/15 闭源)与 Muse Spark Open(今日开源)不同模型，均予保留并备注。
+- 45 天裁剪自检：运行日 2026-10-16 − 45 = 2026-09-01，news-data.js 当前最旧 day 恰为 2026-09-01（不早于阈值），本次若入库无需裁剪。
+- 流程：7 个候选 URL（4、5、6、7 条共用搜狐同链）curl 校验，6 个直返 200，搜狐链对 curl 返回 403（已知 UA 屏蔽，浏览器可正常打开、多搜索源佐证有效）；node 校验脚本（写到 scripts/_check_draft_tmp.js 执行、跑完即删）通过：JSON 合法、摘要 37–54 字全部 ≤60、URL 全 https、块内与 news-data.js(22天208条)标题查重 0 碰撞、FFFD 扫描 0。
+- 未改动 js/news-data.js，未 git/部署；草稿文件已覆盖为当日新稿，无多天积压。
+
+## 2026-10-20 (周二) — 第四十二次运行
+- 产出草稿：scripts/_draft_news.md（主稿 9 条，date 2026-10-20，display「10月20日」，weekday「周二」）。
+- **积压仍在**：news-data.js 首项仍为 2026-10-15（10/15 部署），**2026-10-16 草稿（10 条）从未入库、仅存工作树，将被本稿覆盖**。故在草稿「附录 A」**原样保留 10/16 day 对象**，并提示部署顺序 **2026-10-20 → 2026-10-16 → 现有 2026-10-15**。10/17–10/19 自动化未触发，无新稿。
+- 选题主线（10/19–10/20 新增，9 条，全部经 WebSearch 核实信源、9 个候选 URL 全部 curl 返回 200）：MiniMax 正式发布 M3.1 Flash（上观/今日头条）、DeepSeek 推出 V4.1 Flash-1017（比特网/网易）、中国大模型周调用量连续 25 周超美国（每经/今日头条）、市场监管总局发布 AI 赋能钢铁行业首批三项国标（央视网）、美国土安全部下令联邦机构移除 DeepSeek 产品及第三方服务（微博/央视）、Anthropic 神秘「读心」新模型曝光或命名 Fable 5.5（网易科技/机器之心）、小米开源端到端空间音频模型 MiDashengLM-Spatial（IT之家）、优必选 Thinker-WM 登顶具身世界模型三大基准（腾讯新闻）、商务部等 9 部门发布「科技兴商」18 条举措加速脑机接口/具身智能转化（央视网）。
+- 去重/避坑：跳过 Character.AI 破产（10/15 已入库）、工信部 AI 安全评测框架（10/16 草稿已收录）、阶跃 Step 5 开源/英伟达 Nemotron 系列/Meta Muse Spark Open/微软 MAI-Base-2/蚂蚁 Ling-3.1-flash/IBM Granite Switch 4.1（均 10/15 部署或 10/16 待入库）；小米 MiDashengLM-Spatial 虽原始发布于 10/15–16，但 10/19 腾讯新闻《前沿快讯》作为新进展再报且未出现在既有草稿/线上，故纳入；OpenCode 托管密钥泄露（TechCrunch 10/20 英文聚合、与中文普通用户距离远）未纳入。9 条主稿与 news-data.js（22 天 208 条标题）0 碰撞。
+- 流程：9 个候选 URL 全部 curl（-L+浏览器UA）返回 200；node 临时校验脚本（写到 scripts/_check_draft_tmp.js 执行、跑完即删）通过——解析出 2 个 day 对象(10/20+附录10/16)、JSON 合法、字段顺序与 window.AIHomeNews 一致、主稿摘要 43–52 字全部 ≤60（首版 Anthropic 条 64 字已缩短至 52）、URL 全 https、与 208 条已部署标题 0 碰撞、FFFD 扫描 0。
+- 未改动 js/news-data.js 或其它正式文件，未执行 git、未部署；仅覆盖 scripts/_draft_news.md（git status 确认仅此文件为 M；news-data.js.bak.deploy、_gen_draft.py、_linkcheck_result.json 等均为既有未跟踪/修改，非本次产生）。
+- 45天规则：运行日 2026-10-20 − 45 = 2026-09-05 为 cutoff；部署时 news-data.js 末项 2026-09-01（< 2026-09-05）**将被裁剪**。
+- **部署告警（待人工处理）**：10/16 草稿仍未入库，news-data.js 首项仍停在 2026-10-15；建议尽快按 10-20→10-16 顺序 prepend 消化积压，否则 10/16 草稿内容将随下次自动化覆盖而永久丢失。
+
+## 2026-10-20 (周二) — 部署上线（用户触发「更新后，部署上线」）
+- 执行入库：node 临时脚本（scripts/_deploy_news_tmp.js，跑完即删）从草稿解析 2 个 day 对象（10/20 主稿 + 10/16 附录），按 10-20→10-16→现有顺序 prepend；45 天裁剪 cutoff=2026-09-05，剔除 09-01/09-02/09-03/09-04 共 4 天。
+- **踩坑**：首次生成因 fmtItem 漏写 item 收尾 `        }` 导致语法错误（vm 加载报 Unexpected token '{'）；补上收尾花括号后重跑通过。注意 header 已为 CRLF，仅对新增数组段做 \n→\r\n，避免双重回车。
+- 结果：js/news-data.js 20 天 / 187 条，首项 2026-10-20、末项 2026-09-08；diff 为顶部插入（2 新天）+ 底部删除（4 裁剪天），中段既有天逐字节一致。node 校验：https=0、FFFD=0、标题唯一、日期严格降序、新天摘要≤60，ALL CHECKS PASS。
+- 仙侠同步：python xianxia/scripts/convert_news.py 再生 xianxia/src/data/news.js（187 条）。
+- 提交：git add js/news-data.js scripts/_draft_news.md xianxia/src/data/news.js .workbuddy/automations/automation-1785401958745/memory.md → commit + push origin main（Cloudflare Pages 自动构建）。仅带新闻相关改动，未提交 automation-1785401150340 memory、_gen_draft.py、_linkcheck_result.json、.bak.deploy 等无关文件。
+- 验证：push 后 cache-bust 请求 myaishome.com/js/news-data.js 确认首项为 2026-10-20（待构建完成后核对）。
+- 积压清零：10/16 草稿本次随 10/20 一并入库，工作树不再有未上线资讯草稿。
+

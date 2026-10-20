@@ -7,6 +7,120 @@ window.AIHome = window.AIHome || {};
 
 AIHome.NEWS = [
   {
+    "title": "MiniMax 正式发布 M3.1 Flash：推理提速近 3 倍、成本降七成",
+    "url": "https://www.toutiao.com/article/7698502747515060736",
+    "date": "10-20",
+    "source": "上观新闻（今日头条）"
+  },
+  {
+    "title": "DeepSeek 推出 V4.1 Flash-1017：Token 用量降逾五成，首发帕累托前沿曲线",
+    "url": "https://www.163.com/dy/article/L9LGRLNU05566SCS_pdya11y.html",
+    "date": "10-20",
+    "source": "比特网（网易/新浪财经）"
+  },
+  {
+    "title": "中国大模型周调用量连续 25 周超美国，全球前五均为国产",
+    "url": "https://www.toutiao.com/article/7698518183568851471/",
+    "date": "10-20",
+    "source": "每日经济新闻（今日头条）"
+  },
+  {
+    "title": "市场监管总局发布 AI 赋能钢铁行业首批三项国家标准",
+    "url": "https://big5.cctv.com/gate/big5/news.cctv.cn/2026/10/19/ARTIZzh0SWwRiD93GGbNhlUB261019.shtml",
+    "date": "10-20",
+    "source": "央视网"
+  },
+  {
+    "title": "美国国土安全部下令联邦机构移除 DeepSeek 产品及第三方服务",
+    "url": "https://weibo.com/6244553417/5355981714490659",
+    "date": "10-20",
+    "source": "微博（央视）"
+  },
+  {
+    "title": "Anthropic 神秘“读心”新模型曝光，或命名 Fable 5.5 / Opus 5.6",
+    "url": "https://www.163.com/dy/article/L9LS20BE05568W0A.html",
+    "date": "10-20",
+    "source": "网易科技（机器之心/新浪财经）"
+  },
+  {
+    "title": "小米开源业界首个端到端空间音频理解大模型 MiDashengLM-Spatial",
+    "url": "https://www.ithome.com/1/013/739.htm",
+    "date": "10-20",
+    "source": "IT之家"
+  },
+  {
+    "title": "优必选自研具身世界模型 Thinker-WM 登顶三大国际基准",
+    "url": "https://news.qq.com/rain/a/20261019A0DARW00",
+    "date": "10-20",
+    "source": "腾讯新闻"
+  },
+  {
+    "title": "商务部等 9 部门发布“科技兴商”18 条举措，加速脑机接口与具身智能转化",
+    "url": "https://news.cctv.com/2026/10/19/ARTIi9YD7LPE6bjGmyAVYGAG261019.shtml",
+    "date": "10-20",
+    "source": "央视网"
+  },
+  {
+    "title": "Meta 发布 Muse Spark Open 开放权重大模型：8160 亿参数可跑两台 Mac Studio",
+    "url": "https://www.toutiao.com/article/7696970555261452826",
+    "date": "10-16",
+    "source": "财联社（今日头条）"
+  },
+  {
+    "title": "微软完成 MAI-Base-2 预训练：2.8 万亿参数、80 亿激活，苏莱曼称效率超 OpenAI 同类",
+    "url": "https://original.ifeng.com/c/8xGLRF0Nkiv",
+    "date": "10-16",
+    "source": "凤凰网原创（微软官方）"
+  },
+  {
+    "title": "英伟达发布 Nemotron 3.5 Super VL 120B：单 GPU 5 倍吞吐的多模态智能体模型",
+    "url": "https://developer.nvidia.com/blog/nvidia-nemotron-3-5-super-vl-powers-specialized-agents-with-multimodal-reasoning",
+    "date": "10-16",
+    "source": "NVIDIA 开发者博客"
+  },
+  {
+    "title": "蚂蚁百灵开源 Ling-3.1-flash：560B 参数、部署从 8 卡降至 4 卡",
+    "url": "https://www.sohu.com/a/1088289922_455313",
+    "date": "10-16",
+    "source": "腾讯研究院（搜狐）"
+  },
+  {
+    "title": "清华面壁等联合开源 PilotDeck 2.0：内置办公三件套技能的 Agent 工作台",
+    "url": "https://www.sohu.com/a/1088289922_455313",
+    "date": "10-16",
+    "source": "腾讯研究院（搜狐）"
+  },
+  {
+    "title": "昆仑万维开源 Matrix-Game 4.0：单张 RTX 5090 实时运行视频游戏模型",
+    "url": "https://www.sohu.com/a/1088289922_455313",
+    "date": "10-16",
+    "source": "腾讯研究院（搜狐）"
+  },
+  {
+    "title": "SpaceXSI（原 xAI）发布 Grok Voice 3.0：语音综合指数登顶",
+    "url": "https://www.sohu.com/a/1088289922_455313",
+    "date": "10-16",
+    "source": "腾讯研究院（搜狐）"
+  },
+  {
+    "title": "DeepSeek 宕机近 5 小时，补偿 API 用户 7 日内消耗金额全额返还",
+    "url": "https://m.gmw.cn/2026-10/16/content_1304575902.htm",
+    "date": "10-16",
+    "source": "光明网"
+  },
+  {
+    "title": "IBM 开源 Granite Switch 4.1：单端点统一聊天、决策与语音",
+    "url": "https://huggingface.co/blog/ibm-granite/granite-switch-4-1",
+    "date": "10-16",
+    "source": "Hugging Face 博客（IBM Granite）"
+  },
+  {
+    "title": "工信部发布《工业和信息化领域人工智能安全评测框架（2026 版）》",
+    "url": "https://www.chinanews.com/cj/2026/10-15/10715292.shtml",
+    "date": "10-16",
+    "source": "中国新闻网"
+  },
+  {
     "title": "阶跃星辰 Step 5 Preview 正式开源：600B 参数仅激活 27B，成本为 Claude Opus 5 的 1/8",
     "url": "https://news.qq.com/rain/a/20261015A02TKV00",
     "date": "10-15",
@@ -1013,245 +1127,5 @@ AIHome.NEWS = [
     "url": "https://www.workercn.cn/c/2026-09-08/8888083.shtml",
     "date": "09-08",
     "source": "中工网"
-  },
-  {
-    "title": "OpenAI 正式发布 GPT-6 Astra，布罗克曼称「欢迎来到 AGI 时代」",
-    "url": "https://www.163.com/dy/article/L5VK33HQ0512D3VJ.html",
-    "date": "09-04",
-    "source": "新京报"
-  },
-  {
-    "title": "ChatGPT、Claude、Grok 罕见同时宕机，引 AI 基础设施共因风险讨论",
-    "url": "https://www.cnstock.com/commonDetail/785745",
-    "date": "09-04",
-    "source": "上海证券报"
-  },
-  {
-    "title": "谷歌发布 WeatherNext 3 全球 AI 气象模型，分辨率达 5 公里",
-    "url": "https://view.inews.qq.com/a/20260904A00HOT00",
-    "date": "09-04",
-    "source": "腾讯新闻"
-  },
-  {
-    "title": "谷歌 Docs、Gmail、Keep 上线 Gemini AI 语音功能",
-    "url": "https://view.inews.qq.com/a/20260904A02XV300",
-    "date": "09-04",
-    "source": "腾讯新闻"
-  },
-  {
-    "title": "奥特曼首次确认 OpenAI 将自研人形机器人",
-    "url": "https://news.qq.com/rain/a/20260904A036GR00",
-    "date": "09-04",
-    "source": "腾讯新闻"
-  },
-  {
-    "title": "英伟达 RTX Spark AI PC 将于 10 月上市，含 6 家 OEM",
-    "url": "https://www.ithome.com/0/998/202.htm",
-    "date": "09-04",
-    "source": "IT之家"
-  },
-  {
-    "title": "Anthropic 拟完成 150 亿美元 IPO 前信贷融资",
-    "url": "https://new.qq.com/rain/a/20260904A02SQS00?refer=cp_1009",
-    "date": "09-04",
-    "source": "腾讯新闻"
-  },
-  {
-    "title": "月之暗面秘密递交港交所 A1，Pre-IPO 估值 500 亿美元",
-    "url": "https://new.qq.com/rain/a/20260903A056P500?refer=cp_1009",
-    "date": "09-04",
-    "source": "腾讯新闻"
-  },
-  {
-    "title": "沙特 Humain 借中国 MiniMax 推阿拉伯语大模型 HUMAIN-M3",
-    "url": "https://view.inews.qq.com/a/20260903A0BHH100",
-    "date": "09-04",
-    "source": "财联社"
-  },
-  {
-    "title": "OpenAI 新版 GPT Image 2.5 可伪造发布会画面，deepfake 风险引关注",
-    "url": "https://www.163.com/dy/article/L5V8IB3A0511DSSR.html",
-    "date": "09-04",
-    "source": "量子位"
-  },
-  {
-    "title": "中央网信办启动「清朗·整治AI技术滥用」专项行动第二阶段",
-    "url": "https://www.cac.gov.cn/2026-09/02/c_1790099041364574.htm",
-    "date": "09-03",
-    "source": "中央网信办"
-  },
-  {
-    "title": "谷歌发布 Gemini 3.8 Flash 与 3.8 Flash Cyber，六周内第三次迭代",
-    "url": "https://www.toutiao.com/article/7680964039706493480",
-    "date": "09-03",
-    "source": "IT之家"
-  },
-  {
-    "title": "博通第三财季净利同比增216%，AI半导体营收达167亿美元",
-    "url": "https://www.toutiao.com/article/7681090305952678427/",
-    "date": "09-03",
-    "source": "每日经济新闻"
-  },
-  {
-    "title": "李飞飞 World Labs 发布多模态世界模型 Atlas",
-    "url": "https://news.qq.com/rain/a/20260902A09U3500",
-    "date": "09-03",
-    "source": "腾讯新闻"
-  },
-  {
-    "title": "苹果起诉 OpenAI 前员工窃取电路设计商业秘密",
-    "url": "https://www.toutiao.com/article/7680448374021161526/",
-    "date": "09-03",
-    "source": "环球网"
-  },
-  {
-    "title": "Meta 发布 Muse Spark 1.3，编码任务工具调用减少约20%",
-    "url": "https://www.jiemian.com/article/15047974.html",
-    "date": "09-03",
-    "source": "界面新闻"
-  },
-  {
-    "title": "梅卡曼德登陆港交所，成具身智能「眼脑手第一股」",
-    "url": "https://www.cnstock.com/commonDetail/784081",
-    "date": "09-03",
-    "source": "上海证券报"
-  },
-  {
-    "title": "OpenAI 称 Astra 达「Critical」网络安全阈值，ExploitBench 满分",
-    "url": "https://openai.com/zh-Hans-CN/index/path-to-astra/",
-    "date": "09-03",
-    "source": "OpenAI 官方"
-  },
-  {
-    "title": "香港兰桂坊迎来机器人酒保，智平方 AlphaBot 2 常态化上岗",
-    "url": "https://www.sznews.com/news/content/2026-09/01/content_32160859.htm",
-    "date": "09-03",
-    "source": "深圳新闻网"
-  },
-  {
-    "title": "全球首款AI智能体手机「豆包手机」努比亚 NaviX Ultra 获入网许可",
-    "url": "https://news.qq.com/rain/a/20260901A0C6ED00",
-    "date": "09-03",
-    "source": "腾讯新闻"
-  },
-  {
-    "title": "Runway推出「界面世界模型」Solaris，无代码实时逐帧生成应用界面",
-    "url": "https://www.sohu.com/a/1070665925_455313",
-    "date": "09-02",
-    "source": "腾讯研究院"
-  },
-  {
-    "title": "腾讯混元Hy4 preview轻量版开源，1.5TB权重压至214GB",
-    "url": "https://www.toutiao.com/article/7680420572546892342/",
-    "date": "09-02",
-    "source": "IT之家"
-  },
-  {
-    "title": "科大讯飞开源星火X2.5端侧模型，原生支持百万Token上下文",
-    "url": "https://www.toutiao.com/article/7680605520847241763/",
-    "date": "09-02",
-    "source": "上游新闻"
-  },
-  {
-    "title": "影眸发布Hyper3D WorldGen世界生成模型，单图秒级生成可交互3D场景",
-    "url": "https://www.toutiao.com/article/7680604065528660530/",
-    "date": "09-02",
-    "source": "每日经济新闻"
-  },
-  {
-    "title": "VAST完成约30亿元融资，同步发布原生四边面拓扑3D模型Tripo P2.0",
-    "url": "https://www.jiemian.com/article/15040275.html",
-    "date": "09-02",
-    "source": "界面新闻"
-  },
-  {
-    "title": "Anthropic发布Fable 5.1，典型任务成本降25%、缓存读取降75%",
-    "url": "https://news.qq.com/rain/a/20260902A03TQ800",
-    "date": "09-02",
-    "source": "腾讯新闻"
-  },
-  {
-    "title": "Manus恢复独立运营，肖弘等创始团队重掌，结束与Meta分拆",
-    "url": "https://news.qq.com/rain/a/20260901A0A1QI00",
-    "date": "09-02",
-    "source": "腾讯新闻"
-  },
-  {
-    "title": "马斯克称AI或令全球经济增20%–30%，十年内人形机器人达10亿台",
-    "url": "https://www.toutiao.com/article/7680645758629986862/",
-    "date": "09-02",
-    "source": "华尔街见闻"
-  },
-  {
-    "title": "Anthropic与Lambda签350亿美元云协议，英伟达持得州机房租约",
-    "url": "https://finance.sina.com.cn/stock/usstock/c/2026-09-01/doc-iniqiatw4836539.shtml",
-    "date": "09-02",
-    "source": "新浪财经"
-  },
-  {
-    "title": "戴尔Q2 AI服务器订单创纪录609亿美元，全年营收指引上调250亿",
-    "url": "https://new.qq.com/rain/a/20260902A036WB00",
-    "date": "09-02",
-    "source": "腾讯新闻"
-  },
-  {
-    "title": "ChatGPT广告年化收入破10亿美元，推出不足200天即覆盖40余国",
-    "url": "https://www.toutiao.com/article/7680345873091461678/",
-    "date": "09-01",
-    "source": "每日经济新闻"
-  },
-  {
-    "title": "开源个人AI助手 OpenClaw 发布 2.0，新增长期记忆与多Agent协作",
-    "url": "https://www.sohu.com/a/1070192038_455313",
-    "date": "09-01",
-    "source": "腾讯研究院"
-  },
-  {
-    "title": "英伟达35亿美元入股联发科，扩大AI芯片生态",
-    "url": "https://www.cww.net.cn/article?id=613114",
-    "date": "09-01",
-    "source": "通信世界网"
-  },
-  {
-    "title": "欧盟将ChatGPT列为「超大型在线搜索引擎」，纳入DSA最严监管",
-    "url": "https://new.qq.com/rain/a/20260901A007E700",
-    "date": "09-01",
-    "source": "腾讯新闻"
-  },
-  {
-    "title": "谷歌开源 TimesFM-3 时间序列模型，原生支持多变量零样本预测",
-    "url": "https://www.sohu.com/a/1070238042_122572393",
-    "date": "09-01",
-    "source": "搜狐科技"
-  },
-  {
-    "title": "工信部启动AI应用服务商培育专项行动，年底资源池破2000家",
-    "url": "https://www.ce.cn/cysc//newmain/yc/jsxw/202609/t20260901_3183575.shtml",
-    "date": "09-01",
-    "source": "中国经济网"
-  },
-  {
-    "title": "国家AI产业基金14亿元增资快手可灵，投后估值约180亿美元",
-    "url": "https://new.qq.com/rain/a/20260901A035HJ00",
-    "date": "09-01",
-    "source": "科创板日报"
-  },
-  {
-    "title": "MiniMax H3 Max上线，5秒视频3秒生成解锁AI实时直播",
-    "url": "https://new.qq.com/rain/a/20260831A06YO500?refer=cp_1009",
-    "date": "09-01",
-    "source": "腾讯新闻"
-  },
-  {
-    "title": "全国首部AI产业地方政府规章《成都市促进人工智能产业发展办法》9月1日施行",
-    "url": "https://view.inews.qq.com/a/20260831A0ALTR00",
-    "date": "09-01",
-    "source": "锦观新闻"
-  },
-  {
-    "title": "北京中小学AI通识课新学期升级，新增集成电路与具身智能实验室",
-    "url": "https://view.inews.qq.com/a/20260901A02L0P00",
-    "date": "09-01",
-    "source": "北京日报"
   }
 ];
