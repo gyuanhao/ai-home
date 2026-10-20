@@ -179,3 +179,29 @@
   - **坑**：`openswarm.ai` 域名已停放出售（302→atom.com），官网实为 `openswarm.com`；`laratranslate.com` 301→`/translate` 才是应用页。
 - 交付物：`scripts/_draft_weekly.md`（开头注明「本草稿仅供人工过，未自动入库」，tools.json 未改动，git status 已确认）+ `scripts/_draft_newtools.json`（纯 JSON）。生成脚本 `scripts/_gen_draft_1012.py`。
 - **本次为只读维护，未自动入库**（自动化 prompt 仅要求产出草稿报告）。如需入库并部署 Cloudflare Pages，需用户明确指令或更新自动化 prompt。
+
+## 2026-10-12 追加：用户指令「请部署」已执行并验证
+- 15 条草稿全部入库：`scripts/tools.json` **401 → 416**（id 零冲突、完整 URL 零重叠、JSON 校验通过；git diff 493 增 0 删，无假删除）。备份 `scripts/tools.json.bak.deploy`。
+- 重建 15 个 `tools/<id>.html` 详情页（noindex 薄页，不入 sitemap；sitemap 维持 174 条不变）。
+- **架构变化（重要，下次沿用）**：10-07 用户提交 d8b90f3 起，根目录 `tools.html` 已改为 **React 外壳**（运行时 `fetch("scripts/tools.json")`），`generate_tool_pages.py` 产出的 503KB 静态列表页是旧架构产物——本次误生成后已 `git checkout` 恢复，**下次勿再对 tools.html 跑静态生成器**；新工具随 tools.json 推送自动在 /tools 生效。
+- 计数更新：`index.html` 6 处 + `tools.html` 7 处，370+/400+ → **410+**（416 条，沿用向下取整惯例）；home-new/ 与 showcase-src/ 副本无外链、不在 sitemap，未更新。
+- 提交 `08fa6bb` 并 push origin main，Cloudflare Pages 自动构建。
+- **线上复验（约 90s 后生效）**：`scripts/tools.json` 解析 **416 条**、15 新工具 **15/15** 在线；15 个详情页干净 URL 全部 **200**（.html 会 307，须用 `/tools/<id>` 验证）；首页 410+ ×6、/tools 标题「410+ 款 AI 工具对比」；内容抽验（plamo-translate 含 PLaMo/preferredai/会议）正常。**本次维护闭环：草稿→入库→重建→部署→线上验证，无残留差异。**
+- 遗留：`yizhuan` HTTPS 证书不匹配（CN=aaacredit.org.cn）问题延续，建议后续改 http:// 或推动站点换证书；资讯流水线积压（10/06、10/02、10/01 草稿未上线）属另一自动化，待用户部署指令。
+
+## 2026-10-20（第十一次执行，本周）
+- 工具总数 416 条，12 个一级类目。死链检查复用 `scripts/_check_links.py`（线程池 32 + 阿里 DoH 二次复核），结果落 `scripts/_linkcheck_result.json`。
+- 扫描结果：**OK 379 / 反爬略过(botblock) 33 / 其他4xx(snappa 401) 1 / 初判异常(conn_fail) 3**。
+  - **真实死链 1 条**：`oats`（音频语音，https://useoats.com）→ rc=6 连接失败，DoH `NXDOMAIN`，域名已注销。建议下架。
+  - 初判异常 3 条经二次 GET + DoH 全部排除：
+    - `yizhuan`（写作内容，www.yizhuan.net，rc=60 TLS 失败）→ DoH OK，已知 HTTPS 证书不匹配（CN=aaacredit.org.cn），站点存活，**非死链**（保留，待推动换证）。
+    - `zhinao360`（对话聊天，ai.360.cn，rc=28 超时）→ DoH OK，沙箱出口抖动误报，历史复测 200，存活。
+    - `snappa`（设计创意，snappa.com，401）→ 鉴权墙，站点存活，不计死链。
+  - **连续第五周真实死链 ≤ 1，库内链接基本健康**（仅 oats 需下架）。
+- 新品草稿 **12 条**，全部官方域名 curl 实测可达(2xx，含重定向终点复核)、id 与现库 416 条零冲突、零域名重叠，28 字段齐全、summary≤60字。覆盖 8 类目，重点补较空的「翻译语言 1 / 浏览器插件 1 / 视频生成 1 / 音频语音 2 / 编程开发 1 / 办公效率 5 / 对话聊天 1」：
+  - retriever-ai(浏览器插件,10-08发)、supoclip(视频生成,AGPL-3.0)、kugel(音频语音,TTS €0.0525/分)、make0-brain(办公效率,MCP记忆层 Free/Lite$9/Pro$29)、csuite(办公效率,$98买断)、mausbot(对话聊天,Apache2.0)、famrelay(办公效率,MCP中继)、reason(编程开发,本地免费+云积分)、tonefold(音频语音,GPL-3.0 GitHub)、the-drive-ai(办公效率,10-13 PH 86 upvotes)、airjelly(办公效率,主动第二大脑)、tencent-hy-translate(翻译语言,腾讯混元 09-24上线 33语种)。
+  - **域名重定向已按最终可达地址填写**：reasonmachines.ai→reasonmachines.com、airjelly.ai→www.airjelly.ai/en、supoclip.com→www.supoclip.com。
+  - **已剔除**：EditUI（editui.com/dev 均 000，官网未确认）、Arc Translate（arc-translate.com 000，仅 Play 商店确认）；排除库内重复 klingai.com 及被占用的 lisen.app/noan.ai。
+  - 标注「待核」档位 1 条（the-drive-ai 付费细节）建议入库前再核。
+- 交付物：`scripts/_draft_weekly.md`（开头注明「本草稿仅供人工过，未自动入库」，tools.json 未改动）+ `scripts/_draft_newtools.json`（纯 JSON，便于程序化入库）；生成脚本 `scripts/_gen_draft_1020.py`。
+- **本次为只读维护，未自动入库**（自动化 prompt 仅要求产出草稿报告）。如需像 08-17/08-24/09-14/09-23/10-12 那样直接入库并部署 Cloudflare Pages，需用户明确「请部署」指令。
