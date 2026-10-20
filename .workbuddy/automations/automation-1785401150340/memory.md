@@ -205,3 +205,13 @@
   - 标注「待核」档位 1 条（the-drive-ai 付费细节）建议入库前再核。
 - 交付物：`scripts/_draft_weekly.md`（开头注明「本草稿仅供人工过，未自动入库」，tools.json 未改动）+ `scripts/_draft_newtools.json`（纯 JSON，便于程序化入库）；生成脚本 `scripts/_gen_draft_1020.py`。
 - **本次为只读维护，未自动入库**（自动化 prompt 仅要求产出草稿报告）。如需像 08-17/08-24/09-14/09-23/10-12 那样直接入库并部署 Cloudflare Pages，需用户明确「请部署」指令。
+
+## 2026-10-20 追加：用户指令「维护后，部署上线」已执行并验证
+- 12 条草稿全部入库 + 下架死链 `oats`：`scripts/tools.json` **416 → 427**（-1 +12）。备份 `scripts/tools.json.bak.deploy1020`。`git diff --numstat` = 480 增 31 删，31 删全部为 oats 单块（已逐行核对），无假删除。
+- **格式保真经验（可复用）**：先验证 `json.dumps(d,ensure_ascii=False,indent=2)+"\n"` 与原文件字节完全相等（本周实测 True），再落盘，可保证未改动条目零 diff。
+- 重建 `tools/<id>.html`：`generate_tool_detail_pages.py` → 427 页（12 新页 + oats 删除），新页均 noindex，sitemap 维持 174 不变。**未跑** `generate_tool_pages.py`（tools.html 为 React 外壳，勿再跑静态生成器）。
+- 计数：`index.html` 6 处 + `tools.html` 7 处，410+ → **420+**；home-new/、showcase-src/ 无外链未改。
+- 提交 `a08e88c`，`git push origin main` 成功（`303072a..a08e88c`），Cloudflare Pages 自动构建。
+- **线上复验（约 80s 生效，BASE=https://myaishome.com）**：`scripts/tools.json` 解析 **427 条**、12 新工具 **12/12** 在线、`oats` 已不在；12 个详情页干净 URL 全部 **200**、`/tools/oats` 返回 **404**；首页 420+ ×6 / 410+ ×0，/tools 标题「420+ 款 AI 工具对比」×7；内容抽验（tencent-hy-translate 含腾讯混元/33/hunyuan，retriever-ai 含 rtrvr.ai）正常。
+- 遗留：`yizhuan` HTTPS 证书不匹配（CN=aaacredit.org.cn）延续，建议改 http:// 或推动站点换证。
+- **本次维护闭环：草稿→入库→下架→重建→部署→线上验证，无残留差异。**
