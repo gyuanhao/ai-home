@@ -8,6 +8,293 @@
  */
 window.AIHomeNews = [
 {
+    "date": "2026-10-28",
+    "display": "10月28日",
+    "weekday": "周三",
+    "items": [
+        {
+            "title": "甲骨文将在 OCI 部署 Cerebras 晶圆级 AI 芯片，英伟达挑战者再获大型云客户",
+            "url": "https://www.163.com/dy/article/LAA0ETGO05198NMR.html",
+            "summary": "甲骨文宣布在OCI部署Cerebras晶圆级AI推理芯片，2027上半年上线，英伟达挑战者再获大型云客户。",
+            "source": "网易（华尔街见闻）"
+        },
+        {
+            "title": "DeepSeek 深夜悄然更换大模型指纹，社区猜测 V4.1 Pro 旗舰将至",
+            "url": "https://tech.sina.cn/2026-10-27/detail-iniwsses3790713.d.html",
+            "summary": "DeepSeek官网深夜悄然更换大模型指纹，后端完成检查点切换，社区猜测旗舰V4.1 Pro即将到来。",
+            "source": "新浪科技（快科技）"
+        },
+        {
+            "title": "微软发布 MAI Image 2.7 图像编辑模型，第三方评测跻身全球第二",
+            "url": "https://stock.10jqka.com.cn/usstock/20261028/c681159008.shtml",
+            "summary": "微软发布MAI Image 2.7图像编辑模型，第三方评测居全球第二、仅次于OpenAI，七大编辑项全面超越前代。",
+            "source": "同花顺财经"
+        },
+        {
+            "title": "英伟达与 Meta 扩大 Muse 智能体模型合作，扩容 Vera Rubin 算力集群",
+            "url": "https://new.qq.com/rain/a/20261028A02M2O00",
+            "summary": "英伟达与Meta宣布扩大Muse系列模型合作，Meta扩容Vera Rubin算力集群，响应AI智能体爆发需求。",
+            "source": "腾讯网（每日经济新闻）"
+        },
+        {
+            "title": "Google DeepMind 发布 Genie 4 世界模型，首款原生音视频同步生成",
+            "url": "https://www.ithome.com/1/018/711.htm",
+            "summary": "谷歌DeepMind发布Genie 4世界模型，首款原生音视频同步生成，可自然语言实时操控场景、最长运行两分钟。",
+            "source": "IT之家"
+        },
+        {
+            "title": "台积电据传将 CoWoS 先进封装报价最高上调 20%",
+            "url": "https://finance.sina.cn/2026-10-27/detail-iniwsfqu7020582.d.html",
+            "summary": "据《工商时报》，台积电拟将CoWoS等先进封装报价上调10%–20%，AI需求致产能吃紧、设备交期延至6–8个月。",
+            "source": "新浪财经（工商时报）"
+        },
+        {
+            "title": "英伟达参投印度 AI 推理软件商 Simplismart 1400 万美元 B 轮",
+            "url": "https://news.qq.com/rain/a/20261028A023K600",
+            "summary": "英伟达参投印度AI推理软件商Simplismart 1400万美元B轮，押注用更少GPU高效运行模型的推理优化软件。",
+            "source": "腾讯新闻（IT时代网）"
+        },
+        {
+            "title": "Cloudflare 披露 GLM-5.3 跨用户数据泄露：155 条回复误含他人内容",
+            "url": "https://cfl.re/4srFVEJ",
+            "summary": "Cloudflare披露GLM-5.3在Workers AI上因KV缓存漏洞误发155条跨用户回复，已修复并定位根因。",
+            "source": "Cloudflare 官方"
+        }
+    ]
+},
+{
+    "date": "2026-10-27",
+    "display": "10月27日",
+    "weekday": "周二",
+    "items": [
+        {
+            "title": "OpenAI 发布 GPT-6.1 Terra：主打跨软件电脑操作，API 价格减半、追平旗舰 Astra",
+            "url": "https://www.163.com/dy/article/LA81MDS00511ABV6.html",
+            "summary": "OpenAI 发布 GPT-6.1 Terra，主打跨软件电脑操作，API 价格减半、追平旗舰 Astra。",
+            "source": "网易（新智元）"
+        },
+        {
+            "title": "Anthropic 提交 IPO 招股书：拟纳斯达克上市代码 ANT，估值或达 2 万亿美元",
+            "url": "https://news.qq.com/rain/a/20261027A02ZH600",
+            "summary": "Anthropic 向 SEC 提交 S-1，拟纳斯达克上市代码 ANT，估值或达 2 万亿美元，或成史上最大 IPO。",
+            "source": "腾讯新闻（每日经济新闻）"
+        },
+        {
+            "title": "国办印发意见：适应 AI 技术发展，构建就业友好型发展方式",
+            "url": "https://www.cnr.cn/jy/sygdjy/20261027/t20261027_527853974.shtml",
+            "summary": "国办印发意见，提出减缓 AI 就业替代、开发 AI 新职业、实施专项培训，构建就业友好型发展方式。",
+            "source": "央广网"
+        },
+        {
+            "title": "微软向约 6 万员工开放自愿离职方案，为 AI 基建腾挪预算",
+            "url": "https://news.qq.com/rain/a/20261027A03FOL00",
+            "summary": "微软向约 6 万员工推自愿离职补偿，为 AI 基建腾挪预算，系年内第三轮人员调整。",
+            "source": "腾讯新闻（财联社 / 21 世纪经济报道）"
+        },
+        {
+            "title": "Meta 拟融资 950 亿美元补充 AI 基础设施，英伟达等有意认购",
+            "url": "https://www.toutiao.com/article/7700983250449891850",
+            "summary": "Meta 启动约 350 亿美元公开发行、拟增 600 亿 ATM，英伟达等有意认购，资金投向 AI 基建。",
+            "source": "今日头条（澎湃新闻）"
+        },
+        {
+            "title": "苹果 iOS 27.2 增强 Siri AI：可记忆对话、新增五语言（中国大陆暂不可用）",
+            "url": "https://news.qq.com/rain/a/20261027A034XJ00",
+            "summary": "苹果推送 iOS 27.2，Siri AI 可记忆对话、扩个人上下文、新增五语言，欧盟与中国大陆暂不可用。",
+            "source": "腾讯新闻（IT之家）"
+        },
+        {
+            "title": "OpenAI 宣布三项科学突破：证明 Kakeya 猜想、推翻指数时间假设",
+            "url": "https://m.10jqka.com.cn/20261027/c681113505.shtml",
+            "summary": "OpenAI 称模型在数学、计算机与物理取得三项成果，数学与 CS 已通过 Lean 验证，物理待审。",
+            "source": "同花顺（观点网）"
+        },
+        {
+            "title": "SpaceX 敲定 400 亿美元 GPU 融资租赁协议，押注英伟达下一代芯片",
+            "url": "https://www.163.com/dy/article/LA7A7R2H05198CJN.html",
+            "summary": "SpaceX 与阿波罗签约约 400 亿美元 GPU 融资租赁，采购英伟达设备租期约五年，2027 上半年交付。",
+            "source": "网易（财联社）"
+        }
+    ]
+},
+{
+    "date": "2026-10-26",
+    "display": "10月26日",
+    "weekday": "周一",
+    "items": [
+        {
+            "title": "月之暗面发布 Kimi K3.1 Pro：3万亿参数、百万token上下文，11月4日前开放权重",
+            "url": "https://www.stdaily.com/web/gdxw/2026-10/24/content_602239.html",
+            "summary": "3万亿级开源模型，Terminal-Bench 4.0超GPT-6 Astra，逼近Opus 5.5、价格仅1/5。",
+            "source": "科技日报"
+        },
+        {
+            "title": "OpenAI 恢复前沿模型训练，训练期间切断互联网防越权",
+            "url": "https://news.qq.com/rain/a/20261024A03CI800",
+            "summary": "暂停一月后重启最强模型训练，建离线「世界」镜像，红队发现多服务漏洞可悄然联网。",
+            "source": "腾讯新闻（凤凰网科技）"
+        },
+        {
+            "title": "全国首个人工智能应用风险综合保障方案发布，AI「说错话」可投保",
+            "url": "https://news.qq.com/rain/a/20261026A035BE00",
+            "summary": "金融街论坛首发AI责任险与费用损失险，覆盖第三方侵权及供应方自身损失，填补空白。",
+            "source": "IT之家 / 腾讯新闻"
+        },
+        {
+            "title": "DeepSeek、MiniMax 完成 AI 模型出海登记，打通开源发布合规流程",
+            "url": "https://www.nbd.com.cn/articles/2026-10-25/4616765.html",
+            "summary": "两家头部厂商率先跑通登记，敏感技术严控、通用开源有序放行，稳定出海信心。",
+            "source": "每日经济新闻"
+        },
+        {
+            "title": "智元 110 台人形机器人同场齐舞，创吉尼斯世界纪录",
+            "url": "https://www.jiemian.com/article/15236830.html",
+            "summary": "110台远征A3全尺寸机器人同步编队，UWB厘米级定位实现毫秒级集群协同。",
+            "source": "界面新闻"
+        },
+        {
+            "title": "科大讯飞首发星辰 TaaS 平台，融合模型调度与智能体引擎",
+            "url": "https://www.thepaper.cn/newsDetail_forward_34328525",
+            "summary": "1024开发者节首发星辰TaaS，打通模型调度、智能体引擎、知识工程与运行治理，生态开发者达1187万。",
+            "source": "澎湃新闻"
+        },
+        {
+            "title": "寒武纪 Q3 净利同比增 147.74%，AI 芯片需求持续释放",
+            "url": "https://new.qq.com/rain/a/20261026A02ZDM00",
+            "summary": "Q3营收35.31亿同比增104%，归母净利14.04亿增147.74%，存货增至116.65亿。",
+            "source": "腾讯网（华尔街见闻）"
+        },
+        {
+            "title": "腾讯 WorkBuddy 接入 Kimi K3.1 Pro，高速版同步开放",
+            "url": "https://cloud.tencent.com/developer/article/2769356",
+            "summary": "WorkBuddy接入K3.1 Pro及高速版，同等智能输出快2-3倍，优先开放企业旗舰版与个人订阅。",
+            "source": "腾讯云开发者"
+        }
+    ]
+},
+{
+    "date": "2026-10-22",
+    "display": "10月22日",
+    "weekday": "周四",
+    "items": [
+        {
+            "title": "科大讯飞 1024 开发者节启幕：发布星火 X2.6、云+端协同与语音基座 Spark-Audio",
+            "url": "https://www.ce.cn/cysc/tech/gd2012/202610/t20261021_3267084.shtml",
+            "summary": "科大讯飞1024开发者节10/22启幕，发布星火X2.6与全国产云+端协同方案。",
+            "source": "中国经济网"
+        },
+        {
+            "title": "腾讯混元世界模型 1.1 WorldMirror 开源：端到端 3D 重建、单卡秒级生成",
+            "url": "https://m.163.com/dy/article/KCHQCE9805562DGT.html",
+            "summary": "腾讯混元世界模型1.1开源，端到端3D重建、单卡部署、秒级生成。",
+            "source": "网易科技（IT之家）"
+        },
+        {
+            "title": "百川发布循证增强医疗大模型 Baichuan-M2 Plus：医疗幻觉率较 DeepSeek 低约 3 倍",
+            "url": "https://news.qq.com/rain/a/20251022A04GIW00",
+            "summary": "百川发布医疗大模型Baichuan-M2 Plus，幻觉率较DeepSeek低约3倍。",
+            "source": "腾讯新闻"
+        },
+        {
+            "title": "阿里通义 Qwen3-VL 新增 2B/32B 密集模型，手机也能跑「看图思考」",
+            "url": "https://tech.ifeng.com/c/8nerW9IEV2a",
+            "summary": "通义Qwen3-VL新增2B/32B密集模型，手机可跑，32B版「看图思考」胜GPT-5 mini。",
+            "source": "凤凰网科技（IT之家）"
+        },
+        {
+            "title": "中办国办发文全面实施「人工智能+」行动，推动 AI 全方位赋能千行百业",
+            "url": "https://www.mrjjxw.com/articles/2026-10-21/4611685.html",
+            "summary": "中办国办发文全面实施「人工智能+」行动，推动AI赋能千行百业。",
+            "source": "每日经济新闻"
+        },
+        {
+            "title": "国家数据集团在雄安揭牌，填补数据领域国资主体空白、为 AI 供高质量数据集",
+            "url": "https://cpc.people.com.cn/BIG5/n1/2026/1021/c64094-40818684.html",
+            "summary": "国家数据集团在雄安揭牌，为第28家央企，将供应AI高质量数据集。",
+            "source": "人民网"
+        },
+        {
+            "title": "英伟达 GTC 柏林：DSX POD 算力集装箱 14 天上线 + OpenShell 智能体安全架构",
+            "url": "https://news.qq.com/rain/a/20261021A0E7CI00",
+            "summary": "黄仁勋GTC柏林发布DSX POD，AI工厂部署从6个月缩至14天。",
+            "source": "腾讯新闻"
+        },
+        {
+            "title": "OpenAI 前沿模型及 Codex 将登陆 Google Cloud，三大云首齐售同一家模型",
+            "url": "https://openai.com/index/openai-models-google-cloud/",
+            "summary": "OpenAI前沿模型将登陆谷歌云Model Garden，企业可用GCP额度购买。",
+            "source": "OpenAI 官方"
+        },
+        {
+            "title": "Anthropic 开放 Claude Duet 常驻智能体：每日简报、离机仍在干，敏感操作需审批",
+            "url": "https://www.theverge.com/ai-artificial-intelligence/1015843/anthropic-claude-duet-ai-agent",
+            "summary": "Anthropic开放Claude Duet常驻智能体，每日简报、后台执行，敏感操作须批准。",
+            "source": "The Verge"
+        },
+        {
+            "title": "上海 AI Lab 开源 Sage-A1.5：35B MoE 智能体模型主攻长程执行",
+            "url": "https://xie.infoq.cn/article/1d8316eead5cc44a935501bff",
+            "summary": "上海AI Lab开源Sage-A1.5（35B MoE），主攻长程执行，可2-4卡私有部署。",
+            "source": "InfoQ"
+        }
+    ]
+},
+{
+    "date": "2026-10-21",
+    "display": "10月21日",
+    "weekday": "周三",
+    "items": [
+        {
+            "title": "Google 全面开放 Gemini 4 Argon：主打长周期智能体，早鸟价 11/30 后翻倍",
+            "url": "https://www.163.com/dy/article/L9NCQMI405118UGF.html",
+            "summary": "Google 全面开放旗舰 Gemini 4 Argon，主打长周期智能体与编程重构，早鸟价 11/30 后翻倍。",
+            "source": "至顶科技（网易）"
+        },
+        {
+            "title": "小米 MiMo-V2.6-Pro 上线 WorkBuddy：1M 上下文，开源智能指数登顶",
+            "url": "https://www.163.com/dy/article/L9NNI57S0511CPVM.html",
+            "summary": "小米 MiMo-V2.6-Pro 上线 WorkBuddy，1M 上下文+全模态，AA 智能指数登全球开源第一。",
+            "source": "快科技（网易）"
+        },
+        {
+            "title": "简牍垂域大模型「简问」发布：AI 破解简牍「绝学」研究难题",
+            "url": "https://k.sina.com.cn/article_7517400647_1c0126e4705909cume.html",
+            "summary": "西北师大研发简牍垂域大模型「简问」发布，融合语言与视觉大模型实现智能缀合、古今互译。",
+            "source": "人民日报海外版（新浪）"
+        },
+        {
+            "title": "工信部明确新一代智能制造四方面重点举措",
+            "url": "https://ysxw.cctv.cn/article.html?toc_style_id=feeds_default&t=1792481539633&item_id=4747568850774138874&channelId=1215",
+            "summary": "工信部明确加快新一代智能制造：梯度培育智能工厂、创新发展智能装备、攻关垂域模型、深化国际合作。",
+            "source": "央视新闻"
+        },
+        {
+            "title": "通用人工智能大会重庆启幕，城市治理智能体平台「明镜」发布",
+            "url": "https://www.sohu.com/a/1089529380_121106884",
+            "summary": "2026 通用人工智能大会 10/21 重庆启幕，依托中国原创 AGI 路径发布城市治理智能体平台「明镜」。",
+            "source": "搜狐"
+        },
+        {
+            "title": "AI 周报：腾讯 57 亿美元发债买算力，具身智能赛道全线吸金",
+            "url": "https://news.qq.com/rain/a/20261020A04W8N00",
+            "summary": "腾讯发 57 亿美元债直指 AI 基建；星尘智能 10 亿、智元创新约 500 亿估值、蓝芯算力近 20 亿齐融资。",
+            "source": "腾讯新闻"
+        },
+        {
+            "title": "OpenAI 增强 COBOL 等低资源语言能力，助力老旧系统现代化",
+            "url": "https://openai.com/index/low-resource-programming-languages",
+            "summary": "OpenAI 增强 COBOL、Fortran、VB 等低资源语言构建与迁移能力，助银行政府现代化数十年老旧系统。",
+            "source": "OpenAI 官方"
+        },
+        {
+            "title": "伊塔动力完成超亿元融资，银河通用、傅利叶等入局具身动力",
+            "url": "https://www.toutiao.com/article/7698750075878523418/",
+            "summary": "具身智能动力公司伊塔动力完成超亿元种子轮+种子+轮融资，银河通用、傅利叶等联合投资。",
+            "source": "新京报（今日头条）"
+        }
+    ]
+},
+{
     "date": "2026-10-20",
     "display": "10月20日",
     "weekday": "周二",
@@ -1004,268 +1291,6 @@ window.AIHomeNews = [
             "url": "https://www.163.com/dy/article/L6PJ9QGB0534A4SC.html",
             "summary": "小米首款AI大模型门锁5Max预售，UWB无感开锁+双摄异常识别。",
             "source": "界面新闻 / 网易"
-        }
-    ]
-},
-{
-    "date": "2026-09-11",
-    "display": "9月11日",
-    "weekday": "周五",
-    "items": [
-        {
-            "title": "OpenAI 在 ChatGPT Work 推出 Data agent，企业数据一键变交互看板",
-            "url": "https://openai.com/index/put-data-to-work/",
-            "summary": "OpenAI 推出 ChatGPT Work 的 Data agent，连接企业数据自动生成交互看板与洞察。",
-            "source": "OpenAI 官方"
-        },
-        {
-            "title": "宇树开源通用人形机器人基础模型 UnifoLM-WLA-1.0，6B 参数覆盖 64 项任务",
-            "url": "https://tech.ifeng.com/c/8wJ9ZdRDQ8K",
-            "summary": "宇树开源 6B 参数通用人形机器人基础模型，覆盖行走抓取等 64 项任务，权重全开放。",
-            "source": "凤凰网科技"
-        },
-        {
-            "title": "Anthropic 研究所发布《变革性 AI 的经济情景》工作论文",
-            "url": "https://news.qq.com/rain/a/20260910A09BM300",
-            "summary": "Anthropic 研究所工作论文测算：极端情景下变革性 AI 可令 GDP 年增 15.4%。",
-            "source": "腾讯新闻"
-        },
-        {
-            "title": "OpenAI 暂停 200 美元 ChatGPT Pro 新订阅，高端算力供给告急",
-            "url": "https://www.36kr.com/p/3978220011928576",
-            "summary": "OpenAI 宣布暂停 200 美元 ChatGPT Pro 新用户订阅，称高端算力供给已近极限。",
-            "source": "36氪"
-        },
-        {
-            "title": "中国商务部回应美方 AI 蒸馏技术指控，指其以国家安全为名行双重标准",
-            "url": "https://www.mofcom.gov.cn/syxwfb/art/2026/art_7f1622463a7c48ef9fad600ce0ef702f.html",
-            "summary": "商务部回应美方所谓 AI 蒸馏技术出口管制指控，指其以国家安全为名行双重标准。",
-            "source": "商务部官网"
-        },
-        {
-            "title": "英伟达与 Palantir 合作，为主权 AI 供应链打造技术栈",
-            "url": "https://nvidianews.nvidia.com/news/nvidia-and-palantir-bring-sovereign-intelligence-to-critical-supply-chains",
-            "summary": "英伟达与 Palantir 合作，将 Nemotron 模型与 Foundry 结合，服务关键供应链主权 AI。",
-            "source": "NVIDIA 官方"
-        },
-        {
-            "title": "美司法部调查英伟达与 Groq 170 亿美元交易，涉嫌规避反垄断",
-            "url": "https://www.toutiao.com/article/7683844241595892233/",
-            "summary": "美司法部就英伟达与 Groq 170 亿美元算力交易展开反垄断调查，疑规避监管。",
-            "source": "今日头条 / QQ 新闻"
-        },
-        {
-            "title": "OpenAI 任命 AI 对齐权威 Paul Christiano 加入基金会董事会与安全委员会",
-            "url": "https://www.chinastarmarket.cn/detail/2479076",
-            "summary": "OpenAI 任命对齐研究权威 Paul Christiano 进入基金会董事会及安全与安保委员会。",
-            "source": "财联社"
-        },
-        {
-            "title": "法律 AI 创企 Harvey 完成 5.5 亿美元融资，估值达 155 亿美元",
-            "url": "https://www.harvey.ai/en-US/blog/harvey-raises-dollar550m-at-a-dollar155b-valuation-to-help-legal-teams-own-their-intelligence",
-            "summary": "法律 AI 公司 Harvey 完成 5.5 亿美元融资，估值 155 亿美元，红杉 a16z 等参投。",
-            "source": "Harvey 官方"
-        }
-    ]
-},
-{
-    "date": "2026-09-10",
-    "display": "9月10日",
-    "weekday": "周四",
-    "items": [
-        {
-            "title": "DeepSeek V4.1 Flash 正式发布并下调 Flash 系列价格，同时筹备科创板 IPO",
-            "url": "https://new.qq.com/rain/a/20260910A0331J00",
-            "summary": "DeepSeek 9/10 发布 V4.1 Flash 超 V4 Pro，免费路由请求并降价，筹备科创板 IPO。",
-            "source": "科创板日报 / 腾讯新闻"
-        },
-        {
-            "title": "AI 编程独角兽 Cognition 完成 20 亿美元 E 轮，估值 480 亿美元",
-            "url": "https://new.qq.com/rain/a/20260909A02X5U00",
-            "summary": "开发 Devin 的 Cognition 完成 20 亿 E 轮，估值 480 亿、年化近 9 亿，a16z 领投。",
-            "source": "腾讯新闻 / IT时代网"
-        },
-        {
-            "title": "Anthropic 复盘 4 起 Claude 越权事故，授权 METR 独立调查",
-            "url": "https://anthropic.com/news/improving-alignment-security-efforts",
-            "summary": "Anthropic 4 起 Claude 越权事故，Mythos 5 复现有害操作约 80%，授权 METR 调查。",
-            "source": "Anthropic 官方"
-        },
-        {
-            "title": "智元机器人发布 AGILE2.0 感控一体模型，机器人进入「睁眼运动」时代",
-            "url": "https://new.qq.com/rain/a/20260909A08ZJ200",
-            "summary": "智元发布 AGILE2.0 感控一体模型，端到端打通视觉与全身运动控制，机器人可「边看边想边动」，告别盲动。",
-            "source": "新民晚报 / 腾讯新闻"
-        },
-        {
-            "title": "京东启动「物理AI加速计划」，五年采购 300 万台机器人、布局 80 个 RoboBase",
-            "url": "https://stcn.com/article/detail/4178747.html",
-            "summary": "京东科技探索者大会启动物理AI加速计划：五年采购 300 万台机器人、100 万台无人车，布局 80 个机器人产业基地。",
-            "source": "证券时报"
-        },
-        {
-            "title": "智象未来 vivago R1 内容创作智能体全球上线，单次可生成 5 分钟视频",
-            "url": "https://new.qq.com/rain/a/20260909A03RKG00",
-            "summary": "智象未来 vivago R1 全球上线，对话式创作单次生成 5 分钟视频，多智能体协同保一致性，可用成功率 85%。",
-            "source": "凤凰网科技 / 腾讯新闻"
-        },
-        {
-            "title": "英矽智能 AI 设计药物 Rentosertib 登《自然·生物技术》，可逆转生物学年龄",
-            "url": "https://new.qq.com/rain/a/20260908A0B7FG00",
-            "summary": "英矽智能 AI 药 Rentosertib 登《自然·生物技术》，2a 期逆转生物学年龄 3–4 年。",
-            "source": "腾讯新闻 / 科普中国"
-        },
-        {
-            "title": "亮源新创发布 Light REACT 全身韧性智能，关节失效可自主恢复",
-            "url": "https://view.inews.qq.com/a/20260909A07LNB00",
-            "summary": "亮源新创发布 Light REACT 全身韧性技术，机器人无需故障标签即可在关节失效后自主调整动作继续行走或爬行。",
-            "source": "凤凰网 / 腾讯新闻"
-        },
-        {
-            "title": "Inception 发布扩散语言模型 Mercury 2.5，吞吐达 1107 tokens/秒",
-            "url": "https://www.inceptionlabs.ai/blog/introducing-mercury-2-5",
-            "summary": "Inception Labs 发布扩散 LLM Mercury 2.5，智能提升 40%、达 1107 tok/s。",
-            "source": "Inception Labs 官方 / 腾讯新闻"
-        },
-        {
-            "title": "优必选上半年交付约 600 台 Walker S2，联手沐曦开发人形机器人专用芯片",
-            "url": "https://view.inews.qq.com/a/20260909A08SJU00",
-            "summary": "大和报告称优必选上半年交付约 600 台 Walker S2，收入超 10 亿，联手沐曦开发专用芯片。",
-            "source": "财闻 / 腾讯新闻"
-        }
-    ]
-},
-{
-    "date": "2026-09-09",
-    "display": "9月9日",
-    "weekday": "周三",
-    "items": [
-        {
-            "title": "DeepSeek V4.1 Flash 中间版开启内测，新架构原生多模态、速度超500 tokens/s",
-            "url": "https://www.oschina.net/news/502383",
-            "summary": "DeepSeek V4.1 Flash中间版内测：新架构原生多模态，实测输出超500 tokens/s。",
-            "source": "开源中国"
-        },
-        {
-            "title": "面壁智能开源 MiniCPM5-2B，2B 端侧模型登顶 AA 榜 4B 以下第一",
-            "url": "https://www.sohu.com/a/1073526541_115978",
-            "summary": "面壁智能开源2B端侧模型MiniCPM5-2B，AA榜4B以下第一，智能体指标领先同级10倍。",
-            "source": "智东西"
-        },
-        {
-            "title": "腾讯文档「AI工作台」上线，基于 WorkBuddy Agent 内核",
-            "url": "https://www.cnr.cn/tech/techph/20260908/t20260908_527808119.shtml",
-            "summary": "腾讯文档推出AI工作台，基于WorkBuddy Agent内核，支持人机双写与后台任务执行。",
-            "source": "央广网"
-        },
-        {
-            "title": "Meta 发布个人 AI 智能体 Muse，可代发邮件订票",
-            "url": "https://www.ithome.com/0/999/960.htm",
-            "summary": "Meta发布个人AI智能体Muse，可代发邮件订票，免费+20/100美元订阅，年内上眼镜。",
-            "source": "IT之家"
-        },
-        {
-            "title": "OpenAI 用万级智能体 88 小时攻克纳维-斯托克斯千年难题",
-            "url": "https://news.qq.com/rain/a/20260909A036K900",
-            "summary": "OpenAI未发布模型用万级智能体88小时攻克纳维-斯托克斯千年难题，陶哲轩发警告。",
-            "source": "凤凰网科技"
-        },
-        {
-            "title": "微信支付智能眼镜 SDK 正式上线，Rokid 首批接入",
-            "url": "https://new.qq.com/rain/a/20260908A06P6G00",
-            "summary": "微信支付智能眼镜SDK上线，Rokid首批接入，语音唤起扫一扫、滑动镜腿确认付款。",
-            "source": "腾讯新闻"
-        },
-        {
-            "title": "松延动力推出具身智能子品牌 Scalabot，发布世界模型 HERON",
-            "url": "https://news.qq.com/rain/a/20260908A0ALV300",
-            "summary": "松延动力发布具身智能品牌Scalabot及世界模型HERON，由机器人本体延伸至具身大脑。",
-            "source": "界面新闻"
-        },
-        {
-            "title": "Mistral 完成 30 亿欧元 D 轮融资，估值超 210 亿欧元",
-            "url": "https://news.qq.com/rain/a/20260908A08A3B00",
-            "summary": "法国Mistral完成30亿欧元D轮融资，估值超210亿欧元，创欧洲科技最大股权融资。",
-            "source": "腾讯新闻"
-        },
-        {
-            "title": "谷歌 DeepMind 发布 AlphaGenome Atlas，预测 90 亿人类基因变异",
-            "url": "https://www.nature.com/articles/d41586-026-02835-4",
-            "summary": "谷歌DeepMind发布AlphaGenome Atlas，预计算90亿人类基因变异影响，免费开放研究。",
-            "source": "Nature"
-        },
-        {
-            "title": "亚马逊与高通合作定制 AI 芯片，最高 600 亿美元采购",
-            "url": "https://www.toutiao.com/article/7683315035841577499/",
-            "summary": "亚马逊与高通合作开发AI数据中心定制芯片，最高600亿美元采购绑定2500万股权证。",
-            "source": "每日经济新闻"
-        }
-    ]
-},
-{
-    "date": "2026-09-08",
-    "display": "9月8日",
-    "weekday": "周二",
-    "items": [
-        {
-            "title": "最高法发布首部涉AI司法裁判规则，明确人工智能纠纷案件审理意见",
-            "url": "https://www.toutiao.com/article/7682685770909418036/",
-            "summary": "最高法发布首部涉AI司法裁判规则，明确人工智能纠纷案件的审理24条意见。",
-            "source": "最高人民法院"
-        },
-        {
-            "title": "华为发布 Mate XT 2 三折叠手机，首发麒麟9050 Pro 与 HarmonyOS 7",
-            "url": "https://www.news.cn/tech/20260907/f5f4d24136004cd480aee192f087f8c2/c.html",
-            "summary": "华为发布Mate XT 2三折叠手机，首发麒麟9050 Pro芯片与HarmonyOS 7系统级智能体。",
-            "source": "新华网"
-        },
-        {
-            "title": "微信视觉团队开源多模态嵌入模型 WeMM-Embedding，日调用破十亿",
-            "url": "https://tech.ifeng.com/c/8wFL1Pu27oS",
-            "summary": "微信视觉团队开源多模态嵌入模型WeMM-Embedding，登顶MMEB-v2、日调用破十亿。",
-            "source": "凤凰网科技"
-        },
-        {
-            "title": "工信部发布「十五五」信息通信业规划：算力目标9800 EFLOPS、布局6G",
-            "url": "https://www.ce.cn/xwzx/gnsz/gdxw/202609/t20260908_3199402.shtml",
-            "summary": "工信部发布十五五信息通信业规划：算力目标9800 EFLOPS、布局6G与万卡智算集群。",
-            "source": "中国经济网"
-        },
-        {
-            "title": "阿里千问开源 Qwen-Drive-1.0-4B，首个自动驾驶视觉语言基础模型",
-            "url": "https://weibo.com/1798777247/5340539911144845",
-            "summary": "阿里千问开源Qwen-Drive-1.0-4B，首个统一3D感知、问答与运动规划的自动驾驶VLM。",
-            "source": "通义千问"
-        },
-        {
-            "title": "OpenAI 达成「自动化研究实习生」里程碑，首席科学家呼吁放缓研发",
-            "url": "https://news.qq.com/rain/a/20260908A03EF100",
-            "summary": "OpenAI宣布达成自动化研究实习生里程碑，首席科学家发文呼吁统一安全标准前放缓。",
-            "source": "腾讯新闻"
-        },
-        {
-            "title": "Anthropic 11个月锁定5170亿美元算力，IPO推迟至11月、估值锚定2万亿",
-            "url": "https://www.163.com/dy/article/L67DH22S05198NMR.html",
-            "summary": "Anthropic 11个月锁定5170亿美元算力，IPO推迟至11月、估值锚定2万亿美元。",
-            "source": "华尔街见闻"
-        },
-        {
-            "title": "科大讯飞发布星火 X2.5 大模型，MoE 293B-A30B 基于全国产算力",
-            "url": "https://www.sohu.com/a/1072878798_362042",
-            "summary": "科大讯飞发布星火X2.5大模型，MoE 293B-A30B架构、基于全国产算力完成训推。",
-            "source": "央广网"
-        },
-        {
-            "title": "具身智能企业加速进化 Booster 完成近10亿元融资，一季度出货增500%",
-            "url": "https://ijiwei.com/n/1064285",
-            "summary": "具身智能企业加速进化(Booster)完成近10亿元融资，一季度出货同比增500%。",
-            "source": "爱集微"
-        },
-        {
-            "title": "国家反诈 AI App 上线，公安部刑侦局指导、融合大模型反诈",
-            "url": "https://www.workercn.cn/c/2026-09-08/8888083.shtml",
-            "summary": "国家反诈AI App上线，由公安部刑侦局指导、上海公安研发，融合大模型反诈。",
-            "source": "中工网"
         }
     ]
 }
