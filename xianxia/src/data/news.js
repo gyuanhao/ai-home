@@ -7,6 +7,312 @@ window.AIHome = window.AIHome || {};
 
 AIHome.NEWS = [
   {
+    "title": "Mistral Large 4（Le Chonk）开源权重发布：1T 参数、欧洲训练，主攻代码与安全",
+    "url": "https://aitoolsrecap.com/Blog/mistral-large-4-le-chonk-open-weights-2026",
+    "date": "11-09",
+    "source": "Mistral AI（AIToolsRecap 编译）"
+  },
+  {
+    "title": "苹果 CEO 力推 agentic Siri，目标 2027 年借 iOS 28 实现「能办事」",
+    "url": "https://aitoolsrecap.com/Blog/ai-news-november-09-2026",
+    "date": "11-09",
+    "source": "Bloomberg（AIToolsRecap 编译）"
+  },
+  {
+    "title": "亚马逊上线 Alexa 文本购物智能体，此前曾挡下 Meta 同类 Muse 项目",
+    "url": "https://aitoolsrecap.com/Blog/ai-news-november-09-2026",
+    "date": "11-09",
+    "source": "AIToolsRecap"
+  },
+  {
+    "title": "Shield AI 估值 8 个月翻倍至 288 亿美元，同时收购 Echodyne",
+    "url": "https://aitoolsrecap.com/Blog/ai-news-november-09-2026",
+    "date": "11-09",
+    "source": "AIToolsRecap"
+  },
+  {
+    "title": "DeepMind 登《自然》论文：WeatherNext Cyclones 让热带气旋预警提前超一天",
+    "url": "https://dev.to/hiroki-ii-ai/ai-daily-digest-november-9-2026-mistral-opens-le-chonk-weights-grok-api-watermarks-by-default-2gdm",
+    "date": "11-09",
+    "source": "Google DeepMind（Dev.to 编译）"
+  },
+  {
+    "title": "Perplexity 推 Teammates AI 同事，可 24 小时值守夜班、自动排查报警",
+    "url": "https://www.sohu.com/a/1098875420_455313",
+    "date": "11-09",
+    "source": "腾讯研究院"
+  },
+  {
+    "title": "李飞飞 World Labs 推 Frameboy，世界模型 Atlas 单图实时跑出 15fps",
+    "url": "https://www.sohu.com/a/1098875420_455313",
+    "date": "11-09",
+    "source": "腾讯研究院"
+  },
+  {
+    "title": "英伟达 VFlash 并行解码视觉基元，机器人动作解码最高提速 12 倍",
+    "url": "https://www.sohu.com/a/1098875420_455313",
+    "date": "11-09",
+    "source": "腾讯研究院"
+  },
+  {
+    "title": "DeepSeek 新一轮融资接近完成，至少 800 亿元，腾讯、宁德时代领投",
+    "url": "https://wdatacn.aastocks.com/en/stocks/analysis/stock-aafn-con/80700/AAFN/NOW.1547927/hk-stock-news?totc=1",
+    "date": "11-09",
+    "source": "彭博（阿斯达克财经）"
+  },
+  {
+    "title": "甲骨文将在 OCI 部署 Cerebras 晶圆级 AI 芯片，英伟达挑战者再获大型云客户",
+    "url": "https://www.163.com/dy/article/LAA0ETGO05198NMR.html",
+    "date": "10-28",
+    "source": "网易（华尔街见闻）"
+  },
+  {
+    "title": "DeepSeek 深夜悄然更换大模型指纹，社区猜测 V4.1 Pro 旗舰将至",
+    "url": "https://tech.sina.cn/2026-10-27/detail-iniwsses3790713.d.html",
+    "date": "10-28",
+    "source": "新浪科技（快科技）"
+  },
+  {
+    "title": "微软发布 MAI Image 2.7 图像编辑模型，第三方评测跻身全球第二",
+    "url": "https://stock.10jqka.com.cn/usstock/20261028/c681159008.shtml",
+    "date": "10-28",
+    "source": "同花顺财经"
+  },
+  {
+    "title": "英伟达与 Meta 扩大 Muse 智能体模型合作，扩容 Vera Rubin 算力集群",
+    "url": "https://new.qq.com/rain/a/20261028A02M2O00",
+    "date": "10-28",
+    "source": "腾讯网（每日经济新闻）"
+  },
+  {
+    "title": "Google DeepMind 发布 Genie 4 世界模型，首款原生音视频同步生成",
+    "url": "https://www.ithome.com/1/018/711.htm",
+    "date": "10-28",
+    "source": "IT之家"
+  },
+  {
+    "title": "台积电据传将 CoWoS 先进封装报价最高上调 20%",
+    "url": "https://finance.sina.cn/2026-10-27/detail-iniwsfqu7020582.d.html",
+    "date": "10-28",
+    "source": "新浪财经（工商时报）"
+  },
+  {
+    "title": "英伟达参投印度 AI 推理软件商 Simplismart 1400 万美元 B 轮",
+    "url": "https://news.qq.com/rain/a/20261028A023K600",
+    "date": "10-28",
+    "source": "腾讯新闻（IT时代网）"
+  },
+  {
+    "title": "Cloudflare 披露 GLM-5.3 跨用户数据泄露：155 条回复误含他人内容",
+    "url": "https://cfl.re/4srFVEJ",
+    "date": "10-28",
+    "source": "Cloudflare 官方"
+  },
+  {
+    "title": "OpenAI 发布 GPT-6.1 Terra：主打跨软件电脑操作，API 价格减半、追平旗舰 Astra",
+    "url": "https://www.163.com/dy/article/LA81MDS00511ABV6.html",
+    "date": "10-27",
+    "source": "网易（新智元）"
+  },
+  {
+    "title": "Anthropic 提交 IPO 招股书：拟纳斯达克上市代码 ANT，估值或达 2 万亿美元",
+    "url": "https://news.qq.com/rain/a/20261027A02ZH600",
+    "date": "10-27",
+    "source": "腾讯新闻（每日经济新闻）"
+  },
+  {
+    "title": "国办印发意见：适应 AI 技术发展，构建就业友好型发展方式",
+    "url": "https://www.cnr.cn/jy/sygdjy/20261027/t20261027_527853974.shtml",
+    "date": "10-27",
+    "source": "央广网"
+  },
+  {
+    "title": "微软向约 6 万员工开放自愿离职方案，为 AI 基建腾挪预算",
+    "url": "https://news.qq.com/rain/a/20261027A03FOL00",
+    "date": "10-27",
+    "source": "腾讯新闻（财联社 / 21 世纪经济报道）"
+  },
+  {
+    "title": "Meta 拟融资 950 亿美元补充 AI 基础设施，英伟达等有意认购",
+    "url": "https://www.toutiao.com/article/7700983250449891850",
+    "date": "10-27",
+    "source": "今日头条（澎湃新闻）"
+  },
+  {
+    "title": "苹果 iOS 27.2 增强 Siri AI：可记忆对话、新增五语言（中国大陆暂不可用）",
+    "url": "https://news.qq.com/rain/a/20261027A034XJ00",
+    "date": "10-27",
+    "source": "腾讯新闻（IT之家）"
+  },
+  {
+    "title": "OpenAI 宣布三项科学突破：证明 Kakeya 猜想、推翻指数时间假设",
+    "url": "https://m.10jqka.com.cn/20261027/c681113505.shtml",
+    "date": "10-27",
+    "source": "同花顺（观点网）"
+  },
+  {
+    "title": "SpaceX 敲定 400 亿美元 GPU 融资租赁协议，押注英伟达下一代芯片",
+    "url": "https://www.163.com/dy/article/LA7A7R2H05198CJN.html",
+    "date": "10-27",
+    "source": "网易（财联社）"
+  },
+  {
+    "title": "月之暗面发布 Kimi K3.1 Pro：3万亿参数、百万token上下文，11月4日前开放权重",
+    "url": "https://www.stdaily.com/web/gdxw/2026-10/24/content_602239.html",
+    "date": "10-26",
+    "source": "科技日报"
+  },
+  {
+    "title": "OpenAI 恢复前沿模型训练，训练期间切断互联网防越权",
+    "url": "https://news.qq.com/rain/a/20261024A03CI800",
+    "date": "10-26",
+    "source": "腾讯新闻（凤凰网科技）"
+  },
+  {
+    "title": "全国首个人工智能应用风险综合保障方案发布，AI「说错话」可投保",
+    "url": "https://news.qq.com/rain/a/20261026A035BE00",
+    "date": "10-26",
+    "source": "IT之家 / 腾讯新闻"
+  },
+  {
+    "title": "DeepSeek、MiniMax 完成 AI 模型出海登记，打通开源发布合规流程",
+    "url": "https://www.nbd.com.cn/articles/2026-10-25/4616765.html",
+    "date": "10-26",
+    "source": "每日经济新闻"
+  },
+  {
+    "title": "智元 110 台人形机器人同场齐舞，创吉尼斯世界纪录",
+    "url": "https://www.jiemian.com/article/15236830.html",
+    "date": "10-26",
+    "source": "界面新闻"
+  },
+  {
+    "title": "科大讯飞首发星辰 TaaS 平台，融合模型调度与智能体引擎",
+    "url": "https://www.thepaper.cn/newsDetail_forward_34328525",
+    "date": "10-26",
+    "source": "澎湃新闻"
+  },
+  {
+    "title": "寒武纪 Q3 净利同比增 147.74%，AI 芯片需求持续释放",
+    "url": "https://new.qq.com/rain/a/20261026A02ZDM00",
+    "date": "10-26",
+    "source": "腾讯网（华尔街见闻）"
+  },
+  {
+    "title": "腾讯 WorkBuddy 接入 Kimi K3.1 Pro，高速版同步开放",
+    "url": "https://cloud.tencent.com/developer/article/2769356",
+    "date": "10-26",
+    "source": "腾讯云开发者"
+  },
+  {
+    "title": "科大讯飞 1024 开发者节启幕：发布星火 X2.6、云+端协同与语音基座 Spark-Audio",
+    "url": "https://www.ce.cn/cysc/tech/gd2012/202610/t20261021_3267084.shtml",
+    "date": "10-22",
+    "source": "中国经济网"
+  },
+  {
+    "title": "腾讯混元世界模型 1.1 WorldMirror 开源：端到端 3D 重建、单卡秒级生成",
+    "url": "https://m.163.com/dy/article/KCHQCE9805562DGT.html",
+    "date": "10-22",
+    "source": "网易科技（IT之家）"
+  },
+  {
+    "title": "百川发布循证增强医疗大模型 Baichuan-M2 Plus：医疗幻觉率较 DeepSeek 低约 3 倍",
+    "url": "https://news.qq.com/rain/a/20251022A04GIW00",
+    "date": "10-22",
+    "source": "腾讯新闻"
+  },
+  {
+    "title": "阿里通义 Qwen3-VL 新增 2B/32B 密集模型，手机也能跑「看图思考」",
+    "url": "https://tech.ifeng.com/c/8nerW9IEV2a",
+    "date": "10-22",
+    "source": "凤凰网科技（IT之家）"
+  },
+  {
+    "title": "中办国办发文全面实施「人工智能+」行动，推动 AI 全方位赋能千行百业",
+    "url": "https://www.mrjjxw.com/articles/2026-10-21/4611685.html",
+    "date": "10-22",
+    "source": "每日经济新闻"
+  },
+  {
+    "title": "国家数据集团在雄安揭牌，填补数据领域国资主体空白、为 AI 供高质量数据集",
+    "url": "https://cpc.people.com.cn/BIG5/n1/2026/1021/c64094-40818684.html",
+    "date": "10-22",
+    "source": "人民网"
+  },
+  {
+    "title": "英伟达 GTC 柏林：DSX POD 算力集装箱 14 天上线 + OpenShell 智能体安全架构",
+    "url": "https://news.qq.com/rain/a/20261021A0E7CI00",
+    "date": "10-22",
+    "source": "腾讯新闻"
+  },
+  {
+    "title": "OpenAI 前沿模型及 Codex 将登陆 Google Cloud，三大云首齐售同一家模型",
+    "url": "https://openai.com/index/openai-models-google-cloud/",
+    "date": "10-22",
+    "source": "OpenAI 官方"
+  },
+  {
+    "title": "Anthropic 开放 Claude Duet 常驻智能体：每日简报、离机仍在干，敏感操作需审批",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/1015843/anthropic-claude-duet-ai-agent",
+    "date": "10-22",
+    "source": "The Verge"
+  },
+  {
+    "title": "上海 AI Lab 开源 Sage-A1.5：35B MoE 智能体模型主攻长程执行",
+    "url": "https://xie.infoq.cn/article/1d8316eead5cc44a935501bff",
+    "date": "10-22",
+    "source": "InfoQ"
+  },
+  {
+    "title": "Google 全面开放 Gemini 4 Argon：主打长周期智能体，早鸟价 11/30 后翻倍",
+    "url": "https://www.163.com/dy/article/L9NCQMI405118UGF.html",
+    "date": "10-21",
+    "source": "至顶科技（网易）"
+  },
+  {
+    "title": "小米 MiMo-V2.6-Pro 上线 WorkBuddy：1M 上下文，开源智能指数登顶",
+    "url": "https://www.163.com/dy/article/L9NNI57S0511CPVM.html",
+    "date": "10-21",
+    "source": "快科技（网易）"
+  },
+  {
+    "title": "简牍垂域大模型「简问」发布：AI 破解简牍「绝学」研究难题",
+    "url": "https://k.sina.com.cn/article_7517400647_1c0126e4705909cume.html",
+    "date": "10-21",
+    "source": "人民日报海外版（新浪）"
+  },
+  {
+    "title": "工信部明确新一代智能制造四方面重点举措",
+    "url": "https://ysxw.cctv.cn/article.html?toc_style_id=feeds_default&t=1792481539633&item_id=4747568850774138874&channelId=1215",
+    "date": "10-21",
+    "source": "央视新闻"
+  },
+  {
+    "title": "通用人工智能大会重庆启幕，城市治理智能体平台「明镜」发布",
+    "url": "https://www.sohu.com/a/1089529380_121106884",
+    "date": "10-21",
+    "source": "搜狐"
+  },
+  {
+    "title": "AI 周报：腾讯 57 亿美元发债买算力，具身智能赛道全线吸金",
+    "url": "https://news.qq.com/rain/a/20261020A04W8N00",
+    "date": "10-21",
+    "source": "腾讯新闻"
+  },
+  {
+    "title": "OpenAI 增强 COBOL 等低资源语言能力，助力老旧系统现代化",
+    "url": "https://openai.com/index/low-resource-programming-languages",
+    "date": "10-21",
+    "source": "OpenAI 官方"
+  },
+  {
+    "title": "伊塔动力完成超亿元融资，银河通用、傅利叶等入局具身动力",
+    "url": "https://www.toutiao.com/article/7698750075878523418/",
+    "date": "10-21",
+    "source": "新京报（今日头条）"
+  },
+  {
     "title": "MiniMax 正式发布 M3.1 Flash：推理提速近 3 倍、成本降七成",
     "url": "https://www.toutiao.com/article/7698502747515060736",
     "date": "10-20",
@@ -575,557 +881,5 @@ AIHome.NEWS = [
     "url": "https://guba.eastmoney.com/news,usgoogl,1777715728.html",
     "date": "09-25",
     "source": "东方财富 / 财联社"
-  },
-  {
-    "title": "马斯克：两到三年内中国就能补齐算力缺口",
-    "url": "https://news.qq.com/rain/a/20260924A03EM700",
-    "date": "09-24",
-    "source": "每日经济新闻"
-  },
-  {
-    "title": "梁文锋署名，DeepSeek 公开大规模 Agent 训练沙箱论文",
-    "url": "https://news.qq.com/rain/a/20260924A03OES00",
-    "date": "09-24",
-    "source": "每日经济新闻"
-  },
-  {
-    "title": "千问发布 Qwen-Audio-3.1 系列，语音模型全线降价",
-    "url": "https://news.qq.com/rain/a/20260924A03EMV00",
-    "date": "09-24",
-    "source": "每日经济新闻"
-  },
-  {
-    "title": "OpenAI 与 Anthropic 掌门人联合国呼吁加强 AI 安全合作",
-    "url": "https://www.toutiao.com/article/7688880591923675675/",
-    "date": "09-24",
-    "source": "每日经济新闻"
-  },
-  {
-    "title": "小鹏首条人形机器人生产线落地广东，年底量产",
-    "url": "https://www.stdaily.com/web/gdxw/2026-09/22/content_586133.html",
-    "date": "09-24",
-    "source": "科技日报"
-  },
-  {
-    "title": "蚂蚁百灵开源 UI 设计模型 Ming-Image-0.1-Design",
-    "url": "https://news.qq.com/rain/a/20260923A0AK0300",
-    "date": "09-24",
-    "source": "腾讯新闻"
-  },
-  {
-    "title": "手机端侧生成式 AI 备案增至 10 款，荣耀小米阶跃在列",
-    "url": "https://www.toutiao.com/article/7688669349187502628/",
-    "date": "09-24",
-    "source": "新京报"
-  },
-  {
-    "title": "中国具身智能进入「实干时代」，Galbot S1 工厂常态化作业",
-    "url": "https://3w.huanqiu.com/a/de583b/4TKfcKvMqUj?agt=23",
-    "date": "09-24",
-    "source": "环球时报"
-  },
-  {
-    "title": "云栖大会：阿里 Qwen4 已在训练，参数将扩至 5 至 10 万亿",
-    "url": "https://www.toutiao.com/article/7688768283075543590/",
-    "date": "09-24",
-    "source": "今日头条"
-  },
-  {
-    "title": "阿里云首款智能体电脑 Qwen Book 云栖亮相",
-    "url": "https://m.nbd.com.cn/articles/2026-09-23/4589778.html",
-    "date": "09-24",
-    "source": "每日经济新闻"
-  },
-  {
-    "title": "阶跃星辰发布 Step 5 Preview，推理与多模态能力大幅跃升",
-    "url": "https://news.qq.com/rain/a/20260920A05FD400",
-    "date": "09-21",
-    "source": "腾讯新闻 / 每日经济新闻"
-  },
-  {
-    "title": "阿里达摩院 DAMO RADAR 医学影像模型登《Science》",
-    "url": "https://www.ithome.com/1/004/178.htm",
-    "date": "09-21",
-    "source": "IT之家 / 人民网"
-  },
-  {
-    "title": "微信开源 WeKnora 企业知识框架，统一接入文档与多种模型",
-    "url": "https://github.com/Tencent/WeKnora",
-    "date": "09-21",
-    "source": "腾讯 / GitHub"
-  },
-  {
-    "title": "网信办拟禁止向未成年人提供 AI 虚拟陪伴等生成式服务",
-    "url": "https://www.nfnews.com/content/A6EBpq4xoK.html",
-    "date": "09-21",
-    "source": "南方都市报"
-  },
-  {
-    "title": "剪映发布 Hub 与剪映助手 Agent，一句话生成带素材成片",
-    "url": "https://www.stdaily.com/web/gdxw/2026-09/20/content_584720.html",
-    "date": "09-21",
-    "source": "科技日报"
-  },
-  {
-    "title": "阿里开源 Qwen-Image-2.1 图像模型，细节与文字渲染再升级",
-    "url": "https://qwen.ai/blog?id=qwen-image-2.1",
-    "date": "09-21",
-    "source": "阿里通义千问官方"
-  },
-  {
-    "title": "阿里发布 Qwen3.8-Omni-Flash 全模态模型，实时音视频交互",
-    "url": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
-    "date": "09-21",
-    "source": "阿里通义千问官方"
-  },
-  {
-    "title": "华为昇腾 960 NPO 超节点发布，单柜算力再上台阶",
-    "url": "https://www.news.cn/fortune/20260920/2b08fccf65b046a7b004649520ecb3a3/c.html",
-    "date": "09-21",
-    "source": "新华网"
-  },
-  {
-    "title": "硅基流动完成 B+/C 轮融资近 29 亿元，加速 AI 基础设施",
-    "url": "https://www.163.com/dy/article/L795D6FK0512B07B.html",
-    "date": "09-21",
-    "source": "每日经济新闻"
-  },
-  {
-    "title": "长鑫科技第五代 DRAM（G5）量产，国产存储再突破",
-    "url": "https://news.qq.com/rain/a/20260920A09KPG00",
-    "date": "09-21",
-    "source": "腾讯新闻 / 证券时报"
-  },
-  {
-    "title": "OpenAI 推出 Astra for Law 法律版，配 2.3 亿条法律索引与 26 个插件",
-    "url": "https://openai.com/index/astra-for-law/",
-    "date": "09-18",
-    "source": "OpenAI 官方"
-  },
-  {
-    "title": "Anthropic 开放生命科学验证计划，向合规生物团队放开模型",
-    "url": "https://www.anthropic.com/news/life-sciences-verification-program",
-    "date": "09-18",
-    "source": "Anthropic 官方"
-  },
-  {
-    "title": "xAI Grok Voice 登陆 fal 平台，0.7 秒响应支持 25+ 语言",
-    "url": "https://fal.ai/grok-voice",
-    "date": "09-18",
-    "source": "fal.ai"
-  },
-  {
-    "title": "腾讯开源 BrowserSkill 0.3.0，借用户浏览器帮 Agent 自动操作",
-    "url": "https://ai-tldr.dev/tools/browserskill",
-    "date": "09-18",
-    "source": "腾讯 / GitHub"
-  },
-  {
-    "title": "小米 MiMo-V2.6 公开强化学习训练仪表盘，直播训练全过程",
-    "url": "https://mimo.xiaomi.com/rl",
-    "date": "09-18",
-    "source": "小米 / 通信产业报"
-  },
-  {
-    "title": "谷歌开放 Home MCP，允许 Claude/ChatGPT 等 Agent 控制智能家居",
-    "url": "https://www.unite.ai/google-opens-home-mcp-early-access-to-ai-agents-for-smart-home-control",
-    "date": "09-18",
-    "source": "Unite.AI / 谷歌"
-  },
-  {
-    "title": "谷歌发布 Gemini 3.8 Live 实时语音模型，可后台调工具、支持97种语言",
-    "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/",
-    "date": "09-17",
-    "source": "谷歌官方"
-  },
-  {
-    "title": "阿里 Qwen3.8-27B 登顶 Hugging Face 全球最受欢迎开源模型",
-    "url": "https://www.toutiao.com/article/7686291390255186447/",
-    "date": "09-17",
-    "source": "今日头条"
-  },
-  {
-    "title": "Anthropic 合并 Claude Chat 与 Cowork 为「一个 Claude」，内置 Docs/Slides/Design",
-    "url": "https://www.cnbeta.com.tw/articles/tech/1578298.htm",
-    "date": "09-17",
-    "source": "cnBeta"
-  },
-  {
-    "title": "飞书 8.0 原生集成「豆包工作伙伴」团队智能体",
-    "url": "https://www.stdaily.com/web/gdxw/2026-09/16/content_581901.html",
-    "date": "09-17",
-    "source": "科技日报"
-  },
-  {
-    "title": "vivo 发布四款蓝心大模型与系统级蓝心 Harness",
-    "url": "https://news.qq.com/rain/a/20260916A05VSA00",
-    "date": "09-17",
-    "source": "腾讯新闻"
-  },
-  {
-    "title": "蚂蚁开源大模型安全护栏 SingProbe Infra，边生成边识别风险",
-    "url": "https://news.qq.com/rain/a/20260916A0CSHQ00",
-    "date": "09-17",
-    "source": "腾讯新闻"
-  },
-  {
-    "title": "零跑技术日发布完全自研具身智能机器人",
-    "url": "https://www.stcn.com/article/detail/4188068.html",
-    "date": "09-17",
-    "source": "证券时报"
-  },
-  {
-    "title": "OpenAI 建立模型失配披露框架，首发 6 份异常行为报告",
-    "url": "https://www.unite.ai/openai-launches-misalignment-reporting-framework-with-six-incident-reports",
-    "date": "09-17",
-    "source": "OpenAI 官方 / Unite.AI"
-  },
-  {
-    "title": "香港首份五年规划将 AI 列为重要产业，筹建「AI 城市大脑」",
-    "url": "https://k.sina.com.cn/article_5953466437_162dab0450670bcnys.html",
-    "date": "09-17",
-    "source": "新浪 / 香港政府新闻网"
-  },
-  {
-    "title": "豆包 2.1 Pro 更新至 0915 版，强化证据溯源、Token 成本降三成",
-    "url": "https://www.toutiao.com/article/7686024913283252736/",
-    "date": "09-17",
-    "source": "环球网 / 今日头条"
-  },
-  {
-    "title": "国常会部署加强算力网等规划建设，机构称国产AI算力兑现元年",
-    "url": "https://cls.cn/detail/2367123",
-    "date": "09-16",
-    "source": "财联社"
-  },
-  {
-    "title": "优必选全球首个万台级工业人形机器人工厂投产，每10分钟下线1台",
-    "url": "https://gu.qq.com/resources/shy/news/detail-v2/index.html?t=1#/index?_tentrees_trans=0&id=SN20260916070525950a8ef6",
-    "date": "09-16",
-    "source": "每日经济新闻"
-  },
-  {
-    "title": "国产AI芯片中报盘点：谁真正赚到钱？",
-    "url": "https://new.qq.com/rain/a/20260913A08RJ400",
-    "date": "09-16",
-    "source": "腾讯新闻"
-  },
-  {
-    "title": "DeepSeek一口气扩招150人，加码下一代模型与算力研发",
-    "url": "https://new.qq.com/rain/a/20260913A088R200",
-    "date": "09-16",
-    "source": "腾讯新闻"
-  },
-  {
-    "title": "智谱完成约50亿美元融资，加码下一代大模型与算力基建",
-    "url": "https://gu.qq.com/resources/shy/news/detail-v2/index.html?t=1#/index?_tentrees_trans=0&id=SN2026091409111998581add",
-    "date": "09-16",
-    "source": "腾讯新闻 / 每日经济新闻"
-  },
-  {
-    "title": "智象未来完成C+轮融资，加速多模态生成式AI研发",
-    "url": "https://gu.qq.com/resources/shy/news/detail-v2/index.html?t=1#/index?_tentrees_trans=0&id=SN20260916040629950a697e",
-    "date": "09-16",
-    "source": "每日经济新闻 / 腾讯新闻"
-  },
-  {
-    "title": "紫东太初开源 ZDTaichu5.0-9B，9项空间基准8项第一",
-    "url": "https://www.yicai.com/news/103365002.html",
-    "date": "09-16",
-    "source": "第一财经"
-  },
-  {
-    "title": "《人工智能安全治理框架3.0》于国家网络安全宣传周发布",
-    "url": "https://www.cac.gov.cn/2026-09/14/c_1791137092283345.htm",
-    "date": "09-15",
-    "source": "中央网信办 / 人民网"
-  },
-  {
-    "title": "工信部印发《人工智能中小企业创业支持计划(2026—2028年)》",
-    "url": "https://finance.people.com.cn/BIG5/n1/2026/0914/c1004-40797995.html",
-    "date": "09-15",
-    "source": "人民网 / 工信部"
-  },
-  {
-    "title": "苹果发布新一代 Apple Intelligence，Siri AI 测试版正式上线",
-    "url": "https://www.chinastarmarket.cn/detail/2482879",
-    "date": "09-15",
-    "source": "科创板日报 / 财联社"
-  },
-  {
-    "title": "全球首个 AI+脑机接口医疗器械标准在我国发布",
-    "url": "https://news.cctv.cn/2026/09/14/ARTIGEvdtyIh2TQS45aRyzbd260914.shtml",
-    "date": "09-15",
-    "source": "央视网 / 国家药监局"
-  },
-  {
-    "title": "AI「降速」之争升温：阿莫迪呼吁放缓，中方称威胁叙事无益治理",
-    "url": "https://my-h5news.app.xinhuanet.com/h5/article.html?articleId=20260914ae3ae9c63ccb4cd88f2c8731cf4e37a7",
-    "date": "09-15",
-    "source": "新华网 / 外交部"
-  },
-  {
-    "title": "云知声发布新一代主力模型 U2-Flash，迈向递归自改进(RSI)",
-    "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0915/2026091500090_c.pdf",
-    "date": "09-15",
-    "source": "云知声 / 港交所"
-  },
-  {
-    "title": "上海AI实验室开源书生-S2 多模态大模型，科学任务领先",
-    "url": "https://www.stdaily.com/web/gdxw/2026-09/13/content_580275.html",
-    "date": "09-15",
-    "source": "科技日报 / 上海AI实验室"
-  },
-  {
-    "title": "宇树发布人形机器人 G1+，标准版售价 9.5 万元",
-    "url": "https://finance.sina.com.cn/roll/2026-09-14/doc-iniruxus9388403.shtml",
-    "date": "09-15",
-    "source": "新浪财经 / 北京商报"
-  },
-  {
-    "title": "英伟达在华 AI 芯片份额跌至不足 8%，国产份额突破 60%",
-    "url": "https://finance.jrj.com.cn/2026/09/14225758430285.shtml",
-    "date": "09-15",
-    "source": "金融界 / 网易"
-  },
-  {
-    "title": "小米首款 AI 大模型门锁 5Max 开启预售",
-    "url": "https://www.163.com/dy/article/L6PJ9QGB0534A4SC.html",
-    "date": "09-15",
-    "source": "界面新闻 / 网易"
-  },
-  {
-    "title": "OpenAI 在 ChatGPT Work 推出 Data agent，企业数据一键变交互看板",
-    "url": "https://openai.com/index/put-data-to-work/",
-    "date": "09-11",
-    "source": "OpenAI 官方"
-  },
-  {
-    "title": "宇树开源通用人形机器人基础模型 UnifoLM-WLA-1.0，6B 参数覆盖 64 项任务",
-    "url": "https://tech.ifeng.com/c/8wJ9ZdRDQ8K",
-    "date": "09-11",
-    "source": "凤凰网科技"
-  },
-  {
-    "title": "Anthropic 研究所发布《变革性 AI 的经济情景》工作论文",
-    "url": "https://news.qq.com/rain/a/20260910A09BM300",
-    "date": "09-11",
-    "source": "腾讯新闻"
-  },
-  {
-    "title": "OpenAI 暂停 200 美元 ChatGPT Pro 新订阅，高端算力供给告急",
-    "url": "https://www.36kr.com/p/3978220011928576",
-    "date": "09-11",
-    "source": "36氪"
-  },
-  {
-    "title": "中国商务部回应美方 AI 蒸馏技术指控，指其以国家安全为名行双重标准",
-    "url": "https://www.mofcom.gov.cn/syxwfb/art/2026/art_7f1622463a7c48ef9fad600ce0ef702f.html",
-    "date": "09-11",
-    "source": "商务部官网"
-  },
-  {
-    "title": "英伟达与 Palantir 合作，为主权 AI 供应链打造技术栈",
-    "url": "https://nvidianews.nvidia.com/news/nvidia-and-palantir-bring-sovereign-intelligence-to-critical-supply-chains",
-    "date": "09-11",
-    "source": "NVIDIA 官方"
-  },
-  {
-    "title": "美司法部调查英伟达与 Groq 170 亿美元交易，涉嫌规避反垄断",
-    "url": "https://www.toutiao.com/article/7683844241595892233/",
-    "date": "09-11",
-    "source": "今日头条 / QQ 新闻"
-  },
-  {
-    "title": "OpenAI 任命 AI 对齐权威 Paul Christiano 加入基金会董事会与安全委员会",
-    "url": "https://www.chinastarmarket.cn/detail/2479076",
-    "date": "09-11",
-    "source": "财联社"
-  },
-  {
-    "title": "法律 AI 创企 Harvey 完成 5.5 亿美元融资，估值达 155 亿美元",
-    "url": "https://www.harvey.ai/en-US/blog/harvey-raises-dollar550m-at-a-dollar155b-valuation-to-help-legal-teams-own-their-intelligence",
-    "date": "09-11",
-    "source": "Harvey 官方"
-  },
-  {
-    "title": "DeepSeek V4.1 Flash 正式发布并下调 Flash 系列价格，同时筹备科创板 IPO",
-    "url": "https://new.qq.com/rain/a/20260910A0331J00",
-    "date": "09-10",
-    "source": "科创板日报 / 腾讯新闻"
-  },
-  {
-    "title": "AI 编程独角兽 Cognition 完成 20 亿美元 E 轮，估值 480 亿美元",
-    "url": "https://new.qq.com/rain/a/20260909A02X5U00",
-    "date": "09-10",
-    "source": "腾讯新闻 / IT时代网"
-  },
-  {
-    "title": "Anthropic 复盘 4 起 Claude 越权事故，授权 METR 独立调查",
-    "url": "https://anthropic.com/news/improving-alignment-security-efforts",
-    "date": "09-10",
-    "source": "Anthropic 官方"
-  },
-  {
-    "title": "智元机器人发布 AGILE2.0 感控一体模型，机器人进入「睁眼运动」时代",
-    "url": "https://new.qq.com/rain/a/20260909A08ZJ200",
-    "date": "09-10",
-    "source": "新民晚报 / 腾讯新闻"
-  },
-  {
-    "title": "京东启动「物理AI加速计划」，五年采购 300 万台机器人、布局 80 个 RoboBase",
-    "url": "https://stcn.com/article/detail/4178747.html",
-    "date": "09-10",
-    "source": "证券时报"
-  },
-  {
-    "title": "智象未来 vivago R1 内容创作智能体全球上线，单次可生成 5 分钟视频",
-    "url": "https://new.qq.com/rain/a/20260909A03RKG00",
-    "date": "09-10",
-    "source": "凤凰网科技 / 腾讯新闻"
-  },
-  {
-    "title": "英矽智能 AI 设计药物 Rentosertib 登《自然·生物技术》，可逆转生物学年龄",
-    "url": "https://new.qq.com/rain/a/20260908A0B7FG00",
-    "date": "09-10",
-    "source": "腾讯新闻 / 科普中国"
-  },
-  {
-    "title": "亮源新创发布 Light REACT 全身韧性智能，关节失效可自主恢复",
-    "url": "https://view.inews.qq.com/a/20260909A07LNB00",
-    "date": "09-10",
-    "source": "凤凰网 / 腾讯新闻"
-  },
-  {
-    "title": "Inception 发布扩散语言模型 Mercury 2.5，吞吐达 1107 tokens/秒",
-    "url": "https://www.inceptionlabs.ai/blog/introducing-mercury-2-5",
-    "date": "09-10",
-    "source": "Inception Labs 官方 / 腾讯新闻"
-  },
-  {
-    "title": "优必选上半年交付约 600 台 Walker S2，联手沐曦开发人形机器人专用芯片",
-    "url": "https://view.inews.qq.com/a/20260909A08SJU00",
-    "date": "09-10",
-    "source": "财闻 / 腾讯新闻"
-  },
-  {
-    "title": "DeepSeek V4.1 Flash 中间版开启内测，新架构原生多模态、速度超500 tokens/s",
-    "url": "https://www.oschina.net/news/502383",
-    "date": "09-09",
-    "source": "开源中国"
-  },
-  {
-    "title": "面壁智能开源 MiniCPM5-2B，2B 端侧模型登顶 AA 榜 4B 以下第一",
-    "url": "https://www.sohu.com/a/1073526541_115978",
-    "date": "09-09",
-    "source": "智东西"
-  },
-  {
-    "title": "腾讯文档「AI工作台」上线，基于 WorkBuddy Agent 内核",
-    "url": "https://www.cnr.cn/tech/techph/20260908/t20260908_527808119.shtml",
-    "date": "09-09",
-    "source": "央广网"
-  },
-  {
-    "title": "Meta 发布个人 AI 智能体 Muse，可代发邮件订票",
-    "url": "https://www.ithome.com/0/999/960.htm",
-    "date": "09-09",
-    "source": "IT之家"
-  },
-  {
-    "title": "OpenAI 用万级智能体 88 小时攻克纳维-斯托克斯千年难题",
-    "url": "https://news.qq.com/rain/a/20260909A036K900",
-    "date": "09-09",
-    "source": "凤凰网科技"
-  },
-  {
-    "title": "微信支付智能眼镜 SDK 正式上线，Rokid 首批接入",
-    "url": "https://new.qq.com/rain/a/20260908A06P6G00",
-    "date": "09-09",
-    "source": "腾讯新闻"
-  },
-  {
-    "title": "松延动力推出具身智能子品牌 Scalabot，发布世界模型 HERON",
-    "url": "https://news.qq.com/rain/a/20260908A0ALV300",
-    "date": "09-09",
-    "source": "界面新闻"
-  },
-  {
-    "title": "Mistral 完成 30 亿欧元 D 轮融资，估值超 210 亿欧元",
-    "url": "https://news.qq.com/rain/a/20260908A08A3B00",
-    "date": "09-09",
-    "source": "腾讯新闻"
-  },
-  {
-    "title": "谷歌 DeepMind 发布 AlphaGenome Atlas，预测 90 亿人类基因变异",
-    "url": "https://www.nature.com/articles/d41586-026-02835-4",
-    "date": "09-09",
-    "source": "Nature"
-  },
-  {
-    "title": "亚马逊与高通合作定制 AI 芯片，最高 600 亿美元采购",
-    "url": "https://www.toutiao.com/article/7683315035841577499/",
-    "date": "09-09",
-    "source": "每日经济新闻"
-  },
-  {
-    "title": "最高法发布首部涉AI司法裁判规则，明确人工智能纠纷案件审理意见",
-    "url": "https://www.toutiao.com/article/7682685770909418036/",
-    "date": "09-08",
-    "source": "最高人民法院"
-  },
-  {
-    "title": "华为发布 Mate XT 2 三折叠手机，首发麒麟9050 Pro 与 HarmonyOS 7",
-    "url": "https://www.news.cn/tech/20260907/f5f4d24136004cd480aee192f087f8c2/c.html",
-    "date": "09-08",
-    "source": "新华网"
-  },
-  {
-    "title": "微信视觉团队开源多模态嵌入模型 WeMM-Embedding，日调用破十亿",
-    "url": "https://tech.ifeng.com/c/8wFL1Pu27oS",
-    "date": "09-08",
-    "source": "凤凰网科技"
-  },
-  {
-    "title": "工信部发布「十五五」信息通信业规划：算力目标9800 EFLOPS、布局6G",
-    "url": "https://www.ce.cn/xwzx/gnsz/gdxw/202609/t20260908_3199402.shtml",
-    "date": "09-08",
-    "source": "中国经济网"
-  },
-  {
-    "title": "阿里千问开源 Qwen-Drive-1.0-4B，首个自动驾驶视觉语言基础模型",
-    "url": "https://weibo.com/1798777247/5340539911144845",
-    "date": "09-08",
-    "source": "通义千问"
-  },
-  {
-    "title": "OpenAI 达成「自动化研究实习生」里程碑，首席科学家呼吁放缓研发",
-    "url": "https://news.qq.com/rain/a/20260908A03EF100",
-    "date": "09-08",
-    "source": "腾讯新闻"
-  },
-  {
-    "title": "Anthropic 11个月锁定5170亿美元算力，IPO推迟至11月、估值锚定2万亿",
-    "url": "https://www.163.com/dy/article/L67DH22S05198NMR.html",
-    "date": "09-08",
-    "source": "华尔街见闻"
-  },
-  {
-    "title": "科大讯飞发布星火 X2.5 大模型，MoE 293B-A30B 基于全国产算力",
-    "url": "https://www.sohu.com/a/1072878798_362042",
-    "date": "09-08",
-    "source": "央广网"
-  },
-  {
-    "title": "具身智能企业加速进化 Booster 完成近10亿元融资，一季度出货增500%",
-    "url": "https://ijiwei.com/n/1064285",
-    "date": "09-08",
-    "source": "爱集微"
-  },
-  {
-    "title": "国家反诈 AI App 上线，公安部刑侦局指导、融合大模型反诈",
-    "url": "https://www.workercn.cn/c/2026-09-08/8888083.shtml",
-    "date": "09-08",
-    "source": "中工网"
   }
 ];
