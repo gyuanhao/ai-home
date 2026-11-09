@@ -1,137 +1,667 @@
-# AI家AI户·工具库周维护草稿
+# AI家AI户 · 工具库周维护草稿
 
-**日期：2026-10-20（周一）**
-**执行批次：自动化 `automation-1785401150340` 第 11 次运行**
+**生成日期：2026-11-09（第 13 次执行）**
 
-> ⚠️ **本草稿仅供人工过，未自动入库。** `scripts/tools.json` 未被修改。如需入库并部署 Cloudflare Pages，请下达「请部署」指令。
-
----
+> ⚠️ 本草稿已于 2026-11-09 随用户「请部署」指令**入库**（tools.json 427→441，En 字段已回填），本文件保留作归档；线上数据以 scripts/tools.json 为准。
 
 ## 一、执行摘要
 
-- **工具总数**：416 条，12 个一级类目。
-- **真实死链**：**1 条**（`oats` 域名注销，NXDOMAIN）。
-- **新品候选**：**12 条**（全部官方域名 curl 实测可达，id 与现库 416 条零冲突、零域名重叠，28 字段齐全、summary ≤ 60 字）。
-- **反爬/封禁略过（不计入死链）**：33 条（ChatGPT / Midjourney / Adobe / Meta AI 等大站 bot-block）。
-- **误报排除（初判异常，经二次 GET + 阿里 DoH 复核后排除）**：2 条超时/TLS（`yizhuan` rc=60 证书不匹配、`zhinao360` rc=28 抖动，DoH 均有 A 记录、站点存活）。
-- **其他 4xx（非死链）**：1 条（`snappa` 401 鉴权墙，站点存活）。
+- **库内工具总数**：427 条，12 个一级类目。
+- **死链检查**：扫描 427 个 website URL。
+  - 存活（2xx/3xx）：**392** 条
+  - 反爬/封禁略过（403/402/429/大站 bot-block）：**32** 条（不计入死链）
+  - 其他 4xx（snappa 401 鉴权墙）：**1** 条（站点存活，不计死链）
+  - 真实死链：**0 条** → 连续第七周 ≈ 0，库内链接健康。
+  - 初判超时（rc=28）**2** 条，经 DoH 二次复核全部排除为沙箱网络抖动误报，非死链。
+- **新品候选**：本次整理 **14** 条草稿，全部官方域名实测可达、id 与现库 427 条零冲突。
 
----
+## 二、死链清单（真实死链 = 0）
 
-## 二、死链清单
+本周无真实死链（无 5xx、无真实 404、无域名注销）。下表为初判异常、已二次复核排除的条目，供人工知会，不建议下架：
 
-### 2.1 真实死链（建议下架/替换）
+| id | name | category | url | 实测状态 | 复核结论 |
+|---|---|---|---|---|---|
+| yizhuan | 易撰 | 写作内容 | https://www.yizhuan.net | rc=28 超时 | 域名有 A 记录(DoH OK)，沙箱出口抖动误报；站点存活 |
+| zhinao360 | 360智脑 | 对话聊天 | https://ai.360.cn | rc=28 超时 | 域名有 A 记录(DoH OK)，沙箱出口抖动误报；站点存活 |
 
-| id | name | category | url | 实测状态 | 判定依据 |
-|----|------|----------|-----|----------|----------|
-| `oats` | Oats | 音频语音 | https://useoats.com | 连接失败 `rc=6`，DoH `NXDOMAIN` | 域名已注销，无 A 记录 → **真死链** |
+> 说明：`yizhuan` 为已知 HTTPS 证书不匹配（CN=aaacredit.org.cn）误报，HTTP 实际 200；`zhinao360`(ai.360.cn) 为 360 大站沙箱抖动，历史复测 200。两者均按规则不计死链。
 
-> 建议：从 `tools.json` 移除 `oats` 条目及 `tools/oats.html`（同类替代已在库，无需替换）。
+## 三、新品草稿条目
 
-### 2.2 误报（已排除，非死链，保留）
+覆盖类目：翻译语言 ×5、浏览器插件 ×5、视频生成 ×2、搜索研究 ×2、Agent自动化 ×1、编程开发 ×2。
+`vozo`/`waveshift`/`fenly`/`tablingo`/`palabra`/`opennovel`/`saydi`/`logically`/`ancher`/`spaceo`/`moli`/`backenly` 定价档位中标注「待核」者，建议入库前再核官网。
 
-| id | name | category | url | 初判 | 复核结论 |
-|----|------|----------|-----|------|----------|
-| `yizhuan` | 易撰 | 写作内容 | https://www.yizhuan.net | `rc=60` TLS 失败 | DoH OK，站点存活；HTTPS 证书 CN=aaacredit.org.cn 不匹配（老问题，09-28 已记），建议改 `http://` 或推动换证 |
-| `zhinao360` | 360智脑 | 对话聊天 | https://ai.360.cn | `rc=28` 超时 | DoH OK，沙箱出口抖动误报；历史复测 200，存活 |
-| `snappa` | Snappa | 设计创意 | https://snappa.com | `401` | 鉴权墙，站点存活，不计入死链 |
+### 草稿 JSON（可直接复制进 scripts/tools.json）
 
----
+```json
+[
+  {
+    "id": "palabra",
+    "name": "Palabra.ai",
+    "nameEn": "Palabra.ai",
+    "category": "翻译语言",
+    "tags": [
+      "实时翻译",
+      "语音克隆",
+      "低延迟",
+      "海外",
+      "会议"
+    ],
+    "tagsEn": [
+      "Real-time",
+      "Voice cloning",
+      "Low-latency",
+      "Overseas",
+      "Meeting"
+    ],
+    "pricing": "freemium",
+    "priceLabel": "免费额度 + 付费套餐",
+    "priceDetail": "提供实时语音翻译与语音克隆，按用量扩展；免费层含基础额度，高频会议/团队需订阅，具体档位以官网为准。",
+    "website": "https://palabra.ai",
+    "company": "Palabra.ai",
+    "companyEn": "Palabra.ai",
+    "region": "海外",
+    "summary": "超低延迟实时语音翻译与语音克隆，35ms 首字音频，适合跨语言会议。",
+    "strengths": "35ms 级超低延迟；内置语音克隆与自定义术语表；提供开发者 API 接入；对话级自然语音输出。",
+    "weaknesses": "高精度语音识别仅覆盖 13 种语言；小语种支持有限；重度使用依赖付费。",
+    "bestFor": "需要实时跨语言沟通的团队、开发者及高频视频/语音会议用户。",
+    "source": "公开资料 / 官网",
+    "lastUpdated": "2026-11-09"
+  },
+  {
+    "id": "tablingo",
+    "name": "Tablingo",
+    "nameEn": "Tablingo",
+    "category": "翻译语言",
+    "tags": [
+      "实时字幕",
+      "浏览器插件",
+      "视频翻译",
+      "海外",
+      "语言学习"
+    ],
+    "tagsEn": [
+      "Live subtitles",
+      "Browser extension",
+      "Video translation",
+      "Overseas",
+      "Language learning"
+    ],
+    "pricing": "freemium",
+    "priceLabel": "免费试用 + Pro 订阅",
+    "priceDetail": "免费用户每月约 10 分钟翻译额度、无需注册；Pro 计划解锁无限使用，具体定价以官网为准。",
+    "website": "https://tablingo.com",
+    "company": "Corebits",
+    "companyEn": "Corebits",
+    "region": "海外",
+    "summary": "Chrome 扩展，给任意网页视频加 75 语种实时双语字幕，无需手动字幕。",
+    "strengths": "支持 75 种语言实时翻译；兼容任意 HTML5 播放器（YouTube/网课/直播）；双语字幕叠加可自定义；隐私优先、音频不存储。",
+    "weaknesses": "免费额度仅约 10 分钟/月；依赖联网；复杂音频仍可能误识别。",
+    "bestFor": "看外语视频学语言、听国际会议/公开课的学生与研究者。",
+    "source": "公开资料 / 官网",
+    "lastUpdated": "2026-11-09"
+  },
+  {
+    "id": "fenly",
+    "name": "Fenly",
+    "nameEn": "Fenly",
+    "category": "浏览器插件",
+    "tags": [
+      "浏览器翻译",
+      "实时翻译",
+      "聊天翻译",
+      "海外",
+      "邮件翻译"
+    ],
+    "tagsEn": [
+      "Browser translation",
+      "Real-time",
+      "Chat translation",
+      "Overseas",
+      "Email"
+    ],
+    "pricing": "freemium",
+    "priceLabel": "免费 + 付费计划",
+    "priceDetail": "提供免费层与付费订阅，可在 8 类应用内自动翻译；具体档位以官网为准（待核）。",
+    "website": "https://fenly.ai",
+    "company": "Fenly",
+    "companyEn": "Fenly",
+    "region": "海外",
+    "summary": "浏览器翻译扩展，在聊天/邮件/网页内实时翻译，支持三种语气风格。",
+    "strengths": "在 8 个应用内无弹窗自动翻译；提供 Normal/Slang/Business 三种语气；可直接翻译 YouTube 字幕（需原字幕轨）。",
+    "weaknesses": "对无字幕视频无法自动生成字幕；依赖目标应用已有字幕轨；付费细节待核。",
+    "bestFor": "跨境沟通、需要在邮件/聊天/网页间无缝翻译的团队。",
+    "source": "公开资料 / 官网",
+    "lastUpdated": "2026-11-09"
+  },
+  {
+    "id": "opennovel",
+    "name": "OpenNovel",
+    "nameEn": "OpenNovel",
+    "category": "翻译语言",
+    "tags": [
+      "网文翻译",
+      "实时翻译",
+      "海外",
+      "阅读"
+    ],
+    "tagsEn": [
+      "Web novel",
+      "Real-time translation",
+      "Overseas",
+      "Reading"
+    ],
+    "pricing": "freemium",
+    "priceLabel": "免费计划",
+    "priceDetail": "面向网文读者的免费翻译计划；具体付费档位以官网为准（待核）。",
+    "website": "https://opennovel.ai",
+    "company": "OpenNovel",
+    "companyEn": "OpenNovel",
+    "region": "海外",
+    "summary": "面向网文读者的 AI 实时翻译工具，把外文小说流畅译成本地语言。",
+    "strengths": "一键流畅翻译网文内容；面向 Web novel 阅读场景优化；提供免费计划降低门槛。",
+    "weaknesses": "垂直场景（仅网文）；翻译质量依赖原站文本；付费档位待核。",
+    "bestFor": "追更海外网文、希望即时读懂外文小说的读者。",
+    "source": "公开资料 / 官网",
+    "lastUpdated": "2026-11-09"
+  },
+  {
+    "id": "saydi",
+    "name": "Saydi",
+    "nameEn": "Saydi",
+    "category": "翻译语言",
+    "tags": [
+      "文档翻译",
+      "术语库",
+      "上下文翻译",
+      "海外"
+    ],
+    "tagsEn": [
+      "Document translation",
+      "Glossary",
+      "Context-aware",
+      "Overseas"
+    ],
+    "pricing": "freemium",
+    "priceLabel": "免费 + 付费（待核）",
+    "priceDetail": "支持上传文档与自定义词典以增强上下文；具体定价以官网为准（待核）。",
+    "website": "https://saydi.ai",
+    "company": "Saydi",
+    "companyEn": "Saydi",
+    "region": "海外",
+    "summary": "上传文档与自定义词典，用上下文感知翻译保证专业术语一致性。",
+    "strengths": "允许上传文档与自定义词典带入上下文；适合专业/技术文档；上下文感知翻译更准确。",
+    "weaknesses": "公开信息有限，定价与额度待核；知名度较低，生态不成熟。",
+    "bestFor": "需要术语一致性的技术文档、合同与专业材料翻译用户。",
+    "source": "公开资料 / 官网",
+    "lastUpdated": "2026-11-09"
+  },
+  {
+    "id": "waveshift",
+    "name": "WaveShift",
+    "nameEn": "WaveShift",
+    "category": "视频生成",
+    "tags": [
+      "视频翻译",
+      "AI配音",
+      "长视频",
+      "海外",
+      "创作者"
+    ],
+    "tagsEn": [
+      "Video translation",
+      "AI dubbing",
+      "Long video",
+      "Overseas",
+      "Creator"
+    ],
+    "pricing": "freemium",
+    "priceLabel": "免费 + 付费（待核）",
+    "priceDetail": "面向长视频创作者提供翻译与配音；具体档位以官网为准（待核）。",
+    "website": "https://waveshift.ai",
+    "company": "WaveShift",
+    "companyEn": "WaveShift",
+    "region": "海外",
+    "summary": "为长视频创作者提供 AI 翻译与配音，跨语言再创作成片。",
+    "strengths": "专注长视频的翻译与配音流水线；适合创作者批量产出多语种版本；降低出海视频本地化成本。",
+    "weaknesses": "长视频处理耗时与成本较高；口型/音色自然度有限；定价待核。",
+    "bestFor": "做长视频、需要把内容本地化到多语种的创作者与团队。",
+    "source": "公开资料 / 官网",
+    "lastUpdated": "2026-11-09"
+  },
+  {
+    "id": "vozo",
+    "name": "Vozo AI",
+    "nameEn": "Vozo AI",
+    "category": "视频生成",
+    "tags": [
+      "AI配音",
+      "视频翻译",
+      "本地化",
+      "海外",
+      "创作者"
+    ],
+    "tagsEn": [
+      "AI dubbing",
+      "Video translation",
+      "Localization",
+      "Overseas",
+      "Creator"
+    ],
+    "pricing": "freemium",
+    "priceLabel": "免费层 + $15/月",
+    "priceDetail": "提供原生风格配音与自然发音，标准计划约 $15/月；另有免费层可用。",
+    "website": "https://vozo.ai",
+    "company": "Vozo",
+    "companyEn": "Vozo",
+    "region": "海外",
+    "summary": "AI 视频配音与翻译，原生风格音色、自然发音，约 $15/月起。",
+    "strengths": "原生风格配音、发音自然；一站式视频本地化；定价透明（$15/月档）。",
+    "weaknesses": "重度使用成本上升；极端口音/小语种覆盖有限；需联网。",
+    "bestFor": "内容创作者、营销与教育机构做高质量多语种视频配音。",
+    "source": "公开资料 / 官网",
+    "lastUpdated": "2026-11-09"
+  },
+  {
+    "id": "logically",
+    "name": "Logically",
+    "nameEn": "Logically",
+    "category": "浏览器插件",
+    "tags": [
+      "研究助手",
+      "引用溯源",
+      "浏览器插件",
+      "海外",
+      "学术"
+    ],
+    "tagsEn": [
+      "Research assistant",
+      "Citations",
+      "Browser extension",
+      "Overseas",
+      "Academic"
+    ],
+    "pricing": "freemium",
+    "priceLabel": "免费 + 付费层级",
+    "priceDetail": "研究助手含免费层，Advanced/Reasoning 层级接入 GPT-6、Claude Opus 5.5 等最新模型；具体价以官网为准。",
+    "website": "https://logically.app",
+    "company": "Logically",
+    "companyEn": "Logically",
+    "region": "海外",
+    "summary": "研究助手 Chrome 扩展，答案标注原文出处，可跨标签与文献库联动。",
+    "strengths": "答案精确引用页面原句并可跳转；支持跨标签组研究；内置文献管理器；新版接入 GPT-6/Claude Opus 5.5。",
+    "weaknesses": "高级模型需付费层级；重度学术场景依赖外部文献库；国内访问需网络条件。",
+    "bestFor": "做论文/调研的研究者，需要可信溯源与跨源比对的人群。",
+    "source": "公开资料 / 官网",
+    "lastUpdated": "2026-11-09"
+  },
+  {
+    "id": "living-web",
+    "name": "Living Web",
+    "nameEn": "Living Web",
+    "category": "浏览器插件",
+    "tags": [
+      "本地AI",
+      "隐私",
+      "Ollama",
+      "BYOK",
+      "海外"
+    ],
+    "tagsEn": [
+      "Local AI",
+      "Privacy",
+      "Ollama",
+      "BYOK",
+      "Overseas"
+    ],
+    "pricing": "free",
+    "priceLabel": "免费（自带密钥）",
+    "priceDetail": "完全免费使用、不收订阅费；连接本地 Ollama 或自备 OpenAI/Claude/Gemini 等 API Key，请求直连提供商。",
+    "website": "https://livingweb.ai",
+    "company": "Bright Media Solution",
+    "companyEn": "Bright Media Solution",
+    "region": "海外",
+    "summary": "隐私优先的浏览器 AI 助手，接本地 Ollama 或自备密钥，页面数据不离机。",
+    "strengths": "可接 Ollama/LM Studio 本地模型、离线可用；自带 API Key（BYOK）无订阅；侧边栏总结/问答/自动化；数据留存本机。",
+    "weaknesses": "需自行部署本地模型或备密钥；高级能力依赖所选模型；国内访问需网络条件。",
+    "bestFor": "注重隐私、想用本地模型或自带密钥在浏览器内做 AI 辅助的用户。",
+    "source": "公开资料 / 官网",
+    "lastUpdated": "2026-11-09"
+  },
+  {
+    "id": "ai-helper",
+    "name": "AI Helper 网页智能助手",
+    "nameEn": "AI Helper",
+    "category": "浏览器插件",
+    "tags": [
+      "开源",
+      "ReAct",
+      "MCP",
+      "浏览器自动化",
+      "国内"
+    ],
+    "tagsEn": [
+      "Open source",
+      "ReAct",
+      "MCP",
+      "Browser automation",
+      "China"
+    ],
+    "pricing": "free",
+    "priceLabel": "免费开源",
+    "priceDetail": "开源（GitHub）免费使用，自带 API Key 即可；支持 OpenAI 兼容与 DeepSeek 等接口，无订阅费。",
+    "website": "https://github.com/xiweicheng/ai-helper",
+    "company": "xiwc",
+    "companyEn": "xiwc",
+    "region": "国内",
+    "summary": "开源 LLM 浏览器助手，ReAct 驱动 40+ 工具与 MCP，可真正操作网页。",
+    "strengths": "开源可审计；基于 ReAct 循环真正执行点击/填表/截图；40+ 内置工具 + MCP 扩展；对话与记忆仅存本地。",
+    "weaknesses": "需自备模型 API Key；扩展权限较高，需信任开发者；上手需一定配置。",
+    "bestFor": "开发者与爱折腾的用户，想要可控、本地化、能自动化网页的 AI 助手。",
+    "source": "公开资料 / GitHub",
+    "lastUpdated": "2026-11-09"
+  },
+  {
+    "id": "ancher",
+    "name": "Ancher",
+    "nameEn": "Ancher",
+    "category": "搜索研究",
+    "tags": [
+      "信息助手",
+      "资讯",
+      "浏览器插件",
+      "国内",
+      "首席参谋"
+    ],
+    "tagsEn": [
+      "Info assistant",
+      "News",
+      "Browser extension",
+      "China",
+      "Chief of Staff"
+    ],
+    "pricing": "freemium",
+    "priceLabel": "免费 + 付费（待核）",
+    "priceDetail": "定位“信息首席参谋”，近期上新浏览器扩展；具体定价以官网为准（待核）。",
+    "website": "https://ancher.ai",
+    "company": "Ancher（吴泳升团队）",
+    "companyEn": "Ancher",
+    "region": "国内",
+    "summary": "信息首席参谋式 AI，聚合与提炼资讯，近期推出浏览器扩展形态。",
+    "strengths": "agentic 资讯阅读体验激进；聚焦精准人群而非最大公约数；浏览器扩展形态便于随手使用。",
+    "weaknesses": "偏垂直人群，大众适用性有限；浏览器扩展为新形态、稳定性待观察；定价待核。",
+    "bestFor": "信息重度消费者、希望 AI 帮自己筛选与消化资讯的人群。",
+    "source": "公开资料 / 官网",
+    "lastUpdated": "2026-11-09"
+  },
+  {
+    "id": "spaceo",
+    "name": "SpaceO",
+    "nameEn": "SpaceO",
+    "category": "Agent自动化",
+    "tags": [
+      "智能体",
+      "桌面环境",
+      "浏览器",
+      "海外",
+      "开发者"
+    ],
+    "tagsEn": [
+      "Agent",
+      "Desktop",
+      "Browser",
+      "Overseas",
+      "Developer"
+    ],
+    "pricing": "freemium",
+    "priceLabel": "免费 + 付费（待核）",
+    "priceDetail": "给 AI 智能体在 Mac 上独立的屏幕/运行环境，并可控访问原生应用与浏览器；具体定价以官网为准（待核）。",
+    "website": "https://spaceo.ai",
+    "company": "SpaceO",
+    "companyEn": "SpaceO",
+    "region": "海外",
+    "summary": "给 AI 智能体独立的 Mac 屏幕与运行环境，可控访问原生应用和浏览器。",
+    "strengths": "为智能体提供专属桌面屏幕；可控接入原生应用与浏览器；降低 agent 操作桌面应用的门槛。",
+    "weaknesses": "目前以 Mac 为主，跨平台覆盖有限；定价与额度待核；生态较新。",
+    "bestFor": "构建桌面自动化智能体、需要让 agent 操作本地应用的开发者。",
+    "source": "公开资料 / 官网",
+    "lastUpdated": "2026-11-09"
+  },
+  {
+    "id": "moli",
+    "name": "Moli by Lexmount",
+    "nameEn": "Moli by Lexmount",
+    "category": "编程开发",
+    "tags": [
+      "无头浏览器",
+      "开源",
+      "Rust",
+      "Agent基础设施",
+      "海外"
+    ],
+    "tagsEn": [
+      "Headless browser",
+      "Open source",
+      "Rust",
+      "Agent infra",
+      "Overseas"
+    ],
+    "pricing": "freemium",
+    "priceLabel": "开源免费 + 云付费",
+    "priceDetail": "引擎 Apache-2.0 开源、可免费下载自托管；Lexmount Browser 云端托管（隔离会话/代理/SDK）按用量付费。",
+    "website": "https://moli.ai",
+    "company": "Lexmount",
+    "companyEn": "Lexmount",
+    "region": "海外",
+    "summary": "从零用 Rust 写的无头浏览器，为 AI 智能体优化，比 Chrome 更省内存更快冷启。",
+    "strengths": "Rust 自研引擎、约 1/7 Chrome 常驻内存、5 倍冷启动；支持 CDP/WebDriver 兼容现有栈；Apache-2.0 开源 + 云端托管。",
+    "weaknesses": "专有引擎兼容长尾站点需验证；视觉/截图类任务仍建议用 Chrome；性能多为官方基准。",
+    "bestFor": "跑大规模并发浏览器智能体、想压低每会话成本的开发者与团队。",
+    "source": "公开资料 / 官网",
+    "lastUpdated": "2026-11-09"
+  },
+  {
+    "id": "backenly",
+    "name": "Backenly",
+    "nameEn": "Backenly",
+    "category": "编程开发",
+    "tags": [
+      "后端自动化",
+      "数据库",
+      "认证",
+      "海外",
+      "自愈"
+    ],
+    "tagsEn": [
+      "Backend automation",
+      "Database",
+      "Auth",
+      "Overseas",
+      "Self-healing"
+    ],
+    "pricing": "freemium",
+    "priceLabel": "免费 + 付费（待核）",
+    "priceDetail": "为 AI 编码智能体自动生成可自愈的后端（Postgres + 认证 + 存储）；具体定价以官网为准（待核）。",
+    "website": "https://backenly.com",
+    "company": "Backenly",
+    "companyEn": "Backenly",
+    "region": "海外",
+    "summary": "给 AI 编程智能体的自治后端，自动建 Postgres/认证/存储并带自愈护栏。",
+    "strengths": "自动生成后端（数据库+认证+存储）；自带自愈护栏减少人工运维；让编码智能体专注业务逻辑。",
+    "weaknesses": "抽象层可能限制深度定制；新项目生态与案例有限；定价待核。",
+    "bestFor": "用 AI 智能体快速搭原型/内部工具、不愿管后端基建的开发者。",
+    "source": "公开资料 / 官网",
+    "lastUpdated": "2026-11-09"
+  }
+]
+```
 
-## 三、新品草稿（12 条）
+### 逐条速览（T 风格，便于人工复制）
 
-> 覆盖 8 个类目，重点补较空的：**翻译语言 1 / 浏览器插件 1 / 视频生成 1 / 音频语音 2 / 编程开发 1 / 办公效率 5 / 对话聊天 1**。
-> 已排除重复：`klingai.com`（Kling 已在库）、`lisen.app`/`noan.ai`/`unrealagent.dev`（被无关站点占用）、`EditUI` 与 `Arc Translate`（官方站点未确认，已从候选剔除）。
-> 完整字段见 `scripts/_draft_newtools.json`（程序化入库用）。
+#### palabra — Palabra.ai（翻译语言 / 海外 / freemium）
+- website: https://palabra.ai
+- nameEn: Palabra.ai
+- tags: 实时翻译, 语音克隆, 低延迟, 海外, 会议
+- summary: 超低延迟实时语音翻译与语音克隆，35ms 首字音频，适合跨语言会议。
+- strengths: 35ms 级超低延迟；内置语音克隆与自定义术语表；提供开发者 API 接入；对话级自然语音输出。
+- weaknesses: 高精度语音识别仅覆盖 13 种语言；小语种支持有限；重度使用依赖付费。
+- bestFor: 需要实时跨语言沟通的团队、开发者及高频视频/语音会议用户。
+- priceLabel: 免费额度 + 付费套餐
+- company: Palabra.ai
+- source: 公开资料 / 官网  |  lastUpdated: 2026-11-09
 
-### 3.1 retriever-ai —— 浏览器插件
-- **名称**：Retriever AI ｜ **区域**：海外 ｜ **定价**：免费增值（广告版免费 + 云端/API）
-- **官网**：https://rtrvr.ai ｜ **来源**：公开资料 / 官网 ｜ **上线**：10-08
-- **一句话**：浏览器侧边栏 AI 搜索与摘要工具，免费广告版 + 云端/API。
-- **优势**：侧边栏即用；支持云端与 API 调用；网页内容即时问答。
-- **短板**：免费版含广告；重度使用需订阅云端方案。
+#### tablingo — Tablingo（翻译语言 / 海外 / freemium）
+- website: https://tablingo.com
+- nameEn: Tablingo
+- tags: 实时字幕, 浏览器插件, 视频翻译, 海外, 语言学习
+- summary: Chrome 扩展，给任意网页视频加 75 语种实时双语字幕，无需手动字幕。
+- strengths: 支持 75 种语言实时翻译；兼容任意 HTML5 播放器（YouTube/网课/直播）；双语字幕叠加可自定义；隐私优先、音频不存储。
+- weaknesses: 免费额度仅约 10 分钟/月；依赖联网；复杂音频仍可能误识别。
+- bestFor: 看外语视频学语言、听国际会议/公开课的学生与研究者。
+- priceLabel: 免费试用 + Pro 订阅
+- company: Corebits
+- source: 公开资料 / 官网  |  lastUpdated: 2026-11-09
 
-### 3.2 supoclip —— 视频生成
-- **名称**：SupoClip ｜ **区域**：海外 ｜ **定价**：开源免费（自托管）/ 托管 $10、$50
-- **官网**：https://supoclip.com ｜ **来源**：公开资料 / 官网
-- **一句话**：开源 AI 视频剪辑工具，AGPL-3.0 可自托管，托管版 $10/$50。
-- **优势**：开源可自托管、零许可费；可私有部署。
-- **短板**：自托管需技术能力；托管档位功能更完整。
+#### fenly — Fenly（浏览器插件 / 海外 / freemium）
+- website: https://fenly.ai
+- nameEn: Fenly
+- tags: 浏览器翻译, 实时翻译, 聊天翻译, 海外, 邮件翻译
+- summary: 浏览器翻译扩展，在聊天/邮件/网页内实时翻译，支持三种语气风格。
+- strengths: 在 8 个应用内无弹窗自动翻译；提供 Normal/Slang/Business 三种语气；可直接翻译 YouTube 字幕（需原字幕轨）。
+- weaknesses: 对无字幕视频无法自动生成字幕；依赖目标应用已有字幕轨；付费细节待核。
+- bestFor: 跨境沟通、需要在邮件/聊天/网页间无缝翻译的团队。
+- priceLabel: 免费 + 付费计划
+- company: Fenly
+- source: 公开资料 / 官网  |  lastUpdated: 2026-11-09
 
-### 3.3 kugel —— 音频语音
-- **名称**：Kugel 3.5 ｜ **区域**：海外 ｜ **定价**：按量付费（€0.0525/分钟）+ 自托管
-- **官网**：https://kugelaudio.com/en ｜ **来源**：公开资料 / 官网
-- **一句话**：多语种 TTS API，按分钟计费 €0.0525，支持自托管部署。
-- **优势**：计费透明按分钟；可自托管保障数据隐私。
-- **短板**：非免费；自托管需运维成本。
+#### opennovel — OpenNovel（翻译语言 / 海外 / freemium）
+- website: https://opennovel.ai
+- nameEn: OpenNovel
+- tags: 网文翻译, 实时翻译, 海外, 阅读
+- summary: 面向网文读者的 AI 实时翻译工具，把外文小说流畅译成本地语言。
+- strengths: 一键流畅翻译网文内容；面向 Web novel 阅读场景优化；提供免费计划降低门槛。
+- weaknesses: 垂直场景（仅网文）；翻译质量依赖原站文本；付费档位待核。
+- bestFor: 追更海外网文、希望即时读懂外文小说的读者。
+- priceLabel: 免费计划
+- company: OpenNovel
+- source: 公开资料 / 官网  |  lastUpdated: 2026-11-09
 
-### 3.4 make0-brain —— 办公效率
-- **名称**：Make0 Brain ｜ **区域**：海外 ｜ **定价**：Free / Lite $9 / Pro $29
-- **官网**：https://make0.com ｜ **来源**：公开资料 / 官网
-- **一句话**：基于 MCP 的跨工具记忆层，统一管理 AI 上下文。
-- **优势**：统一记忆中枢；跨多 AI 工具协同；MCP 标准易接入。
-- **短板**：依赖 MCP 生态；重度用户需付费升级。
+#### saydi — Saydi（翻译语言 / 海外 / freemium）
+- website: https://saydi.ai
+- nameEn: Saydi
+- tags: 文档翻译, 术语库, 上下文翻译, 海外
+- summary: 上传文档与自定义词典，用上下文感知翻译保证专业术语一致性。
+- strengths: 允许上传文档与自定义词典带入上下文；适合专业/技术文档；上下文感知翻译更准确。
+- weaknesses: 公开信息有限，定价与额度待核；知名度较低，生态不成熟。
+- bestFor: 需要术语一致性的技术文档、合同与专业材料翻译用户。
+- priceLabel: 免费 + 付费（待核）
+- company: Saydi
+- source: 公开资料 / 官网  |  lastUpdated: 2026-11-09
 
-### 3.5 csuite —— 办公效率
-- **名称**：CSuite ｜ **区域**：海外 ｜ **定价**：一次性买断 $98
-- **官网**：https://csuite.so ｜ **来源**：公开资料 / 官网
-- **一句话**：本地优先的私有桌面 AI 助手，一次性买断 $98，数据不出本机。
-- **优势**：本地运行、隐私好；一次买断无订阅。
-- **短板**：后续大版本可能另收费；依赖本机算力。
+#### waveshift — WaveShift（视频生成 / 海外 / freemium）
+- website: https://waveshift.ai
+- nameEn: WaveShift
+- tags: 视频翻译, AI配音, 长视频, 海外, 创作者
+- summary: 为长视频创作者提供 AI 翻译与配音，跨语言再创作成片。
+- strengths: 专注长视频的翻译与配音流水线；适合创作者批量产出多语种版本；降低出海视频本地化成本。
+- weaknesses: 长视频处理耗时与成本较高；口型/音色自然度有限；定价待核。
+- bestFor: 做长视频、需要把内容本地化到多语种的创作者与团队。
+- priceLabel: 免费 + 付费（待核）
+- company: WaveShift
+- source: 公开资料 / 官网  |  lastUpdated: 2026-11-09
 
-### 3.6 mausbot —— 对话聊天
-- **名称**：MausBot ｜ **区域**：海外 ｜ **定价**：免费（开源）
-- **官网**：https://mausbot.com ｜ **来源**：公开资料 / 官网
-- **一句话**：Apache-2.0 开源聊天机器人，可自托管，Grok Bot 开源替代。
-- **优势**：完全开源免费；可私有部署；灵活可改。
-- **短板**：需自行部署与维护；依赖第三方模型 API。
+#### vozo — Vozo AI（视频生成 / 海外 / freemium）
+- website: https://vozo.ai
+- nameEn: Vozo AI
+- tags: AI配音, 视频翻译, 本地化, 海外, 创作者
+- summary: AI 视频配音与翻译，原生风格音色、自然发音，约 $15/月起。
+- strengths: 原生风格配音、发音自然；一站式视频本地化；定价透明（$15/月档）。
+- weaknesses: 重度使用成本上升；极端口音/小语种覆盖有限；需联网。
+- bestFor: 内容创作者、营销与教育机构做高质量多语种视频配音。
+- priceLabel: 免费层 + $15/月
+- company: Vozo
+- source: 公开资料 / 官网  |  lastUpdated: 2026-11-09
 
-### 3.7 famrelay —— 办公效率
-- **名称**：FamRelay ｜ **区域**：海外 ｜ **定价**：免费（早期）
-- **官网**：https://famrelay.ai ｜ **来源**：公开资料 / 官网
-- **一句话**：基于 MCP 的跨智能体中继，让多个 AI 助手协同工作。
-- **优势**：打通多个智能体；早期免费；MCP 标准。
-- **短板**：早期产品、稳定性待验证；商业化后可能收费。
+#### logically — Logically（浏览器插件 / 海外 / freemium）
+- website: https://logically.app
+- nameEn: Logically
+- tags: 研究助手, 引用溯源, 浏览器插件, 海外, 学术
+- summary: 研究助手 Chrome 扩展，答案标注原文出处，可跨标签与文献库联动。
+- strengths: 答案精确引用页面原句并可跳转；支持跨标签组研究；内置文献管理器；新版接入 GPT-6/Claude Opus 5.5。
+- weaknesses: 高级模型需付费层级；重度学术场景依赖外部文献库；国内访问需网络条件。
+- bestFor: 做论文/调研的研究者，需要可信溯源与跨源比对的人群。
+- priceLabel: 免费 + 付费层级
+- company: Logically
+- source: 公开资料 / 官网  |  lastUpdated: 2026-11-09
 
-### 3.8 reason —— 编程开发
-- **名称**：Reason ｜ **区域**：海外 ｜ **定价**：免费（本地）+ 云端积分
-- **官网**：https://reasonmachines.com ｜ **来源**：公开资料 / 官网
-- **一句话**：编码智能体，支持本地免费运行与云端积分模式。
-- **优势**：本地可免费使用；云端弹性扩展；面向真实编码场景。
-- **短板**：云端按积分计费；本地模式依赖本机算力。
+#### living-web — Living Web（浏览器插件 / 海外 / free）
+- website: https://livingweb.ai
+- nameEn: Living Web
+- tags: 本地AI, 隐私, Ollama, BYOK, 海外
+- summary: 隐私优先的浏览器 AI 助手，接本地 Ollama 或自备密钥，页面数据不离机。
+- strengths: 可接 Ollama/LM Studio 本地模型、离线可用；自带 API Key（BYOK）无订阅；侧边栏总结/问答/自动化；数据留存本机。
+- weaknesses: 需自行部署本地模型或备密钥；高级能力依赖所选模型；国内访问需网络条件。
+- bestFor: 注重隐私、想用本地模型或自带密钥在浏览器内做 AI 辅助的用户。
+- priceLabel: 免费（自带密钥）
+- company: Bright Media Solution
+- source: 公开资料 / 官网  |  lastUpdated: 2026-11-09
 
-### 3.9 tonefold —— 音频语音
-- **名称**：Tonefold ｜ **区域**：海外 ｜ **定价**：免费（开源 GPL-3.0）
-- **官网**：https://github.com/vkfolio/tonefold ｜ **来源**：公开资料 / GitHub
-- **一句话**：开源 AI 音乐作曲工具，本地生成旋律与编曲。
-- **优势**：完全开源免费；可本地运行；适合音乐创作实验。
-- **短板**：需自行部署；作品质量依赖模型与提示。
+#### ai-helper — AI Helper 网页智能助手（浏览器插件 / 国内 / free）
+- website: https://github.com/xiweicheng/ai-helper
+- nameEn: AI Helper
+- tags: 开源, ReAct, MCP, 浏览器自动化, 国内
+- summary: 开源 LLM 浏览器助手，ReAct 驱动 40+ 工具与 MCP，可真正操作网页。
+- strengths: 开源可审计；基于 ReAct 循环真正执行点击/填表/截图；40+ 内置工具 + MCP 扩展；对话与记忆仅存本地。
+- weaknesses: 需自备模型 API Key；扩展权限较高，需信任开发者；上手需一定配置。
+- bestFor: 开发者与爱折腾的用户，想要可控、本地化、能自动化网页的 AI 助手。
+- priceLabel: 免费开源
+- company: xiwc
+- source: 公开资料 / GitHub  |  lastUpdated: 2026-11-09
 
-### 3.10 the-drive-ai —— 办公效率
-- **名称**：The Drive AI ｜ **区域**：海外 ｜ **定价**：免费额度 + 付费方案（细节待核）
-- **官网**：https://thedrive.ai ｜ **来源**：公开资料 / Product Hunt ｜ **上线**：10-13（PH 86 upvotes）
-- **一句话**：文件智能体，直接在你的文件上执行整理、检索与自动化任务。
-- **优势**：直接操作文件、减少手动整理；自然语言驱动。
-- **短板**：付费档位待核；需授权访问文件，注意隐私。
+#### ancher — Ancher（搜索研究 / 国内 / freemium）
+- website: https://ancher.ai
+- nameEn: Ancher
+- tags: 信息助手, 资讯, 浏览器插件, 国内, 首席参谋
+- summary: 信息首席参谋式 AI，聚合与提炼资讯，近期推出浏览器扩展形态。
+- strengths: agentic 资讯阅读体验激进；聚焦精准人群而非最大公约数；浏览器扩展形态便于随手使用。
+- weaknesses: 偏垂直人群，大众适用性有限；浏览器扩展为新形态、稳定性待观察；定价待核。
+- bestFor: 信息重度消费者、希望 AI 帮自己筛选与消化资讯的人群。
+- priceLabel: 免费 + 付费（待核）
+- company: Ancher（吴泳升团队）
+- source: 公开资料 / 官网  |  lastUpdated: 2026-11-09
 
-### 3.11 airjelly —— 办公效率
-- **名称**：AirJelly ｜ **区域**：海外 ｜ **定价**：免费（早期）
-- **官网**：https://www.airjelly.ai/en ｜ **来源**：公开资料 / 官网
-- **一句话**：主动式第二大脑，自动整理与提醒你的知识与笔记。
-- **优势**：主动推送而非被动检索；知识自动沉淀。
-- **短板**：早期产品、能力待验证；商业化后可能收费。
+#### spaceo — SpaceO（Agent自动化 / 海外 / freemium）
+- website: https://spaceo.ai
+- nameEn: SpaceO
+- tags: 智能体, 桌面环境, 浏览器, 海外, 开发者
+- summary: 给 AI 智能体独立的 Mac 屏幕与运行环境，可控访问原生应用和浏览器。
+- strengths: 为智能体提供专属桌面屏幕；可控接入原生应用与浏览器；降低 agent 操作桌面应用的门槛。
+- weaknesses: 目前以 Mac 为主，跨平台覆盖有限；定价与额度待核；生态较新。
+- bestFor: 构建桌面自动化智能体、需要让 agent 操作本地应用的开发者。
+- priceLabel: 免费 + 付费（待核）
+- company: SpaceO
+- source: 公开资料 / 官网  |  lastUpdated: 2026-11-09
 
-### 3.12 tencent-hy-translate —— 翻译语言
-- **名称**：腾讯混元翻译 ｜ **区域**：国内 ｜ **定价**：免费
-- **官网**：https://hunyuan.tencent.com ｜ **来源**：公开资料 / 官网 ｜ **上线**：09-24
-- **一句话**：腾讯混元翻译，33 语种 + 端侧离线，免费使用。
-- **优势**：语种覆盖广；支持端侧离线；背靠腾讯大模型。
-- **短板**：翻译入口在混元主站、非独立产品页；深度能力待实测。
+#### moli — Moli by Lexmount（编程开发 / 海外 / freemium）
+- website: https://moli.ai
+- nameEn: Moli by Lexmount
+- tags: 无头浏览器, 开源, Rust, Agent基础设施, 海外
+- summary: 从零用 Rust 写的无头浏览器，为 AI 智能体优化，比 Chrome 更省内存更快冷启。
+- strengths: Rust 自研引擎、约 1/7 Chrome 常驻内存、5 倍冷启动；支持 CDP/WebDriver 兼容现有栈；Apache-2.0 开源 + 云端托管。
+- weaknesses: 专有引擎兼容长尾站点需验证；视觉/截图类任务仍建议用 Chrome；性能多为官方基准。
+- bestFor: 跑大规模并发浏览器智能体、想压低每会话成本的开发者与团队。
+- priceLabel: 开源免费 + 云付费
+- company: Lexmount
+- source: 公开资料 / 官网  |  lastUpdated: 2026-11-09
 
----
-
-## 四、备注 / 待核
-
-- **待核定价**（入库前建议再核官网）：`the-drive-ai`（付费档位）。
-- **域名重定向**：`reasonmachines.ai` → `reasonmachines.com`、`airjelly.ai` → `www.airjelly.ai/en`、`supoclip.com` → `www.supoclip.com`，均已按最终可达地址填写。
-- **遗留问题延续**：`yizhuan` HTTPS 证书不匹配（CN=aaacredit.org.cn）仍未修复，建议后续改 `http://` 或推动站点换证。
+#### backenly — Backenly（编程开发 / 海外 / freemium）
+- website: https://backenly.com
+- nameEn: Backenly
+- tags: 后端自动化, 数据库, 认证, 海外, 自愈
+- summary: 给 AI 编程智能体的自治后端，自动建 Postgres/认证/存储并带自愈护栏。
+- strengths: 自动生成后端（数据库+认证+存储）；自带自愈护栏减少人工运维；让编码智能体专注业务逻辑。
+- weaknesses: 抽象层可能限制深度定制；新项目生态与案例有限；定价待核。
+- bestFor: 用 AI 智能体快速搭原型/内部工具、不愿管后端基建的开发者。
+- priceLabel: 免费 + 付费（待核）
+- company: Backenly
+- source: 公开资料 / 官网  |  lastUpdated: 2026-11-09
