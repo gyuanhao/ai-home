@@ -215,3 +215,52 @@
 - **线上复验（约 80s 生效，BASE=https://myaishome.com）**：`scripts/tools.json` 解析 **427 条**、12 新工具 **12/12** 在线、`oats` 已不在；12 个详情页干净 URL 全部 **200**、`/tools/oats` 返回 **404**；首页 420+ ×6 / 410+ ×0，/tools 标题「420+ 款 AI 工具对比」×7；内容抽验（tencent-hy-translate 含腾讯混元/33/hunyuan，retriever-ai 含 rtrvr.ai）正常。
 - 遗留：`yizhuan` HTTPS 证书不匹配（CN=aaacredit.org.cn）延续，建议改 http:// 或推动站点换证。
 - **本次维护闭环：草稿→入库→下架→重建→部署→线上验证，无残留差异。**
+
+## 2026-11-02（第十二次执行，本周）
+- 工具总数 427 条，12 个一级类目。死链检查复用 `scripts/_check_links.py`（线程池 32 + 阿里 DoH 二次复核），结果落 `_linkcheck_result.json`。
+- 扫描结果：**OK 391 / 反爬略过(bot-block) 34 / 其他4xx(snappa 401 鉴权墙) 1 / 连接超时误报 1**。
+  - **真实死链 0 条 → 连续第六周 ≈ 0，库内链接健康，无需下架/替换。**
+  - 唯一初判死链 `yizhuan`（rc=28 超时）经 DoH 复核排除：域名有 A 记录、HTTP 服务存活，属已知 HTTPS 证书不匹配（CN=aaacredit.org.cn）误报，按规则不计死链。
+  - `snappa`（401）鉴权墙，站点存活，不计死链。
+- 新品草稿 **13 条**，全部官方域名 curl 实测 2xx、id 与现库 427 条零冲突、零域名重叠，19 字段齐全、summary≤60字（最长 59）。覆盖 8 类目，重点补较空的「翻译语言1 / 写作内容2 / 视频生成1 / 对话聊天1 / 搜索研究3 / 浏览器插件3 / Agent自动化1 / 编程开发1」：
+  - 翻译语言：sponkly（实时语音翻译 32 语种）
+  - 浏览器插件：chatcarton（对话导出）、pandaextract（无代码抓取）、promptstorm（提示词库）
+  - Agent自动化：causo（GTM 研究+外呼 Agent）
+  - 写作内容：rewritegpt、wpwand（WordPress SEO 写作）
+  - 编程开发：asobeast（开源 ASO 排名+MCP）
+  - 搜索研究：last30days（开源 Agent 搜索引擎, MIT）、alphasense（SuperAnalyst 金融研究 Agent）、quello（可溯源第二大脑）
+  - 对话聊天：ownai（开源本地 AI 伴侣）
+  - 视频生成：vidau（AI 视频广告）
+  - **正确 URL 修正**：Quello 实为 `quello.dev`（非 .ai/.com）；Own 1 实为 `ownai.com`（"Own 1" 即 ownAI）；buildt.ai 302→cosine.sh（已收购重定向，弃用）。
+  - 标注「待核」档位 7 条（sponkly/causo/rewritegpt/asobeast/promptstorm/pandaextract/wpwand/vidau 付费细节）建议入库前再核官网定价；alphasense 为企业级定价，个人用户门槛高，已注明。
+- 交付物：`scripts/_draft_weekly.md`（开头注明「仅供人工过，未自动入库」，tools.json 未改动，git status 已确认）+ `scripts/_draft_newtools.json`（纯 JSON，便于程序化入库）；生成脚本 `scripts/_gen_draft_1102.py`。
+- **本次为只读维护，未自动入库**（自动化 prompt 仅要求产出草稿报告）。如需像 08-17/08-24/09-14/09-23/10-12/10-20 那样直接入库并部署 Cloudflare Pages，需用户明确「请部署」指令。
+
+## 2026-11-09（第十三次执行，本周）
+- 工具总数 427 条，12 个一级类目。死链检查复用 `scripts/_check_links.py`（线程池 32 + 阿里 DoH 二次复核），结果落 `_linkcheck_result.json`。
+- 扫描结果：**OK 392 / 反爬略过(bot-block) 32 / 其他4xx(snappa 401) 1 / 初判超时误报 2**。
+  - **真实死链 0 条 → 连续第七周 ≈ 0，库内链接健康，无需下架/替换。**
+  - 初判超时 2 条（均 rc=28）经 DoH 复核排除：`yizhuan`（www.yizhuan.net，DoH OK，已知 HTTPS 证书不匹配误报）、`zhinao360`（ai.360.cn，360 大站沙箱抖动，历史复测 200）。均判网络误报，非死链。
+  - `snappa`（401）鉴权墙存活，不计死链。
+- 新品草稿 **14 条**，全部官方域名 curl 实测 2xx/3xx、id 与现库 427 条零冲突、19 字段齐全、summary≤60字（最长 46）。覆盖 6 类目，重点补最空的「翻译语言 5 / 浏览器插件 5 / 视频生成 2 / 搜索研究 2 / Agent自动化 1 / 编程开发 2」：
+  - 翻译语言：palabra（实时语音翻译+语音克隆,35ms）、tablingo（Chrome 扩展 75 语种实时字幕）、fenly（浏览器翻译扩展,8 应用）、opennovel（网文翻译）、saydi（文档+术语库上下文翻译）
+  - 浏览器插件：logically（研究助手扩展,引用溯源）、living-web（本地 Ollama/BYOK 隐私助手）、ai-helper（开源 ReAct 浏览器助手,国内）、fenly、tablingo
+  - 视频生成：waveshift（长视频翻译配音）、vozo（AI 配音 $15/月）
+  - 搜索研究：ancher（信息首席参谋,国内,浏览器扩展新形态）
+  - Agent自动化：spaceo（Mac 独立屏幕给智能体）
+  - 编程开发：moli（Lexmount Rust 无头浏览器,Apache-2.0）、backenly（AI 编码智能体自治后端）
+  - 标注「待核」档位 9 条（fenly/opennovel/saydi/waveshift/ancher/spaceo/backenly 等付费细节）建议入库前再核官网。
+  - 已排除重复：Immersive Translate（immersivetranslate 已在库）、Lara Translate / Transync / Tencent-HY / Plamo / Sponkly / The-Drive-AI / IrisGo / Polyglot（均已在库）。
+- 交付物：`scripts/_draft_weekly.md`（开头注明「本草稿仅供人工过，未自动入库」，tools.json 未改动）+ `scripts/_draft_newtools.json`（纯 JSON）；生成脚本 `scripts/_gen_draft_1109.py`。
+- **本次为只读维护，未自动入库**（自动化 prompt 仅要求产出草稿报告）。如需像 08-17/08-24/09-14/09-23/10-12/10-20 那样直接入库并部署 Cloudflare Pages，需用户明确「请部署」指令。
+
+## 2026-11-09 追加：用户指令「请部署」已执行并验证
+- 14 条草稿全部入库（**En 字段已回填，对齐库内 28 字段 schema**）：`scripts/tools.json` **427 → 441**（id 零冲突、域名零重叠、JSON 字节级保真——原 427 条零改动，git diff +584/0 删）。备份 `scripts/tools.json.bak.deploy1109`。
+- **格式保真经验（复用 10-20）**：先验证 `json.dumps(d,ensure_ascii=False,indent=2)+"
+"` 与原文件字节相等（本周实测 True），再落盘，保证未改动条目零 diff。
+- 重建详情页：`generate_tool_detail_pages.py` → 441 页，git 仅 **14 个新页**（其余 427 页内容零变更，因相关推荐联动未触发差异）；新页均 noindex（非 featured），sitemap 维持 174 不变。**未跑** `generate_tool_pages.py`（tools.html 为 React 外壳，勿再跑静态生成器）。
+- 计数：`index.html` 6 处 + `tools.html` 7 处，420+ → **440+**。
+- 合并脚本 `scripts/_deploy_merge_1109.py`（回填 En 字段、按 28 字段 schema 保序）；草稿生成 `scripts/_gen_draft_1109.py`。
+- 提交 `a8dad83` 并 `git push origin main`（`925e125..a8dad83`），Cloudflare Pages 自动构建。
+- **线上复验（约 45s 生效，BASE=https://myaishome.com）**：`scripts/tools.json` 解析 **441 条**、14 新工具 **14/14** 在线；14 个详情页干净 URL 全部 **200**；首页 440+ ×6、/tools 标题「440+ 款 AI 工具对比」×7；内容抽验（palabra 含 35ms/palabra.ai）正常；旧 420+ 已清零。**本次维护闭环：草稿→入库→下架(无)→重建→部署→线上验证，无残留差异。**
+- 备注：`assets/home-*.js` 运行时 fetch tools.json 且用到 nameEn，本次回填 En 后主页工具网格推送自动生效，无需 vite 重建（规避 safe-delete shim 破坏 vite build 的风险）。
