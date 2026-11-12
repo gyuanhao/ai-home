@@ -1,12 +1,73 @@
 /**
  * AI家AI户 · 每日AI资讯数据
- * 结构：每个元素为 { date, display, weekday, items:[ {title,url,summary,source} ] }，整体赋值给 window.AIHomeNews。
- * 每条 items 即一条快讯；date 为 ISO 日期（YYYY-MM-DD），display/weekday 仅用于页面展示。
- * 工作日更新，每天数条。新增一天只需在最前面插入一个 day 对象即可。
- * 新闻按 date 字段计算，超过 45 天自动下线（由每日自动化 prepend 时一并裁剪）。
- * 仙侠站数据由 xianxia/scripts/convert_news.py 解析本文件自动同步，请勿手改 xianxia 端。
- */
-window.AIHomeNews = [
+ * 结构：每个元素为 { date, display, weekday, items:[ {title,url,summary,source} ] }，整体赋值给 window.AIHomeNews = [
+{
+    "date": "2026-11-12",
+    "display": "11月12日",
+    "weekday": "周四",
+    "items": [
+        {
+            "title": "谷歌发布 Gemini Decision 1 决策模型：不生成文字，只打分，输入仅 0.10 美元/百万 token",
+            "url": "https://news.qq.com/rain/a/20261112A02A3500",
+            "summary": "Gemini Decision 1 用单次前向传播对候选选项直接打分，一次调用最多评 1000 个问题，延迟 150–250ms。",
+            "source": "腾讯新闻"
+        },
+        {
+            "title": "OpenAI 单季营收首破百亿美元，但经营亏损达 109 亿美元",
+            "url": "http://mp.weixin.qq.com/s?__biz=MzY5MjUwNjU2Nw==&mid=2247483757&idx=1&sn=fe5568a76ab4405fc8b4c14a9d876a2e&chksm=f56059ec1b6d099e839b29088ff7e684c2765e0e34fa97cf6dd00b2869c30a7192517cf88e5f#rd",
+            "summary": "截至 9 月三季度营收约 100 亿美元、环比近 50%，但调整后经营亏损 109 亿美元，公司启动 Code Red 响应。",
+            "source": "微信·沐白AI小屋（综合外媒）"
+        },
+        {
+            "title": "北京印发具身智能机器人三年行动方案：2028 年产能 20 万台/年、新增 5 万 PFlops 算力",
+            "url": "http://mp.weixin.qq.com/s?__biz=Mzg5NjExMDI1NA==&mid=2247483707&idx=1&sn=eeacb4e58295ba11d937734fee02ca59&chksm=c176f0d94f39f8a9ea9ab476d726ad967f21bc7409d5ee3c90f20aa7bc21c14f68a4a70d9cec#rd",
+            "summary": "方案首次把产能、算力、数据写成可考核数字：培育 5 家国际一流整机企业，开放 100+ 真实场景。",
+            "source": "微信·每日AI资讯（北京市经信局/新华社）"
+        },
+        {
+            "title": "阿里 Qwen4-Max 预览版上线，同步开源 Qwen Code 1.0 运行底座",
+            "url": "http://mp.weixin.qq.com/s?__biz=MzY5MjUwNjU2Nw==&mid=2247483757&idx=1&sn=fe5568a76ab4405fc8b4c14a9d876a2e&chksm=f56059ec1b6d099e839b29088ff7e684c2765e0e34fa97cf6dd00b2869c30a7192517cf88e5f#rd",
+            "summary": "Qwen4-Max 预览版 100 万上下文、兼容 OpenAI/Anthropic 协议；Qwen Code 1.0 整合 Qoder 智能体框架开源。",
+            "source": "微信·沐白AI小屋（阿里云）"
+        },
+        {
+            "title": "百度文心 5.5 Flash Preview 亮相：2800 亿参数、100 万上下文，11-25 开源权重",
+            "url": "http://mp.weixin.qq.com/s?__biz=MzY5MjUwNjU2Nw==&mid=2247483757&idx=1&sn=fe5568a76ab4405fc8b4c14a9d876a2e&chksm=f56059ec1b6d099e839b29088ff7e684c2765e0e34fa97cf6dd00b2869c30a7192517cf88e5f#rd",
+            "summary": "总参 2800 亿、每 token 激活 140 亿，吐字超 200 tokens/秒，千帆平台已开放 API，权重月底按 Apache 2.0 开源。",
+            "source": "微信·沐白AI小屋（百度/雷锋网）"
+        },
+        {
+            "title": "腾讯元宝搜索独立网页版上线，千亿索引打底、公众号与视频号全接入",
+            "url": "http://mp.weixin.qq.com/s?__biz=Mzg5NjExMDI1NA==&mid=2247483707&idx=1&sn=eeacb4e58295ba11d937734fee02ca59&chksm=c176f0d94f39f8a9ea9ab476d726ad967f21bc7409d5ee3c90f20aa7bc21c14f68a4a70d9cec#rd",
+            "summary": "so.qq.com 上线，结果页把广告与答案分开展示，接入公众号、视频号与学术文献，QQ 浏览器首页已切换。",
+            "source": "微信·每日AI资讯（界面新闻）"
+        },
+        {
+            "title": "国家发改委：“十五五”深化拓展“人工智能+”，主攻矿山、高空、救灾等险脏累繁难场景",
+            "url": "http://mp.weixin.qq.com/s?__biz=Mzg5NjExMDI1NA==&mid=2247483707&idx=1&sn=eeacb4e58295ba11d937734fee02ca59&chksm=c176f0d94f39f8a9ea9ab476d726ad967f21bc7409d5ee3c90f20aa7bc21c14f68a4a70d9cec#rd",
+            "summary": "新闻联播披露，将以落地应用牵引技术创新，持续推动制造、能源、交通、医疗中试基地建设。",
+            "source": "微信·每日AI资讯（央视新闻联播）"
+        },
+        {
+            "title": "微软曝光模型后门新手法 Lazarus：仅改 7 个神经元，触发成功率 98.8%",
+            "url": "http://mp.weixin.qq.com/s?__biz=MzY5MjUwNjU2Nw==&mid=2247483757&idx=1&sn=fe5568a76ab4405fc8b4c14a9d876a2e&chksm=f56059ec1b6d099e839b29088ff7e684c2765e0e34fa97cf6dd00b2869c30a7192517cf88e5f#rd",
+            "summary": "在开源检查点中编辑极少神经元即可植入后门，权重完整性成新攻击面，目前尚未被实际武器化。",
+            "source": "微信·沐白AI小屋（Microsoft Research）"
+        },
+        {
+            "title": "OpenAI 上线 Businesses in ChatGPT 商家橱窗测试版，企业可认领店铺信息",
+            "url": "http://mp.weixin.qq.com/s?__biz=Mzg5NjExMDI1NA==&mid=2247483707&idx=1&sn=eeacb4e58295ba11d937734fee02ca59&chksm=c176f0d94f39f8a9ea9ab476d726ad967f21bc7409d5ee3c90f20aa7bc21c14f68a4a70d9cec#rd",
+            "summary": "商家可认领资料页、维护价格库存，开启 Business Agent 会话；基于 ChatGPT 每周 12 亿用户规模。",
+            "source": "微信·每日AI资讯（OpenAI 官网/TechCrunch）"
+        },
+        {
+            "title": "沐曦×优必选合资曦选创智完成 5 亿元融资，专造机器人大小脑一体芯片",
+            "url": "https://news.qq.com/rain/a/20261112A02QG900",
+            "summary": "合资公司首颗自研 SoC 对标英伟达 Thor，打通“芯片—模组—工具链—场景验证”端侧计算底座。",
+            "source": "腾讯新闻"
+        }
+    ]
+},
 {
     "date": "2026-11-09",
     "display": "11月9日",
@@ -925,73 +986,6 @@ window.AIHomeNews = [
             "url": "https://www.gov.cn/lianbo/202609/content_7082415.htm",
             "summary": "国新办介绍十五五科技强国建设，明确把人工智能、量子科技、生物制造等列为前沿攻关重点。",
             "source": "中国政府网 / 新华社"
-        }
-    ]
-},
-{
-    "date": "2026-09-25",
-    "display": "9月25日",
-    "weekday": "周五",
-    "items": [
-        {
-            "title": "腾讯元宝鸿蒙版正式上线，首发搭载混元Hy4 preview",
-            "url": "https://tech.ifeng.com/c/8whSIUWjncS",
-            "summary": "腾讯元宝鸿蒙版正式上架，首发搭载混元Hy4 preview并支持专家模式，内置文档精读、识图、AI写作等五项核心能力。",
-            "source": "凤凰网科技"
-        },
-        {
-            "title": "OpenAI 个人智能体 Aeon 曝光，正面对标 Meta Muse",
-            "url": "https://agihunt.info/en/p/1a0cd5ab9ee76d5dae84d6fe0e0",
-            "summary": "OpenAI 个人智能体 Aeon 曝光，主打桌面自动化，9/29 前发布对标 Meta Muse。",
-            "source": "AGI Hunt / 网易前沿快讯"
-        },
-        {
-            "title": "ChatGPT Voice 接入 GPT-6，可语音操作邮件日历与 Slack",
-            "url": "https://www.163.com/dy/article/L7KS6BGL05561FZY.html",
-            "summary": "ChatGPT Voice 全球升级切到 GPT-6，首次接入邮件、日历、Slack 并能语音办事。",
-            "source": "网易"
-        },
-        {
-            "title": "谷歌为 Gemini 3.8 Live 加入 Live Avatar 数字人",
-            "url": "https://new.qq.com/rain/a/20260925A036O800",
-            "summary": "谷歌为 Gemini 3.8 Live 加数字人 Live Avatar，支持实时唇形同步与 97 种语言。",
-            "source": "腾讯新闻 / IT之家"
-        },
-        {
-            "title": "Anthropic 披露 Claude 自主发现类 CRISPR 新酶系统 ART",
-            "url": "https://www.aibase.com/news/31321",
-            "summary": "Anthropic 用约 950 个 Claude 智能体 21 小时自主发现类 CRISPR 新酶系统 ART。",
-            "source": "AIBase"
-        },
-        {
-            "title": "小米公开 MiMo-V3 核心架构 HySparse2",
-            "url": "https://news.qq.com/rain/a/20260923A0CPWN00",
-            "summary": "小米公开 MiMo-V3 架构 HySparse2，百万 token 下预填充计算降 5 倍、KV 缓存缩 4.5 倍。",
-            "source": "腾讯新闻 / 驱动中国"
-        },
-        {
-            "title": "Kimi 发布 Agent 模式 OK Computer 并开启灰度",
-            "url": "https://news.qq.com/rain/a/20250925A05P7P00",
-            "summary": "Kimi 发布 Agent 模式 OK Computer 灰度，可操作虚拟电脑建站、做数据分析与 PPT。",
-            "source": "腾讯新闻 / 每日经济新闻"
-        },
-        {
-            "title": "百度蒸汽机上线通用 AI 长视频生成，支持无限长度",
-            "url": "https://www.geekpark.net/news/354469",
-            "summary": "百度蒸汽机升级发布通用 AI 长视频生成功能，采用流式生成技术突破时长限制，可生成无限长度视频并中途改写 Prompt。",
-            "source": "极客公园"
-        },
-        {
-            "title": "智元×长隆全球首个具身智能主题乐园开园",
-            "url": "https://www.ifnews.com/news.html?aid=872714",
-            "summary": "智元与长隆在横琴打造全球首个大规模具身智能主题乐园，超 300 台机器人上岗，第 2 万台 A3 Ultra 同日交付。",
-            "source": "国际金融报"
-        },
-        {
-            "title": "谷歌/OpenAI/Anthropic 拟共建前沿 AI 标准局 SAFA",
-            "url": "https://guba.eastmoney.com/news,usgoogl,1777715728.html",
-            "summary": "谷歌、OpenAI 与 Anthropic 拟组建 SAFA，为前沿模型定第三方安全测试与事故上报标准。",
-            "source": "东方财富 / 财联社"
         }
     ]
 }
