@@ -2,6 +2,73 @@
  * AI家AI户 · 每日AI资讯数据
  * 结构：每个元素为 { date, display, weekday, items:[ {title,url,summary,source} ] }，整体赋值给 window.AIHomeNews = [
 {
+    "date": "2026-11-13",
+    "display": "11月13日",
+    "weekday": "周五",
+    "items": [
+        {
+            "title": "工信部：预置智能体须「持证上岗」，手机平板穿戴纳入进网管理",
+            "url": "https://app.xinhuanet.com/news/article.html?articleId=202611124a006d6abe00498c85653ccfa2db2dc3",
+            "summary": "工信部印发通知，预装智能体的手机平板穿戴须进网检测、配唯一身份码、OTA 升级报备。",
+            "source": "新华网"
+        },
+        {
+            "title": "中国开源模型全球产业端加速落地，Revolut 用智谱 GLM 替换 OpenAI",
+            "url": "https://news.cctv.com/2026/11/13/ARTI8jijUA0t4yQ9Pa5jznM8261113.shtml",
+            "summary": "新华网里斯本峰会综述：中国开源模型凭低成本、可私有部署进入海外企业生产系统。",
+            "source": "央视网"
+        },
+        {
+            "title": "豆包工作接入 Kimi 3.1 Pro、GLM 5.3、DeepSeek V4.1 Flash 等第三方模型",
+            "url": "https://www.cnr.cn/mspd/jrhm/20261112/t20261112_527870283.shtml",
+            "summary": "豆包工作新增多款第三方模型并推限时额度优惠，模型能力走向商品化。",
+            "source": "央广网"
+        },
+        {
+            "title": "自变量 GreatWall 通用具身大模型完成备案，成大湾区首家",
+            "url": "https://www.eeo.com.cn/2026/1112/1090843.shtml",
+            "summary": "自变量机器人 GreatWall 通过广东备案，从可部署进入可规模化商用的合规状态。",
+            "source": "经济观察网"
+        },
+        {
+            "title": "张一鸣：字节 AI 最早 2029 或 2030 年追平 OpenAI 与 Anthropic",
+            "url": "https://new.qq.com/rain/a/20261112A0AVR700",
+            "summary": "张一鸣称字节 Seed 预训练数据规模仍偏小，追平前沿最早也要到 2029 或 2030 年。",
+            "source": "腾讯新闻"
+        },
+        {
+            "title": "美国五家非营利组织起诉 AI 巨头，要求冻结新模型开发",
+            "url": "https://www.163.com/dy/article/LBJL4CJU0519C6T9.html",
+            "summary": "美联社：联盟诉 OpenAI、谷歌、Meta、Anthropic 及 SpaceX AI，指控其无法防止灾难性伤害。",
+            "source": "中新经纬"
+        },
+        {
+            "title": "李彦宏百度世界2026：AI 下一幕是智能组织，岗位不会消失但会收敛",
+            "url": "https://kuaibao.qq.com/s/20261113A031J500?refer=cp_1009",
+            "summary": "李彦宏提组织进化三原则，未来岗位大致分为 Builder 与 Seller 两类。",
+            "source": "每日经济新闻"
+        },
+        {
+            "title": "百度发布文心闪电深度思考、文心一镜微表情两款应用模型",
+            "url": "https://www.163.com/dy/article/LBJOI5HF0534A4SC.html",
+            "summary": "百度世界2026 发布文心闪电深度思考与一镜微表情两款应用模型，千帆平台开放 API。",
+            "source": "界面新闻"
+        },
+        {
+            "title": "通芯智能完成数亿元融资，朱松纯发起，首款 AGI 芯片 12 月验证",
+            "url": "https://www.163.com/dy/article/LBJOI5HF0534A4SC.html",
+            "summary": "通芯智能获数亿元融资，首款支持 AGI 算法的推理芯片计划 12 月初开展 FPGA 原型验证。",
+            "source": "界面新闻"
+        },
+        {
+            "title": "美联航禁止个人 AI 助手接入系统预订机票",
+            "url": "https://www.163.com/dy/article/LBJOI5HF0534A4SC.html",
+            "summary": "美联航 11 月 11 日宣布禁止第三方 AI 助手订票，担心泄露客户敏感信息或非本意购买。",
+            "source": "界面新闻"
+        }
+    ]
+},
+{
     "date": "2026-11-12",
     "display": "11月12日",
     "weekday": "周四",
